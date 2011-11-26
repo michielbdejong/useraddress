@@ -1,0 +1,16 @@
+{
+  "name": "yourremotestorage",
+  "subdomain": "yourremotestorage",
+  "domains": [
+    "yourremotestorage.com",
+    "www.yourremotestorage.com",
+    "yourremotestorage.org",
+    "www.yourremotestorage.org",
+    "yourremotestorage.net",
+    "www.yourremotestorage.net"
+  ],
+  "scripts": {
+    "start": "server.js"
+  },
+  "version": "0.0.0-8"
+}
