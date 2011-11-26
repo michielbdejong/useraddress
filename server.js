@@ -26,8 +26,8 @@
         res.writeHead(404, {'Content-Type': 'text/plain'});
         res.end('Not found\n');
       }
-    }).listen(config.backends.userAddress);
-    console.log('listening on '+config.backends.userAddress);
+    }).listen(config.port);
+    console.log('listening on '+config.port);
   }
 
   serve();
