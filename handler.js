@@ -11,13 +11,16 @@ exports.handler = (function() {
         res.writeHead(200, {
           'Content-Type': 'xrd+xml',
           'Access-Control-Allow-Origin': '*'});
-        var userName = (urlObj.query.userAddress.split('@'))[0];
+        var userAddressParts = (urlObj.query.userAddress.split('@'));
+        while(userAddressParts.length <2) {//avoid breaking errors
+          userAddressParts.push(undefined);
+        }
         res.end('<?xml version="1.0" encoding="UTF-8"?>\n'
           +'<XRD xmlns="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:hm="http://host-meta.net/xrd/1.0">\n'
-	        +'  <hm:Host xmlns="http://host-meta.net/xrd/1.0">'+config.facadeHost+'</hm:Host>\n'
+	        +'  <hm:Host xmlns="http://host-meta.net/xrd/1.0">'+userAddressParts[1]+'</hm:Host>\n'
 	        +'  <Link rel="remoteStorage"\n'
-          +'    template="http://'+userName+'.'+config.proxyParentDomain+'/{category}/"\n'
-          +'    auth="http://'+config.facadeHost+'/auth?userName='+userName+'"\n'
+          +'    template="http://'+config.subdomainCouchHosting+'/CouchDB/proxy/'+userAddressParts[0]+'.'+userAddressParts[1]+'/{category}/"\n'
+          +'    auth="http://'+config.subdomainCouchHosting+'/CouchDB/auth/'+userAddressParts[0]+'.'+userAddressParts[1]+'/"\n'
           +'    api="CouchDB"\n'
           +'  ></Link>\n'
           +'</XRD>\n');
