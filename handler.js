@@ -20,7 +20,7 @@ exports.handler = (function() {
 	        +'  <hm:Host xmlns="http://host-meta.net/xrd/1.0">'+userAddressParts[1]+'</hm:Host>\n'
 	        +'  <Link rel="remoteStorage"\n'
           +'    template="http://'+config.subdomainCouchHosting+'/CouchDB/proxy/'+userAddressParts[0]+'.'+userAddressParts[1]+'/{category}/"\n'
-          +'    auth="http://'+config.subdomainCouchHosting+'/CouchDB/auth/'+userAddressParts[0]+'.'+userAddressParts[1]+'/"\n'
+          +'    auth="http://'+config.subdomainCouchHosting+'/CouchDB/auth/'+userAddressParts[0]+'.'+userAddressParts[1]+'"\n'
           +'    api="CouchDB"\n'
           +'  ></Link>\n'
           +'</XRD>\n');
