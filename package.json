@@ -1,16 +1,12 @@
 {
-  "name": "yourremotestorage",
-  "subdomain": "yourremotestorage",
+  "name": "useraddress",
+  "subdomain": "useraddress",
   "domains": [
-    "yourremotestorage.com",
-    "www.yourremotestorage.com",
-    "yourremotestorage.org",
-    "www.yourremotestorage.org",
-    "yourremotestorage.net",
-    "www.yourremotestorage.net"
+    "useraddress.net",
+    "www.useraddress.net"
   ],
   "scripts": {
     "start": "server.js"
   },
-  "version": "0.0.0-8"
+  "version": "0.0.0-9"
 }
