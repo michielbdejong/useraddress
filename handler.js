@@ -11,10 +11,10 @@ exports.handler = (function() {
         res.writeHead(200, {
           'Content-Type': 'xrd+xml',
           'Access-Control-Allow-Origin': '*'});
-        if(!urlObj.query.q) {
-          res.end('please specify ?q=...@...');
+        if(!urlObj.query.userAddress) {
+          res.end('please specify ?userAddress=...@...');
         } else {
-          var userAddressParts = (urlObj.query.q.split('@'));
+          var userAddressParts = (urlObj.query.userAddress.split('@'));
           while(userAddressParts.length <2) {//avoid breaking errors
             userAddressParts.push(undefined);
           }
