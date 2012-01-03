@@ -6,8 +6,33 @@ exports.handler = (function() {
   function serve(req, res) {
       var urlObj = url.parse(req.url, true);
       console.log(urlObj);
-      //if(urlObj.pathname=='/single-origin-webfinger...really') {
-      if(true) {
+      if(urlObj.pathname == '/set') {
+        if(req.method=='GET') {
+          res.writeHead(200);
+          res.end('<!DOCTYPE html><html lang="en"><head><title>Linking your user address to your lrdd file in a centralized way...</title><meta charset="utf-8"></head><body>'
+            +'Loading, please wait...'
+            +'<script src="http://browserid.org/include.js"></script>'
+            +'<script>document.write(\'<input type="submit" value="Click me" onclick="go();">\');'
+            +'function go() {'
+            +'  navigator.id.get(function(assertion) {'
+            +'    var xhr=new XMLHttpRequest();xhr.open(\'POST\', \'\', false);xhr.send(JSON.stringify({'
+            +'      browserIdAssertion: assertion,'
+            +'      lrdd: \''+urlObj.query.set_lrdd+'\''
+            +'    }));'
+            +'    window.location = \''+urlObj.query.assertion_also_to+'?assertion=\'+assertion'
+            +'  }, {requiredEmail: \''+urlObj.query.userAddress+'\'});'
+            +'}'
+            +'</script>'
+            +'</body></html>');
+        } else if(req.method == 'POST') {
+          var dataStr = '';
+          req.on('data', function(chunk) { dataStr += chunk; });
+          req.on('end', function() {
+            res.writeHead(200);
+            res.end('faking it');
+          });
+        }
+      } else if(false) {
         res.writeHead(200, {
           'Content-Type': 'xrd+xml',
           'Access-Control-Allow-Origin': '*'});
