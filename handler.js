@@ -4,18 +4,52 @@ exports.handler = (function() {
     config = require('./config').config;
 
   function serve(req, res) {
-  //user.unhosted.org. handle PUT with params:
-  //  - userAddress
+  //user.unhosted.org/ handle POST with params:
   //  - assertion
   //  - audience
-  //  - lrdd-location
   //
-  //  - returns ok
+  //  - returns either:
+  //     ok: true
+  //     email: ...
+  //     remoteStorage:
+  //       template:
+  //       api:
+  //       auth:
+  //       browseridaccess:
+  //  - or:
+  //     email: ...
+  //     token: ...
   //
-  //handle GET with params:
-  //  - userAddress
+  //    and db will contain: email -> {token: ..., state:needed}
+  //user.unhosted.org/pimper handle POST with params:
+  //  - action: provision
+  //  - token
+  //  - email
+  //  - firstName
+  //  - lastName
+  //  - userName
   //
-  //  - returns lrdd location - either stored previously or by looking up host-meta and resolving template
+  //    and db will contain: email -> {token: ..., address: 'http://'+userName+'.iriscouch.com:5984/', state:virgin}
+  //
+  //or:
+  //  - action: squat
+  //  - token
+  //  - address
+  //  - email
+  //
+  //    and db will contain: email -> {token: ..., address: 'http://'+userName+'.iriscouch.com:5984/', state:squatted, adminPwd:...}
+  //
+  //or:
+  //  - action: createDb
+  //  - token
+  //  - userName
+  //  - email
+  //
+  //user.unhosted.org/BrowserId2IrisCouch handle POST with params:
+  //  - assertion
+  //  - audience
+  //
+  // response: a token for this audience.
   //
       var urlObj = url.parse(req.url, true);
       console.log(urlObj);
