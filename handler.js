@@ -4,9 +4,22 @@ exports.handler = (function() {
     config = require('./config').config;
 
   function serve(req, res) {
+  //user.unhosted.org. handle PUT with params:
+  //  - userAddress
+  //  - assertion
+  //  - audience
+  //  - lrdd-location
+  //
+  //  - returns ok
+  //
+  //handle GET with params:
+  //  - userAddress
+  //
+  //  - returns lrdd location - either stored previously or by looking up host-meta and resolving template
+  //
       var urlObj = url.parse(req.url, true);
       console.log(urlObj);
-      if(urlObj.pathname == '/set') {
+      if(urlObj.pathname == '/') {
         if(req.method=='GET') {
           res.writeHead(200);
           res.end('<!DOCTYPE html><html lang="en"><head><title>Linking your user address to your lrdd file in a centralized way...</title><meta charset="utf-8"></head><body>'
@@ -25,11 +38,19 @@ exports.handler = (function() {
             +'</script>'
             +'</body></html>');
         } else if(req.method == 'POST') {
+          console.log("It's a POST");
           var dataStr = '';
           req.on('data', function(chunk) { dataStr += chunk; });
           req.on('end', function() {
-            res.writeHead(200);
-            res.end('faking it');
+            var dataObj = JSON.parse(dataStr);
+            console.log(dataObj);
+            res.writeHead(200, {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': dataObj.audience});
+            res.write(JSON.stringify({
+                email: 'dejong.michiel@gmail.com',
+                token: 'asdf'
+              })
+            );
+            res.end();
           });
         }
       } else if(false) {
@@ -55,7 +76,7 @@ exports.handler = (function() {
          }
       } else {
         res.writeHead(404, {'Content-Type': 'text/plain'});
-        res.end('Not found\n');
+        res.end('Not Found\n');
       }
   }
   return {
