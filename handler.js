@@ -1,136 +1,75 @@
 exports.handler = (function() {
   var url = require('url'),
-    https = require('https'),
-    querystring = require('querystring'),
-    browseridVerify = require('browserid-verifier'),
-    fs = require('fs'),
-    userDb = require('./config').config;
-
-  function randStr(length) {
-    var buffer = new Buffer(length);
-    var fd = fs.openSync('/dev/urandom', 'r');
-    fs.readSync(fd, buffer, 0, buffer.length, 0);
-    fs.closeSync(fd);
-    var randStr = buffer.toString('base64');
-    console.log('generated randStr of length '+randStr.length+' ('+length+'):'+randStr);
-    return randStr;
+    //https = require('https'),
+    //querystring = require('querystring'),
+    //browseridVerify = require('browserid-verifier'),
+    //fs = require('fs'),
+    userDb = require('./config').config,
+    redis = require('redis'),
+    redisClient;
+  
+  function initRedis(cb) {
+    console.log('initing redis');
+    redisClient = redis.createClient(userDb.port, userDb.host);
+    redisClient.on("error", function (err) {
+      console.log("error event - " + redisClient.host + ":" + redisClient.port + " - " + err);
+    });
+    redisClient.auth(userDb.pwd, function() {
+       console.log('redis auth done');
+       //redisClient.stream.on('connect', cb);
+       cb();
+    });
   }
-  function webfingerLookup(userAddress, origin, res) {
-    var userAddressParts = userAddress.split('@');
-    var options = {
-      host: userAddressParts[1],
-      port: 443,
-      path: '/.well-known/host-meta',
-      method: 'GET'
-    }
-    //var request = https.request(options, function(response) {
-    //  if(response.statusCode == 200) {
-    //    //parse the xml
-    //  } else {
-        var authStr = userDb.usr + ':' + userDb.pwd;
-        var options2 = {
-          host: userDb.host,
-          port: 443,
-          path: '/'+userDb.dbName+'/'+userAddress,
-          method: 'PUT',
-          headers: {
-            'Authorization': 'Basic ' + new Buffer(authStr).toString('base64')
-          }
-        };
-        console.log(options);
-        var token = randStr(40);
-        var data= {
-          token: token
+  function serveGet(req, res, postData) {
+    initRedis(function() {
+      redisClient.get(postData.userAddress, function(err, data) {
+        console.log('this came from redis:');
+        console.log(err);
+        console.log(data);
+        data = JSON.parse(data);
+        if(!data.storageTemplate) {
+          data.storageTemplate = data.storageAddress.substring(0, data.storageAddress.length - 11) + '/{category}/';
         }
-        res.writeHead(200, {
-          'Content-type': 'application/json',
-          'Access-Control-Allow-Origin': origin
-        });
-        res.write(JSON.stringify(data));
+        if(!data.storageAuth) {
+          data.storageAuth = data.storageAddress.substring(0, data.storageAddress.length - 11) + '/cors/auth/modal.html';
+        }
+        headers = {'Access-Control-Allow-Origin': postData.audience};
+        res.writeHead(200, headers);
+        res.write(JSON.stringify({
+          api: data.storageApi,
+          auth: data.storageAuth,
+          template: data.storageTemplate
+        }));
         res.end();
-        var request2 = https.request(options2, function(response2) {
-          console.log('STATUS: ' + response2.statusCode);
-          response2.setEncoding('utf8');
-          var resStr = '';
-          response2.on('data', function (chunk) {
-            resStr += chunk;
-            console.log('BODY2: ' + chunk);
-          });
-          response2.on('end', function() {
-            console.log('END2');
-          });
-        });
-        request2.write(JSON.stringify(data));
-        request2.end();
-    //  }
-    //});
-  }
-  function serve(req, res, baseDir) {
-    var dataStr = '';
-    req.on('data', function(chunk) {
-      dataStr += chunk;
-    });
-    req.on('end', function() {
-      var incoming = JSON.parse(dataStr);
-      console.log(incoming);
-      postData = {
-        audience: 'http://libredocs.org',
-        assertion: incoming.assertion
-      };
-      console.log(postData);
-      browseridVerify(postData, function(err, r) {
-        if(err) {
-          res.writeHead(200, {'Content-type': 'application/json'});
-          res.write(JSON.stringify(err));
-          res.end();
-        } else {
-          if(r.email) {
-            console.log(r.email+' confirmed by browserid verifier');
-            var authStr = userDb.usr + ':' + userDb.pwd;
-            console.log(authStr);
-            var options = {
-              host: userDb.host,
-              port: 443,
-              path: '/'+userDb.dbName+'/'+r.email,
-              method: 'GET', 
-              headers: {
-                'Authorization': 'Basic ' + new Buffer(authStr).toString('base64')
-              }
-            };
-            console.log(options);
-            var request = https.request(options, function(response) {
-              console.log('STATUS: ' + response.statusCode);
-              console.log('HEADERS: ' + JSON.stringify(response.headers));
-              response.setEncoding('utf8');
-              var resStr = '';
-              response.on('data', function (chunk) {
-                resStr += chunk;
-                console.log('BODY: ' + chunk);
-              });
-              response.on('end', function() {
-                if(response.statusCode == 404) {
-                  webfingerLookup(r.email, 'http://libredocs.org', res);
-                } else {
-                  console.log('END; writing to res: "'+resStr+'"');
-                  res.writeHead(response.statusCode, response.headers);
-                  res.write('hi');
-                  res.end(resStr);
-                }
-              });
-            });
-            //console.log('writing to the request');
-
-            //var data = JSON.stringify({
-            //});
-            //console.log(data);
-            //request.write(data);
-            console.log('ending the request');
-            request.end();
-            console.log('setting request.on(\'response\', ...)');
-          }
-        }
       });
+      console.log('outside redisClient.get');
     });
+    console.log('outside initRedis');
+  }
+
+  function serve(req, res, baseDir) {
+    if(req.method=='OPTIONS') {
+      res.writeHead(200, {
+        'Access-Control-Allow-Origin': req.headers.origin,
+        'Access-Control-Allow-Methods': 'POST, PUT, GET',
+        'Access-Control-Allow-Headers': 'Origin, Content-Type'
+      });
+      res.end();
+    } else {
+      console.log('serve');
+      var dataStr = '';
+      req.on('data', function(chunk) {
+        dataStr += chunk;
+      });
+      req.on('end', function() {
+        var incoming = JSON.parse(dataStr);
+        console.log('incoming post:');
+        console.log(incoming);
+        console.log('end of incoming post');
+        serveGet(req, res, incoming);
+        console.log('done with req.on(end)');
+      });
+    }
   }
 
   return {
