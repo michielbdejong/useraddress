@@ -27,12 +27,16 @@ exports.handler = (function() {
         console.log(err);
         console.log(data);
         data = JSON.parse(data);
-        if(!data.storageInfo && data.subdomain && data.proxy) {
-          data.storageInfo = {
-            api: 'CouchDB',
-            template: 'http://'+data.proxy+data.subdomain+'.iriscouch.com/{category}/',
-            auth: 'http://'+data.subdomain + '.iriscouch.com/cors/auth/modal.html'
-          };
+        if(!data.storageInfo) {
+          if(data.subdomain && data.proxy) {
+            data.storageInfo = {
+              api: 'CouchDB',
+              template: 'http://'+data.proxy+data.subdomain+'.iriscouch.com/{category}/',
+              auth: 'http://'+data.subdomain + '.iriscouch.com/cors/auth/modal.html'
+            };
+          } else {
+            data.storageInfo = {};
+          }
         }
         headers = {'Access-Control-Allow-Origin': postData.audience};
         res.writeHead(200, headers);
