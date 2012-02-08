@@ -3,6 +3,6 @@
     handler = require('./handler').handler,
     config = require('./config').config;
 
-  http.createServer(handler.serve).listen(config.port);
-  console.log('listening on '+config.port);
+  http.createServer(handler.serve).listen(80);
+  console.log('listening on port 80');
 })();
