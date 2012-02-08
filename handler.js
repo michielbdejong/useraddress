@@ -27,20 +27,20 @@ exports.handler = (function() {
         console.log(err);
         console.log(data);
         data = JSON.parse(data);
-        if(!data.storageInfo) {
-          if(data.subdomain && data.proxy) {
-            data.storageInfo = {
-              api: 'CouchDB',
-              template: 'http://'+data.proxy+data.subdomain+'.iriscouch.com/{category}/',
-              auth: 'http://'+data.subdomain + '.iriscouch.com/cors/auth/modal.html'
-            };
-          } else {
-            data.storageInfo = {};
-          }
+        if((!data.storageInfo) && (data.subdomain && data.proxy)) {
+          data.storageInfo = {
+            api: 'CouchDB',
+            template: 'http://'+data.proxy+data.subdomain+'.iriscouch.com/{category}/',
+            auth: 'http://'+data.subdomain + '.iriscouch.com/cors/auth/modal.html'
+          };
         }
         headers = {'Access-Control-Allow-Origin': postData.audience};
-        res.writeHead(200, headers);
-        res.write(JSON.stringify(data.storageInfo));
+        if(data.storageInfo) {
+          res.writeHead(200, headers);
+          res.write(JSON.stringify(data.storageInfo));
+        } else {
+          res.writeHead(404, headers);
+        }
         res.end();
       });
       console.log('outside redisClient.get');
