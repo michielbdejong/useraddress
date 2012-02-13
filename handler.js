@@ -26,7 +26,13 @@ exports.handler = (function() {
         console.log('this came from redis:');
         console.log(err);
         console.log(data);
-        data = JSON.parse(data);
+        try {
+          data = JSON.parse(data);
+        } catch(e) {
+        }
+        if(!data) {
+          data={};
+        }
         if((!data.storageInfo) && (data.subdomain && data.proxy)) {
           data.storageInfo = {
             api: 'CouchDB',
