@@ -23,6 +23,7 @@ exports.handler = (function() {
   function serveGet(req, res, postData) {
     initRedis(function() {
       redisClient.get(postData.userAddress, function(err, data) {
+        redisClient.quit();
         console.log('this came from redis:');
         console.log(err);
         console.log(data);
