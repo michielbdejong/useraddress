@@ -70,12 +70,23 @@ exports.handler = (function() {
         dataStr += chunk;
       });
       req.on('end', function() {
-        var incoming = JSON.parse(dataStr);
-        console.log('incoming post:');
-        console.log(incoming);
-        console.log('end of incoming post');
-        serveGet(req, res, incoming);
-        console.log('done with req.on(end)');
+        var incoming;
+        try {
+          incoming = JSON.parse(dataStr);
+          console.log('incoming post:');
+          console.log(incoming);
+          console.log('end of incoming post');
+          serveGet(req, res, incoming);
+          console.log('done with req.on(end)');
+        } catch(e) {
+          console.log('unparsable '+dataStr);
+          res.writeHead(500, {
+            'Access-Control-Allow-Origin': req.headers.origin,
+            'Access-Control-Allow-Methods': 'POST, PUT, GET',
+            'Access-Control-Allow-Headers': 'Origin, Content-Type'
+          });
+          res.end();
+        }
       });
     }
   }
