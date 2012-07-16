@@ -1,5 +1,6 @@
 var data = {},
-  index = {};
+  index = {},
+  webfinger = require('./webfinger');
 
 function add(userAddress, fullName, avatarUrl) {
   data[userAddress] = {
@@ -24,9 +25,13 @@ function search(str) {
       hits.push(data[i]);
     }
   }
+  webfinger.get(str, function(fullName, avatarUrl) {
+    add(str, fullName, avatarUrl);
+  });
   return hits;
 }
-add('michiel@unhosted.org', 'Michiel de Jong', 'http://unhosted.org/img/michiel.jpg');
-console.log(data);
-console.log(index);
+
 console.log(search('mic'));
+console.log(search('michiel@unhosted.org'));
+console.log(search('mic'));
+
