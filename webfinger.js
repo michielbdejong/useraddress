@@ -119,6 +119,11 @@ exports.get = (function () {
           name: obj.name,
           avatar: 'http://graph.facebook.com/{userName}/picture'
         });
+      } else if(obj.entry) {//google
+        cb(null, {
+          name: obj.entry.name.formatted,
+          avatar: obj.entry.thumbnailUrl
+        });
       }
     }
     function parseFoaf(agents, cb) {
@@ -135,10 +140,12 @@ exports.get = (function () {
     }
     function getFoaf(userAddress, options, cb) {
       userAddress2hostMetas(userAddress, function(err1, hostMetaAddresses) {
+        console.log(hostMetaAddresses);
         if(err1) {
           cb(err1);
         } else {
           fetchXrd(hostMetaAddresses, options.timeout, function(err2, hostMetaLinks) {
+            console.log(hostMetaLinks);
             if(err2) {
               cb('could not fetch host-meta for '+userAddress);
             } else {
@@ -147,20 +154,15 @@ exports.get = (function () {
                   hostMetaLinks.avatar = 'http://graph.facebook.com/'+userAddress.split('@')[0]+'/picture';
                 }
                 cb(null, hostMetaLinks);
-              } else if(hostMetaLinks['describedby'] && hostMetaLinks['describedby'].href) {
-                fetchXrd([hostMetaLinks['describedby'].href], options.timeout, function(err3, foaf) {
-                  if(err3) {
-                    cb(err3);
-                  } else {
-                    parseFoaf(foaf, cb);
-                  }
-                });
               } else if(hostMetaLinks['lrdd'] && hostMetaLinks['lrdd'].template) {
                 var parts = hostMetaLinks['lrdd'].template.split('{uri}');
                 var lrddAddresses=[parts.join('acct:'+userAddress), parts.join(userAddress)];
                  fetchXrd(lrddAddresses, options.timeout, function(err4, lrddLinks) {
+                  console.log(lrddLinks);
                   if(err4) {
                     cb('could not fetch lrdd for '+userAddress);
+                  } else if(lrddLinks['http://portablecontacts.net/spec/1.0#me']) {//Google
+                     fetchXrd([lrddLinks['http://portablecontacts.net/spec/1.0#me'].href], options.timeout, cb);
                   } else if(lrddLinks['describedby'] && lrddLinks['describedby'].href) {
                     fetchXrd([lrddLinks['describedby'].href], options.timeout, function(err5, foaf) {
                       if(err5) {
@@ -173,6 +175,14 @@ exports.get = (function () {
                     cb('could not extract foaf from lrdd');
                   }
                 }); 
+              } else if(hostMetaLinks['describedby'] && hostMetaLinks['describedby'].href) {
+                fetchXrd([hostMetaLinks['describedby'].href], options.timeout, function(err3, foaf) {
+                  if(err3) {
+                    cb(err3);
+                  } else {
+                    parseFoaf(foaf, cb);
+                  }
+                });
               } else {
                 cb('could not extract lrdd template from host-meta');
               }
