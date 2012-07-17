@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="http://cdn.sockjs.org/sockjs-0.3.min.js">
+  </script>
+  <script>
+    var sock = new SockJS('http://127.0.0.1:9999/echo');
+    sock.onopen = function() {
+      console.log('open');
+    };
+    sock.onmessage = function(e) {
+      console.log('message', e.data);
+    };
+    sock.onclose = function() {
+      console.log('close');
+    };
+    function key() {
+      sock.send(document.getElementById('in').value);
+    }
+  </script>
+  <title>useraddress.net</title>
+  <meta charset="utf-8">
+</head>
+<body>
+  <input onkeyup="key();" id="in">  
+</body>
+</html>
