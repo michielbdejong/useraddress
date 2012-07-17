@@ -47,7 +47,22 @@ function dumpDb() {
       }
   });
 }
-
+function readDb() {
+  fs.readFile("./dump.json", function(err, str) {
+      if(err) {
+          console.log(err);
+      } else {
+        try {
+          var parsed = JSON.parse(str);
+          data = parsed.data;
+          index = parsed.index;
+          console.log("The file was loaded!");
+        } catch(e) {
+        }
+      }
+  });
+}
+readDb();
 var rowCb = function(row) {
   console.log(row);
 };

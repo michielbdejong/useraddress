@@ -25,7 +25,7 @@
       rows[data.userAddress] = data;
     }
     function matches(row, str) {
-      if(!str.length) {
+      if(str.length < 3) {
         return;
       }
       if(str == row.userAddress) {
