@@ -157,7 +157,7 @@ exports.get = (function () {
     return function(str, cb) {
       getFoaf(str, {}, function(err, data) {
         if(!err) {
-          cb(data.name, data.avatar);
+          cb(data);
         }
       });
     };
