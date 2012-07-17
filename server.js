@@ -5,7 +5,7 @@ var indexDoc = '<!DOCTYPE html>\n'
   +'  </script>\n'
   +'  <script>\n'
   +'    var rows={};\n'
-  +'    var sock = new SockJS(\'http://127.0.0.1:9999/echo\');\n'
+  +'    var sock = new SockJS(\'http://useraddress.net/echo\');\n'
   +'    sock.onopen = function() {\n'
   +'      console.log(\'open\');\n'
   +'    };\n'
@@ -74,12 +74,9 @@ echo.on('connection', function(conn) {
   conn.on('close', function() {});
 });
 
-var server = http.createServer();
-echo.installHandlers(server, {prefix:'/echo'});
-server.listen(9999, '0.0.0.0');
-var http = require('http');
-http.createServer(function (req, res) {
+var server = http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/html'});
   res.end(indexDoc);
 }).listen(80);
+echo.installHandlers(server, {prefix:'/echo'});
 console.log('Server running');

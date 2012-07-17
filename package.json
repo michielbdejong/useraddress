@@ -1,0 +1,18 @@
+{
+  "name": "useraddress",
+  "subdomain": "useraddress",
+  "domains": [
+    "useraddress.net",
+    "www.useraddress.net"
+  ],
+  "scripts": {
+    "start": "server.js"
+  },
+  "version": "0.0.0-28",
+  "engines": {
+    "node": "0.6.x"
+  },
+  "dependencies": {
+    "sockjs": "*"
+  }
+}
