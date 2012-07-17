@@ -14,7 +14,7 @@ function add(userAddress, obj) {
   for(var i in words) {
     for(var j=3; j<=words[i].length; j++) {
       var prefix = words[i].substring(0, j);
-      if(!index[prefix]) {
+      if(!index[prefix.toLowerCase()]) {
         index[prefix.toLowerCase()]={};
       }
       index[prefix.toLowerCase()][userAddress]=true;
