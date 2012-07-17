@@ -17,12 +17,20 @@ exports.get = (function () {
           cb('That is not a user address. There are non-dotalphanumeric symbols after the @-sign: "'+parts[1]+'"');
         } else {
           var query = '?resource=acct:'+encodeURIComponent(userAddress);
-          cb(null, [
-            'https://'+parts[1]+'/.well-known/host-meta.json'+query,
-            'https://'+parts[1]+'/.well-known/host-meta'+query,
-            'http://'+parts[1]+'/.well-known/host-meta.json'+query,
-            'http://'+parts[1]+'/.well-known/host-meta'+query
-            ]);
+          if(parts[1] == 'facebook.com') {
+            console.log('using special facebook rule');
+            cb(null, ['http://graph.facebook.com/'+parts[0]]);
+          } else if(parts[1] == 'twitter.com') {
+            console.log('using special twitter rule');
+            cb(null, ['http://api.twitter.com/1/users/lookup.json?screen_name='+parts[0]]);
+          } else {
+            cb(null, [
+              'https://'+parts[1]+'/.well-known/host-meta.json'+query,
+              'https://'+parts[1]+'/.well-known/host-meta'+query,
+              'http://'+parts[1]+'/.well-known/host-meta.json'+query,
+              'http://'+parts[1]+'/.well-known/host-meta'+query
+              ]);
+          }
         }
       }
     }
@@ -86,18 +94,32 @@ exports.get = (function () {
       var obj;
       try {
         obj = JSON.parse(str);
+        console.log('got JSON!');
+        console.log(obj);
       } catch(e) {
         cb('not valid JSON');
         return;
       }
-      var links = {};
-      for(var i=0; i<obj.links.length; i++) {
-        //just take the first one of each rel:
-        if(obj.links[i].rel) {
-          links[obj.links[i].rel]=obj.links[i];
+      if(obj.links) {
+        var links = {};
+        for(var i=0; i<obj.links.length; i++) {
+          //just take the first one of each rel:
+          if(obj.links[i].rel) {
+            links[obj.links[i].rel]=obj.links[i];
+          }
         }
+        cb(null, links);
+      } else if(obj.length == 1) {//twitter
+        cb(null, {
+          name: obj[0].name,
+          avatar: obj[0].profile_image_url
+        });
+      } else if(obj.name) {//facebook
+        cb(null, {
+          name: obj.name,
+          avatar: 'http://graph.facebook.com/{userName}/picture'
+        });
       }
-      cb(null, links);
     }
     function parseFoaf(agents, cb) {
       for(var i=0; i<agents.length; i++) {
@@ -120,7 +142,12 @@ exports.get = (function () {
             if(err2) {
               cb('could not fetch host-meta for '+userAddress);
             } else {
-              if(hostMetaLinks['describedby'] && hostMetaLinks['describedby'].href) {
+              if(hostMetaLinks.name && hostMetaLinks.avatar) {
+                if(hostMetaLinks.avatar == 'http://graph.facebook.com/{userName}/picture') {//facebook
+                  hostMetaLinks.avatar = 'http://graph.facebook.com/'+userAddress.split('@')[0]+'/picture';
+                }
+                cb(null, hostMetaLinks);
+              } else if(hostMetaLinks['describedby'] && hostMetaLinks['describedby'].href) {
                 fetchXrd([hostMetaLinks['describedby'].href], options.timeout, function(err3, foaf) {
                   if(err3) {
                     cb(err3);
