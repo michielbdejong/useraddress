@@ -1,6 +1,7 @@
 var data = {},
   index = {},
-  webfinger = require('./webfinger');
+  webfinger = require('./webfinger'),
+  fs = require('fs');
 
 function add(userAddress, fullName, avatarUrl) {
   data[userAddress] = {
@@ -27,11 +28,24 @@ function search(str) {
   }
   webfinger.get(str, function(fullName, avatarUrl) {
     add(str, fullName, avatarUrl);
+    console.log('add:');
+    console.log(str);
+    console.log(fullName);
+    console.log(avatarUrl);
   });
   return hits;
 }
-
-console.log(search('mic'));
-console.log(search('michiel@unhosted.org'));
-console.log(search('mic'));
-
+function dumpDb() {
+  fs.writeFile("./dump.json", JSON.stringify({data: data, index: index}), function(err) {
+      if(err) {
+          console.log(err);
+      } else {
+          console.log("The file was saved!");
+      }
+  });
+}
+//  console.log(search('mic'));
+//console.log(search('michiel@unhosted.org'));
+console.log(search('michielbdejong@identi.ca'));
+//console.log(search('mic'));
+//dumpDb();
