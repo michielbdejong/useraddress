@@ -158,6 +158,8 @@ exports.get = (function () {
       getFoaf(str, {}, function(err, data) {
         if(!err) {
           cb(data);
+        } else {
+          cb();
         }
       });
     };

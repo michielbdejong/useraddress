@@ -8,11 +8,12 @@
   "scripts": {
     "start": "server.js"
   },
-  "version": "0.0.0-30",
+  "version": "0.0.0-33",
   "engines": {
     "node": "0.6.x"
   },
   "dependencies": {
-    "sockjs": "*"
+    "sockjs": "*",
+    "xml2js": "*"
   }
 }

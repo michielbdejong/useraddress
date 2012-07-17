@@ -11,8 +11,13 @@ var indexDoc = '<!DOCTYPE html>\n'
   +'    };\n'
   +'    sock.onmessage = function(e) {\n'
   +'      console.log(\'message\', e.data);\n'
-  +'      addRow(JSON.parse(e.data));\n'
-  +'      show();\n'
+  +'      var e = JSON.parse(e.data);\n'
+  +'      if(e.type == \'row\') {\n'
+  +'        addRow(e);\n'
+  +'        show();\n'
+  +'      } else if(e.type == \'status\') {\n'
+  +'        showStatus(e.status);\n'
+  +'      }\n'
   +'    };\n'
   +'    sock.onclose = function() {\n'
   +'      console.log(\'close\');\n'
@@ -38,6 +43,9 @@ var indexDoc = '<!DOCTYPE html>\n'
   +'        }\n'
   +'      }  \n'
   +'    }\n'
+  +'    function showStatus(status) {\n'
+  +'      document.getElementById(\'spinner\').style.display = (status == \'busy\' ? \'inline\' : \'none\');\n'
+  +'    }\n'
   +'    function show() {\n'
   +'      var str = \'\';\n'
   +'      for(var i in rows) {\n'
@@ -54,6 +62,7 @@ var indexDoc = '<!DOCTYPE html>\n'
   +'</head>\n'
   +'<body>\n'
   +'  <input onkeyup="key();" id="in">  \n'
+  +'  <span id="spinner" style="display:none"><h2>hmmmmmm...</h2></span>\n'
   +'  <ul id="results"></ul>\n'
   +'</body>\n'
   +'</html>\n';
@@ -64,8 +73,16 @@ var search = require('./search');
 var echo = sockjs.createServer();
 echo.on('connection', function(conn) {
   search.on('row', function(row) {
+    row.type='row';
     console.log(row);
     conn.write(JSON.stringify(row));
+  });
+  search.on('status', function(status) {
+    console.log(status);
+    conn.write(JSON.stringify({
+      type: 'status',
+      status: status
+    }));
   });
   conn.on('data', function(message) {
     console.log(message.toString());

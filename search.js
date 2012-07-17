@@ -1,7 +1,8 @@
 var data = {},
   index = {},
   webfinger = require('./webfinger'),
-  fs = require('fs');
+  fs = require('fs'),
+  pending = 0;
 
 function add(userAddress, obj) {
   data[userAddress] = {
@@ -27,15 +28,25 @@ function search(str) {
       var obj = data[i];
       obj.from = 'index';
       obj.query = str;
+      console.log('result from index');
       rowCb(obj);
     }
   }
+  pending++;
+  console.log('pending++: '+pending);
+  statusCb(pending>0?'busy':'idle');
   webfinger.get(str, function(obj) {
-    obj.userAddress = str;
-    add(str, obj);
-    obj.from='live';
-    obj.query=str;
-    rowCb(obj);
+    pending--;
+    console.log('pending--: '+pending);
+    statusCb(pending>0?'busy':'idle');
+    if(obj) {
+      obj.userAddress = str;
+      add(str, obj);
+      obj.from='live';
+      obj.query=str;
+      console.log('result from live');
+      rowCb(obj);
+    }
   });
 }
 function dumpDb() {
@@ -66,9 +77,14 @@ readDb();
 var rowCb = function(row) {
   console.log(row);
 };
+var statusCb = function(status) {
+  console.log(status);
+};
 exports.on = function(eventType, cb) {
   if(eventType == 'row') {
     rowCb = cb;
+  } else if(eventType == 'status') {
+    statusCb = cb;
   }
 };
 exports.search = search;
