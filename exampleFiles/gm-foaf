@@ -1,0 +1,17 @@
+<?xml version='1.0'?>
+<rdf:RDF xmlns='http://xmlns.com/foaf/0.1/' xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
+	<PersonalProfileDocument rdf:about=''>
+		<maker rdf:nodeID='me'/>
+		<primaryTopic rdf:nodeID='me'/>
+	</PersonalProfileDocument>
+	<Person rdf:nodeID='me'>
+		<nick>dejong.michiel</nick>
+		<name>Michiel de Jong</name>
+		<account>
+			<OnlineAccount rdf:about='acct:dejong.michiel@gmail.com'>
+				<accountServiceHomepage rdf:resource='http://www.google.com/profiles/'/>
+				<accountName>dejong.michiel</accountName>
+			</OnlineAccount>
+		</account>
+	</Person>
+</rdf:RDF>
