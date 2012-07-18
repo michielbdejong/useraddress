@@ -12,6 +12,9 @@ function doFile(fileName, docRel, identifiers) {
   if(fileName == 'http://www-opensocial.googleusercontent.com/api/people/108912615873187638071/') {
     fileName = 'gm-poco-me';
   }
+  if(fileName == 'https://revolutionari.es/poco/michiel') {
+    fileName = 'fr-poco';
+  }
   fs.readFile('exampleFiles/'+fileName, function(err, data) {
     console.log('parsing '+fileName);
     var parsed;
@@ -41,11 +44,24 @@ function doFile(fileName, docRel, identifiers) {
               obj.identifiers[data2.Alias[i]]=true;
             }
           }
+          for(var i=0; i<data2.Property.length; i++) {
+            console.log(data2.Property[i]);
+          }
           for(var i=0; i<data2.Link.length; i++) {
+            console.log(data2.Link[i]);
+            if(data2.Link[i]['@'] && data2.Link[i]['@'].rel == 'http://webfinger.net/rel/avatar') {
+              obj.images.avatar = data2.Link[i]['@'].href;
+            }
             if(data2.Link[i]['@'] && data2.Link[i]['@'].rel == 'describedby' && data2.Link[i]['@'].type == 'application/rdf+xml') {
               obj.seeAlso.push({
                 url: data2.Link[i]['@'].href,
                 docRel: 'describedby'
+              });
+            }
+            if(data2.Link[i]['@'] && data2.Link[i]['@'].rel == 'http://portablecontacts.net/spec/1.0') {
+              obj.seeAlso.push({
+                url: data2.Link[i]['@'].href,
+                docRel: 'poco'
               });
             }
             if(data2.Link[i]['@'] && data2.Link[i]['@'].rel == 'http://portablecontacts.net/spec/1.0#me') {
@@ -117,6 +133,10 @@ function doFile(fileName, docRel, identifiers) {
         obj.textFields.fullName = parsed.name;
         obj.textFields.nick = parsed.username;
         obj.images.avatar = 'http://graph.facebook.com/'+parsed.username+'/picture';
+      } else if(docRel == 'poco') {
+        for(var i=0; i<parsed.entry.length; i++) {
+          obj.follows.push(parsed.entry[i].urls[0].value);
+        }
       } else {
         console.log('JSON doc!');
       }
@@ -126,6 +146,7 @@ function doFile(fileName, docRel, identifiers) {
 }
 
 //doFile('id-xrd', 'lrdd', {'acct:michielbdejong@identi.ca': true});
+doFile('fr-xrd', 'lrdd', {'acct:michiel@revolutionari.es': true});
 //doFile('gm-xrd', 'lrdd', {'acct:dejong.michiel@gmail.com': true});
 //doFile('twitter-api', 'twitter-api', {'http://twitter.com/michielbdejong': true});
-doFile('fb-api', 'facebook-api', {'http://facebook.com/dejong.michiel': true});
+//doFile('fb-api', 'facebook-api', {'http://facebook.com/dejong.michiel': true});
