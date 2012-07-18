@@ -108,6 +108,29 @@ function doFile(fileName, docRel, identifiers) {
               }
             }
           }
+        } else if(data2['@'] && data2['@'].xmlns && data2['@'].xmlns == 'http://www.w3.org/1999/xhtml') {
+          console.log(data2.head);
+          for(var i=0; i<data2.head.link.length; i++) {
+            console.log(data2.head.link[i]);
+          }
+          console.log(data2.body);
+          for(var containerEltType in data2.body) {
+            for(var i=0; i<data2.body[containerEltType].length; i++) {
+              if(data2.body[containerEltType][i]['@'] && data2.body[containerEltType][i]['@'].about == '#me') {
+                console.log('the #me '+containerEltType+':');
+                console.log(data2.body[containerEltType][i]);
+                for(eltType in data2.body[containerEltType][i]) {
+                  for(var j=0; j<data2.body[containerEltType][i][eltType].length; j++) {
+                    if(data2.body[containerEltType][i][eltType][j]['@']) {
+                      if(data2.body[containerEltType][i][eltType][j]['@'].property == 'foaf:name') {
+                        obj.textFields.fullName = data2.body[containerEltType][i][eltType][j]['@'].content; 
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
         
         console.log(JSON.stringify(data2));
@@ -157,4 +180,5 @@ function doFile(fileName, docRel, identifiers) {
 //doFile('gm-xrd', 'lrdd', {'acct:dejong.michiel@gmail.com': true});
 //doFile('twitter-api', 'twitter-api', {'http://twitter.com/michielbdejong': true});
 //doFile('fb-api', 'facebook-api', {'http://facebook.com/dejong.michiel': true});
-doFile('jd-xrd', 'lrdd', {'acct:michielbdejong@joindiaspora.com': true});
+//doFile('jd-xrd', 'lrdd', {'acct:michielbdejong@joindiaspora.com': true});
+doFile('melvin.html', '#me', {'http://melvincarvalho.com/#me': true});
