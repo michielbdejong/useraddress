@@ -41,11 +41,18 @@ function doFile(fileName, docRel, identifiers) {
               data2.Alias = [data2.Alias];
             }
             for(var i in data2.Alias) {
-              obj.identifiers[data2.Alias[i]]=true;
+              if(data2.Alias[i] != '"https://joindiaspora.com/"') {//bug in that specific node
+                obj.identifiers[data2.Alias[i]]=true;
+              }
             }
           }
-          for(var i=0; i<data2.Property.length; i++) {
-            console.log(data2.Property[i]);
+          if(data2.Property) {
+            if(typeof(data2.Property)=='string') {
+              data2.Property = [data2.Property];
+            }
+            for(var i=0; i<data2.Property.length; i++) {
+              console.log(data2.Property[i]);
+            }
           }
           for(var i=0; i<data2.Link.length; i++) {
             console.log(data2.Link[i]);
@@ -146,7 +153,8 @@ function doFile(fileName, docRel, identifiers) {
 }
 
 //doFile('id-xrd', 'lrdd', {'acct:michielbdejong@identi.ca': true});
-doFile('fr-xrd', 'lrdd', {'acct:michiel@revolutionari.es': true});
+//doFile('fr-xrd', 'lrdd', {'acct:michiel@revolutionari.es': true});
 //doFile('gm-xrd', 'lrdd', {'acct:dejong.michiel@gmail.com': true});
 //doFile('twitter-api', 'twitter-api', {'http://twitter.com/michielbdejong': true});
 //doFile('fb-api', 'facebook-api', {'http://facebook.com/dejong.michiel': true});
+doFile('jd-xrd', 'lrdd', {'acct:michielbdejong@joindiaspora.com': true});
