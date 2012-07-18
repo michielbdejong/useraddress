@@ -114,20 +114,43 @@ function doFile(fileName, docRel, identifiers) {
             console.log(data2.head.link[i]);
           }
           console.log(data2.body);
+          
+          //---
+          function parseSubTree(subTree, cb) {
+            for(var eltType in subTree) {
+              if(eltType != '@' && eltType != '#') {
+                if(!subTree[eltType].length) {
+                  subTree[eltType]=[subTree[eltType]];
+                }
+                for(var j=0; j<subTree[eltType].length; j++) {
+                  if(typeof(subTree[eltType][j]) == 'object') {
+                    if(subTree[eltType][j]['@']) {
+                      if(subTree[eltType][j]['@'].property) {
+                        cb(subTree[eltType][j]['@'].property, subTree[eltType][j]['@'].content);
+                      } else if(subTree[eltType][j]['@'].rel) {
+                        cb(subTree[eltType][j]['@'].rel, subTree[eltType][j]['@'].href);
+                      }
+                    }
+                    parseSubTree(subTree[eltType][j], cb);
+                  }
+                }
+              }
+            }
+          }
+          //---
+          
           for(var containerEltType in data2.body) {
             for(var i=0; i<data2.body[containerEltType].length; i++) {
               if(data2.body[containerEltType][i]['@'] && data2.body[containerEltType][i]['@'].about == '#me') {
-                console.log('the #me '+containerEltType+':');
-                console.log(data2.body[containerEltType][i]);
-                for(eltType in data2.body[containerEltType][i]) {
-                  for(var j=0; j<data2.body[containerEltType][i][eltType].length; j++) {
-                    if(data2.body[containerEltType][i][eltType][j]['@']) {
-                      if(data2.body[containerEltType][i][eltType][j]['@'].property == 'foaf:name') {
-                        obj.textFields.fullName = data2.body[containerEltType][i][eltType][j]['@'].content; 
-                      }
-                    }
+                parseSubTree(data2.body[containerEltType][i], function(property, content) {
+                  if(property== 'foaf:name') {
+                    obj.textFields.fullName = content; 
+                  } else if(property== 'foaf:knows') {
+                    obj.follows.push(content); 
+                  } else if(property== 'foaf:depiction') {
+                    obj.images.avatar = content; 
                   }
-                }
+                });
               }
             }
           }
