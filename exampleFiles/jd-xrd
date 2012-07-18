@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XRD xmlns="http://docs.oasis-open.org/ns/xri/xrd-1.0">
+  <Subject>acct:michielbdejong@joindiaspora.com</Subject>
+  <Alias>"https://joindiaspora.com/"</Alias>
+  <Link rel="http://microformats.org/profile/hcard" type="text/html" href="https://joindiaspora.com/hcard/users/e583028f23ce0302"/>
+  <Link rel="http://joindiaspora.com/seed_location" type = 'text/html' href="https://joindiaspora.com/"/>
+  <Link rel="http://joindiaspora.com/guid" type = 'text/html' href="e583028f23ce0302"/>
+
+  <Link rel='http://webfinger.net/rel/profile-page' type='text/html' href="https://joindiaspora.com/u/michielbdejong"/>
+  <Link rel="http://schemas.google.com/g/2010#updates-from" type="application/atom+xml" href="https://joindiaspora.com/public/michielbdejong.atom"/>
+
+  <Link rel="diaspora-public-key" type = 'RSA' href="LS0tLS1CRUdJTiBSU0EgUFVCTElDIEtFWS0tLS0tCk1JSUNDZ0tDQWdFQXc3TUpjVkxyYXVGVHZRSGY4Si8wWHdUZ3JTZjIxdThpMWNjWFBSRkRjV2wrTXBUUmVRZ0EKZkZVWWhWaFVqUlJnN2J2a0xQUis4U1lPbnh6UkVzaG5ZZTE4Qmk5ZTNVZ3JKMGRGN2puQ2pnN2lxVW5sdTkvawpyc2JIWUpZUHQ4QVVXdHRKc0hyWURRdnVYcTdDd3p0SS9laVRWbDMva0NLdVFxZzMrK0NxQk5tWTRSUkplQmVoClNhUmpLTXR5dGEwY0d4amJESldnTUlPOTRiN2pwTWdlOUlpSmg2YUFSS2xvNXRmdUc5L2lwYUlSNDhHNkRjTHAKL2FFczR2ODBtTUNpRzh3N1FHTTdpR3poNU1PdFpGamNpaXV3TFgyNmRVM1JNSGtwMEZldGJ5WldoZDNPUHpvbwpFbnorUUdORWZhNm9yekpkZDFXQmd5RitQMXRsemVhZGNFNFd3LzFWOUtIUTM2eU1RT1Q5N05HSXhGRUZxSUd2CkpFTWpoOXRIdHZSZmNuSzgxc2dyUWpram42YWdmM042OWhQK2FQa2hKTnluR2ZBcU1HNUJwVnRwbFFheDc3NU0KajJNK280b255eDlCbEExOU5aak9UOHVMTFR5VW9QMTdUNGxTc3dOWG8rTW0wSXNPR1VjeW1YRTQwTVYzb2UzdQpFMEQyZVFxRklIRWdVM3loTEpwZkp0OVJLRTR0NjdpVytMU25VWHhLb05pcnpmRTRRQnVYV1N3WEJpbWJQSDZYCnQ4cVZRWUxJdUFDSnVlb0Z2NXdZNXhkTGU4cTVZOC9LVHlUcDh2Tit0N2VONFNxMnRUeC9KNjVLckhGVVlzd3gKbHZLMkZvUDBEWlNwb25uSkl6bmt4ZC9WR205RUZ3cVg5cnJ4dHNiL0hmVWVHV3ZNbGF5ZlFDOENBd0VBQVE9PQotLS0tLUVORCBSU0EgUFVCTElDIEtFWS0tLS0tCg=="/>
+</XRD>

@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<XRD xmlns='http://docs.oasis-open.org/ns/xri/xrd-1.0'
+     xmlns:hm='http://host-meta.net/xrd/1.0'>
+ 
+    <hm:Host>revolutionari.es</hm:Host>
+ 
+    <Link rel='lrdd' template='https://revolutionari.es/xrd/?uri={uri}' />
+    <Link rel='acct-mgmt' href='https://revolutionari.es/amcd' />
+    <Link rel='http://services.mozilla.com/amcd/0.1' href='https://revolutionari.es/amcd' />
+	<Link rel="http://oexchange.org/spec/0.8/rel/resident-target" type="application/xrd+xml" 
+        href="https://revolutionari.es/oexchange/xrd" />
+
+    <Link rel="http://purl.org/zot/1.0/post" 
+        href="https://revolutionari.es/post" />
+
+    <Property xmlns:zot="http://purl.og/zot/1.0"
+        type="http://purl.org/zot/1.0/version"
+        zot:version="1" />
+
+    <Property xmlns:zot="http://purl.og/zot/1.0"
+        type="http://purl.org/zot/1.0/accept"
+        zot:accept="application/atom+xml" />
+
+    <Property xmlns:mk="http://salmon-protocol.org/ns/magic-key"
+        type="http://salmon-protocol.org/ns/magic-key"
+        mk:key_id="1">RSA.AMTBQpER3wBdrlJxF67Kxe2GuFInV0acbjaxVxTkkD-ZqfVsvRxW37q42B6jXoZEuK6ZoaUYYmoHvcN1uIanXGgSCLged-XSIluXQwTti4C3ye-MRqU_jF2KRWNrbQCmKJKtJASbS2sy9ynn3-8kkH8v6RG6GJdiQZvC__NOeRjPpBHCCTmbOV23drb8KCKj8l-VUUf0NYdZFOhX6kxfBHliEr-v5Hux8Ycr5U9UKGdW27gXqTg9ifgQB6uo-C2th71_pMnYRGmwed3JNLBnrA4L1IjS1xJbP-1vl-WyZEz19BfauwrtcBGKE5MfHNDxi2KLlukmDjbbupi5_gU7UAf-bLUYwxG0PM9Ev7b1sk98g_rIWWgh-V0xVM3TTqFEWzWY_SBHo7hZdXWhMnw6VgGo-lFLdOJ3SlfCuj5No4M5KMgDoY7d422LCL_6AIT9ffk7Hxjy9Y7Gh4lmRWGHEKtYuBnOEQD2HonHVcDXr3o2dfCQh0hEoPOdl-tHp4ohs4iQktQgCopiq-r7jRnsjRGp9Nz4m44TzwKJx40xKWuYJCC_pSI2Z88mjlKmnijba085I1_WqvrznPDccs7e-aRmPD9m6Cn6tzRoC5rexOo2EtMTqkEFhREYdcDdZ1PeWca9DjXq2d3YdGsZZBD-OiCzd4crsv92cMMdSkDFwAaH.AQAB</Property>
+
+
+</XRD>

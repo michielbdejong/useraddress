@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XRD xmlns="http://docs.oasis-open.org/ns/xri/xrd-1.0">
+ 
+    <Subject>acct:michiel@revolutionari.es</Subject>
+	<Alias>acct:michiel@revolutionari.es</Alias>
+    <Alias>https://revolutionari.es/profile/michiel</Alias>
+ 
+    <Link rel="http://purl.org/zot/1.0/post/michiel" 
+          href="https://revolutionari.es/post/michiel" />
+
+    <Property xmlns:zot="http://purl.og/zot/1.0"
+          type="http://purl.org/zot/1.0/version"
+          zot:version="1" />
+
+    <Property xmlns:zot="http://purl.og/zot/1.0"
+        type="http://purl.org/zot/1.0/accept"
+        zot:accept="application/atom+xml" />
+
+    <Link rel="http://purl.org/macgirvin/dfrn/1.0"
+          href="https://revolutionari.es/profile/michiel" />
+    <Link rel="http://schemas.google.com/g/2010#updates-from" 
+          type="application/atom+xml" 
+          href="https://revolutionari.es/dfrn_poll/michiel" />
+    <Link rel="http://webfinger.net/rel/profile-page"
+          type="text/html"
+          href="https://revolutionari.es/profile/michiel" />
+    <Link rel="http://microformats.org/profile/hcard"
+          type="text/html"
+          href="https://revolutionari.es/hcard/michiel" />
+    <Link rel="http://portablecontacts.net/spec/1.0"
+          href="https://revolutionari.es/poco/michiel" />
+    <Link rel="http://webfinger.net/rel/avatar"
+          type="image/jpeg"
+          href="https://revolutionari.es/photo/profile/55.jpg" />
+	
+    <Link rel="salmon" 
+          href="https://revolutionari.es/salmon/michiel" />
+    <Link rel="http://salmon-protocol.org/ns/salmon-replies" 
+          href="https://revolutionari.es/salmon/michiel" />
+    <Link rel="http://salmon-protocol.org/ns/salmon-mention" 
+          href="https://revolutionari.es/salmon/michiel/mention" />
+    <Link rel="magic-public-key" 
+          href="data:application/magic-public-key,RSA.AMqDGHx1GCVZ65UZXhsL-7OytEN24qaBYVY7nAFTvDOLW52EFZwY32qu7dHFqS6qicXj5xNJcVu7DgNWgRmvmgs.AQAB" />
+ 
+	<Property xmlns:mk="http://salmon-protocol.org/ns/magic-key"
+          type="http://salmon-protocol.org/ns/magic-key"
+          mk:key_id="1">RSA.ALC9UPSFQa0DWR_q6diNvFPR1whdzfb0LBO3zeR73vMcR9whYtwTS4gytJTkm66JUpxP1cC_7XjBx59qUrIr5u4oR8GENobDBCNOqu55XhuGKDsHjC8BNdz9Mm5a11o6ODmFpMKLmFbqZ2AYaKXvJzq4-zvqJgZ6HnC0ZKLnKBEN8rw_IrYF1Y443JO73g79Ob01nFWFZR9-q7SDMm1E9lIuJ_EZlblnAmA7AfMT2Vs6qDgPh_kA__k5rpoiOwUtPumbBPvXCt5MzDVt5ndX3mz8z4iFuGok-xz5btiRdXQpucQ9W5JW_GJrxfqObvKjSbHqzVYdz5rpVIa2MpGZgW1OgOULM6D_edfd8MqxU8y4uFaZgCw4CltdnMGWs0MwUrBKCWLJ4ipUsJ4zEZ0FoCr1R9BiZMNZ262blSWU7gPXUjk5Po5YQUyttLmlXwjyvguDJvoqYYcEuWIuZPZdaKHxL4BTb2NmZz7TXi7diaAuEHJhJJZ7_1bwOuri7ErwhRlNZRJYY59B4rjiRPTQTnigHetBNwcuQ98fMX1yjZ_OKHNY1NwnMYU0LWvLTgWOoNYiYR_M9F9z6WY8ZKJscPG8dbIW9BEieV3dXhTJ9e4ug3ySi6IHRLpd59StFCtQhO4Jcznf1cuhLsD0OP5SJdQI6ZKqBqfRxartvW14_pZf.AQAB</Property>
+
+</XRD>

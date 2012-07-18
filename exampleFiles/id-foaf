@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:bio="http://purl.org/vocab/bio/0.1/" xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns="http://xmlns.com/foaf/0.1/">
+ <PersonalProfileDocument rdf:about="">
+  <maker rdf:resource="http://identi.ca/user/425878"></maker>
+  <primaryTopic rdf:resource="http://identi.ca/user/425878"></primaryTopic>
+ </PersonalProfileDocument>
+ <Agent rdf:about="http://identi.ca/user/425878">
+  <mbox_sha1sum>ff1a2828e8c93048c9a2c7c4de7c36b53f0e3262</mbox_sha1sum>
+  <name>Michiel de Jong</name>
+  <homepage rdf:resource="http://www.unhosted.org/"></homepage>
+  <weblog rdf:resource="http://identi.ca/michielbdejong"></weblog>
+  <bio:olb>Lived in Bali last winter and was 'the guy that did unhosted'. Now live in Berlin and proud to be just one of many 'people who do unhosted'.</bio:olb>
+  <based_near>
+   <geo:SpatialThing rdf:about="http://sws.geonames.org/2950159/">
+    <name>Berlin, Land Berlin, Germany</name>
+    <geo:lat>52.52437</geo:lat>
+    <geo:long>13.41053</geo:long>
+    <page rdf:resource="http://www.geonames.org/2950159"></page>
+   </geo:SpatialThing>
+  </based_near>
+  <img>
+   <Image rdf:about="http://avatar.identi.ca/425878-480-20110427110559.jpeg">
+    <thumbnail>
+     <Image rdf:about="http://avatar.identi.ca/425878-96-20110427110559.jpeg"></Image>
+    </thumbnail>
+    <thumbnail>
+     <Image rdf:about="http://avatar.identi.ca/425878-48-20110427110559.jpeg"></Image>
+    </thumbnail>
+    <thumbnail>
+     <Image rdf:about="http://avatar.identi.ca/425878-24-20110427110559.jpeg"></Image>
+    </thumbnail>
+   </Image>
+  </img>
+  <account>
+   <OnlineAccount rdf:about="http://identi.ca/user/425878#acct">
+    <accountServiceHomepage rdf:resource="http://identi.ca/"></accountServiceHomepage>
+    <accountName>michielbdejong</accountName>
+    <accountProfilePage rdf:resource="http://identi.ca/michielbdejong"></accountProfilePage>
+    <sioc:account_of rdf:resource="http://identi.ca/user/425878"></sioc:account_of>
+    <sioc:follows rdf:resource="http://identi.ca/user/136#acct"></sioc:follows>
+    <sioc:follows rdf:resource="http://identi.ca/user/126137#acct"></sioc:follows>
+    <sioc:follows rdf:resource="http://dev.unhosted.org/statusnet/user/1#acct"></sioc:follows>
+    <sioc:follows rdf:resource="http://federoni.org/user/425878#acct"></sioc:follows>
+   </OnlineAccount>
+  </account>
+  <knows rdf:resource="http://identi.ca/user/126137"></knows>
+  <knows rdf:resource="http://dev.unhosted.org/statusnet/user/1"></knows>
+ </Agent>
+ <Agent rdf:about="http://identi.ca/user/136">
+  <account>
+   <OnlineAccount rdf:about="http://identi.ca/user/136#acct">
+    <accountServiceHomepage rdf:resource="http://identi.ca/"></accountServiceHomepage>
+    <accountName>identica</accountName>
+    <accountProfilePage rdf:resource="http://identi.ca/identica"></accountProfilePage>
+    <sioc:account_of rdf:resource="http://identi.ca/user/136"></sioc:account_of>
+   </OnlineAccount>
+  </account>
+  <rdfs:seeAlso rdf:resource="http://identi.ca/identica/foaf"></rdfs:seeAlso>
+ </Agent>
+ <PersonalProfileDocument rdf:about="http://identi.ca/identica/foaf">
+  <maker rdf:resource="http://identi.ca/user/136"></maker>
+  <primaryTopic rdf:resource="http://identi.ca/user/136"></primaryTopic>
+ </PersonalProfileDocument>
+ <Agent rdf:about="http://identi.ca/user/126137">
+  <knows rdf:resource="http://identi.ca/user/425878"></knows>
+  <account>
+   <OnlineAccount rdf:about="http://identi.ca/user/126137#acct">
+    <accountServiceHomepage rdf:resource="http://identi.ca/"></accountServiceHomepage>
+    <accountName>smarks</accountName>
+    <accountProfilePage rdf:resource="http://identi.ca/smarks"></accountProfilePage>
+    <sioc:account_of rdf:resource="http://identi.ca/user/126137"></sioc:account_of>
+    <sioc:follows rdf:resource="http://identi.ca/user/425878#acct"></sioc:follows>
+   </OnlineAccount>
+  </account>
+  <rdfs:seeAlso rdf:resource="http://identi.ca/smarks/foaf"></rdfs:seeAlso>
+ </Agent>
+ <PersonalProfileDocument rdf:about="http://identi.ca/smarks/foaf">
+  <maker rdf:resource="http://identi.ca/user/126137"></maker>
+  <primaryTopic rdf:resource="http://identi.ca/user/126137"></primaryTopic>
+ </PersonalProfileDocument>
+ <Agent rdf:about="http://dev.unhosted.org/statusnet/user/1">
+  <knows rdf:resource="http://identi.ca/user/425878"></knows>
+  <account>
+   <OnlineAccount rdf:about="http://dev.unhosted.org/statusnet/user/1#acct">
+    <accountName>mich</accountName>
+    <accountProfilePage rdf:resource="http://dev.unhosted.org/statusnet/mich"></accountProfilePage>
+    <sioc:account_of rdf:resource="http://dev.unhosted.org/statusnet/user/1"></sioc:account_of>
+    <sioc:follows rdf:resource="http://identi.ca/user/425878#acct"></sioc:follows>
+   </OnlineAccount>
+  </account>
+ </Agent>
+ <Agent rdf:about="http://federoni.org/user/425878">
+  <account>
+   <OnlineAccount rdf:about="http://federoni.org/user/425878#acct">
+    <accountName>michielbdejong</accountName>
+    <accountProfilePage rdf:resource="http://federoni.org/michielbdejong"></accountProfilePage>
+    <sioc:account_of rdf:resource="http://federoni.org/user/425878"></sioc:account_of>
+   </OnlineAccount>
+  </account>
+ </Agent>
+ <Agent rdf:about="http://identi.ca/user/432896">
+  <account>
+   <OnlineAccount rdf:about="http://identi.ca/user/432896#acct">
+    <accountServiceHomepage rdf:resource="http://identi.ca/"></accountServiceHomepage>
+    <accountName>reutersrock</accountName>
+    <accountProfilePage rdf:resource="http://identi.ca/reutersrock"></accountProfilePage>
+    <sioc:account_of rdf:resource="http://identi.ca/user/432896"></sioc:account_of>
+    <sioc:follows rdf:resource="http://identi.ca/user/425878#acct"></sioc:follows>
+   </OnlineAccount>
+  </account>
+  <rdfs:seeAlso rdf:resource="http://identi.ca/reutersrock/foaf"></rdfs:seeAlso>
+ </Agent>
+ <PersonalProfileDocument rdf:about="http://identi.ca/reutersrock/foaf">
+  <maker rdf:resource="http://identi.ca/user/432896"></maker>
+  <primaryTopic rdf:resource="http://identi.ca/user/432896"></primaryTopic>
+ </PersonalProfileDocument>
+ <Agent rdf:about="http://identi.ca/user/44188">
+  <account>
+   <OnlineAccount rdf:about="http://identi.ca/user/44188#acct">
+    <accountServiceHomepage rdf:resource="http://identi.ca/"></accountServiceHomepage>
+    <accountName>yareckon</accountName>
+    <accountProfilePage rdf:resource="http://identi.ca/yareckon"></accountProfilePage>
+    <sioc:account_of rdf:resource="http://identi.ca/user/44188"></sioc:account_of>
+    <sioc:follows rdf:resource="http://identi.ca/user/425878#acct"></sioc:follows>
+   </OnlineAccount>
+  </account>
+  <rdfs:seeAlso rdf:resource="http://identi.ca/yareckon/foaf"></rdfs:seeAlso>
+ </Agent>
+ <PersonalProfileDocument rdf:about="http://identi.ca/yareckon/foaf">
+  <maker rdf:resource="http://identi.ca/user/44188"></maker>
+  <primaryTopic rdf:resource="http://identi.ca/user/44188"></primaryTopic>
+ </PersonalProfileDocument>
+ <Agent rdf:about="http://identi.ca/user/465489">
+  <account>
+   <OnlineAccount rdf:about="http://identi.ca/user/465489#acct">
+    <accountServiceHomepage rdf:resource="http://identi.ca/"></accountServiceHomepage>
+    <accountName>haroldnewman</accountName>
+    <accountProfilePage rdf:resource="http://identi.ca/haroldnewman"></accountProfilePage>
+    <sioc:account_of rdf:resource="http://identi.ca/user/465489"></sioc:account_of>
+    <sioc:follows rdf:resource="http://identi.ca/user/425878#acct"></sioc:follows>
+   </OnlineAccount>
+  </account>
+  <rdfs:seeAlso rdf:resource="http://identi.ca/haroldnewman/foaf"></rdfs:seeAlso>
+ </Agent>
+ <PersonalProfileDocument rdf:about="http://identi.ca/haroldnewman/foaf">
+  <maker rdf:resource="http://identi.ca/user/465489"></maker>
+  <primaryTopic rdf:resource="http://identi.ca/user/465489"></primaryTopic>
+ </PersonalProfileDocument>
+ <Agent rdf:about="http://identi.ca/user/58458">
+  <account>
+   <OnlineAccount rdf:about="http://identi.ca/user/58458#acct">
+    <accountServiceHomepage rdf:resource="http://identi.ca/"></accountServiceHomepage>
+    <accountName>hugoroy</accountName>
+    <accountProfilePage rdf:resource="http://identi.ca/hugoroy"></accountProfilePage>
+    <sioc:account_of rdf:resource="http://identi.ca/user/58458"></sioc:account_of>
+    <sioc:follows rdf:resource="http://identi.ca/user/425878#acct"></sioc:follows>
+   </OnlineAccount>
+  </account>
+  <rdfs:seeAlso rdf:resource="http://identi.ca/hugoroy/foaf"></rdfs:seeAlso>
+ </Agent>
+ <PersonalProfileDocument rdf:about="http://identi.ca/hugoroy/foaf">
+  <maker rdf:resource="http://identi.ca/user/58458"></maker>
+  <primaryTopic rdf:resource="http://identi.ca/user/58458"></primaryTopic>
+ </PersonalProfileDocument>
+ <Agent rdf:about="http://identi.ca/user/453647">
+  <account>
+   <OnlineAccount rdf:about="http://identi.ca/user/453647#acct">
+    <accountServiceHomepage rdf:resource="http://identi.ca/"></accountServiceHomepage>
+    <accountName>owncloud</accountName>
+    <accountProfilePage rdf:resource="http://identi.ca/owncloud"></accountProfilePage>
+    <sioc:account_of rdf:resource="http://identi.ca/user/453647"></sioc:account_of>
+    <sioc:follows rdf:resource="http://identi.ca/user/425878#acct"></sioc:follows>
+   </OnlineAccount>
+  </account>
+  <rdfs:seeAlso rdf:resource="http://identi.ca/owncloud/foaf"></rdfs:seeAlso>
+ </Agent>
+ <PersonalProfileDocument rdf:about="http://identi.ca/owncloud/foaf">
+  <maker rdf:resource="http://identi.ca/user/453647"></maker>
+  <primaryTopic rdf:resource="http://identi.ca/user/453647"></primaryTopic>
+ </PersonalProfileDocument>
+ <Agent rdf:about="http://identi.ca/user/499580">
+  <account>
+   <OnlineAccount rdf:about="http://identi.ca/user/499580#acct">
+    <accountServiceHomepage rdf:resource="http://identi.ca/"></accountServiceHomepage>
+    <accountName>pagekite</accountName>
+    <accountProfilePage rdf:resource="http://identi.ca/pagekite"></accountProfilePage>
+    <sioc:account_of rdf:resource="http://identi.ca/user/499580"></sioc:account_of>
+    <sioc:follows rdf:resource="http://identi.ca/user/425878#acct"></sioc:follows>
+   </OnlineAccount>
+  </account>
+  <rdfs:seeAlso rdf:resource="http://identi.ca/pagekite/foaf"></rdfs:seeAlso>
+ </Agent>
+ <PersonalProfileDocument rdf:about="http://identi.ca/pagekite/foaf">
+  <maker rdf:resource="http://identi.ca/user/499580"></maker>
+  <primaryTopic rdf:resource="http://identi.ca/user/499580"></primaryTopic>
+ </PersonalProfileDocument>
+</rdf:RDF>
