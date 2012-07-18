@@ -109,6 +109,14 @@ function doFile(fileName, docRel, identifiers) {
       if(docRel == 'poco#me') {
         obj.textFields.fullName = parsed.entry.name.formatted;
         obj.images.avatar = parsed.entry.thumbnailUrl;
+      } else if(docRel == 'twitter-api') {
+        obj.textFields.fullName = parsed[0].name;
+        obj.textFields.bio = parsed[0].description;
+        obj.images.avatar = parsed[0].profile_image_url;
+      } else if(docRel == 'facebook-api') {
+        obj.textFields.fullName = parsed.name;
+        obj.textFields.nick = parsed.username;
+        obj.images.avatar = 'http://graph.facebook.com/'+parsed.username+'/picture';
       } else {
         console.log('JSON doc!');
       }
@@ -117,5 +125,7 @@ function doFile(fileName, docRel, identifiers) {
   });
 }
 
-doFile('id-xrd', 'lrdd', {'acct:michielbdejong@identi.ca': true});
-doFile('gm-xrd', 'lrdd', {'acct:dejong.michiel@gmail.com': true});
+//doFile('id-xrd', 'lrdd', {'acct:michielbdejong@identi.ca': true});
+//doFile('gm-xrd', 'lrdd', {'acct:dejong.michiel@gmail.com': true});
+//doFile('twitter-api', 'twitter-api', {'http://twitter.com/michielbdejong': true});
+doFile('fb-api', 'facebook-api', {'http://facebook.com/dejong.michiel': true});
