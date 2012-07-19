@@ -25,24 +25,19 @@ exports.parse = function(data2, identifiers, cb) {
     if(typeof(data2.Property)=='string') {
       data2.Property = [data2.Property];
     }
-    for(var i=0; i<data2.Property.length; i++) {
-      console.log(data2.Property[i]);
-    }
   }
   for(var i=0; i<data2.Link.length; i++) {
-    console.log(data2.Link[i]);
     if(data2.Link[i]['@'] && data2.Link[i]['@'].rel == 'http://webfinger.net/rel/avatar') {
       obj.images.avatar = data2.Link[i]['@'].href;
-    }
-    if(data2.Link[i]['@'] && data2.Link[i]['@'].rel == 'describedby' && data2.Link[i]['@'].type == 'application/rdf+xml') {
+    } else if(data2.Link[i]['@'] && data2.Link[i]['@'].rel == 'describedby' && data2.Link[i]['@'].type == 'application/rdf+xml') {
       obj.seeAlso[data2.Link[i]['@'].href] = 'describedby';
-    }
-    if(data2.Link[i]['@'] && data2.Link[i]['@'].rel == 'http://portablecontacts.net/spec/1.0') {
+    } else if(data2.Link[i]['@'] && data2.Link[i]['@'].rel == 'http://portablecontacts.net/spec/1.0') {
       if(data2.Link[i]['@'].href != 'http://www-opensocial.googleusercontent.com/api/people/') {//bug in that specific node
         obj.seeAlso[data2.Link[i]['@'].href] = 'poco';
       }
-    }
-    if(data2.Link[i]['@'] && data2.Link[i]['@'].rel == 'http://portablecontacts.net/spec/1.0#me') {
+    } else if(data2.Link[i]['@'] && data2.Link[i]['@'].rel == 'http://microformats.org/profile/hcard') {
+      obj.seeAlso[data2.Link[i]['@'].href] = 'hcard';
+    } else if(data2.Link[i]['@'] && data2.Link[i]['@'].rel == 'http://portablecontacts.net/spec/1.0#me') {
       obj.seeAlso[data2.Link[i]['@'].href] = 'poco#me';
     }
   }

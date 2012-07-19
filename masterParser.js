@@ -1,4 +1,5 @@
 var xml2js=require('xml2js'),
+  htmlparser = require("htmlparser"),
   fs=require('fs'),
   http=require('http'),
   https=require('https'),
@@ -103,6 +104,10 @@ function parse(url, docRel, identifiers, cb) {
   if(url == 'https://revolutionari.es/poco/michiel') {
     url = 'file://exampleFiles/fr-poco';
   }
+  if(url == 'https://joindiaspora.com/hcard/users/e583028f23ce0302') {
+    url = 'file://exampleFiles/jd-hcard';
+  }
+
   fetch(url, function(err, data) {
     if(err) {
       cb(err);
@@ -110,14 +115,26 @@ function parse(url, docRel, identifiers, cb) {
       var parsed;
       try {
         parsed = JSON.parse(data);
-      } catch(e) {
+      } catch(e) {//JSON failed, try xml
         new xml2js.Parser().parseString(data, function(err, data2) {
-          if(docRel=='lrdd' && data2['@'] && data2['@'].xmlns && data2['@'].xmlns == 'http://docs.oasis-open.org/ns/xri/xrd-1.0') {
-            doParse(data2, 'lrdd', identifiers, cb);
-          } else if(data2['@'] && data2['@'].xmlns && data2['@'].xmlns == 'http://xmlns.com/foaf/0.1/') {
-            doParse(data2, 'foaf', identifiers, cb);
-          } else if(data2['@'] && data2['@'].xmlns && data2['@'].xmlns == 'http://www.w3.org/1999/xhtml') {
-            doParse(data2, 'html', identifiers, cb);
+          if(err) {//XML failed, try html
+            var handler = new htmlparser.DefaultHandler(function (err, data3) {
+              if(err) {
+               cb(err);
+              } else {
+                doParse(data3, docRel, identifiers, cb);
+              }
+            });
+            var parser = new htmlparser.Parser(handler);
+            parser.parseComplete(data);
+          } else {
+            if(docRel=='lrdd' && data2['@'] && data2['@'].xmlns && data2['@'].xmlns == 'http://docs.oasis-open.org/ns/xri/xrd-1.0') {
+              doParse(data2, 'lrdd', identifiers, cb);
+            } else if(data2['@'] && data2['@'].xmlns && data2['@'].xmlns == 'http://xmlns.com/foaf/0.1/') {
+              doParse(data2, 'foaf', identifiers, cb);
+            } else if(data2['@'] && data2['@'].xmlns && data2['@'].xmlns == 'http://www.w3.org/1999/xhtml') {
+              doParse(data2, 'html', identifiers, cb);
+            }
           }
         });
         return;

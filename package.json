@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "sockjs": "*",
-    "xml2js": "*"
+    "xml2js": "*",
+    "htmlparser": "*"
   }
 }

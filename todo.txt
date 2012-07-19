@@ -1,7 +1,7 @@
                    fullName  bio       nick      avatar    follows   tools...
 
 StatusNet          OK        OK                  OK        OK
-Diaspora
+Diaspora           OK                            OK
 Friendica                                        OK        OK
 BuddyCloud
 pURIst             OK                            OK        OK
