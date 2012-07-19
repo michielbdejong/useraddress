@@ -1,11 +1,12 @@
 exports.parse = function(data2, identifiers, cb) {
   var obj= {
+    identifiers: identifiers,
     textFields: {},
     images: {},
     seeAlso: {},
     follows: {},
     tools: {},
-    data: parsed
+    data: data2
   };
   if(data2.Subject) {
     obj.identifiers[data2.Subject]=true;

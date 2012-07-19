@@ -1,5 +1,6 @@
 exports.parse = function(data2, identifiers, cb) {
   var obj= {
+    identifiers: identifiers,
     textFields: {},
     images: {},
     seeAlso: {},
