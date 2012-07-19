@@ -30,6 +30,12 @@ function doParse(content, language, identifiers, cb) {
           }
         }
         if(outstanding == 0) {
+          for(var i in identifiers) {
+            if(i.substring(0, 'acct:'.length) == 'acct:') {
+              data.textFields.nick=i.substring('acct:'.length).split('@')[0];
+            }
+          }
+          delete data.data;
           cb(err, data);
         }
       });
@@ -110,6 +116,12 @@ function parse(url, docRel, identifiers, cb) {
   if(url == 'https://revolutionari.es/poco/michiel') {
     url = 'file://exampleFiles/fr-poco';
   }
+  if(url == 'https://revolutionari.es/hcard/michiel') {
+    url = 'file://exampleFiles/fr-hcard';
+  }
+  if(url == 'http://www.google.com/profiles/dejong.michiel') {
+    url = 'file://exampleFiles/gm-hcard';
+  }
   if(url == 'https://joindiaspora.com/hcard/users/e583028f23ce0302') {
     url = 'file://exampleFiles/jd-hcard';
   }
@@ -140,6 +152,9 @@ function parse(url, docRel, identifiers, cb) {
               doParse(data2, 'foaf', identifiers, cb);
             } else if(data2['@'] && data2['@'].xmlns && data2['@'].xmlns == 'http://www.w3.org/1999/xhtml') {
               doParse(data2, 'html', identifiers, cb);
+            } else {
+              console.log(JSON.stringify(data2));
+              cb('xml document type not recognized');
             }
           }
         });
