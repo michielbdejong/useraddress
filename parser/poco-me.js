@@ -1,7 +1,7 @@
 exports.parse = function(parsed, identifiers, cb) {
   var obj= {
     textFields: {},
-    pictures: {},
+    images: {},
     seeAlso: {},
     follows: {},
     tools: {},

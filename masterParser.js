@@ -5,10 +5,10 @@ var xml2js=require('xml2js'),
   url=require('url');
 
 function doParse(content, language, identifiers, cb) {
-  require('parser/'+language).parse(content, identifiers, function(err, data) {
+  require('./parser/'+language).parse(content, identifiers, function(err, data) {
     //data = {
     //  textFields: {},
-    //  pictures: {},
+    //  images: {},
     //  seeAlso: {},
     //  follows: {},
     //  tools: {},
@@ -36,7 +36,8 @@ function doParse(content, language, identifiers, cb) {
 }
 
 function fetch(urlStr, cb) {
-  if(urlStr.substring(0, 'file://exampleFiles/'.length) += 'file://exampleFiles/') {
+  console.log(urlStr);
+  if(urlStr.substring(0, 'file://exampleFiles/'.length) == 'file://exampleFiles/') {
     fs.readFile(urlStr.substring('file://'.length), cb);
   } else {
     var timer, responded = false;

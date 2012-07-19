@@ -25,7 +25,7 @@ function parseSubTree(subTree, cb) {
 exports.parse = function(data2, identifiers, cb) {
   var obj= {
     textFields: {},
-    pictures: {},
+    images: {},
     seeAlso: {},
     follows: {},
     tools: {},

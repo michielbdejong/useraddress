@@ -25,4 +25,4 @@ function doFile(url, docRel, identifiers) {
 //doFile('twitter-api', 'twitter-api', {'http://twitter.com/michielbdejong': true});
 //doFile('fb-api', 'facebook-api', {'http://facebook.com/dejong.michiel': true});
 //doFile('jd-xrd', 'lrdd', {'acct:michielbdejong@joindiaspora.com': true});
-doFile('melvin.html', '#me', {'http://melvincarvalho.com/#me': true});
+doFile('file://exampleFiles/melvin.html', '#me', {'http://melvincarvalho.com/#me': true});
