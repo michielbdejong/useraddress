@@ -35,6 +35,12 @@ function doParse(content, language, identifiers, cb) {
       });
     }
     if(outstanding == 0) {
+      for(var i in identifiers) {
+        if(i.substring(0, 'acct:'.length) == 'acct:') {
+          data.textFields.nick=i.substring('acct:'.length).split('@')[0];
+        }
+      }
+      delete data.data;
       cb(err, data);
     }
   });

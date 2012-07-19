@@ -1,10 +1,10 @@
                    fullName  bio       nick      avatar    follows   tools...
 
-StatusNet          OK        OK                  OK        OK
-Diaspora           OK                            OK
+StatusNet          OK        OK        OK        OK        OK
+Diaspora           OK                  OK        OK
 Friendica                                        OK        OK
 BuddyCloud
 pURIst             OK                            OK        OK
 Google             OK                  OK        OK
 Facebook           OK                  OK        OK
-Twitter            OK        OK                  OK 
+Twitter            OK        OK        OK        OK 
