@@ -5,6 +5,7 @@ var xml2js=require('xml2js'),
   url=require('url');
 
 function doParse(content, language, identifiers, cb) {
+  console.log('parsing as '+language);
   require('./parser/'+language).parse(content, identifiers, function(err, data) {
     //data = {
     //  textFields: {},
@@ -31,6 +32,9 @@ function doParse(content, language, identifiers, cb) {
           cb(err, data);
         }
       });
+    }
+    if(outstanding == 0) {
+      cb(err, data);
     }
   });
 }
@@ -98,9 +102,10 @@ function parse(url, docRel, identifiers, cb) {
         } else if(data2['@'] && data2['@'].xmlns && data2['@'].xmlns == 'http://xmlns.com/foaf/0.1/') {
           doParse(data2, 'foaf', identifiers, cb);
         } else if(data2['@'] && data2['@'].xmlns && data2['@'].xmlns == 'http://www.w3.org/1999/xhtml') {
-          doParse(data2, 'html', docRel, identifiers, cb);
+          doParse(data2, 'html', identifiers, cb);
         }
       });
+      return;
     }
     if(parsed) {
       if(docRel == 'poco#me') {

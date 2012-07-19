@@ -39,7 +39,7 @@ exports.parse = function(data2, identifiers, cb) {
           if(property== 'foaf:name') {
             obj.textFields.fullName = content; 
           } else if(property== 'foaf:knows') {
-            obj.follows.push(content); 
+            obj.follows[content]=true; 
           } else if(property== 'foaf:depiction') {
             obj.images.avatar = content; 
           }
