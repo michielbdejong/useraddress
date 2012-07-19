@@ -15,7 +15,7 @@ exports.parse = function(data2, identifiers, cb) {
           && data2.PersonalProfileDocument[i].primaryTopic
           && data2.PersonalProfileDocument[i].primaryTopic['@']
           && data2.PersonalProfileDocument[i].primaryTopic['@']['rdf:resource']) {
-        obj.follows.push(data2.PersonalProfileDocument[i].primaryTopic['@']['rdf:resource']);
+        obj.follows[data2.PersonalProfileDocument[i].primaryTopic['@']['rdf:resource']]=true;
       }
     }
   }
