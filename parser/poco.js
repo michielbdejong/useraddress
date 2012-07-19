@@ -9,7 +9,7 @@ exports.parse = function(parsed, identifiers, cb) {
     data: parsed
   };
   for(var i=0; i<parsed.entry.length; i++) {
-    obj.follows.push(parsed.entry[i].urls[0].value);
+    obj.follows[parsed.entry[i].urls[0].value]=true;
   }
   cb(null, obj);
 };
