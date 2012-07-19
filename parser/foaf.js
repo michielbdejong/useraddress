@@ -6,7 +6,7 @@ exports.parse = function(data2, identifiers, cb) {
     seeAlso: {},
     follows: {},
     tools: {},
-    data: parsed
+    data: data2
   };
   if(data2.PersonalProfileDocument) {
     for(var i=0; i<data2.PersonalProfileDocument.length; i++) {
@@ -36,5 +36,5 @@ exports.parse = function(data2, identifiers, cb) {
       }
     }
   }
-  cb(err, obj);
+  cb(null, obj);
 };

@@ -35,22 +35,15 @@ exports.parse = function(data2, identifiers, cb) {
       obj.images.avatar = data2.Link[i]['@'].href;
     }
     if(data2.Link[i]['@'] && data2.Link[i]['@'].rel == 'describedby' && data2.Link[i]['@'].type == 'application/rdf+xml') {
-      obj.seeAlso.push({
-        url: data2.Link[i]['@'].href,
-        docRel: 'describedby'
-      });
+      obj.seeAlso[data2.Link[i]['@'].href] = 'describedby';
     }
     if(data2.Link[i]['@'] && data2.Link[i]['@'].rel == 'http://portablecontacts.net/spec/1.0') {
-      obj.seeAlso.push({
-        url: data2.Link[i]['@'].href,
-        docRel: 'poco'
-      });
+      if(data2.Link[i]['@'].href != 'http://www-opensocial.googleusercontent.com/api/people/') {//bug in that specific node
+        obj.seeAlso[data2.Link[i]['@'].href] = 'poco';
+      }
     }
     if(data2.Link[i]['@'] && data2.Link[i]['@'].rel == 'http://portablecontacts.net/spec/1.0#me') {
-      obj.seeAlso.push({
-        url: data2.Link[i]['@'].href,
-        docRel: 'poco#me'
-      });
+      obj.seeAlso[data2.Link[i]['@'].href] = 'poco#me';
     }
   }
   cb(null, obj);

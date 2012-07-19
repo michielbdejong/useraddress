@@ -18,7 +18,7 @@ function doParse(content, language, identifiers, cb) {
     var outstanding = 0;
     for(var i in data.seeAlso) {
       outstanding++;//map
-      parse(data.seeAlso[i].url, data.seeAlso[i].rel, identifiers, function(err, data2) {
+      parse(i, data.seeAlso[i], identifiers, function(err2, data2) {
         outstanding--;//reduce
         if(err2) {
           err = err2;
@@ -44,10 +44,10 @@ function fetch(urlStr, cb) {
   if(urlStr.substring(0, 'file://exampleFiles/'.length) == 'file://exampleFiles/') {
     fs.readFile(urlStr.substring('file://'.length), cb);
   } else {
+    var urlObj = url.parse(urlStr);
     var timer, responded = false;
     var lib = (urlObj.protocol=='https:'?https:http);
     
-    var urlObj = url.parse(urlStr);
     var options = {
       method: 'GET',
       host: urlObj.hostname,
@@ -91,36 +91,52 @@ function fetch(urlStr, cb) {
 }
 
 function parse(url, docRel, identifiers, cb) {
+  if(url == 'http://identi.ca/michielbdejong/foaf') {
+    url = 'file://exampleFiles/id-foaf';
+  }
+  if(url == 'http://www.google.com/s2/webfinger/?q=acct%3Adejong.michiel%40gmail.com&fmt=foaf') {
+    url = 'file://exampleFiles/gm-foaf';
+  }
+  if(url == 'http://www-opensocial.googleusercontent.com/api/people/108912615873187638071/') {
+    url = 'file://exampleFiles/gm-poco-me';
+  }
+  if(url == 'https://revolutionari.es/poco/michiel') {
+    url = 'file://exampleFiles/fr-poco';
+  }
   fetch(url, function(err, data) {
-    var parsed;
-    try {
-      parsed = JSON.parse(data);
-    } catch(e) {
-      new xml2js.Parser().parseString(data, function(err, data2) {
-        if(docRel=='lrdd' && data2['@'] && data2['@'].xmlns && data2['@'].xmlns == 'http://docs.oasis-open.org/ns/xri/xrd-1.0') {
-          doParse(data2, 'lrdd', identifiers, cb);
-        } else if(data2['@'] && data2['@'].xmlns && data2['@'].xmlns == 'http://xmlns.com/foaf/0.1/') {
-          doParse(data2, 'foaf', identifiers, cb);
-        } else if(data2['@'] && data2['@'].xmlns && data2['@'].xmlns == 'http://www.w3.org/1999/xhtml') {
-          doParse(data2, 'html', identifiers, cb);
-        }
-      });
-      return;
-    }
-    if(parsed) {
-      if(docRel == 'poco#me') {
-        doParse(parsed, 'poco-me', identifiers, cb);
-      } else if(docRel == 'twitter-api') {
-        doParse(parsed, 'twitter', identifiers, cb);
-      } else if(docRel == 'facebook-api') {
-        doParse(parsed, 'facebook', identifiers, cb);
-      } else if(docRel == 'poco') {
-        doParse(parsed, 'poco', identifiers, cb);
-      } else {
-        console.log('JSON doc!');
-      }
+    if(err) {
+      cb(err);
     } else {
-      console.log('no idea what this is');
+      var parsed;
+      try {
+        parsed = JSON.parse(data);
+      } catch(e) {
+        new xml2js.Parser().parseString(data, function(err, data2) {
+          if(docRel=='lrdd' && data2['@'] && data2['@'].xmlns && data2['@'].xmlns == 'http://docs.oasis-open.org/ns/xri/xrd-1.0') {
+            doParse(data2, 'lrdd', identifiers, cb);
+          } else if(data2['@'] && data2['@'].xmlns && data2['@'].xmlns == 'http://xmlns.com/foaf/0.1/') {
+            doParse(data2, 'foaf', identifiers, cb);
+          } else if(data2['@'] && data2['@'].xmlns && data2['@'].xmlns == 'http://www.w3.org/1999/xhtml') {
+            doParse(data2, 'html', identifiers, cb);
+          }
+        });
+        return;
+      }
+      if(parsed) {
+        if(docRel == 'poco#me') {
+          doParse(parsed, 'poco-me', identifiers, cb);
+        } else if(docRel == 'twitter-api') {
+          doParse(parsed, 'twitter', identifiers, cb);
+        } else if(docRel == 'facebook-api') {
+          doParse(parsed, 'facebook', identifiers, cb);
+        } else if(docRel == 'poco') {
+          doParse(parsed, 'poco', identifiers, cb);
+        } else {
+          console.log('JSON doc!');
+        }
+      } else {
+        console.log('no idea what this is');
+      }
     }
   });
 }
