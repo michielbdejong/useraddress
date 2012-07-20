@@ -6,7 +6,7 @@ var xml2js=require('xml2js'),
   url=require('url');
 
 function doParse(content, language, identifiers, cb) {
-  console.log('parsing as '+language);
+  //console.log('parsing as '+language);
   require('./parser/'+language).parse(content, identifiers, function(err, data) {
     //data = {
     //  textFields: {},
@@ -53,7 +53,7 @@ function doParse(content, language, identifiers, cb) {
 }
 
 function fetch(urlStr, cb) {
-  console.log(urlStr);
+  //console.log(urlStr);
   if(urlStr.substring(0, 'file://exampleFiles/'.length) == 'file://exampleFiles/') {
     fs.readFile(urlStr.substring('file://'.length), cb);
   } else {
@@ -153,7 +153,7 @@ function parse(url, docRel, identifiers, cb) {
             } else if(data2['@'] && data2['@'].xmlns && data2['@'].xmlns == 'http://www.w3.org/1999/xhtml') {
               doParse(data2, 'html', identifiers, cb);
             } else {
-              console.log(JSON.stringify(data2));
+              //console.log(JSON.stringify(data2));
               cb('xml document type not recognized');
             }
           }
@@ -170,10 +170,10 @@ function parse(url, docRel, identifiers, cb) {
         } else if(docRel == 'poco') {
           doParse(parsed, 'poco', identifiers, cb);
         } else {
-          console.log('JSON doc!');
+          cb('JSON doc!');
         }
       } else {
-        console.log('no idea what this is');
+        cb('no idea what this is');
       }
     }
   });

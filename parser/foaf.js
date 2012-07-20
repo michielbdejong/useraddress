@@ -33,6 +33,6 @@ exports.parse = function(data2, identifiers, cb) {
       }
     }
   }
-  console.log('calling back from foaf');
+  //console.log('calling back from foaf');
   cb(null, obj);
 };

@@ -33,6 +33,6 @@ exports.parse = function(data2, identifiers, cb) {
   parseTree(data2[0], function(thing, key, value) {
     obj[thing][key]=value;
   });
-  console.log('calling back from hcard');
+  //console.log('calling back from hcard');
   cb(null, obj);
 };

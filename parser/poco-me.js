@@ -10,6 +10,6 @@ exports.parse = function(parsed, identifiers, cb) {
   };
   obj.textFields.fullName = parsed.entry.name.formatted;
   obj.images.avatar = parsed.entry.thumbnailUrl;
-  console.log('calling back from poco-me');
+  //console.log('calling back from poco-me');
   cb(null, obj);
 };
