@@ -1,16 +1,18 @@
 var data = {},
   index = {},
-  webfinger = require('./webfinger'),
+  masterParser = require('./masterParser'),
   fs = require('fs'),
   pending = 0;
 
 function add(userAddress, obj) {
+  console.log(obj);
   data[userAddress] = {
     userAddress: userAddress,
-    name: obj.name,
-    avatar: obj.avatar
+    name: obj.textFields.fullName || '',
+    avatar: obj.images.avatar || '',
+    type: 'row'
   }
-  var words = obj.name.split(' ');
+  var words = data[userAddress].name.split(' ');
   for(var i in words) {
     for(var j=3; j<=words[i].length; j++) {
       var prefix = words[i].substring(0, j);
@@ -22,6 +24,12 @@ function add(userAddress, obj) {
   }
   dumpDb();
 }
+function findDocFor(str, cb) {
+  if(str.substring(0, 'http://'.length)=='http://' || str.substring(0, 'https://'.length)=='https://') {
+    console.log('doc for '+str);
+    cb(null, str);
+  }
+}
 function search(str) {
   for(var i in index[str]) {
     if(data[i]) {
@@ -32,21 +40,23 @@ function search(str) {
       rowCb(obj);
     }
   }
-  pending++;
-  console.log('pending++: '+pending);
-  statusCb(pending>0?'busy':'idle');
-  webfinger.get(str, function(obj) {
-    pending--;
-    console.log('pending--: '+pending);
+  findDocFor(str, function(err, data) {
+    pending++;
+    console.log('pending++: '+pending);
     statusCb(pending>0?'busy':'idle');
-    if(obj) {
-      obj.userAddress = str;
-      add(str, obj);
-      obj.from='live';
-      obj.query=str;
-      console.log('result from live');
-      rowCb(obj);
-    }
+    masterParser.parse(data, '', {}, function(err, obj) {
+      pending--;
+      console.log('pending--: '+pending);
+      statusCb(pending>0?'busy':'idle');
+      if(obj) {
+        obj.userAddress = str;
+        add(str, obj);
+        obj.from='live';
+        obj.query=str;
+        console.log('result from live');
+        rowCb(obj);
+      }
+    });
   });
 }
 function dumpDb() {

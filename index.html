@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="sockjs-0.3.min.js">
+  </script>
+  <script>
+    var rows={};
+    var sock = new SockJS('http://useraddress.net/echo');
+    sock.onopen = function() {
+      console.log('open');
+    };
+    sock.onmessage = function(e) {
+      console.log('message', e.data);
+      var e = JSON.parse(e.data);
+      if(e.type == 'row') {
+        addRow(e);
+        show();
+      } else if(e.type == 'status') {
+        showStatus(e.status);
+      }
+    };
+    sock.onclose = function() {
+      console.log('close');
+    };
+    function key() {
+      sock.send(document.getElementById('in').value);
+      show();
+    }
+    function addRow(data) {
+      rows[data.userAddress] = data;
+    }
+    function matches(row, str) {
+      if(str.length < 3) {
+        return;
+      }
+      if(str == row.userAddress) {
+        return row.name;
+      }
+      var words = row.name.split(' ');
+      for(var i=0; i<words.length; i++) {
+        if(words[i].toLowerCase().substring(0, str.length) == str) {
+          return words.slice(0, i).join(' ')+'<strong>'+words[i].substring(0, str.length)+'</strong>'+words[i].substring(str.length)+' '+words.slice(i+1).join(' ');
+        }
+      }  
+    }
+    function showStatus(status) {
+      document.getElementById('spinner').style.display = (status == 'busy' ? 'inline' : 'none');
+    }
+    function show() {
+      var str = '';
+      for(var i in rows) {
+        var nameMatch = matches(rows[i], document.getElementById('in').value);
+        if(nameMatch) {
+          str += '<li><img src="'+rows[i].avatar+'" style="width:64px;height:64px"> '+nameMatch+' &lt;'+rows[i].userAddress+'&gt;</li>';
+        }
+      }
+      document.getElementById('results').innerHTML = str;
+    }
+  </script>
+  <title>useraddress.net</title>
+  <meta charset="utf-8">
+</head>
+<body>
+ <h3>Search user@facebook.com, user@gmail.com, user@twitter.com, user@identi.ca or any other StatusNet node, or (once primed) free text.</h3>
+ <h3>Coming soon: user@some-friendica-node and user@some-diaspora-node (everybody's webfinger/foaf/poco syntax choices are slightly different).</h3>
+  <input onkeyup="key();" id="in">  
+  <span id="spinner" style="display:none"><h2>hmmmmmm...</h2></span>
+  <ul id="results"></ul>
+</body>
+</html>
