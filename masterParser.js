@@ -77,7 +77,7 @@ function fetch(urlStr, cb) {
         str+=chunk;
       });
       response.on('end', function() {
-        console.log('got end');
+        //console.log('got end');
         if(timer) {//not timed out yet
           if(response.statusCode==200 || response.statusCode==201 || response.statusCode==204) {
             cb(null, str);
@@ -85,9 +85,9 @@ function fetch(urlStr, cb) {
             cb(response.statusCode);
           }
           clearTimeout(timer);
-          console.log('responded ok');
+          //console.log('responded ok');
         } else {
-          console.log('got response after timeout');
+          //console.log('got response after timeout');
         }
       });
     });
@@ -95,16 +95,16 @@ function fetch(urlStr, cb) {
     timer=setTimeout(function() { 
       cb('timeout');
       clearTimeout(timer);
-      console.log('responded timeout');
+      //console.log('responded timeout');
     }, 10000);//no thing on the web should ever take more than 3 seconds, except I'm testing over 3G, so setting 10 seconds
     request.on('error', function(e) {
-      console.log('got error');
+      //console.log('got error');
       if(timer) {//not timed out yet
         cb(e);
         clearTimeout(timer);
-        console.log('responded error');
+        //console.log('responded error');
       } else {
-        console.log('got error after timeout');
+        //console.log('got error after timeout');
       }
     });
     request.end();
@@ -138,14 +138,14 @@ function getEnv() {
  return _env;
 }
 function parse(url, docRel, identifiers, cb) {
-  console.log('parse called for '+url);
-  console.log(cb);
+  //console.log('parse called for '+url);
+  //console.log(cb);
   if(getEnv()=='test') {
     url = checkStubs(url);
   }
   fetch(url, function(err, data) {
     if(err) {
-      console.log('fetch error '+url+' '+err);
+      //console.log('fetch error '+url+' '+err);
       cb(err);
     } else {
       var parsed;
@@ -156,10 +156,10 @@ function parse(url, docRel, identifiers, cb) {
           if(err) {//XML failed, try html
             var handler = new htmlparser.DefaultHandler(function (err, data3) {
               if(err) {
-               console.log('handler error '+url);
+               //console.log('handler error '+url);
                cb(err);
               } else {
-                console.log('doParse '+url);
+                //console.log('doParse '+url);
                 doParse(data3, docRel, identifiers, cb);
               }
             });
@@ -167,17 +167,17 @@ function parse(url, docRel, identifiers, cb) {
             parser.parseComplete(data);
           } else {
             if(docRel=='lrdd' && data2['@'] && data2['@'].xmlns && data2['@'].xmlns == 'http://docs.oasis-open.org/ns/xri/xrd-1.0') {
-              console.log('doParse '+url);
+              //console.log('doParse '+url);
               doParse(data2, 'lrdd', identifiers, cb);
             } else if(data2['@'] && data2['@'].xmlns && data2['@'].xmlns == 'http://xmlns.com/foaf/0.1/') {
-              console.log('doParse '+url);
+              //console.log('doParse '+url);
               doParse(data2, 'foaf', identifiers, cb);
             } else if(data2['@'] && data2['@'].xmlns && data2['@'].xmlns == 'http://www.w3.org/1999/xhtml') {
-              console.log('doParse '+url);
+              //console.log('doParse '+url);
               doParse(data2, 'html', identifiers, cb);
             } else {
               //console.log(JSON.stringify(data2));
-              console.log('xml not recognized '+url);
+              //console.log('xml not recognized '+url);
               cb('xml document type not recognized');
             }
           }
@@ -186,23 +186,23 @@ function parse(url, docRel, identifiers, cb) {
       }
       if(parsed) {
         if(docRel == 'poco#me') {
-          console.log('doParse '+url);
+          //console.log('doParse '+url);
           doParse(parsed, 'poco-me', identifiers, cb);
         } else if(docRel == 'twitter-api') {
-          console.log('doParse '+url);
+          //console.log('doParse '+url);
           doParse(parsed, 'twitter', identifiers, cb);
         } else if(docRel == 'facebook-api') {
-          console.log('doParse '+url);
+          //console.log('doParse '+url);
           doParse(parsed, 'facebook', identifiers, cb);
         } else if(docRel == 'poco') {
-          console.log('doParse '+url);
+          //console.log('doParse '+url);
           doParse(parsed, 'poco', identifiers, cb);
         } else {
-          console.log('JSON not recognized '+url);
+          //console.log('JSON not recognized '+url);
           cb('JSON doc!');
         }
       } else {
-        console.log('no idea '+url);
+        //console.log('no idea '+url);
         cb('no idea what this is');
       }
     }

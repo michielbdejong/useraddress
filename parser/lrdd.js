@@ -26,7 +26,7 @@ exports.parse = function(data2, identifiers, cb) {
       data2.Property = [data2.Property];
     }
   }
-  console.log(data2.Link);
+  //console.log(data2.Link);
   if(data2.Link['@']) {
     data2.Link = [data2.Link];
   }
@@ -44,11 +44,11 @@ exports.parse = function(data2, identifiers, cb) {
     } else if(data2.Link[i]['@'] && data2.Link[i]['@'].rel == 'http://portablecontacts.net/spec/1.0#me') {
       obj.seeAlso[data2.Link[i]['@'].href] = 'poco#me';
     } else if(data2.Link[i]['@'] && data2.Link[i]['@'].rel == 'lrdd') {
-      console.log('found a lrdd link: '+data2.Link[i]['@']);
+      //console.log('found a lrdd link: '+data2.Link[i]['@']);
       var templateParts = data2.Link[i]['@'].template.split('{uri}');
-      console.log('templateParts and identifiers:');
-      console.log(templateParts);
-      console.log(identifiers);
+      //console.log('templateParts and identifiers:');
+      //console.log(templateParts);
+      //console.log(identifiers);
       for(var i in identifiers) {
         if(i.substring(0, 'acct:'.length)=='acct:') {
           obj.seeAlso[templateParts[0]+i+templateParts[1]] = 'lrdd';
