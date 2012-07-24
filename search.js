@@ -17,7 +17,7 @@ function add(userAddress, obj) {
     word = data[userAddress].textFields.fullName.split(' ');
   }
   if(data[userAddress].textFields.nick) {
-    word.push(data[userAddress].textFields.nick);
+    words.push(data[userAddress].textFields.nick);
   }
   for(var i in words) {
     for(var j=3; j<=words[i].length; j++) {
@@ -42,11 +42,25 @@ function findDocFor(str, cb) {
     var domainParts = str.substring(prefix).split('/')[0].split('.');
     if(domainParts.length > 1 && domainParts[1].length >= 2) {
       console.log('doc for '+str);
+      var identifiers = {};
+      identifiers[str]=true;
       cb(null, {
         url: str,
-        docRel: 'html'
+        docRel: 'html',
+        identifiers: identifiers
       });
     }
+  }
+  var parts = str.split('@');
+  if(parts.length==2 && parts[1].split('.').length>=1) {
+    var identifiers = {};
+    identifiers[str]=true;
+    identifiers['acct:'+str]=true;
+    cb(null, {
+      url: 'https://'+parts[1]+'/.well-known/host-meta?resource=acct:'+str,
+      docRel: 'lrdd',
+      identifiers: identifiers
+    });
   }
 }
 function search(str) {
@@ -65,7 +79,7 @@ function search(str) {
     pending++;
     console.log('pending++: '+pending+' '+data);
     statusCb(pending>0?'busy':'idle');
-    masterParser.parse(data.url, data.docRel, {}, function(err, obj) {
+    masterParser.parse(data.url, data.docRel, data.identifiers, function(err, obj) {
       pending--;
       console.log('pending--: '+pending);
       statusCb(pending>0?'busy':'idle');
