@@ -3,7 +3,8 @@ var xml2js=require('xml2js'),
   fs=require('fs'),
   http=require('http'),
   https=require('https'),
-  url=require('url');
+  url=require('url'),
+  _env='production';
 
 function doParse(content, language, identifiers, cb) {
   //console.log('parsing as '+language);
@@ -102,30 +103,37 @@ function fetch(urlStr, cb) {
     });
   }
 }
-
-function parse(url, docRel, identifiers, cb) {
+function checkStubs(url) {
   if(url == 'http://identi.ca/michielbdejong/foaf') {
-    url = 'file://exampleFiles/id-foaf';
+    return 'file://exampleFiles/id-foaf';
   }
   if(url == 'http://www.google.com/s2/webfinger/?q=acct%3Adejong.michiel%40gmail.com&fmt=foaf') {
-    url = 'file://exampleFiles/gm-foaf';
+    return 'file://exampleFiles/gm-foaf';
   }
   if(url == 'http://www-opensocial.googleusercontent.com/api/people/108912615873187638071/') {
-    url = 'file://exampleFiles/gm-poco-me';
+    return 'file://exampleFiles/gm-poco-me';
   }
   if(url == 'https://revolutionari.es/poco/michiel') {
-    url = 'file://exampleFiles/fr-poco';
+    return 'file://exampleFiles/fr-poco';
   }
   if(url == 'https://revolutionari.es/hcard/michiel') {
-    url = 'file://exampleFiles/fr-hcard';
+    return 'file://exampleFiles/fr-hcard';
   }
   if(url == 'http://www.google.com/profiles/dejong.michiel') {
-    url = 'file://exampleFiles/gm-hcard';
+    return 'file://exampleFiles/gm-hcard';
   }
   if(url == 'https://joindiaspora.com/hcard/users/e583028f23ce0302') {
-    url = 'file://exampleFiles/jd-hcard';
+    return 'file://exampleFiles/jd-hcard';
   }
-
+  return url;
+}
+function getEnv() {
+ return _env;
+}
+function parse(url, docRel, identifiers, cb) {
+  if(getEnv()=='test') {
+    url = checkStubs(url);
+  }
   fetch(url, function(err, data) {
     if(err) {
       cb(err);
@@ -179,4 +187,7 @@ function parse(url, docRel, identifiers, cb) {
   });
 }
 
+exports.setEnv = function(env) {
+  _env = env;
+}
 exports.parse = parse;

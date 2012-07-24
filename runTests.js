@@ -3,17 +3,17 @@ var masterParser = require('./masterParser');
 function doFile(url, docRel, identifiers, expect) {
   masterParser.parse(url, docRel, identifiers, function(err, data) {
     if(err) {
-      console.log('FAIL '+url+': '+err);
+      console.log('********** FAIL '+url+': '+err);
     } else {
       for(var i in expect) {
         if(!data[i]) {
           console.log(data);
-          console.log('FAIL '+url+': missing data.'+i);
+          console.log('********** FAIL '+url+': missing data.'+i);
         } else { 
           for(var j in expect[i]) {
             if(data[i][j] != expect[i][j]) {
               console.log(data);
-              console.log('FAIL '+url+': expected '+expect[i][j]+' instead of '+data[i][j]+' for data.'+i+'.'+j);
+              console.log('********** FAIL '+url+': expected '+expect[i][j]+' instead of '+data[i][j]+' for data.'+i+'.'+j);
             } else {
               console.log('PASS '+url+' '+i+' '+j);
             }
@@ -23,7 +23,7 @@ function doFile(url, docRel, identifiers, expect) {
     }
   });
 }
-
+masterParser.setEnv('test');
 doFile('file://exampleFiles/id-xrd', 'lrdd', {'acct:michielbdejong@identi.ca': true}, {
   identifiers: 
    { 'acct:michielbdejong@identi.ca': true,
