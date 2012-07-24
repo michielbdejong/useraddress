@@ -46,7 +46,9 @@ exports.parse = function(data2, identifiers, cb) {
         obj.follows[content]=true; 
       } else if(property== 'foaf:depiction') {
         obj.images.avatar = content; 
-      } else if(property== 'me') {
+      } else if(property== 'me' && (
+          content.substring('http://'.length)=='http' ||
+          content.substring('https://'.length)=='https')) {
         obj.seeAlso[content]='magic'; 
       }
     });

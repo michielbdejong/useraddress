@@ -24,7 +24,7 @@ function doFile(url, docRel, identifiers, expect) {
   });
 }
 masterParser.setEnv('test');
-/*doFile('https://identi.ca/.well-known/host-meta?resource=acct:michielbdejong@identi.ca', 'lrdd', {'acct:michielbdejong@identi.ca': true}, {
+doFile('https://identi.ca/.well-known/host-meta?resource=acct:michielbdejong@identi.ca', 'lrdd', {'acct:michielbdejong@identi.ca': true}, {
   identifiers: 
    { 'acct:michielbdejong@identi.ca': true,
      'http://identi.ca/user/425878': true,
@@ -131,9 +131,9 @@ doFile('http://melvincarvalho.com/', '#me', {'http://melvincarvalho.com/#me': tr
      'http://www.bergnet.org/people/bergi/card#me': true },
   tools: {}
 });
+/*doFile('http://tantek.com/', 'html', {}, {
+  textFields: { fullName: 'Timothy Berners-Lee' }
+});
 doFile('http://www.w3.org/People/Berners-Lee/card.rdf', 'foaf', {}, {
   textFields: { fullName: 'Timothy Berners-Lee' }
 });*/
-doFile('http://tantek.com/', 'html', {}, {
-  textFields: { fullName: 'Timothy Berners-Lee' }
-});

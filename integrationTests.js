@@ -131,3 +131,9 @@ doFile('http://melvincarvalho.com/', '#me', {'http://melvincarvalho.com/#me': tr
      'http://www.bergnet.org/people/bergi/card#me': true },
   tools: {}
 });
+/*doFile('http://tantek.com/', 'html', {}, {
+  textFields: { fullName: 'Timothy Berners-Lee' }
+});
+doFile('http://www.w3.org/People/Berners-Lee/card.rdf', 'foaf', {}, {
+  textFields: { fullName: 'Timothy Berners-Lee' }
+});*/
