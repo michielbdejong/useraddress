@@ -38,10 +38,10 @@
       }
       var words = [];
       if(row.textFields.fullName) {
-        row.textFields.fullName.split(' ');
+        words = row.textFields.fullName.split(' ');
       }
       if(row.textFields.nick) {
-        words.push('- "'+row.textFields.nick+'"');
+        words.push(row.textFields.nick);
       }
       for(var i=0; i<words.length; i++) {
         if(words[i].toLowerCase().substring(0, str.length) == str) {
