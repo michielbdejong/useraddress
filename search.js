@@ -39,14 +39,23 @@ function findDocFor(str, cb) {
     prefix = 'https://'.length;
   }
   if(prefix) {
-    var domainParts = str.substring(prefix).split('/')[0].split('.');
+    var domain = str.substring(prefix).split('/')[0];
+    var domainParts = domain.split('.');
     if(domainParts.length > 1 && domainParts[1].length >= 2) {
       console.log('doc for '+str);
       var identifiers = {};
       identifiers[str]=true;
+      var docRel='html';
+      if(domain=='graph.facebook.com') {
+        docRel='facebook';
+      }
+      if(domain=='api.twitter.com') {
+        docRel='twitter';
+      }
+      console.log(domainParts[1]+' -> '+docRel);
       cb(null, {
         url: str,
-        docRel: 'html',
+        docRel: docRel,
         identifiers: identifiers
       });
     }

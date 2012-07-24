@@ -79,13 +79,13 @@ doFile('https://gmail.com/.well-known/host-meta?resource=acct:dejong.michiel@gma
   textFields: { fullName: 'Michiel de Jong', nick: 'dejong.michiel' },
   images: { avatar: 'http://www.google.com/ig/c/photos/public/AIbEiAIAAABDCLfW7aamnf7XeyILdmNhcmRfcGhvdG8qKGIwYzNhNDg4ZWEwMTg4OWUwOGJmYzViZGU1NTQ0YzY0MWQ2Y2I2YWIwAf39FvvCldqF7AbAvi1Dprjs7_jF' },
   seeAlso: 
-   { 'http://www-opensocial.googleusercontent.com/api/people/108912615873187638071/': 'poco#me',
+   { 'http://www-opensocial.googleusercontent.com/api/people/108912615873187638071/': 'poco-me',
      'http://www.google.com/profiles/dejong.michiel': 'hcard',
      'http://www.google.com/s2/webfinger/?q=acct%3Adejong.michiel%40gmail.com&fmt=foaf': 'describedby' },
   follows: {},
   tools: {}
 });
-doFile('https://api.twitter.com/1/users/show.json?screen_name=michielbdejong', 'twitter-api', {'https://twitter.com/michielbdejong': true}, {
+doFile('https://api.twitter.com/1/users/show.json?screen_name=michielbdejong', 'twitter', {'https://twitter.com/michielbdejong': true}, {
   identifiers: {},
   textFields: 
    { fullName: 'Michiel de Jong',
@@ -96,7 +96,7 @@ doFile('https://api.twitter.com/1/users/show.json?screen_name=michielbdejong', '
   follows: {},
   tools: {} 
 });
-doFile('https://graph.facebook.com/dejong.michiel', 'facebook-api', {'https://graph.facebook.com/dejong.michiel': true}, {
+doFile('https://graph.facebook.com/dejong.michiel', 'facebook', {'https://graph.facebook.com/dejong.michiel': true}, {
  identifiers: { 'https://graph.facebook.com/dejong.michiel': true },
   textFields: { fullName: 'Michiel De Jong', nick: 'dejong.michiel' },
   images: { avatar: 'http://graph.facebook.com/dejong.michiel/picture' },

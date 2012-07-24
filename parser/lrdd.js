@@ -42,7 +42,7 @@ exports.parse = function(data2, identifiers, cb) {
     } else if(data2.Link[i]['@'] && data2.Link[i]['@'].rel == 'http://microformats.org/profile/hcard') {
       obj.seeAlso[data2.Link[i]['@'].href] = 'hcard';
     } else if(data2.Link[i]['@'] && data2.Link[i]['@'].rel == 'http://portablecontacts.net/spec/1.0#me') {
-      obj.seeAlso[data2.Link[i]['@'].href] = 'poco#me';
+      obj.seeAlso[data2.Link[i]['@'].href] = 'poco-me';
     } else if(data2.Link[i]['@'] && data2.Link[i]['@'].rel == 'lrdd') {
       //console.log('found a lrdd link: '+data2.Link[i]['@']);
       var templateParts = data2.Link[i]['@'].template.split('{uri}');

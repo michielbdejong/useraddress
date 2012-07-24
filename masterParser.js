@@ -195,22 +195,7 @@ function parse(url, docRel, identifiers, cb) {
         return;
       }
       if(parsed) {
-        if(docRel == 'poco#me') {
-          //console.log('doParse '+url);
-          doParse(parsed, 'poco-me', identifiers, cb);
-        } else if(docRel == 'twitter-api') {
-          //console.log('doParse '+url);
-          doParse(parsed, 'twitter', identifiers, cb);
-        } else if(docRel == 'facebook-api') {
-          //console.log('doParse '+url);
-          doParse(parsed, 'facebook', identifiers, cb);
-        } else if(docRel == 'poco') {
-          //console.log('doParse '+url);
-          doParse(parsed, 'poco', identifiers, cb);
-        } else {
-          //console.log('JSON not recognized '+url);
-          cb('JSON doc!');
-        }
+        doParse(parsed, docRel, identifiers, cb);
       } else {
         //console.log('no idea '+url);
         cb('no idea what this is');
