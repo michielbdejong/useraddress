@@ -34,9 +34,15 @@
         return;
       }
       if(str == row.userAddress) {
-        return row.name;
+        return row.textFields.fullName;
       }
-      var words = row.name.split(' ');
+      var words = [];
+      if(row.textFields.fullName) {
+        row.textFields.fullName.split(' ');
+      }
+      if(row.textFields.nick) {
+        words.push('- "'+row.textFields.nick+'"');
+      }
       for(var i=0; i<words.length; i++) {
         if(words[i].toLowerCase().substring(0, str.length) == str) {
           return words.slice(0, i).join(' ')+'<strong>'+words[i].substring(0, str.length)+'</strong>'+words[i].substring(str.length)+' '+words.slice(i+1).join(' ');
@@ -51,7 +57,8 @@
       for(var i in rows) {
         var nameMatch = matches(rows[i], document.getElementById('in').value);
         if(nameMatch) {
-          str += '<li><img src="'+rows[i].avatar+'" style="width:64px;height:64px"> '+nameMatch+' &lt;'+rows[i].userAddress+'&gt;</li>';
+          str += '<li>'+(rows[i].images.avatar?'<img src="'+rows[i].images.avatar+'" style="width:64px;height:64px"> ':'')
+            +nameMatch+' &lt;'+rows[i].userAddress+'&gt;</li>';
         }
       }
       document.getElementById('results').innerHTML = str;

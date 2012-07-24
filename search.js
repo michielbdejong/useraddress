@@ -8,11 +8,17 @@ function add(userAddress, obj) {
   console.log(obj);
   data[userAddress] = {
     userAddress: userAddress,
-    name: obj.textFields.fullName || '',
-    avatar: obj.images.avatar || '',
+    textFields: obj.textFields || [],
+    images: obj.images || [],
     type: 'row'
   }
-  var words = data[userAddress].name.split(' ');
+  var words = [];
+  if(data[userAddress].textFields.fullName) {
+    word = data[userAddress].textFields.fullName.split(' ');
+  }
+  if(data[userAddress].textFields.nick) {
+    word.push(data[userAddress].textFields.nick);
+  }
   for(var i in words) {
     for(var j=3; j<=words[i].length; j++) {
       var prefix = words[i].substring(0, j);
