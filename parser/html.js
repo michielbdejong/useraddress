@@ -10,10 +10,13 @@ function parseSubTree(subTree, cb) {
           if(subTree[eltType][j]['@']) {
             if(subTree[eltType][j]['@'].property) {
               cb(subTree[eltType][j]['@'].property, subTree[eltType][j]['@'].content);
-            } else if(subTree[eltType][j]['@'].rel) {
-              cb(subTree[eltType][j]['@'].rel, subTree[eltType][j]['@'].href);
             }
+          } else if(subTree[eltType][j].rel) {
+            console.log('FOUND A REL');
+            cb(subTree[eltType][j].rel, subTree[eltType][j].href);
           }
+          console.log('subbing '+eltType+' '+j);
+          console.log(subTree[eltType][j]);
           parseSubTree(subTree[eltType][j], cb);
         }
       }
@@ -32,21 +35,21 @@ exports.parse = function(data2, identifiers, cb) {
     tools: {},
     data: data2
   };
-  
-  for(var containerEltType in data2.body) {
-    for(var i=0; i<data2.body[containerEltType].length; i++) {
-      if(data2.body[containerEltType][i]['@'] && data2.body[containerEltType][i]['@'].about == '#me') {
-        parseSubTree(data2.body[containerEltType][i], function(property, content) {
-          if(property== 'foaf:name') {
-            obj.textFields.fullName = content; 
-          } else if(property== 'foaf:knows') {
-            obj.follows[content]=true; 
-          } else if(property== 'foaf:depiction') {
-            obj.images.avatar = content; 
-          }
-        });
+  console.log(data2); 
+  for(var i=0; i<data2.length; i++) {
+    console.log('parsing subtree '+i);
+    parseSubTree(data2[i], function(property, content) {
+      console.log('found '+property+': '+content);
+      if(property== 'foaf:name') {
+        obj.textFields.fullName = content; 
+      } else if(property== 'foaf:knows') {
+        obj.follows[content]=true; 
+      } else if(property== 'foaf:depiction') {
+        obj.images.avatar = content; 
+      } else if(property== 'me') {
+        obj.seeAlso[content]='magic'; 
       }
-    }
+    });
   }
   cb(null, obj);
 };

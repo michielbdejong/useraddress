@@ -33,6 +33,13 @@ exports.parse = function(data2, identifiers, cb) {
       }
     }
   }
-  //console.log('calling back from foaf');
+  console.log('calling back from foaf');
+  if(data2['con:Male'] && data2['con:Male']['owl:sameAs']) {
+    for(var i=0; i<data2['con:Male']['owl:sameAs'].length; i++) {
+      if(data2['con:Male']['owl:sameAs'][i]['@'] && data2['con:Male']['owl:sameAs'][i]['@']['rdf:resource']) {
+        obj.seeAlso[data2['con:Male']['owl:sameAs'][i]['@']['rdf:resource']]='magic';
+      }
+    }
+  }
   cb(null, obj);
 };

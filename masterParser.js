@@ -7,7 +7,7 @@ var xml2js=require('xml2js'),
   _env='production';
 
 function doParse(content, language, identifiers, cb) {
-  //console.log('parsing as '+language);
+  console.log('parsing as '+language);
   require('./parser/'+language).parse(content, identifiers, function(err, data) {
     //data = {
     //  textFields: {},
@@ -82,7 +82,7 @@ function fetch(urlStr, cb) {
         if(timer) {//not timed out yet
           if(response.statusCode==200 || response.statusCode==201 || response.statusCode==204) {
             cb(null, str);
-          } else if(response.statusCode==301) {
+          } else if(response.statusCode==301 || response.statusCode==302) {
             fetch(response.headers.location, cb);
           } else {
             cb(response.statusCode);
@@ -136,10 +136,42 @@ function checkStubs(url) {
 
    'https://api.twitter.com/1/users/show.json?screen_name=michielbdejong': 'file://exampleFiles/twitter-api', 
    'https://graph.facebook.com/dejong.michiel': 'file://exampleFiles/fb-api', 
-   'http://melvincarvalho.com/': 'file://exampleFiles/melvin.html', 
-  }
-  if(cache[url]) {
-    return cache[url];
+   'http://melvincarvalho.com/': 'file://exampleFiles/melvin-html', 
+   
+   'http://www.w3.org/People/Berners-Lee/card.rdf': 'file://exampleFiles/timbl-foaf',
+   'http://graph.facebook.com/512908782': 'file://exampleFiles/timbl-fb',
+   'http://identi.ca/user/45563': 'file://exampleFiles/timbl-id',
+   'http://www.advogato.org/person/timbl/foaf.rdf': 'file://exampleFiles/timbl-foaf2',
+   'http://www4.wiwiss.fu-berlin.de/bookmashup/persons/Tim+Berners-Lee': 'file://exampleFiles/timbl-fu1',
+   'http://www4.wiwiss.fu-berlin.de/dblp/resource/person/100007': 'file://exampleFiles/timbl-fu2',
+
+   'http://tantek.com/': 'file://exampleFiles/tantek-html',
+   'http://www.facebook.com/tantek.celik': 'file://exampleFiles/tantek-fb',
+   'http://twitter.com/t': 'file://exampleFiles/tantek-twitter',
+   'http://flickr.com/tantek/': 'file://exampleFiles/tantek-flickr',
+   
+   'http://last.fm/user/tantekc': 'file://exampleFiles/tantek-lastfm',
+   'http://www.last.fm/user/tantekc': 'file://exampleFiles/tantek-lastfm',
+
+   'http://plancast.com/t': 'file://exampleFiles/tantek-plancast',
+   
+   'http://upcoming.yahoo.com/user/6623': 'file://exampleFiles/tantek-yahoo',
+   
+   'http://lanyrd.com/people/t': 'file://exampleFiles/tantek-lanyrd',
+   'http://lanyrd.com/profile/t': 'file://exampleFiles/tantek-lanyrd2',
+   'http://lanyrd.com/profile/t/': 'file://exampleFiles/tantek-lanyrd3',
+   
+   'http://foursquare.com/t': 'file://exampleFiles/tantek-foursquare',
+   'https://foursquare.com/t': 'file://exampleFiles/tantek-foursquare2',
+   
+   'http://google.com/profiles/tantek': 'file://exampleFiles/tantek-google',
+   'http://www.google.com/profiles/tantek': 'file://exampleFiles/tantek-google2',
+   'https://profiles.google.com/tantek': 'file://exampleFiles/tantek-google3',
+   'https://plus.google.com/109182513536739786206': 'file://exampleFiles/tantek-google4',
+}
+
+  if(cache[url.split('#')[0]]) {
+    return cache[url.split('#')[0]];
   } else {
     return url;
   }
@@ -163,7 +195,7 @@ function parse(url, docRel, identifiers, cb) {
         parsed = JSON.parse(data);
       } catch(e) {//JSON failed, try xml
         new xml2js.Parser().parseString(data, function(err, data2) {
-          if(err) {//XML failed, try html
+          if(err || data2==null) {//XML failed, try html
             var handler = new htmlparser.DefaultHandler(function (err, data3) {
               if(err) {
                //console.log('handler error '+url);
@@ -186,8 +218,8 @@ function parse(url, docRel, identifiers, cb) {
               //console.log('doParse '+url);
               doParse(data2, 'html', identifiers, cb);
             } else {
-              //console.log(JSON.stringify(data2));
-              //console.log('xml not recognized '+url);
+              console.log(JSON.stringify(data2));
+              console.log('xml not recognized '+url);
               cb('xml document type not recognized');
             }
           }

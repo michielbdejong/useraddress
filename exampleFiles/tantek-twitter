@@ -1,0 +1,4206 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    
+    <script>document.domain='twitter.com'</script>
+
+      <title>Tantek Çelik (t) auf Twitter</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+      <meta name="description" content="Verbinde Dich sofort mit den Dingen, die für Dich am wichtigsten sind. Folge Freunden, Experten, Lieblingsstars und aktuellen Nachrichten.">
+    
+    
+      <link href="/favicons/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    
+          <link rel="stylesheet" href="http://a0.twimg.com/a/1342841381/t1/css/t1_core_logged_out.bundle.css" type="text/css" media="screen">
+    
+        <link rel="stylesheet" href="http://a0.twimg.com/a/1342841381/t1/css/t1_more.bundle.css" type="text/css" media="screen">
+    
+        
+    <style id="user-style-t" class="js-user-style">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    a,
+    
+    
+    
+    .btn-link,
+    
+    
+    
+    
+      
+      
+    
+    .pretty-link:hover s,
+    .pretty-link:hover b,
+    /* Account Group */
+    .metadata a:hover,
+    
+    .account-group:hover .fullname,
+    
+    .stats a:hover,
+    .stats a:hover strong,
+    
+    .profile-modal-header .fullname a:hover,
+    .profile-modal-header .username a:hover,
+    
+    .story-article:hover .metadata,
+    
+    .find-friends-sources li:hover .source,
+    
+    
+    
+    
+    
+    .stream-item a:hover .fullname,
+    
+    .stream-item .view-all-supplements:hover,
+    
+    .tweet .time a:hover,
+    .tweet:hover .user-dropdown .mark-as-spam-text,
+    .tweet-actions a,
+    .tweet .details.with-icn b,
+    
+    .stream-item:hover .original-tweet .expand-action-wrapper,
+    .opened-tweet.original-tweet  .expand-action-wrapper,
+    
+    .stream-item:hover .original-tweet .details b,
+    .stream-item.open .original-tweet .details b,
+    
+    .simple-tweet:hover .details b,
+    .simple-tweet.open .details b,
+    .simple-tweet:hover .details .expand-action-wrapper,
+    .simple-tweet.open .details .collapse-action-wrapper,
+    .simple-tweet:hover .details .simple-details-link,
+    
+    .client-and-actions a:hover,
+    
+    .dismiss-promoted:hover b,
+    
+    .tweet .context .pretty-link:hover s,
+    .tweet .context .pretty-link:hover b,
+    
+    .list .username a:hover,
+    .list-membership-container .create-a-list,
+    .list-membership-container .create-a-list:hover,
+    
+    
+    
+    .story-header:hover .view-tweets,
+    .card .list-details a:hover,
+    .card .card-body:hover .attribution,
+    .new-tweets-bar,
+    .onebox .soccer ul.ticker a:hover,
+    
+    
+    
+    .discover-item-actions a,
+    
+    
+    
+    .remove-background-btn,
+    
+    
+    
+    .stream-item-activity-me .latest-tweet .tweet-row a:hover {
+        color: #0084B4;
+    }
+    
+    
+    
+    
+    
+    
+    s,
+    .pretty-link:hover s,
+    .stream-item-activity-me .latest-tweet .tweet-row a:hover s {
+        color: #66B5D2;
+    }
+    
+    
+    
+    
+    
+    .tweet .sm-reply,
+    .tweet .sm-rt,
+    .tweet .sm-fav,
+    .tweet .sm-image,
+    .tweet .sm-video,
+    .tweet .sm-audio,
+    .tweet .sm-geo,
+    .tweet .sm-in,
+    .tweet .sm-trash,
+    .tweet .sm-page,
+    .tweet .sm-embed,
+    .tweet .sm-summary,
+    .tweet .sm-chat,
+    
+    .tweet .mark-as-spam-flag,
+    .tweet .mark-as-spam-silhouette,
+    
+    .timelines-navigation .active .profile-nav-icon,
+    .timelines-navigation .profile-nav-icon:hover,
+    
+    .sm-top-tweet,
+    
+    
+    .discover-item .js-action-card-search:hover .sm-search {
+        background-color: #0084B4;
+    }
+    
+    body {
+        background-position: left 40px;
+        background-attachment: fixed;
+        background-repeat: repeat;
+          background-repeat: no-repeat;
+        background-color: #C0DEED;
+    }
+    </style>
+    
+    <style id="user-style-t-bg-img" class="js-user-style-bg-img">
+      body.user-style-t {
+              background-image: url(http://a0.twimg.com/images/themes/theme1/bg.png);
+      }
+    </style>
+    
+    <script>
+      
+      (function(){function a(){document.write="",window.top.location=window.self.location,setTimeout(function(){document.body.innerHTML=""},0),window.self.onload=function(a){document.body.innerHTML=""}}if(window.top!==window.self)try{window.top.location.host||a()}catch(b){a()}})();
+    </script>
+    
+    <script>(function(){function f(a){a=a||window.event;if(!a)return;!a.target&&a.srcElement&&(a.target=a.srcElement);if(!j(a))return;if(!document.addEventListener){var b={};for(var c in a)b[c]=a[c];a=b}return a.preventDefault=a.stopPropagation=function(){},d.push(a),!1}function g($){i();for(var b=0,c;c=d[b];b++){var e=$(c.target);if(c.type=="click"&&c.target.tagName.toLowerCase()=="a"){var f=$.data(e.get(0),"events"),g=f&&f.click,j=!c.target.hostname.match(a)||!c.target.href.match(/#$/);if(!g&&j){window.location=c.target.href;continue}}e.trigger(c)}window.swiftActionQueue.wasFlushed=!0}function i(){e&&clearTimeout(e);for(var a=0;a<c.length;a++)document["on"+c[a]]=null}function j(c){var d=c.target.tagName.toLowerCase();if(d=="label")if(c.target.getAttribute("for")){var e=document.getElementById(c.target.getAttribute("for"));if(e.getAttribute("type")=="checkbox")return!1}else for(var f=0;f<c.target.childNodes.length;f++)if((c.target.childNodes[f].tagName||"").toLowerCase()=="input"&&c.target.childNodes[f].getAttribute("type")=="checkbox")return!1;if(d=="textarea"||d=="input"&&c.target.getAttribute("type")=="text")if(c.type.match(b))return!1;return c.metaKey?!1:c.clientX&&c.shiftKey&&d=="a"?!1:c.target&&c.target.hostname&&!c.target.hostname.match(a)?!1:!0}var a=/^([^\.]+\.)*twitter.com$/,b=/^key/,c=["click","keydown","keypress","keyup"],d=[],e=null;for(var k=0;k<c.length;k++)document["on"+c[k]]=f;setTimeout(i,1e4),window.swiftActionQueue={flush:g,wasFlushed:!1}})();</script>  </head>
+  <body class="t1 logged-out user-style-t western de"
+    >
+    <div id="doc" class="route-profile">
+        <div class="push-loader" id="pushStateSpinner"></div>
+        
+        <div class="topbar js-topbar">
+          <div id="banners" class="js-banners">
+            
+          </div>
+          <div class="global-nav" data-section-term="top_nav">
+            <div class="global-nav-inner">
+              <div class="container">
+                
+        
+                <ul class="nav js-global-actions">
+                  <li class="home" data-global-action="t1home">
+                      <a class="nav-logo-link" href="/" data-nav="front">
+                        <i class="bird-topbar-blue"></i>
+                      </a>
+                  </li>
+                </ul>
+                <ul class="nav secondary-nav session-dropdown " id="session">
+                  <li class="dropdown js-session">
+                    <a class="dropdown-toggle dropdown-signin" id="signin-link" href="#" data-nav="login">
+                      <small>Hast Du ein Benutzerkonto?</small> Einloggen <span class="caret"></span>
+                    </a>
+                    <a class="dropdown-signup" id="signup-link" href="https://twitter.com/signup?context=login" data-nav="signup">
+                      <small>Neu bei Twitter?</small><span class="emphasize"> Sei dabei! &raquo;</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-form" id="signin-dropdown">
+                      <li class="dropdown-caret right">
+                        <span class="caret-outer"></span>
+                        <span class="caret-inner"></span>
+                      </li>
+                      <li>
+                        <form action="https://twitter.com/sessions" class="js-signin signin" method="post">
+                  <fieldset class="textbox">
+    <label class="username js-username">
+      <span>Benutzername oder E-Mail</span>
+      <input class="js-username-field email-input" type="text" name="session[username_or_email]" autocomplete="on">
+    </label>
+    <label class="password js-password">
+      <span>Passwort</span>
+      <input class="js-password-field" type="password" value="" name="session[password]">
+    </label>
+  </fieldset>
+  <fieldset class="subchck">
+    <label class="remember">
+      <input type="checkbox" value="1" name="remember_me" >
+      <span>Angemeldet bleiben</span>
+    </label>
+    <button type="submit" class="btn submit">Einloggen</button>
+  </fieldset>
+  
+  <input type="hidden" name="scribe_log">
+  <input type="hidden" name="redirect_after_login" value="">
+  <input type="hidden" value="aee45343fd57577ace1d5b136f0daeb8ab1e3d08" name="authenticity_token"/>
+  <div class="divider"></div>
+                  <p>
+                    <a class="forgot" href="/account/resend_password">Passwort vergessen?</a><br />
+                    <a class="mobile has-sms" href="/account/complete">Benutzt Du Twitter bereits via SMS?</a>
+                  </p>
+                </form>
+              </li>
+                    </ul>
+                  </li>
+                </ul>
+        
+                
+        
+                <ul class="nav secondary-nav language-dropdown">
+                  <li class="dropdown js-language-dropdown">
+                    <a class="dropdown-toggle" href="javascript:;">
+                      <small>Sprache:</small>
+                      <span class="js-current-language">Deutsch</span>
+                      <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li class="dropdown-caret right">
+                        <span class="caret-outer"></span>
+                        <span class="caret-inner"></span>
+                      </li>
+                        <li><a href="?lang=id" data-lang-code="id" title="Indonesisch" class="js-language-link">Bahasa Indonesia</a></li>
+                        <li><a href="?lang=msa" data-lang-code="msa" title="Malaiisch" class="js-language-link">Bahasa Melayu</a></li>
+                        <li><a href="?lang=da" data-lang-code="da" title="Dänisch" class="js-language-link">Dansk</a></li>
+                        <li><a href="?lang=en" data-lang-code="en" title="Englisch" class="js-language-link">English</a></li>
+                        <li><a href="?lang=es" data-lang-code="es" title="Spanisch" class="js-language-link">Español</a></li>
+                        <li><a href="?lang=fil" data-lang-code="fil" title="Philippinisch" class="js-language-link">Filipino</a></li>
+                        <li><a href="?lang=it" data-lang-code="it" title="Italienisch" class="js-language-link">Italiano</a></li>
+                        <li><a href="?lang=hu" data-lang-code="hu" title="Ungarisch" class="js-language-link">Magyar</a></li>
+                        <li><a href="?lang=nl" data-lang-code="nl" title="Niederländisch" class="js-language-link">Nederlands</a></li>
+                        <li><a href="?lang=no" data-lang-code="no" title="Norwegisch" class="js-language-link">Norsk</a></li>
+                        <li><a href="?lang=pl" data-lang-code="pl" title="Polnisch" class="js-language-link">Polski</a></li>
+                        <li><a href="?lang=pt" data-lang-code="pt" title="Portugiesisch" class="js-language-link">Português</a></li>
+                        <li><a href="?lang=fi" data-lang-code="fi" title="Finnisch" class="js-language-link">Suomi</a></li>
+                        <li><a href="?lang=sv" data-lang-code="sv" title="Schwedisch" class="js-language-link">Svenska</a></li>
+                        <li><a href="?lang=tr" data-lang-code="tr" title="Türkisch" class="js-language-link">Türkçe</a></li>
+                        <li><a href="?lang=ca" data-lang-code="ca" title="Catalan" class="js-language-link">català</a></li>
+                        <li><a href="?lang=fr" data-lang-code="fr" title="Französisch" class="js-language-link">français</a></li>
+                        <li><a href="?lang=ru" data-lang-code="ru" title="Russisch" class="js-language-link">Русский</a></li>
+                        <li><a href="?lang=uk" data-lang-code="uk" title="Ukrainian" class="js-language-link">Українська мова</a></li>
+                        <li><a href="?lang=he" data-lang-code="he" title="Hebräisch" class="js-language-link">עִבְרִית</a></li>
+                        <li><a href="?lang=ur" data-lang-code="ur" title="Urdu" class="js-language-link">اردو</a></li>
+                        <li><a href="?lang=ar" data-lang-code="ar" title="Arabisch" class="js-language-link">العربية</a></li>
+                        <li><a href="?lang=fa" data-lang-code="fa" title="Farsi (Persisch)" class="js-language-link">فارسی</a></li>
+                        <li><a href="?lang=hi" data-lang-code="hi" title="Hindi" class="js-language-link">हिन्दी</a></li>
+                        <li><a href="?lang=th" data-lang-code="th" title="Thailändisch" class="js-language-link">ภาษาไทย</a></li>
+                        <li><a href="?lang=ja" data-lang-code="ja" title="Japanisch" class="js-language-link">日本語</a></li>
+                        <li><a href="?lang=zh-cn" data-lang-code="zh-cn" title="Vereinfachtes Chinesisch" class="js-language-link">简体中文</a></li>
+                        <li><a href="?lang=zh-tw" data-lang-code="zh-tw" title="Traditionelles Chinesisch" class="js-language-link">繁體中文</a></li>
+                        <li><a href="?lang=ko" data-lang-code="ko" title="Koreanisch" class="js-language-link">한국어</a></li>
+                    </ul>
+                    <div class="js-front-language">
+                      <form action="/sessions/change_locale" class="language" method="POST">
+                        <input type="hidden" name="lang">
+                        <input type="hidden" name="redirect">
+                        <input type="hidden" name="authenticity_token" value="aee45343fd57577ace1d5b136f0daeb8ab1e3d08">
+                      </form>
+                    </div>
+                  </li>
+                </ul>
+                
+                <div class="pull-right">
+                  <form class="form-search js-search-form " action="/search" id="global-nav-search">
+            <span class="search-icon js-search-action">
+              <i class="nav-search" tabindex="0"></i>
+            </span>
+            <label class="hidden-elements" for="search-query">Suche</label>
+            <input class="search-input" type="text" id="search-query" placeholder="Suche" name="q" autocomplete="off" spellcheck="false" tabindex="-1">
+            <input disabled="disabled" class="search-input search-hinting-input" type="text" id="search-query-hint" autocomplete="off" spellcheck="false">
+              <div class="dropdown-menu typeahead">
+      <div class="dropdown-caret">
+        <div class="caret-outer"></div>
+        <div class="caret-inner"></div>
+      </div>
+      <div class="dropdown-inner js-typeahead-results">
+        <ul class="typeahead-items saved-searches-list">
+      
+      <li class="saved-search-item search-item"><a href="" data-search-query="" data-query-source="" data-ds="saved_search"><i class="generic-search"></i></a></li>
+    </ul>    <ul class="typeahead-items topics-list">
+      
+      <li class="topics-item search-item"><a href="" data-search-query="" data-query-source="typeahead_click" data-ds="topics"><i class="generic-search"></i></a></li>
+    </ul>    <div class="typeahead-accounts js-typeahead-accounts">
+      <ul class="typeahead-items">
+        
+        <li data-user-id="" data-user-screenname="" data-remote="true" data-score="" class="typeahead-item typeahead-account-item js-selectable">
+          
+          <a data-query-source="typeahead_click" data-search-query="" data-ds="account">
+            <img src="" width="24" height="24" class="avatar size24">
+            <span class="fullname"></span>
+            <i class="verified hidden"></i>
+            <span class="username"><s>@</s><b></b></span>
+          </a>
+        </li>
+        <li class="js-selectable typeahead-accounts-shortcut js-shortcut"><a href="" data-search-query="" data-query-source="typeahead_click" data-shortcut="true" data-ds="account_search"></a></li>
+      </ul>
+    </div>  </div>
+    </div></form>
+        </div>
+        
+                
+                <a id="close-all-button" class="close-all-tweets js-close-all-tweets" href="#" title="Alle geöffneten Tweets schließen">
+                  <i class="nav-breaker"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="alert-messages hidden" id="message-drawer">
+              <div class="message ">
+        <div class="message-inside">
+          <span class="message-text"></span
+          ><a class="dismiss" href="#">&times;</a>
+        </div>
+      </div>  </div>
+        </div>
+        <div id="page-outer">
+          <div id="page-container" class="wrapper wrapper-profile">
+              <div class="module profile-card component" data-component-term="profile_follow_card" >
+    <div class="flex-module clearfix ">
+  
+  
+      <a href="http://a0.twimg.com/profile_images/1266918745/2009-068-tantek-headshot-square.jpg" class="profile-picture" target="_blank">
+        <img src="http://a0.twimg.com/profile_images/1266918745/2009-068-tantek-headshot-square_reasonably_small.jpg" alt="Tantek Çelik" class="avatar size128">
+      </a>
+  
+      <div class="profile-card-inner" data-screen-name="t" data-user-id="11628">
+        <h1 class="fullname">
+          Tantek Çelik
+          
+        </h1>
+        <h2 class="username">
+          <span class="screen-name"><s>@</s>t</span>
+          
+        </h2>
+        <p class="bio ">barcamp bike climb code create css design evolve hack html5 listen microformats mozilla open optimist pescatarian scientist skeptic standards teach think ux web</p>
+        <p class="location-and-url">
+          <span class="location">
+            Pacific Time Zone
+          </span>
+              <span class="divider">&middot;</span>
+          <span class="url">
+            <a target="_blank" rel="me nofollow" href="http://tantek.com/">
+              http://tantek.com/
+            </a>
+          </span>
+        </p>
+      </div>
+      <div class="profile-card-actions">
+          
+        <div class="user-actions btn-group not-following " data-user-id="11628"
+            data-screen-name="t" data-name="Tantek Çelik" data-protected="false">
+        
+            <button class="js-follow-btn follow-button btn" type="button">
+              <span class="button-text follow-text"><i class="follow"></i> Folgen</span>
+              <span class="button-text following-text">Folge ich!</span>
+              <span class="button-text unfollow-text">Entfolgen</span>
+              <span class="button-text blocked-text">Geblockt</span>
+              <span class="button-text unblock-text">Entblocken</span>
+              <span class="button-text pending-text">Ausstehend</span>
+              <span class="button-text cancel-text">Abbrechen</span>
+            </button>
+        
+        </div>
+          <ul class="stats js-mini-profile-stats">
+           <li><a href="/t" data-element-term="tweet_stats" data-nav='profile'>
+               <strong>6.579</strong> Tweets    </a></li>
+            <li><a href="/#!/t/following" data-element-term="following_stats" data-nav='following'><strong>870</strong> Folge ich</a></li>
+            <li><a href="/#!/t/followers" data-element-term="follower_stats" data-nav='followers'><strong>42.382</strong> Follower</a></li>
+        </ul>
+    </div>
+    </div>
+  </div>
+  <div class="dashboard">
+      <div class="module signup-call-out profile-signup-call-out">
+      <div class="flex-module">
+        <div class="flex-module-header">
+          <h2>Folge Tantek Çelik</h2>
+        </div>
+        <form action="https://twitter.com/signup" class="clearfix signup" method="post">
+      <div class="holding name">
+        <input type="text" autocomplete="off" name="user[name]" maxlength="20">
+        <span class="holder">Vollständiger Name</span>
+      </div>
+      <div class="holding email">
+        <input class="email-input" type="text" autocomplete="off" name="user[email]">
+        <span class="holder">E-Mail
+</span>
+      </div>
+      <div class="holding password">
+        <input type="password" name="user[user_password]">
+        <span class="holder">Passwort</span>
+      </div>
+        <input name="follow" type="hidden" value="t">
+      <input type="hidden" value="" name="context">
+      <input type="hidden" value="aee45343fd57577ace1d5b136f0daeb8ab1e3d08" name="authenticity_token"/>
+      <input name="follows" type="hidden" value="">
+      <input type="submit" class="btn signup-btn js-submit js-signup-btn" value="Anmelden">
+    </form>
+  </div>
+    </div>
+
+      <div class="component">
+      <div class="module profile-nav">
+        <ul class="js-nav-links">
+          <li class="active">
+            <a class="list-link" href="/t" data-nav="profile">Tweets<i class="chev-right"></i></a>
+          </li>
+          <li class="">
+            <a class="list-link" href="/#!/t/following" data-nav="following">Folge ich<i class="chev-right"></i></a>
+          </li>
+          <li class="">
+            <a class="list-link" href="/#!/t/followers" data-nav="followers">Follower<i class="chev-right"></i></a>
+          </li>
+          <li class="">
+            <a class="list-link" href="/#!/t/favorites" data-nav="favorites">Favoriten<i class="chev-right"></i></a>
+          </li>
+          <li class="">
+            <a class="list-link" href="/t/lists" data-nav="all_lists">Listen<i class="chev-right"></i></a>
+          </li>
+            <li class="media-thumbnails recent_photos ">
+          <a href="/#!/t/media/grid" class="list-link">
+            <div class="media-header">
+              Neueste Bilder
+              <i class="chev-right"></i>
+            </div>
+            <div class="media-row">
+              <div class="media-row-content">
+                    <span data-href="/#!/t/media/slideshow?url=http%3A%2F%2Fyoutu.be%2FtbjzZHuGTng" data-url="http://youtu.be/tbjzZHuGTng"  class="media-thumbnail"></span>
+            <span data-href="/#!/t/media/slideshow?url=http%3A%2F%2Finstagram.com%2Fp%2FMdsXq4A9Zf" data-url="http://instagram.com/p/MdsXq4A9Zf"  class="media-thumbnail"></span>
+            <span data-href="/#!/t/media/slideshow?url=http%3A%2F%2Fyoutu.be%2F1f5RJ8daolg" data-url="http://youtu.be/1f5RJ8daolg"  class="media-thumbnail"></span>
+            <span data-href="/#!/t/media/slideshow?url=http%3A%2F%2Fyoutu.be%2FhjbwVzJR8w4" data-url="http://youtu.be/hjbwVzJR8w4"  class="media-thumbnail"></span>
+            <span data-href="/#!/t/media/slideshow?url=http%3A%2F%2Fmozilla.org%2Fwebmaker" data-url="http://mozilla.org/webmaker"  class="media-thumbnail"></span>
+            <span data-href="/#!/t/media/slideshow?url=http%3A%2F%2Fyoutu.be%2Fi8Ri-e-xqGw" data-url="http://youtu.be/i8Ri-e-xqGw"  class="media-thumbnail"></span>
+            <span data-href="/#!/t/media/slideshow?url=http%3A%2F%2Fyoutu.be%2FCn4vC80Pv6Q" data-url="http://youtu.be/Cn4vC80Pv6Q"  class="media-thumbnail"></span>
+            <span data-href="/#!/t/media/slideshow?url=http%3A%2F%2Fyoutu.be%2FYQIMGV5vtd4" data-url="http://youtu.be/YQIMGV5vtd4"  class="media-thumbnail"></span>
+            <span data-href="/#!/t/media/slideshow?url=http%3A%2F%2Fyoutu.be%2FbluQ4eOeBwo" data-url="http://youtu.be/bluQ4eOeBwo"  class="media-thumbnail"></span>
+            <span data-href="/#!/t/media/slideshow?url=http%3A%2F%2Fyoutu.be%2FTE0n_5qPmRM" data-url="http://youtu.be/TE0n_5qPmRM"  class="media-thumbnail"></span>
+            <span data-href="/#!/t/media/slideshow?url=http%3A%2F%2Fyoutu.be%2F3QwvlnhpDSo" data-url="http://youtu.be/3QwvlnhpDSo"  class="media-thumbnail"></span>
+            <span data-href="/#!/t/media/slideshow?url=http%3A%2F%2Fyoutu.be%2F8rwsuXHA7RA" data-url="http://youtu.be/8rwsuXHA7RA"  class="media-thumbnail"></span>
+            <span data-href="/#!/t/media/slideshow?url=http%3A%2F%2Fyoutu.be%2FUF8uR6Z6KLc" data-url="http://youtu.be/UF8uR6Z6KLc"  class="media-thumbnail"></span>
+            <span data-href="/#!/t/media/slideshow?url=http%3A%2F%2Finstagr.am%2Fp%2FMrgro%2F" data-url="http://instagr.am/p/Mrgro/"  class="media-thumbnail"></span>
+            <span data-href="/#!/t/media/slideshow?url=http%3A%2F%2Fyoutu.be%2FAQcSFsQyct8" data-url="http://youtu.be/AQcSFsQyct8"  class="media-thumbnail"></span>
+      </div>
+            </div>
+          </a>
+        </li>    </ul>
+      </div>
+    </div>
+
+    
+    <div class="module site-footer ">
+    <div class="flex-module">
+      <div class="flex-module-inner js-items-container">
+        <ul class="clearfix">
+          <li class="copyright">&copy; 2012 Twitter</li>
+          <li><a href="/about">Über uns</a></li>
+          <li><a href="//support.twitter.com">Hilfe</a></li>
+          <li><a href="/tos">Bedingungen</a></li>
+          <li><a href="/privacy">Privatsphäre</a></li>
+          <li><a href="http://blog.de.twitter.com">Blog</a></li>
+          <li><a href="http://status.twitter.com">Status</a></li>
+          <li><a href="/download">Apps</a></li>
+          <li><a href="/about/resources">Ressourcen</a></li>
+          <li><a href="/jobs">Jobs</a></li>
+          <li><a href="//business.twitter.com/de/advertise/start">Inserenten</a></li>
+          <li><a href="//business.twitter.com/index_de.html">Unternehmen</a></li>
+          <li><a href="http://media.twitter.com">Medien</a></li>
+          <li><a href="//dev.twitter.com">Entwickler</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="component" id="suggested-users"></div>
+  <div class="content-main" id="timeline">
+    <div class="content-header">
+      <div class="header-inner">
+        <h2 class="js-timeline-title">Tweets
+        </h2>
+      </div>
+    </div>
+        <div class="stream-container"
+        data-max-id="220971823846785024" data-since-id="227679256577179648"
+        >
+        <div class="stream profile-stream">
+          <div class="stream-items" id="stream-items-id"><div class="js-stream-item stream-item stream-item expanding-stream-item" data-item-id="227679256577179648" data-item-type="tweet" id="stream-item-tweet-227679256577179648">
+  
+
+
+  
+
+  <div class="tweet original-tweet js-stream-tweet js-actionable-tweet js-hover js-profile-popup-actionable js-original-tweet  
+
+
+
+
+
+
+" 
+data-tweet-id="227679256577179648"
+
+data-item-id="227679256577179648"
+
+
+ data-screen-name="t" data-name="Tantek Çelik" data-user-id="11628"
+
+
+
+
+data-is-reply-to=""
+
+data-expanded-footer="&lt;div class=&quot;js-tweet-details-fixer tweet-details-fixer&quot;&gt;
+    &lt;div class=&quot;js-tweet-media-container &quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;entities-media-container &quot; style=&quot;min-height:0px&quot;&gt;
+    &lt;/div&gt;
+  &lt;div class=&quot;js-machine-translated-tweet-container&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;js-tweet-stats-container tweet-stats-container &quot;&gt;
+  &lt;/div&gt;
+  
+    &lt;div class=&quot;geo-container tweet-geo-text&quot;&gt;
+    &lt;/div&gt;
+  &lt;div class=&quot;client-and-actions&quot;&gt;
+    &lt;span class=&quot;metadata&quot;&gt;
+      &lt;span title=&quot;1:18 AM - 24 Jul 12&quot;&gt;1:18 AM - 24 Jul 12&lt;/span&gt;
+
+       &lt;span class=&quot;tweet-source&quot;&gt;via &lt;a href=&quot;http://tantek.com/w/Falcon&quot; rel=&quot;nofollow&quot;&gt;Falcon&lt;/a&gt;&lt;/span&gt;
+
+          &amp;middot; &lt;a class=&quot;permalink-link js-permalink&quot; href=&quot;/t/status/227679256577179648&quot; &gt;Details&lt;/a&gt;
+
+
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+"
+
+
+ data-mentions=""
+
+>
+
+    
+    <i class="dogear"></i>
+
+    
+    <div class="content">
+
+      
+      <div class="stream-item-header">
+        <small class="time">
+            <a href="/t/status/227679256577179648" class="tweet-timestamp js-permalink" title="1:18 AM - 24 Jul 12" ><span class="_timestamp js-short-timestamp js-relative-timestamp" data-time="1343117939" data-long-form="true">7h</span></a>
+        </small>
+          <a class="account-group js-account-group js-action-profile js-user-profile-link" href="/t" data-user-id="11628">
+            <img class="avatar js-action-profile-avatar" src="http://a0.twimg.com/profile_images/1266918745/2009-068-tantek-headshot-square_normal.jpg" alt="Tantek Çelik">
+            <strong class="fullname js-action-profile-name show-popup-with-id">Tantek Çelik</strong>
+            <span>&rlm;</span><span class="username js-action-profile-name"><s>@</s><b>t</b></span>
+          </a>
+              </div>
+
+      
+        <p class="js-tweet-text">
+              season 2 episode 1 of Alphas is up on Hulu: <a href="http://t.co/p6m8U0gR" class="twitter-timeline-link" target="_blank" data-expanded-url="http://hulu.com/alphas" ><span class="invisible">http://</span><span class="js-display-url">hulu.com/alphas</span><span class="invisible"></span><span class="tco-ellipsis"><span class="invisible">&nbsp;</span></span></a> Apparently &quot;day after episode airs&quot; = after 00:00 PDT (ttk.me t4K52)
+                  </p>
+
+      
+      <div class="stream-item-footer">
+        
+        
+        
+        
+        
+        <div class="context">
+        </div>
+
+        
+        <a class="details with-icn js-details" href="/t/status/227679256577179648">
+          <span class="details-icon js-icon-container">
+          </span>
+          <b>
+            <span class="expand-stream-item js-view-details">
+                
+                  <span class="expand-action-wrapper">
+                    Öffnen
+                  </span>
+            </span>
+            <span class="collapse-stream-item js-hide-details">
+                Schließen
+            </span>
+          </b>
+        </a>
+
+        
+        
+        
+        
+         <ul class="tweet-actions js-actions">
+          <li class="action-reply-container">
+            
+              <a class="with-icn js-action-reply" data-modal="tweet-reply" href="#" title="Antworten">
+                <i class="sm-reply"></i>
+                <b>Antworten</b>
+              </a>
+          </li>
+            <li class="action-rt-container">
+              <a class="with-icn js-toggle-rt" data-modal="tweet-retweet" href="#">
+                <i class="sm-rt"></i>
+                
+                
+                  <b><span class="undo-retweet" title="Retweet rückgängig machen">Retweetet</span><span class="retweet" title="Retweeten">Retweeten</span></b>
+              </a>
+            </li>
+          <li class="action-del-container">
+            <a class="with-icn js-action-del" href="#" title="Löschen">
+              <i class="sm-trash"></i>
+              <b>Löschen</b>
+            </a>
+          </li>
+          <li class="action-fav-container">
+            <a class="with-icn js-toggle-fav" href="#">
+              <i class="sm-fav"></i>
+              
+              
+                <b><span class="unfavorite" title="Favorit rückgängig machen">Favorisiert</span><span class="favorite" title="Favorisieren">Favorisieren</span></b>
+            </a>
+          </li>
+        </ul>      </div>
+
+      
+      <div class="expanded-content js-tweet-details-dropdown">
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<div class="js-stream-item stream-item stream-item expanding-stream-item" data-item-id="227676433928056832" data-item-type="tweet" id="stream-item-tweet-227676433928056832">
+  
+
+
+  
+
+  <div class="tweet original-tweet js-stream-tweet js-actionable-tweet js-hover js-profile-popup-actionable js-original-tweet  
+
+
+
+
+
+
+" 
+data-tweet-id="227676433928056832"
+
+data-item-id="227676433928056832"
+
+
+ data-screen-name="t" data-name="Tantek Çelik" data-user-id="11628"
+
+
+
+
+data-is-reply-to=""
+
+data-expanded-footer="&lt;div class=&quot;js-tweet-details-fixer tweet-details-fixer&quot;&gt;
+    &lt;div class=&quot;js-tweet-media-container &quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;entities-media-container &quot; style=&quot;min-height:0px&quot;&gt;
+    &lt;/div&gt;
+  &lt;div class=&quot;js-machine-translated-tweet-container&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;js-tweet-stats-container tweet-stats-container &quot;&gt;
+  &lt;/div&gt;
+  
+    &lt;div class=&quot;geo-container tweet-geo-text&quot;&gt;
+    &lt;/div&gt;
+  &lt;div class=&quot;client-and-actions&quot;&gt;
+    &lt;span class=&quot;metadata&quot;&gt;
+      &lt;span title=&quot;1:07 AM - 24 Jul 12&quot;&gt;1:07 AM - 24 Jul 12&lt;/span&gt;
+
+       &lt;span class=&quot;tweet-source&quot;&gt;via &lt;a href=&quot;http://tantek.com/w/Falcon&quot; rel=&quot;nofollow&quot;&gt;Falcon&lt;/a&gt;&lt;/span&gt;
+
+          &amp;middot; &lt;a class=&quot;permalink-link js-permalink&quot; href=&quot;/t/status/227676433928056832&quot; &gt;Details&lt;/a&gt;
+
+
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+"
+
+
+ data-mentions="haxor"
+
+>
+
+    
+    <i class="dogear"></i>
+
+    
+    <div class="content">
+
+      
+      <div class="stream-item-header">
+        <small class="time">
+            <a href="/t/status/227676433928056832" class="tweet-timestamp js-permalink" title="1:07 AM - 24 Jul 12" ><span class="_timestamp js-short-timestamp js-relative-timestamp" data-time="1343117266" data-long-form="true">7h</span></a>
+        </small>
+          <a class="account-group js-account-group js-action-profile js-user-profile-link" href="/t" data-user-id="11628">
+            <img class="avatar js-action-profile-avatar" src="http://a0.twimg.com/profile_images/1266918745/2009-068-tantek-headshot-square_normal.jpg" alt="Tantek Çelik">
+            <strong class="fullname js-action-profile-name show-popup-with-id">Tantek Çelik</strong>
+            <span>&rlm;</span><span class="username js-action-profile-name"><s>@</s><b>t</b></span>
+          </a>
+              </div>
+
+      
+        <p class="js-tweet-text">
+              Brett (<a href="/haxor" class="twitter-atreply pretty-link" ><s>@</s><b>haxor</b></a>) kicks it off: &quot;Focusing on the Positives: Why I Have My Own Website&quot;: <a href="http://t.co/WVnfFMaL" class="twitter-timeline-link" target="_blank" data-expanded-url="http://onebigfluke.com/2012/07/focusing-on-positives-why-i-have-my-own.html" ><span class="invisible">http://</span><span class="js-display-url">onebigfluke.com/2012/07/focusi</span><span class="invisible">ng-on-positives-why-i-have-my-own.html</span><span class="tco-ellipsis"><span class="invisible">&nbsp;</span>…</span></a> <a href="/search/%23indieweb" class="twitter-hashtag pretty-link" data-query-source="hashtag_click" ><s>#</s><b>indieweb</b></a> (ttk.me t4K51)
+                  </p>
+
+      
+      <div class="stream-item-footer">
+        
+        
+        
+        
+        
+        <div class="context">
+        </div>
+
+        
+        <a class="details with-icn js-details" href="/t/status/227676433928056832">
+          <span class="details-icon js-icon-container">
+          </span>
+          <b>
+            <span class="expand-stream-item js-view-details">
+                
+                  <span class="expand-action-wrapper">
+                    Öffnen
+                  </span>
+            </span>
+            <span class="collapse-stream-item js-hide-details">
+                Schließen
+            </span>
+          </b>
+        </a>
+
+        
+        
+        
+        
+         <ul class="tweet-actions js-actions">
+          <li class="action-reply-container">
+            
+              <a class="with-icn js-action-reply" data-modal="tweet-reply" href="#" title="Antworten">
+                <i class="sm-reply"></i>
+                <b>Antworten</b>
+              </a>
+          </li>
+            <li class="action-rt-container">
+              <a class="with-icn js-toggle-rt" data-modal="tweet-retweet" href="#">
+                <i class="sm-rt"></i>
+                
+                
+                  <b><span class="undo-retweet" title="Retweet rückgängig machen">Retweetet</span><span class="retweet" title="Retweeten">Retweeten</span></b>
+              </a>
+            </li>
+          <li class="action-del-container">
+            <a class="with-icn js-action-del" href="#" title="Löschen">
+              <i class="sm-trash"></i>
+              <b>Löschen</b>
+            </a>
+          </li>
+          <li class="action-fav-container">
+            <a class="with-icn js-toggle-fav" href="#">
+              <i class="sm-fav"></i>
+              
+              
+                <b><span class="unfavorite" title="Favorit rückgängig machen">Favorisiert</span><span class="favorite" title="Favorisieren">Favorisieren</span></b>
+            </a>
+          </li>
+        </ul>      </div>
+
+      
+      <div class="expanded-content js-tweet-details-dropdown">
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<div class="js-stream-item stream-item stream-item expanding-stream-item" data-item-id="227362367049195520" data-item-type="tweet" id="stream-item-tweet-227362367049195520">
+  
+
+
+  
+
+  <div class="tweet original-tweet js-stream-tweet js-actionable-tweet js-hover js-profile-popup-actionable js-original-tweet  
+
+
+
+
+
+
+" 
+data-tweet-id="227362367049195520"
+
+data-item-id="227362367049195520"
+
+
+ data-screen-name="t" data-name="Tantek Çelik" data-user-id="11628"
+
+
+
+
+data-is-reply-to=""
+
+data-expanded-footer="&lt;div class=&quot;js-tweet-details-fixer tweet-details-fixer&quot;&gt;
+    &lt;div class=&quot;js-tweet-media-container &quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;entities-media-container &quot; style=&quot;min-height:0px&quot;&gt;
+    &lt;/div&gt;
+  &lt;div class=&quot;js-machine-translated-tweet-container&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;js-tweet-stats-container tweet-stats-container &quot;&gt;
+  &lt;/div&gt;
+  
+    &lt;div class=&quot;geo-container tweet-geo-text&quot;&gt;
+    &lt;/div&gt;
+  &lt;div class=&quot;client-and-actions&quot;&gt;
+    &lt;span class=&quot;metadata&quot;&gt;
+      &lt;span title=&quot;4:19 AM - 23 Jul 12&quot;&gt;4:19 AM - 23 Jul 12&lt;/span&gt;
+
+       &lt;span class=&quot;tweet-source&quot;&gt;via &lt;a href=&quot;http://tantek.com/w/Falcon&quot; rel=&quot;nofollow&quot;&gt;Falcon&lt;/a&gt;&lt;/span&gt;
+
+          &amp;middot; &lt;a class=&quot;permalink-link js-permalink&quot; href=&quot;/t/status/227362367049195520&quot; &gt;Details&lt;/a&gt;
+
+
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+"
+
+
+ data-mentions="gilest tomcoates"
+
+>
+
+    
+    <i class="dogear"></i>
+
+    
+    <div class="content">
+
+      
+      <div class="stream-item-header">
+        <small class="time">
+            <a href="/t/status/227362367049195520" class="tweet-timestamp js-permalink" title="4:19 AM - 23 Jul 12" ><span class="_timestamp js-short-timestamp " data-time="1343042387" data-long-form="true">23 Jul</span></a>
+        </small>
+          <a class="account-group js-account-group js-action-profile js-user-profile-link" href="/t" data-user-id="11628">
+            <img class="avatar js-action-profile-avatar" src="http://a0.twimg.com/profile_images/1266918745/2009-068-tantek-headshot-square_normal.jpg" alt="Tantek Çelik">
+            <strong class="fullname js-action-profile-name show-popup-with-id">Tantek Çelik</strong>
+            <span>&rlm;</span><span class="username js-action-profile-name"><s>@</s><b>t</b></span>
+          </a>
+              </div>
+
+      
+        <p class="js-tweet-text">
+              agree a lot with <a href="/gilest" class="twitter-atreply pretty-link" ><s>@</s><b>gilest</b></a> <a href="http://t.co/1j7dlRkC" class="twitter-timeline-link" target="_blank" data-expanded-url="http://gilest.org/in-defence-of-flickr" ><span class="invisible">http://</span><span class="js-display-url">gilest.org/in-defence-of-</span><span class="invisible">flickr</span><span class="tco-ellipsis"><span class="invisible">&nbsp;</span>…</span></a> via <a href="/tomcoates" class="twitter-atreply pretty-link" ><s>@</s><b>tomcoates</b></a>. A year behind on uploads, I&#39;d prefer to POSSE. <a href="/search/%23indieweb" class="twitter-hashtag pretty-link" data-query-source="hashtag_click" ><s>#</s><b>indieweb</b></a> (ttk.me t4K41)
+                  </p>
+
+      
+      <div class="stream-item-footer">
+        
+        
+        
+        
+        
+        <div class="context">
+        </div>
+
+        
+        <a class="details with-icn js-details" href="/t/status/227362367049195520">
+          <span class="details-icon js-icon-container">
+          </span>
+          <b>
+            <span class="expand-stream-item js-view-details">
+                
+                  <span class="expand-action-wrapper">
+                    Öffnen
+                  </span>
+            </span>
+            <span class="collapse-stream-item js-hide-details">
+                Schließen
+            </span>
+          </b>
+        </a>
+
+        
+        
+        
+        
+         <ul class="tweet-actions js-actions">
+          <li class="action-reply-container">
+            
+              <a class="with-icn js-action-reply" data-modal="tweet-reply" href="#" title="Antworten">
+                <i class="sm-reply"></i>
+                <b>Antworten</b>
+              </a>
+          </li>
+            <li class="action-rt-container">
+              <a class="with-icn js-toggle-rt" data-modal="tweet-retweet" href="#">
+                <i class="sm-rt"></i>
+                
+                
+                  <b><span class="undo-retweet" title="Retweet rückgängig machen">Retweetet</span><span class="retweet" title="Retweeten">Retweeten</span></b>
+              </a>
+            </li>
+          <li class="action-del-container">
+            <a class="with-icn js-action-del" href="#" title="Löschen">
+              <i class="sm-trash"></i>
+              <b>Löschen</b>
+            </a>
+          </li>
+          <li class="action-fav-container">
+            <a class="with-icn js-toggle-fav" href="#">
+              <i class="sm-fav"></i>
+              
+              
+                <b><span class="unfavorite" title="Favorit rückgängig machen">Favorisiert</span><span class="favorite" title="Favorisieren">Favorisieren</span></b>
+            </a>
+          </li>
+        </ul>      </div>
+
+      
+      <div class="expanded-content js-tweet-details-dropdown">
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<div class="js-stream-item stream-item stream-item expanding-stream-item" data-item-id="227247887480913921" data-item-type="tweet" id="stream-item-tweet-227247887480913921">
+  
+
+
+  
+
+  <div class="tweet original-tweet js-stream-tweet js-actionable-tweet js-hover js-profile-popup-actionable js-original-tweet  
+
+
+
+
+
+
+" 
+data-tweet-id="227247887480913921"
+
+data-item-id="227247887480913921"
+
+
+ data-screen-name="t" data-name="Tantek Çelik" data-user-id="11628"
+
+
+
+
+data-is-reply-to=""
+
+data-expanded-footer="&lt;div class=&quot;js-tweet-details-fixer tweet-details-fixer&quot;&gt;
+    &lt;div class=&quot;js-tweet-media-container &quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;entities-media-container &quot; style=&quot;min-height:0px&quot;&gt;
+    &lt;/div&gt;
+  &lt;div class=&quot;js-machine-translated-tweet-container&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;js-tweet-stats-container tweet-stats-container &quot;&gt;
+  &lt;/div&gt;
+  
+    &lt;div class=&quot;geo-container tweet-geo-text&quot;&gt;
+    &lt;/div&gt;
+  &lt;div class=&quot;client-and-actions&quot;&gt;
+    &lt;span class=&quot;metadata&quot;&gt;
+      &lt;span title=&quot;8:44 PM - 22 Jul 12&quot;&gt;8:44 PM - 22 Jul 12&lt;/span&gt;
+
+       &lt;span class=&quot;tweet-source&quot;&gt;via &lt;a href=&quot;http://tantek.com/w/Falcon&quot; rel=&quot;nofollow&quot;&gt;Falcon&lt;/a&gt;&lt;/span&gt;
+
+          &amp;middot; &lt;a class=&quot;permalink-link js-permalink&quot; href=&quot;/t/status/227247887480913921&quot; &gt;Details&lt;/a&gt;
+
+
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+"
+
+
+ data-mentions=""
+
+>
+
+    
+    <i class="dogear"></i>
+
+    
+    <div class="content">
+
+      
+      <div class="stream-item-header">
+        <small class="time">
+            <a href="/t/status/227247887480913921" class="tweet-timestamp js-permalink" title="8:44 PM - 22 Jul 12" ><span class="_timestamp js-short-timestamp " data-time="1343015093" data-long-form="true">22 Jul</span></a>
+        </small>
+          <a class="account-group js-account-group js-action-profile js-user-profile-link" href="/t" data-user-id="11628">
+            <img class="avatar js-action-profile-avatar" src="http://a0.twimg.com/profile_images/1266918745/2009-068-tantek-headshot-square_normal.jpg" alt="Tantek Çelik">
+            <strong class="fullname js-action-profile-name show-popup-with-id">Tantek Çelik</strong>
+            <span>&rlm;</span><span class="username js-action-profile-name"><s>@</s><b>t</b></span>
+          </a>
+              </div>
+
+      
+        <p class="js-tweet-text">
+              good bouldering day at Mission Cliffs: sent 13 of 16 new 2012-07-20 routes, up thru all V4s, including one onsight V4. (ttk.me t4K31)
+                  </p>
+
+      
+      <div class="stream-item-footer">
+        
+        
+        
+        
+        
+        <div class="context">
+        </div>
+
+        
+        <a class="details with-icn js-details" href="/t/status/227247887480913921">
+          <span class="details-icon js-icon-container">
+          </span>
+          <b>
+            <span class="expand-stream-item js-view-details">
+                
+                  <span class="expand-action-wrapper">
+                    Öffnen
+                  </span>
+            </span>
+            <span class="collapse-stream-item js-hide-details">
+                Schließen
+            </span>
+          </b>
+        </a>
+
+        
+        
+        
+        
+         <ul class="tweet-actions js-actions">
+          <li class="action-reply-container">
+            
+              <a class="with-icn js-action-reply" data-modal="tweet-reply" href="#" title="Antworten">
+                <i class="sm-reply"></i>
+                <b>Antworten</b>
+              </a>
+          </li>
+            <li class="action-rt-container">
+              <a class="with-icn js-toggle-rt" data-modal="tweet-retweet" href="#">
+                <i class="sm-rt"></i>
+                
+                
+                  <b><span class="undo-retweet" title="Retweet rückgängig machen">Retweetet</span><span class="retweet" title="Retweeten">Retweeten</span></b>
+              </a>
+            </li>
+          <li class="action-del-container">
+            <a class="with-icn js-action-del" href="#" title="Löschen">
+              <i class="sm-trash"></i>
+              <b>Löschen</b>
+            </a>
+          </li>
+          <li class="action-fav-container">
+            <a class="with-icn js-toggle-fav" href="#">
+              <i class="sm-fav"></i>
+              
+              
+                <b><span class="unfavorite" title="Favorit rückgängig machen">Favorisiert</span><span class="favorite" title="Favorisieren">Favorisieren</span></b>
+            </a>
+          </li>
+        </ul>      </div>
+
+      
+      <div class="expanded-content js-tweet-details-dropdown">
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<div class="js-stream-item stream-item stream-item expanding-stream-item" data-item-id="226786669150490625" data-item-type="tweet" id="stream-item-tweet-226786669150490625">
+  
+
+
+  
+
+  <div class="tweet original-tweet js-stream-tweet js-actionable-tweet js-hover js-profile-popup-actionable js-original-tweet  
+
+
+
+
+ with-social-proof
+
+" 
+data-tweet-id="226786669150490625"
+
+data-item-id="226786669150490625"
+
+
+ data-screen-name="t" data-name="Tantek Çelik" data-user-id="11628"
+
+
+
+
+data-is-reply-to=""
+
+data-expanded-footer="&lt;div class=&quot;js-tweet-details-fixer tweet-details-fixer&quot;&gt;
+    &lt;div class=&quot;js-tweet-media-container &quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;entities-media-container &quot; style=&quot;min-height:0px&quot;&gt;
+    &lt;/div&gt;
+  &lt;div class=&quot;js-machine-translated-tweet-container&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;js-tweet-stats-container tweet-stats-container already-open&quot;&gt;
+  &lt;/div&gt;
+  
+    &lt;div class=&quot;geo-container tweet-geo-text&quot;&gt;
+    &lt;/div&gt;
+  &lt;div class=&quot;client-and-actions&quot;&gt;
+    &lt;span class=&quot;metadata&quot;&gt;
+      &lt;span title=&quot;2:12 PM - 21 Jul 12&quot;&gt;2:12 PM - 21 Jul 12&lt;/span&gt;
+
+       &lt;span class=&quot;tweet-source&quot;&gt;via &lt;a href=&quot;http://tantek.com/w/Falcon&quot; rel=&quot;nofollow&quot;&gt;Falcon&lt;/a&gt;&lt;/span&gt;
+
+          &amp;middot; &lt;a class=&quot;permalink-link js-permalink&quot; href=&quot;/t/status/226786669150490625&quot; &gt;Details&lt;/a&gt;
+
+
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+"
+
+
+ data-mentions=""
+
+>
+
+    
+    <i class="dogear"></i>
+
+    
+    <div class="content">
+
+      
+      <div class="stream-item-header">
+        <small class="time">
+            <a href="/t/status/226786669150490625" class="tweet-timestamp js-permalink" title="2:12 PM - 21 Jul 12" ><span class="_timestamp js-short-timestamp " data-time="1342905130" data-long-form="true">21 Jul</span></a>
+        </small>
+          <a class="account-group js-account-group js-action-profile js-user-profile-link" href="/t" data-user-id="11628">
+            <img class="avatar js-action-profile-avatar" src="http://a0.twimg.com/profile_images/1266918745/2009-068-tantek-headshot-square_normal.jpg" alt="Tantek Çelik">
+            <strong class="fullname js-action-profile-name show-popup-with-id">Tantek Çelik</strong>
+            <span>&rlm;</span><span class="username js-action-profile-name"><s>@</s><b>t</b></span>
+          </a>
+              </div>
+
+      
+        <p class="js-tweet-text">
+              <a href="/search/%23Innovatecon" class="twitter-hashtag pretty-link" data-query-source="hashtag_click" ><s>#</s><b>Innovatecon</b></a>: my slides from: <a href="/search/%23HTML5" class="twitter-hashtag pretty-link" data-query-source="hashtag_click" ><s>#</s><b>HTML5</b></a> and <a href="/search/%23microformats2" class="twitter-hashtag pretty-link" data-query-source="hashtag_click" ><s>#</s><b>microformats2</b></a>: the next evolutionary step for web data: <a href="http://t.co/1L7SCKLB" class="twitter-timeline-link" target="_blank" data-expanded-url="http://tantek.com/presentations/2012/07/html5-uf2" ><span class="invisible">http://</span><span class="js-display-url">tantek.com/presentations/</span><span class="invisible">2012/07/html5-uf2</span><span class="tco-ellipsis"><span class="invisible">&nbsp;</span>…</span></a> (ttk.me t4K22)
+                  </p>
+
+      
+      <div class="stream-item-footer">
+        
+        
+        
+        
+        
+        <div class="context">
+        </div>
+
+        
+        <a class="details with-icn js-details" href="/t/status/226786669150490625">
+          <span class="details-icon js-icon-container">
+          </span>
+          <b>
+            <span class="expand-stream-item js-view-details">
+                
+                  <span class="expand-action-wrapper">
+                    Öffnen
+                  </span>
+            </span>
+            <span class="collapse-stream-item js-hide-details">
+                Schließen
+            </span>
+          </b>
+        </a>
+
+        
+        
+        
+        
+         <ul class="tweet-actions js-actions">
+          <li class="action-reply-container">
+            
+              <a class="with-icn js-action-reply" data-modal="tweet-reply" href="#" title="Antworten">
+                <i class="sm-reply"></i>
+                <b>Antworten</b>
+              </a>
+          </li>
+            <li class="action-rt-container">
+              <a class="with-icn js-toggle-rt" data-modal="tweet-retweet" href="#">
+                <i class="sm-rt"></i>
+                
+                
+                  <b><span class="undo-retweet" title="Retweet rückgängig machen">Retweetet</span><span class="retweet" title="Retweeten">Retweeten</span></b>
+              </a>
+            </li>
+          <li class="action-del-container">
+            <a class="with-icn js-action-del" href="#" title="Löschen">
+              <i class="sm-trash"></i>
+              <b>Löschen</b>
+            </a>
+          </li>
+          <li class="action-fav-container">
+            <a class="with-icn js-toggle-fav" href="#">
+              <i class="sm-fav"></i>
+              
+              
+                <b><span class="unfavorite" title="Favorit rückgängig machen">Favorisiert</span><span class="favorite" title="Favorisieren">Favorisieren</span></b>
+            </a>
+          </li>
+        </ul>      </div>
+
+      
+      <div class="expanded-content js-tweet-details-dropdown">
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<div class="js-stream-item stream-item stream-item expanding-stream-item" data-item-id="226748271740194816" data-item-type="tweet" id="stream-item-tweet-226748271740194816">
+  
+
+
+  
+
+  <div class="tweet original-tweet js-stream-tweet js-actionable-tweet js-hover js-profile-popup-actionable js-original-tweet  
+
+
+
+
+ with-social-proof
+
+" 
+data-tweet-id="226748271740194816"
+
+data-item-id="226748271740194816"
+
+
+ data-screen-name="t" data-name="Tantek Çelik" data-user-id="11628"
+
+
+
+
+data-is-reply-to=""
+
+data-expanded-footer="&lt;div class=&quot;js-tweet-details-fixer tweet-details-fixer&quot;&gt;
+    &lt;div class=&quot;js-tweet-media-container &quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;entities-media-container &quot; style=&quot;min-height:0px&quot;&gt;
+    &lt;/div&gt;
+  &lt;div class=&quot;js-machine-translated-tweet-container&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;js-tweet-stats-container tweet-stats-container already-open&quot;&gt;
+  &lt;/div&gt;
+  
+    &lt;div class=&quot;geo-container tweet-geo-text&quot;&gt;
+    &lt;/div&gt;
+  &lt;div class=&quot;client-and-actions&quot;&gt;
+    &lt;span class=&quot;metadata&quot;&gt;
+      &lt;span title=&quot;11:39 AM - 21 Jul 12&quot;&gt;11:39 AM - 21 Jul 12&lt;/span&gt;
+
+       &lt;span class=&quot;tweet-source&quot;&gt;via &lt;a href=&quot;http://tantek.com/w/Falcon&quot; rel=&quot;nofollow&quot;&gt;Falcon&lt;/a&gt;&lt;/span&gt;
+
+          &amp;middot; &lt;a class=&quot;permalink-link js-permalink&quot; href=&quot;/t/status/226748271740194816&quot; &gt;Details&lt;/a&gt;
+
+
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+"
+
+
+ data-mentions="joshuarudd html5now"
+
+>
+
+    
+    <i class="dogear"></i>
+
+    
+    <div class="content">
+
+      
+      <div class="stream-item-header">
+        <small class="time">
+            <a href="/t/status/226748271740194816" class="tweet-timestamp js-permalink" title="11:39 AM - 21 Jul 12" ><span class="_timestamp js-short-timestamp " data-time="1342895975" data-long-form="true">21 Jul</span></a>
+        </small>
+          <a class="account-group js-account-group js-action-profile js-user-profile-link" href="/t" data-user-id="11628">
+            <img class="avatar js-action-profile-avatar" src="http://a0.twimg.com/profile_images/1266918745/2009-068-tantek-headshot-square_normal.jpg" alt="Tantek Çelik">
+            <strong class="fullname js-action-profile-name show-popup-with-id">Tantek Çelik</strong>
+            <span>&rlm;</span><span class="username js-action-profile-name"><s>@</s><b>t</b></span>
+          </a>
+              </div>
+
+      
+        <p class="js-tweet-text">
+              Congrats <a href="/joshuarudd" class="twitter-atreply pretty-link" ><s>@</s><b>joshuarudd</b></a> on winning an <a href="/html5now" class="twitter-atreply pretty-link" ><s>@</s><b>HTML5Now</b></a> book for asking a  <a href="/search/%23microformats2" class="twitter-hashtag pretty-link" data-query-source="hashtag_click" ><s>#</s><b>microformats2</b></a> question on Etherpad at <a href="/search/%23Innovatecon" class="twitter-hashtag pretty-link" data-query-source="hashtag_click" ><s>#</s><b>Innovatecon</b></a>! (ttk.me t4K21)
+                  </p>
+
+      
+      <div class="stream-item-footer">
+        
+        
+        
+        
+        
+        <div class="context">
+        </div>
+
+        
+        <a class="details with-icn js-details" href="/t/status/226748271740194816">
+          <span class="details-icon js-icon-container">
+          </span>
+          <b>
+            <span class="expand-stream-item js-view-details">
+                
+                  <span class="expand-action-wrapper">
+                    Öffnen
+                  </span>
+            </span>
+            <span class="collapse-stream-item js-hide-details">
+                Schließen
+            </span>
+          </b>
+        </a>
+
+        
+        
+        
+        
+         <ul class="tweet-actions js-actions">
+          <li class="action-reply-container">
+            
+              <a class="with-icn js-action-reply" data-modal="tweet-reply" href="#" title="Antworten">
+                <i class="sm-reply"></i>
+                <b>Antworten</b>
+              </a>
+          </li>
+            <li class="action-rt-container">
+              <a class="with-icn js-toggle-rt" data-modal="tweet-retweet" href="#">
+                <i class="sm-rt"></i>
+                
+                
+                  <b><span class="undo-retweet" title="Retweet rückgängig machen">Retweetet</span><span class="retweet" title="Retweeten">Retweeten</span></b>
+              </a>
+            </li>
+          <li class="action-del-container">
+            <a class="with-icn js-action-del" href="#" title="Löschen">
+              <i class="sm-trash"></i>
+              <b>Löschen</b>
+            </a>
+          </li>
+          <li class="action-fav-container">
+            <a class="with-icn js-toggle-fav" href="#">
+              <i class="sm-fav"></i>
+              
+              
+                <b><span class="unfavorite" title="Favorit rückgängig machen">Favorisiert</span><span class="favorite" title="Favorisieren">Favorisieren</span></b>
+            </a>
+          </li>
+        </ul>      </div>
+
+      
+      <div class="expanded-content js-tweet-details-dropdown">
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<div class="js-stream-item stream-item stream-item expanding-stream-item" data-item-id="225102430981988354" data-item-type="tweet" id="stream-item-tweet-225102430981988354">
+  
+
+
+  
+
+  <div class="tweet original-tweet js-stream-tweet js-actionable-tweet js-hover js-profile-popup-actionable js-original-tweet  
+
+
+
+
+ with-social-proof
+
+" 
+data-tweet-id="225102430981988354"
+
+data-item-id="225102430981988354"
+
+
+ data-screen-name="t" data-name="Tantek Çelik" data-user-id="11628"
+
+
+
+
+data-is-reply-to=""
+
+data-expanded-footer="&lt;div class=&quot;js-tweet-details-fixer tweet-details-fixer&quot;&gt;
+    &lt;div class=&quot;js-tweet-media-container &quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;entities-media-container &quot; style=&quot;min-height:0px&quot;&gt;
+    &lt;/div&gt;
+  &lt;div class=&quot;js-machine-translated-tweet-container&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;js-tweet-stats-container tweet-stats-container already-open&quot;&gt;
+  &lt;/div&gt;
+  
+    &lt;div class=&quot;geo-container tweet-geo-text&quot;&gt;
+    &lt;/div&gt;
+  &lt;div class=&quot;client-and-actions&quot;&gt;
+    &lt;span class=&quot;metadata&quot;&gt;
+      &lt;span title=&quot;10:39 PM - 16 Jul 12&quot;&gt;10:39 PM - 16 Jul 12&lt;/span&gt;
+
+       &lt;span class=&quot;tweet-source&quot;&gt;via &lt;a href=&quot;http://tantek.com/w/Falcon&quot; rel=&quot;nofollow&quot;&gt;Falcon&lt;/a&gt;&lt;/span&gt;
+
+          &amp;middot; &lt;a class=&quot;permalink-link js-permalink&quot; href=&quot;/t/status/225102430981988354&quot; &gt;Details&lt;/a&gt;
+
+
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+"
+
+
+ data-mentions=""
+
+>
+
+    
+    <i class="dogear"></i>
+
+    
+    <div class="content">
+
+      
+      <div class="stream-item-header">
+        <small class="time">
+            <a href="/t/status/225102430981988354" class="tweet-timestamp js-permalink" title="10:39 PM - 16 Jul 12" ><span class="_timestamp js-short-timestamp " data-time="1342503576" data-long-form="true">16 Jul</span></a>
+        </small>
+          <a class="account-group js-account-group js-action-profile js-user-profile-link" href="/t" data-user-id="11628">
+            <img class="avatar js-action-profile-avatar" src="http://a0.twimg.com/profile_images/1266918745/2009-068-tantek-headshot-square_normal.jpg" alt="Tantek Çelik">
+            <strong class="fullname js-action-profile-name show-popup-with-id">Tantek Çelik</strong>
+            <span>&rlm;</span><span class="username js-action-profile-name"><s>@</s><b>t</b></span>
+          </a>
+              </div>
+
+      
+        <p class="js-tweet-text">
+              avoid tco fuglifier: • becomes . in SMS. A # prefix stops tco yet syndicates (e.g. FB) autolink: #http://tantek.com (ttk.me t4Jx2)
+                  </p>
+
+      
+      <div class="stream-item-footer">
+        
+        
+        
+        
+        
+        <div class="context">
+        </div>
+
+        
+        <a class="details with-icn js-details" href="/t/status/225102430981988354">
+          <span class="details-icon js-icon-container">
+          </span>
+          <b>
+            <span class="expand-stream-item js-view-details">
+                
+                  <span class="expand-action-wrapper">
+                    Öffnen
+                  </span>
+            </span>
+            <span class="collapse-stream-item js-hide-details">
+                Schließen
+            </span>
+          </b>
+        </a>
+
+        
+        
+        
+        
+         <ul class="tweet-actions js-actions">
+          <li class="action-reply-container">
+            
+              <a class="with-icn js-action-reply" data-modal="tweet-reply" href="#" title="Antworten">
+                <i class="sm-reply"></i>
+                <b>Antworten</b>
+              </a>
+          </li>
+            <li class="action-rt-container">
+              <a class="with-icn js-toggle-rt" data-modal="tweet-retweet" href="#">
+                <i class="sm-rt"></i>
+                
+                
+                  <b><span class="undo-retweet" title="Retweet rückgängig machen">Retweetet</span><span class="retweet" title="Retweeten">Retweeten</span></b>
+              </a>
+            </li>
+          <li class="action-del-container">
+            <a class="with-icn js-action-del" href="#" title="Löschen">
+              <i class="sm-trash"></i>
+              <b>Löschen</b>
+            </a>
+          </li>
+          <li class="action-fav-container">
+            <a class="with-icn js-toggle-fav" href="#">
+              <i class="sm-fav"></i>
+              
+              
+                <b><span class="unfavorite" title="Favorit rückgängig machen">Favorisiert</span><span class="favorite" title="Favorisieren">Favorisieren</span></b>
+            </a>
+          </li>
+        </ul>      </div>
+
+      
+      <div class="expanded-content js-tweet-details-dropdown">
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<div class="js-stream-item stream-item stream-item expanding-stream-item" data-item-id="225083815134105600" data-item-type="tweet" id="stream-item-tweet-225083815134105600">
+  
+
+
+  
+
+  <div class="tweet original-tweet js-stream-tweet js-actionable-tweet js-hover js-profile-popup-actionable js-original-tweet  
+
+
+
+
+ with-social-proof
+
+" 
+data-tweet-id="225083815134105600"
+
+data-item-id="225083815134105600"
+
+
+ data-screen-name="t" data-name="Tantek Çelik" data-user-id="11628"
+
+
+
+
+data-is-reply-to=""
+
+data-expanded-footer="&lt;div class=&quot;js-tweet-details-fixer tweet-details-fixer&quot;&gt;
+    &lt;div class=&quot;js-tweet-media-container &quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;entities-media-container &quot; style=&quot;min-height:0px&quot;&gt;
+    &lt;/div&gt;
+  &lt;div class=&quot;js-machine-translated-tweet-container&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;js-tweet-stats-container tweet-stats-container already-open&quot;&gt;
+  &lt;/div&gt;
+  
+    &lt;div class=&quot;geo-container tweet-geo-text&quot;&gt;
+    &lt;/div&gt;
+  &lt;div class=&quot;client-and-actions&quot;&gt;
+    &lt;span class=&quot;metadata&quot;&gt;
+      &lt;span title=&quot;9:25 PM - 16 Jul 12&quot;&gt;9:25 PM - 16 Jul 12&lt;/span&gt;
+
+       &lt;span class=&quot;tweet-source&quot;&gt;via &lt;a href=&quot;http://tantek.com/w/Falcon&quot; rel=&quot;nofollow&quot;&gt;Falcon&lt;/a&gt;&lt;/span&gt;
+
+          &amp;middot; &lt;a class=&quot;permalink-link js-permalink&quot; href=&quot;/t/status/225083815134105600&quot; &gt;Details&lt;/a&gt;
+
+
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+"
+
+
+ data-mentions=""
+
+>
+
+    
+    <i class="dogear"></i>
+
+    
+    <div class="content">
+
+      
+      <div class="stream-item-header">
+        <small class="time">
+            <a href="/t/status/225083815134105600" class="tweet-timestamp js-permalink" title="9:25 PM - 16 Jul 12" ><span class="_timestamp js-short-timestamp " data-time="1342499138" data-long-form="true">16 Jul</span></a>
+        </small>
+          <a class="account-group js-account-group js-action-profile js-user-profile-link" href="/t" data-user-id="11628">
+            <img class="avatar js-action-profile-avatar" src="http://a0.twimg.com/profile_images/1266918745/2009-068-tantek-headshot-square_normal.jpg" alt="Tantek Çelik">
+            <strong class="fullname js-action-profile-name show-popup-with-id">Tantek Çelik</strong>
+            <span>&rlm;</span><span class="username js-action-profile-name"><s>@</s><b>t</b></span>
+          </a>
+              </div>
+
+      
+        <p class="js-tweet-text">
+              added <a href="/search/%23microformats2" class="twitter-hashtag pretty-link" data-query-source="hashtag_click" ><s>#</s><b>microformats2</b></a> h-feed h-entry to tantek•com. (ttk.me t4Jx1)
+                  </p>
+
+      
+      <div class="stream-item-footer">
+        
+        
+        
+        
+        
+        <div class="context">
+        </div>
+
+        
+        <a class="details with-icn js-details" href="/t/status/225083815134105600">
+          <span class="details-icon js-icon-container">
+          </span>
+          <b>
+            <span class="expand-stream-item js-view-details">
+                
+                  <span class="expand-action-wrapper">
+                    Öffnen
+                  </span>
+            </span>
+            <span class="collapse-stream-item js-hide-details">
+                Schließen
+            </span>
+          </b>
+        </a>
+
+        
+        
+        
+        
+         <ul class="tweet-actions js-actions">
+          <li class="action-reply-container">
+            
+              <a class="with-icn js-action-reply" data-modal="tweet-reply" href="#" title="Antworten">
+                <i class="sm-reply"></i>
+                <b>Antworten</b>
+              </a>
+          </li>
+            <li class="action-rt-container">
+              <a class="with-icn js-toggle-rt" data-modal="tweet-retweet" href="#">
+                <i class="sm-rt"></i>
+                
+                
+                  <b><span class="undo-retweet" title="Retweet rückgängig machen">Retweetet</span><span class="retweet" title="Retweeten">Retweeten</span></b>
+              </a>
+            </li>
+          <li class="action-del-container">
+            <a class="with-icn js-action-del" href="#" title="Löschen">
+              <i class="sm-trash"></i>
+              <b>Löschen</b>
+            </a>
+          </li>
+          <li class="action-fav-container">
+            <a class="with-icn js-toggle-fav" href="#">
+              <i class="sm-fav"></i>
+              
+              
+                <b><span class="unfavorite" title="Favorit rückgängig machen">Favorisiert</span><span class="favorite" title="Favorisieren">Favorisieren</span></b>
+            </a>
+          </li>
+        </ul>      </div>
+
+      
+      <div class="expanded-content js-tweet-details-dropdown">
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<div class="js-stream-item stream-item stream-item expanding-stream-item" data-item-id="224207635296161792" data-item-type="tweet" id="stream-item-tweet-224207635296161792">
+  
+
+
+  
+
+  <div class="tweet original-tweet js-stream-tweet js-actionable-tweet js-hover js-profile-popup-actionable js-original-tweet  
+
+
+
+
+ with-social-proof
+
+" 
+data-tweet-id="224207635296161792"
+
+data-item-id="224207635296161792"
+
+
+ data-screen-name="t" data-name="Tantek Çelik" data-user-id="11628"
+
+
+
+
+data-is-reply-to=""
+
+data-expanded-footer="&lt;div class=&quot;js-tweet-details-fixer tweet-details-fixer&quot;&gt;
+    &lt;div class=&quot;js-tweet-media-container &quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;entities-media-container &quot; style=&quot;min-height:0px&quot;&gt;
+    &lt;/div&gt;
+  &lt;div class=&quot;js-machine-translated-tweet-container&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;js-tweet-stats-container tweet-stats-container already-open&quot;&gt;
+  &lt;/div&gt;
+  
+    &lt;div class=&quot;geo-container tweet-geo-text&quot;&gt;
+    &lt;/div&gt;
+  &lt;div class=&quot;client-and-actions&quot;&gt;
+    &lt;span class=&quot;metadata&quot;&gt;
+      &lt;span title=&quot;11:24 AM - 14 Jul 12&quot;&gt;11:24 AM - 14 Jul 12&lt;/span&gt;
+
+       &lt;span class=&quot;tweet-source&quot;&gt;via &lt;a href=&quot;http://tantek.com/w/Falcon&quot; rel=&quot;nofollow&quot;&gt;Falcon&lt;/a&gt;&lt;/span&gt;
+
+          &amp;middot; &lt;a class=&quot;permalink-link js-permalink&quot; href=&quot;/t/status/224207635296161792&quot; &gt;Details&lt;/a&gt;
+
+
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+"
+
+
+ data-mentions="t"
+
+>
+
+    
+    <i class="dogear"></i>
+
+    
+    <div class="content">
+
+      
+      <div class="stream-item-header">
+        <small class="time">
+            <a href="/t/status/224207635296161792" class="tweet-timestamp js-permalink" title="11:24 AM - 14 Jul 12" ><span class="_timestamp js-short-timestamp " data-time="1342290240" data-long-form="true">14 Jul</span></a>
+        </small>
+          <a class="account-group js-account-group js-action-profile js-user-profile-link" href="/t" data-user-id="11628">
+            <img class="avatar js-action-profile-avatar" src="http://a0.twimg.com/profile_images/1266918745/2009-068-tantek-headshot-square_normal.jpg" alt="Tantek Çelik">
+            <strong class="fullname js-action-profile-name show-popup-with-id">Tantek Çelik</strong>
+            <span>&rlm;</span><span class="username js-action-profile-name"><s>@</s><b>t</b></span>
+          </a>
+              </div>
+
+      
+        <p class="js-tweet-text">
+              <a href="/search/%23OWC4" class="twitter-hashtag pretty-link" data-query-source="hashtag_click" ><s>#</s><b>OWC4</b></a> <a href="/search/%23HTML5" class="twitter-hashtag pretty-link" data-query-source="hashtag_click" ><s>#</s><b>HTML5</b></a> <a href="/search/%23microformats2" class="twitter-hashtag pretty-link" data-query-source="hashtag_click" ><s>#</s><b>microformats2</b></a> <a href="/t" class="twitter-atreply pretty-link" ><s>@</s><b>t</b></a> slides <a href="http://t.co/Xo7WIAUZ" class="twitter-timeline-link" target="_blank" data-expanded-url="http://tantek.com/presentations/2012/07/html5-microformats2" ><span class="invisible">http://</span><span class="js-display-url">tantek.com/presentations/</span><span class="invisible">2012/07/html5-microformats2</span><span class="tco-ellipsis"><span class="invisible">&nbsp;</span>…</span></a> aside: ~40/50 wrote HTML, ~25 <a href="/search/%23microformats" class="twitter-hashtag pretty-link" data-query-source="hashtag_click" ><s>#</s><b>microformats</b></a>, only 2 <a href="/search/%23schema" class="twitter-hashtag pretty-link" data-query-source="hashtag_click" ><s>#</s><b>schema</b></a> (ttk.me t4Jv1)
+                  </p>
+
+      
+      <div class="stream-item-footer">
+        
+        
+        
+        
+        
+        <div class="context">
+        </div>
+
+        
+        <a class="details with-icn js-details" href="/t/status/224207635296161792">
+          <span class="details-icon js-icon-container">
+          </span>
+          <b>
+            <span class="expand-stream-item js-view-details">
+                
+                  <span class="expand-action-wrapper">
+                    Öffnen
+                  </span>
+            </span>
+            <span class="collapse-stream-item js-hide-details">
+                Schließen
+            </span>
+          </b>
+        </a>
+
+        
+        
+        
+        
+         <ul class="tweet-actions js-actions">
+          <li class="action-reply-container">
+            
+              <a class="with-icn js-action-reply" data-modal="tweet-reply" href="#" title="Antworten">
+                <i class="sm-reply"></i>
+                <b>Antworten</b>
+              </a>
+          </li>
+            <li class="action-rt-container">
+              <a class="with-icn js-toggle-rt" data-modal="tweet-retweet" href="#">
+                <i class="sm-rt"></i>
+                
+                
+                  <b><span class="undo-retweet" title="Retweet rückgängig machen">Retweetet</span><span class="retweet" title="Retweeten">Retweeten</span></b>
+              </a>
+            </li>
+          <li class="action-del-container">
+            <a class="with-icn js-action-del" href="#" title="Löschen">
+              <i class="sm-trash"></i>
+              <b>Löschen</b>
+            </a>
+          </li>
+          <li class="action-fav-container">
+            <a class="with-icn js-toggle-fav" href="#">
+              <i class="sm-fav"></i>
+              
+              
+                <b><span class="unfavorite" title="Favorit rückgängig machen">Favorisiert</span><span class="favorite" title="Favorisieren">Favorisieren</span></b>
+            </a>
+          </li>
+        </ul>      </div>
+
+      
+      <div class="expanded-content js-tweet-details-dropdown">
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<div class="js-stream-item stream-item stream-item expanding-stream-item" data-item-id="223990676377972738" data-item-type="tweet" id="stream-item-tweet-223990676377972738">
+  
+
+
+  
+
+  <div class="tweet original-tweet js-stream-tweet js-actionable-tweet js-hover js-profile-popup-actionable js-original-tweet  
+
+
+
+
+ with-social-proof
+
+" 
+data-tweet-id="223990676377972738"
+
+data-item-id="223990676377972738"
+
+
+ data-screen-name="t" data-name="Tantek Çelik" data-user-id="11628"
+
+
+
+
+data-is-reply-to=""
+
+data-expanded-footer="&lt;div class=&quot;js-tweet-details-fixer tweet-details-fixer&quot;&gt;
+    &lt;div class=&quot;js-tweet-media-container &quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;entities-media-container &quot; style=&quot;min-height:0px&quot;&gt;
+    &lt;/div&gt;
+  &lt;div class=&quot;js-machine-translated-tweet-container&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;js-tweet-stats-container tweet-stats-container already-open&quot;&gt;
+  &lt;/div&gt;
+  
+    &lt;div class=&quot;geo-container tweet-geo-text&quot;&gt;
+    &lt;/div&gt;
+  &lt;div class=&quot;client-and-actions&quot;&gt;
+    &lt;span class=&quot;metadata&quot;&gt;
+      &lt;span title=&quot;9:01 PM - 13 Jul 12&quot;&gt;9:01 PM - 13 Jul 12&lt;/span&gt;
+
+       &lt;span class=&quot;tweet-source&quot;&gt;via &lt;a href=&quot;http://tantek.com/w/Falcon&quot; rel=&quot;nofollow&quot;&gt;Falcon&lt;/a&gt;&lt;/span&gt;
+
+          &amp;middot; &lt;a class=&quot;permalink-link js-permalink&quot; href=&quot;/t/status/223990676377972738&quot; &gt;Details&lt;/a&gt;
+
+
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+"
+
+
+ data-mentions=""
+
+>
+
+    
+    <i class="dogear"></i>
+
+    
+    <div class="content">
+
+      
+      <div class="stream-item-header">
+        <small class="time">
+            <a href="/t/status/223990676377972738" class="tweet-timestamp js-permalink" title="9:01 PM - 13 Jul 12" ><span class="_timestamp js-short-timestamp " data-time="1342238513" data-long-form="true">13 Jul</span></a>
+        </small>
+          <a class="account-group js-account-group js-action-profile js-user-profile-link" href="/t" data-user-id="11628">
+            <img class="avatar js-action-profile-avatar" src="http://a0.twimg.com/profile_images/1266918745/2009-068-tantek-headshot-square_normal.jpg" alt="Tantek Çelik">
+            <strong class="fullname js-action-profile-name show-popup-with-id">Tantek Çelik</strong>
+            <span>&rlm;</span><span class="username js-action-profile-name"><s>@</s><b>t</b></span>
+          </a>
+              </div>
+
+      
+        <p class="js-tweet-text">
+              that point where too many ideas are spinning around in your head and you need to go for a drive to sort them out <a href="/search/%23owc4" class="twitter-hashtag pretty-link" data-query-source="hashtag_click" ><s>#</s><b>owc4</b></a> (ttk.me t4Ju2)
+                  </p>
+
+      
+      <div class="stream-item-footer">
+        
+        
+        
+        
+        
+        <div class="context">
+        </div>
+
+        
+        <a class="details with-icn js-details" href="/t/status/223990676377972738">
+          <span class="details-icon js-icon-container">
+          </span>
+          <b>
+            <span class="expand-stream-item js-view-details">
+                
+                  <span class="expand-action-wrapper">
+                    Öffnen
+                  </span>
+            </span>
+            <span class="collapse-stream-item js-hide-details">
+                Schließen
+            </span>
+          </b>
+        </a>
+
+        
+        
+        
+        
+         <ul class="tweet-actions js-actions">
+          <li class="action-reply-container">
+            
+              <a class="with-icn js-action-reply" data-modal="tweet-reply" href="#" title="Antworten">
+                <i class="sm-reply"></i>
+                <b>Antworten</b>
+              </a>
+          </li>
+            <li class="action-rt-container">
+              <a class="with-icn js-toggle-rt" data-modal="tweet-retweet" href="#">
+                <i class="sm-rt"></i>
+                
+                
+                  <b><span class="undo-retweet" title="Retweet rückgängig machen">Retweetet</span><span class="retweet" title="Retweeten">Retweeten</span></b>
+              </a>
+            </li>
+          <li class="action-del-container">
+            <a class="with-icn js-action-del" href="#" title="Löschen">
+              <i class="sm-trash"></i>
+              <b>Löschen</b>
+            </a>
+          </li>
+          <li class="action-fav-container">
+            <a class="with-icn js-toggle-fav" href="#">
+              <i class="sm-fav"></i>
+              
+              
+                <b><span class="unfavorite" title="Favorit rückgängig machen">Favorisiert</span><span class="favorite" title="Favorisieren">Favorisieren</span></b>
+            </a>
+          </li>
+        </ul>      </div>
+
+      
+      <div class="expanded-content js-tweet-details-dropdown">
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<div class="js-stream-item stream-item stream-item expanding-stream-item" data-item-id="223942735248367617" data-item-type="tweet" id="stream-item-tweet-223942735248367617">
+  
+
+
+  
+
+  <div class="tweet original-tweet js-stream-tweet js-actionable-tweet js-hover js-profile-popup-actionable js-original-tweet  
+
+
+
+
+ with-social-proof
+
+" 
+data-tweet-id="223942735248367617"
+
+data-item-id="223942735248367617"
+
+
+ data-screen-name="t" data-name="Tantek Çelik" data-user-id="11628"
+
+
+
+
+data-is-reply-to=""
+
+data-expanded-footer="&lt;div class=&quot;js-tweet-details-fixer tweet-details-fixer&quot;&gt;
+    &lt;div class=&quot;js-tweet-media-container &quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;entities-media-container &quot; style=&quot;min-height:0px&quot;&gt;
+    &lt;/div&gt;
+  &lt;div class=&quot;js-machine-translated-tweet-container&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;js-tweet-stats-container tweet-stats-container already-open&quot;&gt;
+  &lt;/div&gt;
+  
+    &lt;div class=&quot;geo-container tweet-geo-text&quot;&gt;
+    &lt;/div&gt;
+  &lt;div class=&quot;client-and-actions&quot;&gt;
+    &lt;span class=&quot;metadata&quot;&gt;
+      &lt;span title=&quot;5:51 PM - 13 Jul 12&quot;&gt;5:51 PM - 13 Jul 12&lt;/span&gt;
+
+       &lt;span class=&quot;tweet-source&quot;&gt;via &lt;a href=&quot;http://tantek.com/w/Falcon&quot; rel=&quot;nofollow&quot;&gt;Falcon&lt;/a&gt;&lt;/span&gt;
+
+          &amp;middot; &lt;a class=&quot;permalink-link js-permalink&quot; href=&quot;/t/status/223942735248367617&quot; &gt;Details&lt;/a&gt;
+
+
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+"
+
+
+ data-mentions="OpenWebCamp"
+
+>
+
+    
+    <i class="dogear"></i>
+
+    
+    <div class="content">
+
+      
+      <div class="stream-item-header">
+        <small class="time">
+            <a href="/t/status/223942735248367617" class="tweet-timestamp js-permalink" title="5:51 PM - 13 Jul 12" ><span class="_timestamp js-short-timestamp " data-time="1342227083" data-long-form="true">13 Jul</span></a>
+        </small>
+          <a class="account-group js-account-group js-action-profile js-user-profile-link" href="/t" data-user-id="11628">
+            <img class="avatar js-action-profile-avatar" src="http://a0.twimg.com/profile_images/1266918745/2009-068-tantek-headshot-square_normal.jpg" alt="Tantek Çelik">
+            <strong class="fullname js-action-profile-name show-popup-with-id">Tantek Çelik</strong>
+            <span>&rlm;</span><span class="username js-action-profile-name"><s>@</s><b>t</b></span>
+          </a>
+              </div>
+
+      
+        <p class="js-tweet-text">
+              I&#39;m speaking on &quot;<a href="/search/%23HTML5" class="twitter-hashtag pretty-link" data-query-source="hashtag_click" ><s>#</s><b>HTML5</b></a> and <a href="/search/%23microformats2" class="twitter-hashtag pretty-link" data-query-source="hashtag_click" ><s>#</s><b>microformats2</b></a>&quot; <a href="/OpenWebCamp" class="twitter-atreply pretty-link" ><s>@</s><b>OpenWebCamp</b></a> tomorrow. Add it to your schedule: <a href="http://t.co/7EprOC0H" class="twitter-timeline-link" target="_blank" data-expanded-url="http://openwebcamp.org/events/56" ><span class="invisible">http://</span><span class="js-display-url">openwebcamp.org/events/56</span><span class="invisible"></span><span class="tco-ellipsis"><span class="invisible">&nbsp;</span></span></a> <a href="/search/%23owc4" class="twitter-hashtag pretty-link" data-query-source="hashtag_click" ><s>#</s><b>owc4</b></a> (ttk.me t4Ju1)
+                  </p>
+
+      
+      <div class="stream-item-footer">
+        
+        
+        
+        
+        
+        <div class="context">
+        </div>
+
+        
+        <a class="details with-icn js-details" href="/t/status/223942735248367617">
+          <span class="details-icon js-icon-container">
+          </span>
+          <b>
+            <span class="expand-stream-item js-view-details">
+                
+                  <span class="expand-action-wrapper">
+                    Öffnen
+                  </span>
+            </span>
+            <span class="collapse-stream-item js-hide-details">
+                Schließen
+            </span>
+          </b>
+        </a>
+
+        
+        
+        
+        
+         <ul class="tweet-actions js-actions">
+          <li class="action-reply-container">
+            
+              <a class="with-icn js-action-reply" data-modal="tweet-reply" href="#" title="Antworten">
+                <i class="sm-reply"></i>
+                <b>Antworten</b>
+              </a>
+          </li>
+            <li class="action-rt-container">
+              <a class="with-icn js-toggle-rt" data-modal="tweet-retweet" href="#">
+                <i class="sm-rt"></i>
+                
+                
+                  <b><span class="undo-retweet" title="Retweet rückgängig machen">Retweetet</span><span class="retweet" title="Retweeten">Retweeten</span></b>
+              </a>
+            </li>
+          <li class="action-del-container">
+            <a class="with-icn js-action-del" href="#" title="Löschen">
+              <i class="sm-trash"></i>
+              <b>Löschen</b>
+            </a>
+          </li>
+          <li class="action-fav-container">
+            <a class="with-icn js-toggle-fav" href="#">
+              <i class="sm-fav"></i>
+              
+              
+                <b><span class="unfavorite" title="Favorit rückgängig machen">Favorisiert</span><span class="favorite" title="Favorisieren">Favorisieren</span></b>
+            </a>
+          </li>
+        </ul>      </div>
+
+      
+      <div class="expanded-content js-tweet-details-dropdown">
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<div class="js-stream-item stream-item stream-item expanding-stream-item" data-item-id="222720352055328768" data-item-type="tweet" id="stream-item-tweet-222720352055328768">
+  
+
+
+  
+
+  <div class="tweet original-tweet js-stream-tweet js-actionable-tweet js-hover js-profile-popup-actionable js-original-tweet  
+
+
+
+
+ with-social-proof
+
+" 
+data-tweet-id="222720352055328768"
+
+data-item-id="222720352055328768"
+
+
+ data-screen-name="t" data-name="Tantek Çelik" data-user-id="11628"
+
+
+
+
+data-is-reply-to=""
+
+data-expanded-footer="&lt;div class=&quot;js-tweet-details-fixer tweet-details-fixer&quot;&gt;
+    &lt;div class=&quot;js-tweet-media-container &quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;entities-media-container &quot; style=&quot;min-height:0px&quot;&gt;
+    &lt;/div&gt;
+  &lt;div class=&quot;js-machine-translated-tweet-container&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;js-tweet-stats-container tweet-stats-container already-open&quot;&gt;
+  &lt;/div&gt;
+  
+    &lt;div class=&quot;geo-container tweet-geo-text&quot;&gt;
+    &lt;/div&gt;
+  &lt;div class=&quot;client-and-actions&quot;&gt;
+    &lt;span class=&quot;metadata&quot;&gt;
+      &lt;span title=&quot;8:54 AM - 10 Jul 12&quot;&gt;8:54 AM - 10 Jul 12&lt;/span&gt;
+
+       &lt;span class=&quot;tweet-source&quot;&gt;via &lt;a href=&quot;http://tantek.com/w/Falcon&quot; rel=&quot;nofollow&quot;&gt;Falcon&lt;/a&gt;&lt;/span&gt;
+
+          &amp;middot; &lt;a class=&quot;permalink-link js-permalink&quot; href=&quot;/t/status/222720352055328768&quot; &gt;Details&lt;/a&gt;
+
+
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+"
+
+
+ data-mentions="t"
+
+>
+
+    
+    <i class="dogear"></i>
+
+    
+    <div class="content">
+
+      
+      <div class="stream-item-header">
+        <small class="time">
+            <a href="/t/status/222720352055328768" class="tweet-timestamp js-permalink" title="8:54 AM - 10 Jul 12" ><span class="_timestamp js-short-timestamp " data-time="1341935644" data-long-form="true">10 Jul</span></a>
+        </small>
+          <a class="account-group js-account-group js-action-profile js-user-profile-link" href="/t" data-user-id="11628">
+            <img class="avatar js-action-profile-avatar" src="http://a0.twimg.com/profile_images/1266918745/2009-068-tantek-headshot-square_normal.jpg" alt="Tantek Çelik">
+            <strong class="fullname js-action-profile-name show-popup-with-id">Tantek Çelik</strong>
+            <span>&rlm;</span><span class="username js-action-profile-name"><s>@</s><b>t</b></span>
+          </a>
+              </div>
+
+      
+        <p class="js-tweet-text">
+              a few at <a href="/search/%23WDS" class="twitter-hashtag pretty-link" data-query-source="hashtag_click" ><s>#</s><b>WDS</b></a> asked when I got &quot;<a href="/t" class="twitter-atreply pretty-link" ><s>@</s><b>t</b></a>&quot;. A: 40 minutes after my first tweet on 2006-11-22: <a href="http://t.co/DFxqXYZ4" class="twitter-timeline-link" target="_blank" data-expanded-url="http://twitter.com/t/status/128033" ><span class="invisible">http://</span><span class="js-display-url">twitter.com/t/status/128033</span><span class="invisible"></span><span class="tco-ellipsis"><span class="invisible">&nbsp;</span></span></a> <a href="/search/%23oldtweets" class="twitter-hashtag pretty-link" data-query-source="hashtag_click" ><s>#</s><b>oldtweets</b></a> (ttk.me t4Jr1)
+                  </p>
+
+      
+      <div class="stream-item-footer">
+        
+        
+        
+        
+        
+        <div class="context">
+        </div>
+
+        
+        <a class="details with-icn js-details" href="/t/status/222720352055328768">
+          <span class="details-icon js-icon-container">
+          </span>
+          <b>
+            <span class="expand-stream-item js-view-details">
+                
+                  <span class="expand-action-wrapper">
+                    Öffnen
+                  </span>
+            </span>
+            <span class="collapse-stream-item js-hide-details">
+                Schließen
+            </span>
+          </b>
+        </a>
+
+        
+        
+        
+        
+         <ul class="tweet-actions js-actions">
+          <li class="action-reply-container">
+            
+              <a class="with-icn js-action-reply" data-modal="tweet-reply" href="#" title="Antworten">
+                <i class="sm-reply"></i>
+                <b>Antworten</b>
+              </a>
+          </li>
+            <li class="action-rt-container">
+              <a class="with-icn js-toggle-rt" data-modal="tweet-retweet" href="#">
+                <i class="sm-rt"></i>
+                
+                
+                  <b><span class="undo-retweet" title="Retweet rückgängig machen">Retweetet</span><span class="retweet" title="Retweeten">Retweeten</span></b>
+              </a>
+            </li>
+          <li class="action-del-container">
+            <a class="with-icn js-action-del" href="#" title="Löschen">
+              <i class="sm-trash"></i>
+              <b>Löschen</b>
+            </a>
+          </li>
+          <li class="action-fav-container">
+            <a class="with-icn js-toggle-fav" href="#">
+              <i class="sm-fav"></i>
+              
+              
+                <b><span class="unfavorite" title="Favorit rückgängig machen">Favorisiert</span><span class="favorite" title="Favorisieren">Favorisieren</span></b>
+            </a>
+          </li>
+        </ul>      </div>
+
+      
+      <div class="expanded-content js-tweet-details-dropdown">
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<div class="js-stream-item stream-item stream-item expanding-stream-item" data-item-id="222129939997143040" data-item-type="tweet" id="stream-item-tweet-222129939997143040">
+  
+
+
+  
+
+  <div class="tweet original-tweet js-stream-tweet js-actionable-tweet js-hover js-profile-popup-actionable js-original-tweet  
+
+
+
+
+
+
+" 
+data-tweet-id="222129939997143040"
+
+data-item-id="222129939997143040"
+
+
+ data-screen-name="t" data-name="Tantek Çelik" data-user-id="11628"
+
+
+
+
+data-is-reply-to=""
+
+data-expanded-footer="&lt;div class=&quot;js-tweet-details-fixer tweet-details-fixer&quot;&gt;
+    &lt;div class=&quot;js-tweet-media-container &quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;entities-media-container &quot; style=&quot;min-height:0px&quot;&gt;
+    &lt;/div&gt;
+  &lt;div class=&quot;js-machine-translated-tweet-container&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;js-tweet-stats-container tweet-stats-container &quot;&gt;
+  &lt;/div&gt;
+  
+    &lt;div class=&quot;geo-container tweet-geo-text&quot;&gt;
+    &lt;/div&gt;
+  &lt;div class=&quot;client-and-actions&quot;&gt;
+    &lt;span class=&quot;metadata&quot;&gt;
+      &lt;span title=&quot;5:47 PM - 8 Jul 12&quot;&gt;5:47 PM - 8 Jul 12&lt;/span&gt;
+
+       &lt;span class=&quot;tweet-source&quot;&gt;via &lt;a href=&quot;http://tantek.com/w/Falcon&quot; rel=&quot;nofollow&quot;&gt;Falcon&lt;/a&gt;&lt;/span&gt;
+
+          &amp;middot; &lt;a class=&quot;permalink-link js-permalink&quot; href=&quot;/t/status/222129939997143040&quot; &gt;Details&lt;/a&gt;
+
+
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+"
+
+
+ data-mentions="sarahkpeck juliaroy"
+
+>
+
+    
+    <i class="dogear"></i>
+
+    
+    <div class="content">
+
+      
+      <div class="stream-item-header">
+        <small class="time">
+            <a href="/t/status/222129939997143040" class="tweet-timestamp js-permalink" title="5:47 PM - 8 Jul 12" ><span class="_timestamp js-short-timestamp " data-time="1341794879" data-long-form="true">8 Jul</span></a>
+        </small>
+          <a class="account-group js-account-group js-action-profile js-user-profile-link" href="/t" data-user-id="11628">
+            <img class="avatar js-action-profile-avatar" src="http://a0.twimg.com/profile_images/1266918745/2009-068-tantek-headshot-square_normal.jpg" alt="Tantek Çelik">
+            <strong class="fullname js-action-profile-name show-popup-with-id">Tantek Çelik</strong>
+            <span>&rlm;</span><span class="username js-action-profile-name"><s>@</s><b>t</b></span>
+          </a>
+              </div>
+
+      
+        <p class="js-tweet-text">
+              enjoyed <a href="/search/%23WDS" class="twitter-hashtag pretty-link" data-query-source="hashtag_click" ><s>#</s><b>WDS</b></a> <a href="/sarahkpeck" class="twitter-atreply pretty-link" ><s>@</s><b>sarahkpeck</b></a> Crafting Narratives, <a href="/juliaroy" class="twitter-atreply pretty-link" ><s>@</s><b>juliaroy</b></a> Productivity Hacks. See also: Email=Efail <a href="http://t.co/yjPI1hQ8" class="twitter-timeline-link" target="_blank" data-expanded-url="http://tantek.com/log/2008/02.html" ><span class="invisible">http://</span><span class="js-display-url">tantek.com/log/2008/02.ht</span><span class="invisible">ml</span><span class="tco-ellipsis"><span class="invisible">&nbsp;</span>…</span></a> (ttk.me t4Jp2)
+                  </p>
+
+      
+      <div class="stream-item-footer">
+        
+        
+        
+        
+        
+        <div class="context">
+        </div>
+
+        
+        <a class="details with-icn js-details" href="/t/status/222129939997143040">
+          <span class="details-icon js-icon-container">
+          </span>
+          <b>
+            <span class="expand-stream-item js-view-details">
+                
+                  <span class="expand-action-wrapper">
+                    Öffnen
+                  </span>
+            </span>
+            <span class="collapse-stream-item js-hide-details">
+                Schließen
+            </span>
+          </b>
+        </a>
+
+        
+        
+        
+        
+         <ul class="tweet-actions js-actions">
+          <li class="action-reply-container">
+            
+              <a class="with-icn js-action-reply" data-modal="tweet-reply" href="#" title="Antworten">
+                <i class="sm-reply"></i>
+                <b>Antworten</b>
+              </a>
+          </li>
+            <li class="action-rt-container">
+              <a class="with-icn js-toggle-rt" data-modal="tweet-retweet" href="#">
+                <i class="sm-rt"></i>
+                
+                
+                  <b><span class="undo-retweet" title="Retweet rückgängig machen">Retweetet</span><span class="retweet" title="Retweeten">Retweeten</span></b>
+              </a>
+            </li>
+          <li class="action-del-container">
+            <a class="with-icn js-action-del" href="#" title="Löschen">
+              <i class="sm-trash"></i>
+              <b>Löschen</b>
+            </a>
+          </li>
+          <li class="action-fav-container">
+            <a class="with-icn js-toggle-fav" href="#">
+              <i class="sm-fav"></i>
+              
+              
+                <b><span class="unfavorite" title="Favorit rückgängig machen">Favorisiert</span><span class="favorite" title="Favorisieren">Favorisieren</span></b>
+            </a>
+          </li>
+        </ul>      </div>
+
+      
+      <div class="expanded-content js-tweet-details-dropdown">
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<div class="js-stream-item stream-item stream-item expanding-stream-item" data-item-id="222015403029831680" data-item-type="tweet" id="stream-item-tweet-222015403029831680">
+  
+
+
+  
+
+  <div class="tweet original-tweet js-stream-tweet js-actionable-tweet js-hover js-profile-popup-actionable js-original-tweet  
+
+
+
+
+ with-social-proof
+
+" 
+data-tweet-id="222015403029831680"
+
+data-item-id="222015403029831680"
+
+
+ data-screen-name="t" data-name="Tantek Çelik" data-user-id="11628"
+
+
+
+
+data-is-reply-to=""
+
+data-expanded-footer="&lt;div class=&quot;js-tweet-details-fixer tweet-details-fixer&quot;&gt;
+    &lt;div class=&quot;js-tweet-media-container &quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;entities-media-container &quot; style=&quot;min-height:0px&quot;&gt;
+    &lt;/div&gt;
+  &lt;div class=&quot;js-machine-translated-tweet-container&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;js-tweet-stats-container tweet-stats-container already-open&quot;&gt;
+  &lt;/div&gt;
+  
+    &lt;div class=&quot;geo-container tweet-geo-text&quot;&gt;
+    &lt;/div&gt;
+  &lt;div class=&quot;client-and-actions&quot;&gt;
+    &lt;span class=&quot;metadata&quot;&gt;
+      &lt;span title=&quot;10:12 AM - 8 Jul 12&quot;&gt;10:12 AM - 8 Jul 12&lt;/span&gt;
+
+       &lt;span class=&quot;tweet-source&quot;&gt;via &lt;a href=&quot;http://tantek.com/w/Falcon&quot; rel=&quot;nofollow&quot;&gt;Falcon&lt;/a&gt;&lt;/span&gt;
+
+          &amp;middot; &lt;a class=&quot;permalink-link js-permalink&quot; href=&quot;/t/status/222015403029831680&quot; &gt;Details&lt;/a&gt;
+
+
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+"
+
+
+ data-mentions="chrisbrogan"
+
+>
+
+    
+    <i class="dogear"></i>
+
+    
+    <div class="content">
+
+      
+      <div class="stream-item-header">
+        <small class="time">
+            <a href="/t/status/222015403029831680" class="tweet-timestamp js-permalink" title="10:12 AM - 8 Jul 12" ><span class="_timestamp js-short-timestamp " data-time="1341767571" data-long-form="true">8 Jul</span></a>
+        </small>
+          <a class="account-group js-account-group js-action-profile js-user-profile-link" href="/t" data-user-id="11628">
+            <img class="avatar js-action-profile-avatar" src="http://a0.twimg.com/profile_images/1266918745/2009-068-tantek-headshot-square_normal.jpg" alt="Tantek Çelik">
+            <strong class="fullname js-action-profile-name show-popup-with-id">Tantek Çelik</strong>
+            <span>&rlm;</span><span class="username js-action-profile-name"><s>@</s><b>t</b></span>
+          </a>
+              </div>
+
+      
+        <p class="js-tweet-text">
+              <a href="/search/%23WDS" class="twitter-hashtag pretty-link" data-query-source="hashtag_click" ><s>#</s><b>WDS</b></a>: as mentioned by <a href="/chrisbrogan" class="twitter-atreply pretty-link" ><s>@</s><b>ChrisBrogan</b></a>, 12-year old Tom Schaar does 1st ever skateboard 1080 <a href="http://t.co/n8felatV" class="twitter-timeline-link" target="_blank" data-expanded-url="http://youtu.be/tbjzZHuGTng" ><span class="invisible">http://</span><span class="js-display-url">youtu.be/tbjzZHuGTng</span><span class="invisible"></span><span class="tco-ellipsis"><span class="invisible">&nbsp;</span></span></a> <a href="/search/%23WDS2012" class="twitter-hashtag pretty-link" data-query-source="hashtag_click" ><s>#</s><b>WDS2012</b></a> (ttk.me t4Jp1)
+                  </p>
+
+      
+      <div class="stream-item-footer">
+        
+        
+        
+        
+        
+        <div class="context">
+        </div>
+
+        
+        <a class="details with-icn js-details" href="/t/status/222015403029831680">
+          <span class="details-icon js-icon-container">
+          </span>
+          <b>
+            <span class="expand-stream-item js-view-details">
+                
+                  <span class="expand-action-wrapper">
+                    Öffnen
+                  </span>
+            </span>
+            <span class="collapse-stream-item js-hide-details">
+                Schließen
+            </span>
+          </b>
+        </a>
+
+        
+        
+        
+        
+         <ul class="tweet-actions js-actions">
+          <li class="action-reply-container">
+            
+              <a class="with-icn js-action-reply" data-modal="tweet-reply" href="#" title="Antworten">
+                <i class="sm-reply"></i>
+                <b>Antworten</b>
+              </a>
+          </li>
+            <li class="action-rt-container">
+              <a class="with-icn js-toggle-rt" data-modal="tweet-retweet" href="#">
+                <i class="sm-rt"></i>
+                
+                
+                  <b><span class="undo-retweet" title="Retweet rückgängig machen">Retweetet</span><span class="retweet" title="Retweeten">Retweeten</span></b>
+              </a>
+            </li>
+          <li class="action-del-container">
+            <a class="with-icn js-action-del" href="#" title="Löschen">
+              <i class="sm-trash"></i>
+              <b>Löschen</b>
+            </a>
+          </li>
+          <li class="action-fav-container">
+            <a class="with-icn js-toggle-fav" href="#">
+              <i class="sm-fav"></i>
+              
+              
+                <b><span class="unfavorite" title="Favorit rückgängig machen">Favorisiert</span><span class="favorite" title="Favorisieren">Favorisieren</span></b>
+            </a>
+          </li>
+        </ul>      </div>
+
+      
+      <div class="expanded-content js-tweet-details-dropdown">
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<div class="js-stream-item stream-item stream-item expanding-stream-item" data-item-id="221743856956342272" data-item-type="tweet" id="stream-item-tweet-221743856956342272">
+  
+
+
+  
+
+  <div class="tweet original-tweet js-stream-tweet js-actionable-tweet js-hover js-profile-popup-actionable js-original-tweet  
+
+
+
+
+
+
+" 
+data-tweet-id="221743856956342272"
+
+data-item-id="221743856956342272"
+
+
+ data-screen-name="t" data-name="Tantek Çelik" data-user-id="11628"
+
+
+
+
+data-is-reply-to=""
+
+data-expanded-footer="&lt;div class=&quot;js-tweet-details-fixer tweet-details-fixer&quot;&gt;
+    &lt;div class=&quot;js-tweet-media-container &quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;entities-media-container &quot; style=&quot;min-height:0px&quot;&gt;
+    &lt;/div&gt;
+  &lt;div class=&quot;js-machine-translated-tweet-container&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;js-tweet-stats-container tweet-stats-container &quot;&gt;
+  &lt;/div&gt;
+  
+    &lt;div class=&quot;geo-container tweet-geo-text&quot;&gt;
+    &lt;/div&gt;
+  &lt;div class=&quot;client-and-actions&quot;&gt;
+    &lt;span class=&quot;metadata&quot;&gt;
+      &lt;span title=&quot;4:13 PM - 7 Jul 12&quot;&gt;4:13 PM - 7 Jul 12&lt;/span&gt;
+
+       &lt;span class=&quot;tweet-source&quot;&gt;via &lt;a href=&quot;http://tantek.com/w/Falcon&quot; rel=&quot;nofollow&quot;&gt;Falcon&lt;/a&gt;&lt;/span&gt;
+
+          &amp;middot; &lt;a class=&quot;permalink-link js-permalink&quot; href=&quot;/t/status/221743856956342272&quot; &gt;Details&lt;/a&gt;
+
+
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+"
+
+
+ data-mentions="BreneBrown"
+
+>
+
+    
+    <i class="dogear"></i>
+
+    
+    <div class="content">
+
+      
+      <div class="stream-item-header">
+        <small class="time">
+            <a href="/t/status/221743856956342272" class="tweet-timestamp js-permalink" title="4:13 PM - 7 Jul 12" ><span class="_timestamp js-short-timestamp " data-time="1341702829" data-long-form="true">7 Jul</span></a>
+        </small>
+          <a class="account-group js-account-group js-action-profile js-user-profile-link" href="/t" data-user-id="11628">
+            <img class="avatar js-action-profile-avatar" src="http://a0.twimg.com/profile_images/1266918745/2009-068-tantek-headshot-square_normal.jpg" alt="Tantek Çelik">
+            <strong class="fullname js-action-profile-name show-popup-with-id">Tantek Çelik</strong>
+            <span>&rlm;</span><span class="username js-action-profile-name"><s>@</s><b>t</b></span>
+          </a>
+              </div>
+
+      
+        <p class="js-tweet-text">
+              <a href="/BreneBrown" class="twitter-atreply pretty-link" ><s>@</s><b>brenebrown</b></a>, re: &quot;shame resilience&quot; at <a href="/search/%23WDS" class="twitter-hashtag pretty-link" data-query-source="hashtag_click" ><s>#</s><b>WDS</b></a>: Can we use spontaneous shaming moments to consciously practice shame resilience? (ttk.me t4Jo2)
+                  </p>
+
+      
+      <div class="stream-item-footer">
+        
+        
+        
+        
+        
+        <div class="context">
+        </div>
+
+        
+        <a class="details with-icn js-details" href="/t/status/221743856956342272">
+          <span class="details-icon js-icon-container">
+          </span>
+          <b>
+            <span class="expand-stream-item js-view-details">
+                
+                  <span class="expand-action-wrapper">
+                    Öffnen
+                  </span>
+            </span>
+            <span class="collapse-stream-item js-hide-details">
+                Schließen
+            </span>
+          </b>
+        </a>
+
+        
+        
+        
+        
+         <ul class="tweet-actions js-actions">
+          <li class="action-reply-container">
+            
+              <a class="with-icn js-action-reply" data-modal="tweet-reply" href="#" title="Antworten">
+                <i class="sm-reply"></i>
+                <b>Antworten</b>
+              </a>
+          </li>
+            <li class="action-rt-container">
+              <a class="with-icn js-toggle-rt" data-modal="tweet-retweet" href="#">
+                <i class="sm-rt"></i>
+                
+                
+                  <b><span class="undo-retweet" title="Retweet rückgängig machen">Retweetet</span><span class="retweet" title="Retweeten">Retweeten</span></b>
+              </a>
+            </li>
+          <li class="action-del-container">
+            <a class="with-icn js-action-del" href="#" title="Löschen">
+              <i class="sm-trash"></i>
+              <b>Löschen</b>
+            </a>
+          </li>
+          <li class="action-fav-container">
+            <a class="with-icn js-toggle-fav" href="#">
+              <i class="sm-fav"></i>
+              
+              
+                <b><span class="unfavorite" title="Favorit rückgängig machen">Favorisiert</span><span class="favorite" title="Favorisieren">Favorisieren</span></b>
+            </a>
+          </li>
+        </ul>      </div>
+
+      
+      <div class="expanded-content js-tweet-details-dropdown">
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<div class="js-stream-item stream-item stream-item expanding-stream-item" data-item-id="221627311613673472" data-item-type="tweet" id="stream-item-tweet-221627311613673472">
+  
+
+
+  
+
+  <div class="tweet original-tweet js-stream-tweet js-actionable-tweet js-hover js-profile-popup-actionable js-original-tweet  
+
+
+
+
+ with-social-proof
+
+" 
+data-tweet-id="221627311613673472"
+
+data-item-id="221627311613673472"
+
+
+ data-screen-name="t" data-name="Tantek Çelik" data-user-id="11628"
+
+
+
+
+data-is-reply-to=""
+
+data-expanded-footer="&lt;div class=&quot;js-tweet-details-fixer tweet-details-fixer&quot;&gt;
+    &lt;div class=&quot;js-tweet-media-container &quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;entities-media-container &quot; style=&quot;min-height:0px&quot;&gt;
+    &lt;/div&gt;
+  &lt;div class=&quot;js-machine-translated-tweet-container&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;js-tweet-stats-container tweet-stats-container already-open&quot;&gt;
+  &lt;/div&gt;
+  
+    &lt;div class=&quot;geo-container tweet-geo-text&quot;&gt;
+    &lt;/div&gt;
+  &lt;div class=&quot;client-and-actions&quot;&gt;
+    &lt;span class=&quot;metadata&quot;&gt;
+      &lt;span title=&quot;8:30 AM - 7 Jul 12&quot;&gt;8:30 AM - 7 Jul 12&lt;/span&gt;
+
+       &lt;span class=&quot;tweet-source&quot;&gt;via &lt;a href=&quot;http://tantek.com/w/Falcon&quot; rel=&quot;nofollow&quot;&gt;Falcon&lt;/a&gt;&lt;/span&gt;
+
+          &amp;middot; &lt;a class=&quot;permalink-link js-permalink&quot; href=&quot;/t/status/221627311613673472&quot; &gt;Details&lt;/a&gt;
+
+
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+"
+
+
+ data-mentions=""
+
+>
+
+    
+    <i class="dogear"></i>
+
+    
+    <div class="content">
+
+      
+      <div class="stream-item-header">
+        <small class="time">
+            <a href="/t/status/221627311613673472" class="tweet-timestamp js-permalink" title="8:30 AM - 7 Jul 12" ><span class="_timestamp js-short-timestamp " data-time="1341675043" data-long-form="true">7 Jul</span></a>
+        </small>
+          <a class="account-group js-account-group js-action-profile js-user-profile-link" href="/t" data-user-id="11628">
+            <img class="avatar js-action-profile-avatar" src="http://a0.twimg.com/profile_images/1266918745/2009-068-tantek-headshot-square_normal.jpg" alt="Tantek Çelik">
+            <strong class="fullname js-action-profile-name show-popup-with-id">Tantek Çelik</strong>
+            <span>&rlm;</span><span class="username js-action-profile-name"><s>@</s><b>t</b></span>
+          </a>
+              </div>
+
+      
+        <p class="js-tweet-text">
+              fellow <a href="/search/%23WDS" class="twitter-hashtag pretty-link" data-query-source="hashtag_click" ><s>#</s><b>WDS</b></a> attendees, let&#39;s try collaborative note-taking: <a href="http://t.co/D0nvzvFK" class="twitter-timeline-link" target="_blank" data-expanded-url="http://etherpad.mozilla.org/wds" ><span class="invisible">http://</span><span class="js-display-url">etherpad.mozilla.org/wds</span><span class="invisible"></span><span class="tco-ellipsis"><span class="invisible">&nbsp;</span></span></a> add yourself, blog, @-name. <a href="/search/%23WDS2012" class="twitter-hashtag pretty-link" data-query-source="hashtag_click" ><s>#</s><b>WDS2012</b></a> (ttk.me t4Jo1)
+                  </p>
+
+      
+      <div class="stream-item-footer">
+        
+        
+        
+        
+        
+        <div class="context">
+        </div>
+
+        
+        <a class="details with-icn js-details" href="/t/status/221627311613673472">
+          <span class="details-icon js-icon-container">
+          </span>
+          <b>
+            <span class="expand-stream-item js-view-details">
+                
+                  <span class="expand-action-wrapper">
+                    Öffnen
+                  </span>
+            </span>
+            <span class="collapse-stream-item js-hide-details">
+                Schließen
+            </span>
+          </b>
+        </a>
+
+        
+        
+        
+        
+         <ul class="tweet-actions js-actions">
+          <li class="action-reply-container">
+            
+              <a class="with-icn js-action-reply" data-modal="tweet-reply" href="#" title="Antworten">
+                <i class="sm-reply"></i>
+                <b>Antworten</b>
+              </a>
+          </li>
+            <li class="action-rt-container">
+              <a class="with-icn js-toggle-rt" data-modal="tweet-retweet" href="#">
+                <i class="sm-rt"></i>
+                
+                
+                  <b><span class="undo-retweet" title="Retweet rückgängig machen">Retweetet</span><span class="retweet" title="Retweeten">Retweeten</span></b>
+              </a>
+            </li>
+          <li class="action-del-container">
+            <a class="with-icn js-action-del" href="#" title="Löschen">
+              <i class="sm-trash"></i>
+              <b>Löschen</b>
+            </a>
+          </li>
+          <li class="action-fav-container">
+            <a class="with-icn js-toggle-fav" href="#">
+              <i class="sm-fav"></i>
+              
+              
+                <b><span class="unfavorite" title="Favorit rückgängig machen">Favorisiert</span><span class="favorite" title="Favorisieren">Favorisieren</span></b>
+            </a>
+          </li>
+        </ul>      </div>
+
+      
+      <div class="expanded-content js-tweet-details-dropdown">
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<div class="js-stream-item stream-item stream-item expanding-stream-item" data-item-id="221495257467068416" data-item-type="tweet" id="stream-item-tweet-221495257467068416">
+  
+
+
+  
+
+  <div class="tweet original-tweet js-stream-tweet js-actionable-tweet js-hover js-profile-popup-actionable js-original-tweet  
+
+
+
+
+ with-social-proof
+
+" 
+data-tweet-id="221495257467068416"
+
+data-item-id="221495257467068416"
+
+
+ data-screen-name="t" data-name="Tantek Çelik" data-user-id="11628"
+
+
+
+
+data-is-reply-to=""
+
+data-expanded-footer="&lt;div class=&quot;js-tweet-details-fixer tweet-details-fixer&quot;&gt;
+    &lt;div class=&quot;js-tweet-media-container &quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;entities-media-container &quot; style=&quot;min-height:0px&quot;&gt;
+    &lt;/div&gt;
+  &lt;div class=&quot;js-machine-translated-tweet-container&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;js-tweet-stats-container tweet-stats-container already-open&quot;&gt;
+  &lt;/div&gt;
+  
+    &lt;div class=&quot;geo-container tweet-geo-text&quot;&gt;
+    &lt;/div&gt;
+  &lt;div class=&quot;client-and-actions&quot;&gt;
+    &lt;span class=&quot;metadata&quot;&gt;
+      &lt;span title=&quot;11:45 PM - 6 Jul 12&quot;&gt;11:45 PM - 6 Jul 12&lt;/span&gt;
+
+       &lt;span class=&quot;tweet-source&quot;&gt;via &lt;a href=&quot;http://tantek.com/w/Falcon&quot; rel=&quot;nofollow&quot;&gt;Falcon&lt;/a&gt;&lt;/span&gt;
+
+          &amp;middot; &lt;a class=&quot;permalink-link js-permalink&quot; href=&quot;/t/status/221495257467068416&quot; &gt;Details&lt;/a&gt;
+
+
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+"
+
+
+ data-mentions=""
+
+>
+
+    
+    <i class="dogear"></i>
+
+    
+    <div class="content">
+
+      
+      <div class="stream-item-header">
+        <small class="time">
+            <a href="/t/status/221495257467068416" class="tweet-timestamp js-permalink" title="11:45 PM - 6 Jul 12" ><span class="_timestamp js-short-timestamp " data-time="1341643559" data-long-form="true">6 Jul</span></a>
+        </small>
+          <a class="account-group js-account-group js-action-profile js-user-profile-link" href="/t" data-user-id="11628">
+            <img class="avatar js-action-profile-avatar" src="http://a0.twimg.com/profile_images/1266918745/2009-068-tantek-headshot-square_normal.jpg" alt="Tantek Çelik">
+            <strong class="fullname js-action-profile-name show-popup-with-id">Tantek Çelik</strong>
+            <span>&rlm;</span><span class="username js-action-profile-name"><s>@</s><b>t</b></span>
+          </a>
+              </div>
+
+      
+        <p class="js-tweet-text">
+              added real-time most-recent-first search results via Google to tantek•com search box, no JS. <a href="/search/%23PuSH" class="twitter-hashtag pretty-link" data-query-source="hashtag_click" ><s>#</s><b>PuSH</b></a> <a href="/search/%23indieweb" class="twitter-hashtag pretty-link" data-query-source="hashtag_click" ><s>#</s><b>indieweb</b></a> <a href="/search/%23falcon" class="twitter-hashtag pretty-link" data-query-source="hashtag_click" ><s>#</s><b>falcon</b></a> (ttk.me t4Jn1)
+                  </p>
+
+      
+      <div class="stream-item-footer">
+        
+        
+        
+        
+        
+        <div class="context">
+        </div>
+
+        
+        <a class="details with-icn js-details" href="/t/status/221495257467068416">
+          <span class="details-icon js-icon-container">
+          </span>
+          <b>
+            <span class="expand-stream-item js-view-details">
+                
+                  <span class="expand-action-wrapper">
+                    Öffnen
+                  </span>
+            </span>
+            <span class="collapse-stream-item js-hide-details">
+                Schließen
+            </span>
+          </b>
+        </a>
+
+        
+        
+        
+        
+         <ul class="tweet-actions js-actions">
+          <li class="action-reply-container">
+            
+              <a class="with-icn js-action-reply" data-modal="tweet-reply" href="#" title="Antworten">
+                <i class="sm-reply"></i>
+                <b>Antworten</b>
+              </a>
+          </li>
+            <li class="action-rt-container">
+              <a class="with-icn js-toggle-rt" data-modal="tweet-retweet" href="#">
+                <i class="sm-rt"></i>
+                
+                
+                  <b><span class="undo-retweet" title="Retweet rückgängig machen">Retweetet</span><span class="retweet" title="Retweeten">Retweeten</span></b>
+              </a>
+            </li>
+          <li class="action-del-container">
+            <a class="with-icn js-action-del" href="#" title="Löschen">
+              <i class="sm-trash"></i>
+              <b>Löschen</b>
+            </a>
+          </li>
+          <li class="action-fav-container">
+            <a class="with-icn js-toggle-fav" href="#">
+              <i class="sm-fav"></i>
+              
+              
+                <b><span class="unfavorite" title="Favorit rückgängig machen">Favorisiert</span><span class="favorite" title="Favorisieren">Favorisieren</span></b>
+            </a>
+          </li>
+        </ul>      </div>
+
+      
+      <div class="expanded-content js-tweet-details-dropdown">
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<div class="js-stream-item stream-item stream-item expanding-stream-item" data-item-id="221038648752222209" data-item-type="tweet" id="stream-item-tweet-221038648752222209">
+  
+
+
+  
+
+  <div class="tweet original-tweet js-stream-tweet js-actionable-tweet js-hover js-profile-popup-actionable js-original-tweet  
+
+
+
+
+ with-social-proof
+
+" 
+data-tweet-id="221038648752222209"
+
+data-item-id="221038648752222209"
+
+
+ data-screen-name="t" data-name="Tantek Çelik" data-user-id="11628"
+
+
+
+
+data-is-reply-to=""
+
+data-expanded-footer="&lt;div class=&quot;js-tweet-details-fixer tweet-details-fixer&quot;&gt;
+    &lt;div class=&quot;js-tweet-media-container &quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;entities-media-container &quot; style=&quot;min-height:0px&quot;&gt;
+    &lt;/div&gt;
+  &lt;div class=&quot;js-machine-translated-tweet-container&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;js-tweet-stats-container tweet-stats-container already-open&quot;&gt;
+  &lt;/div&gt;
+  
+    &lt;div class=&quot;geo-container tweet-geo-text&quot;&gt;
+    &lt;/div&gt;
+  &lt;div class=&quot;client-and-actions&quot;&gt;
+    &lt;span class=&quot;metadata&quot;&gt;
+      &lt;span title=&quot;5:31 PM - 5 Jul 12&quot;&gt;5:31 PM - 5 Jul 12&lt;/span&gt;
+
+       &lt;span class=&quot;tweet-source&quot;&gt;via &lt;a href=&quot;http://tantek.com/w/Falcon&quot; rel=&quot;nofollow&quot;&gt;Falcon&lt;/a&gt;&lt;/span&gt;
+
+          &amp;middot; &lt;a class=&quot;permalink-link js-permalink&quot; href=&quot;/t/status/221038648752222209&quot; &gt;Details&lt;/a&gt;
+
+
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+"
+
+
+ data-mentions=""
+
+>
+
+    
+    <i class="dogear"></i>
+
+    
+    <div class="content">
+
+      
+      <div class="stream-item-header">
+        <small class="time">
+            <a href="/t/status/221038648752222209" class="tweet-timestamp js-permalink" title="5:31 PM - 5 Jul 12" ><span class="_timestamp js-short-timestamp " data-time="1341534695" data-long-form="true">5 Jul</span></a>
+        </small>
+          <a class="account-group js-account-group js-action-profile js-user-profile-link" href="/t" data-user-id="11628">
+            <img class="avatar js-action-profile-avatar" src="http://a0.twimg.com/profile_images/1266918745/2009-068-tantek-headshot-square_normal.jpg" alt="Tantek Çelik">
+            <strong class="fullname js-action-profile-name show-popup-with-id">Tantek Çelik</strong>
+            <span>&rlm;</span><span class="username js-action-profile-name"><s>@</s><b>t</b></span>
+          </a>
+              </div>
+
+      
+        <p class="js-tweet-text">
+              Linksys firmware auto-update forces owners to use <a href="/search/%23Cisco" class="twitter-hashtag pretty-link" data-query-source="hashtag_click" ><s>#</s><b>Cisco</b></a> Cloud service, enables spying+disabling: <a href="http://t.co/ulfDsJCy" class="twitter-timeline-link" target="_blank" data-expanded-url="http://boingboing.net/2012/07/03/cisco-locks-customers-out-of-t.html" ><span class="invisible">http://</span><span class="js-display-url">boingboing.net/2012/07/03/cis</span><span class="invisible">co-locks-customers-out-of-t.html</span><span class="tco-ellipsis"><span class="invisible">&nbsp;</span>…</span></a> (ttk.me t4Jm3)
+                  </p>
+
+      
+      <div class="stream-item-footer">
+        
+        
+        
+        
+        
+        <div class="context">
+        </div>
+
+        
+        <a class="details with-icn js-details" href="/t/status/221038648752222209">
+          <span class="details-icon js-icon-container">
+          </span>
+          <b>
+            <span class="expand-stream-item js-view-details">
+                
+                  <span class="expand-action-wrapper">
+                    Öffnen
+                  </span>
+            </span>
+            <span class="collapse-stream-item js-hide-details">
+                Schließen
+            </span>
+          </b>
+        </a>
+
+        
+        
+        
+        
+         <ul class="tweet-actions js-actions">
+          <li class="action-reply-container">
+            
+              <a class="with-icn js-action-reply" data-modal="tweet-reply" href="#" title="Antworten">
+                <i class="sm-reply"></i>
+                <b>Antworten</b>
+              </a>
+          </li>
+            <li class="action-rt-container">
+              <a class="with-icn js-toggle-rt" data-modal="tweet-retweet" href="#">
+                <i class="sm-rt"></i>
+                
+                
+                  <b><span class="undo-retweet" title="Retweet rückgängig machen">Retweetet</span><span class="retweet" title="Retweeten">Retweeten</span></b>
+              </a>
+            </li>
+          <li class="action-del-container">
+            <a class="with-icn js-action-del" href="#" title="Löschen">
+              <i class="sm-trash"></i>
+              <b>Löschen</b>
+            </a>
+          </li>
+          <li class="action-fav-container">
+            <a class="with-icn js-toggle-fav" href="#">
+              <i class="sm-fav"></i>
+              
+              
+                <b><span class="unfavorite" title="Favorit rückgängig machen">Favorisiert</span><span class="favorite" title="Favorisieren">Favorisieren</span></b>
+            </a>
+          </li>
+        </ul>      </div>
+
+      
+      <div class="expanded-content js-tweet-details-dropdown">
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<div class="js-stream-item stream-item stream-item expanding-stream-item" data-item-id="221000687658602496" data-item-type="tweet" id="stream-item-tweet-221000687658602496">
+  
+
+
+  
+
+  <div class="tweet original-tweet js-stream-tweet js-actionable-tweet js-hover js-profile-popup-actionable js-original-tweet  
+
+
+
+
+ with-social-proof
+
+" 
+data-tweet-id="221000687658602496"
+
+data-item-id="221000687658602496"
+
+
+ data-screen-name="t" data-name="Tantek Çelik" data-user-id="11628"
+
+
+
+
+data-is-reply-to=""
+
+data-expanded-footer="&lt;div class=&quot;js-tweet-details-fixer tweet-details-fixer&quot;&gt;
+    &lt;div class=&quot;js-tweet-media-container &quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;entities-media-container &quot; style=&quot;min-height:0px&quot;&gt;
+    &lt;/div&gt;
+  &lt;div class=&quot;js-machine-translated-tweet-container&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;js-tweet-stats-container tweet-stats-container already-open&quot;&gt;
+  &lt;/div&gt;
+  
+    &lt;div class=&quot;geo-container tweet-geo-text&quot;&gt;
+    &lt;/div&gt;
+  &lt;div class=&quot;client-and-actions&quot;&gt;
+    &lt;span class=&quot;metadata&quot;&gt;
+      &lt;span title=&quot;3:00 PM - 5 Jul 12&quot;&gt;3:00 PM - 5 Jul 12&lt;/span&gt;
+
+       &lt;span class=&quot;tweet-source&quot;&gt;via &lt;a href=&quot;http://tantek.com/w/Falcon&quot; rel=&quot;nofollow&quot;&gt;Falcon&lt;/a&gt;&lt;/span&gt;
+
+          &amp;middot; &lt;a class=&quot;permalink-link js-permalink&quot; href=&quot;/t/status/221000687658602496&quot; &gt;Details&lt;/a&gt;
+
+
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+"
+
+
+ data-mentions="macslocum radar"
+
+>
+
+    
+    <i class="dogear"></i>
+
+    
+    <div class="content">
+
+      
+      <div class="stream-item-header">
+        <small class="time">
+            <a href="/t/status/221000687658602496" class="tweet-timestamp js-permalink" title="3:00 PM - 5 Jul 12" ><span class="_timestamp js-short-timestamp " data-time="1341525644" data-long-form="true">5 Jul</span></a>
+        </small>
+          <a class="account-group js-account-group js-action-profile js-user-profile-link" href="/t" data-user-id="11628">
+            <img class="avatar js-action-profile-avatar" src="http://a0.twimg.com/profile_images/1266918745/2009-068-tantek-headshot-square_normal.jpg" alt="Tantek Çelik">
+            <strong class="fullname js-action-profile-name show-popup-with-id">Tantek Çelik</strong>
+            <span>&rlm;</span><span class="username js-action-profile-name"><s>@</s><b>t</b></span>
+          </a>
+              </div>
+
+      
+        <p class="js-tweet-text">
+              &quot;You still need your own website&quot; by <a href="/macslocum" class="twitter-atreply pretty-link" ><s>@</s><b>macslocum</b></a> on O&#39;Reilly <a href="/radar" class="twitter-atreply pretty-link" ><s>@</s><b>Radar</b></a>: <a href="http://t.co/DYkApMVG" class="twitter-timeline-link" target="_blank" data-expanded-url="http://radar.oreilly.com/2012/07/federated-social-web-own-website.html" ><span class="invisible">http://</span><span class="js-display-url">radar.oreilly.com/2012/07/federa</span><span class="invisible">ted-social-web-own-website.html</span><span class="tco-ellipsis"><span class="invisible">&nbsp;</span>…</span></a> <a href="/search/%23indieweb" class="twitter-hashtag pretty-link" data-query-source="hashtag_click" ><s>#</s><b>indieweb</b></a> <a href="/search/%23ownyourdata" class="twitter-hashtag pretty-link" data-query-source="hashtag_click" ><s>#</s><b>ownyourdata</b></a> (ttk.me t4Jm2)
+                  </p>
+
+      
+      <div class="stream-item-footer">
+        
+        
+        
+        
+        
+        <div class="context">
+        </div>
+
+        
+        <a class="details with-icn js-details" href="/t/status/221000687658602496">
+          <span class="details-icon js-icon-container">
+          </span>
+          <b>
+            <span class="expand-stream-item js-view-details">
+                
+                  <span class="expand-action-wrapper">
+                    Öffnen
+                  </span>
+            </span>
+            <span class="collapse-stream-item js-hide-details">
+                Schließen
+            </span>
+          </b>
+        </a>
+
+        
+        
+        
+        
+         <ul class="tweet-actions js-actions">
+          <li class="action-reply-container">
+            
+              <a class="with-icn js-action-reply" data-modal="tweet-reply" href="#" title="Antworten">
+                <i class="sm-reply"></i>
+                <b>Antworten</b>
+              </a>
+          </li>
+            <li class="action-rt-container">
+              <a class="with-icn js-toggle-rt" data-modal="tweet-retweet" href="#">
+                <i class="sm-rt"></i>
+                
+                
+                  <b><span class="undo-retweet" title="Retweet rückgängig machen">Retweetet</span><span class="retweet" title="Retweeten">Retweeten</span></b>
+              </a>
+            </li>
+          <li class="action-del-container">
+            <a class="with-icn js-action-del" href="#" title="Löschen">
+              <i class="sm-trash"></i>
+              <b>Löschen</b>
+            </a>
+          </li>
+          <li class="action-fav-container">
+            <a class="with-icn js-toggle-fav" href="#">
+              <i class="sm-fav"></i>
+              
+              
+                <b><span class="unfavorite" title="Favorit rückgängig machen">Favorisiert</span><span class="favorite" title="Favorisieren">Favorisieren</span></b>
+            </a>
+          </li>
+        </ul>      </div>
+
+      
+      <div class="expanded-content js-tweet-details-dropdown">
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<div class="js-stream-item stream-item stream-item expanding-stream-item" data-item-id="220971823846785025" data-item-type="tweet" id="stream-item-tweet-220971823846785025">
+  
+
+
+  
+
+  <div class="tweet original-tweet js-stream-tweet js-actionable-tweet js-hover js-profile-popup-actionable js-original-tweet  
+
+
+
+
+ with-social-proof
+
+" 
+data-tweet-id="220971823846785025"
+
+data-item-id="220971823846785025"
+
+
+ data-screen-name="t" data-name="Tantek Çelik" data-user-id="11628"
+
+
+
+
+data-is-reply-to=""
+
+data-expanded-footer="&lt;div class=&quot;js-tweet-details-fixer tweet-details-fixer&quot;&gt;
+    &lt;div class=&quot;js-tweet-media-container &quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;entities-media-container &quot; style=&quot;min-height:0px&quot;&gt;
+    &lt;/div&gt;
+  &lt;div class=&quot;js-machine-translated-tweet-container&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;js-tweet-stats-container tweet-stats-container already-open&quot;&gt;
+  &lt;/div&gt;
+  
+    &lt;div class=&quot;geo-container tweet-geo-text&quot;&gt;
+    &lt;/div&gt;
+  &lt;div class=&quot;client-and-actions&quot;&gt;
+    &lt;span class=&quot;metadata&quot;&gt;
+      &lt;span title=&quot;1:06 PM - 5 Jul 12&quot;&gt;1:06 PM - 5 Jul 12&lt;/span&gt;
+
+       &lt;span class=&quot;tweet-source&quot;&gt;via &lt;a href=&quot;http://tantek.com/w/Falcon&quot; rel=&quot;nofollow&quot;&gt;Falcon&lt;/a&gt;&lt;/span&gt;
+
+          &amp;middot; &lt;a class=&quot;permalink-link js-permalink&quot; href=&quot;/t/status/220971823846785025&quot; &gt;Details&lt;/a&gt;
+
+
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+"
+
+
+ data-mentions="OpenWebCamp cascadesf"
+
+>
+
+    
+    <i class="dogear"></i>
+
+    
+    <div class="content">
+
+      
+      <div class="stream-item-header">
+        <small class="time">
+            <a href="/t/status/220971823846785025" class="tweet-timestamp js-permalink" title="1:06 PM - 5 Jul 12" ><span class="_timestamp js-short-timestamp " data-time="1341518762" data-long-form="true">5 Jul</span></a>
+        </small>
+          <a class="account-group js-account-group js-action-profile js-user-profile-link" href="/t" data-user-id="11628">
+            <img class="avatar js-action-profile-avatar" src="http://a0.twimg.com/profile_images/1266918745/2009-068-tantek-headshot-square_normal.jpg" alt="Tantek Çelik">
+            <strong class="fullname js-action-profile-name show-popup-with-id">Tantek Çelik</strong>
+            <span>&rlm;</span><span class="username js-action-profile-name"><s>@</s><b>t</b></span>
+          </a>
+              </div>
+
+      
+        <p class="js-tweet-text">
+              speaking 2012-07-14 <a href="/OpenWebCamp" class="twitter-atreply pretty-link" ><s>@</s><b>OpenWebCamp</b></a> (sold out!) and 2012-07-21 <a href="/cascadesf" class="twitter-atreply pretty-link" ><s>@</s><b>CascadeSF</b></a> (<a href="http://t.co/Ua94NBXO" class="twitter-timeline-link" target="_blank" data-expanded-url="http://innovatorsoftheweb.eventbrite.com" ><span class="invisible">http://</span><span class="js-display-url">innovatorsoftheweb.eventbrite.com</span><span class="invisible"></span><span class="tco-ellipsis"><span class="invisible">&nbsp;</span></span></a>) on <a href="/search/%23HTML5" class="twitter-hashtag pretty-link" data-query-source="hashtag_click" ><s>#</s><b>HTML5</b></a> <a href="/search/%23microformats2" class="twitter-hashtag pretty-link" data-query-source="hashtag_click" ><s>#</s><b>microformats2</b></a> (ttk.me t4Jm1)
+                  </p>
+
+      
+      <div class="stream-item-footer">
+        
+        
+        
+        
+        
+        <div class="context">
+        </div>
+
+        
+        <a class="details with-icn js-details" href="/t/status/220971823846785025">
+          <span class="details-icon js-icon-container">
+          </span>
+          <b>
+            <span class="expand-stream-item js-view-details">
+                
+                  <span class="expand-action-wrapper">
+                    Öffnen
+                  </span>
+            </span>
+            <span class="collapse-stream-item js-hide-details">
+                Schließen
+            </span>
+          </b>
+        </a>
+
+        
+        
+        
+        
+         <ul class="tweet-actions js-actions">
+          <li class="action-reply-container">
+            
+              <a class="with-icn js-action-reply" data-modal="tweet-reply" href="#" title="Antworten">
+                <i class="sm-reply"></i>
+                <b>Antworten</b>
+              </a>
+          </li>
+            <li class="action-rt-container">
+              <a class="with-icn js-toggle-rt" data-modal="tweet-retweet" href="#">
+                <i class="sm-rt"></i>
+                
+                
+                  <b><span class="undo-retweet" title="Retweet rückgängig machen">Retweetet</span><span class="retweet" title="Retweeten">Retweeten</span></b>
+              </a>
+            </li>
+          <li class="action-del-container">
+            <a class="with-icn js-action-del" href="#" title="Löschen">
+              <i class="sm-trash"></i>
+              <b>Löschen</b>
+            </a>
+          </li>
+          <li class="action-fav-container">
+            <a class="with-icn js-toggle-fav" href="#">
+              <i class="sm-fav"></i>
+              
+              
+                <b><span class="unfavorite" title="Favorit rückgängig machen">Favorisiert</span><span class="favorite" title="Favorisieren">Favorisieren</span></b>
+            </a>
+          </li>
+        </ul>      </div>
+
+      
+      <div class="expanded-content js-tweet-details-dropdown">
+      </div>
+    </div>
+  </div>
+
+
+</div>
+</div>
+          <div class="stream-footer"><div class='timeline-end has-items has-more-items'>
+  <div class="stream-end">
+    <div class="stream-end-inner">
+        <i class="bird-etched"></i>
+        <p class="empty-text">@t hat noch nichts getwittert.</p>
+        <button type='button' class='btn-link back-to-top hidden'>Zurück zum Anfang &uarr;</button>  </div>
+  </div>
+  <div class="stream-loading">
+    <div class="stream-end-inner">
+      <span class="spinner" title="Wird geladen..."></span>
+    </div>
+  </div>
+</div></div>
+          <div class="stream-fail-container">
+            <div class="js-stream-whale-end stream-whale-end stream-placeholder centered-placeholder">
+          <div class="stream-end-inner">
+            <h2 class="title">Das Laden scheint etwas zu dauern. </h2>
+            <p>
+              Twitter könnte zur Zeit überlastet sein. <a href="#" class="try-again-after-whale">Nochmal versuchen</a> oder <a target="_blank" href="http://status.twitter.com">Twitter Status</a> für weitere Informationen ansehen.
+            </p>
+          </div>
+        </div>      </div>
+        </div>
+      </div>
+        <div id="sensitive_flag_dialog" class="modal-container">
+      <div class="close-modal-background-target"></div>
+      <div class="modal modal-small draggable">
+        <div class="modal-content">
+          <button class="modal-btn modal-close"><i class="close-medium"><span class="hidden-elements">Schließen</span></i></button>
+          <div class="modal-header">
+            <h3 class="modal-title">Melde dieses Medium</h3>
+          </div>
+          <div class="modal-body">
+            <p class="sensitive-title">Dies wurde bereits als fragwürdiger Inhalt markiert.</p>
+    
+            <label class="checkbox" for="sensitive-settings-checkbox">
+              <input type="checkbox" id="sensitive-settings-checkbox" value="settings">
+              Ändere meine Einstellungen um mich zu warnen bevor Medien angezeigt werden die fragwürdigen Inhalt enthalten könnten.
+            </label>
+            <label class="checkbox" for="sensitive-illegal-checkbox">
+              <input type="checkbox" id="sensitive-illegal-checkbox" value="illegal">
+              Markiere dies als illegalen Inhalt.
+            </label>
+          </div>
+          <div class="modal-footer">
+            <button id="submit_flag_confirmation" type="button" class="btn">Senden</button>
+            <button id="cancel_flag_confirmation" type="button" class="btn primary-btn">Abbrechen</button>
+    
+            <div class="sensitive-confirmation">
+              <a class="sensitive-learn-more" target="_blank" href="//support.twitter.com/articles/20069937">Erfahre mehr darüber, Medien zu melden</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-overlay"></div>
+    </div>
+    </div>
+          </div>
+        </div>
+    </div>
+
+    
+    <div class="modal-overlay"></div>
+    
+    <div class="hidden-elements">
+      <div id="flash-preload"></div>
+      <iframe class="tweet-post-iframe" name="tweet-post-iframe"></iframe>
+    
+    </div>
+    
+      <div id="dm_dialog" class="modal-container dm-conversation-list">
+    <div class="close-modal-background-target"></div>
+    <div class="modal draggable twttr-dialog dm-dialog">
+      <div id="dm_dialog_conversation_list" class="modal-content">
+      
+      <div class="twttr-dialog-header modal-header">
+        <h3>Direktnachrichten</h3>
+        <a class="btn dm-new-button dm-header-new" href="#">Neue Nachricht</a>
+        <div class="twttr-dialog-close"><b>&times;</b></div>
+      </div>
+    
+      
+      <div class="twttr-dialog-inside">
+        <div class="twttr-dialog-body clearfix">
+          <div class="dm-error js-dm-error">
+        <a href="#" class="js-dismiss">
+          <i class="close"></i>
+        </a>
+        <span class="dm-error-text"></span>
+      </div>      <div class="twttr-dialog-content">
+            <div class="dm-threads js-dm-threads js-modal-scrollable js-twttr-dialog-not-draggable">
+              <ul class="dm-thread-list js-dm-thread-list">
+                <div class="dm-placeholder-empty dm-no-messages">
+              <p><strong>You don't have any messages yet.</strong></p>
+              <p>Direct messages are 140 characters, private, and can be sent to any user who follows you on Twitter.</p>
+            </div>          </ul>
+            </div>
+          </div>
+    
+          <div class="twttr-dialog-footer">
+        Tipp: Du kannst Nachrichten an jeden senden, der Dir folgt. <a href="http://support.twitter.com/groups/31-twitter-basics/topics/109-tweets-messages/articles/14606-what-is-a-direct-message-dm" target="_blank" class="learn-more">Erfahre mehr</a>
+      </div>
+        </div>
+      </div>
+    </div>    <div id="dm_dialog_conversation" class="modal-content">
+      
+      <div class="twttr-dialog-header modal-header">
+        <h3><a class="js-dm-header-title" href="#">Direktnachrichten</a> › mit <span class="dm_dialog_real_name"></span></h3>
+        <div class="twttr-dialog-close"><b>&times;</b></div>
+      </div>
+    
+      
+      <div class="twttr-dialog-inside">
+        <div class="twttr-dialog-body clearfix">
+            <div class="dm-error js-dm-error">
+          <a href="#" class="js-dismiss">
+            <i class="close"></i>
+          </a>
+          <span class="dm-error-text"></span>
+        </div>      <div class="twttr-dialog-content">
+          </div>
+          <form class="dm-tweetbox tweet-form">
+        <div class="tweet-content">
+            <label class="hidden-elements" for="tweet-box-1343071942">Text twittern</label>
+            <textarea id="tweet-box-1343071942" class="tweet-box"></textarea>
+        </div>
+        <div class="tweet-button">
+          <span class="spinner"></span>
+          <span class="tweet-counter">140</span>
+          <button class="btn tweet-action primary-btn disabled" type="submit">Nachricht senden</button>
+        </div>
+        <div class="dm-delete-confirm js-dm-delete-confirm">
+          <p>Bist Du sicher, dass Du diese Nachricht löschen möchtest?</p>
+    <button type="button" class="btn caution-btn js-prompt-ok" data-message-id="">Nachricht löschen</button>
+    <button type="button" class="btn js-prompt-cancel">Abbrechen</button>
+  </div>
+      </form>    </div>
+    
+        <div class="twttr-dialog-footer">
+      Tipp: Du kannst Nachrichten an jeden senden, der Dir folgt. <a href="http://support.twitter.com/groups/31-twitter-basics/topics/109-tweets-messages/articles/14606-what-is-a-direct-message-dm" target="_blank" class="learn-more">Erfahre mehr</a>
+    </div>
+      </div>
+    </div>    <div id="dm_dialog_new" class="modal-content">
+      
+      <div class="twttr-dialog-header modal-header">
+        <h3><a href="#">Direktnachrichten</a> › Neu</h3>
+        <div class="twttr-dialog-close"><b>&rsaquo;</b></div>
+      </div>
+    
+      
+      <div class="twttr-dialog-inside">
+        <div class="twttr-dialog-body clearfix">
+          <div class="dm-dialog-content">
+            <div class="dm-to">
+              <input class="dm-to-input twttr-directmessage-input" type="text"></input>
+              <img class="avatar size24 selected-profile" src="http://a0.twimg.com/sticky/default_profile_images/default_profile_6_mini.png" data-default-img="http://a0.twimg.com/sticky/default_profile_images/default_profile_6_mini.png">
+              <ul class="dropdown-menu autocomplete-results">
+            <li class="dropdown-link dropdown-account template-row autocomplete-item">
+              <img width="24" height="24" class="avatar size24">
+              <strong class="fullname"></strong>
+              <span class="pretty-link"><s>@</s><b class="username"></b></span>
+            </li>
+          </ul>        </div>
+    
+            <div class="dm-convo-placeholder">
+              <div class="dm-error js-dm-error">
+            <a href="#" class="js-dismiss">
+              <i class="close"></i>
+            </a>
+            <span class="dm-error-text"></span>
+          </div>        </div>
+    
+          </div>
+    
+          <form class="dm-tweetbox tweet-form">
+        <div class="tweet-content">
+            <label class="hidden-elements" for="tweet-box-1343071943">Text twittern</label>
+            <textarea id="tweet-box-1343071943" class="tweet-box"></textarea>
+        </div>
+        <div class="tweet-button">
+          <span class="spinner"></span>
+          <span class="tweet-counter">140</span>
+          <button class="btn tweet-action primary-btn disabled" type="submit">Nachricht senden</button>
+        </div>
+        <div class="dm-delete-confirm js-dm-delete-confirm">
+          <p>Bist Du sicher, dass Du diese Nachricht löschen möchtest?</p>
+    <button type="button" class="btn caution-btn js-prompt-ok" data-message-id="">Nachricht löschen</button>
+    <button type="button" class="btn js-prompt-cancel">Abbrechen</button>
+  </div>
+      </form>
+          <div class="twttr-dialog-footer">
+        Tipp: Du kannst Nachrichten an jeden senden, der Dir folgt. <a href="http://support.twitter.com/groups/31-twitter-basics/topics/109-tweets-messages/articles/14606-what-is-a-direct-message-dm" target="_blank" class="learn-more">Erfahre mehr</a>
+      </div>
+        </div>
+      </div>
+    </div>  </div>
+  </div>
+    
+    <div id="goto-user-dialog" class="modal-container">
+  <div class="modal modal-small draggable">
+    <div class="modal-content">
+      <button type="button" class="modal-btn modal-close"><i class="close-medium"><span class="hidden-elements">Schließen</span></i></button>
+
+      <div class="modal-header">
+        <h3 class="modal-title">Vollständiges Profil ansehen</h3>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-inner">
+          <form class="goto-user-form">
+            <input class="username-input" type="text" placeholder="Start typing a name to jump to a profile">
+            <ul class="dropdown-menu autocomplete-results">
+              <li class="dropdown-link dropdown-account template-row autocomplete-item">
+                <img width="24" height="24" class="avatar size24">
+                <strong class="fullname"></strong>
+                <span class="pretty-link"><s>@</s><b class="username"></b></span>
+              </li>
+            </ul>          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+      
+  
+  <div id="retweet-tweet-dialog" class="modal-container">
+    <div class="close-modal-background-target"></div>
+    <div class="modal draggable">
+      <div class="modal-content">
+        <button class="modal-btn modal-close"><i class="close-medium"><span class="hidden-elements">Schließen</span></i></button>
+  
+        <div class="modal-header">
+          
+          <h3 class="modal-title">Retweet an Deine Follower senden?</h3>
+          
+        </div>
+  
+        <div class="modal-body modal-tweet"></div>
+  
+        <div class="modal-footer">
+          <button class="btn cancel-action">Abbrechen</button>
+          
+          <button class="btn primary-btn retweet-action">Retweeten</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="delete-tweet-dialog" class="modal-container">
+    <div class="close-modal-background-target"></div>
+    <div class="modal draggable">
+      <div class="modal-content">
+        <button class="modal-btn modal-close"><i class="close-medium"><span class="hidden-elements">Schließen</span></i></button>
+  
+        <div class="modal-header">
+          <h3 class="modal-title">Bist Du sicher, dass Du diesen Tweet löschen möchtest?</h3>
+        </div>
+  
+        <div class="modal-body modal-tweet"></div>
+  
+        <div class="modal-footer">
+          <button class="btn cancel-action">Abbrechen</button>
+          <button class="btn primary-btn delete-action">Löschen</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    
+<div id="keyboard-shortcut-dialog" class="modal-container">
+  <div class="close-modal-background-target"></div>
+  <div class="modal modal-large draggable">
+    <div class="modal-content">
+      <button type="button" class="modal-btn modal-close js-dimiss"><i class="close-medium"><span class="hidden-elements">Schließen</span></i></button>
+
+      
+      <div class="modal-header">
+        <h3 class="modal-title">Tastaturkürzel</h3>
+      </div>
+
+      
+      <div class="modal-body">
+
+        <div class="keyboard-shortcuts clearfix" id="keyboard-shortcut-menu">
+
+          <table class="modal-table">
+            <tbody>
+              <tr>
+                <td class="shortcut">
+                  <b class="sc-key">Enter</b>
+                </td>
+                <td class="shortcut-label">Details zu diesem Tweet</td>
+              </tr>
+              <tr>
+                <td class="shortcut">
+                  <b class="sc-key">G</b> <b class="sc-key">F</b>
+                </td>
+                <td class="shortcut-label">Gehe zu Benutzer...</td>
+              </tr>
+              <tr>
+                <td class="shortcut">
+                  <b class="sc-key">?</b>
+                </td>
+                <td class="shortcut-label">Dieses Menü</td>
+              </tr>
+              <tr>
+                <td class="shortcut">
+                  <b class="sc-key">J</b>
+                </td>
+                <td class="shortcut-label">Nächster Tweet</td>
+              </tr>
+              <tr>
+                <td class="shortcut">
+                  <b class="sc-key">K</b>
+                </td>
+                <td class="shortcut-label">Vorheriger Tweet</td>
+              </tr>
+              <tr>
+                <td class="shortcut">
+                  <b class="sc-key">Space</b>
+                </td>
+                <td class="shortcut-label">Zum Seitenende</td>
+              </tr>
+              <tr>
+                <td class="shortcut">
+                  <b class="sc-key">/</b>
+                </td>
+                <td class="shortcut-label">Suche</td>
+              </tr>
+              <tr>
+                <td class="shortcut">
+                  <b class="sc-key">.</b>
+                </td>
+                <td class="shortcut-label">Neue Tweets laden</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    
+      
+      
+    
+        <div id="geo-disabled-dropdown">
+          <ul class="dropdown-menu" tabindex="-1">
+        <li class="dropdown-caret">
+          <span class="caret-outer"></span>
+          <span class="caret-inner"></span>
+        </li>
+        <li class="geo-not-enabled-yet">
+          <h2>Füge einen Standort zu Deinen Tweets hinzu</h2>
+          <p>
+            Twitter speichert Deine Standortangaben&#32;
+            Du kannst die Standortangabe vor jedem Tweet ein- oder ausschalten, und Du hast jederzeit die Möglichkeit, Standortangaben nachträglich zu löschen.
+            <a href="http://support.twitter.com/forums/26810/entries/78525" target="_blank">Erfahre mehr</a>
+          </p>
+          <div>
+            <button type="button" class="geo-turn-on btn primary-btn">Standortangabe einschalten</button>
+            <button type="button" class="geo-not-now btn-link">Nicht jetzt</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+    
+      <div id="geo-enabled-dropdown">
+        <ul class="dropdown-menu" tabindex="-1">
+      <li class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+      </li>
+      <li class="geo-query-location">
+        <input type="text" autocomplete="off" placeholder="Suche nach Stadtteil oder Stadt">
+        <i class="generic-search"></i>
+      </li>
+      <li class="geo-dropdown-status"></li>
+      <li class="dropdown-link geo-turn-off-item geo-focusable">
+        <i class="close"></i>Standort ausschalten
+      </li>
+    </ul>
+  </div>
+    
+    
+      <div id="profile_popup" class="modal-container">
+    <div class="close-modal-background-target"></div>
+    <div class="modal modal-small draggable">
+      <div class="modal-content clearfix">
+        <button class="modal-btn modal-close"><i class="close-medium"><span class="hidden-elements">Schließen</span></i></button>
+        <div class="modal-header">
+          <h3 class="modal-title">Profil Zusammenfassung</h3>
+        </div>
+  
+        <div class="modal-body profile-modal">
+  
+        </div>
+  
+        <div class="loading">
+          <img src="http://a0.twimg.com/a/1342841381/images/bigger_spinner.gif">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="list-membership-dialog" class="modal-container">
+    <div class="close-modal-background-target"></div>
+    <div class="modal modal-small draggable">
+      <div class="modal-content">
+        <button class="modal-btn modal-close"><i class="close-medium"><span class="hidden-elements">Schließen</span></i></button>
+        <div class="modal-header">
+          <h3 class="modal-title">Deine Listen</h3>
+        </div>
+        <div class="modal-body">
+          <div class="list-membership-content"></div>
+          <span class="spinner lists-spinner" title="Lädt&hellip;"></span>
+        </div>
+      </div>
+    </div>
+  </div>  <div id="list-create-dialog" class="modal-container">
+    <div class="close-modal-background-target"></div>
+    <div class="modal modal-medium draggable">
+      <div class="modal-content">
+        <button class="modal-btn modal-close"><i class="close-medium"><span class="hidden-elements">Schließen</span></i></button>
+        <div class="modal-header">
+          <h3 class="modal-title">Neue Liste erstellen</h3>
+        </div>
+        <div class="modal-body">
+          
+        <div class="list-editor">
+          <div class="field">
+            <label for="list-name">Name der Liste</label>
+            <input type="text" class="text" name="name" value="" />
+          </div>
+          <div class="field" style="display:none">
+            <label for="list-link">Link zur Liste</label>
+            <span></span>
+          </div>
+          <hr/>
+        
+          <div class="field">
+            <label for="description">Beschreibung</label>
+            <textarea name="description"></textarea>
+            <span class="help-text">Weniger als 100 Zeichen, optional</span>
+          </div>
+          <hr/>
+        
+          <div class="field">
+            <label for="mode">Liste: Privatsphäre</label>
+            <div class="options">
+              <label for="list-public-radio">
+                <input class="radio" type="radio" name="mode" id="list-public-radio" value="public" checked="checked"  />
+                <b>Öffentlich</b> &middot; Jeder kann dieser Liste folgen
+              </label>
+              <label for="list-private-radio">
+                <input class="radio" type="radio" name="mode" id="list-private-radio" value="private"  />
+                <b>Privat</b> &middot; Nur Du hast Zugriff auf diese Liste
+              </label>
+            </div>
+          </div>
+          <hr/>
+        
+          <div class="list-editor-save">
+            <div class="button btn btn-primary update-list-button" data-list-id="141741580">Liste speichern</div>
+          </div>
+        
+        </div>      </div>
+      </div>
+    </div>
+  </div>
+      <div id="activity-popup-dialog" class="modal-container">
+    <div class="close-modal-background-target"></div>
+    <div class="modal draggable">
+      <div class="modal-content clearfix">
+        <button type="button" class="modal-btn modal-close"><i class="close-medium"><span class="hidden-elements">Schließen</span></i></button>
+  
+        <div class="modal-header">
+          <h3 class="modal-title"></h3>
+        </div>
+  
+        <div class="modal-body">
+          <div class="activity-tweet clearfix"></div>
+          <div class="loading">
+            <img src="http://a0.twimg.com/a/1342841381/images/bigger_spinner.gif">
+          </div>
+          <div class="activity-content clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div id="confirm_dialog" class="modal-container">
+  <div class="close-modal-background-target"></div>
+  <div class="modal draggable">
+    <div class="modal-content">
+      <button class="modal-btn modal-close"><i class="close-medium"><span class="hidden-elements">Schließen</span></i></button>
+      <div class="modal-header">
+        <h3 class="modal-title"></h3>
+      </div>
+      <div class="modal-body">
+        <p class="modal-body-text"></p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn" id="confirm_dialog_cancel_button"></button>
+        <button id="confirm_dialog_submit_button" class="btn primary-btn modal-submit"></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+    <div id="signin-or-signup-dialog">
+      <div id="signin-or-signup" class="modal-container">
+        <div class="close-modal-background-target"></div>
+        <div class="modal modal-medium draggable">
+          <div class="modal-content">
+            <button class="modal-btn modal-close"><i class="close-medium"><span class="hidden-elements">Schließen</span></i></button>
+            <div class="modal-header">
+              <h3 class="modal-title modal-long-title signup-only">Registriere Dich bei Twitter &amp; folge @t</h3>
+              <h3 class="modal-title not-signup-only">Logge Dich bei Twitter ein</h3>
+            </div>
+            <div class="modal-body signup-only">
+              <form action="https://twitter.com/signup" class="clearfix signup" method="post">
+              <div class="holding name">
+                <input type="text" autocomplete="off" name="user[name]" maxlength="20">
+                <span class="holder">Vollständiger Name</span>
+              </div>
+              <div class="holding email">
+                <input class="email-input" type="text" autocomplete="off" name="user[email]">
+                <span class="holder">E-Mail
+</span>
+              </div>
+              <div class="holding password">
+                <input type="password" name="user[user_password]">
+                <span class="holder">Passwort</span>
+              </div>
+                <input name="follow" type="hidden" value="t">
+              <input type="hidden" value="" name="context">
+              <input type="hidden" value="aee45343fd57577ace1d5b136f0daeb8ab1e3d08" name="authenticity_token"/>
+              <input name="follows" type="hidden" value="">
+              <input type="submit" class="btn signup-btn js-submit js-signup-btn" value="Anmelden">
+            </form>
+          </div>
+            <div class="modal-body not-signup-only">
+              <form action="https://twitter.com/sessions" class="signin" method="post">
+              <fieldset>
+  
+    <div class="clearfix holding">
+      <span class="username js-username holder">Benutzername oder E-Mail</span>
+      <input class="js-username-field email-input" type="text" name="session[username_or_email]" autocomplete="on" value="">
+      <p class="help-text-inline">Hast Du Deinen <a href="/account/resend_password" title="" tabindex="-1">Benutzernamen</a> vergessen?</p>
+    </div>
+  
+    <div class="clearfix holding">
+      <span class="password holder">Passwort</span>
+      <input class="js-password-field" type="password" name="session[password]">
+      <p class="help-text-inline">Du hast Dein <a href="/account/resend_password" tabindex="-1">Passwort</a> vergessen?</p>
+    </div>
+  
+    <input type="hidden" value="aee45343fd57577ace1d5b136f0daeb8ab1e3d08" name="authenticity_token"/>
+  
+  </fieldset>
+  <div class="clearfix">
+  
+    <input type="hidden" name="scribe_log">
+    <input type="hidden" name="redirect_after_login" value="">
+    <input type="hidden" value="aee45343fd57577ace1d5b136f0daeb8ab1e3d08" name="authenticity_token"/>
+    <button type="submit" class="submit btn primary-btn">Einloggen</button>
+  
+    <fieldset class="subchck">
+      <label class="remember">
+        <input type="checkbox" value="1" name="remember_me" >
+        Angemeldet bleiben
+      </label>
+    </fieldset>
+  
+  </div>
+  <div class="divider"></div>
+              <p>
+                <a class="forgot" href="/account/resend_password">Passwort vergessen?</a><br />
+                <a class="mobile has-sms" href="/account/complete">Benutzt Du Twitter bereits via SMS?</a>
+              </p>
+            </form>
+            <div class="signup">
+                <h2>Noch nicht bei Twitter? Melde Dich an, wirf einen Blick auf Dinge, die Dich interessieren und bleibe stets auf dem Laufenden.</h2>
+                <form action="https://twitter.com/signup" class="signup" method="get">
+                  <input name="follow" type="hidden" value="t">
+                <button class="btn promotional signup-btn" type="submit">Anmelden &raquo; </button>
+              </form>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="sms-codes-dialog" class="modal-container">
+    <div class="close-modal-background-target"></div>
+    <div class="modal modal-medium draggable">
+      <div class="modal-content">
+        <button class="modal-btn modal-close"><i class="close-medium"><span class="hidden-elements">Schließen</span></i></button>
+        <div class="modal-header">
+          <h3 class="modal-title">Zweiwege-Kurz-Codes (zum Senden und Empfangen)</h3>
+        </div>
+        <div class="modal-body">
+          
+        <table id="sms_codes" cellpadding="0" cellspacing="0">
+          <thead>
+            <tr>
+              <th>Land</th>
+              <th>Code</th>
+              <th>Für Kunden von</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Vereinigte Staaten</td>
+              <td>40404</td>
+              <td>(alle)</td>
+            </tr>
+            <tr>
+              <td>Kanada</td>
+              <td>21212</td>
+              <td>(alle)</td>
+            </tr>
+            <tr>
+              <td>Vereinigtes Königreich</td>
+              <td>86444</td>
+              <td>Vodafone, Orange, 3, O2</td>
+            </tr>
+            <tr>
+              <td>Brasilien</td>
+              <td>40404</td>
+              <td>Nextel, TIM</td>
+            </tr>
+            <tr>
+              <td>Haiti</td>
+              <td>40404</td>
+              <td>Digicel, Voila</td>
+            </tr>
+            <tr>
+              <td>Irland</td>
+              <td>51210</td>
+              <td>Vodafone, O2</td>
+            </tr>
+            <tr>
+              <td>Indien</td>
+              <td>53000</td>
+              <td>Bharti Airtel, Videocon, Reliance</td>
+            </tr>
+            <tr>
+              <td>Indonesien</td>
+              <td>89887</td>
+              <td>AXIS, 3, Telkomsel, Indosat, XL Axiata</td>
+            </tr>
+            <tr>
+              <td rowspan="2">Italien</td>
+              <td>4880804</td>
+              <td>Wind</td>
+            </tr>
+            <tr>
+              <td>3424486444</td>
+              <td>Vodafone</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3">
+                &raquo; <a target="_blank" href="http://support.twitter.com/articles/14226-how-to-find-your-twitter-short-code-or-long-code">Zeige SMS-Kurzwahlen für andere Länder</a>
+              </td>
+            </tr>
+          </tfoot>
+        </table>      </div>
+      </div>
+    </div>
+  </div>        <script src="http://a0.twimg.com/c/swift/prereqs.1a057f2e2c17cf5c21435693ad9213df.js"></script>
+        <script>
+          using.path = 'http://a0.twimg.com/c/swift/de';
+    
+          using.bundles.push({"$bundle\/settings.0be7079b0e363ac2d00379bff6180925.js":["app\/data\/settings","app\/ui\/alert_banner","app\/boot\/settings","app\/data\/settings\/account_scribe","app\/data\/form_scribe","app\/ui\/with_forgot_password","app\/ui\/password_dialog","app\/ui\/protected_verified_dialog","app\/ui\/validating_fieldset","app\/ui\/email_confirmation","app\/ui\/timezone_detector","app\/ui\/deactivated","app\/ui\/geo_deletion","app\/ui\/settings_controls","app\/pages\/settings\/account","app\/data\/settings\/applications_scribe","app\/ui\/oauth_revoker","app\/pages\/settings\/applications","app\/data\/settings\/confirm_deactivation_scribe","app\/pages\/settings\/confirm_deactivation","app\/data\/settings\/design_scribe","app\/ui\/color_picker","app\/ui\/design","app\/ui\/theme_preview","app\/ui\/theme_picker","app\/ui\/image_uploader","app\/pages\/settings\/design","app\/data\/settings\/enhanced_profile_scribe","app\/ui\/capped_file_upload","app\/ui\/settings\/enhanced_profile_form","app\/pages\/settings\/enhanced_profile","app\/ui\/settings\/notifications","app\/pages\/settings\/notifications","app\/ui\/password","app\/ui\/password_match_pair","app\/ui\/with_password_strength","app\/ui\/password_strength","app\/pages\/settings\/password","app\/pages\/settings\/password_confirmation","app\/data\/settings\/profile_scribe","app\/ui\/facebook_button","app\/ui\/profile_image_monitor","app\/ui\/field_edit_warning","app\/ui\/dialogs\/in_product_help_dialog","app\/pages\/settings\/profile","app\/data\/settings\/sms_scribe","app\/ui\/forms\/select_box","app\/ui\/settings\/sms_phone_create_form","app\/ui\/forms\/element_group_toggler","app\/ui\/settings\/device_verified_form","app\/ui\/settings\/sms_phone_verify_form","app\/pages\/settings\/sms"],"$bundle\/connect.d21417c70a8f40097120049b6b61ed0b.js":["app\/ui\/who_to_follow_dashboard","app\/data\/who_to_follow","app\/data\/who_to_follow_scribe","app\/boot\/connect","app\/ui\/infinite_scroll_watcher","app\/data\/timeline","app\/boot\/timeline","app\/data\/activity_popup","app\/ui\/dialogs\/activity_popup","app\/data\/activity_popup_scribe","app\/boot\/activity_popup","app\/data\/tweet_actions","app\/data\/conversations","app\/data\/media_settings","app\/ui\/dialogs\/sensitive_flag_confirmation","app\/ui\/expando\/with_expanding_containers","app\/ui\/expando\/expando_helpers","app\/utils\/tweet_helper","app\/ui\/with_tweet_actions","app\/ui\/tweets","app\/ui\/tweet_injector","app\/utils\/google_maps","app\/ui\/map","app\/ui\/expando\/with_expanding_social_activity","app\/ui\/expando\/expanding_tweets","app\/ui\/expando\/close_all_button","app\/ui\/media\/phoenix_shim","app\/utils\/twt","app\/ui\/media\/types","$lib\/easyXDM.js","app\/utils\/easy_xdm","app\/utils\/sandboxed_ajax","app\/ui\/media\/with_legacy_icons","app\/utils\/third_party_application","app\/ui\/media\/legacy_embed","app\/ui\/media\/with_legacy_embeds","app\/ui\/media\/with_flag_action","app\/ui\/media\/with_hidden_display","app\/ui\/media\/with_legacy_media","app\/ui\/media\/with_native_media","app\/ui\/media\/media_tweets","app\/data\/url_resolver","app\/ui\/timelines\/with_keyboard_navigation","app\/ui\/timelines\/with_base_timeline","app\/ui\/timelines\/with_timeline_tweet_spam","app\/ui\/timelines\/with_old_items","app\/utils\/chrome","app\/ui\/timelines\/with_new_items","app\/ui\/timelines\/with_tweet_pagination","app\/ui\/timelines\/tweet_timeline","app\/ui\/user_actions","app\/boot\/tweet_timeline","app\/pages\/connect\/interactions","app\/pages\/connect\/mentions"],"$bundle\/typeahead.c30cf835bdc22b8bd059e73828fe1f42.js":["app\/pages\/search\/swift_typeahead"],"$bundle\/vitonboarding.bf688e2364ee808fa9cfa85146e4d9f6.js":["app\/ui\/vit\/verification_step","app\/ui\/vit\/mobile_topbar","app\/pages\/vit\/onboarding"],"$bundle\/signup.73daf10c5f911cdf92dce7df2647f65a.js":["app\/ui\/signup\/with_captcha","app\/utils\/common_regexp","app\/ui\/signup\/signup_form","app\/ui\/with_password_strength","app\/data\/signup_data","app\/data\/settings","app\/data\/signup_scribe","app\/ui\/signup\/suggestions","app\/ui\/signup\/small_print_expander","app\/pages\/signup\/signup"],"$bundle\/core.1e84020a8587c83243105e5d1afb402f.js":["$lib\/jquery.js","$lib\/jquery.event.drag.js","core\/jquery","core\/utils","app\/utils\/is_ie","core\/compose","core\/fn","core\/registry","core\/component","core\/clock","core\/parameterize","core\/i18n","core\/logger","$lib\/mustache.js","debug\/mustache","debug\/debug","app\/utils\/querystring","app\/utils\/params","app\/utils\/auth_token","app\/data\/scribe_transport","app\/data\/client_event","app\/data\/with_scribe","app\/data\/scribe_monitor","app\/data\/ddg","app\/ui\/with_interaction_data","app\/utils\/scribe_item_types","app\/utils\/scribe_association_types","app\/data\/with_interaction_data_scribe","app\/data\/tweet_actions_scribe","app\/data\/user_actions_scribe","app\/data\/item_actions_scribe","app\/data\/navigation_scribe","app\/boot\/scribing","app\/data\/with_auth_token","app\/data\/with_data","app\/data\/promoted_logger","app\/ui\/keyboard_shortcuts","app\/ui\/navigation","app\/utils\/time","app\/data\/navigation","$lib\/jquery_autoellipsis.js","$lib\/jquery_color_picker.js","$lib\/jquery.swfobject.js","$lib\/jquery.hashchange.js","$lib\/bootstrap_tooltip.js","app\/jquery_with_plugins","app\/ui\/with_scrollbar_width","app\/ui\/with_dialog","app\/ui\/with_position","app\/ui\/dialogs\/keyboard_shortcuts_dialog","app\/ui\/dialogs\/with_modal_tweet","app\/ui\/dialogs\/retweet_dialog","app\/ui\/dialogs\/delete_tweet_dialog","app\/utils\/with_event_params","app\/ui\/dialogs\/confirm_dialog","app\/ui\/dialogs\/list_membership_dialog","app\/ui\/dialogs\/list_create_dialog","app\/data\/direct_messages","app\/data\/direct_messages_scribe","app\/utils\/levenshtein","app\/utils\/storage\/core","$lib\/gibberish-aes.js","app\/utils\/crypto\/aes","app\/utils\/storage\/with_crypto","app\/utils\/storage\/with_expiry","app\/utils\/storage\/array\/with_array","app\/utils\/storage\/array\/with_max_elements","app\/utils\/storage\/array\/with_unique_elements","app\/utils\/storage\/custom","app\/utils\/cached_ajax","app\/data\/autocomplete","app\/ui\/with_timestamp_updating","app\/ui\/direct_message_dialog","lib\/twitter-text","app\/ui\/with_character_counter","app\/utils\/caret","app\/ui\/with_rtl_tweet_box","app\/ui\/tweet_box","app\/ui\/with_autocomplete_helpers","app\/utils\/string","app\/ui\/autocomplete_dropdown","app\/boot\/direct_messages","app\/data\/profile_popup","app\/data\/profile_popup_scribe","app\/ui\/with_user_actions","app\/ui\/with_item_actions","app\/ui\/profile_popup","app\/data\/user","app\/data\/lists","app\/boot\/profile_popup","app\/ui\/message_drawer","app\/ui\/dialogs\/goto_user_dialog","app\/utils\/setup_polling_with_backoff","app\/ui\/page_title","app\/utils\/cookie","app\/data\/geo","app\/data\/tweet","app\/ui\/tweet_dialog","app\/ui\/new_tweet_button","app\/data\/tweet_box_scribe","app\/utils\/image","app\/utils\/image_thumbnail","app\/ui\/tweet_box_thumbnails","app\/utils\/image_resize","app\/ui\/with_image_selection","app\/ui\/image_selector","app\/ui\/with_click_outside","app\/ui\/geo_picker","app\/ui\/tweet_box_manager","app\/boot\/tweet_boxes","app\/ui\/with_dropdown","app\/ui\/user_dropdown","app\/ui\/signin_dropdown","app\/ui\/language_dropdown","app\/ui\/search_input","app\/ui\/global_nav","app\/ui\/navigation_links","app\/data\/typeahead\/with_cache","app\/utils\/typeahead_helpers","app\/data\/typeahead\/accounts_datasource","app\/data\/typeahead\/saved_searches_datasource","app\/data\/typeahead\/with_external_event_listeners","app\/data\/typeahead\/topics_datasource","app\/data\/typeahead\/typeahead","app\/ui\/typeahead\/with_accounts","app\/ui\/typeahead\/with_saved_searches","app\/ui\/typeahead\/with_topics","app\/ui\/typeahead\/typeahead_dropdown","app\/ui\/typeahead\/typeahead_input","app\/data\/typeahead_scribe","app\/boot\/top_bar","app\/ui\/google","app\/ui\/tooltips","app\/ui\/facebook_token_iframe","app\/ui\/impression_cookies","app\/ui\/banners\/email_banner","app\/ui\/search_query_source","app\/data\/email_banner","app\/boot","app\/utils\/ttft"],"$bundle\/home.d97b42eaa57d2bae60d66ab2ffba2fdc.js":["app\/data\/trends","app\/data\/trends_scribe","app\/ui\/trends\/trends","app\/ui\/trends\/trends_dialog","app\/boot\/trends","app\/ui\/infinite_scroll_watcher","app\/data\/timeline","app\/boot\/timeline","app\/data\/activity_popup","app\/ui\/dialogs\/activity_popup","app\/data\/activity_popup_scribe","app\/boot\/activity_popup","app\/data\/tweet_actions","app\/data\/conversations","app\/data\/media_settings","app\/ui\/dialogs\/sensitive_flag_confirmation","app\/ui\/expando\/with_expanding_containers","app\/ui\/expando\/expando_helpers","app\/utils\/tweet_helper","app\/ui\/with_tweet_actions","app\/ui\/tweets","app\/ui\/tweet_injector","app\/utils\/google_maps","app\/ui\/map","app\/ui\/expando\/with_expanding_social_activity","app\/ui\/expando\/expanding_tweets","app\/ui\/expando\/close_all_button","app\/ui\/media\/phoenix_shim","app\/utils\/twt","app\/ui\/media\/types","$lib\/easyXDM.js","app\/utils\/easy_xdm","app\/utils\/sandboxed_ajax","app\/ui\/media\/with_legacy_icons","app\/utils\/third_party_application","app\/ui\/media\/legacy_embed","app\/ui\/media\/with_legacy_embeds","app\/ui\/media\/with_flag_action","app\/ui\/media\/with_hidden_display","app\/ui\/media\/with_legacy_media","app\/ui\/media\/with_native_media","app\/ui\/media\/media_tweets","app\/data\/url_resolver","app\/ui\/timelines\/with_keyboard_navigation","app\/ui\/timelines\/with_base_timeline","app\/ui\/timelines\/with_timeline_tweet_spam","app\/ui\/timelines\/with_old_items","app\/utils\/chrome","app\/ui\/timelines\/with_new_items","app\/ui\/timelines\/with_tweet_pagination","app\/ui\/timelines\/tweet_timeline","app\/ui\/user_actions","app\/boot\/tweet_timeline","app\/ui\/who_to_follow_dashboard","app\/data\/who_to_follow","app\/data\/who_to_follow_scribe","app\/ui\/promptbird","app\/utils\/oauth_popup","app\/data\/promptbird","app\/data\/promptbird_scribe","app\/ui\/dashboard_tweetbox","app\/utils\/boomerang","app\/pages\/home"],"$bundle\/profiles.f8d82da3d8827a778ac888f33a1a9e47.js":["app\/ui\/dialogs\/signin_or_signup","app\/ui\/forms\/input_with_placeholder","app\/ui\/signup_call_out","app\/data\/signup_click_scribe","app\/logged_out_boot","app\/ui\/profile\/head","app\/ui\/timelines\/profile_timeline","app\/ui\/dashboard_tweetbox","app\/ui\/who_to_follow_dashboard","app\/data\/who_to_follow","app\/data\/who_to_follow_scribe","app\/ui\/media\/phoenix_shim","app\/utils\/twt","app\/ui\/media\/types","$lib\/easyXDM.js","app\/utils\/easy_xdm","app\/utils\/sandboxed_ajax","app\/ui\/media\/with_legacy_icons","app\/utils\/third_party_application","app\/ui\/media\/legacy_embed","app\/ui\/media\/with_legacy_embeds","app\/ui\/media\/with_flag_action","app\/ui\/media\/with_hidden_display","app\/ui\/media\/with_legacy_media","app\/ui\/media\/media_thumbnails","app\/data\/media_thumbnails_scribe","app\/ui\/suggested_users","app\/data\/suggested_users","app\/boot\/profile","app\/ui\/infinite_scroll_watcher","app\/data\/timeline","app\/boot\/timeline","app\/data\/activity_popup","app\/ui\/dialogs\/activity_popup","app\/data\/activity_popup_scribe","app\/boot\/activity_popup","app\/data\/tweet_actions","app\/data\/conversations","app\/data\/media_settings","app\/ui\/dialogs\/sensitive_flag_confirmation","app\/ui\/expando\/with_expanding_containers","app\/ui\/expando\/expando_helpers","app\/utils\/tweet_helper","app\/ui\/with_tweet_actions","app\/ui\/tweets","app\/ui\/tweet_injector","app\/utils\/google_maps","app\/ui\/map","app\/ui\/expando\/with_expanding_social_activity","app\/ui\/expando\/expanding_tweets","app\/ui\/expando\/close_all_button","app\/ui\/media\/with_native_media","app\/ui\/media\/media_tweets","app\/data\/url_resolver","app\/ui\/timelines\/with_keyboard_navigation","app\/ui\/timelines\/with_base_timeline","app\/ui\/timelines\/with_timeline_tweet_spam","app\/ui\/timelines\/with_old_items","app\/utils\/chrome","app\/ui\/timelines\/with_new_items","app\/ui\/timelines\/with_tweet_pagination","app\/ui\/timelines\/tweet_timeline","app\/ui\/user_actions","app\/boot\/tweet_timeline","app\/pages\/profile\/favorites","app\/pages\/profile\/tweets","app\/ui\/timelines\/with_cursor_pagination","app\/ui\/timelines\/user_timeline","app\/boot\/user_timeline","app\/pages\/profile\/followers","app\/pages\/profile\/following"],"$bundle\/events.773343e183fe1b00f5ad995594a1f397.js":["app\/ui\/media\/phoenix_shim","app\/utils\/twt","app\/ui\/media\/types","$lib\/easyXDM.js","app\/utils\/easy_xdm","app\/utils\/sandboxed_ajax","app\/ui\/media\/with_legacy_icons","app\/utils\/third_party_application","app\/ui\/media\/legacy_embed","app\/ui\/media\/with_legacy_embeds","app\/ui\/media\/with_flag_action","app\/ui\/media\/with_hidden_display","app\/ui\/media\/with_legacy_media","app\/ui\/media\/media_thumbnails","app\/data\/media_thumbnails_scribe","app\/ui\/dashboard_tweetbox","app\/ui\/dialogs\/signin_or_signup","app\/ui\/forms\/input_with_placeholder","app\/ui\/signup_call_out","app\/data\/signup_click_scribe","app\/logged_out_boot","app\/ui\/infinite_scroll_watcher","app\/data\/timeline","app\/boot\/timeline","app\/data\/activity_popup","app\/ui\/dialogs\/activity_popup","app\/data\/activity_popup_scribe","app\/boot\/activity_popup","app\/data\/tweet_actions","app\/data\/conversations","app\/data\/media_settings","app\/ui\/dialogs\/sensitive_flag_confirmation","app\/ui\/expando\/with_expanding_containers","app\/ui\/expando\/expando_helpers","app\/utils\/tweet_helper","app\/ui\/with_tweet_actions","app\/ui\/tweets","app\/ui\/tweet_injector","app\/utils\/google_maps","app\/ui\/map","app\/ui\/expando\/with_expanding_social_activity","app\/ui\/expando\/expanding_tweets","app\/ui\/expando\/close_all_button","app\/ui\/media\/with_native_media","app\/ui\/media\/media_tweets","app\/data\/url_resolver","app\/ui\/timelines\/with_keyboard_navigation","app\/ui\/timelines\/with_base_timeline","app\/ui\/timelines\/with_timeline_tweet_spam","app\/ui\/timelines\/with_old_items","app\/utils\/chrome","app\/ui\/timelines\/with_new_items","app\/ui\/timelines\/with_tweet_pagination","app\/ui\/timelines\/tweet_timeline","app\/ui\/user_actions","app\/boot\/tweet_timeline","app\/ui\/timelines\/event_timeline","app\/ui\/gallery\/gallery","app\/pages\/events\/hashtag"],"$bundle\/search.81c566ac7f7721d7b785f3b52b20f080.js":["app\/data\/trends","app\/data\/trends_scribe","app\/ui\/trends\/trends","app\/ui\/trends\/trends_dialog","app\/boot\/trends","app\/ui\/dialogs\/search_operators_dialog","app\/pages\/search\/home","app\/ui\/advanced_search","app\/pages\/search\/advanced"],"$bundle\/mobile_gallery.9a8babcfdc42400b78c750515cf24762.js":["app\/ui\/dialogs\/mobile_gallery_download_dialog","app\/ui\/mobile_gallery\/gallery_buttons","app\/ui\/forms\/mobile_gallery_email_form","app\/data\/mobile_gallery\/send_download_link","app\/pages\/mobile_gallery\/gallery","app\/pages\/mobile_gallery\/apps","app\/ui\/mobile_gallery\/firefox_tweet_button","app\/pages\/mobile_gallery\/firefox"],"$bundle\/accounts.1627c6699746d5dc94b83b766136988e.js":["app\/ui\/account\/password_reset_controls","app\/ui\/password_match_pair","app\/ui\/with_password_strength","app\/ui\/password_strength","app\/pages\/account\/password_reset","app\/pages\/account\/password_reset_sent","app\/pages\/account\/password_reset_type","app\/ui\/captcha_dialog","app\/ui\/account\/resend_password_controls","app\/pages\/account\/resend_password","app\/ui\/account\/verify_personal_information_controls","app\/pages\/account\/verify_personal_information","app\/ui\/account\/verify_device_token_controls","app\/pages\/account\/verify_device_token","app\/pages\/account\/mobile_complete","app\/pages\/account\/mobile_sms_complete","app\/pages\/account\/mobile_verify"],"$bundle\/boomerang.24a59a23201b496f7e7a68a52f6dd115.js":["$lib\/boomerang.js","app\/utils\/boomerang_lib"],"$bundle\/login.461661e75296ca05c612e3af0605c027.js":["app\/ui\/forms\/input_with_placeholder","app\/pages\/login"],"$bundle\/discover.57c8398dd3aae364290582e360214770.js":["app\/data\/trends","app\/data\/trends_scribe","app\/ui\/trends\/trends","app\/ui\/trends\/trends_dialog","app\/boot\/trends","app\/data\/activity_popup","app\/ui\/dialogs\/activity_popup","app\/data\/activity_popup_scribe","app\/boot\/activity_popup","app\/data\/tweet_actions","app\/data\/discover_scribe","app\/data\/discover","app\/utils\/ellipsis","app\/ui\/expando\/with_expanding_containers","app\/ui\/expando\/expando_helpers","app\/utils\/tweet_helper","app\/ui\/with_tweet_actions","app\/ui\/tweets","app\/ui\/tweet_injector","app\/utils\/google_maps","app\/ui\/map","app\/ui\/expando\/with_expanding_social_activity","app\/ui\/with_discover_expando","app\/ui\/with_discover_clicks","app\/ui\/discover","app\/ui\/expando\/close_all_button","app\/ui\/discover_nav","app\/pages\/discover\/discover"],"$bundle\/permalink.741b777412c6036aa89b33b72624cca7.js":["app\/utils\/tweet_helper","app\/ui\/with_tweet_actions","app\/ui\/permalink_keyboard_shortcuts","app\/data\/activity_popup","app\/ui\/dialogs\/activity_popup","app\/data\/activity_popup_scribe","app\/boot\/activity_popup","app\/utils\/twt","app\/ui\/dialogs\/embed_tweet","app\/data\/tweet_actions","app\/ui\/expando\/with_expanding_containers","app\/ui\/expando\/expando_helpers","app\/ui\/tweets","app\/ui\/tweet_injector","app\/utils\/google_maps","app\/ui\/map","app\/ui\/expando\/with_expanding_social_activity","app\/ui\/expando\/expanding_tweets","app\/ui\/dialogs\/sms_codes","app\/ui\/dialogs\/signin_or_signup","app\/ui\/forms\/input_with_placeholder","app\/ui\/signup_call_out","app\/data\/signup_click_scribe","app\/logged_out_boot","app\/data\/url_resolver","app\/ui\/media\/phoenix_shim","app\/ui\/media\/types","$lib\/easyXDM.js","app\/utils\/easy_xdm","app\/utils\/sandboxed_ajax","app\/ui\/media\/with_legacy_icons","app\/utils\/third_party_application","app\/ui\/media\/legacy_embed","app\/ui\/media\/with_legacy_embeds","app\/ui\/media\/with_flag_action","app\/ui\/media\/with_hidden_display","app\/ui\/media\/with_legacy_media","app\/ui\/media\/with_native_media","app\/ui\/media\/media_tweets","app\/pages\/permalink","app\/pages\/permalink_photo"]});
+          
+    
+          using(
+            'app/pages/profile/tweets',
+            'core/jquery',
+            
+          function(page, $) {
+    
+            page({"initialState":{"cache_ttl":300,"module":"app\/pages\/profile\/tweets","section":null,"title":"Tantek \u00c7elik (t) auf Twitter"},"smsDeviceVerified":null,"swiftRoutes":{"profile":"\/"},"pageName":"profile","deviceEnabled":false,"pushState":false,"sectionName":"profile","loggedIn":false,"sandboxes":{"jsonp":"https:\/\/si0.twimg.com\/a\/1342841381\/jsonp_sandbox.html","detailsPane":"https:\/\/si0.twimg.com\/a\/1342841381\/details_pane_content_sandbox.html"},"wtf_options":{"small_avatar":true,"screen_name":"t","display_location":"st-component","limit":3,"pc":true},"hasPushDevice":null,"timeline_url":"\/t","scribeMetrics":500,"geoEnabled":false,"experiments":{},"assetsBasePath":"http:\/\/a0.twimg.com\/a\/1342841381\/","profile_id":11628,"internalReferer":null,"typeaheadData":{"savedSearches":{"items":[],"enabled":false},"accounts":{"remoteQueriesEnabled":false,"blockedIds":[],"enabled":false,"localQueriesEnabled":false},"showDebugInfo":false,"topics":{"remoteQueriesEnabled":false,"enabled":false,"localQueriesEnabled":false}},"scribeBufferSize":3,"periodicScribeFlush":0,"screenName":null,"environment":"production","formAuthenticityToken":"aee45343fd57577ace1d5b136f0daeb8ab1e3d08","profile_user":{"id":11628,"profile_image_url_https":"https:\/\/si0.twimg.com\/profile_images\/1266918745\/2009-068-tantek-headshot-square_normal.jpg","geo_enabled":false,"default_profile_image":false,"profile_sidebar_border_color":"C0DEED","favourites_count":0,"following":null,"show_all_inline_media":true,"utc_offset":-28800,"profile_background_tile":false,"profile_image_url":"http:\/\/a0.twimg.com\/profile_images\/1266918745\/2009-068-tantek-headshot-square_normal.jpg","url":"http:\/\/tantek.com\/","profile_sidebar_fill_color":"DDEEF6","name":"Tantek \u00c7elik","followers_count":42382,"created_at":"Tue Nov 07 02:26:19 +0000 2006","verified":false,"protected":false,"time_zone":"Pacific Time (US & Canada)","default_profile":true,"profile_background_color":"C0DEED","friends_count":870,"id_str":"11628","location":"Pacific Time Zone","description":"barcamp bike climb code create css design evolve hack html5 listen microformats mozilla open optimist pescatarian scientist skeptic standards teach think ux web","follow_request_sent":null,"profile_background_image_url":"http:\/\/a0.twimg.com\/images\/themes\/theme1\/bg.png","screen_name":"t","profile_background_image_url_https":"https:\/\/si0.twimg.com\/images\/themes\/theme1\/bg.png","listed_count":1459,"profile_link_color":"0084B4","lang":"en","profile_use_background_image":true,"statuses_count":6579,"status":{"in_reply_to_user_id":null,"possibly_sensitive":false,"in_reply_to_status_id_str":null,"id_str":"227679256577179648","in_reply_to_status_id":null,"favorited":false,"created_at":"Tue Jul 24 08:18:59 +0000 2012","in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"truncated":false,"coordinates":null,"geo":null,"place":null,"retweet_count":0,"source":"\u003Ca href=\"http:\/\/tantek.com\/w\/Falcon\" rel=\"nofollow\"\u003EFalcon\u003C\/a\u003E","contributors":null,"retweeted":false,"id":227679256577179648,"possibly_sensitive_editable":true,"text":"season 2 episode 1 of Alphas is up on Hulu: http:\/\/t.co\/p6m8U0gR Apparently \"day after episode airs\" = after 00:00 PDT (ttk.me t4K52)"},"is_translator":false,"profile_text_color":"333333","notifications":null,"contributors_enabled":false}});
+            window.__swift_loaded = true;
+            window.swiftActionQueue && window.swiftActionQueue.flush($);
+            $(document).trigger('uiSwiftLoaded');
+          });
+        </script>
+        <script></script>  </body>
+</html>

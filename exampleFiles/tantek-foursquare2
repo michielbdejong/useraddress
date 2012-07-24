@@ -1,0 +1,1156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:lift="http://liftweb.net" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <meta name="description" content="foursquare" />
+  <meta content="foursquare" name="application-name" />
+  
+  <meta content="Start the foursquare App" name="msapplication-tooltip" />
+  <meta content="/" name="msapplication-starturl" />
+  <meta content="width=1024;height=768" name="msapplication-window" />
+  <meta content="name=Recent Check-ins; action-uri=/; icon-uri=/favicon.ico" name="msapplication-task" />
+  <meta content="name=Profile;action-uri=/user;icon-uri=/favicon.ico" name="msapplication-task" />
+  <meta content="name=History;action-uri=/history;icon-uri=/favicon.ico" name="msapplication-task" />
+  <meta content="name=Badges;action-uri=/badges;icon-uri=/favicon.ico" name="msapplication-task" />
+  <meta content="name=Stats;action-uri=/stats;icon-uri=/favicon.ico" name="msapplication-task" />
+
+
+  <title>Tantek Ç. - foursquare</title>
+
+  <link href="https://foursquare.com/t" rel="canonical" />
+  <link href="https://ss1.4sqi.net/favicon-c62b82f6120e2c592a3e6f3476d66554.ico" type="image/x-icon" rel="icon" />
+  <link href="https://ss1.4sqi.net/favicon-c62b82f6120e2c592a3e6f3476d66554.ico" type="image/x-icon" rel="shortcut icon" />
+  <link href="https://ss0.4sqi.net/img/touch-icon-ipad-1d5a99e90171f6a0cc2f74920ec24021.png" sizes="72x72" rel="apple-touch-icon-precomposed" />
+  <link href="https://ss0.4sqi.net/img/touch-icon-ipad-retina-eb00e5716e37106ef1eb29febf6b5d34.png" sizes="144x144" rel="apple-touch-icon-precomposed" />
+  <link href="https://playfoursquare.s3.amazonaws.com/press/logo/foursquare-logo.svg" type="image/svg" rel="logo" />
+  <link href="https://ss0.4sqi.net/opensearch-6b463ddc6a73b41a3d4b1c705d814fcf.xml" title="foursquare" type="application/opensearchdescription+xml" rel="search" />
+
+  
+  
+  
+    <link href="https://ss0.4sqi.net/styles/master-redesign-c32944d8a3fb93707007a4a05a88a0a2.css" type="text/css" rel="stylesheet" />
+  
+
+
+  
+  <script type="text/javascript">(function() {window.fourSq = window.fourSq || {}; window.fourSq.api = window.fourSq.api || {}; window.fourSq.fb = window.fourSq.fb || {}; window.fourSq.user = window.fourSq.user || {}; window.fourSq.map = window.fourSq.map || {}; window.fourSq.debugLevel = function() {return fourSq.debug.Level.OFF;}; window.fourSq.api.config = {API_BASE: 'https://api.foursquare.com/', API_TOKEN: 'QEJ4AQPTMMNB413HGNZ5YDMJSHTOHZHMLZCAQCCLXIX41OMP', API_IFRAME: 'https://api.foursquare.com/xdreceiver.html', CLIENT_VERSION: '20120723'}; window.fourSq.user.config = {USER_PROFILE: undefined, USER_LAT: 51.0000000, USER_LNG: 9.0000000, LIST_COUNT: 0, SU6: false, LOCALE: 'en_US'}; window.fourSq.fb.config = {APP_ID: 86734274142, SCOPE: 'publish_stream,publish_actions,user_checkins,friends_checkins,user_location,user_birthday,email'}; window.fourSq.map.config = {MAX_ZOOM_LEVEL: 17}; document.domain = 'foursquare.com';})();</script>
+
+  
+
+  
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" id="jquery"></script>
+  
+  
+
+
+  <script src="https://ss0.4sqi.net/scripts/build/en/chrome/root-dc5b024820c5ccef7ad5ff12f15d7fae.js" type="text/javascript"></script>
+  <script src="https://ss1.4sqi.net/scripts/build/en/foursquare/root-fdba69eb419dc5e9a1867409847b4760.js" type="text/javascript"></script>
+
+  
+      
+    
+
+  
+  
+
+
+  
+  
+
+
+  
+
+  <script type="text/javascript">
+    $(function() {
+      $('a[rel*=facebox]').facebox();
+
+      var search = $('#search input').placeholder();
+      if ($.trim(search.val()) != '') {
+        search.keydown();
+      }
+    })
+  </script>
+
+  <script type="text/javascript">
+    $(function() {
+      FSQ_setupSearchAutocomplete($('#search input'));
+    })
+  </script>
+
+	
+<script src="https://ss0.4sqi.net/scripts/build/en/foursquare/user-page-987742efe56bab27851e0e2c2afce4fd.js" type="text/javascript"></script>
+
+	
+<meta content="86734274142" property="fb:app_id" />
+
+	
+<meta content="foursquare" property="og:site_name" />
+
+	
+<meta content="Tantek Ç." property="og:title" />
+
+	
+<meta content="Tantek Ç." property="og:description" />
+
+	
+<meta content="https://is0.4sqi.net/userpix_thumbs/476_1236324454.jpg" property="og:image" />
+
+	
+<meta content="https://foursquare.com/t" property="og:url" />
+
+	
+<meta content="playfoursquare:person" property="og:type" />
+
+	
+<meta content="626" property="playfoursquare:friends" />
+
+	
+<meta content="2061" property="playfoursquare:times_checked_in" />
+
+	
+<meta content="231" property="playfoursquare:tips_created" />
+
+	
+<script src="https://ss1.4sqi.net/scripts/build/en/foursquare/activityStream-0b5215d6340775874177f552fc55cd62.js" type="text/javascript"></script>
+
+	
+<script type="text/javascript">fourSq.i18n.langs = {"en":{"name":"English"},"it":{"name":"Italiano","host":"it"},"de":{"name":"Deutsch","host":"de"},"es":{"name":"Español","host":"es"},"fr":{"name":"Français","host":"fr"},"ja":{"name":"日本語","host":"ja"},"th":{"name":"ภาษาไทย","host":"th"},"ko":{"name":"한국어","host":"ko"},"ru":{"name":"Русский","host":"ru"},"pt":{"name":"Português","host":"pt"},"id":{"name":"Bahasa Indonesia","host":"id"},"tr":{"name":"Türkçe","host":"tr"}};</script>
+
+	
+</head>
+<body>
+    <div id="overlayFrame">
+  <div id="overlayPage">
+    <div id="photoDetails">
+      <div class="wrap">
+        <img src="https://ss0.4sqi.net/img/gallery-next-4fe893b7a611387276ef45cd74632759.png" height="32" width="32" alt="" class="navControl" id="next" />
+        <img src="https://ss1.4sqi.net/img/gallery-prev-6da401eecb2e8a276e2a89bea5ac3819.png" height="32" width="32" alt="" class="navControl" id="previous" />
+        <img width="32" height="32" alt="" src="" id="userPic" />
+        <h5 id="userName"><a href="#"></a></h5><span id="userAt"></span><h5 id="venueName"><a href="#"></a></h5>
+        <p id="date"></p>
+      </div>
+    </div>
+    <div id="mainPhoto"></div>
+    
+    
+  </div>
+</div>
+
+    
+
+
+    <div id="wrapper">
+
+      
+<div id="header">
+  
+
+  
+    <div class="wrap loggedOut translate">
+      <a id="logo" href="/">foursquare</a>
+      <form id="search" method="get" action="/search">
+        <input id="headerBarSearch" placeholder="Search people and places..." name="q" type="text" />
+        <button>Search</button>
+      </form>
+      <div id="loginLink"><a href="/login">Log in</a></div>
+      <div id="menu"><a href="/signup">Sign up</a></div>
+    </div>
+  
+</div>
+<div id="lift__noticesContainer__"></div>
+
+
+
+      
+    
+  <div class="translate wrap" id="signupPrompt">
+    <h3>Get personalized recommendations for places based on where you and your friends have been.</h3>
+    <a class="greenButton biggerButton" href="/signup/?source=nav">Get Started Now</a>
+    <iframe scrolling="no" allowTransparency="true" src="https://www.facebook.com/plugins/facepile.php?app_id=86734274142&amp;amp;width=600&amp;amp;max_rows=1" style="border:none; overflow:hidden; width:600px; height: 70px;" frameborder="0"></iframe>
+  </div>
+  
+  <style type="text/css">
+    #facebox .content {width: 520px;}
+    #loginBeforeActionPopup {
+      padding: 10px;
+      width: 500px;
+    }
+      #loginBeforeActionPopup h2 {font-size: 21px;}
+    #loginBeforeActionPopup #signupPopup {}
+      #loginBeforeActionPopup #signupPopup p {
+        float: left;
+        line-height: 18px;
+        margin: 15px 0;
+        padding-top: 2px;
+        width: 330px;
+      }
+      #loginBeforeActionPopup #signupPopup .newGreenButton {
+        font-size: 18px;
+        height: 40px;
+        float: right;
+        line-height: 40px;
+        margin: 15px 0;
+        text-transform: none;
+        width: 140px;
+      }
+    #loginBeforeActionPopup #loginPopup {
+      border-top: 1px solid #d9d9d9;
+      padding-top: 10px;
+    }
+      #loginBeforeActionPopup #loginPopup .linkStyle {
+        border: none;
+        background: none;
+        color: #2398c9;
+        cursor: pointer;
+        font: inherit;
+        font-weight: bold;
+        padding: 0;
+        margin: 0;
+      }
+        #loginBeforeActionPopup #loginPopup .linkStyle:hover {text-decoration: underline;}
+  </style>
+
+  <div style="display:none;" class="translate" id="loginBeforeActionPopup">
+
+    <h2 class="newh2">Join foursquare to <span id="loginActionLabel">do that</span></h2>
+      <form method="POST" action="/signup/pre-signup">
+        <input value="" type="hidden" name="actionKey" id="loginActionKey" />
+        <input value="" type="hidden" name="source" id="loginSource" />
+        <input value="" type="hidden" name="continue" id="loginContinue" />
+        <div id="signupPopup">
+          <p>Foursquare helps you meet up with friends and find<br />new places to experience in your neighborhood.</p>
+          <input value="Get Started" name="signupSubmit" class="newGreenButton greenButton translate" type="submit" />
+          <div style="clear: both;"></div>
+        </div>
+        <div id="loginPopup">
+          <strong>Already a foursquare user?</strong> <input value="Log in" name="loginSubmit" class="linkStyle" type="submit" /> to continue.
+        </div>
+      </form>
+
+  </div>
+
+
+
+  
+
+      <noscript><div class="translate" id="noscript">
+  <h3>You must enable JavaScript to use foursquare.com</h3>
+  <p>We use the latest and greatest technology available to provide the best possible web experience.<br />Please enable JavaScript in your browser settings to continue.</p>
+  <p class="small"><a href="/download">Download foursquare</a> for your smart phone and start exploring the world around you!</p>
+</div></noscript>
+
+      
+
+
+      <div class="wrap" id="container">
+        
+  
+
+  
+
+  <div class="twoColumns" id="userPage">
+    <div class="wideColumn">
+
+      
+      <div id="userInfo">
+        <div id="userPic">
+          <a href="https://is0.4sqi.net/userpix/476_1236324454.jpg"><img src="https://is0.4sqi.net/userpix_thumbs/476_1236324454.jpg" width="110" height="110" /></a>
+        </div>
+        <div id="userDetails">
+          <h2>Tantek Ç.</h2>
+
+          
+            <p class="userBio notranslate">
+              http://tantek.com/
+            </p>
+          
+
+          
+
+          <p>
+            
+            <a data-source="user-tw" data-sig="BwSdkEt4NJ+CHqTTQd4iIh4yVd4=" target="_blank" class="twLink" href="http://twitter.com/t" onmousedown="fourSq.ui.OutgoingLink.mousedown($(this), event)" rel="nofollow"><img src="https://ss0.4sqi.net/img/twitter_16-55a45a27d23afc17be3e055c04de03b7.png" width="16" alt="Twitter" height="16" /></a>
+            <span class="homeTown">San Francisco, CA</span>
+            
+          </p>
+        </div>
+        <div id="userStats">
+          <div class="stats">
+            <h4>12,080</h4>
+            <span class="translate">Check-ins</span>
+          </div>
+          <div class="stats">
+            <h4>2,061</h4>
+            <span class="translate">Days out</span>
+          </div>
+          
+          
+        </div>
+      </div>
+
+      
+      
+
+      
+      
+
+      
+  
+    
+    <div class="blockContainer" id="tipsContainer">
+      
+        <div class="blockHeader translate" id="tipsHeader">
+          
+          <p><a href="/t/list/tips">See all <span class="notranslate">231</span> tips</a></p>
+          
+          <h3>Tips</h3>
+        </div>
+      
+      
+
+      <div id="tipsList">
+
+        
+          
+        
+        <script type="text/javascript">
+          var USER_TIPS_JSON = {"count":21,"items":[{"id":"4a9ad63e70c603bb12678eb4","createdAt":1251661374,"text":"bring a small clear plastic bottle of water, drink the whole thing while in the security line, pack the empty bottle in your carry-on, refill it after passing through security.","likes":{"count":42,"groups":[{"type":"others","count":1,"items":[{"id":"15632958","firstName":"Alice","lastName":"L.","canonicalUrl":"https:\/\/foursquare.com\/aliceofheartss","photo":{"prefix":"https:\/\/irs3.4sqi.net\/img\/user\/","suffix":"\/5GIYN50SRNOGCFI4.jpg"}}]}],"summary":"42 likes"},"venue":{"id":"41059b00f964a520850b1fe3","name":"San Francisco International Airport (SFO)","contact":{"phone":"8004359736","formattedPhone":"(800) 435-9736","twitter":"flySFO"},"location":{"address":"McDonnell Rd","crossStreet":"at Link Rd","lat":37.61640705577992,"lng":-122.38615036010742,"distance":9092027,"postalCode":"94128","city":"San Francisco","state":"CA","country":"United States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d1ed931735","name":"Airport","pluralName":"Airports","shortName":"Airport","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/travel\/airport_","suffix":".png"},"primary":true}],"verified":true,"stats":{"checkinsCount":673513,"usersCount":188049,"tipCount":1781},"url":"http:\/\/flysfo.com","urlSig":"ftcTRl+i+l1G1Um1dEmHWBXlD+Y=","likes":{"count":134,"groups":[{"type":"others","count":134,"items":[]}],"summary":"134 likes"},"venuePage":{"id":"32748604"}},"user":{"id":"476","firstName":"Tantek","lastName":"Ç.","canonicalUrl":"https:\/\/foursquare.com\/t","photo":{"prefix":"https:\/\/irs3.4sqi.net\/img\/user\/","suffix":"\/476_1236324454.jpg"},"tips":{"count":231},"gender":"male","homeCity":"San Francisco, CA","bio":"http:\/\/tantek.com\/","contact":{"twitter":"t"}},"todo":{"count":25,"groups":[{"type":"friends","name":"Friends who want to do this","count":0,"items":[]},{"type":"others","name":"Others who want to do this","count":25,"items":[]}]}},{"id":"4f5a7a00e4b09f0f96ef6e4e","createdAt":1331329536,"text":"Switch your devices to use the new \"SXSW2012\" wifi.","likes":{"count":21,"groups":[],"summary":"21 likes"},"venue":{"id":"440da323f964a52092301fe3","name":"Austin Convention Center","contact":{"phone":"5124044000","formattedPhone":"(512) 404-4000"},"location":{"address":"500 E. Cesar Chavez St.","crossStreet":"btwn Trinity & Red River St.","lat":30.263577,"lng":-97.740086,"distance":8505004,"postalCode":"78701","city":"Austin","state":"TX","country":"United States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d1ff931735","name":"Convention Center","pluralName":"Convention Centers","shortName":"Convention Center","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/building\/conventioncenter_","suffix":".png"},"primary":true}],"verified":true,"stats":{"checkinsCount":92686,"usersCount":31239,"tipCount":314},"url":"http:\/\/www.austinconventioncenter.com","urlSig":"80zB\/1PToUA\/AnQ3Au4nFrX\/DN8=","likes":{"count":3,"groups":[{"type":"others","count":3,"items":[{"id":"30142186","firstName":"Demeter Interactive","canonicalUrl":"https:\/\/foursquare.com\/demeterinteract","photo":{"prefix":"https:\/\/irs3.4sqi.net\/img\/user\/","suffix":"\/II0DITORQNBBV1CM.jpg"},"type":"page"},{"id":"6422290","firstName":"Sean","lastName":"A.","canonicalUrl":"https:\/\/foursquare.com\/user\/6422290","photo":{"prefix":"https:\/\/irs1.4sqi.net\/img\/user\/","suffix":"\/U3JIGWCOCYXOMMRD.jpg"}},{"id":"30422741","firstName":"Mir","lastName":"S.","canonicalUrl":"https:\/\/foursquare.com\/user\/30422741","photo":{"prefix":"https:\/\/irs0.4sqi.net\/img\/user\/","suffix":"\/3ZW2L1GWBURLBLBA.jpg"}}]}],"summary":"3 likes"}},"user":{"id":"476","firstName":"Tantek","lastName":"Ç.","canonicalUrl":"https:\/\/foursquare.com\/t","photo":{"prefix":"https:\/\/irs3.4sqi.net\/img\/user\/","suffix":"\/476_1236324454.jpg"},"tips":{"count":231},"gender":"male","homeCity":"San Francisco, CA","bio":"http:\/\/tantek.com\/","contact":{"twitter":"t"}},"todo":{"count":3,"groups":[{"type":"friends","name":"Friends who want to do this","count":0,"items":[]},{"type":"others","name":"Others who want to do this","count":3,"items":[]}]}},{"id":"4a6261ff70c603bb4d3d8eb4","createdAt":1247961599,"text":"flash a V0.","likes":{"count":22,"groups":[],"summary":"22 likes"},"venue":{"id":"49d14d76f964a520755b1fe3","name":"Planet Granite","contact":{"phone":"4156923434","formattedPhone":"(415) 692-3434"},"location":{"address":"924 Old Mason St","lat":37.80398592212445,"lng":-122.46794700622559,"distance":9077110,"postalCode":"94129","city":"San Francisco","state":"CA","country":"United States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d176941735","name":"Gym","pluralName":"Gyms","shortName":"Gym","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/building\/gym_","suffix":".png"},"primary":true}],"verified":false,"stats":{"checkinsCount":7017,"usersCount":1215,"tipCount":21},"likes":{"count":4,"groups":[{"type":"others","count":4,"items":[{"id":"3564332","firstName":"Scott","lastName":"F.","canonicalUrl":"https:\/\/foursquare.com\/user\/3564332","photo":{"prefix":"https:\/\/irs2.4sqi.net\/img\/user\/","suffix":"\/HNIR0LW1EB1X23SH.jpg"}},{"id":"145430","firstName":"Greg","lastName":"K.","canonicalUrl":"https:\/\/foursquare.com\/gregkandankulam","photo":{"prefix":"https:\/\/irs1.4sqi.net\/img\/user\/","suffix":"\/AXLLRAY5VFRHQ1SC.jpg"}},{"id":"12363","firstName":"Nick","lastName":"B.","canonicalUrl":"https:\/\/foursquare.com\/nickbaum","photo":{"prefix":"https:\/\/irs2.4sqi.net\/img\/user\/","suffix":"\/SFOLZVUWT4PPE5TI.jpg"}},{"id":"15356841","firstName":"Camille","lastName":"A.","canonicalUrl":"https:\/\/foursquare.com\/user\/15356841","photo":{"prefix":"https:\/\/irs0.4sqi.net\/img\/user\/","suffix":"\/1M4KWTOSBYZALIHN.jpg"}}]}],"summary":"4 likes"}},"user":{"id":"476","firstName":"Tantek","lastName":"Ç.","canonicalUrl":"https:\/\/foursquare.com\/t","photo":{"prefix":"https:\/\/irs3.4sqi.net\/img\/user\/","suffix":"\/476_1236324454.jpg"},"tips":{"count":231},"gender":"male","homeCity":"San Francisco, CA","bio":"http:\/\/tantek.com\/","contact":{"twitter":"t"}},"todo":{"count":2,"groups":[{"type":"friends","name":"Friends who want to do this","count":0,"items":[]},{"type":"others","name":"Others who want to do this","count":2,"items":[]}]}},{"id":"49b0d8d870c603bbed0d8eb4","createdAt":1236326616,"text":"Just go. It rocks. Could spend hours there. Hours. Probably even days.","likes":{"count":80,"groups":[{"type":"others","count":1,"items":[{"id":"11930797","firstName":"Ryan","lastName":"W.","canonicalUrl":"https:\/\/foursquare.com\/ryanwyatt","photo":{"prefix":"https:\/\/irs1.4sqi.net\/img\/user\/","suffix":"\/41AB0DUGIESMKEL4.jpg"}}]}],"summary":"80 likes"},"venue":{"id":"49cc413df964a5205a591fe3","name":"California Academy of Sciences","contact":{"phone":"4153798000","formattedPhone":"(415) 379-8000","twitter":"calacademy"},"location":{"address":"55 Music Concourse Dr","crossStreet":"Golden Gate Park","lat":37.7697648824009,"lng":-122.46631622314455,"distance":9080390,"postalCode":"94118","city":"San Francisco","state":"CA","country":"United States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d191941735","name":"Science Museum","pluralName":"Science Museums","shortName":"Science Museum","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/arts_entertainment\/museum_science_","suffix":".png"},"primary":true}],"verified":true,"stats":{"checkinsCount":26179,"usersCount":18123,"tipCount":200},"url":"http:\/\/www.calacademy.org","urlSig":"gHMZFV1Jhd3efehndTv1aYyEIII=","likes":{"count":32,"groups":[{"type":"others","count":32,"items":[]}],"summary":"32 likes"}},"user":{"id":"476","firstName":"Tantek","lastName":"Ç.","canonicalUrl":"https:\/\/foursquare.com\/t","photo":{"prefix":"https:\/\/irs3.4sqi.net\/img\/user\/","suffix":"\/476_1236324454.jpg"},"tips":{"count":231},"gender":"male","homeCity":"San Francisco, CA","bio":"http:\/\/tantek.com\/","contact":{"twitter":"t"}},"todo":{"count":15,"groups":[{"type":"friends","name":"Friends who want to do this","count":0,"items":[]},{"type":"others","name":"Others who want to do this","count":15,"items":[]}]}},{"id":"4a43dc4570c603bb07328eb4","createdAt":1245961285,"text":"flash a V3.","likes":{"count":18,"groups":[],"summary":"18 likes"},"venue":{"id":"408c5100f964a520c8f21ee3","name":"Mission Cliffs","contact":{"phone":"4155500515","formattedPhone":"(415) 550-0515","twitter":"TouchstoneClimb"},"location":{"address":"2295 Harrison St","crossStreet":"at 19th St","lat":37.76064131261189,"lng":-122.41251769912533,"distance":9079025,"postalCode":"94110","city":"San Francisco","state":"CA","country":"United States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d176941735","name":"Gym","pluralName":"Gyms","shortName":"Gym","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/building\/gym_","suffix":".png"},"primary":true}],"verified":false,"stats":{"checkinsCount":11258,"usersCount":1301,"tipCount":45},"url":"http:\/\/www.touchstoneclimbing.com\/mission-cliffs","urlSig":"ZlLZxWn3XD\/TWm7FXq2eTzTrZVE=","likes":{"count":4,"groups":[{"type":"others","count":4,"items":[{"id":"6046972","firstName":"Doc","lastName":"P.","canonicalUrl":"https:\/\/foursquare.com\/docpop","photo":{"prefix":"https:\/\/irs0.4sqi.net\/img\/user\/","suffix":"\/BGTB2PXZNIOR53Y3.jpg"}},{"id":"9019652","firstName":"Andrew","lastName":"Z.","canonicalUrl":"https:\/\/foursquare.com\/andrew5661","photo":{"prefix":"https:\/\/irs3.4sqi.net\/img\/user\/","suffix":"\/EMAWWSK0WUZEQPJK.jpg"}},{"id":"23940","firstName":"Derek","lastName":"C.","canonicalUrl":"https:\/\/foursquare.com\/derekpcollins","photo":{"prefix":"https:\/\/irs1.4sqi.net\/img\/user\/","suffix":"\/5TXDQGNNMLMRY2YC.png"}},{"id":"32565654","firstName":"Cyrus","lastName":"T.","canonicalUrl":"https:\/\/foursquare.com\/chr0mavision","photo":{"prefix":"https:\/\/irs0.4sqi.net\/img\/user\/","suffix":"\/5NVXSWGT5WVV3IKH.jpg"}}]}],"summary":"4 likes"}},"user":{"id":"476","firstName":"Tantek","lastName":"Ç.","canonicalUrl":"https:\/\/foursquare.com\/t","photo":{"prefix":"https:\/\/irs3.4sqi.net\/img\/user\/","suffix":"\/476_1236324454.jpg"},"tips":{"count":231},"gender":"male","homeCity":"San Francisco, CA","bio":"http:\/\/tantek.com\/","contact":{"twitter":"t"}},"todo":{"count":2,"groups":[{"type":"friends","name":"Friends who want to do this","count":0,"items":[]},{"type":"others","name":"Others who want to do this","count":2,"items":[]}]}},{"id":"4e289a17cc3f09bcb8652d5f","createdAt":1311283735,"text":"Get lunch here on a sunny day, eat it outside and bask in the warm sunshine while working with the free wifi. And bring your SPF.","likes":{"count":25,"groups":[],"summary":"25 likes"},"venue":{"id":"49ba70ecf964a52063531fe3","name":"The Creamery","contact":{"phone":"4158961445","formattedPhone":"(415) 896-1445","twitter":"TheCreamerySF"},"location":{"address":"685 4th St","crossStreet":"at Townsend St","lat":37.77740222176594,"lng":-122.39517674002478,"distance":9076657,"postalCode":"94107","city":"San Francisco","state":"CA","country":"United States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d1e0931735","name":"Coffee Shop","pluralName":"Coffee Shops","shortName":"Coffee Shop","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/food\/coffeeshop_","suffix":".png"},"primary":true}],"verified":false,"stats":{"checkinsCount":11259,"usersCount":4003,"tipCount":90},"url":"http:\/\/thecreamerysf.com\/","urlSig":"eL0ykYjkIh+\/9oO9YH5i1v7DZBY=","likes":{"count":8,"groups":[{"type":"others","count":8,"items":[{"id":"36274","firstName":"Stéphane","lastName":"R.","canonicalUrl":"https:\/\/foursquare.com\/stephane","photo":{"prefix":"https:\/\/irs1.4sqi.net\/img\/user\/","suffix":"\/BMHLBISCJCFJ2UAE.jpg"}},{"id":"51340","firstName":"Shane","lastName":"M.","canonicalUrl":"https:\/\/foursquare.com\/shanemac","photo":{"prefix":"https:\/\/irs0.4sqi.net\/img\/user\/","suffix":"\/ILNGVOPHPAB5YEAQ.jpg"}},{"id":"2119","firstName":"Nick","lastName":"O.","canonicalUrl":"https:\/\/foursquare.com\/allnick","photo":{"prefix":"https:\/\/irs1.4sqi.net\/img\/user\/","suffix":"\/PKDWW2J2MFANJJ1L.jpg"}},{"id":"137065","firstName":"Jeremy","canonicalUrl":"https:\/\/foursquare.com\/mstrrichardson","photo":{"prefix":"https:\/\/irs1.4sqi.net\/img\/user\/","suffix":"\/137065_1259739478918.jpg"}}]}],"summary":"8 likes"}},"user":{"id":"476","firstName":"Tantek","lastName":"Ç.","canonicalUrl":"https:\/\/foursquare.com\/t","photo":{"prefix":"https:\/\/irs3.4sqi.net\/img\/user\/","suffix":"\/476_1236324454.jpg"},"tips":{"count":231},"gender":"male","homeCity":"San Francisco, CA","bio":"http:\/\/tantek.com\/","contact":{"twitter":"t"}},"todo":{"count":10,"groups":[{"type":"friends","name":"Friends who want to do this","count":0,"items":[]},{"type":"others","name":"Others who want to do this","count":10,"items":[]}]}},{"id":"4ac7d67770c603bb8f8b8eb4","createdAt":1254610551,"text":"sit near the windows and use the open SFHA wifi.","likes":{"count":23,"groups":[{"type":"others","count":2,"items":[{"id":"1588","firstName":"Kevin","lastName":"T.","canonicalUrl":"https:\/\/foursquare.com\/kevintwohy","photo":{"prefix":"https:\/\/irs0.4sqi.net\/img\/user\/","suffix":"\/1588_1259970489891.jpg"}},{"id":"2770","firstName":"Anand","lastName":"I.","canonicalUrl":"https:\/\/foursquare.com\/ai","photo":{"prefix":"https:\/\/irs2.4sqi.net\/img\/user\/","suffix":"\/2770_1238015657.jpg"}}]}],"summary":"23 likes"},"venue":{"id":"480d1a5ef964a520284f1fe3","name":"Four Barrel Coffee","contact":{"phone":"4152520800","formattedPhone":"(415) 252-0800","twitter":"fourbarrel"},"location":{"address":"375 Valencia St","crossStreet":"btwn 14th & 15th St","lat":37.76700253951794,"lng":-122.42194754601947,"distance":9078799,"postalCode":"94103","city":"San Francisco","state":"CA","country":"United States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d1e0931735","name":"Coffee Shop","pluralName":"Coffee Shops","shortName":"Coffee Shop","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/food\/coffeeshop_","suffix":".png"},"primary":true}],"verified":false,"stats":{"checkinsCount":18723,"usersCount":6262,"tipCount":163},"url":"http:\/\/www.fourbarrelcoffee.com","urlSig":"8+2Knh4POGkKCaSewpmxz0NbLq8=","likes":{"count":30,"groups":[{"type":"others","count":30,"items":[]}],"summary":"30 likes"}},"user":{"id":"476","firstName":"Tantek","lastName":"Ç.","canonicalUrl":"https:\/\/foursquare.com\/t","photo":{"prefix":"https:\/\/irs3.4sqi.net\/img\/user\/","suffix":"\/476_1236324454.jpg"},"tips":{"count":231},"gender":"male","homeCity":"San Francisco, CA","bio":"http:\/\/tantek.com\/","contact":{"twitter":"t"}},"todo":{"count":6,"groups":[{"type":"friends","name":"Friends who want to do this","count":0,"items":[]},{"type":"others","name":"Others who want to do this","count":6,"items":[]}]}},{"id":"4a43c0d570c603bbf5318eb4","createdAt":1245954261,"text":"climb all the V0s in the bouldering area in one session.","likes":{"count":13,"groups":[],"summary":"13 likes"},"venue":{"id":"408c5100f964a520c8f21ee3","name":"Mission Cliffs","contact":{"phone":"4155500515","formattedPhone":"(415) 550-0515","twitter":"TouchstoneClimb"},"location":{"address":"2295 Harrison St","crossStreet":"at 19th St","lat":37.76064131261189,"lng":-122.41251769912533,"distance":9079025,"postalCode":"94110","city":"San Francisco","state":"CA","country":"United States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d176941735","name":"Gym","pluralName":"Gyms","shortName":"Gym","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/building\/gym_","suffix":".png"},"primary":true}],"verified":false,"stats":{"checkinsCount":11258,"usersCount":1301,"tipCount":45},"url":"http:\/\/www.touchstoneclimbing.com\/mission-cliffs","urlSig":"ZlLZxWn3XD\/TWm7FXq2eTzTrZVE=","likes":{"count":4,"groups":[{"type":"others","count":4,"items":[{"id":"6046972","firstName":"Doc","lastName":"P.","canonicalUrl":"https:\/\/foursquare.com\/docpop","photo":{"prefix":"https:\/\/irs0.4sqi.net\/img\/user\/","suffix":"\/BGTB2PXZNIOR53Y3.jpg"}},{"id":"9019652","firstName":"Andrew","lastName":"Z.","canonicalUrl":"https:\/\/foursquare.com\/andrew5661","photo":{"prefix":"https:\/\/irs3.4sqi.net\/img\/user\/","suffix":"\/EMAWWSK0WUZEQPJK.jpg"}},{"id":"23940","firstName":"Derek","lastName":"C.","canonicalUrl":"https:\/\/foursquare.com\/derekpcollins","photo":{"prefix":"https:\/\/irs1.4sqi.net\/img\/user\/","suffix":"\/5TXDQGNNMLMRY2YC.png"}},{"id":"32565654","firstName":"Cyrus","lastName":"T.","canonicalUrl":"https:\/\/foursquare.com\/chr0mavision","photo":{"prefix":"https:\/\/irs0.4sqi.net\/img\/user\/","suffix":"\/5NVXSWGT5WVV3IKH.jpg"}}]}],"summary":"4 likes"}},"user":{"id":"476","firstName":"Tantek","lastName":"Ç.","canonicalUrl":"https:\/\/foursquare.com\/t","photo":{"prefix":"https:\/\/irs3.4sqi.net\/img\/user\/","suffix":"\/476_1236324454.jpg"},"tips":{"count":231},"gender":"male","homeCity":"San Francisco, CA","bio":"http:\/\/tantek.com\/","contact":{"twitter":"t"}},"todo":{"count":3,"groups":[{"type":"friends","name":"Friends who want to do this","count":0,"items":[]},{"type":"others","name":"Others who want to do this","count":3,"items":[]}]}},{"id":"4a62621470c603bb4e3d8eb4","createdAt":1247961620,"text":"flash a V1.","likes":{"count":19,"groups":[],"summary":"19 likes"},"venue":{"id":"49d14d76f964a520755b1fe3","name":"Planet Granite","contact":{"phone":"4156923434","formattedPhone":"(415) 692-3434"},"location":{"address":"924 Old Mason St","lat":37.80398592212445,"lng":-122.46794700622559,"distance":9077110,"postalCode":"94129","city":"San Francisco","state":"CA","country":"United States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d176941735","name":"Gym","pluralName":"Gyms","shortName":"Gym","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/building\/gym_","suffix":".png"},"primary":true}],"verified":false,"stats":{"checkinsCount":7017,"usersCount":1215,"tipCount":21},"likes":{"count":4,"groups":[{"type":"others","count":4,"items":[{"id":"3564332","firstName":"Scott","lastName":"F.","canonicalUrl":"https:\/\/foursquare.com\/user\/3564332","photo":{"prefix":"https:\/\/irs2.4sqi.net\/img\/user\/","suffix":"\/HNIR0LW1EB1X23SH.jpg"}},{"id":"145430","firstName":"Greg","lastName":"K.","canonicalUrl":"https:\/\/foursquare.com\/gregkandankulam","photo":{"prefix":"https:\/\/irs1.4sqi.net\/img\/user\/","suffix":"\/AXLLRAY5VFRHQ1SC.jpg"}},{"id":"12363","firstName":"Nick","lastName":"B.","canonicalUrl":"https:\/\/foursquare.com\/nickbaum","photo":{"prefix":"https:\/\/irs2.4sqi.net\/img\/user\/","suffix":"\/SFOLZVUWT4PPE5TI.jpg"}},{"id":"15356841","firstName":"Camille","lastName":"A.","canonicalUrl":"https:\/\/foursquare.com\/user\/15356841","photo":{"prefix":"https:\/\/irs0.4sqi.net\/img\/user\/","suffix":"\/1M4KWTOSBYZALIHN.jpg"}}]}],"summary":"4 likes"}},"user":{"id":"476","firstName":"Tantek","lastName":"Ç.","canonicalUrl":"https:\/\/foursquare.com\/t","photo":{"prefix":"https:\/\/irs3.4sqi.net\/img\/user\/","suffix":"\/476_1236324454.jpg"},"tips":{"count":231},"gender":"male","homeCity":"San Francisco, CA","bio":"http:\/\/tantek.com\/","contact":{"twitter":"t"}},"todo":{"count":4,"groups":[{"type":"friends","name":"Friends who want to do this","count":0,"items":[]},{"type":"others","name":"Others who want to do this","count":4,"items":[]}]}},{"id":"4a490e9a70c603bb6f338eb4","createdAt":1246301850,"text":"flash a 5.10B.","likes":{"count":23,"groups":[],"summary":"23 likes"},"venue":{"id":"408c5100f964a520c8f21ee3","name":"Mission Cliffs","contact":{"phone":"4155500515","formattedPhone":"(415) 550-0515","twitter":"TouchstoneClimb"},"location":{"address":"2295 Harrison St","crossStreet":"at 19th St","lat":37.76064131261189,"lng":-122.41251769912533,"distance":9079025,"postalCode":"94110","city":"San Francisco","state":"CA","country":"United States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d176941735","name":"Gym","pluralName":"Gyms","shortName":"Gym","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/building\/gym_","suffix":".png"},"primary":true}],"verified":false,"stats":{"checkinsCount":11258,"usersCount":1301,"tipCount":45},"url":"http:\/\/www.touchstoneclimbing.com\/mission-cliffs","urlSig":"ZlLZxWn3XD\/TWm7FXq2eTzTrZVE=","likes":{"count":4,"groups":[{"type":"others","count":4,"items":[{"id":"6046972","firstName":"Doc","lastName":"P.","canonicalUrl":"https:\/\/foursquare.com\/docpop","photo":{"prefix":"https:\/\/irs0.4sqi.net\/img\/user\/","suffix":"\/BGTB2PXZNIOR53Y3.jpg"}},{"id":"9019652","firstName":"Andrew","lastName":"Z.","canonicalUrl":"https:\/\/foursquare.com\/andrew5661","photo":{"prefix":"https:\/\/irs3.4sqi.net\/img\/user\/","suffix":"\/EMAWWSK0WUZEQPJK.jpg"}},{"id":"23940","firstName":"Derek","lastName":"C.","canonicalUrl":"https:\/\/foursquare.com\/derekpcollins","photo":{"prefix":"https:\/\/irs1.4sqi.net\/img\/user\/","suffix":"\/5TXDQGNNMLMRY2YC.png"}},{"id":"32565654","firstName":"Cyrus","lastName":"T.","canonicalUrl":"https:\/\/foursquare.com\/chr0mavision","photo":{"prefix":"https:\/\/irs0.4sqi.net\/img\/user\/","suffix":"\/5NVXSWGT5WVV3IKH.jpg"}}]}],"summary":"4 likes"}},"user":{"id":"476","firstName":"Tantek","lastName":"Ç.","canonicalUrl":"https:\/\/foursquare.com\/t","photo":{"prefix":"https:\/\/irs3.4sqi.net\/img\/user\/","suffix":"\/476_1236324454.jpg"},"tips":{"count":231},"gender":"male","homeCity":"San Francisco, CA","bio":"http:\/\/tantek.com\/","contact":{"twitter":"t"}},"todo":{"count":1,"groups":[{"type":"friends","name":"Friends who want to do this","count":0,"items":[]},{"type":"others","name":"Others who want to do this","count":1,"items":[]}]}},{"id":"4a89d69270c603bbb75a8eb4","createdAt":1250547346,"text":"after exiting Airtrain, before entering the metro, instead of the $7.25 combo ticket, buy a $5 Airtrain only ticket, and a separate metro ticket (e.g. 7 day unlimited).","likes":{"count":14,"groups":[],"summary":"14 likes"},"venue":{"id":"4a7ead5ef964a5200cf21fe3","name":"MTA Subway - Howard Beach\/JFK Airport (A)","contact":{},"location":{"address":"158-99 103rd St.","crossStreet":"at 159th Ave","lat":40.660473835167046,"lng":-73.8302910891864,"distance":6181712,"postalCode":"11414","city":"Howard Beach","state":"NY","country":"United States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d1fd931735","name":"Subway","pluralName":"Subways","shortName":"Subway","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/travel\/subway_","suffix":".png"},"primary":true}],"verified":false,"stats":{"checkinsCount":4318,"usersCount":1884,"tipCount":14},"likes":{"count":0,"groups":[]}},"user":{"id":"476","firstName":"Tantek","lastName":"Ç.","canonicalUrl":"https:\/\/foursquare.com\/t","photo":{"prefix":"https:\/\/irs3.4sqi.net\/img\/user\/","suffix":"\/476_1236324454.jpg"},"tips":{"count":231},"gender":"male","homeCity":"San Francisco, CA","bio":"http:\/\/tantek.com\/","contact":{"twitter":"t"}},"todo":{"count":2,"groups":[{"type":"friends","name":"Friends who want to do this","count":0,"items":[]},{"type":"others","name":"Others who want to do this","count":2,"items":[]}]}},{"id":"4a43dc1870c603bb05328eb4","createdAt":1245961240,"text":"flash a V1.","likes":{"count":34,"groups":[],"summary":"34 likes"},"venue":{"id":"408c5100f964a520c8f21ee3","name":"Mission Cliffs","contact":{"phone":"4155500515","formattedPhone":"(415) 550-0515","twitter":"TouchstoneClimb"},"location":{"address":"2295 Harrison St","crossStreet":"at 19th St","lat":37.76064131261189,"lng":-122.41251769912533,"distance":9079025,"postalCode":"94110","city":"San Francisco","state":"CA","country":"United States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d176941735","name":"Gym","pluralName":"Gyms","shortName":"Gym","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/building\/gym_","suffix":".png"},"primary":true}],"verified":false,"stats":{"checkinsCount":11258,"usersCount":1301,"tipCount":45},"url":"http:\/\/www.touchstoneclimbing.com\/mission-cliffs","urlSig":"ZlLZxWn3XD\/TWm7FXq2eTzTrZVE=","likes":{"count":4,"groups":[{"type":"others","count":4,"items":[{"id":"6046972","firstName":"Doc","lastName":"P.","canonicalUrl":"https:\/\/foursquare.com\/docpop","photo":{"prefix":"https:\/\/irs0.4sqi.net\/img\/user\/","suffix":"\/BGTB2PXZNIOR53Y3.jpg"}},{"id":"9019652","firstName":"Andrew","lastName":"Z.","canonicalUrl":"https:\/\/foursquare.com\/andrew5661","photo":{"prefix":"https:\/\/irs3.4sqi.net\/img\/user\/","suffix":"\/EMAWWSK0WUZEQPJK.jpg"}},{"id":"23940","firstName":"Derek","lastName":"C.","canonicalUrl":"https:\/\/foursquare.com\/derekpcollins","photo":{"prefix":"https:\/\/irs1.4sqi.net\/img\/user\/","suffix":"\/5TXDQGNNMLMRY2YC.png"}},{"id":"32565654","firstName":"Cyrus","lastName":"T.","canonicalUrl":"https:\/\/foursquare.com\/chr0mavision","photo":{"prefix":"https:\/\/irs0.4sqi.net\/img\/user\/","suffix":"\/5NVXSWGT5WVV3IKH.jpg"}}]}],"summary":"4 likes"}},"user":{"id":"476","firstName":"Tantek","lastName":"Ç.","canonicalUrl":"https:\/\/foursquare.com\/t","photo":{"prefix":"https:\/\/irs3.4sqi.net\/img\/user\/","suffix":"\/476_1236324454.jpg"},"tips":{"count":231},"gender":"male","homeCity":"San Francisco, CA","bio":"http:\/\/tantek.com\/","contact":{"twitter":"t"}},"todo":{"count":0,"groups":[{"type":"friends","name":"Friends who want to do this","count":0,"items":[]},{"type":"others","name":"Others who want to do this","count":0,"items":[]}]}},{"id":"4b2ed2f070c603bbaa838fb4","createdAt":1261359856,"text":"use http:\/\/nextbus.com\/ to check to see when and which busses are arriving at the stop.","entities":[{"indices":[4,23],"type":"url","object":{"url":"http:\/\/nextbus.com\/","urlSig":"BACxRDwi5djz3KeLxxZhfC7PI9s="}}],"url":"http:\/\/nextbus.com\/","urlSig":"BACxRDwi5djz3KeLxxZhfC7PI9s=","likes":{"count":27,"groups":[],"summary":"27 likes"},"venue":{"id":"4adb8632f964a5209d2821e3","name":"Powell MUNI Metro Station","contact":{},"location":{"address":"899 Market St","crossStreet":"at Powell St","lat":37.7845430326705,"lng":-122.40787712941041,"distance":9076492,"city":"San Francisco","state":"CA","country":"United States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d1fd931735","name":"Subway","pluralName":"Subways","shortName":"Subway","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/travel\/subway_","suffix":".png"},"primary":true}],"verified":false,"stats":{"checkinsCount":14792,"usersCount":3670,"tipCount":16},"likes":{"count":0,"groups":[]}},"user":{"id":"476","firstName":"Tantek","lastName":"Ç.","canonicalUrl":"https:\/\/foursquare.com\/t","photo":{"prefix":"https:\/\/irs3.4sqi.net\/img\/user\/","suffix":"\/476_1236324454.jpg"},"tips":{"count":231},"gender":"male","homeCity":"San Francisco, CA","bio":"http:\/\/tantek.com\/","contact":{"twitter":"t"}},"todo":{"count":3,"groups":[{"type":"friends","name":"Friends who want to do this","count":0,"items":[]},{"type":"others","name":"Others who want to do this","count":3,"items":[]}]}},{"id":"4a43dc2a70c603bb06328eb4","createdAt":1245961258,"text":"flash a V2.","likes":{"count":26,"groups":[],"summary":"26 likes"},"venue":{"id":"408c5100f964a520c8f21ee3","name":"Mission Cliffs","contact":{"phone":"4155500515","formattedPhone":"(415) 550-0515","twitter":"TouchstoneClimb"},"location":{"address":"2295 Harrison St","crossStreet":"at 19th St","lat":37.76064131261189,"lng":-122.41251769912533,"distance":9079025,"postalCode":"94110","city":"San Francisco","state":"CA","country":"United States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d176941735","name":"Gym","pluralName":"Gyms","shortName":"Gym","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/building\/gym_","suffix":".png"},"primary":true}],"verified":false,"stats":{"checkinsCount":11258,"usersCount":1301,"tipCount":45},"url":"http:\/\/www.touchstoneclimbing.com\/mission-cliffs","urlSig":"ZlLZxWn3XD\/TWm7FXq2eTzTrZVE=","likes":{"count":4,"groups":[{"type":"others","count":4,"items":[{"id":"6046972","firstName":"Doc","lastName":"P.","canonicalUrl":"https:\/\/foursquare.com\/docpop","photo":{"prefix":"https:\/\/irs0.4sqi.net\/img\/user\/","suffix":"\/BGTB2PXZNIOR53Y3.jpg"}},{"id":"9019652","firstName":"Andrew","lastName":"Z.","canonicalUrl":"https:\/\/foursquare.com\/andrew5661","photo":{"prefix":"https:\/\/irs3.4sqi.net\/img\/user\/","suffix":"\/EMAWWSK0WUZEQPJK.jpg"}},{"id":"23940","firstName":"Derek","lastName":"C.","canonicalUrl":"https:\/\/foursquare.com\/derekpcollins","photo":{"prefix":"https:\/\/irs1.4sqi.net\/img\/user\/","suffix":"\/5TXDQGNNMLMRY2YC.png"}},{"id":"32565654","firstName":"Cyrus","lastName":"T.","canonicalUrl":"https:\/\/foursquare.com\/chr0mavision","photo":{"prefix":"https:\/\/irs0.4sqi.net\/img\/user\/","suffix":"\/5NVXSWGT5WVV3IKH.jpg"}}]}],"summary":"4 likes"}},"user":{"id":"476","firstName":"Tantek","lastName":"Ç.","canonicalUrl":"https:\/\/foursquare.com\/t","photo":{"prefix":"https:\/\/irs3.4sqi.net\/img\/user\/","suffix":"\/476_1236324454.jpg"},"tips":{"count":231},"gender":"male","homeCity":"San Francisco, CA","bio":"http:\/\/tantek.com\/","contact":{"twitter":"t"}},"todo":{"count":0,"groups":[{"type":"friends","name":"Friends who want to do this","count":0,"items":[]},{"type":"others","name":"Others who want to do this","count":0,"items":[]}]}},{"id":"4a99e9d670c603bb78668eb4","createdAt":1251600854,"text":"bring a small clear plastic bottle of water, drink the whole thing while in the security line, pack the empty bottle in your carry-on, refill it after passing through security.","likes":{"count":47,"groups":[{"type":"others","count":3,"items":[{"id":"1372","firstName":"Reid","lastName":"B.","canonicalUrl":"https:\/\/foursquare.com\/reid","photo":{"prefix":"https:\/\/irs0.4sqi.net\/img\/user\/","suffix":"\/WTVPK3JRDFDLBVAE.jpg"}},{"id":"152238","firstName":"Nil","lastName":"L.","canonicalUrl":"https:\/\/foursquare.com\/nilakavivat","photo":{"prefix":"https:\/\/irs0.4sqi.net\/img\/user\/","suffix":"\/APU5I1FF2FS3OQEE.png"}},{"id":"8368727","firstName":"tracy","lastName":"s.","canonicalUrl":"https:\/\/foursquare.com\/user\/8368727","photo":{"prefix":"https:\/\/irs1.4sqi.net\/img\/user\/","suffix":"\/ZDU2GXLQBCVS1IWD.jpg"}}]}],"summary":"47 likes"},"venue":{"id":"439ec330f964a520102c1fe3","name":"Los Angeles International Airport (LAX)","contact":{"phone":"3106465252","formattedPhone":"(310) 646-5252","twitter":"LAX_Official"},"location":{"address":"1 World Way","crossStreet":"Off S Sepulveda Blvd \/ SR 1","lat":33.94389397698472,"lng":-118.40502262115479,"distance":9271955,"postalCode":"90045","city":"Los Angeles","state":"CA","country":"United States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d1ed931735","name":"Airport","pluralName":"Airports","shortName":"Airport","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/travel\/airport_","suffix":".png"},"primary":true}],"verified":true,"stats":{"checkinsCount":706266,"usersCount":225387,"tipCount":2161},"url":"http:\/\/www.lawa.aero\/welcomeLAX.aspx","urlSig":"QG\/eaNNtfiAup7zad\/3hzU7OgFg=","likes":{"count":132,"groups":[{"type":"others","count":132,"items":[]}],"summary":"132 likes"}},"user":{"id":"476","firstName":"Tantek","lastName":"Ç.","canonicalUrl":"https:\/\/foursquare.com\/t","photo":{"prefix":"https:\/\/irs3.4sqi.net\/img\/user\/","suffix":"\/476_1236324454.jpg"},"tips":{"count":231},"gender":"male","homeCity":"San Francisco, CA","bio":"http:\/\/tantek.com\/","contact":{"twitter":"t"}},"todo":{"count":4,"groups":[{"type":"friends","name":"Friends who want to do this","count":0,"items":[]},{"type":"others","name":"Others who want to do this","count":4,"items":[]}]}},{"id":"4dd920782271c5d36d640229","createdAt":1306075256,"text":"Please be advised that train doors will close 30 seconds prior to departure.","likes":{"count":16,"groups":[],"summary":"16 likes"},"venue":{"id":"4b0433c8f964a520105222e3","name":"Brighton Railway Station (BTN)","contact":{"phone":"+448451272920","formattedPhone":"+44 845 127 2920","twitter":"nationalrailenq"},"location":{"address":"Queens Road","lat":50.82900163370248,"lng":-0.14127731323242188,"distance":641444,"postalCode":"BN1 3XP","city":"Brighton","state":"East Sussex","country":"United Kingdom","cc":"GB"},"categories":[{"id":"4bf58dd8d48988d129951735","name":"Train Station","pluralName":"Train Stations","shortName":"Train Station","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/travel\/trainstation_","suffix":".png"},"primary":true}],"verified":false,"stats":{"checkinsCount":16325,"usersCount":4765,"tipCount":48},"likes":{"count":1,"groups":[{"type":"others","count":1,"items":[{"id":"21045990","firstName":"Chris","lastName":"K.","canonicalUrl":"https:\/\/foursquare.com\/abrandnewmonarc","photo":{"prefix":"https:\/\/irs2.4sqi.net\/img\/user\/","suffix":"\/WAG3EGCPLBD5O0WM.jpg"}}]}],"summary":"1 like"}},"user":{"id":"476","firstName":"Tantek","lastName":"Ç.","canonicalUrl":"https:\/\/foursquare.com\/t","photo":{"prefix":"https:\/\/irs3.4sqi.net\/img\/user\/","suffix":"\/476_1236324454.jpg"},"tips":{"count":231},"gender":"male","homeCity":"San Francisco, CA","bio":"http:\/\/tantek.com\/","contact":{"twitter":"t"}},"todo":{"count":0,"groups":[{"type":"friends","name":"Friends who want to do this","count":0,"items":[]},{"type":"others","name":"Others who want to do this","count":0,"items":[]}]}},{"id":"4ce2c4cb4bde5941a32e758d","createdAt":1289929931,"text":"find one of the rare power outlets on the upper level of a train car.","likes":{"count":62,"groups":[{"type":"others","count":1,"items":[{"id":"13363429","firstName":"La Ron","lastName":"W.","canonicalUrl":"https:\/\/foursquare.com\/user\/13363429","photo":{"prefix":"https:\/\/irs3.4sqi.net\/img\/user\/","suffix":"\/ZMIGQUNJLP43ODMP.jpg"}}]}],"summary":"62 likes"},"venue":{"id":"45073758f964a52021391fe3","name":"San Francisco Caltrain Station","contact":{"phone":"8006604567","formattedPhone":"(800) 660-4567","twitter":"caltrain"},"location":{"address":"700 4th St.","crossStreet":"btwn King & Townsend St.","lat":37.776642582524694,"lng":-122.39486753940582,"distance":9076719,"postalCode":"94107","city":"San Francisco","state":"CA","country":"United States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d129951735","name":"Train Station","pluralName":"Train Stations","shortName":"Train Station","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/travel\/trainstation_","suffix":".png"},"primary":true}],"verified":false,"stats":{"checkinsCount":56358,"usersCount":10413,"tipCount":157},"url":"http:\/\/cow.org\/c\/about","urlSig":"pzU0WmkFx1j8tfZuDUNi56rp0Xg=","likes":{"count":6,"groups":[{"type":"others","count":6,"items":[{"id":"2775804","firstName":"Govind","lastName":"K.","canonicalUrl":"https:\/\/foursquare.com\/kabragovind","photo":{"prefix":"https:\/\/irs3.4sqi.net\/img\/user\/","suffix":"\/D1LTY1MGSR5AYLTG.jpg"}},{"id":"8595773","firstName":"Nick","lastName":"P.","canonicalUrl":"https:\/\/foursquare.com\/user\/8595773","photo":{"prefix":"https:\/\/irs0.4sqi.net\/img\/user\/","suffix":"\/3NK0KNRNMLY3ZFUZ.jpg"}},{"id":"805289","firstName":"Rich","lastName":"G.","canonicalUrl":"https:\/\/foursquare.com\/confusdagn","photo":{"prefix":"https:\/\/irs3.4sqi.net\/img\/user\/","suffix":"\/KOQGEQC53VPKKBWP.jpg"}},{"id":"1297567","firstName":"Luis","lastName":"G.","canonicalUrl":"https:\/\/foursquare.com\/simplepunkk","photo":{"prefix":"https:\/\/irs0.4sqi.net\/img\/user\/","suffix":"\/1ZLSHOFRX0SN0B0Q.jpg"}}]}],"summary":"6 likes"}},"user":{"id":"476","firstName":"Tantek","lastName":"Ç.","canonicalUrl":"https:\/\/foursquare.com\/t","photo":{"prefix":"https:\/\/irs3.4sqi.net\/img\/user\/","suffix":"\/476_1236324454.jpg"},"tips":{"count":231},"gender":"male","homeCity":"San Francisco, CA","bio":"http:\/\/tantek.com\/","contact":{"twitter":"t"}},"todo":{"count":4,"groups":[{"type":"friends","name":"Friends who want to do this","count":0,"items":[]},{"type":"others","name":"Others who want to do this","count":4,"items":[]}]}},{"id":"4a9ad5fb70c603bb11678eb4","createdAt":1251661307,"text":"set your city to Los Angeles.","likes":{"count":55,"groups":[],"summary":"55 likes"},"venue":{"id":"439ec330f964a520102c1fe3","name":"Los Angeles International Airport (LAX)","contact":{"phone":"3106465252","formattedPhone":"(310) 646-5252","twitter":"LAX_Official"},"location":{"address":"1 World Way","crossStreet":"Off S Sepulveda Blvd \/ SR 1","lat":33.94389397698472,"lng":-118.40502262115479,"distance":9271955,"postalCode":"90045","city":"Los Angeles","state":"CA","country":"United States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d1ed931735","name":"Airport","pluralName":"Airports","shortName":"Airport","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/travel\/airport_","suffix":".png"},"primary":true}],"verified":true,"stats":{"checkinsCount":706266,"usersCount":225387,"tipCount":2161},"url":"http:\/\/www.lawa.aero\/welcomeLAX.aspx","urlSig":"QG\/eaNNtfiAup7zad\/3hzU7OgFg=","likes":{"count":132,"groups":[{"type":"others","count":132,"items":[]}],"summary":"132 likes"}},"user":{"id":"476","firstName":"Tantek","lastName":"Ç.","canonicalUrl":"https:\/\/foursquare.com\/t","photo":{"prefix":"https:\/\/irs3.4sqi.net\/img\/user\/","suffix":"\/476_1236324454.jpg"},"tips":{"count":231},"gender":"male","homeCity":"San Francisco, CA","bio":"http:\/\/tantek.com\/","contact":{"twitter":"t"}},"todo":{"count":6,"groups":[{"type":"friends","name":"Friends who want to do this","count":0,"items":[]},{"type":"others","name":"Others who want to do this","count":6,"items":[]}]}},{"id":"4a490eee70c603bb70338eb4","createdAt":1246301934,"text":"flash a 5.10D.","likes":{"count":18,"groups":[],"summary":"18 likes"},"venue":{"id":"408c5100f964a520c8f21ee3","name":"Mission Cliffs","contact":{"phone":"4155500515","formattedPhone":"(415) 550-0515","twitter":"TouchstoneClimb"},"location":{"address":"2295 Harrison St","crossStreet":"at 19th St","lat":37.76064131261189,"lng":-122.41251769912533,"distance":9079025,"postalCode":"94110","city":"San Francisco","state":"CA","country":"United States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d176941735","name":"Gym","pluralName":"Gyms","shortName":"Gym","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/building\/gym_","suffix":".png"},"primary":true}],"verified":false,"stats":{"checkinsCount":11258,"usersCount":1301,"tipCount":45},"url":"http:\/\/www.touchstoneclimbing.com\/mission-cliffs","urlSig":"ZlLZxWn3XD\/TWm7FXq2eTzTrZVE=","likes":{"count":4,"groups":[{"type":"others","count":4,"items":[{"id":"6046972","firstName":"Doc","lastName":"P.","canonicalUrl":"https:\/\/foursquare.com\/docpop","photo":{"prefix":"https:\/\/irs0.4sqi.net\/img\/user\/","suffix":"\/BGTB2PXZNIOR53Y3.jpg"}},{"id":"9019652","firstName":"Andrew","lastName":"Z.","canonicalUrl":"https:\/\/foursquare.com\/andrew5661","photo":{"prefix":"https:\/\/irs3.4sqi.net\/img\/user\/","suffix":"\/EMAWWSK0WUZEQPJK.jpg"}},{"id":"23940","firstName":"Derek","lastName":"C.","canonicalUrl":"https:\/\/foursquare.com\/derekpcollins","photo":{"prefix":"https:\/\/irs1.4sqi.net\/img\/user\/","suffix":"\/5TXDQGNNMLMRY2YC.png"}},{"id":"32565654","firstName":"Cyrus","lastName":"T.","canonicalUrl":"https:\/\/foursquare.com\/chr0mavision","photo":{"prefix":"https:\/\/irs0.4sqi.net\/img\/user\/","suffix":"\/5NVXSWGT5WVV3IKH.jpg"}}]}],"summary":"4 likes"}},"user":{"id":"476","firstName":"Tantek","lastName":"Ç.","canonicalUrl":"https:\/\/foursquare.com\/t","photo":{"prefix":"https:\/\/irs3.4sqi.net\/img\/user\/","suffix":"\/476_1236324454.jpg"},"tips":{"count":231},"gender":"male","homeCity":"San Francisco, CA","bio":"http:\/\/tantek.com\/","contact":{"twitter":"t"}},"todo":{"count":2,"groups":[{"type":"friends","name":"Friends who want to do this","count":0,"items":[]},{"type":"others","name":"Others who want to do this","count":2,"items":[]}]}},{"id":"4a43d95270c603bb04328eb4","createdAt":1245960530,"text":"flash a V0.","likes":{"count":41,"groups":[],"summary":"41 likes"},"venue":{"id":"408c5100f964a520c8f21ee3","name":"Mission Cliffs","contact":{"phone":"4155500515","formattedPhone":"(415) 550-0515","twitter":"TouchstoneClimb"},"location":{"address":"2295 Harrison St","crossStreet":"at 19th St","lat":37.76064131261189,"lng":-122.41251769912533,"distance":9079025,"postalCode":"94110","city":"San Francisco","state":"CA","country":"United States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d176941735","name":"Gym","pluralName":"Gyms","shortName":"Gym","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/building\/gym_","suffix":".png"},"primary":true}],"verified":false,"stats":{"checkinsCount":11258,"usersCount":1301,"tipCount":45},"url":"http:\/\/www.touchstoneclimbing.com\/mission-cliffs","urlSig":"ZlLZxWn3XD\/TWm7FXq2eTzTrZVE=","likes":{"count":4,"groups":[{"type":"others","count":4,"items":[{"id":"6046972","firstName":"Doc","lastName":"P.","canonicalUrl":"https:\/\/foursquare.com\/docpop","photo":{"prefix":"https:\/\/irs0.4sqi.net\/img\/user\/","suffix":"\/BGTB2PXZNIOR53Y3.jpg"}},{"id":"9019652","firstName":"Andrew","lastName":"Z.","canonicalUrl":"https:\/\/foursquare.com\/andrew5661","photo":{"prefix":"https:\/\/irs3.4sqi.net\/img\/user\/","suffix":"\/EMAWWSK0WUZEQPJK.jpg"}},{"id":"23940","firstName":"Derek","lastName":"C.","canonicalUrl":"https:\/\/foursquare.com\/derekpcollins","photo":{"prefix":"https:\/\/irs1.4sqi.net\/img\/user\/","suffix":"\/5TXDQGNNMLMRY2YC.png"}},{"id":"32565654","firstName":"Cyrus","lastName":"T.","canonicalUrl":"https:\/\/foursquare.com\/chr0mavision","photo":{"prefix":"https:\/\/irs0.4sqi.net\/img\/user\/","suffix":"\/5NVXSWGT5WVV3IKH.jpg"}}]}],"summary":"4 likes"}},"user":{"id":"476","firstName":"Tantek","lastName":"Ç.","canonicalUrl":"https:\/\/foursquare.com\/t","photo":{"prefix":"https:\/\/irs3.4sqi.net\/img\/user\/","suffix":"\/476_1236324454.jpg"},"tips":{"count":231},"gender":"male","homeCity":"San Francisco, CA","bio":"http:\/\/tantek.com\/","contact":{"twitter":"t"}},"todo":{"count":2,"groups":[{"type":"friends","name":"Friends who want to do this","count":0,"items":[]},{"type":"others","name":"Others who want to do this","count":2,"items":[]}]}},{"id":"4d790c8671a68cfa63f60f86","createdAt":1299778694,"text":"Switch your devices to use the new \"SXSW2011\" wifi.","likes":{"count":48,"groups":[],"summary":"48 likes"},"venue":{"id":"440da323f964a52092301fe3","name":"Austin Convention Center","contact":{"phone":"5124044000","formattedPhone":"(512) 404-4000"},"location":{"address":"500 E. Cesar Chavez St.","crossStreet":"btwn Trinity & Red River St.","lat":30.263577,"lng":-97.740086,"distance":8505004,"postalCode":"78701","city":"Austin","state":"TX","country":"United States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d1ff931735","name":"Convention Center","pluralName":"Convention Centers","shortName":"Convention Center","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/building\/conventioncenter_","suffix":".png"},"primary":true}],"verified":true,"stats":{"checkinsCount":92686,"usersCount":31239,"tipCount":314},"url":"http:\/\/www.austinconventioncenter.com","urlSig":"80zB\/1PToUA\/AnQ3Au4nFrX\/DN8=","likes":{"count":3,"groups":[{"type":"others","count":3,"items":[{"id":"30142186","firstName":"Demeter Interactive","canonicalUrl":"https:\/\/foursquare.com\/demeterinteract","photo":{"prefix":"https:\/\/irs3.4sqi.net\/img\/user\/","suffix":"\/II0DITORQNBBV1CM.jpg"},"type":"page"},{"id":"6422290","firstName":"Sean","lastName":"A.","canonicalUrl":"https:\/\/foursquare.com\/user\/6422290","photo":{"prefix":"https:\/\/irs1.4sqi.net\/img\/user\/","suffix":"\/U3JIGWCOCYXOMMRD.jpg"}},{"id":"30422741","firstName":"Mir","lastName":"S.","canonicalUrl":"https:\/\/foursquare.com\/user\/30422741","photo":{"prefix":"https:\/\/irs0.4sqi.net\/img\/user\/","suffix":"\/3ZW2L1GWBURLBLBA.jpg"}}]}],"summary":"3 likes"}},"user":{"id":"476","firstName":"Tantek","lastName":"Ç.","canonicalUrl":"https:\/\/foursquare.com\/t","photo":{"prefix":"https:\/\/irs3.4sqi.net\/img\/user\/","suffix":"\/476_1236324454.jpg"},"tips":{"count":231},"gender":"male","homeCity":"San Francisco, CA","bio":"http:\/\/tantek.com\/","contact":{"twitter":"t"}},"todo":{"count":4,"groups":[{"type":"friends","name":"Friends who want to do this","count":0,"items":[]},{"type":"others","name":"Others who want to do this","count":4,"items":[]}]}}]};
+        </script>
+        
+          <div class="tip tipContainer clearfix " id="49b0d8d870c603bbed0d8eb4"><div class="image"><img src='https://foursquare.com/img/categories_v2/arts_entertainment/museum_science_bg_32.png'width="32" height="32"/></div><div class="content"><h3><a href="/v/49cc413df964a5205a591fe3">California Academy of Sciences</a><span class="tipDate"><span class="global">San Francisco, CA</span> &middot; <a href="/item/49b0d8d870c603bbed0d8eb4">March 6, 2009</a></span></h3><p><span class="tipText">Just go. It rocks. Could spend hours there. Hours. Probably even days.</span> </p><div class="actions"><div class="save-button  inactive"><span class="icon"></span><span class="label">Save</span></div><span class="likeButtonContainer"></span></div></div></div>
+        
+          <div class="tip tipContainer clearfix " id="4ce2c4cb4bde5941a32e758d"><div class="image"><img src='https://foursquare.com/img/categories_v2/travel/trainstation_bg_32.png'width="32" height="32"/></div><div class="content"><h3><a href="/v/45073758f964a52021391fe3">San Francisco Caltrain Station</a><span class="tipDate"><span class="global">San Francisco, CA</span> &middot; <a href="/item/4ce2c4cb4bde5941a32e758d">November 16, 2010</a></span></h3><p><span class="tipText">find one of the rare power outlets on the upper level of a train car.</span> </p><div class="actions"><div class="save-button  inactive"><span class="icon"></span><span class="label">Save</span></div><span class="likeButtonContainer"></span></div></div></div>
+        
+          <div class="tip tipContainer clearfix " id="4a9ad5fb70c603bb11678eb4"><div class="image"><img src='https://foursquare.com/img/categories_v2/travel/airport_bg_32.png'width="32" height="32"/></div><div class="content"><h3><a href="/v/439ec330f964a520102c1fe3">Los Angeles International Airport (LAX)</a><span class="tipDate"><span class="global">Los Angeles, CA</span> &middot; <a href="/item/4a9ad5fb70c603bb11678eb4">August 30, 2009</a></span></h3><p><span class="tipText">set your city to Los Angeles.</span> </p><div class="actions"><div class="save-button  inactive"><span class="icon"></span><span class="label">Save</span></div><span class="likeButtonContainer"></span></div></div></div>
+        
+          <div class="tip tipContainer clearfix " id="4d790c8671a68cfa63f60f86"><div class="image"><img src='https://foursquare.com/img/categories_v2/building/conventioncenter_bg_32.png'width="32" height="32"/></div><div class="content"><h3><a href="/v/440da323f964a52092301fe3">Austin Convention Center</a><span class="tipDate"><span class="global">Austin, TX</span> &middot; <a href="/item/4d790c8671a68cfa63f60f86">March 10, 2011</a></span></h3><p><span class="tipText">Switch your devices to use the new &quot;SXSW2011&quot; wifi.</span> </p><div class="actions"><div class="save-button  inactive"><span class="icon"></span><span class="label">Save</span></div><span class="likeButtonContainer"></span></div></div></div>
+        
+          <div class="tip tipContainer clearfix " id="4a99e9d670c603bb78668eb4"><div class="image"><img src='https://foursquare.com/img/categories_v2/travel/airport_bg_32.png'width="32" height="32"/></div><div class="content"><h3><a href="/v/439ec330f964a520102c1fe3">Los Angeles International Airport (LAX)</a><span class="tipDate"><span class="global">Los Angeles, CA</span> &middot; <a href="/item/4a99e9d670c603bb78668eb4">August 30, 2009</a></span></h3><p><span class="tipText">bring a small clear plastic bottle of water, drink the whole thing while in the security line, pack the empty bottle in your carry-on, refill it after passing through security.</span> </p><div class="actions"><div class="save-button  inactive"><span class="icon"></span><span class="label">Save</span></div><span class="likeButtonContainer"></span></div></div></div>
+        
+          <div class="tip tipContainer clearfix " id="4a9ad63e70c603bb12678eb4"><div class="image"><img src='https://foursquare.com/img/categories_v2/travel/airport_bg_32.png'width="32" height="32"/></div><div class="content"><h3><a href="/v/41059b00f964a520850b1fe3">San Francisco International Airport (SFO)</a><span class="tipDate"><span class="global">San Francisco, CA</span> &middot; <a href="/item/4a9ad63e70c603bb12678eb4">August 30, 2009</a></span></h3><p><span class="tipText">bring a small clear plastic bottle of water, drink the whole thing while in the security line, pack the empty bottle in your carry-on, refill it after passing through security.</span> </p><div class="actions"><div class="save-button  inactive"><span class="icon"></span><span class="label">Save</span></div><span class="likeButtonContainer"></span></div></div></div>
+        
+          <div class="tip tipContainer clearfix " id="4a43d95270c603bb04328eb4"><div class="image"><img src='https://foursquare.com/img/categories_v2/building/gym_bg_32.png'width="32" height="32"/></div><div class="content"><h3><a href="/v/408c5100f964a520c8f21ee3">Mission Cliffs</a><span class="tipDate"><span class="global">San Francisco, CA</span> &middot; <a href="/item/4a43d95270c603bb04328eb4">June 25, 2009</a></span></h3><p><span class="tipText">flash a V0.</span> </p><div class="actions"><div class="save-button  inactive"><span class="icon"></span><span class="label">Save</span></div><span class="likeButtonContainer"></span></div></div></div>
+        
+          <div class="tip tipContainer clearfix " id="4a43dc1870c603bb05328eb4"><div class="image"><img src='https://foursquare.com/img/categories_v2/building/gym_bg_32.png'width="32" height="32"/></div><div class="content"><h3><a href="/v/408c5100f964a520c8f21ee3">Mission Cliffs</a><span class="tipDate"><span class="global">San Francisco, CA</span> &middot; <a href="/item/4a43dc1870c603bb05328eb4">June 25, 2009</a></span></h3><p><span class="tipText">flash a V1.</span> </p><div class="actions"><div class="save-button  inactive"><span class="icon"></span><span class="label">Save</span></div><span class="likeButtonContainer"></span></div></div></div>
+        
+          <div class="tip tipContainer clearfix " id="4b2ed2f070c603bbaa838fb4"><div class="image"><img src='https://foursquare.com/img/categories_v2/travel/subway_bg_32.png'width="32" height="32"/></div><div class="content"><h3><a href="/v/4adb8632f964a5209d2821e3">Powell MUNI Metro Station</a><span class="tipDate"><span class="global">San Francisco, CA</span> &middot; <a href="/item/4b2ed2f070c603bbaa838fb4">December 21, 2009</a></span></h3><p><span class="tipText">use <a class="entity url"rel="nofollow" href="http://nextbus.com/"data-sig="BACxRDwi5djz3KeLxxZhfC7PI9s=" onmousedown="fourSq.ui.OutgoingLink.mousedown($(this), event)" data-source="tip-text">http://nextbus.com/</a> to check to see when and which busses are arriving at the stop.</span> <a href="http://nextbus.com/" rel="nofollow" target="_blank"data-sig="BACxRDwi5djz3KeLxxZhfC7PI9s=" onmousedown="fourSq.ui.OutgoingLink.mousedown($(this), event)" data-source="tip-read-more">Read more</a></p><div class="actions"><div class="save-button  inactive"><span class="icon"></span><span class="label">Save</span></div><span class="likeButtonContainer"></span></div></div></div>
+        
+          <div class="tip tipContainer clearfix " id="4a43dc2a70c603bb06328eb4"><div class="image"><img src='https://foursquare.com/img/categories_v2/building/gym_bg_32.png'width="32" height="32"/></div><div class="content"><h3><a href="/v/408c5100f964a520c8f21ee3">Mission Cliffs</a><span class="tipDate"><span class="global">San Francisco, CA</span> &middot; <a href="/item/4a43dc2a70c603bb06328eb4">June 25, 2009</a></span></h3><p><span class="tipText">flash a V2.</span> </p><div class="actions"><div class="save-button  inactive"><span class="icon"></span><span class="label">Save</span></div><span class="likeButtonContainer"></span></div></div></div>
+        
+          <div class="tip tipContainer clearfix " id="4e289a17cc3f09bcb8652d5f"><div class="image"><img src='https://foursquare.com/img/categories_v2/food/coffeeshop_bg_32.png'width="32" height="32"/></div><div class="content"><h3><a href="/v/49ba70ecf964a52063531fe3">The Creamery</a><span class="tipDate"><span class="global">San Francisco, CA</span> &middot; <a href="/item/4e289a17cc3f09bcb8652d5f">July 21, 2011</a></span></h3><p><span class="tipText">Get lunch here on a sunny day, eat it outside and bask in the warm sunshine while working with the free wifi. And bring your SPF.</span> </p><div class="actions"><div class="save-button  inactive"><span class="icon"></span><span class="label">Save</span></div><span class="likeButtonContainer"></span></div></div></div>
+        
+          <div class="tip tipContainer clearfix " id="4a490e9a70c603bb6f338eb4"><div class="image"><img src='https://foursquare.com/img/categories_v2/building/gym_bg_32.png'width="32" height="32"/></div><div class="content"><h3><a href="/v/408c5100f964a520c8f21ee3">Mission Cliffs</a><span class="tipDate"><span class="global">San Francisco, CA</span> &middot; <a href="/item/4a490e9a70c603bb6f338eb4">June 29, 2009</a></span></h3><p><span class="tipText">flash a 5.10B.</span> </p><div class="actions"><div class="save-button  inactive"><span class="icon"></span><span class="label">Save</span></div><span class="likeButtonContainer"></span></div></div></div>
+        
+          <div class="tip tipContainer clearfix " id="4ac7d67770c603bb8f8b8eb4"><div class="image"><img src='https://foursquare.com/img/categories_v2/food/coffeeshop_bg_32.png'width="32" height="32"/></div><div class="content"><h3><a href="/v/480d1a5ef964a520284f1fe3">Four Barrel Coffee</a><span class="tipDate"><span class="global">San Francisco, CA</span> &middot; <a href="/item/4ac7d67770c603bb8f8b8eb4">October 3, 2009</a></span></h3><p><span class="tipText">sit near the windows and use the open SFHA wifi.</span> </p><div class="actions"><div class="save-button  inactive"><span class="icon"></span><span class="label">Save</span></div><span class="likeButtonContainer"></span></div></div></div>
+        
+          <div class="tip tipContainer clearfix " id="4a6261ff70c603bb4d3d8eb4"><div class="image"><img src='https://foursquare.com/img/categories_v2/building/gym_bg_32.png'width="32" height="32"/></div><div class="content"><h3><a href="/v/49d14d76f964a520755b1fe3">Planet Granite</a><span class="tipDate"><span class="global">San Francisco, CA</span> &middot; <a href="/item/4a6261ff70c603bb4d3d8eb4">July 18, 2009</a></span></h3><p><span class="tipText">flash a V0.</span> </p><div class="actions"><div class="save-button  inactive"><span class="icon"></span><span class="label">Save</span></div><span class="likeButtonContainer"></span></div></div></div>
+        
+          <div class="tip tipContainer clearfix " id="4f5a7a00e4b09f0f96ef6e4e"><div class="image"><img src='https://foursquare.com/img/categories_v2/building/conventioncenter_bg_32.png'width="32" height="32"/></div><div class="content"><h3><a href="/v/440da323f964a52092301fe3">Austin Convention Center</a><span class="tipDate"><span class="global">Austin, TX</span> &middot; <a href="/item/4f5a7a00e4b09f0f96ef6e4e">March 9</a></span></h3><p><span class="tipText">Switch your devices to use the new &quot;SXSW2012&quot; wifi.</span> </p><div class="actions"><div class="save-button  inactive"><span class="icon"></span><span class="label">Save</span></div><span class="likeButtonContainer"></span></div></div></div>
+        
+          <div class="tip tipContainer clearfix " id="4a62621470c603bb4e3d8eb4"><div class="image"><img src='https://foursquare.com/img/categories_v2/building/gym_bg_32.png'width="32" height="32"/></div><div class="content"><h3><a href="/v/49d14d76f964a520755b1fe3">Planet Granite</a><span class="tipDate"><span class="global">San Francisco, CA</span> &middot; <a href="/item/4a62621470c603bb4e3d8eb4">July 19, 2009</a></span></h3><p><span class="tipText">flash a V1.</span> </p><div class="actions"><div class="save-button  inactive"><span class="icon"></span><span class="label">Save</span></div><span class="likeButtonContainer"></span></div></div></div>
+        
+          <div class="tip tipContainer clearfix " id="4a490eee70c603bb70338eb4"><div class="image"><img src='https://foursquare.com/img/categories_v2/building/gym_bg_32.png'width="32" height="32"/></div><div class="content"><h3><a href="/v/408c5100f964a520c8f21ee3">Mission Cliffs</a><span class="tipDate"><span class="global">San Francisco, CA</span> &middot; <a href="/item/4a490eee70c603bb70338eb4">June 29, 2009</a></span></h3><p><span class="tipText">flash a 5.10D.</span> </p><div class="actions"><div class="save-button  inactive"><span class="icon"></span><span class="label">Save</span></div><span class="likeButtonContainer"></span></div></div></div>
+        
+          <div class="tip tipContainer clearfix " id="4a43dc4570c603bb07328eb4"><div class="image"><img src='https://foursquare.com/img/categories_v2/building/gym_bg_32.png'width="32" height="32"/></div><div class="content"><h3><a href="/v/408c5100f964a520c8f21ee3">Mission Cliffs</a><span class="tipDate"><span class="global">San Francisco, CA</span> &middot; <a href="/item/4a43dc4570c603bb07328eb4">June 25, 2009</a></span></h3><p><span class="tipText">flash a V3.</span> </p><div class="actions"><div class="save-button  inactive"><span class="icon"></span><span class="label">Save</span></div><span class="likeButtonContainer"></span></div></div></div>
+        
+          <div class="tip tipContainer clearfix " id="4dd920782271c5d36d640229"><div class="image"><img src='https://foursquare.com/img/categories_v2/travel/trainstation_bg_32.png'width="32" height="32"/></div><div class="content"><h3><a href="/v/4b0433c8f964a520105222e3">Brighton Railway Station (BTN)</a><span class="tipDate"><span class="global">Brighton, East Sussex</span> &middot; <a href="/item/4dd920782271c5d36d640229">May 22, 2011</a></span></h3><p><span class="tipText">Please be advised that train doors will close 30 seconds prior to departure.</span> </p><div class="actions"><div class="save-button  inactive"><span class="icon"></span><span class="label">Save</span></div><span class="likeButtonContainer"></span></div></div></div>
+        
+          <div class="tip tipContainer clearfix " id="4a89d69270c603bbb75a8eb4"><div class="image"><img src='https://foursquare.com/img/categories_v2/travel/subway_bg_32.png'width="32" height="32"/></div><div class="content"><h3><a href="/v/4a7ead5ef964a5200cf21fe3">MTA Subway - Howard Beach/JFK Airport (A)</a><span class="tipDate"><span class="global">Howard Beach, NY</span> &middot; <a href="/item/4a89d69270c603bbb75a8eb4">August 17, 2009</a></span></h3><p><span class="tipText">after exiting Airtrain, before entering the metro, instead of the $7.25 combo ticket, buy a $5 Airtrain only ticket, and a separate metro ticket (e.g. 7 day unlimited).</span> </p><div class="actions"><div class="save-button  inactive"><span class="icon"></span><span class="label">Save</span></div><span class="likeButtonContainer"></span></div></div></div>
+        
+          <div class="tip tipContainer clearfix " id="4a43c0d570c603bbf5318eb4"><div class="image"><img src='https://foursquare.com/img/categories_v2/building/gym_bg_32.png'width="32" height="32"/></div><div class="content"><h3><a href="/v/408c5100f964a520c8f21ee3">Mission Cliffs</a><span class="tipDate"><span class="global">San Francisco, CA</span> &middot; <a href="/item/4a43c0d570c603bbf5318eb4">June 25, 2009</a></span></h3><p><span class="tipText">climb all the V0s in the bouldering area in one session.</span> </p><div class="actions"><div class="save-button  inactive"><span class="icon"></span><span class="label">Save</span></div><span class="likeButtonContainer"></span></div></div></div>
+        
+      </div>
+    </div>
+    
+
+  
+  
+    <div class="blockContainer listsContainer">
+      <div class="blockHeader listsHeader translate">
+        
+            <p></p>
+            
+              <h3>Lists <span class="notranslate">Tantek</span> has saved</h3>
+            
+            
+          
+      </div>
+      <div class="listsBlock">
+        
+            <div class="listContainer">
+  <div class="listHeader">
+    <a href="/dens"><img src="https://is1.4sqi.net/userpix_thumbs/32_1239135232.jpg" class="listUserIcon" /></a>
+    <h3><a href="/dens/list/a-brief-history-of-foursquare">A brief history of foursquare</a></h3>
+    <span class="listStats">
+      <span class="notranslate"><a href="/dens">Dens</a></span>
+      
+        <span class="pipe">|</span>
+        <span class="notranslate">894</span> saves
+      
+    </span>
+  </div>
+  <a class="listPhoto" href="/dens/list/a-brief-history-of-foursquare"> 
+      <div><img src="https://is0.4sqi.net/derived_pix/SGZUTVKSRTXNYTBHP0SN1SDSAMWH21CPQGEBWOURHYLDOGYE_300x300.jpg" /></div>
+   </a>
+  <div class="listItems translate">
+    <strong><span class="notranslate">14</span>
+    places</strong> including <span class="notranslate">Cafe OST, Think Coffee, Corner Shop Cafe, Essex Ale House, Ace Bar</span>
+  </div>
+</div>
+          
+      </div>
+    </div>
+  
+
+
+    </div>
+
+    <div class="narrowColumn">
+
+      
+      <div id="actionBar" class="box">
+        <div class="actionContainer">
+          
+  
+  
+  
+  
+  
+    <a id="send_friend_request_476" onclick="fourSq.showSignupModal(templates.fourSq.ui.signupmodal.friendSignupTitle({isFollow: false, userName: 'Tantek Ç.'}),'userProfile', undefined, 'ZiVhtzkdEg4q9WXmCO02somaMX5r0zaoEnhaaS92GCN8cM349cKs1yKZHRlwsvxXIyuK+AFYNE14\nGRZg+\/BM2TpzJk6oe26n7tAcgz\/k3O6RV21WAiUxfL3u\/3rVk6W3R86ihBt2Cx0kSzpXLOR9nQ=='); return false;" href="javascript://" class="newOrangeButton orangeButton translate">Add as friend</a>
+  
+
+
+        </div>
+      </div>
+
+      
+      <div id="userBadges" class="box">
+        <a class="boxLink" href="/t/badges/all">See All</a>
+        <h5><span class="translate">Badges </span><em>(128)</em></h5>
+
+        <div id="theUserBadges">
+          
+            <a href="/t/badge/4febbe08e4b0c8b85f7221fe"><img src="https://playfoursquare.s3.amazonaws.com/badge/57/JKBMDU5TYZP2KXTM_4.png" alt="Herbivore" width="57" title="Herbivore: No dilemma for you - it’s veggies all the way. Now treat yourself to a Tofurky club and a shot of kombucha. After all, you’ve joined the esteemed ranks of Brad Pitt and Katy Perry. And Gandhi.
+
+That's 15 different veggie places! Pour yourself a nice big glass of chocolate soy milk. Yum." height="57" /></a>
+          
+            <a href="/t/badge/4fe6a2e8e4b0b8bb5b073119"><img src="https://playfoursquare.s3.amazonaws.com/badge/57/XQMBOF3R24KFF1NF.png" alt="Bridgetown" width="57" title="Bridgetown: Look at you with your mustache, biking to work and sipping on Stumptown. You’ve probably got a well-developed palette for microbrews and a friend who’s a cheesemonger, too, right? Now go on, eat that maple bacon bar. We won’t judge." height="57" /></a>
+          
+            <a href="/t/badge/4fe663a1e4b045277f3c36a8"><img src="https://playfoursquare.s3.amazonaws.com/badge/57/bookworm_5.png" alt="Bookworm" width="57" title="Bookworm: NERD ALERT!
+
+You've been to 20 different print palaces! Be honest: how many copies of Moby Dick do you have at home?" height="57" /></a>
+          
+            <a href="/t/badge/4fdbe1a4e4b09473e13a08b6"><img src="https://playfoursquare.s3.amazonaws.com/badge/57/5NYE0PW4EC0V321Z.png" alt="Triple Play" width="57" title="Triple Play: A handful of big-league stadium check-ins from 1 baseball fan who happens to have 2 thumbs? By our count, you're only a 4-bagger short of the foursquare cycle! We tried putting the badge in the Cracker Jack box. Didn't fit.
+
+Heyyy batter batter!" height="57" /></a>
+          
+            <a href="/t/badge/4fc96194e4b0b44b52bf5a1f"><img src="https://playfoursquare.s3.amazonaws.com/badge/57/B3221I2IKJDYNGSM.png" alt="(RED)Rush to Zero" width="57" title="(RED)Rush to Zero: Your check-in just triggered a $1 donation to fight AIDS. 1,000 babies are born with HIV every day. By 2015 we believe that can be close to zero. Keep checking-in at (RED) partners &amp; retailers during (RED)RUSH through June 10. Learn more at redrush.com" height="57" /></a>
+          
+            <a href="/t/badge/4fbd77d6e4b0d565a85e8a48"><img src="https://playfoursquare.s3.amazonaws.com/badge/57/WFBPPRJFUQZX1NWN.png" alt="Treat Yo Self!" width="57" title="Treat Yo Self!: Hot stone massages. Treat yo self. Algae baths. Treat yo self. Carrot mulch scrubs. Treat yo self. Go ahead, splurge on the caviar wrap! And don’t forget to snag a tub of that macadamia nut cream on your way out.  #treatyoself
+
+Jealous!" height="57" /></a>
+          
+            <a href="/t/badge/4fb91b1ce4b002b8bba9a6ff"><img src="https://playfoursquare.s3.amazonaws.com/badge/57/greatoutdoors_5.png" alt="Great Outdoors" width="57" title="Great Outdoors: Welcome to the Great Outdoors! Behold Mother Nature's true beauty. Now if only she'd throw a double rainbow up in this piece.
+
+You've been to 20 different outdoorsy places! Celebrate with a GORP party!" height="57" /></a>
+          
+            <a href="/t/badge/4fafec1de4b01cbf30bb5dc9"><img src="https://playfoursquare.s3.amazonaws.com/badge/57/4S1ON11C2YPSYDPO.png" alt="Joggernaut" width="57" title="Joggernaut: There’s no hill too steep, weather too miserable,  personal best unbeatable, or shame in hitting the snooze button (once in awhile...). Now gulp some electrolytes, put ‘Eye of the Tiger’ on repeat, and don’t let anyone hate on your Five Finger shoes." height="57" /></a>
+          
+            <a href="/t/badge/4fa47b8de4b05483063363f5"><img src="https://playfoursquare.s3.amazonaws.com/badge/57/4WKAM24DULRDRFSN.png" alt="Velocipede" width="57" title="Velocipede: Whether you’re riding a cruiser, fixie, road bike or recumbent, the most important thing is you’re protecting the ozone AND you look good in spandex. Like a modern day Captain Planet! Except instead of flying, you’ve got that two-wheeled contraption..." height="57" /></a>
+          
+            <a href="/t/badge/4f8c4b39e4b07efba0764e77"><img src="https://playfoursquare.s3.amazonaws.com/badge/57/4LLCEC0KNNQ2FODB.png" alt="4sqDay 2012" width="57" title="4sqDay 2012: In 2010, foursquare fans declared April 16 4sqDay (4/4^2 – nerds after our own heart!). Two years and two billion check-ins later, you’re still why we get out of bed each day. Thanks to all 20 million of you for making us part of your lives. Happy 4sqDay!" height="57" /></a>
+          
+            <a href="/t/badge/4f70f2c1e4b007de8f66dfc6"><img src="https://playfoursquare.s3.amazonaws.com/badge/57/pizza_7.png" alt="Pizzaiolo" width="57" title="Pizzaiolo: No crust goes without proper inspection, no cheese-to-sauce ratio is left unquestioned, no distance is too far on the quest to find the perfect slice – it’s connoisseurs like you that make the pizza wheel go ‘round.
+
+That's 30 different pizza places! Celebrate with a Teenage Mutant Ninja Turtles viewing party." height="57" /></a>
+          
+            <a href="/t/badge/4f70cd29e4b0cb819a8657f4"><img src="https://playfoursquare.s3.amazonaws.com/badge/57/QWUWU3B1435TFTEC_10.png" alt="Trainspotter" width="57" title="Trainspotter: From the MTA to the Tube, the Shinkansen to the Trans-Siberian, you’ve ridden them all (or will someday)! Here’s to the beauty of public transit, and to always giving up your seat for the pregnant, elderly, and backpackers who haven’t showered in a week." height="57" /></a>
+          
+            <a href="/t/badge/4f6facc1e4b02a6d6a0218cf"><img src="https://playfoursquare.s3.amazonaws.com/badge/57/3AUOHUM0JTGVLJIQ.png" alt="The Big Easy" width="57" title="The Big Easy: From po'boys on Bourbon Street to jazz at d.b.a., you've got N’awlins covered like steamboats on the Mississippi. We bet you live every day like Fat Tuesday. Or in the words of Weezy, you got cake every day like it’s yo birthday. Now go eat some pralines!" height="57" /></a>
+          
+            <a href="/t/badge/4f6b92fde4b01a6dd628ee71"><img src="https://playfoursquare.s3.amazonaws.com/badge/57/VCNL1VD5FZAK5JBN_7.png" alt="Mall Rat" width="57" title="Mall Rat: Sharper Image. Gap. That guy selling bedazzled iPhone cases from a kiosk. It’s always nice to see some familiar faces. Now, weave your way through that crazy crowd, grab an Orange Julius, and enjoy the fountain’s soothing gurgles.
+
+That’s 30 different mall spots! You could practically design one of these things by now." height="57" /></a>
+          
+            <a href="/t/badge/4f67667ce4b0bf10148a040f"><img src="https://playfoursquare.s3.amazonaws.com/badge/57/stanford.png" alt="All Right Now" width="57" title="All Right Now: Congratulations, you've discovered 5 of Stanford University's most interesting places. BEAT CAL!" height="57" /></a>
+          
+            <a href="/t/badge/4f64c26ae4b014afeb6ac004"><img src="https://playfoursquare.s3.amazonaws.com/badge/57/jetsetter_7.png" alt="JetSetter" width="57" title="JetSetter: Hopping around the world one airport at a time... safe travels!
+
+You've been to 30 different airports! Go buy some over-priced cocktails at the bar. Better yet, on the plane." height="57" /></a>
+          
+        </div>
+
+        
+
+        
+
+      </div>
+
+      
+      <div id="participation" class="box translate">
+        
+          <span class="suLevel2">
+            <a title="What is a Superuser?" href="http://support.foursquare.com/entries/422534-what-is-a-superuser-how-do-i-become-a-superuser">?</a> <strong>Superuser</strong> Level 2
+          </span>
+        
+        
+      </div>
+
+      
+      
+
+      
+      <div id="userMayorships" class="box">
+        <a target="_blank" href="http://support.foursquare.com/entries/231262-what-is-a-mayor" class="boxLink translate">What's a mayor?</a>
+        <h5><span class="translate">Mayorships</span> <em>(61)</em></h5>
+
+        
+
+        
+
+        
+          <div class="mayorItem" id="mayor_4dfcef921f6e05048d87b389">
+            <img src="https://ss0.4sqi.net/img/categories_v2/food/coffeeshop_bg_32-52ac3da1562f76aae325f3e519775dde.png" class="thumb" />
+            <p><a href="/v/blue-bottle-kiosk-inside-hsm/4dfcef921f6e05048d87b389">Blue Bottle Kiosk inside HSM</a></p>
+            <p>San Francisco, CA</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="mayorItem" id="mayor_4d8660b58de9721e64d25951">
+            <img src="https://ss1.4sqi.net/img/categories_v2/travel/busstation_bg_32-23e5d16e668030b589ec84db573ab957.png" class="thumb" />
+            <p><a href="/v/muni-18th--valencia-to-haight/4d8660b58de9721e64d25951">MUNI 18th &amp; Valencia to Haight</a></p>
+            <p>San Francisco, California</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="mayorItem" id="mayor_4db4b3894b226b343d92deb4">
+            <img src="https://ss0.4sqi.net/img/categories_v2/parks_outdoors/park_bg_32-f869a0af4f418a7020892d914ba9ec4a.png" class="thumb" />
+            <p><a href="/v/buena-vista-park-summit/4db4b3894b226b343d92deb4">Buena Vista Park Summit</a></p>
+            <p>San Francisco, California</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="mayorItem" id="mayor_4b88dd8ff964a520091132e3">
+            <img src="https://ss0.4sqi.net/img/categories_v2/building/home_bg_32-0d0cf4c1a27e6ec1ec70c677fcca3aff.png" class="thumb" />
+            <p><a href="/v/bens-flat/4b88dd8ff964a520091132e3">Ben's Flat</a></p>
+            <p>San Francisco, CA</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="mayorItem" id="mayor_4f1e39a7e4b0b73eef6c097c">
+            <img src="https://ss0.4sqi.net/img/categories_v2/travel/trainstation_bg_32-16786615ac8a7e5168806c41e1416a3f.png" class="thumb" />
+            <p><a href="/v/caltrain-193/4f1e39a7e4b0b73eef6c097c">Caltrain #193</a></p>
+            <p>Mountain view, CA</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4f8a7c09e4b060b7f8690137">
+            <img src="https://ss1.4sqi.net/img/categories_v2/travel/busstation_bg_32-23e5d16e668030b589ec84db573ab957.png" class="thumb" />
+            <p><a href="/v/muni-18th--church-33-inbound/4f8a7c09e4b060b7f8690137">Muni 18th &amp; Church 33 Inbound</a></p>
+            <p>San Francisco, CA</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_49fb573ff964a520366e1fe3">
+            <img src="https://ss0.4sqi.net/img/categories_v2/shops/beauty_cosmetic_bg_32-41b86a631ffa1277949123c780ba565a.png" class="thumb" />
+            <p><a href="/v/blade-runners/49fb573ff964a520366e1fe3">Blade Runners</a></p>
+            <p>San Francisco, CA</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4f34c699e4b0b9c46479e897">
+            <img src="https://ss1.4sqi.net/img/categories_v2/travel/busstation_bg_32-23e5d16e668030b589ec84db573ab957.png" class="thumb" />
+            <p><a href="/v/muni-bus-5472/4f34c699e4b0b9c46479e897">MUNI bus 5472</a></p>
+            <p>San Francisco, CA</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4bab3f43f964a5208c9b3ae3">
+            <img src="https://ss1.4sqi.net/img/categories_v2/travel/busstation_bg_32-23e5d16e668030b589ec84db573ab957.png" class="thumb" />
+            <p><a href="/v/haight--fillmore-bus-stop/4bab3f43f964a5208c9b3ae3">Haight &amp; Fillmore Bus Stop</a></p>
+            <p>San Francisco, CA</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4ca5e72da6e08cfa1e237594">
+            <img src="https://ss0.4sqi.net/img/categories_v2/education/administrativebuilding_bg_32-a5eb7266e90733d01295939103fc97a9.png" class="thumb" />
+            <p><a href="/v/open-video-conference/4ca5e72da6e08cfa1e237594">Open Video Conference</a></p>
+            <p>New York, NY</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4e8fff2b550342b5a40c95f2">
+            <img src="https://ss1.4sqi.net/img/categories_v2/travel/busstation_bg_32-23e5d16e668030b589ec84db573ab957.png" class="thumb" />
+            <p><a href="/v/muni-18th-st-at-dolores-33-inbound-to-sac/4e8fff2b550342b5a40c95f2">MUNI 18th st at Dolores 33 inbound to Sac</a></p>
+            <p>San Francisco, CA</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4bd304ed9854d13ab7aafc4d">
+            <img src="https://ss1.4sqi.net/img/categories_v2/shops/apparel_bg_32-6bb99dffbe91bf615b61b99266a4ea24.png" class="thumb" />
+            <p><a href="/v/cyberdog/4bd304ed9854d13ab7aafc4d">Cyberdog</a></p>
+            <p>Brighton, UK</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4ea7ac0b8b8154b19fc4834d">
+            <img src="https://ss1.4sqi.net/img/categories_v2/travel/busstation_bg_32-23e5d16e668030b589ec84db573ab957.png" class="thumb" />
+            <p><a href="/v/muni-bus-5475/4ea7ac0b8b8154b19fc4834d">MUNI bus 5475</a></p>
+            <p>San Francisco, CA</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4dadb7b7f7b1e810c1358924">
+            <img src="https://ss0.4sqi.net/img/categories_v2/building/conventioncenter_meetingroom_bg_32-6d0d538aaa410960ae756657ffb5b411.png" class="thumb" />
+            <p><a href="/v/ballroom-f--santa-clara-convention-center/4dadb7b7f7b1e810c1358924">Ballroom F - Santa Clara Convention Center</a></p>
+            <p>Santa Clara, California</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4dadca500f2cbf844bc4ce48">
+            <img src="https://ss0.4sqi.net/img/categories_v2/building/conventioncenter_meetingroom_bg_32-6d0d538aaa410960ae756657ffb5b411.png" class="thumb" />
+            <p><a href="/v/ballroom-g--santa-clara-convention-center/4dadca500f2cbf844bc4ce48">Ballroom G - Santa Clara Convention Center</a></p>
+            <p>Santa Clara, CA</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4fc5c27fe4b0c52bfc34fbf6">
+            <img src="https://ss1.4sqi.net/img/categories_v2/travel/busstation_bg_32-23e5d16e668030b589ec84db573ab957.png" class="thumb" />
+            <p><a href="/v/muni-bus-5412/4fc5c27fe4b0c52bfc34fbf6">MUNI bus 5412</a></p>
+            <p>San Francisco, CA</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4bcc8cee3740b71315346465">
+            <img src="https://ss1.4sqi.net/img/categories_v2/travel/busstation_bg_32-23e5d16e668030b589ec84db573ab957.png" class="thumb" />
+            <p><a href="/v/muni-bus-5420/4bcc8cee3740b71315346465">MUNI Bus 5420</a></p>
+            <p>San Francisco, CA</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4c8811f949ddef3b16397470">
+            <img src="https://ss0.4sqi.net/img/categories_v2/shops/bookstore_bg_32-9c4184cb2c592385fea0a58f2c11b4e5.png" class="thumb" />
+            <p><a href="/v/powells-books-at-pdx-concourse-d/4c8811f949ddef3b16397470">Powell's Books at PDX: Concourse D</a></p>
+            <p>Portland, OR</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4d0ce66395c1a1cd4e08fffe">
+            <img src="https://ss0.4sqi.net/img/categories_v2/travel/airport_gate_bg_32-c483e35bc95227168869d516accb42bb.png" class="thumb" />
+            <p><a href="/v/gate-d4/4d0ce66395c1a1cd4e08fffe">Gate D4</a></p>
+            <p>Portland, OR</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4d141ca3b15cb1f7ad149e21">
+            <img src="https://ss0.4sqi.net/img/categories_v2/nightlife/nightclub_bg_32-d4ea34413044c9148a38b7b41dc94e92.png" class="thumb" />
+            <p><a href="/v/ashbury-disco/4d141ca3b15cb1f7ad149e21">Ashbury Disco</a></p>
+            <p>San Francisco, CA</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4aabdbe7f964a5207c5a20e3">
+            <img src="https://ss1.4sqi.net/img/categories_v2/travel/busstation_bg_32-23e5d16e668030b589ec84db573ab957.png" class="thumb" />
+            <p><a href="/v/muni-ashbury-at-frederick/4aabdbe7f964a5207c5a20e3">MUNI Ashbury at Frederick</a></p>
+            <p>San Francisco, CA</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4d3a6bc534ee370440c1779b">
+            <img src="https://ss1.4sqi.net/img/categories_v2/travel/busstation_bg_32-23e5d16e668030b589ec84db573ab957.png" class="thumb" />
+            <p><a href="/v/muni-bus-5452/4d3a6bc534ee370440c1779b">MUNI bus 5452</a></p>
+            <p>San Francisco, California</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4d8acbad401a224bd305aa18">
+            <img src="https://ss1.4sqi.net/img/categories_v2/travel/busstation_bg_32-23e5d16e668030b589ec84db573ab957.png" class="thumb" />
+            <p><a href="/v/muni-bus-5424/4d8acbad401a224bd305aa18">MUNI bus 5424</a></p>
+            <p>San Francisco, California</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4d45e1e414aa8cfa2025773d">
+            <img src="https://ss1.4sqi.net/img/categories_v2/travel/busstation_bg_32-23e5d16e668030b589ec84db573ab957.png" class="thumb" />
+            <p><a href="/v/muni-bus-5430/4d45e1e414aa8cfa2025773d">MUNI Bus 5430</a></p>
+            <p>San Francisco, CA</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4bdc61d5c79cc928284786e9">
+            <img src="https://ss1.4sqi.net/img/categories_v2/building/office_conferenceroom_bg_32-62006c91500a0edcc63af805cfa98b25.png" class="thumb" />
+            <p><a href="/v/hopper-conference-room/4bdc61d5c79cc928284786e9">hopper conference room</a></p>
+            <p>Boston, Massachusetts</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4dcb70df52b17cba4fa8f164">
+            <img src="https://ss1.4sqi.net/img/categories_v2/travel/busstation_bg_32-23e5d16e668030b589ec84db573ab957.png" class="thumb" />
+            <p><a href="/v/muni-stop-market--kearny-outbound/4dcb70df52b17cba4fa8f164">Muni Stop Market &amp; Kearny outbound</a></p>
+            <p>San Francisco, CA</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4e01189e52b1ac66aac931ce">
+            <img src="https://ss0.4sqi.net/img/categories_v2/building/eventspace_bg_32-30f051e9b6a03378aef9371c9ad2fe38.png" class="thumb" />
+            <p><a href="/v/b204-the-eliot-center/4e01189e52b1ac66aac931ce">B204 (The Eliot Center)</a></p>
+            <p>Portland, OR</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4e0232f0d1647696f125d1d0">
+            <img src="https://ss0.4sqi.net/img/categories_v2/building/eventspace_bg_32-30f051e9b6a03378aef9371c9ad2fe38.png" class="thumb" />
+            <p><a href="/v/b302b303-the-eliot-center/4e0232f0d1647696f125d1d0">B302/B303 (The Eliot Center)</a></p>
+            <p>Portland, OR</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4e07d247a809495e619bb06c">
+            <img src="https://ss0.4sqi.net/img/categories_v2/none_bg_32-c31a0ed76d3ef56c37c0c6f424ca4dbb.png" class="thumb noCat" />
+            <p><a href="/v/ception/4e07d247a809495e619bb06c">Ception</a></p>
+            <p>Portland, OR</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4e022d0322717718d3a2cc47">
+            <img src="https://ss1.4sqi.net/img/categories_v2/travel/busstation_bg_32-23e5d16e668030b589ec84db573ab957.png" class="thumb" />
+            <p><a href="/v/muni-bus-5467/4e022d0322717718d3a2cc47">MUNI Bus #5467</a></p>
+            <p>San Francisco, California</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4e944c237beb0555e6fcb93f">
+            <img src="https://ss0.4sqi.net/img/categories_v2/building/eventspace_bg_32-30f051e9b6a03378aef9371c9ad2fe38.png" class="thumb" />
+            <p><a href="/v/speaker-lounge--web-20-expo-2011/4e944c237beb0555e6fcb93f">Speaker Lounge - Web 2.0 Expo 2011</a></p>
+            <p>New York, NY</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4e9451dc7beb0555e6fe3962">
+            <img src="https://ss0.4sqi.net/img/categories_v2/building/eventspace_bg_32-30f051e9b6a03378aef9371c9ad2fe38.png" class="thumb" />
+            <p><a href="/v/conference-room-e--sheraton-towers/4e9451dc7beb0555e6fe3962">Conference Room E - Sheraton Towers</a></p>
+            <p>New York, NY</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4e00d06f18a8abfb3f6b8e47">
+            <img src="https://ss0.4sqi.net/img/categories_v2/building/eventspace_bg_32-30f051e9b6a03378aef9371c9ad2fe38.png" class="thumb" />
+            <p><a href="/v/b202203-the-eliot-center/4e00d06f18a8abfb3f6b8e47">B202/203 (The Eliot Center)</a></p>
+            <p>Portland, OR</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4dbf382281545e1cc7c98de3">
+            <img src="https://ss0.4sqi.net/img/categories_v2/parks_outdoors/park_bg_32-f869a0af4f418a7020892d914ba9ec4a.png" class="thumb" />
+            <p><a href="/v/water-fountain-nw-corner-transverse--jfk/4dbf382281545e1cc7c98de3">Water fountain NW corner Transverse &amp; JFK</a></p>
+            <p>San Francisco, CA</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4dff41d0e4cdf7246077dfd4">
+            <img src="https://ss1.4sqi.net/img/categories_v2/travel/busstation_bg_32-23e5d16e668030b589ec84db573ab957.png" class="thumb" />
+            <p><a href="/v/muni-bus-5407/4dff41d0e4cdf7246077dfd4">MUNI Bus 5407</a></p>
+            <p>San Francisco, California</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4f5e1cfee4b01014bc41603d">
+            <img src="https://ss1.4sqi.net/img/categories_v2/shops/toys_bg_32-54a14c9fd88aef119ee91fb432c8521c.png" class="thumb" />
+            <p><a href="/v/lego-table/4f5e1cfee4b01014bc41603d">Lego Table</a></p>
+            <p></p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4f6de494e4b0e3b3bd5a56f3">
+            <img src="https://ss0.4sqi.net/img/categories_v2/building/conventioncenter_meetingroom_bg_32-6d0d538aaa410960ae756657ffb5b411.png" class="thumb" />
+            <p><a href="/v/empire-iii-room--hyatt-regency/4f6de494e4b0e3b3bd5a56f3">Empire III room - Hyatt Regency</a></p>
+            <p>New Orleans, LA</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4ed82b97e300851bf6d2e38b">
+            <img src="https://ss1.4sqi.net/img/categories_v2/travel/busstation_bg_32-23e5d16e668030b589ec84db573ab957.png" class="thumb" />
+            <p><a href="/v/muni-bus-5465/4ed82b97e300851bf6d2e38b">MUNI bus 5465</a></p>
+            <p>San Francisco, CA</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4cafd7f31168a0936df82523">
+            <img src="https://ss1.4sqi.net/img/categories_v2/building/office_conferenceroom_bg_32-62006c91500a0edcc63af805cfa98b25.png" class="thumb" />
+            <p><a href="/v/bat-room-oreilly/4cafd7f31168a0936df82523">Bat Room O'Reilly</a></p>
+            <p>Sebastopol, CA</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4e6b273caeb7c31e435f412b">
+            <img src="https://ss0.4sqi.net/img/categories_v2/building/eventspace_bg_32-30f051e9b6a03378aef9371c9ad2fe38.png" class="thumb" />
+            <p><a href="/v/barcamp-brighton-6-bcb6/4e6b273caeb7c31e435f412b">Barcamp Brighton 6 #bcb6</a></p>
+            <p>Brighton, East Sussex</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4cbff18bca4aa1cd7c101db4">
+            <img src="https://ss1.4sqi.net/img/categories_v2/building/conventioncenter_bg_32-f3ec4619d4b0466795a7f109ab0d7fbc.png" class="thumb" />
+            <p><a href="/v/fronttrends/4cbff18bca4aa1cd7c101db4">Front-trends</a></p>
+            <p></p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4e8293fad3e3ec516cc018ea">
+            <img src="https://ss1.4sqi.net/img/categories_v2/travel/busstation_bg_32-23e5d16e668030b589ec84db573ab957.png" class="thumb" />
+            <p><a href="/v/muni-bus-5446/4e8293fad3e3ec516cc018ea">MUNI bus 5446</a></p>
+            <p>San Francisco, CA</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4fa0151ae4b01729ffb03e29">
+            <img src="https://ss1.4sqi.net/img/categories_v2/building/office_conferenceroom_bg_32-62006c91500a0edcc63af805cfa98b25.png" class="thumb" />
+            <p><a href="/v/microsoft-svc-1--mercury-room/4fa0151ae4b01729ffb03e29">Microsoft SVC 1 - Mercury Room</a></p>
+            <p>Mountain View, CA</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4fa2cc8ee4b079e89e70dfbf">
+            <img src="https://ss1.4sqi.net/img/categories_v2/building/office_conferenceroom_bg_32-62006c91500a0edcc63af805cfa98b25.png" class="thumb" />
+            <p><a href="/v/microsoft-svc-1--saturn-room/4fa2cc8ee4b079e89e70dfbf">Microsoft SVC 1 - Saturn room</a></p>
+            <p>Mountain View, CA</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4da7af0e04376c336876d4a4">
+            <img src="https://ss1.4sqi.net/img/categories_v2/travel/busstation_bg_32-23e5d16e668030b589ec84db573ab957.png" class="thumb" />
+            <p><a href="/v/muni-15655-outbound--market-and-5th/4da7af0e04376c336876d4a4">Muni 15655 Outbound — Market and 5th</a></p>
+            <p>San Francisco, California</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4f0bfa74e4b0dfc434b494a5">
+            <img src="https://ss1.4sqi.net/img/categories_v2/travel/busstation_bg_32-23e5d16e668030b589ec84db573ab957.png" class="thumb" />
+            <p><a href="/v/muni-bus-5442/4f0bfa74e4b0dfc434b494a5">MUNI bus 5442</a></p>
+            <p>SF, CA</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4fbc7a61e4b04771aebdb73e">
+            <img src="https://ss1.4sqi.net/img/categories_v2/travel/busstation_bg_32-23e5d16e668030b589ec84db573ab957.png" class="thumb" />
+            <p><a href="/v/muni-18th--sanchez-33-inbound-stop-13344/4fbc7a61e4b04771aebdb73e">MUNI 18th &amp; Sanchez #33 Inbound stop #13344</a></p>
+            <p>San Francisco, CA</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4fc70c44e4b007719ae7091e">
+            <img src="https://ss1.4sqi.net/img/categories_v2/travel/busstation_bg_32-23e5d16e668030b589ec84db573ab957.png" class="thumb" />
+            <p><a href="/v/muni-18th--mission-33-inbound-stop-13338/4fc70c44e4b007719ae7091e">Muni 18th &amp; Mission 33 inbound stop #13338</a></p>
+            <p>San Francisco, CA</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4fe2da6be4b02bc55250f903">
+            <img src="https://ss1.4sqi.net/img/categories_v2/travel/busstation_bg_32-23e5d16e668030b589ec84db573ab957.png" class="thumb" />
+            <p><a href="/v/muni-bus-stop-church--duboce-nowl-outbound/4fe2da6be4b02bc55250f903">MUNI bus stop Church &amp; Duboce N-OWL Outbound</a></p>
+            <p>San Francisco, CA</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4fb1c6ade4b0216f6885128c">
+            <img src="https://ss1.4sqi.net/img/categories_v2/travel/busstation_bg_32-23e5d16e668030b589ec84db573ab957.png" class="thumb" />
+            <p><a href="/v/muni-bus-8411/4fb1c6ade4b0216f6885128c">MUNI bus 8411</a></p>
+            <p>San Francisco, CA</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4fbc7c7be4b0fb19b112fd06">
+            <img src="https://ss1.4sqi.net/img/categories_v2/travel/busstation_bg_32-23e5d16e668030b589ec84db573ab957.png" class="thumb" />
+            <p><a href="/v/muni-bus-5404/4fbc7c7be4b0fb19b112fd06">MUNI bus 5404</a></p>
+            <p>San Francisco, CA</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_458fdc5ef964a5201d401fe3">
+            <img src="https://ss1.4sqi.net/img/categories_v2/shops/gym_yogastudio_bg_32-23ccdad6115a01e618b1989ddc52783a.png" class="thumb" />
+            <p><a href="/v/port-zero/458fdc5ef964a5201d401fe3">Port Zero</a></p>
+            <p>San Francisco, CA</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4d54e867e7f1a1cd4270f4a4">
+            <img src="https://ss1.4sqi.net/img/categories_v2/travel/busstation_bg_32-23e5d16e668030b589ec84db573ab957.png" class="thumb" />
+            <p><a href="/v/muni-bus-5423/4d54e867e7f1a1cd4270f4a4">MUNI bus 5423</a></p>
+            <p>San Francisco, California</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4dc4ac2b45dd2645525dcac6">
+            <img src="https://ss1.4sqi.net/img/categories_v2/travel/busstation_bg_32-23e5d16e668030b589ec84db573ab957.png" class="thumb" />
+            <p><a href="/v/muni-bus-5444/4dc4ac2b45dd2645525dcac6">MUNI bus 5444</a></p>
+            <p>San Francisco, CA</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4dcb71a5d4c0dfa030d14dce">
+            <img src="https://ss1.4sqi.net/img/categories_v2/travel/busstation_bg_32-23e5d16e668030b589ec84db573ab957.png" class="thumb" />
+            <p><a href="/v/muni-bus-5466/4dcb71a5d4c0dfa030d14dce">Muni Bus 5466</a></p>
+            <p>San Francisco, CA</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4e59f45252b1b78b81a43960">
+            <img src="https://ss1.4sqi.net/img/categories_v2/travel/busstation_bg_32-23e5d16e668030b589ec84db573ab957.png" class="thumb" />
+            <p><a href="/v/muni-bus-5438/4e59f45252b1b78b81a43960">MUNI bus 5438</a></p>
+            <p>San Francisco, CA</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4cb892224352a1cd3cca86f5">
+            <img src="https://ss1.4sqi.net/img/categories_v2/travel/busstation_bg_32-23e5d16e668030b589ec84db573ab957.png" class="thumb" />
+            <p><a href="/v/muni-bus-5426/4cb892224352a1cd3cca86f5">MUNI bus 5426</a></p>
+            <p>San Francisco</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4e8d3aa76da1d5bdcf1a6b36">
+            <img src="https://ss1.4sqi.net/img/categories_v2/travel/busstation_bg_32-23e5d16e668030b589ec84db573ab957.png" class="thumb" />
+            <p><a href="/v/muni-bus-5431/4e8d3aa76da1d5bdcf1a6b36">MUNI bus 5431</a></p>
+            <p>San Francisco, CA</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4cd485e2ab19a09375df39eb">
+            <img src="https://ss1.4sqi.net/img/categories_v2/travel/taxi_bg_32-4f0e57c3ff168af36b20a44610369515.png" class="thumb" />
+            <p><a href="/v/taxi-zone/4cd485e2ab19a09375df39eb">Taxi Zone</a></p>
+            <p>San Francisco, CA</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4f029d749adffb90cf9e0e73">
+            <img src="https://ss1.4sqi.net/img/categories_v2/travel/busstation_bg_32-23e5d16e668030b589ec84db573ab957.png" class="thumb" />
+            <p><a href="/v/muni-market--stockton-outbound-stop-id-15694/4f029d749adffb90cf9e0e73">MUNI Market &amp; Stockton outbound (stop ID 15694)</a></p>
+            <p>SF, CA</p>
+            <span class="delete"></span>
+          </div>
+        
+          <div class="hidden mayorItem" id="mayor_4e4227d1a80925205551d027">
+            <img src="https://ss1.4sqi.net/img/categories_v2/travel/busstation_bg_32-23e5d16e668030b589ec84db573ab957.png" class="thumb" />
+            <p><a href="/v/muni-bus-5422/4e4227d1a80925205551d027">MUNI bus 5422</a></p>
+            <p>San Francisco, California</p>
+            <span class="delete"></span>
+          </div>
+        
+
+        <a href="#" id="showAllMayorships" class="boxLink translate">Show All</a>
+      </div>
+
+      
+      <div id="userFriends" class="box userGrid">
+        <a class="boxLink" href="/t/friends">See All</a>
+        <h5><span class="translate">Friends</span> <em>(626 total)</em></h5>
+
+        
+          <a href="/andrewcrow"><img src="https://is0.4sqi.net/userpix_thumbs/1273_1236962249.jpg" alt="Andrew C." width="25" class="notranslate" title="Andrew C." height="25" /></a>
+        
+          <a href="/user/2216"><img src="https://is0.4sqi.net/userpix_thumbs/2216_1239854123.jpg" alt="Boris J." width="25" class="notranslate" title="Boris J." height="25" /></a>
+        
+          <a href="/user/6240"><img src="https://is0.4sqi.net/userpix_thumbs/UYD2EXA0Z2CVM3KL.jpg" alt="Heidi H." width="25" class="notranslate" title="Heidi H." height="25" /></a>
+        
+          <a href="/peterme"><img src="https://is1.4sqi.net/userpix_thumbs/RIQXSR0ARV5DZFCW.jpg" alt="Peter M." width="25" class="notranslate" title="Peter M." height="25" /></a>
+        
+          <a href="/wilsonminer"><img src="https://is1.4sqi.net/userpix_thumbs/11272_1242540898.jpg" alt="Wilson M." width="25" class="notranslate" title="Wilson M." height="25" /></a>
+        
+          <a href="/lolya"><img src="https://is0.4sqi.net/userpix_thumbs/NEZDD42PUVL5SYSL.jpg" alt="Olya L." width="25" class="notranslate" title="Olya L." height="25" /></a>
+        
+          <a href="/mathowie"><img src="https://is1.4sqi.net/userpix_thumbs/G0VEIWZLK41F2PEB.jpg" alt="Matt H." width="25" class="notranslate" title="Matt H." height="25" /></a>
+        
+          <a href="/gridinoc"><img src="https://is1.4sqi.net/userpix_thumbs/K5NA1DIM0UCXY5H1.png" alt="Laurian G." width="25" class="notranslate" title="Laurian G." height="25" /></a>
+        
+          <a href="/user/17948598"><img src="https://is0.4sqi.net/userpix_thumbs/0IXAPCNVEG3LVXDH.jpg" alt="Touchstone C." width="25" class="notranslate" title="Touchstone C." height="25" /></a>
+        
+          <a href="/kh"><img src="https://is1.4sqi.net/userpix_thumbs/13883_1243269693.jpg" alt="Kristen H." width="25" class="notranslate" title="Kristen H." height="25" /></a>
+        
+          <a href="/andrewhyde"><img src="https://is0.4sqi.net/userpix_thumbs/4a402efd5703e.png" alt="Andrew H." width="25" class="notranslate" title="Andrew H." height="25" /></a>
+        
+          <a href="/natea"><img src="https://is0.4sqi.net/userpix_thumbs/16563_1253977887214.jpg" alt="Nate A." width="25" class="notranslate" title="Nate A." height="25" /></a>
+        
+          <a href="/lokeshdhakar"><img src="https://is1.4sqi.net/userpix_thumbs/BLXKQ12KHCCJKCDQ.png" alt="Lokesh D." width="25" class="notranslate" title="Lokesh D." height="25" /></a>
+        
+          <a href="/thejulielogan"><img src="https://is0.4sqi.net/userpix_thumbs/FC40NYYAQWBUQ4LH.jpg" alt="Julie L." width="25" class="notranslate" title="Julie L." height="25" /></a>
+        
+          <a href="/aral"><img src="https://is0.4sqi.net/userpix_thumbs/CYTY31DTBPEN2RSG.jpg" alt="Aral B." width="25" class="notranslate" title="Aral B." height="25" /></a>
+        
+          <a href="/thierrymarianne"><img src="https://is0.4sqi.net/userpix_thumbs/SLRSIOELJSZPUL4W.jpg" alt="Thierry M." width="25" class="notranslate" title="Thierry M." height="25" /></a>
+        
+          <a href="/ixdiego"><img src="https://is1.4sqi.net/userpix_thumbs/VI5CRMK4JE2X53CF.jpg" alt="Diego P." width="25" class="notranslate" title="Diego P." height="25" /></a>
+        
+          <a href="/ginader"><img src="https://is0.4sqi.net/userpix_thumbs/46345_1253460373290.png" alt="Dirk G." width="25" class="notranslate" title="Dirk G." height="25" /></a>
+        
+          <a href="/user/3229439"><img src="https://is0.4sqi.net/userpix_thumbs/ICATYSRSRH4VURAS.gif" alt="Powell's Books" width="25" class="notranslate" title="Powell's Books" height="25" /></a>
+        
+          <a href="/jessicascorpio"><img src="https://is1.4sqi.net/userpix_thumbs/4C1BPY22YTWBIQIK.jpg" alt="Jessica S." width="25" class="notranslate" title="Jessica S." height="25" /></a>
+        
+          <a href="/user/88332"><img src="https://is1.4sqi.net/userpix_thumbs/88332_1258448313696.jpg" alt="Fabrice B." width="25" class="notranslate" title="Fabrice B." height="25" /></a>
+        
+          <a href="/alicenwondrlnd"><img src="https://is1.4sqi.net/userpix_thumbs/SZJN41NT3PM0NUBZ.jpg" alt="alison a." width="25" class="notranslate" title="alison a." height="25" /></a>
+        
+          <a href="/malarkey"><img src="https://is0.4sqi.net/userpix_thumbs/LY4HOFI22KH01331.jpg" alt="Andy C." width="25" class="notranslate" title="Andy C." height="25" /></a>
+        
+          <a href="/paulrobertlloyd"><img src="https://is1.4sqi.net/userpix_thumbs/OT0UHSNSTYHQKGVK.jpg" alt="Paul L." width="25" class="notranslate" title="Paul L." height="25" /></a>
+        
+      </div>
+
+      
+      
+
+      
+      <div id="userFollowing" class="box userGrid">
+        <h5><span class="translate">Following</span> <em>(83 total)</em></h5>
+
+        
+          <a href="/anildash"><img src="https://is1.4sqi.net/userpix_thumbs/3X2YX1LH4GF04ZSP.jpg" alt="Anil D." width="25" class="notranslate" title="Anil D." height="25" /></a>
+        
+          <a href="/baratunde"><img src="https://is1.4sqi.net/userpix_thumbs/0UBUM5YBIQIQE00S.jpg" alt="Baratunde" width="25" class="notranslate" title="Baratunde" height="25" /></a>
+        
+          <a href="/hmusa"><img src="https://is1.4sqi.net/userpix_thumbs/XBEWXSZO02P3KI51.jpg" alt="H&amp;M" width="25" class="notranslate" title="H&amp;M" height="25" /></a>
+        
+          <a href="/nypl"><img src="https://is1.4sqi.net/userpix_thumbs/OZ1NQB3IDLZNF0WW.jpg" alt="New York Public Library" width="25" class="notranslate" title="New York Public Library" height="25" /></a>
+        
+          <a href="/p/times-square-nyc/5273346"><img src="https://is1.4sqi.net/userpix_thumbs/R25MVD1AJNHE5GKY.jpg" alt="Times Square NYC" width="25" class="notranslate" title="Times Square NYC" height="25" /></a>
+        
+          <a href="/sfgate"><img src="https://is1.4sqi.net/userpix_thumbs/45GMBLEIO2HCJQAG.gif" alt="SFGate" width="25" class="notranslate" title="SFGate" height="25" /></a>
+        
+          <a href="/sfmoma"><img src="https://is1.4sqi.net/userpix_thumbs/GPDAQQF1LMEGLJQV.jpg" alt="SFMOMA" width="25" class="notranslate" title="SFMOMA" height="25" /></a>
+        
+          <a href="/gqmagazine"><img src="https://is0.4sqi.net/userpix_thumbs/1LDYT3BQ2ZNW22CR.png" alt="GQ" width="25" class="notranslate" title="GQ" height="25" /></a>
+        
+          <a href="/latimes"><img src="https://is0.4sqi.net/userpix_thumbs/CBGF1INQNY0LJG03.jpg" alt="Los Angeles Times" width="25" class="notranslate" title="Los Angeles Times" height="25" /></a>
+        
+          <a href="/macys"><img src="https://is0.4sqi.net/userpix_thumbs/V04UJQG42U2FOVUZ.jpg" alt="Macy's" width="25" class="notranslate" title="Macy's" height="25" /></a>
+        
+          <a href="/cspan"><img src="https://is1.4sqi.net/userpix_thumbs/D1LMO5JNCGI2MBFM.png" alt="C-SPAN" width="25" class="notranslate" title="C-SPAN" height="25" /></a>
+        
+          <a href="/topguest"><img src="https://is1.4sqi.net/userpix_thumbs/FC50Q1D5KYO3X3NY.png" alt="Topguest" width="25" class="notranslate" title="Topguest" height="25" /></a>
+        
+          <a href="/timoreilly"><img src="https://is0.4sqi.net/userpix_thumbs/USLJ0GR14UI5HOA3.jpg" alt="Tim O." width="25" class="notranslate" title="Tim O." height="25" /></a>
+        
+          <a href="/mikebloomberg"><img src="https://is1.4sqi.net/userpix_thumbs/JI5NXYQMDWPQ1AA3.jpg" alt="Mike Bloomberg" width="25" class="notranslate" title="Mike Bloomberg" height="25" /></a>
+        
+          <a href="/flavorpill_nyc"><img src="https://is0.4sqi.net/userpix_thumbs/55232_1254847784897.jpg" alt="Flavorpill NYC" width="25" class="notranslate" title="Flavorpill NYC" height="25" /></a>
+        
+          <a href="/supermodelme"><img src="https://is0.4sqi.net/userpix_thumbs/DINWRXJSYXKGGWAW.jpg" alt="Supermodelme" width="25" class="notranslate" title="Supermodelme" height="25" /></a>
+        
+          <a href="/crunchgym"><img src="https://is0.4sqi.net/userpix_thumbs/RI4KIQAWF43RWRMY.jpg" alt="Crunch Gym" width="25" class="notranslate" title="Crunch Gym" height="25" /></a>
+        
+          <a href="/dailycandy"><img src="https://is1.4sqi.net/userpix_thumbs/BRJDUFLBZWQZ5SZZ.jpg" alt="DailyCandy" width="25" class="notranslate" title="DailyCandy" height="25" /></a>
+        
+          <a href="/foodspotting"><img src="https://is0.4sqi.net/userpix_thumbs/KZY1W1D1XJGI03B3.png" alt="Foodspotting" width="25" class="notranslate" title="Foodspotting" height="25" /></a>
+        
+          <a href="/laughingsquid"><img src="https://is1.4sqi.net/userpix_thumbs/DLG0ZMSYJ00BJNIT.jpg" alt="Laughing Squid" width="25" class="notranslate" title="Laughing Squid" height="25" /></a>
+        
+          <a href="/styledotcom"><img src="https://is1.4sqi.net/userpix_thumbs/CNIO2QQIF3HIBXBC.jpg" alt="Style.com" width="25" class="notranslate" title="Style.com" height="25" /></a>
+        
+          <a href="/eater"><img src="https://is0.4sqi.net/userpix_thumbs/4HBAAMCL4WUF3IEU.png" alt="Eater" width="25" class="notranslate" title="Eater" height="25" /></a>
+        
+          <a href="/jambajuice"><img src="https://is1.4sqi.net/userpix_thumbs/02PFQ0VKWNP3V3XX.jpg" alt="Jamba Juice" width="25" class="notranslate" title="Jamba Juice" height="25" /></a>
+        
+          <a href="/haighteration"><img src="https://is1.4sqi.net/userpix_thumbs/APBMDXCOJAIMMPS2.png" alt="Haighteration" width="25" class="notranslate" title="Haighteration" height="25" /></a>
+        
+      </div>
+
+      
+      
+    </div>
+  </div>
+  <script type="text/javascript">
+    fourSq.currentPage = new fourSq.views.UserPage({
+      el: $(document),
+      userTips: USER_TIPS_JSON
+    });
+  </script>
+
+
+        <div id="containerFooter">
+          <div class="wideColumn">
+            <ul class="translate">
+  <li><a href="https://foursquare.com/about">About</a></li>
+  <li><a href="http://blog.foursquare.com">Blog</a></li>
+  <li><a href="http://developers.foursquare.com">Developers</a></li>
+  <li><a href="http://foursquare.com/help">Help</a></li>
+  <li><a href="https://foursquare.com/jobs/">Jobs</a></li>
+  <li><a href="https://foursquare.com/legal/privacy">Privacy</a> (Updated)</li>
+  <li><a href="https://foursquare.com/legal/terms">Terms</a></li>
+  <li><a href="http://store.foursquare.com">Store</a></li>
+  <li>
+  
+  <span id="currentLanguage"><a href="#languagesContainer" rel="facebox">English</a></span><div id="languagesContainer" style="display:none;">Do none of the words on this site make sense to you? Select your favorite language below for greater clarity:<ul class="languages"><li><span class="link langSelect" data-lang="en">English</span></li><li><span class="link langSelect" data-lang="it">Italiano</span></li><li><span class="link langSelect" data-lang="de">Deutsch</span></li><li><span class="link langSelect" data-lang="es">Español</span></li><li><span class="link langSelect" data-lang="fr">Français</span></li><li><span class="link langSelect" data-lang="ja">日本語</span></li><li><span class="link langSelect" data-lang="th">ภาษาไทย</span></li><li><span class="link langSelect" data-lang="ko">한국어</span></li><li><span class="link langSelect" data-lang="ru">Русский</span></li><li><span class="link langSelect" data-lang="pt">Português</span></li><li><span class="link langSelect" data-lang="id">Bahasa Indonesia</span></li><li><span class="link langSelect" data-lang="tr">Türkçe</span></li></ul></div>
+</li>
+</ul>
+          </div>
+          <div class="narrowColumn translate">
+            foursquare © 2012 <img src="https://ss1.4sqi.net/img/icon-mini-crown-cdef5bfd4afc2ff3038c790ea2ae1e14.png" height="9" width="12" alt="" /> <span title="and Ithaca, Madison, Edinburgh &amp; London">Lovingly made in NYC &amp; SF</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+
+    
+
+  <script src="https://ssl.google-analytics.com/ga.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+  try {
+    var pageTracker = _gat._getTracker('UA-2322480-5');
+    pageTracker._trackPageview();
+    pageTracker._trackPageLoadTime();
+    } catch(err) {
+    }
+</script>
+<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+<script type="text/javascript">
+var _sf_async_config = {uid: 11280};
+if (window.location.host != 'developer.foursquare.com') {
+  _sf_async_config.domain = 'foursquare.com';
+}
+if (window.chartbeat_path) {
+  _sf_async_config.path = chartbeat_path;
+}
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+        (('https:' == document.location.protocol) ?
+            'https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/' :
+            'http://static.chartbeat.com/') +
+          'js/chartbeat.js');
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+
+
+<div style="position:absolute;top:-1000px;left:-1000px;height:1px;width:1px;">
+  <img src="/private/wtrack?ts=1343142534&amp;ref=&amp;u=-1&amp;p=/t&amp;event=pltp&amp;sig=ot83MMQVwWz%2FGAmhZfr8GyQczXU%3D" />
+</div>
+
+
+
+
+    
+
+  <script src="/ajax_request/liftAjax.js" type="text/javascript"></script>
+
+	
+</body>
+</html>  
+  

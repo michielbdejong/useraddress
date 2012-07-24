@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>tantek.com</title>
+<link rel="openid.delegate" href="http://tantek.myopenid.com/"/>
+<link rel="openid.server" href="http://www.myopenid.com/server"/>
+<link rel="hub" href="http://pubsubhubbub.appspot.com/"/>
+<link rel="updates alternate" type="application/atom+xml" href="updates.atom"/>
+<style type="text/css">/**/ 
+/* ---------------------------------------------------------------- */
+/*                                                                  */
+/* My HTML5+CSS is a work in progress. Copy paste AT YOUR OWN RISK! */
+/*                                                                  */
+/* ---------------------------------------------------------------- */
+
+@import "2012/simple.css";
+h1,h2{font-size:1em}
+
+body { 
+ margin:auto;
+ padding:20px;
+ max-width:940px;
+}
+
+dt,dd {margin:0;padding:0}
+dt { margin-top:.77em; color:#666; }
+dd { color:#000}
+
+.stream {
+  clear:left;
+  float:left;
+  width:66%;
+}
+
+.stream .hfeed {
+  margin-right:3em;
+}
+
+.hentry ol, .hentry ul {
+  margin-left:30px;
+}
+
+.aside {
+  float:left;
+  width:33%;
+}
+
+.aside h1,.footer h1 {
+  font-size: 2em; 
+  line-height:1.25;  
+  margin:0 0 1em;
+}
+
+.aside .section {
+  margin-top:2em;
+}
+.aside .section.hello {
+  margin-top:0;
+}
+
+.aside .section h1 {
+  margin-bottom:0.5em;
+}
+
+.aside p,.aside li,.aside dl,.footer p,.footer li {
+  font-size:1.3em;
+  line-height:1.54;
+  margin:0;
+  color:#666;
+  list-style:none;
+}
+.hello p {
+  color:#000;
+}
+.elsewhere img {
+  vertical-align:bottom;
+  padding-bottom:.2em;
+}
+.aside h2 {
+  font-size:1.4em;
+  line-height:1.43;
+  font-weight:bold;
+}
+
+.header {
+ height:90px;
+ border-bottom:solid 1px #666;
+ margin-bottom:4em;
+}
+
+.header h1 { 
+  margin:0;
+  padding:5px 0 0;
+  font-size:3em;
+  line-height:1.3;
+  font-weight:bold;
+  white-space:nowrap;
+}
+.header h2 {
+  font-size:2em;
+  line-height:1em;
+  min-width:20em;
+}
+
+.photo { 
+  width:73px; 
+  float:left;
+  margin:0 20px 0 0;
+}
+
+div.footer {
+  margin-left:1em;
+  clear:both;
+  margin-top:1em;
+  padding-top:5em;
+}
+.footer address {   white-space:nowrap; }
+
+.footer .section {
+  float:left;
+  width:30%;
+  margin-right:3%;
+}
+.footer p {
+  margin-top:1em;
+}
+.footer .section li { list-style:disc inside; }
+
+address {
+  font-style:normal;
+  text-align:center;
+  clear:both;
+  margin:1em 5%;
+  padding:3em;
+}
+
+ul.nav,.nav li,ul.offsite{list-style:none}
+ul.nav{float:right; margin-right: 5%}
+ul.offsite,.offsite li,.nav li { list-style:inline; display:inline }
+a:link{color:#2240C0}
+a:link:hover{color:#22B040}
+a:visited:hover{color:#118020}
+
+/* events */
+li.vevent {list-style:none;margin-top:1em}
+abbr.location { display:block;text-align:center;text-transform:uppercase; font-weight:bold;font-size:2em;word-spacing:-.1em; font-size:1.5em}
+li.vevent a { display:block; width:167px; border:2px solid #000; padding:2px 1px 0 1px; text-align:center}
+a.fabw { background: url(http://www.stuffandnonsense.co.uk/build/fabw/img/body.jpg) maroon; color:#fff }
+li.vevent object,.vevent img { max-width:160px }
+li.vevent .with { display:block }
+.subhead { display:block }
+.fabw .location { white-space:normal }
+.supernova a { background:#522381;color:#fff }
+.html5 { color:#3C790A;font-family: Helvetica, sans-serif;font-size: 27px; font-weight: 900; display:block; line-height:.7em; padding-top:3px}
+.html5 span { display:block;font-size:66%;line-height:1em; text-transform:capitalize }
+.vevent a:visited:hover{color:#66F}
+.vevent a:link:hover{color:#33F}
+form.search { width:34%; float:right; margin-top:-1em; white-space:nowrap; font-size:1.3em; }
+input,button { font-size:1em }
+button { margin: 0 0.5em 0 0; padding:0 0.5em }
+form.search input[type=search] { width:62% }
+/**/</style>
+</head>
+<body>
+<header><div class="header">
+<img class="u-photo photo" src="photo.jpg" alt=""/>
+<div class="hgroup"><hgroup>
+<h1>Tantek &#xC7;elik</h1>
+<h2>Independent technologist, writer, teacher</h2> 
+</hgroup></div>
+<form class="search" action="http://www.google.com/search" method="get">
+<input type="hidden" name="as_sitesearch" value="tantek.com">
+<input type="hidden" name="tbs" value="sbd:1,cdr:1,cd_min:1/1/1970">
+<input type="search" name="q">
+<button type="submit">Search</button>
+</form>
+</div></header>
+
+<section><div class="section stream">&nbsp;<ol class="h-feed hfeed">
+<li class="h-entry hentry as-note" id="d206t2"><article><p class="p-entry-title entry-title e-entry-content entry-content article">
+season 2 episode 1 of Alphas is up on Hulu: <a class="auto-link" href="http://hulu.com/alphas">hulu.com/alphas</a> Apparently "day after episode airs" = after 00:00 PDT
+</p>
+<footer><span class="info footer"><a href="2012/206/t2/season-2-alphas-on-hulu" rel="bookmark" class="dt-published published u-url u-uid"><time class="value">1:18</time> on <time class="value">2012-07-24</time></a> using <span class="using">BBEdit</span></span></footer></article></li>
+<li class="h-entry hentry as-note" id="d206t1"><article><p class="p-entry-title entry-title e-entry-content entry-content article">
+Brett (<a class="auto-link" href="http://twitter.com/haxor">@haxor</a>) kicks it off: "Focusing on the Positives: Why I Have My Own Website": <a class="auto-link" href="http://onebigfluke.com/2012/07/focusing-on-positives-why-i-have-my-own.html">onebigfluke.com/2012/07/focusing-on-positives-why-i-have-my-own.html</a> #indieweb
+</p>
+<footer><span class="info footer"><a href="2012/206/t1/focusing-on-positives-why-own-website-indieweb" rel="bookmark" class="dt-published published u-url u-uid"><time class="value">1:02</time> on <time class="value">2012-07-24</time></a> using <span class="using">BBEdit</span></span></footer></article></li>
+<li class="h-entry hentry as-note" id="d205t1"><article><p class="p-entry-title entry-title e-entry-content entry-content article">
+agree a lot with <a class="auto-link" href="http://twitter.com/gilest">@gilest</a> <a class="auto-link" href="http://gilest.org/in-defence-of-flickr">gilest.org/in-defence-of-flickr</a> via <a class="auto-link" href="http://twitter.com/tomcoates">@tomcoates</a>. A year behind on uploads, I'd prefer to POSSE. #indieweb
+</p>
+<footer><span class="info footer"><a href="2012/205/t1/agree-defence-of-flickr-prefer-posse-indieweb" rel="bookmark" class="dt-published published u-url u-uid"><time class="value">4:16</time> on <time class="value">2012-07-23</time></a> using <span class="using">BBEdit</span></span></footer></article></li>
+<li class="h-entry hentry as-note" id="d204t1"><article><p class="p-entry-title entry-title e-entry-content entry-content article">
+good bouldering day at Mission Cliffs: sent 13 of 16 new 2012-07-20 routes, up thru all V4s, including one onsight V4.
+</p>
+<footer><span class="info footer"><a href="2012/204/t1/good-bouldering-mission-cliffs-onsight-v4" rel="bookmark" class="dt-published published u-url u-uid"><time class="value">20:43</time> on <time class="value">2012-07-22</time></a> using <span class="using">BBEdit</span></span></footer></article></li>
+<li class="h-entry hentry as-note" id="d203t2"><article><p class="p-entry-title entry-title e-entry-content entry-content article">
+#Innovatecon: my slides from: #HTML5 and #microformats2: the next evolutionary step for web data: <a class="auto-link" href="http://tantek.com/presentations/2012/07/html5-uf2">tantek.com/presentations/2012/07/html5-uf2</a>
+</p>
+<footer><span class="info footer"><a href="2012/203/t2/innovatecon-slides-html5-microformats2-web-data" rel="bookmark" class="dt-published published u-url u-uid"><time class="value">14:11</time> on <time class="value">2012-07-21</time></a> using <span class="using">BBEdit</span></span></footer></article></li>
+<li class="h-entry hentry as-note" id="d203t1"><article><p class="p-entry-title entry-title e-entry-content entry-content article">
+Congrats <a class="auto-link" href="http://twitter.com/joshuarudd">@joshuarudd</a> on winning an <a class="auto-link" href="http://twitter.com/HTML5Now">@HTML5Now</a> book for asking a  #microformats2 question on Etherpad at #Innovatecon!
+</p>
+<footer><span class="info footer"><a href="2012/203/t1/winning-html5now-book-microformats2-question" rel="bookmark" class="dt-published published u-url u-uid"><time class="value">11:35</time> on <time class="value">2012-07-21</time></a> using <span class="using">BBEdit</span></span></footer></article></li>
+<li class="h-entry hentry as-note" id="d198t2"><article><p class="p-entry-title entry-title e-entry-content entry-content article">
+avoid tco fuglifier: &bull; becomes . in SMS. A # prefix stops tco yet syndicates (e.g. FB) autolink: #<a class="auto-link" href="http://tantek.com">http://tantek.com</a>
+</p>
+<footer><span class="info footer"><a href="2012/198/t2/avoiding-tco-fuglifier" rel="bookmark" class="dt-published published u-url u-uid"><time class="value">22:36</time> on <time class="value">2012-07-16</time></a> using <span class="using">BBEdit</span></span></footer></article></li>
+<li class="h-entry hentry as-note" id="d198t1"><article><p class="p-entry-title entry-title e-entry-content entry-content article">
+added #microformats2 h-feed h-entry to tantek&bull;com.
+</p>
+<footer><span class="info footer"><a href="2012/198/t1/added-microformats2-h-feed-h-entry" rel="bookmark" class="dt-published published u-url u-uid"><time class="value">21:25</time> on <time class="value">2012-07-16</time></a> using <span class="using">BBEdit</span></span></footer></article></li>
+<li class="h-entry hentry as-note" id="d196t1"><article><p class="p-entry-title entry-title e-entry-content entry-content article">
+#OWC4 #HTML5 #microformats2 <a class="auto-link" href="http://twitter.com/t">@t</a> slides <a class="auto-link" href="http://tantek.com/presentations/2012/07/html5-microformats2">tantek.com/presentations/2012/07/html5-microformats2</a> aside: ~40/50 wrote HTML, ~25 #microformats, only 2 #schema
+</p>
+<footer><span class="info footer"><a href="2012/196/t1/owc4-html5-microformats2-slides-microformats-schema" rel="bookmark" class="dt-published published u-url u-uid"><time class="value">11:22</time> on <time class="value">2012-07-14</time></a> using <span class="using">BBEdit</span></span></footer></article></li>
+<li class="h-entry hentry as-note" id="d195t2"><article><p class="p-entry-title entry-title e-entry-content entry-content article">
+that point where too many ideas are spinning around in your head and you need to go for a drive to sort them out #owc4
+</p>
+<footer><span class="info footer"><a href="2012/195/t2/too-many-ideas-drive-sort-them-out-owc4" rel="bookmark" class="dt-published published u-url u-uid"><time class="value">21:01</time> on <time class="value">2012-07-13</time></a> using <span class="using">BBEdit</span></span></footer></article></li>
+<li class="h-entry hentry as-note" id="d195t1"><article><p class="p-entry-title entry-title e-entry-content entry-content article">
+I'm speaking on "#HTML5 and #microformats2" <a class="auto-link" href="http://twitter.com/OpenWebCamp">@OpenWebCamp</a> tomorrow. Add it to your schedule: <a class="auto-link" href="http://openwebcamp.org/events/56">openwebcamp.org/events/56</a> #owc4
+</p>
+<footer><span class="info footer"><a href="2012/195/t1/html5-microformats2-openwebcamp-owc4" rel="bookmark" class="dt-published published u-url u-uid"><time class="value">17:43</time> on <time class="value">2012-07-13</time></a> using <span class="using">BBEdit</span></span></footer></article></li>
+<li class="h-entry hentry as-note" id="d192t1"><article><p class="p-entry-title entry-title e-entry-content entry-content article">
+a few at #WDS asked when I got "@t". A: 40 minutes after my first tweet on 2006-11-22: <a class="auto-link" href="http://twitter.com/t/status/128033">twitter.com/t/status/128033</a> #oldtweets
+</p>
+<footer><span class="info footer"><a href="2012/192/t1/wds-asked-when-got-t-2006-11-22-oldtweets" rel="bookmark" class="dt-published published u-url u-uid"><time class="value">8:51</time> on <time class="value">2012-07-10</time></a> using <span class="using">BBEdit</span></span></footer></article></li>
+<li class="h-entry hentry as-note" id="d190t2"><article><p class="p-entry-title entry-title e-entry-content entry-content article">
+enjoyed #WDS <a class="auto-link" href="http://twitter.com/sarahkpeck">@sarahkpeck</a> Crafting Narratives, <a class="auto-link" href="http://twitter.com/juliaroy">@juliaroy</a> Productivity Hacks. See also: Email=Efail <a class="auto-link" href="http://tantek.com/log/2008/02.html">tantek.com/log/2008/02.html</a>
+</p>
+<footer><span class="info footer"><a href="2012/190/t2/enjoyed-wds-crafting-narratives-productivity-hacks" rel="bookmark" class="dt-published published u-url u-uid"><time class="value">17:47</time> on <time class="value">2012-07-08</time></a> using <span class="using">BBEdit</span></span></footer></article></li>
+<li class="h-entry hentry as-note" id="d190t1"><article><p class="p-entry-title entry-title e-entry-content entry-content article">
+#WDS: as mentioned by <a class="auto-link" href="http://twitter.com/ChrisBrogan">@ChrisBrogan</a>, 12-year old Tom Schaar does 1st ever skateboard 1080 <a class="auto-link" href="http://youtu.be/tbjzZHuGTng">youtu.be/tbjzZHuGTng</a> <iframe class="youtube-player auto-link figure" width="480" height="385" style="border:0" src="http://www.youtube.com/embed/tbjzZHuGTng"></iframe> #WDS2012
+</p>
+<footer><span class="info footer"><a href="2012/190/t1/wds-tom-schaar-skateboard-1080-wds2012" rel="bookmark" class="dt-published published u-url u-uid"><time class="value">10:10</time> on <time class="value">2012-07-08</time></a> using <span class="using">BBEdit</span></span></footer></article></li>
+<li class="h-entry hentry as-note" id="d189t2"><article><p class="p-entry-title entry-title e-entry-content entry-content article">
+<a class="auto-link" href="http://twitter.com/brenebrown">@brenebrown</a>, re: "shame resilience" at #WDS: Can we use spontaneous shaming moments to consciously practice shame resilience?
+</p>
+<footer><span class="info footer"><a href="2012/189/t2/brenebrown-wds-practice-shame-resilience" rel="bookmark" class="dt-published published u-url u-uid"><time class="value">16:13</time> on <time class="value">2012-07-07</time></a> using <span class="using">BBEdit</span></span></footer></article></li>
+<li class="h-entry hentry as-note" id="d189t1"><article><p class="p-entry-title entry-title e-entry-content entry-content article">
+fellow #WDS attendees, let's try collaborative note-taking: <a class="auto-link" href="http://etherpad.mozilla.org/wds">etherpad.mozilla.org/wds</a> add yourself, blog, @-name. #WDS2012
+</p>
+<footer><span class="info footer"><a href="2012/189/t1/wds-attendees-note-taking" rel="bookmark" class="dt-published published u-url u-uid"><time class="value">8:28</time> on <time class="value">2012-07-07</time></a> using <span class="using">BBEdit</span></span></footer></article></li>
+<li class="h-entry hentry as-note" id="d188t1"><article><p class="p-entry-title entry-title e-entry-content entry-content article">
+added real-time most-recent-first search results via Google to tantek&bull;com search box, no JS. #PuSH #indieweb #falcon
+</p>
+<footer><span class="info footer"><a href="2012/188/t1/real-time-most-recent-first-search-push-indieweb-falcon" rel="bookmark" class="dt-published published u-url u-uid"><time class="value">23:45</time> on <time class="value">2012-07-06</time></a> using <span class="using">BBEdit</span></span></footer></article></li>
+<li class="h-entry hentry as-note" id="d187t3"><article><p class="p-entry-title entry-title e-entry-content entry-content article">
+Linksys firmware auto-update forces owners to use #Cisco Cloud service, enables spying+disabling: <a class="auto-link" href="http://boingboing.net/2012/07/03/cisco-locks-customers-out-of-t.html">boingboing.net/2012/07/03/cisco-locks-customers-out-of-t.html</a>
+</p>
+<footer><span class="info footer"><a href="2012/187/t3/automatic-linksys-update-forces-cisco-cloud-spying" rel="bookmark" class="dt-published published u-url u-uid"><time class="value">17:30</time> on <time class="value">2012-07-05</time></a> using <span class="using">BBEdit</span></span></footer></article></li>
+<li class="h-entry hentry as-note" id="d187t2"><article><p class="p-entry-title entry-title e-entry-content entry-content article">
+"You still need your own website" by <a class="auto-link" href="http://twitter.com/macslocum">@macslocum</a> on O'Reilly <a class="auto-link" href="http://twitter.com/Radar">@Radar</a>: <a class="auto-link" href="http://radar.oreilly.com/2012/07/federated-social-web-own-website.html">http://radar.oreilly.com/2012/07/federated-social-web-own-website.html</a> #indieweb #ownyourdata
+</p>
+<footer><span class="info footer"><a href="2012/187/t2/you-still-need-your-own-website-indieweb" rel="bookmark" class="dt-published published u-url u-uid"><time class="value">15:00</time> on <time class="value">2012-07-05</time></a> using <span class="using">BBEdit</span></span></footer></article></li>
+<li class="h-entry hentry as-note" id="d187t1"><article><p class="p-entry-title entry-title e-entry-content entry-content article">
+speaking 2012-07-14 <a class="auto-link" href="http://twitter.com/OpenWebCamp">@OpenWebCamp</a> (sold out!) and 2012-07-21 <a class="auto-link" href="http://twitter.com/CascadeSF">@CascadeSF</a> (<a class="auto-link" href="http://innovatorsoftheweb.eventbrite.com">innovatorsoftheweb.eventbrite.com</a>) on #HTML5 #microformats2
+</p>
+<footer><span class="info footer"><a href="2012/187/t1/speaking-openwebcamp-cascadesf-html5-microformats2" rel="bookmark" class="dt-published published u-url u-uid"><time class="value">13:05</time> on <time class="value">2012-07-05</time></a> using <span class="using">BBEdit</span></span></footer></article></li>
+</ol>
+</div></section>
+
+<aside><div class="aside h-card vcard" id="contact">
+
+<section><div class="section hello">
+<h1>Hello</h1>
+<p class="p-note note">My name is Tantek. I live work play in San Francisco, writing web standards, coding, climbing, evolving culture, and fighting for the users.</p>
+</div></section>
+
+<section><div class="section information">
+<h1>Information</h1>
+<dl>
+<dt>Networks:</dt>
+<dd>Stanford <abbr title="computer science">CS</abbr> Alum (<a href="http://www-cs.stanford.edu/People/undergraduate_alumni"><abbr title="Bachelor of Science">B.S.</abbr></a>, <a href="http://www-cs.stanford.edu/People/masters_alumni"><abbr title="Master of Science">M.S.</abbr></a>)</dd>
+<dd>microformats.org (<a href="http://microformats.org/wiki/admins"><abbr title="administrator">admin</abbr></a>, <a href="http://microformats.org/about/people">founder</a>)</dd>
+<dd>Mozilla (<a href="https://wiki.mozilla.org/Standards">web standards</a>)</dd>
+<dt>Current City:</dt>
+<dd class="h-adr adr">
+<span class="p-locality locality">San Francisco</span>, <abbr title="California" class="p-region region">CA</abbr>
+</dd>
+</dl>
+</div></section>
+
+<section><div class="section elsewhere">
+<h1>Elsewhere</h1>
+<p>tantek.com is my online identity. I share, syndicate, (sometimes host) my activities elsewhere as well.</p>
+<!--<form action=""><div><label>URL: <input size="18" type="url" class="u-url url" id="link" readonly="readonly" value="http://tantek.com" /></label></div></form>-->
+<ul class="comms">
+<li>
+<a href="http://twitter.com/t" rel="me" class="twitter-follow-button" data-show-count="false"><img src="images/twitter-16x16.png" alt=""/> Twitter</a>
+<!-- <a class="u-url url" href="http://twitter.com/t" rel="me" title="Follow me on Twitter"><img src="images/twitter-16x16.png" alt=""/> Twitter</a>, <a class="u-url url" href="http://identi.ca/t" rel="me" title="Follow me on identi.ca">identi.ca: t</a>-->
+</li>
+</ul>
+<ul class="facets">
+<li><a rel="me" class="u-url url" href="http://flickr.com/tantek/" title="photos on Flickr"><img src="images/flickr-16x16.png" alt=""/> Flickr photos</a></li>
+<li><a rel="me" class="u-url url" href="http://last.fm/user/tantekc" title="music on last.fm"><img src="images/lastfm-16x16.png" alt=""/> last.fm music</a></li>
+<li><a rel="me" class="u-url url" href="http://plancast.com/t" title="events, talks, and conferences on Plancast"><img src="images/plancast-16x16.png" alt=""/> Plancast events</a></li>
+<li><a rel="me" class="u-url url" href="http://upcoming.yahoo.com/user/6623" title="events, talks, and conferences on Upcoming"><img src="images/upcoming-16x16.png" alt=""/> Upcoming events</a></li>
+<li><a rel="me" class="u-url url" href="http://lanyrd.com/people/t" title="conferences past, present, and future on Lanyrd"><img src="images/lanyrd-16x16.png" alt=""/> Lanyrd conferences</a></li>
+<li><a rel="me" class="u-url url" href="http://foursquare.com/t" title="geolocation checkins on Foursquare"><img src="images/foursquare-16x16.png" alt=""/> Foursquare checkins</a></li>
+<!--<li><a rel="me" class="u-url url" href="http://tantek.pbwiki.com/" title="projects, notes, and events on PBWiki">PBworks wiki</a></li>-->
+<li><a rel="me" class="u-url url" href="http://www.facebook.com/tantek.celik"><img src="images/facebook-16x16.png" alt=""/> Facebook Profile</a></li>
+<li><a rel="me" class="u-url url" href="http://google.com/profiles/tantek" title="syndication on Google Profiles / Buzz"><img src="images/google-16x16.png" alt=""/> Google Profile</a></li>
+<li>
+<a href="http://tantek.com/w/CommunicationProtocols">Preferred contact</a>: <a rel="me" class="u-url url" href="aim:goim?screenname=tantekc"><img src="images/aim-16x16.png" alt=""/> aim:<abbr class="p-name fn" title="Tantek &#xC7;elik">tantekc</abbr></a>
+</li>
+</ul>
+</div></section>
+
+
+<section><div class="section">
+<h1>Buy my book!</h1>
+<a href="http://tantek.com/html5now"><img src="images/html5nowdvd.jpg" alt="HTML5 Now!"/></a>
+<p>A step-by-step tutorial for getting started with HTML5 today. Includes reference guide and DVD with 2.5 hours of video plus 100 page searchable full-color PDF eBook.</p>
+<p><a href="http://tantek.com/html5now">Buy at Amazon.com</a></p>
+</div></section>
+
+
+
+<!--
+<section><div class="section">
+<h2>recommending</h2>
+<ol>
+
+</ol>
+</div></section>
+-->
+</div></aside>
+
+
+<footer><div class="footer">
+
+<section><div class="section">
+<h1>Launched &amp; Live</h1>
+<ul>
+<li>
+<a href="http://tantek.com/html5now">HTML5 Now! book &amp; DVD</a> (<a href="http://twitter.com/html5now">@html5now</a>) - quickly learn how to write HTML5, from simple documents to video and vector graphics.</li>
+<li>
+<a href="http://asin.cc" title="Amazon product link shortener">ASIN.cc</a> (<a href="http://twitter.com/asindotcc">@asindotcc</a>) - a handy URL shortener for books and Amazon products.</li>
+<li>
+<a href="http://h2vx.com/" title="hCard to vCard, hCalendar to iCalendar conversion services">H2VX</a> (<a href="http://twitter.com/h2vx">@h2vx</a>) - add hCard contacts and hCalendar events from web pages to your address book and calendar programs.</li>
+<li>
+<a href="http://microformats.org/wiki">microformats.org</a> (<a href="http://twitter.com/microformats">@microformats</a>) - the fastest way to turn your web pages into simple APIs and simultaneously look better in search engines.</li>
+</ul>
+</div></section>
+<section><div class="section">
+<h1>Currently Working On</h1>
+<ul>
+<li>
+<a href="https://wiki.mozilla.org/Tantek-Mozilla-projects">Mozilla web standards projects</a> - improving HTML5 and CSS3 for higher fidelity web <abbr title="application">app</abbr> <abbr title="user-interfaces">UIs</abbr>, and open standards for user-centric online identities (vCard, <a href="http://microformats.org/wiki/hcard">hCard</a>, <abbr title="Portable Contacts">PoCo</abbr>, OpenID, OAuth, <a href="http://activitystrea.ms"><abbr title="ActivityStreams">AS</abbr></a>, <a href="http://microformats.org/wiki/RelMeAuth">RelMeAuth</a>, <a href="http://federatedsocialweb.net"><abbr title="Federated Social Web">FSW</abbr></a>).</li>
+<li>
+<a href="http://cassisproject.com" title="CASSIS language and library"><abbr title="Client And Server Scripting Implementation Subset for Javascript and PHP">CASSIS</abbr></a> 
+(<a href="cassis.js" title="latest live release of cassis.js library">cassis.js</a>) - a functional programming language and framework for  code that natively executes in PHP and Javascript.</li>
+<li>
+<a href="http://microformats.org/wiki/RelMeAuth" title="Simplified personal logins with rel-me and OAuth">RelMeAuth</a> - use a personal site and rel="me" hyperlinks to profiles on popular OAuth supporting services like <a href="http://twitter.com/t">Twitter</a>, <a href="http://identi.ca/t">Identica</a>, <a href="http://google.com/profiles/tantek">Google</a> etc. to sign-in with your own URL.
+</li>
+<li>
+<a href="http://tantek.com/w/Falcon">Falcon</a> (<a href="http://twitter.com/falcon">@falcon</a>) - server-based personal tweeting/blogging application.
+</li>
+<li>
+<a href="http://tantek.com/w/Whistle">Whistle</a> - personal algorithmically reversible URL shortener.</li>
+</ul>
+</div></section>
+
+<section><div class="section">
+<h1>Speaking &amp; Attending</h1>
+<ol>
+
+<li class="h-event vevent">
+<span class="dt-start dtstart"><time>2012-07-14</time></span> <a class="u-url url" href="http://openwebcamp.org/"><object class="u-attach attach" style="padding:.3em 0" data="http://openwebcamp.org/images/owc-logo-orig.png" type="image/png"><span class="p-name summary">Open Web Camp IV</span> </object> <abbr class="p-location location" title="San Jose, California">San Jose</abbr></a>
+</li>
+
+<li class="h-event vevent">
+<span class="dt-start dtstart"><time>2012-07-21</time></span> <a href="http://cascadesf.com/"><object class="u-attach attach" style="padding:.3em 0" data="http://cascadesf.com/wp-content/uploads/2012/02/cascadesftwitter-150x150.png" type="image/png"><span class="p-name summary"> <a href="http://cascadesf.com/event/innovators-web-conference/" class="u-url url">Innovators of the Web Conference</a></span></object> <abbr class="p-location location" title="San Francisco, California">San Francisco</abbr></a>
+</li>
+
+<li class="h-event vevent">
+<span class="dt-start dtstart"><time>2012-08-13</time></span>&#x2026;<abbr class="dt-end dtend" title="2012-08-15">15</abbr> <a class="u-url url p-name summary" href="http://wiki.csswg.org/planning/sandiego-2012">W3C CSS WG F2F <abbr class="p-location location" title="San Diego, California">San Diego</abbr></a>
+</li>
+
+
+</ol>
+<p>See <a href="http://lanyrd.com/people/t">my Lanyrd</a> for more.</p>
+<p>
+<a href="webcal://h2vx.com/ics/tantek.com">Subscribe to events</a>
+</p>
+</div></section>
+
+<address class="copyright">&#xA9; 1996-2012 Tantek &#xC7;elik <span class="c">All Rights Reserved</span>
+</address>
+
+</div></footer>
+<script type="text/javascript" src="cassis.js"></script>
+<script type="text/javascript">/**/ 
+var es = document.getElementById("link");
+if (es) {
+  es.onclick = function() {
+   var e = targetelement();
+   e.focus();
+   e.select();
+  };
+}
+/**/</script>
+<script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>var _kmq=[],_sf_startpt=(new Date()).getTime();</script>
+	<title>Tantek Çelik's conference talks and presentations | Lanyrd</title>
+	<meta name="instrumentation" content="b85e913e-7b0c-4a9f-9da0-b2724e9bd489" />
+	
+	<link rel="stylesheet" href="http://static.lanyrd.net/css/core.21de6a32.min.css" media="screen, print" type="text/css">
+	<link rel="stylesheet" href="http://static.lanyrd.net/css/print.f4ed26e7.min.css" media="print" type="text/css">
+	
+	<meta name="HandheldFriendly" content="True">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-touch-fullscreen" content="YES">
+	<meta property="fb:app_id" content="277251005633564">
+	
+	
+		<meta property="og:image" content="http://static.lanyrd.net/cropped-profile-photos/934810f4fb251ff649f36c1780c860f327171f08-s300.jpg">
+	
+
+
+	<link rel="apple-touch-icon-precomposed" href="/static/img/apple-touch-icon.png">
+	<link rel="apple-touch-icon" href="/static/img/apple-touch-icon.png">
+	<link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon">
+	
+	<!--[if IE]><link rel="stylesheet" href="http://static.lanyrd.net/css/ie.7cd81ef0.min.css" type="text/css"><![endif]-->
+	<script src="http://static.lanyrd.net/js/jquery-1.7.1.b47730ff.min.js"></script>
+	<script src="http://static.lanyrd.net/js/jquery.jplayer.min.72d89d00.min.js"></script>
+	<script src="http://static.lanyrd.net/js/lang.ENG.4f594a71.min.js"></script>
+	<script src="http://static.lanyrd.net/global-bundle.7e5e2f16.min.js"></script>
+	
+
+<script type="text/javascript" src="http://static.lanyrd.net/js/jquery.truncator.930fda3a.min.js"></script>
+<script type="text/javascript">
+jQuery(function($) {
+	$('#speaker_bio').truncate({max_length: 250, more: 'show\u2026', less: 'hide'});
+});
+</script>
+
+
+
+<script type="text/javascript">
+jQuery(function($) {
+	var div = $('#sessions-placeholder');
+	$('#session-topics a').live('click', function(ev) {
+		ev.preventDefault();
+		var a = $(this);
+		div.html(
+			'<img src="http://static.lanyrd.net/img/loaders/ajax-loader-blue.543a73ef.gif" ' + 
+			'style="margin-bottom: 1em" />'
+		);
+		div.load(a.attr('href') + '?ajax=1');
+		a.closest('ul').find('li').removeClass('selected');
+		a.closest('li').addClass('selected');
+	});
+});
+</script>
+
+
+
+
+	
+	
+		<script>
+		var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-18148195-1']);_gaq.push(['_trackPageview']);
+			
+			_gaq.push(['all._setAccount', 'UA-18148195-2']); // all hits lanyrd token
+			_gaq.push(['all._setDomainName', 'lanyrd.com']);
+			_gaq.push(['all._trackPageview']);
+			(function() {
+			var ga = document.createElement('script');
+			ga.src = ('https:' == document.location.protocol ?
+				'https://ssl' : 'http://www') +
+				'.google-analytics.com/ga.js';
+			ga.setAttribute('async', 'true');
+			document.documentElement.firstChild.appendChild(ga);
+			})();
+			_gaq.push(function() {
+				var pt = _gat._getTrackerByName();
+				var ft = pt._getVisitorCustomVar(2);
+				if (!ft) {
+					pt._setCustomVar(2,'ft','profile',1);
+				}
+			});
+		</script>
+	
+	
+	<script type="text/javascript">var _kmq = _kmq || []; function _kms(u){setTimeout(function(){var s = document.createElement('script'); var f = document.getElementsByTagName('script')[0]; s.type = 'text/javascript'; s.async = true;s.src = u; f.parentNode.insertBefore(s, f);}, 1);}
+_kms('//i.kissmetrics.com/i.js');_kms('//doug1izaerwt3.cloudfront.net/418a6babd6a4a8807a8ac8c6475fcb6f042dae5a.1.js');
+	</script>
+	
+	<script>
+		WebFontConfig = {
+			custom: { families: ['Eigerdals Black', 'Eigerdals Bold'],
+				urls: ['http://f.fontdeck.com/s/css/TGbdMeB9BOpv5/TSD48cZr1D2pY/lanyrd.com/1280.css'] }
+		};
+		(function() {
+			var html = document.getElementsByTagName("html")[0];
+			html.className += " wf-loading hasJS wf-init";
+			var wf = document.createElement('script');
+			wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+			wf.type = 'text/javascript';
+			wf.async = 'true';
+			var s = document.getElementsByTagName('head')[0];
+			s.appendChild(wf);
+			setTimeout(function() {
+				html.className = html.className.replace('wf-init', '');
+			}, 350);
+		})();
+	</script>
+</head>
+
+
+	
+		<!--[if gte IE 9]>
+	<body class="ie ie9 vcard">
+<![endif]-->
+<!--[if IE 8]>
+	<body class="old-ie ie ie8 vcard">
+<![endif]-->
+<!--[if IE 7]> 
+	 <body class="old-ie ie ie67 ie7 vcard">
+<![endif]-->
+<!--[if IE 6]> 
+	 <body class="old-ie ie ie67 ie6 vcard">
+<![endif]-->
+<!--[if IE]><![if !IE]><![endif]-->
+	<body class=" vcard">
+<!--[if IE]><![endif]><![endif]-->
+
+	
+
+<script>document.body.className += ' hasJS'</script>
+		
+
+
+<div class="notify-banner" id="notify-banner">
+	<iframe src="javascript:false" class="flash-shim"></iframe>
+	<div class="msg">
+		Get Lanyrd on your mobile (iPhone, Android and more) - 
+		<a href="http://lanyrd.com/mobile/">check it out here</a>
+	</div>
+	<div class="options">
+		<button class="dismiss">Dismiss</button>
+	</div>
+</div>
+<div class="page">
+	<p class="logo"><a href="/"><img src="http://static.lanyrd.net/img/logo2.cd556618.png" alt="Lanyrd. The social conference directory"></a></p>
+
+	
+		<div class="tools section">
+			<div class="article">
+				<div class="inner">
+					<p>
+						
+							
+								<a href="/twitter/signin/?next=/profile/t/" class="twitter signin-with-twitter"><span>Sign in with Twitter</span></a>
+							
+						</p>
+			
+					 
+
+				</div>
+			</div>
+		</div>
+
+		<div class="navigation section">
+			<div class="article">
+				<div class="inner">
+					
+					<ul class="nav">
+						
+							<li><a href="/conferences/">conferences</a></li>
+							<li><a href="/coverage/">coverage</a></li>
+							<li><a href="/video/">video</a></li>
+							<li><a href="/audio/">audio</a></li>
+							<li><a href="/slides/">slides</a></li>
+						
+					</ul>
+					
+					
+					
+				</div>
+			</div>
+		</div>
+
+		<div class="search section">
+			<div class="article">
+				<div class="inner">
+					<form action="/search/" method="get">
+						<p> <input type="text" class="search-input" autocomplete="off" title="search for people or conferences" name="q"> <input type="submit" class="small-button" value="search"></p>
+					</form>
+				</div>
+			</div>
+		</div>
+		
+		
+			
+		
+		
+		<div class="content section">
+			<div class="article">
+				<div class="inner">
+					
+					
+				</div>
+				<div class="inner">
+					
+	<div class="primary">
+		<h1 class="fn n">Tantek Çelik</h1>
+	</div>
+	
+<div class="primary">
+	
+		
+			<p class="tagline">barcamp bike climb code create css design evolve hack html5 listen microformats mozilla open optimist pescatarian scientist skeptic standards teach think ux web</p>
+		
+		
+			<p class="med bio-status bio-status-pullup"><span class="icon twitter-mini">bio from Twitter</span> </p>
+		
+	
+	
+	
+	
+	
+	
+	
+		<div class="tabs">
+			<ol>
+				<li class="selected"><a href="/profile/t/">Summary</a></li>
+				<li><a href="/profile/t/future/">Upcoming<span class="not-narrow-friendly"> events <span class="result-count">4</span></span></a></li>
+				<li><a href="/profile/t/past/">Past<span class="not-narrow-friendly"> events <span class="result-count">181</span></span></a></li>
+			</ol>
+		</div>
+	
+	<div class="tab-content inverted wrapper">
+		
+
+
+
+<div class="primary">
+
+	
+	
+	
+		<h2>Upcoming speaking appearances</h2>
+		<div class="brighterlight interactive-listing-container conference-listing">
+			
+				
+					<ol>
+	
+		<li class="conference vevent interactive-listing">
+			<h4><a href="/2012/refresh-lx/" class="summary url">Refresh LX</a></h4>
+			
+				<p class="location">
+					<a href="/places/portugal/" class="flag-mini">
+						<img src="http://static.lanyrd.net/img/icons/flags/16/pt.4be7d407.png" alt="Portugal">
+					</a>
+					<a href="/places/portugal/">Portugal</a>
+					
+						/
+						<a href="/places/lisbon/">
+							Lisbon
+						</a>
+					
+				</p>
+			
+			<p class="date"><strong><abbr class="dtstart" title="2012-09-20">20th</abbr>&ndash;<abbr class="dtend" title="2012-09-21">21st September 2012</abbr></strong></p>
+			
+			
+			
+			
+			
+			
+			
+			
+		</li>
+	
+</ol>
+				
+			
+			
+		</div>
+	
+	
+	
+		<h2>Tantek Çelik is attending</h2>
+		<div class="interactive-listing-container conference-listing">
+			
+				<ol>
+	
+		<li class="conference vevent interactive-listing">
+			<h4><a href="/2012/dconstruct/" class="summary url">dConstruct 2012</a></h4>
+			
+				<p class="location">
+					<a href="/places/england/" class="flag-mini">
+						<img src="http://static.lanyrd.net/img/icons/flags/16/uk.43d4481a.png" alt="England">
+					</a>
+					<a href="/places/england/">England</a>
+					
+						/
+						<a href="/places/brighton/">
+							Brighton
+						</a>
+					
+				</p>
+			
+			<p class="date"><strong><abbr class="dtstart" title="2012-09-07">7th September 2012</abbr></strong></p>
+			
+			
+			
+			
+			
+			
+				<p class="attendee-status">
+	Tantek Çelik
+	
+	
+		
+			is <span class="attending status-indicator">attending</span>
+		
+	
+	
+	
+</p>
+			
+			
+			
+		</li>
+	
+		<li class="conference vevent interactive-listing">
+			<h4><a href="/2012/xoxo/" class="summary url">XOXO Festival</a></h4>
+			
+				<p class="location">
+					<a href="/places/usa/" class="flag-mini">
+						<img src="http://static.lanyrd.net/img/icons/flags/16/us.8f49bcb0.png" alt="United States">
+					</a>
+					<a href="/places/usa/">United States</a>
+					
+						/
+						<a href="/places/portland/">
+							Portland
+						</a>
+					
+				</p>
+			
+			<p class="date"><strong><abbr class="dtstart" title="2012-09-13">13th</abbr>&ndash;<abbr class="dtend" title="2012-09-16">16th September 2012</abbr></strong></p>
+			
+			
+			
+			
+			
+			
+				<p class="attendee-status">
+	Tantek Çelik
+	
+	
+		
+			is <span class="attending status-indicator">attending</span>
+		
+	
+	
+	
+</p>
+			
+			
+			
+		</li>
+	
+		<li class="conference vevent interactive-listing">
+			<h4><a href="/2012/w3c-tpac/" class="summary url">W3C TPAC 2012</a></h4>
+			
+				<p class="location">
+					<a href="/places/france/" class="flag-mini">
+						<img src="http://static.lanyrd.net/img/icons/flags/16/fr.b3469b66.png" alt="France">
+					</a>
+					<a href="/places/france/">France</a>
+					
+						/
+						<a href="/places/lyon/">
+							Lyon
+						</a>
+					
+				</p>
+			
+			<p class="date"><strong><abbr class="dtstart" title="2012-10-29">29th October</abbr> to <abbr class="dtend" title="2012-11-02">2nd November 2012</abbr></strong></p>
+			
+			
+			
+			
+			
+			
+				<p class="attendee-status">
+	Tantek Çelik
+	
+	
+		
+			is <span class="attending status-indicator">attending</span>
+		
+	
+	
+	
+</p>
+			
+			
+			
+		</li>
+	
+</ol>
+			
+			
+		</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		<h2>Has presented sessions on</h2>
+	
+		<ul class="tags inline-tags" id="session-topics">
+			
+				<li><a href="/profile/t/on/microformats/" rel="tag" title="9 sessions on Microformats">Microformats <span class="result-count">9</span></a></li>
+			
+				<li><a href="/profile/t/on/html5/" rel="tag" title="7 sessions on HTML5">HTML5 <span class="result-count">7</span></a></li>
+			
+				<li><a href="/profile/t/on/javascript/" rel="tag" title="2 sessions on JavaScript">JavaScript <span class="result-count">2</span></a></li>
+			
+				<li><a href="/profile/t/on/html5now/" rel="tag" title="2 sessions on HTML5NOW">HTML5NOW <span class="result-count">2</span></a></li>
+			
+				<li><a href="/profile/t/on/microformats2/" rel="tag" title="2 sessions on microformats2">microformats2 <span class="result-count">2</span></a></li>
+			
+				<li><a href="/profile/t/on/css3/" rel="tag" title="1 session on CSS3">CSS3 <span class="result-count">1</span></a></li>
+			
+				<li><a href="/profile/t/on/s5/" rel="tag" title="1 session on S5">S5 <span class="result-count">1</span></a></li>
+			
+				<li><a href="/profile/t/on/blogging/" rel="tag" title="1 session on Blogging">Blogging <span class="result-count">1</span></a></li>
+			
+				<li><a href="/profile/t/on/semantic-web/" rel="tag" title="1 session on Semantic Web">Semantic Web <span class="result-count">1</span></a></li>
+			
+				<li><a href="/profile/t/on/science/" rel="tag" title="1 session on Science">Science <span class="result-count">1</span></a></li>
+			
+				<li><a href="/profile/t/on/open-science/" rel="tag" title="1 session on Open Science">Open Science <span class="result-count">1</span></a></li>
+			
+				<li><a href="/profile/t/on/html5-video/" rel="tag" title="1 session on HTML5 Video">HTML5 Video <span class="result-count">1</span></a></li>
+			
+				<li><a href="/profile/t/on/html5-mobile-app-development/" rel="tag" title="1 session on HTML5 Mobile App Development">HTML5 Mobile App Development <span class="result-count">1</span></a></li>
+			
+				<li><a href="/profile/t/on/cassis/" rel="tag" title="1 session on CASSIS">CASSIS <span class="result-count">1</span></a></li>
+			
+				<li><a href="/profile/t/on/sxsw/" rel="tag" title="1 session on SXSW">SXSW <span class="result-count">1</span></a></li>
+			
+				<li><a href="/profile/t/on/indie-web/" rel="tag" title="1 session on Indie Web">Indie Web <span class="result-count">1</span></a></li>
+			
+				<li><a href="/profile/t/on/sxswi/" rel="tag" title="1 session on sxswi">sxswi <span class="result-count">1</span></a></li>
+			
+				<li><a href="/profile/t/on/ownyourdata/" rel="tag" title="1 session on ownyourdata">ownyourdata <span class="result-count">1</span></a></li>
+			
+				<li><a href="/profile/t/on/sxsw2012/" rel="tag" title="1 session on SXSW2012">SXSW2012 <span class="result-count">1</span></a></li>
+			
+				<li><a href="/profile/t/on/sxswi2012/" rel="tag" title="1 session on SXSWi2012">SXSWi2012 <span class="result-count">1</span></a></li>
+			
+		</ul>
+		<div id="sessions-placeholder"></div>
+	
+	
+	
+
+	
+	
+	
+
+
+	
+		<div class="icon-feature feature-session">
+			<h2>Speaking history</h2>
+			<p class="med collapse"><a href="/profile/t/sessions/">See Tantek Çelik's full speaking history</a></p>
+		</div>
+	
+	
+	
+		
+	
+	
+</div> <!-- /.primary -->
+
+<div class="secondary">
+	
+		<h2 class="force">Session coverage</h2>
+		
+
+	<div class="coverage-item coverage-video">
+		<h3 class="title"><a href="/profile/t/video/">1 video</a></h3>
+		<p class="meta meta-up"> Added 1 year ago</p>
+		<!--<p class="meta meta-up">Added by <a href="#">Natalie Downe</a></p>-->
+	</div>
+
+	<div class="coverage-item coverage-slides">
+		<h3 class="title"><a href="/profile/t/slides/">10 slide decks</a></h3>
+		<p class="meta meta-up"> Most recent added 2 days ago</p>
+		<!--<p class="meta meta-up">Added by <a href="#">Natalie Downe</a></p>-->
+	</div>
+
+	<div class="coverage-item coverage-audio">
+		<h3 class="title"><a href="/profile/t/audio/">3 audio clips</a></h3>
+		<p class="meta meta-up"> Most recent added 4 months ago</p>
+		<!--<p class="meta meta-up">Added by <a href="#">Natalie Downe</a></p>-->
+	</div>
+
+	<div class="coverage-item coverage-writeups">
+		<h3 class="title"><a href="/profile/t/writeups/">5 write-ups</a></h3>
+		<p class="meta meta-up"> Most recent added 9 months ago</p>
+		<!--<p class="meta meta-up">Added by <a href="#">Natalie Downe</a></p>-->
+	</div>
+
+	<div class="coverage-item coverage-sketchnotes">
+		<h3 class="title"><a href="/profile/t/sketchnotes/">1 sketch note</a></h3>
+		<p class="meta meta-up"> Added 1 year ago</p>
+		<!--<p class="meta meta-up">Added by <a href="#">Natalie Downe</a></p>-->
+	</div>
+
+	<div class="coverage-item coverage-photos">
+		<h3 class="title"><a href="/profile/t/photos/">3 photos</a></h3>
+		<p class="meta meta-up"> Most recent added 1 year ago</p>
+		<!--<p class="meta meta-up">Added by <a href="#">Natalie Downe</a></p>-->
+	</div>
+
+	<div class="coverage-item coverage-notes">
+		<h3 class="title"><a href="/profile/t/notes/">2 notes</a></h3>
+		<p class="meta meta-up"> Most recent added 1 year ago</p>
+		<!--<p class="meta meta-up">Added by <a href="#">Natalie Downe</a></p>-->
+	</div>
+
+	<div class="coverage-item coverage-links">
+		<h3 class="title"><a href="/profile/t/links/">6 links</a></h3>
+		<p class="meta meta-up"> Most recent added 1 week ago</p>
+		<!--<p class="meta meta-up">Added by <a href="#">Natalie Downe</a></p>-->
+	</div>
+
+<div class="icon-feature feature-coverage">
+	<h2>See all coverage</h2>
+	<p class="med"><a href="/profile/t/coverage/">31 items in total</a></p>
+</div>
+
+	
+	
+	<h2>Author of</h2>
+	
+		<div class="book-med-listing">
+			<h3><a href="/books/0321719913/">HTML5 Now</a></h3>
+			<p><a href="/books/0321719913/" class="book book-med"><img src="http://ecx.images-amazon.com/images/I/51rwfw39iKL._SL160_.jpg" alt="HTML5 Now"></a></p>
+
+			<p class="icon amazon">Buy on Amazon: <span class="buyme"><a href="http://www.amazon.com/dp/0321719913/red=nosim?tag=lanyrd-20" class="flag-mini"><img src="http://static.lanyrd.net/img/icons/flags/16/us.8f49bcb0.png" alt="United States store"></a> <a href="http://www.amazon.co.uk/dp/0321719913/red=nosim?tag=lanyrd-20" class="flag-mini"><img src="http://static.lanyrd.net/img/icons/flags/16/uk.43d4481a.png" alt="United Kingdom store"></a></span></p>
+		</div>
+	
+
+
+
+	<h2>Book credits</h2>
+	
+		<div class="micro-book">
+			<a href="/books/0596009879/" class="icon micro-book"><img src="http://ecx.images-amazon.com/images/I/517tPmshgsL._SL160_.jpg" alt="book name"></a><strong>Contributor</strong><a href="/books/0596009879/">Web Design in a Nutshell</a>
+		</div>
+	
+		<div class="micro-book">
+			<a href="/books/0321660773/" class="icon micro-book"><img src="http://ecx.images-amazon.com/images/I/41KqUZNnFjL._SL160_.jpg" alt="book name"></a><strong>Technical reviewer</strong><a href="/books/0321660773/">Microformats Made Simple</a>
+		</div>
+	
+
+
+
+	
+
+
+	
+	
+	
+	
+</div> <!-- /.secondary -->
+
+	</div> <!-- /.tab-content -->
+</div> <!-- /.primary -->
+
+<div class="secondary secondary-pullup">
+	
+		<div class="photos"> 
+			<div class="featured-photo"> 
+				<img src="http://static.lanyrd.net/cropped-profile-photos/934810f4fb251ff649f36c1780c860f327171f08-s300.jpg" alt="A photo of Tantek Çelik">
+				<div class="photo-tools">
+					<a href="/profile/t/bio/" class="view">see larger versions</a>
+					
+				</div>
+			</div>
+			
+		</div>
+	
+	
+	
+	<div class="person">
+		<div class="avatar avatar-med">
+			<a href="http://twitter.com/t" rel="me"><img src="http://a0.twimg.com/profile_images/1266918745/2009-068-tantek-headshot-square_normal.jpg" alt="Tantek Çelik"></a>
+		</div>
+		<span class="name"><a href="http://twitter.com/t" rel="me">@t</a></span>
+		
+		
+	</div>
+	
+	
+	
+	
+	
+	
+		<p class="number-feature"><a href="/profile/t/past/speaking/"><strong>69</strong> <em>events</em> <span>spoken at</span></a></p>
+	
+	
+	
+		<p class="number-feature"><a href="/profile/t/past/involved/"><strong>8</strong> <em>events</em> <span>involved with</span></a></p>
+	
+	
+	
+		
+			<p class="number-feature"><a href="/profile/t/past/attending/"><strong>107</strong> <em>events</em> <span>attended</span></a></p>
+		
+		
+		<div class="icon-feature feature-session-multiple">
+			<h2>Browse by year</h2>
+			<p class="med">
+				<a href="/profile/t/2012/">2012</a>&nbsp;&middot; <a href="/profile/t/2011/">2011</a>&nbsp;&middot; <a href="/profile/t/2010/">2010</a>&nbsp;&middot; <a href="/profile/t/2009/">2009</a>&nbsp;&middot; <a href="/profile/t/2008/">2008</a>&nbsp;&middot; <a href="/profile/t/2007/">2007</a>&nbsp;&middot; <a href="/profile/t/2006/">2006</a>&nbsp;&middot; <a href="/profile/t/2005/">2005</a>&nbsp;&middot; <a href="/profile/t/2004/">2004</a>&nbsp;&middot; <a href="/profile/t/2003/">2003</a>&nbsp;&middot; <a href="/profile/t/2002/">2002</a>&nbsp;&middot; <a href="/profile/t/2001/">2001</a>
+			</p>
+		</div>
+	
+	
+	
+	
+	
+	
+	
+	
+		
+			<h2 class="force">Appears with</h2>
+			<ul class="result-person">
+				
+					<li>
+						<a href="/profile/adactio/" class="icon mini-person"><img alt="Jeremy Keith" src="http://a0.twimg.com/profile_images/2218030114/stevehelmet_mini.png" height="24" width="24"><span>Jeremy Keith</span></a> <a href="/search/?show=all&amp;people=t,adactio" class="result-count">13&nbsp;times</a>
+					</li>
+				
+					<li>
+						<a href="/profile/kevinmarks/" class="icon mini-person"><img alt="Kevin Marks" src="http://a0.twimg.com/profile_images/2309131403/xailq7cl8vzr30pr53u7_mini.jpeg" height="24" width="24"><span>Kevin Marks</span></a> <a href="/search/?show=all&amp;people=t,kevinmarks" class="result-count">11&nbsp;times</a>
+					</li>
+				
+					<li>
+						<a href="/profile/debs/" class="icon mini-person"><img alt="deb schultz" src="http://a0.twimg.com/profile_images/1302642444/avataruse2011_mini.jpg" height="24" width="24"><span>deb schultz</span></a> <a href="/search/?show=all&amp;people=t,debs" class="result-count">10&nbsp;times</a>
+					</li>
+				
+					<li>
+						<a href="/profile/mollydotcom/" class="icon mini-person"><img alt="Molly E. Holzschlag" src="http://a0.twimg.com/profile_images/2019530001/Photo_on_2011-10-25_at_07.56__2_mini.jpg" height="24" width="24"><span>Molly E. Holzschlag</span></a> <a href="/search/?show=all&amp;people=t,mollydotcom" class="result-count">8&nbsp;times</a>
+					</li>
+				
+					<li>
+						<a href="/profile/aarongustafson/" class="icon mini-person"><img alt="Aaron Gustafson" src="http://a0.twimg.com/profile_images/1762625072/image1326840350_mini.png" height="24" width="24"><span>Aaron Gustafson</span></a> <a href="/search/?show=all&amp;people=t,aarongustafson" class="result-count">7&nbsp;times</a>
+					</li>
+				
+					<li>
+						<a href="/profile/estellevw/" class="icon mini-person"><img alt="Estelle Weyl" src="http://a0.twimg.com/profile_images/1811754324/estelle_mini.jpg" height="24" width="24"><span>Estelle Weyl</span></a> <a href="/search/?show=all&amp;people=t,estellevw" class="result-count">7&nbsp;times</a>
+					</li>
+				
+					<li>
+						<a href="/profile/waxpancake/" class="icon mini-person"><img alt="Andy Baio" src="http://a0.twimg.com/profile_images/1215102961/waxpancake_fedora_mini.jpg" height="24" width="24"><span>Andy Baio</span></a> <a href="/search/?show=all&amp;people=t,waxpancake" class="result-count">6&nbsp;times</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+</div>
+
+
+				</div>
+			</div>
+		</div>
+
+		<div class="footer section">
+			<div class="article">
+				<div class="inner">
+					<p class="primary"><a href="/help/faq/">faq</a> &middot; <a href="/blog/">blog</a> &middot; <a href="/privacy/">privacy</a> + <a href="/help/cookies/">cookies</a> &middot; <a href="/services/">services</a> &middot; <a href="/colophon/">colophon</a></p>
+					
+					<p class="secondary">Follow @<a href="http://twitter.com/lanyrd">lanyrd</a> on twitter. 
+					</p>
+				</div>
+			</div>
+		</div>
+
+	
+</div>
+
+
+<script type="text/javascript">
+var _sf_async_config={uid:17020,domain:"lanyrd.com"};(function(){function a(){window._sf_endpt=(new Date()).getTime();var c=document.createElement("script");c.setAttribute("src",(("https:"==document.location.protocol)?"https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/":"http://static.chartbeat.com/")+"js/chartbeat.js");document.body.appendChild(c)}var b=window.onload;window.onload=(typeof window.onload!="function")?a:function(){b();a()}})();
+</script>
+
+
+
+	<script>lanyrd.notifyBar.show('mobilenag1');</script>
+
+
+</body>
+</html>
+<!-- Served by live-frontend1 rev c22989beefe1a09862d7d42dde45913af97747e2 for 82.113.121.134 in 0.2659 seconds (0.0900 CPU) | b85e913e-7b0c-4a9f-9da0-b2724e9bd489 -->

@@ -1,0 +1,1873 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="title" content="Tantek Çelik on Plancast" />
+<meta name="description" content="Tantek Çelik is using Plancast to share plans with friends and you can too." />
+<meta name="language" content="en" />
+<title>Tantek Çelik on Plancast</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.5.1.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/jquery-ui.min.js"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="/js/helpers.js"></script>
+<script type="text/javascript" src="/js/awesm_share.js"></script>
+<script type="text/javascript" src="/js/prompt.js"></script>
+<script type="text/javascript" src="/js/plan.js"></script>
+<script type="text/javascript" src="/js/user.js"></script>
+<script type="text/javascript" src="/js/external_service.js"></script>
+<script type="text/javascript" src="/js/input.js"></script>
+<script type="text/javascript" src="/js/tooltip.js"></script>
+<script type="text/javascript" src="/js/misc.js"></script>
+<script type="text/javascript" src="/js/category.js"></script>
+<script type="text/javascript" src="/js/plan_suggestion.js"></script>
+<script type="text/javascript" src="/js/layout.js"></script>
+<script type="text/javascript" src="/js/menu.js"></script>
+<script type="text/javascript" src="/js/plan_form.js"></script>
+<script type="text/javascript" src="/js/plans_tabs_category.js"></script>
+<script type="text/javascript" src="/js/textarea.js"></script>
+<script type="text/javascript" src="/js/plan_invitations.js"></script>
+<link rel="canonical" href="http://plancast.com/t" />
+<link rel="alternate" type="application/rss+xml" title="RSS feed for this page" href="http://plancast.com/t?feed=rss" />
+<link rel="alternate" type="text/calendar" title="iCal feed for this page" href="http://plancast.com/t?feed=ical" />
+    
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/webclip.png"/>
+    <base href="http://plancast.com" />
+    
+      <link rel="stylesheet" type="text/css" media="screen" href="/css/reset.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/misc.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/plan.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/user_notifications.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/prompt.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/plan_form.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/user.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/input.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/header.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/category.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/plan_suggestion.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/deprecated.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/subscription_requests.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/menu.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/plan_invitations.css" />
+</head>
+  <body id="body" onScroll="reposition_fixed_elements();" onResize="resize_fixed_elements(); reposition_fixed_elements();">
+
+    <div id="js-root"></div>
+
+<script type="text/javascript">
+
+  // Google Analytics object
+  var _gaq = _gaq || [];
+  
+  // Set environment var
+  var env = 'prod';
+  
+  // Awe.sm
+  var awesm_api_key = 'd1e2e1a15f46fc92af741e0e9c0f787d9f62cf2a242b91d684057fe8d3f2a230';
+   
+  // Route URLs
+  var routes = new Array();
+  
+  routes['change_request_format'] = '/change-request-format';
+routes['oembed'] = '/oembed';
+routes['place_get_name'] = '/place/name';
+routes['place_get_by_latlon'] = '/place/get-by-latlon';
+routes['place_get_by_location'] = '/place/get-by-location';
+routes['plan_set_scope_map'] = '/plan/set-scope-map';
+routes['component'] = '/component';
+routes['plan_listings'] = '/plan/listings';
+routes['prompt_suggested_users'] = '/prompt/suggested-users';
+routes['prompt_subscribe_all'] = '/prompt/subscribe-all';
+routes['prompt_user_pic'] = '/prompt/user-pic';
+routes['prompt_learn_more'] = '/prompt/learn-more';
+routes['prompt_suggested_categories'] = '/prompt/suggested-categories';
+routes['prompt_user_new_place'] = '/prompt/user-new-place';
+routes['prompt_sign_in'] = '/prompt/sign-in';
+routes['prompt_plan_add'] = '/prompt/add-plan';
+routes['prompt_plan_invitations'] = '/prompt/plan-invitations';
+routes['prompt_plan_edit'] = '/prompt/edit-plan';
+routes['prompt_plan_add_description'] = '/prompt/plan/add-description';
+routes['prompt_plan_add_external_url'] = '/prompt/plan/add-external-url';
+routes['prompt_plan_add_place'] = '/prompt/plan/add-place';
+routes['prompt_plan_merge'] = '/prompt/plan/merge';
+routes['prompt_plan_suggestion_submit'] = '/prompt/plan-suggestion/submit';
+routes['prompt_plan_suggestion_load_recipient'] = '/prompt/plan-suggestion/load-recipient';
+routes['prompt_plan_suggestion'] = '/prompt/plan-suggestion';
+routes['prompt_syndicate_plan'] = '/prompt/syndicate-plan';
+routes['prompt_user_notifications'] = '/prompt/user-notifications';
+routes['prompt_plan_attendees'] = '/prompt/plan-attendees';
+routes['prompt_plan_comments'] = '/prompt/plan-comments';
+routes['prompt_plan_place'] = '/prompt/plan-place';
+routes['category_subscribe'] = '/category/subscribe';
+routes['category_unsubscribe'] = '/category/unsubscribe';
+routes['category_slug'] = '/category';
+routes['load_eventbrite_events'] = '/user/load-eventbrite-events';
+routes['user_subscribe_all'] = '/user/subscribe-all';
+routes['user_activation'] = '/user/welcome';
+routes['user_activation_complete'] = '/user/welcome/complete';
+routes['user_discovery'] = '/user/discovery';
+routes['user_set_attribute'] = '/user/set-attribute';
+routes['ajax_username_detection'] = '/user/username-detection';
+routes['featured_austin'] = '/austin';
+routes['sxsw'] = '/sxsw';
+routes['suggest_test'] = '/admin/suggest-test';
+routes['adminTwitterSent'] = '/admin/twitter/sent';
+routes['adminTwitterReceived'] = '/admin/twitter/received';
+routes['adminTwitterSend'] = '/admin/twitter/send';
+routes['update_pics'] = '/admin/update_pics';
+routes['search'] = '/search';
+routes['search_universal'] = '/search/universal.json';
+routes['search_users'] = '/search/users.json';
+routes['search_friends'] = '/search/friends.json';
+routes['search_plans'] = '/search/plans.json';
+routes['search_places'] = '/search/places.json';
+routes['search_categories'] = '/search/categories.json';
+routes['admin_send_digest'] = '/admin/send_digest';
+routes['admin_clear_memcache'] = '/admin/clear_memcache';
+routes['nudge'] = '/user/nudge';
+routes['google'] = '/google';
+routes['google_authorize_url'] = '/google/authorize-url';
+routes['google_connect'] = '/google/connect';
+routes['subscribe_invite'] = '/invite';
+routes['subscribe_invite_sender_user_id'] = '/invite/user';
+routes['google_disconnect'] = '/google/disconnect';
+routes['about_nonuser_sharing'] = '/about/nonuser_sharing';
+routes['user_completion'] = '/user/completion';
+routes['user_email_confirmation'] = '/user/email_confirmation';
+routes['user_reset_password'] = '/user/reset-password';
+routes['user_reset_password_initiated'] = '/user/reset-password/initiated';
+routes['user_reset_password_landing'] = '/reset-password/landing';
+routes['user_reset_password_error'] = '/reset-password/error';
+routes['user_reset_password_completed'] = '/reset-password/completed';
+routes['user_sign_in'] = '/user/signin';
+routes['user_header_options'] = '/user/header-options';
+routes['user_sign_out'] = '/user/signout';
+routes['user_sign_up'] = '/user/signup';
+routes['user_sign_up_finish'] = '/user/signup/4';
+routes['secure'] = '/user/secure';
+routes['error_404'] = '/default/error404';
+routes['facebook_connect'] = '/facebook/connect';
+routes['facebook_mobile_connect'] = '/facebook/mobile-connect';
+routes['facebook_disconnect'] = '/facebook/disconnect';
+routes['facebook_load_events'] = '/facebook/load-events';
+routes['facebook_post_invitation'] = '/facebook/post-invitation';
+routes['meetup_authorize_url'] = '/meetup/authorize';
+routes['meetup_connect'] = '/meetup/connect';
+routes['meetup_callback'] = '/meetup/callback';
+routes['meetup_disconnect'] = '/meetup/disconnect';
+routes['meetup_load_events'] = '/meetup/load-events';
+routes['linkedin_authorize_url'] = '/linkedin/authorize';
+routes['linkedin_connect'] = '/linkedin/connect';
+routes['linkedin_callback'] = '/linkedin/callback';
+routes['linkedin_disconnect'] = '/linkedin/disconnect';
+routes['linkedin_load_events'] = '/linkedin/load-events';
+routes['twitter_authorize_url'] = '/twitter/authorize-url';
+routes['twitter_connect'] = '/twitter/connect';
+routes['twitter_callback'] = '/twitter/callback';
+routes['twitter_disconnect'] = '/twitter/disconnect';
+routes['twitter_test'] = '/twitter/test';
+routes['twitter_mobile_connect'] = '/twitter/mobile-connect';
+routes['twitter_tweet_invitation'] = '/twitter/tweet-invitation';
+routes['user_mobile_completion'] = '/user/mobile-completion';
+routes['user_subscribe'] = '/user/subscribe';
+routes['user_unsubscribe'] = '/user/unsubscribe';
+routes['subscription_request'] = '/user/subscription-request';
+routes['user_subscription_requests'] = '/user/subscription-requests';
+routes['user_subscription_request_respond'] = '/user/subscription-request-respond';
+routes['user_subscriptions'] = '//subscriptions';
+routes['user_subscriptions_id'] = '/user//subscriptions';
+routes['user_subscribers_session'] = '/subscribers';
+routes['user_subscribers'] = '//subscribers';
+routes['user_subscribers_id'] = '/user//subscribers';
+routes['about'] = '/about';
+routes['about_contact'] = '/about/contact';
+routes['contact'] = '/contact';
+routes['about_team'] = '/about/team';
+routes['about_downloads'] = '/about/downloads';
+routes['about_privacy_policy'] = '/about/privacy-policy';
+routes['about_terms_of_use'] = '/about/terms-of-use';
+routes['about_api'] = '/api';
+routes['about_developers'] = '/developers';
+routes['goodies'] = '/goodies';
+routes['goodies_widgets'] = '/goodies/widgets';
+routes['goodies_widgets_profile_sidebar'] = '/goodies/widgets/sidebar';
+routes['goodies_widgets_profile_sidebar_embed_v1'] = '/goodies/widgets/sidebar/1';
+routes['goodies_widgets_category_sidebar_embed_v1'] = '/goodies/widgets/category-sidebar/1';
+routes['goodies_widgets_profile_full'] = '/goodies/widgets/full';
+routes['goodies_widgets_profile_full_embed_v1'] = '/goodies/widgets/full/1';
+routes['goodies_buttons'] = '/goodies/buttons';
+routes['jobs'] = '/jobs';
+routes['feedback'] = '/feedback';
+routes['attendance_delete'] = '/attendance//delete';
+routes['a'] = '/a/';
+routes['attendance'] = '/attendance/';
+routes['plan_like'] = '/plan/like';
+routes['plan_ajax_meaning_parser'] = '/plan/ajax_meaning_parser';
+routes['plan_when_string_validate'] = '/plan/when-string-validate';
+routes['plan_comments_add'] = '/plan/comment/add';
+routes['plan_comments_delete'] = '/plan/comment/delete';
+routes['plan_categories_add'] = '/plan/add-category';
+routes['plan_remove_category'] = '/plan/remove-category';
+routes['plan_accept_recommendation'] = '/plan/accept-recommendation';
+routes['plan_attendees'] = '/plan/attendees';
+routes['plan_attend'] = '/plan/attend';
+routes['plan_unattend'] = '/plan/unattend';
+routes['plan_favorite'] = '/plan/favorite';
+routes['plan_unfavorite'] = '/plan/unfavorite';
+routes['plan_add'] = '/plan/add';
+routes['plan_edit'] = '/plan/edit';
+routes['plan_delete'] = '/plan/delete';
+routes['plan_merge'] = '/plan/merge';
+routes['plan_clean'] = '/plan/clean';
+routes['plan'] = '/plan';
+routes['plan_short'] = '/p/';
+routes['user_settings'] = '/user/settings';
+routes['user_settings_legacy'] = '/settings';
+routes['user_settings_basic_info'] = '/user/settings/basic';
+routes['user_plan_syndication'] = '/user/plan-syndication';
+routes['user_settings_external_services'] = '/user/settings/external-services';
+routes['user_settings_notifications'] = '/user/settings/notifications';
+routes['user_settings_notifications_legacy'] = '/settings/notifications';
+routes['user_settings_privacy'] = '/user/settings/privacy';
+routes['user_settings_miscellaneous'] = '/user/settings/miscellaneous';
+routes['user_settings_miscellaneous_cancelled'] = '/user/settings/miscellaneous/cancelled';
+routes['email_do_not_disturb'] = '/email/do_not_disturb';
+routes['home_notifications'] = '/recent-activity';
+routes['home_schedule_feeds_legacy'] = '/home/schedule';
+routes['home_params'] = '/home';
+routes['home'] = '/';
+routes['user_block'] = '/user/block';
+routes['user_unblock'] = '/settings/unblock';
+routes['user_unknown'] = '/user/unknown';
+routes['user'] = '/user';
+routes['username_schedule_feeds_legacy'] = '//schedule';
+routes['username'] = '/';
+routes['default'] = '/';  
+  // Infinite scroll
+  var infinite_scroll_point = 1000;
+  
+  // Request format
+  var request_format = 'standard';
+  
+  // Scope map source
+  var scope_map_source = 'ip';
+  
+  // Handle post-pageload processing
+  $(document).ready(function() 
+  {
+    hash_redirect(); // redirect to hash-represented state, if appropriate
+    onload(); // run any onload tasks
+    detect_geolocation(); // detect location via geolocation API, if appropriate
+  });
+  
+</script>
+
+<!-- Start KISS Metrics -->
+<script type="text/javascript">
+  var _kmq = _kmq || [];
+  function _kms(u){
+    setTimeout(function(){
+      var s = document.createElement('script'); var f = document.getElementsByTagName('script')[0]; s.type = 'text/javascript'; s.async = true;
+      s.src = u; f.parentNode.insertBefore(s, f);
+    }, 1);
+  }
+  _kms('//i.kissmetrics.com/i.js');_kms('//doug1izaerwt3.cloudfront.net/ac32352b72b1f48b3633a208dbccb8c32866ad94.1.js');
+  
+    
+</script>
+<!-- End Kiss Metrics -->
+
+<script type="text/javascript">
+
+var session_user_id                         = null;
+var session_facebook_user_id                = null;
+var session_twitter_user_id                 = null;
+var session_linkedin_user_id                = '';
+var session_google_user_authenticated       = false;
+var shown_plan_add_suggestion_tooltip       = false;
+
+</script>
+        
+    <div id="header">
+    
+      <div id="header_interior">
+    
+        <ul id="header_right">
+          <li><a href="http://plancast.com/user/signin" onclick="return header_sign_in();">Sign In</a></li>        </ul>
+    
+        <div id="header_left">
+          <ul>
+            <li id="logo_li">
+              <a id="header_logo" href="/"><img src="/images/header_logo.png" /></a>            </li>
+              
+<li id="header_input_li">
+  <img id="header_input_submit_button" onclick="header_add_plan();" src="/images/buttons/add_plan.png" />  <div id="header_input_exterior"><input type="text" id="header_input" default_value="search plans, people and categories" tip="enter name of plan, person or category" tabindex="1" css_size="large" /></div>
+  
+  <script type="text/javascript">
+    /**
+     * Selects an item from the header input autoselect suggestions
+     *
+     */
+    function header_input_select()
+    { 
+    	window.location.href = $(this).attr('href'); 
+    }
+    
+    /**
+     * Redirects to dedicated search results page with input value as query
+     * 
+     */
+    function header_input_submit(value)
+    {
+    	window.location.href = routes['search'] + '?q=' + encodeURIComponent(value);
+    	
+    	return 2; // preserve the input value as page loads
+    }
+    
+    /**
+     * Submits the contents of the header input to trigger an Add Plan form prompt
+     * 
+     */
+    function header_add_plan()
+    {
+      var input = $('#header_input');
+    	var value = trim(input.val());
+
+    	if(!session_user_id)
+    	{
+    		if(value && value != input.attr('default_value'))
+    		{
+    			var reason = 'add this plan';
+    		}
+    		else
+    		{
+    			var reason = 'add a plan';
+    		}
+
+    		prompt_toggle(true,'sign_in', { reason: reason, callback: function() { header_add_plan(); } });
+
+    		return false;
+    	}
+
+      // Clear value if it's just the default
+    	if(value == input.attr('default_value'))
+    	{
+    		value = '';
+    	}
+
+    	prompt_toggle(true, 'plan_add', { what_string: value });
+
+    	track_event('Share plan', 'Header input', value);
+    }
+  
+    // Initialize the header input autosuggest
+    var header_input = new InputConfig($('#header_input'), {
+      autosuggest: 
+      { 
+        url: routes['search_universal'], 
+        params:
+        {
+          select_callback: header_input_select,
+          submit_callback: header_input_submit
+        }
+      }
+    });
+  </script>
+</li>
+  
+          </ul>
+        </div>
+    
+        <div style="clear:both"></div>
+    
+      </div>
+    
+    </div>
+    
+    <div id="container">
+      
+      <div id="main"><script type="text/javascript">
+  track_event('Misc', 'Viewed User');
+</script>
+
+
+
+
+<div id="banner">
+  <ul id="banner_buttons">
+    <li><img class="twitter_login_button" onclick="popup_external_service_authorize_display('twitter', &quot;opener.window.location = '/';&quot;)" src="/images/twitter/login-button.png" /></li>
+    <li><img class="facebook_login_button" onclick="popup_external_service_authorize_display('facebook', &quot;opener.window.location = '/';&quot;)" src="/images/facebook/login-button.png" /></li>
+  </ul>
+  <div id="banner_interior">
+    <div id="banner_header">Tantek Çelik is discovering and sharing events on Plancast</div>
+    <div id="banner_subheader">Don't miss out. Sign in with your Facebook or Twitter account to connect with friends and interests.</div>
+    <div id="banner_faces"><fb:facepile max-rows="1" width="600"></fb:facepile></div>
+  </div>
+</div>
+
+
+<div id="user_cols">
+
+  <div id="user_col1">
+    
+    <div id="user_col1_interior">
+      
+            
+      <h1 style="padding-top:0;border-bottom:0; margin-right: 25px">Tantek Çelik<br /><span style="font-size:.5em; color:gray; line-height: 150%;">barcamp bicycler buildingblocks climber cultural evolution gtd hacker independent microformats nerdy optimist pescatarian scientist skeptic</span></h1>
+      <div id="plans" style="margin: 0 25px 15px 0;">
+        
+                  
+                      
+            
+<script type="text/javascript">
+  content_container = 'plans';
+
+  plans_params                        = {"scope":"everywhere","time_periods":["present","future"],"user_id":9544,"type":"user","title":"Tantek \u00c7elik on Plancast","desc":"Plans for Tantek \u00c7elik","limit":25,"page":1};
+  plans_params['infinite_scroll']     = true;
+  plans_params['show_group_headers']  = true;
+
+   
+</script>
+
+
+  
+    
+    <div class="plans_list_group_header" id="plans_list_group_header_today"><span>Today</span></div><ul class="plans_list" header_label="today"><li class="plan" id="plan_571977" plan_title="HTML5 &amp; microformats 2 meetup / San Francisco" onmouseover="plan_description_toggle(true,571977)" onmouseout="plan_description_toggle(false,571977)">
+  
+  <div class="plan_description description" id="plan_description_571977" style="display: none">
+    
+    <img src="/images/arrows/left_gray1.png" />    
+    <div class="plan_description_interior">
+      
+              Come along and find out more about the excitement about the evolution of data on the web with HTML5 and microformats2 that&#039;s been growing the past couple of weeks at OpenWebCamp IV and the Innovators of the Web conference.            
+    </div>
+  </div>
+
+  <div class="plan_right vevent">
+    
+          
+      <ul class="plan_options">
+        <li id="plan_571977_attendance_toggle" class="plan_attendance_toggle plan_attendance_toggle_attend"></li>
+      </ul>
+      
+      <script type="text/javascript">
+        $('#plan_571977_attendance_toggle').click(function() { 
+
+        plan_attend({ 
+          context:      'listing', 
+          plan_id:      571977
+        }); 
+
+        
+        event.stopPropagation();
+       });
+      </script>
+      
+    
+    <div class="plan_what"><a class="url summary" href="http://plancast.com/p/c9c9/html5-microformats-2-meetup-san-francisco">HTML5 &amp; microformats 2 meetup / San Francisco</a></div>
+
+    <div class="plan_details">
+      
+              
+        <span class="location plan_location_link" style="cursor: pointer" onclick="prompt_toggle(true,'plan_place',{ plan_id: 571977 })">
+          La Boulange du Dome, 845 Market st., San Francisco, CA        
+        </span>
+        
+        <span class="geo value-title" title="37.7878320;-122.4029260"></span> 
+        
+        &#183; 
+        
+            
+      <span class="dtstart value-title" title="2012-07-24T19:00:00+0000">Tuesday, July 24, 2012, 7-9:00pm</span>      
+    </div>
+  
+    <ul class="plan_meta plan_meta_w_attendees">
+      
+              <li class="plan_meta_stat" onclick="prompt_toggle(true,'plan_attendees',{ plan_id: 571977 })" style="margin-right: 12px; padding-bottom: 10px;">
+          <img src="/images/icons/people.png" /> 
+          <span class="pseudo_link" style="font-size: 1.1em; margin-top: -1px">4</span>
+          <div style="clear:both"></div>
+        </li>
+            
+              
+        <ul class="plan_meta_attendees plan_571977_meta_attendees">
+                      <li class="plan_meta_attendee plan_571977_meta_attendee_1">
+              
+<div user_id="9544" class="user_pic_square user_pic_square_small user_pic_square_9544" onMouseOver="show_tooltip($(this), 'Tantek Çelik')" onMouseOut="hide_tooltip()">
+	<a target="_self" href="http://plancast.com/t"><img src="http://a3.twimg.com/profile_images/574754189/ca-sci-t_normal.jpg" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_571977_meta_attendee_2">
+              
+<div user_id="9611" class="user_pic_square user_pic_square_small user_pic_square_9611" onMouseOver="show_tooltip($(this), 'Kevin Marks')" onMouseOut="hide_tooltip()">
+	<a target="_self" href="http://plancast.com/kevinmarks"><img src="https://graph.facebook.com/724885424/picture" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_571977_meta_attendee_3">
+              
+<div user_id="5339" class="user_pic_square user_pic_square_small user_pic_square_5339" onMouseOver="show_tooltip($(this), 'Ariel Waldman')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/arielwaldman"><img src="http://a3.twimg.com/profile_images/130190189/104_icon_normal.jpg" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_571977_meta_attendee_4">
+              
+<div user_id="8316" class="user_pic_square user_pic_square_small user_pic_square_8316" onMouseOver="show_tooltip($(this), 'Ben Werdmuller')" onMouseOut="hide_tooltip()">
+	<a target="_self" href="http://plancast.com/benwerd"><img src="https://graph.facebook.com/36802236/picture" /></a></div>
+
+              
+            </li>
+                    <div style="clear:both"></div>
+          
+                    
+        </ul>
+        
+          
+      <div style="clear: both"></div>
+    <ul>
+
+  </div>
+  
+</li>
+</ul><div style="clear:both"></div><div class="plans_list_group_header" id="plans_list_group_header_tomorrow"><span>Tomorrow</span></div><ul class="plans_list" header_label="tomorrow"><li class="plan" id="plan_474224" plan_title="Mars Bar / 106 MILES in San Francisco" onmouseover="plan_description_toggle(true,474224)" onmouseout="plan_description_toggle(false,474224)">
+  
+  <div class="plan_description description" id="plan_description_474224" style="display: none">
+    
+    <img src="/images/arrows/left_gray1.png" />    
+    <div class="plan_description_interior">
+      
+              The last Wednesday of every month, 6-9pm, we have a gathering at Mars Bar in San Francisco, and you&#039;re invited.<br />
+<br />
+Come meet someone new, and enjoy a drink or two.<br />
+<br />
+Haiku: This meetup is free / to attend. Buy your own drinks, / and drinks for a friend... :)<br />
+<br />
+See you there!<br />
+<br />
+If you&#039;re wondering what a 106 Miles event looks like, you can...            
+    </div>
+  </div>
+
+  <div class="plan_right vevent">
+    
+          
+      <ul class="plan_options">
+        <li id="plan_474224_attendance_toggle" class="plan_attendance_toggle plan_attendance_toggle_attend"></li>
+      </ul>
+      
+      <script type="text/javascript">
+        $('#plan_474224_attendance_toggle').click(function() { 
+
+        plan_attend({ 
+          context:      'listing', 
+          plan_id:      474224
+        }); 
+
+        
+        event.stopPropagation();
+       });
+      </script>
+      
+    
+    <div class="plan_what"><a class="url summary" href="http://plancast.com/p/a5ww/mars-bar-106-miles-san-francisco">Mars Bar / 106 MILES in San Francisco</a></div>
+
+    <div class="plan_details">
+      
+              
+        <span class="location plan_location_link" style="cursor: pointer" onclick="prompt_toggle(true,'plan_place',{ plan_id: 474224 })">
+          Mars Bar &amp; Restaurant        
+        </span>
+        
+        <span class="geo value-title" title="37.7730784;-122.4031864"></span> 
+        
+        &#183; 
+        
+            
+      <span class="dtstart value-title" title="2012-07-25T18:00:00+0000">Wednesday, July 25, 2012, 6:00pm</span>      
+    </div>
+  
+    <ul class="plan_meta plan_meta_w_attendees">
+      
+              <li class="plan_meta_stat" onclick="prompt_toggle(true,'plan_attendees',{ plan_id: 474224 })" style="margin-right: 12px; padding-bottom: 10px;">
+          <img src="/images/icons/people.png" /> 
+          <span class="pseudo_link" style="font-size: 1.1em; margin-top: -1px">4</span>
+          <div style="clear:both"></div>
+        </li>
+            
+              
+        <ul class="plan_meta_attendees plan_474224_meta_attendees">
+                      <li class="plan_meta_attendee plan_474224_meta_attendee_1">
+              
+<div user_id="44" class="user_pic_square user_pic_square_small user_pic_square_44" onMouseOver="show_tooltip($(this), 'Adam Rifkin')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/ifindkarma"><img src="https://graph.facebook.com/500040414/picture" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_474224_meta_attendee_2">
+              
+<div user_id="18917" class="user_pic_square user_pic_square_small user_pic_square_18917" onMouseOver="show_tooltip($(this), 'Lili Balfour')" onMouseOut="hide_tooltip()">
+	<a target="_self" href="http://plancast.com/lilibalfour"><img src="http://plancast.com/uploads/pics/18917_pic_square_1303069355.jpg" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_474224_meta_attendee_3">
+              
+<div user_id="9544" class="user_pic_square user_pic_square_small user_pic_square_9544" onMouseOver="show_tooltip($(this), 'Tantek Çelik')" onMouseOut="hide_tooltip()">
+	<a target="_self" href="http://plancast.com/t"><img src="http://a3.twimg.com/profile_images/574754189/ca-sci-t_normal.jpg" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_474224_meta_attendee_4">
+              
+<div user_id="5970" class="user_pic_square user_pic_square_small user_pic_square_5970" onMouseOver="show_tooltip($(this), 'Bruno Fonzi')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/fonzi"><img src="http://a3.twimg.com/profile_images/780493543/twitterProfilePhoto_normal.jpg" /></a></div>
+
+              
+            </li>
+                    <div style="clear:both"></div>
+          
+                    
+        </ul>
+        
+          
+      <div style="clear: both"></div>
+    <ul>
+
+  </div>
+  
+</li>
+</ul><div style="clear:both"></div><div class="plans_list_group_header" id="plans_list_group_header_nextyear"><span>Next Year</span></div><ul class="plans_list" header_label="nextyear"><li class="plan" id="plan_474236" plan_title="Mars Bar / 106 MILES in San Francisco" onmouseover="plan_description_toggle(true,474236)" onmouseout="plan_description_toggle(false,474236)">
+  
+  <div class="plan_description description" id="plan_description_474236" style="display: none">
+    
+    <img src="/images/arrows/left_gray1.png" />    
+    <div class="plan_description_interior">
+      
+              The last Wednesday of every month, 6-9pm, we have a gathering at Mars Bar in San Francisco, and you&#039;re invited.<br />
+<br />
+Come meet someone new, and enjoy a drink or two.<br />
+<br />
+Haiku: This meetup is free / to attend. Buy your own drinks, / and drinks for a friend... :)<br />
+<br />
+See you there!<br />
+<br />
+If you&#039;re wondering what a 106 Miles event looks like, you can...            
+    </div>
+  </div>
+
+  <div class="plan_right vevent">
+    
+          
+      <ul class="plan_options">
+        <li id="plan_474236_attendance_toggle" class="plan_attendance_toggle plan_attendance_toggle_attend"></li>
+      </ul>
+      
+      <script type="text/javascript">
+        $('#plan_474236_attendance_toggle').click(function() { 
+
+        plan_attend({ 
+          context:      'listing', 
+          plan_id:      474236
+        }); 
+
+        
+        event.stopPropagation();
+       });
+      </script>
+      
+    
+    <div class="plan_what"><a class="url summary" href="http://plancast.com/p/a5x8/mars-bar-106-miles-san-francisco">Mars Bar / 106 MILES in San Francisco</a></div>
+
+    <div class="plan_details">
+      
+              
+        <span class="location plan_location_link" style="cursor: pointer" onclick="prompt_toggle(true,'plan_place',{ plan_id: 474236 })">
+          Mars Bar &amp; Restaurant        
+        </span>
+        
+        <span class="geo value-title" title="37.7730784;-122.4031864"></span> 
+        
+        &#183; 
+        
+            
+      <span class="dtstart value-title" title="2013-01-23T18:00:00+0000">Wednesday, January 23, 2013, 6:00pm</span>      
+    </div>
+  
+    <ul class="plan_meta plan_meta_w_attendees">
+      
+              <li class="plan_meta_stat" onclick="prompt_toggle(true,'plan_attendees',{ plan_id: 474236 })" style="margin-right: 12px; padding-bottom: 10px;">
+          <img src="/images/icons/people.png" /> 
+          <span class="pseudo_link" style="font-size: 1.1em; margin-top: -1px">2</span>
+          <div style="clear:both"></div>
+        </li>
+            
+              
+        <ul class="plan_meta_attendees plan_474236_meta_attendees">
+                      <li class="plan_meta_attendee plan_474236_meta_attendee_1">
+              
+<div user_id="44" class="user_pic_square user_pic_square_small user_pic_square_44" onMouseOver="show_tooltip($(this), 'Adam Rifkin')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/ifindkarma"><img src="https://graph.facebook.com/500040414/picture" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_474236_meta_attendee_2">
+              
+<div user_id="9544" class="user_pic_square user_pic_square_small user_pic_square_9544" onMouseOver="show_tooltip($(this), 'Tantek Çelik')" onMouseOut="hide_tooltip()">
+	<a target="_self" href="http://plancast.com/t"><img src="http://a3.twimg.com/profile_images/574754189/ca-sci-t_normal.jpg" /></a></div>
+
+              
+            </li>
+                    <div style="clear:both"></div>
+          
+                    
+        </ul>
+        
+          
+      <div style="clear: both"></div>
+    <ul>
+
+  </div>
+  
+</li>
+</ul><div style="clear:both"></div><div class="plans_list_group_header" id="plans_list_group_header_wayinthefuture"><span>Way in the Future</span></div><ul class="plans_list" header_label="wayinthefuture"><li class="plan" id="plan_27238" plan_title="The Only Pi Day of Our Lives" onmouseover="plan_description_toggle(true,27238)" onmouseout="plan_description_toggle(false,27238)">
+  
+  <div class="plan_description description" id="plan_description_27238" style="display: none">
+    
+    <img src="/images/arrows/left_gray1.png" />    
+    <div class="plan_description_interior">
+      
+              In memory of Jarrod Newton...  3/14 of &#039;87 to 08/26/2011,<br />
+<br />
+Yes, the time is upon us. Everyone knows pi day is March 14th, but any true nerd realizes pi is not 3.14, but rather an irrational constant which continues infinitely in decimal expansion. Starting at 9:26:53 (.589... sec) AM, the longest extended Pi Day of our lives will come into...            
+    </div>
+  </div>
+
+  <div class="plan_right vevent">
+    
+          
+      <ul class="plan_options">
+        <li id="plan_27238_attendance_toggle" class="plan_attendance_toggle plan_attendance_toggle_attend"></li>
+      </ul>
+      
+      <script type="text/javascript">
+        $('#plan_27238_attendance_toggle').click(function() { 
+
+        plan_attend({ 
+          context:      'listing', 
+          plan_id:      27238
+        }); 
+
+        
+        event.stopPropagation();
+       });
+      </script>
+      
+    
+    <div class="plan_what"><a class="url summary" href="http://plancast.com/p/l0m/pi-day-lives">The Only Pi Day of Our Lives</a></div>
+
+    <div class="plan_details">
+      
+              
+        <span class="location plan_location_link" style="cursor: pointer" onclick="prompt_toggle(true,'plan_place',{ plan_id: 27238 })">
+          Across the world!        
+        </span>
+        
+        <span class="geo value-title" title=";"></span> 
+        
+        &#183; 
+        
+            
+      <span class="dtstart value-title" title="2015-03-14T02:00:00+0000">Saturday, March 14, 2015, 2am-2:30pm</span>      
+    </div>
+  
+    <ul class="plan_meta plan_meta_w_attendees">
+      
+              <li class="plan_meta_stat" onclick="prompt_toggle(true,'plan_attendees',{ plan_id: 27238 })" style="margin-right: 12px; padding-bottom: 10px;">
+          <img src="/images/icons/people.png" /> 
+          <span class="pseudo_link" style="font-size: 1.1em; margin-top: -1px">1,266</span>
+          <div style="clear:both"></div>
+        </li>
+            
+              
+        <ul class="plan_meta_attendees plan_27238_meta_attendees">
+                      <li class="plan_meta_attendee plan_27238_meta_attendee_1">
+              
+<div user_id="1745" class="user_pic_square user_pic_square_small user_pic_square_1745" onMouseOver="show_tooltip($(this), 'Karen Ulric')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/karenulric"><img src="https://graph.facebook.com/121420/picture" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_27238_meta_attendee_2">
+              
+<div user_id="900" class="user_pic_square user_pic_square_small user_pic_square_900" onMouseOver="show_tooltip($(this), 'Eric Kerr')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/erickerr"><img src="https://graph.facebook.com/1437360034/picture" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_27238_meta_attendee_3">
+              
+<div user_id="2745" class="user_pic_square user_pic_square_small user_pic_square_2745" onMouseOver="show_tooltip($(this), 'Johnathan Mastron')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/dragonworks2050"><img src="https://graph.facebook.com/68601154/picture" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_27238_meta_attendee_4">
+              
+<div user_id="517" class="user_pic_square user_pic_square_small user_pic_square_517" onMouseOver="show_tooltip($(this), 'Melody Quintana')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/melodyquintana"><img src="https://graph.facebook.com/105819/picture" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_27238_meta_attendee_5">
+              
+<div user_id="775" class="user_pic_square user_pic_square_small user_pic_square_775" onMouseOver="show_tooltip($(this), 'Mark Bao')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/markbao"><img src="http://plancast.com/uploads/pics/775_pic_square_1279332334.png" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_27238_meta_attendee_6">
+              
+<div user_id="4229" class="user_pic_square user_pic_square_small user_pic_square_4229" onMouseOver="show_tooltip($(this), 'Mark Dobrowolski')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/markaci"><img src="http://plancast.com/uploads/pics/4229_pic_square_1289722403.jpg" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_27238_meta_attendee_7">
+              
+<div user_id="5136" class="user_pic_square user_pic_square_small user_pic_square_5136" onMouseOver="show_tooltip($(this), 'Dan Moore')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/mgrdcm"><img src="http://a3.twimg.com/profile_images/624916899/scotthead-640-square_normal.png" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_27238_meta_attendee_8">
+              
+<div user_id="11750" class="user_pic_square user_pic_square_small user_pic_square_11750" onMouseOver="show_tooltip($(this), 'Justin Myers')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/justinmyersportland"><img src="https://graph.facebook.com/42000920/picture" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_27238_meta_attendee_9">
+              
+<div user_id="1189" class="user_pic_square user_pic_square_small user_pic_square_1189" onMouseOver="show_tooltip($(this), 'Bruce Schechter')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/bruceschek"><img src="https://graph.facebook.com/217758/picture" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_27238_meta_attendee_10">
+              
+<div user_id="1492" class="user_pic_square user_pic_square_small user_pic_square_1492" onMouseOver="show_tooltip($(this), 'Tushar Khandelwal')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/tushark"><img src="http://plancast.com/uploads/pics/1492_pic_square_1310955842.jpg" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_27238_meta_attendee_11">
+              
+<div user_id="2527" class="user_pic_square user_pic_square_small user_pic_square_2527" onMouseOver="show_tooltip($(this), 'Charlotte Willner')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/charlotte"><img src="https://graph.facebook.com/4600499/picture" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_27238_meta_attendee_12">
+              
+<div user_id="3184" class="user_pic_square user_pic_square_small user_pic_square_3184" onMouseOver="show_tooltip($(this), 'Kelly Winters')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/kellywinters"><img src="https://graph.facebook.com/2418183/picture" /></a></div>
+
+              
+            </li>
+                    <div style="clear:both"></div>
+          
+                      
+            <img src="/images/arrows/right3.png" style="position: absolute; top: 8px; right: -33px; cursor: pointer; padding: 12px 18px 12px 12px;" onclick="prompt_toggle(true,'plan_attendees',{ plan_id: 27238 })" /> 
+            
+                    
+        </ul>
+        
+          
+      <div style="clear: both"></div>
+    <ul>
+
+  </div>
+  
+</li>
+<li class="plan" id="plan_26048" plan_title="Doc Brown, Marty McFly, and Jennifer Parker arrive from 1985" onmouseover="plan_description_toggle(true,26048)" onmouseout="plan_description_toggle(false,26048)">
+  
+  <div class="plan_description description" id="plan_description_26048" style="display: none">
+    
+    <img src="/images/arrows/left_gray1.png" />    
+    <div class="plan_description_interior">
+      
+              Using their trusty DeLorean time machine, Doc Brown, Marty McFly and Jennifer Parker arrive in Hill Valley in 2015 on October 21st at 4:29 pm to save Marty McFly Jr. from being set up for a crime by Griff Tannen.<br />
+<br />
+This is not the only notable event of this day:<br />
+<br />
+* The Chicago Cubs win the World Series later this evening in a match against Miami.<br />
+*...            
+    </div>
+  </div>
+
+  <div class="plan_right vevent">
+    
+          
+      <ul class="plan_options">
+        <li id="plan_26048_attendance_toggle" class="plan_attendance_toggle plan_attendance_toggle_attend"></li>
+      </ul>
+      
+      <script type="text/javascript">
+        $('#plan_26048_attendance_toggle').click(function() { 
+
+        plan_attend({ 
+          context:      'listing', 
+          plan_id:      26048
+        }); 
+
+        
+        event.stopPropagation();
+       });
+      </script>
+      
+    
+    <div class="plan_what"><a class="url summary" href="http://plancast.com/p/k3k/doc-brown-marty-mcfly-jennifer-parker-arrive-1985">Doc Brown, Marty McFly, and Jennifer Parker arrive from 1985</a></div>
+
+    <div class="plan_details">
+      
+              
+        <span class="location plan_location_link" style="cursor: pointer" onclick="prompt_toggle(true,'plan_place',{ plan_id: 26048 })">
+          Hill Valley        
+        </span>
+        
+        <span class="geo value-title" title=";"></span> 
+        
+        &#183; 
+        
+            
+      <span class="dtstart value-title" title="2015-10-21T09:25:00+0000">Wednesday, October 21, 2015, 9:25-9:30am</span>      
+    </div>
+  
+    <ul class="plan_meta plan_meta_w_attendees">
+      
+              <li class="plan_meta_stat" onclick="prompt_toggle(true,'plan_attendees',{ plan_id: 26048 })" style="margin-right: 12px; padding-bottom: 10px;">
+          <img src="/images/icons/people.png" /> 
+          <span class="pseudo_link" style="font-size: 1.1em; margin-top: -1px">305</span>
+          <div style="clear:both"></div>
+        </li>
+            
+              
+        <ul class="plan_meta_attendees plan_26048_meta_attendees">
+                      <li class="plan_meta_attendee plan_26048_meta_attendee_1">
+              
+<div user_id="2270" class="user_pic_square user_pic_square_small user_pic_square_2270" onMouseOver="show_tooltip($(this), 'Haukur Hólmsteinsson')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/haukurhomm"><img src="https://graph.facebook.com/565470464/picture" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_26048_meta_attendee_2">
+              
+<div user_id="4662" class="user_pic_square user_pic_square_small user_pic_square_4662" onMouseOver="show_tooltip($(this), 'Dave Nattriss')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/natts"><img src="http://a1.twimg.com/profile_images/14920442/dave-hair_normal.jpg" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_26048_meta_attendee_3">
+              
+<div user_id="20318" class="user_pic_square user_pic_square_small user_pic_square_20318" onMouseOver="show_tooltip($(this), 'Katie Lips')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/katielips"><img src="http://plancast.com/uploads/pics/20318_pic_square_1328792195.jpg" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_26048_meta_attendee_4">
+              
+<div user_id="1863" class="user_pic_square user_pic_square_small user_pic_square_1863" onMouseOver="show_tooltip($(this), 'David Pascual')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/pgdavid"><img src="http://plancast.com/uploads/pics/1863_pic_square_1263300303.jpg" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_26048_meta_attendee_5">
+              
+<div user_id="10108" class="user_pic_square user_pic_square_small user_pic_square_10108" onMouseOver="show_tooltip($(this), 'Greg Cooper')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/Awfy"><img src="http://plancast.com/uploads/pics/10108_pic_square_1265114307.png" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_26048_meta_attendee_6">
+              
+<div user_id="3095" class="user_pic_square user_pic_square_small user_pic_square_3095" onMouseOver="show_tooltip($(this), 'Damien Basile')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/damienbasile"><img src="https://graph.facebook.com/615051954/picture" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_26048_meta_attendee_7">
+              
+<div user_id="11587" class="user_pic_square user_pic_square_small user_pic_square_11587" onMouseOver="show_tooltip($(this), 'Mike Fraietta')" onMouseOut="hide_tooltip()">
+	<a target="_self" href="http://plancast.com/MikeFraietta"><img src="http://plancast.com/uploads/pics/11587_pic_square_1338310789.png" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_26048_meta_attendee_8">
+              
+<div user_id="20105" class="user_pic_square user_pic_square_small user_pic_square_20105" onMouseOver="show_tooltip($(this), 'Jon')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/JustJon"><img src="https://graph.facebook.com/576234565/picture?type=square" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_26048_meta_attendee_9">
+              
+<div user_id="10726" class="user_pic_square user_pic_square_small user_pic_square_10726" onMouseOver="show_tooltip($(this), 'Sanford Dickert')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/sdickert"><img src="http://plancast.com/uploads/pics/10726_pic_square_1294683668.png" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_26048_meta_attendee_10">
+              
+<div user_id="13684" class="user_pic_square user_pic_square_small user_pic_square_13684" onMouseOver="show_tooltip($(this), 'greg wong')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/gregwong"><img src="http://plancast.com/uploads/pics/13684_pic_square_1326314668.jpg" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_26048_meta_attendee_11">
+              
+<div user_id="6305" class="user_pic_square user_pic_square_small user_pic_square_6305" onMouseOver="show_tooltip($(this), 'Kim Sherrell')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/kim"><img src="http://plancast.com/uploads/pics/6305_pic_square_1313827759.jpg" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_26048_meta_attendee_12">
+              
+<div user_id="15778" class="user_pic_square user_pic_square_small user_pic_square_15778" onMouseOver="show_tooltip($(this), 'Brian Jeremy Kupetz')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/brianjeremy"><img src="http://a3.twimg.com/profile_images/61220325/brian_normal.jpg" /></a></div>
+
+              
+            </li>
+                    <div style="clear:both"></div>
+          
+                      
+            <img src="/images/arrows/right3.png" style="position: absolute; top: 8px; right: -33px; cursor: pointer; padding: 12px 18px 12px 12px;" onclick="prompt_toggle(true,'plan_attendees',{ plan_id: 26048 })" /> 
+            
+                    
+        </ul>
+        
+          
+      <div style="clear: both"></div>
+    <ul>
+
+  </div>
+  
+</li>
+<li class="plan" id="plan_86706" plan_title="See a total eclipse in the US." onmouseover="plan_description_toggle(true,86706)" onmouseout="plan_description_toggle(false,86706)">
+  
+  <div class="plan_description description" id="plan_description_86706" style="display: none">
+    
+    <img src="/images/arrows/left_gray1.png" />    
+    <div class="plan_description_interior">
+      
+              OK, so I&#039;m doing this just because I like the idea of having an event invitation float around on facebook for 7 years.  However, seeing a total eclipse is apparently one of those must-do-at-least-once-in-your-life sorts of activities.  Given that the Earth is mostly water and total eclipses are rare, you&#039;re very lucky if you don&#039;t...            
+    </div>
+  </div>
+
+  <div class="plan_right vevent">
+    
+          
+      <ul class="plan_options">
+        <li id="plan_86706_attendance_toggle" class="plan_attendance_toggle plan_attendance_toggle_attend"></li>
+      </ul>
+      
+      <script type="text/javascript">
+        $('#plan_86706_attendance_toggle').click(function() { 
+
+        plan_attend({ 
+          context:      'listing', 
+          plan_id:      86706
+        }); 
+
+        
+        event.stopPropagation();
+       });
+      </script>
+      
+    
+    <div class="plan_what"><a class="url summary" href="http://plancast.com/p/1uwi/see-total-eclipse-us">See a total eclipse in the US.</a></div>
+
+    <div class="plan_details">
+      
+              
+        <span class="location plan_location_link" style="cursor: pointer" onclick="prompt_toggle(true,'plan_place',{ plan_id: 86706 })">
+          Somewhere in the US where it&#039;s unlikely to be cloudy        
+        </span>
+        
+        <span class="geo value-title" title=";"></span> 
+        
+        &#183; 
+        
+            
+      <span class="dtstart value-title" title="2017-08-21T02:00:00+0000">Monday, August 21, 2017, 2am-4:00pm</span>      
+    </div>
+  
+    <ul class="plan_meta plan_meta_w_attendees">
+      
+              <li class="plan_meta_stat" onclick="prompt_toggle(true,'plan_attendees',{ plan_id: 86706 })" style="margin-right: 12px; padding-bottom: 10px;">
+          <img src="/images/icons/people.png" /> 
+          <span class="pseudo_link" style="font-size: 1.1em; margin-top: -1px">478</span>
+          <div style="clear:both"></div>
+        </li>
+            
+              
+        <ul class="plan_meta_attendees plan_86706_meta_attendees">
+                      <li class="plan_meta_attendee plan_86706_meta_attendee_1">
+              
+<div user_id="2117" class="user_pic_square user_pic_square_small user_pic_square_2117" onMouseOver="show_tooltip($(this), 'Max Skibinsky')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/lordmax"><img src="https://graph.facebook.com/692027190/picture" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_86706_meta_attendee_2">
+              
+<div user_id="5921" class="user_pic_square user_pic_square_small user_pic_square_5921" onMouseOver="show_tooltip($(this), 'Tracy Lee')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/LadyLeet"><img src="http://plancast.com/uploads/pics/5921_pic_square_1263313283.jpg" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_86706_meta_attendee_3">
+              
+<div user_id="7039" class="user_pic_square user_pic_square_small user_pic_square_7039" onMouseOver="show_tooltip($(this), 'Gabe Wachob')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/gwachob"><img src="http://plancast.com/uploads/pics/7039_pic_square_1272516508.jpg" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_86706_meta_attendee_4">
+              
+<div user_id="22405" class="user_pic_square user_pic_square_small user_pic_square_22405" onMouseOver="show_tooltip($(this), 'Lisa Padilla')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/lisa"><img src="http://plancast.com/uploads/pics/22405_pic_square_1284156337.jpg" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_86706_meta_attendee_5">
+              
+<div user_id="22671" class="user_pic_square user_pic_square_small user_pic_square_22671" onMouseOver="show_tooltip($(this), 'Cassandra Marshall')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/cassandramarshall"><img src="https://graph.facebook.com/681078831/picture" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_86706_meta_attendee_6">
+              
+<div user_id="22600" class="user_pic_square user_pic_square_small user_pic_square_22600" onMouseOver="show_tooltip($(this), 'Ori Zaltzman')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/oriz"><img src="https://graph.facebook.com/617090967/picture" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_86706_meta_attendee_7">
+              
+<div user_id="31758" class="user_pic_square user_pic_square_small user_pic_square_31758" onMouseOver="show_tooltip($(this), 'Jen McCabe')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/jenmccabe"><img src="https://graph.facebook.com/845452286/picture" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_86706_meta_attendee_8">
+              
+<div user_id="11039" class="user_pic_square user_pic_square_small user_pic_square_11039" onMouseOver="show_tooltip($(this), 'Jonathan Greene')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/atmasphere"><img src="https://graph.facebook.com/4503634/picture" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_86706_meta_attendee_9">
+              
+<div user_id="37322" class="user_pic_square user_pic_square_small user_pic_square_37322" onMouseOver="show_tooltip($(this), 'Dave Edwards')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/Davebosox1967"><img src="http://plancast.com/images/default_pic_square.png" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_86706_meta_attendee_10">
+              
+<div user_id="3200" class="user_pic_square user_pic_square_small user_pic_square_3200" onMouseOver="show_tooltip($(this), 'Mark Simonds')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/Simonds"><img src="https://graph.facebook.com/632215570/picture" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_86706_meta_attendee_11">
+              
+<div user_id="13785" class="user_pic_square user_pic_square_small user_pic_square_13785" onMouseOver="show_tooltip($(this), 'Amy Vernon')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/AmyVernon"><img src="http://plancast.com/uploads/pics/13785_pic_square_1294192039.jpg" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_86706_meta_attendee_12">
+              
+<div user_id="7930" class="user_pic_square user_pic_square_small user_pic_square_7930" onMouseOver="show_tooltip($(this), 'Jacob Sloan')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/jacobsloan"><img src="http://plancast.com/uploads/pics/7930_pic_square_1298069949.png" /></a></div>
+
+              
+            </li>
+                    <div style="clear:both"></div>
+          
+                      
+            <img src="/images/arrows/right3.png" style="position: absolute; top: 8px; right: -33px; cursor: pointer; padding: 12px 18px 12px 12px;" onclick="prompt_toggle(true,'plan_attendees',{ plan_id: 86706 })" /> 
+            
+                    
+        </ul>
+        
+          
+      <div style="clear: both"></div>
+    <ul>
+
+  </div>
+  
+</li>
+<li class="plan" id="plan_5090" plan_title="The Singularity" onmouseover="plan_description_toggle(true,5090)" onmouseout="plan_description_toggle(false,5090)">
+  
+  <div class="plan_description description" id="plan_description_5090" style="display: none">
+    
+    <img src="/images/arrows/left_gray1.png" />    
+    <div class="plan_description_interior">
+      
+              The technological singularity is a theoretical future point which takes place during a period of accelerating change, at which everything goes completely insane. We&#039;re talking hyperintelligent machines, radical biological control, effective immortality, extreme mind-machine interfacing, space colonies, and nanobot-everything. It&#039;s going...            
+    </div>
+  </div>
+
+  <div class="plan_right vevent">
+    
+          
+      <ul class="plan_options">
+        <li id="plan_5090_attendance_toggle" class="plan_attendance_toggle plan_attendance_toggle_attend"></li>
+      </ul>
+      
+      <script type="text/javascript">
+        $('#plan_5090_attendance_toggle').click(function() { 
+
+        plan_attend({ 
+          context:      'listing', 
+          plan_id:      5090
+        }); 
+
+        
+        event.stopPropagation();
+       });
+      </script>
+      
+    
+    <div class="plan_what"><a class="url summary" href="http://plancast.com/p/3xe/singularity">The Singularity</a></div>
+
+    <div class="plan_details">
+      
+              
+        <span class="location ">
+          All of Earth and Probably the Moon        
+        </span>
+        
+         
+        
+        &#183; 
+        
+            
+      <span class="dtstart value-title" title="2029-08-21T00:00:00+0000">Tuesday, August 21, 2029, 12am-11:30pm</span>      
+    </div>
+  
+    <ul class="plan_meta plan_meta_w_attendees">
+      
+              <li class="plan_meta_stat" onclick="prompt_toggle(true,'plan_attendees',{ plan_id: 5090 })" style="margin-right: 12px; padding-bottom: 10px;">
+          <img src="/images/icons/people.png" /> 
+          <span class="pseudo_link" style="font-size: 1.1em; margin-top: -1px">256</span>
+          <div style="clear:both"></div>
+        </li>
+            
+              
+        <ul class="plan_meta_attendees plan_5090_meta_attendees">
+                      <li class="plan_meta_attendee plan_5090_meta_attendee_1">
+              
+<div user_id="6355" class="user_pic_square user_pic_square_small user_pic_square_6355" onMouseOver="show_tooltip($(this), 'Adam Glickman')" onMouseOut="hide_tooltip()">
+	<a target="_self" href="http://plancast.com/aglick35"><img src="https://graph.facebook.com/556066038/picture" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_5090_meta_attendee_2">
+              
+<div user_id="8077" class="user_pic_square user_pic_square_small user_pic_square_8077" onMouseOver="show_tooltip($(this), 'David Orban')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/davidorban"><img src="http://a1.twimg.com/profile_images/342449660/_MG_8179_2_3_3_normal.JPG" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_5090_meta_attendee_3">
+              
+<div user_id="12197" class="user_pic_square user_pic_square_small user_pic_square_12197" onMouseOver="show_tooltip($(this), 'Jonas Lamis')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/jonaslamis"><img src="http://plancast.com/uploads/pics/12197_pic_square_1267120798.jpg" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_5090_meta_attendee_4">
+              
+<div user_id="12735" class="user_pic_square user_pic_square_small user_pic_square_12735" onMouseOver="show_tooltip($(this), 'Eve Richter')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/erichter"><img src="http://plancast.com/uploads/pics/12735_pic_square_1267553154.jpg" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_5090_meta_attendee_5">
+              
+<div user_id="12841" class="user_pic_square user_pic_square_small user_pic_square_12841" onMouseOver="show_tooltip($(this), 'Dean Cruse')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/deancruse"><img src="http://plancast.com/uploads/pics/12841_pic_square_1312234837.jpg" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_5090_meta_attendee_6">
+              
+<div user_id="23868" class="user_pic_square user_pic_square_small user_pic_square_23868" onMouseOver="show_tooltip($(this), 'Andy Goodwin')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/franticuk"><img src="http://a3.twimg.com/profile_images/117613461/Picture-066_normal.jpg" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_5090_meta_attendee_7">
+              
+<div user_id="9583" class="user_pic_square user_pic_square_small user_pic_square_9583" onMouseOver="show_tooltip($(this), 'Eric Gonzalez')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/ericgonzalez"><img src="http://plancast.com/uploads/pics/9583_pic_square_1265864694.jpg" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_5090_meta_attendee_8">
+              
+<div user_id="21988" class="user_pic_square user_pic_square_small user_pic_square_21988" onMouseOver="show_tooltip($(this), 'ConferenceBasics.com')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/ConfBasics"><img src="http://a1.twimg.com/profile_images/192533812/logo1_normal.jpg" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_5090_meta_attendee_9">
+              
+<div user_id="31586" class="user_pic_square user_pic_square_small user_pic_square_31586" onMouseOver="show_tooltip($(this), 'Russell Hanson')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/RussellHanson"><img src="http://a1.twimg.com/profile_images/57344702/ms-russell-55959602_m_normal.jpg" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_5090_meta_attendee_10">
+              
+<div user_id="5500" class="user_pic_square user_pic_square_small user_pic_square_5500" onMouseOver="show_tooltip($(this), 'Amy Dolin')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/amydolin"><img src="http://plancast.com/uploads/pics/5500_pic_square_1269646208.jpg" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_5090_meta_attendee_11">
+              
+<div user_id="9262" class="user_pic_square user_pic_square_small user_pic_square_9262" onMouseOver="show_tooltip($(this), 'Courtenay Bird')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/courtenaybird"><img src="http://plancast.com/uploads/pics/9262_pic_square_1316499786.jpg" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_5090_meta_attendee_12">
+              
+<div user_id="37871" class="user_pic_square user_pic_square_small user_pic_square_37871" onMouseOver="show_tooltip($(this), 'Ashley Meyer')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/ashleybmeyer"><img src="https://graph.facebook.com/2902827/picture?type=square" /></a></div>
+
+              
+            </li>
+                    <div style="clear:both"></div>
+          
+                      
+            <img src="/images/arrows/right3.png" style="position: absolute; top: 8px; right: -33px; cursor: pointer; padding: 12px 18px 12px 12px;" onclick="prompt_toggle(true,'plan_attendees',{ plan_id: 5090 })" /> 
+            
+                    
+        </ul>
+        
+          
+      <div style="clear: both"></div>
+    <ul>
+
+  </div>
+  
+</li>
+<li class="plan" id="plan_158181" plan_title="&quot;Unix&quot; 32-bit signed time_t counter wraps" onmouseover="plan_description_toggle(true,158181)" onmouseout="plan_description_toggle(false,158181)">
+  
+  <div class="plan_description description" id="plan_description_158181" style="display: none">
+    
+    <img src="/images/arrows/left_gray1.png" />    
+    <div class="plan_description_interior">
+      
+              It&#039;s the end of the world as we know it! Will we feel fine? Come party like it&#039;s 12/31/1999!<br />
+<br />
+For more information, please see <a href="http://en.wikipedia.org/wiki/Year_2038_problem">http://en.wikipedia.org/wiki/Year_2038_problem</a><br />
+<br />
+Note: Event time listed is roughly 27 hours early due to issues with the Facebook event calendar (it&#039;s not year 2038 ready!). Actual event takes place at...            
+    </div>
+  </div>
+
+  <div class="plan_right vevent">
+    
+          
+      <ul class="plan_options">
+        <li id="plan_158181_attendance_toggle" class="plan_attendance_toggle plan_attendance_toggle_attend"></li>
+      </ul>
+      
+      <script type="text/javascript">
+        $('#plan_158181_attendance_toggle').click(function() { 
+
+        plan_attend({ 
+          context:      'listing', 
+          plan_id:      158181
+        }); 
+
+        
+        event.stopPropagation();
+       });
+      </script>
+      
+    
+    <div class="plan_what"><a class="url summary" href="http://plancast.com/p/3e1x/unix-32-bit-signed-time_t-counter-wraps">&quot;Unix&quot; 32-bit signed time_t counter wraps</a></div>
+
+    <div class="plan_details">
+      
+              
+        <span class="location plan_location_link" style="cursor: pointer" onclick="prompt_toggle(true,'plan_place',{ plan_id: 158181 })">
+          Worldwide        
+        </span>
+        
+        <span class="geo value-title" title=";"></span> 
+        
+        &#183; 
+        
+            
+      <span class="dtstart value-title" title="2038-01-19T03:14:00+0000">Tuesday, January 19, 2038, 3:14am</span>      
+    </div>
+  
+    <ul class="plan_meta plan_meta_w_attendees">
+      
+              <li class="plan_meta_stat" onclick="prompt_toggle(true,'plan_attendees',{ plan_id: 158181 })" style="margin-right: 12px; padding-bottom: 10px;">
+          <img src="/images/icons/people.png" /> 
+          <span class="pseudo_link" style="font-size: 1.1em; margin-top: -1px">139</span>
+          <div style="clear:both"></div>
+        </li>
+            
+              
+        <ul class="plan_meta_attendees plan_158181_meta_attendees">
+                      <li class="plan_meta_attendee plan_158181_meta_attendee_1">
+              
+<div user_id="23985" class="user_pic_square user_pic_square_small user_pic_square_23985" onMouseOver="show_tooltip($(this), 'Andre Manoel')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/andreum"><img src="https://graph.facebook.com/654697174/picture" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_158181_meta_attendee_2">
+              
+<div user_id="38947" class="user_pic_square user_pic_square_small user_pic_square_38947" onMouseOver="show_tooltip($(this), 'Carlos Duarte Do Nascimento')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/chesterbr"><img src="https://graph.facebook.com/618166914/picture?type=square" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_158181_meta_attendee_3">
+              
+<div user_id="38945" class="user_pic_square user_pic_square_small user_pic_square_38945" onMouseOver="show_tooltip($(this), 'Bani')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/bani"><img src="http://plancast.com/uploads/pics/38945_pic_square_1282186090.png" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_158181_meta_attendee_4">
+              
+<div user_id="7555" class="user_pic_square user_pic_square_small user_pic_square_7555" onMouseOver="show_tooltip($(this), 'David Lefty Schlesinger')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/stonemirror"><img src="http://a3.twimg.com/profile_images/53927671/lefty_normal.jpg" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_158181_meta_attendee_5">
+              
+<div user_id="29258" class="user_pic_square user_pic_square_small user_pic_square_29258" onMouseOver="show_tooltip($(this), 'Naomi Most')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/nthmost"><img src="https://graph.facebook.com/809073394/picture" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_158181_meta_attendee_6">
+              
+<div user_id="50424" class="user_pic_square user_pic_square_small user_pic_square_50424" onMouseOver="show_tooltip($(this), 'Garick Chan')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/Garick"><img src="https://graph.facebook.com/696783677/picture?type=square" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_158181_meta_attendee_7">
+              
+<div user_id="56516" class="user_pic_square user_pic_square_small user_pic_square_56516" onMouseOver="show_tooltip($(this), 'Ryan Lackey')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/rdl"><img src="https://graph.facebook.com/517182859/picture?type=square" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_158181_meta_attendee_8">
+              
+<div user_id="50030" class="user_pic_square user_pic_square_small user_pic_square_50030" onMouseOver="show_tooltip($(this), 'Jordan Baker')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/hexsprite"><img src="https://graph.facebook.com/558255970/picture?type=square" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_158181_meta_attendee_9">
+              
+<div user_id="58351" class="user_pic_square user_pic_square_small user_pic_square_58351" onMouseOver="show_tooltip($(this), 'Ilan Rabinovitch')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/user/58351"><img src="https://graph.facebook.com/584082282/picture?type=square" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_158181_meta_attendee_10">
+              
+<div user_id="61191" class="user_pic_square user_pic_square_small user_pic_square_61191" onMouseOver="show_tooltip($(this), 'Derek Scott')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/dscott23"><img src="https://graph.facebook.com/1426634559/picture?type=square" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_158181_meta_attendee_11">
+              
+<div user_id="32965" class="user_pic_square user_pic_square_small user_pic_square_32965" onMouseOver="show_tooltip($(this), 'Xianhang Zhang')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/shalmanese"><img src="https://graph.facebook.com/219000104/picture?type=square" /></a></div>
+
+              
+            </li>
+                      <li class="plan_meta_attendee plan_158181_meta_attendee_12">
+              
+<div user_id="1625777" class="user_pic_square user_pic_square_small user_pic_square_1625777" onMouseOver="show_tooltip($(this), 'Paul Tarjan')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/pt"><img src="https://graph.facebook.com/218471/picture?type=square" /></a></div>
+
+              
+            </li>
+                    <div style="clear:both"></div>
+          
+                      
+            <img src="/images/arrows/right3.png" style="position: absolute; top: 8px; right: -33px; cursor: pointer; padding: 12px 18px 12px 12px;" onclick="prompt_toggle(true,'plan_attendees',{ plan_id: 158181 })" /> 
+            
+                    
+        </ul>
+        
+          
+      <div style="clear: both"></div>
+    <ul>
+
+  </div>
+  
+</li>
+</ul>
+  
+  <div style="clear:both"></div>
+
+
+<div style="clear:both"></div>
+
+
+<script type="text/javascript">
+
+  content_url             = '/plan/listings';
+  content_params          = plans_params;
+  content_params['page']  = 1;
+  
+      clearInterval(infinite_scroll_interval);
+    setTimeout("$('#content_bumper').show(); $('#footer').show();",50);
+    
+</script>
+
+          
+          
+                    
+              
+      </div>
+      
+      <div id="content_bumper" style="display:none"><img src="/images/icons/content_bumper.png" /></div>
+      <div id="content_loading" style="display:none"><img src="/images/icons/wait/28.gif" /></div>
+      
+    </div>
+    
+  </div>
+  
+  <div id="user_col2">
+    
+    <div id="user_col2_interior">
+    
+        <!-- Pic -->
+  <div id="user_col2_pic" >
+    <div id="user_col2_pic_magnify" style="display:none"></div>
+    <img style="border:1px solid #E4E4E4;padding:2px" src="http://a1.twimg.com/profile_images/574754189/ca-sci-t.jpg" />  </div>
+
+
+  <div id="user_col2_subscription_settings">
+    <div id="user_page_subscription_toggle" class="user_page_subscription_toggle_subscribe"></div>
+  </div>
+  
+  <script type="text/javascript">
+    $('#user_page_subscription_toggle').click(function() { 
+
+        user_subscribe({ 
+          context:      'page', 
+          user_id:      9544,
+          user_name:    'Tantek Çelik'
+        }); 
+
+        event.stopPropagation();
+       });
+  </script>
+
+  <div style="color: #6e6e6e; margin:0 0 15px 25px; line-height:150%">Subscribe to hear about <strong style="color:#3e3e3e">Tantek Çelik</strong>'s plans on an ongoing basis.</div>
+  
+
+<!-- Stats -->
+<ul id="user_col2_stats">
+  <li>
+    <span>591</span> <strong>plans</strong>  </li>
+  <li>
+    <a href="/t/subscriptions"><span id="subscriptions_count">256</span> subscriptions</a>  </li>
+  <li style="border:0">
+    <a href="/t/subscribers"><span id="subscribers_count">770</span> subscribers</a>  </li>
+  <div style="clear:both"></div>
+</ul>
+<ul id="user_col2_info" class="user_col2_section">
+
+      <li style="background-image: url(/images/icons/globe.png)"><strong>Location</strong> San Francisco, CA, USA</li>
+    
+      <li style="background-image: url(/images/icons/web.png);"><strong>Web</strong> <a href="http://tantek.com/" rel="me" target="_blank">tantek.com/</a></li>
+    
+    
+      <li style="background-image: url(/images/icons/twitter.png);"><strong>Twitter</strong> <a rel="me" target="_blank" href="http://twitter.com/t">@t</a></li>
+    
+    
+    
+</ul>
+
+
+    
+  <h2>Subscriptions</h2>
+  
+  <div id="user_col2_subscriptions" class="user_col2_section">
+    
+<div user_id="6657" class="user_pic_square user_pic_square_small user_pic_square_6657" onMouseOver="show_tooltip($(this), 'Scott Beale')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/laughingsquid"><img src="http://plancast.com/uploads/pics/6657_pic_square_1318280158.jpg" /></a></div>
+
+
+<div user_id="1209" class="user_pic_square user_pic_square_small user_pic_square_1209" onMouseOver="show_tooltip($(this), 'Dion Almaer')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/dalmaer"><img src="https://graph.facebook.com/617989202/picture" /></a></div>
+
+
+<div user_id="18" class="user_pic_square user_pic_square_small user_pic_square_18" onMouseOver="show_tooltip($(this), 'Lane Becker')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/lane"><img src="https://graph.facebook.com/625606185/picture" /></a></div>
+
+
+<div user_id="4183" class="user_pic_square user_pic_square_small user_pic_square_4183" onMouseOver="show_tooltip($(this), 'Ryan Block')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/ryanblock"><img src="http://plancast.com/uploads/pics/4183_pic_square_1260733433.jpg" /></a></div>
+
+
+<div user_id="4640" class="user_pic_square user_pic_square_small user_pic_square_4640" onMouseOver="show_tooltip($(this), 'Silona Bonewald')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/Silona"><img src="http://plancast.com/uploads/pics/4640_pic_square_1261446710.jpg" /></a></div>
+
+
+<div user_id="4208" class="user_pic_square user_pic_square_small user_pic_square_4208" onMouseOver="show_tooltip($(this), 'Jason Calacanis')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/jasoncalacanis"><img src="http://plancast.com/uploads/pics/4208_pic_square_1291929761.jpg" /></a></div>
+
+
+<div user_id="147" class="user_pic_square user_pic_square_small user_pic_square_147" onMouseOver="show_tooltip($(this), 'Leah Culver')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/leahculver"><img src="http://plancast.com/uploads/pics/147_pic_square_1266947460.jpg" /></a></div>
+
+
+<div user_id="4073" class="user_pic_square user_pic_square_small user_pic_square_4073" onMouseOver="show_tooltip($(this), 'Ryan Freitas')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/ryanchris"><img src="https://graph.facebook.com/743319446/picture?type=square" /></a></div>
+
+
+<div user_id="246" class="user_pic_square user_pic_square_small user_pic_square_246" onMouseOver="show_tooltip($(this), 'Laura Gluhanich')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/lauraglu"><img src="https://graph.facebook.com/2247265/picture" /></a></div>
+
+
+<div user_id="368" class="user_pic_square user_pic_square_small user_pic_square_368" onMouseOver="show_tooltip($(this), 'Ted Grubb')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/TeddyG"><img src="http://a2.twimg.com/profile_images/930926234/n693281299_9042_normal.jpg" /></a></div>
+
+
+<div user_id="3250" class="user_pic_square user_pic_square_small user_pic_square_3250" onMouseOver="show_tooltip($(this), 'David Hornik')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/davidhornik"><img src="http://a1.twimg.com/profile_images/27448632/DavidHornik_normal.jpg" /></a></div>
+
+
+<div user_id="3883" class="user_pic_square user_pic_square_small user_pic_square_3883" onMouseOver="show_tooltip($(this), 'Bradley Horowitz')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/elatable"><img src="http://plancast.com/uploads/pics/3883_pic_square_1261287024.jpg" /></a></div>
+
+
+<div user_id="7667" class="user_pic_square user_pic_square_small user_pic_square_7667" onMouseOver="show_tooltip($(this), 'Marshall Kirkpatrick')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/marshallk"><img src="http://a1.twimg.com/profile_images/82661470/marshallwithhatbig_normal.jpg" /></a></div>
+
+
+<div user_id="71" class="user_pic_square user_pic_square_small user_pic_square_71" onMouseOver="show_tooltip($(this), 'Maria Ly')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/maria"><img src="https://graph.facebook.com/507261817/picture" /></a></div>
+
+
+<div user_id="6907" class="user_pic_square user_pic_square_small user_pic_square_6907" onMouseOver="show_tooltip($(this), 'Stephen Paul')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/singpolyma"><img src="http://a1.twimg.com/profile_images/52661146/avatar-twitter_normal.png" /></a></div>
+
+
+<div user_id="556" class="user_pic_square user_pic_square_small user_pic_square_556" onMouseOver="show_tooltip($(this), 'Naveen Selvadurai')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/naveen"><img src="http://plancast.com/uploads/pics/556_pic_square_1263778966.png" /></a></div>
+
+
+<div user_id="4529" class="user_pic_square user_pic_square_small user_pic_square_4529" onMouseOver="show_tooltip($(this), 'Tim Van Loan')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/TimIsHungry"><img src="http://plancast.com/uploads/pics/4529_pic_square_1287016702.jpg" /></a></div>
+
+
+<div user_id="5339" class="user_pic_square user_pic_square_small user_pic_square_5339" onMouseOver="show_tooltip($(this), 'Ariel Waldman')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/arielwaldman"><img src="http://a3.twimg.com/profile_images/130190189/104_icon_normal.jpg" /></a></div>
+
+
+<div user_id="4741" class="user_pic_square user_pic_square_small user_pic_square_4741" onMouseOver="show_tooltip($(this), 'Ben Ward')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/benward"><img src="http://a1.twimg.com/profile_images/150824912/2009-200_normal.jpg" /></a></div>
+
+
+<div user_id="5513" class="user_pic_square user_pic_square_small user_pic_square_5513" onMouseOver="show_tooltip($(this), 'Evan Williams')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/ev"><img src="http://a3.twimg.com/profile_images/719219563/_A_New_Age_of_Wonder_-1_normal.jpg" /></a></div>
+
+
+<div user_id="1068" class="user_pic_square user_pic_square_small user_pic_square_1068" onMouseOver="show_tooltip($(this), 'Larry Chiang')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/larrychiang"><img src="http://a1.twimg.com/profile_images/437940786/cropped-head-shot_normal.jpg" /></a></div>
+
+
+<div user_id="2398" class="user_pic_square user_pic_square_small user_pic_square_2398" onMouseOver="show_tooltip($(this), 'Ian F')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/verbal"><img src="http://plancast.com/uploads/pics/2398_pic_square_1259698622.jpg" /></a></div>
+
+
+<div user_id="2391" class="user_pic_square user_pic_square_small user_pic_square_2391" onMouseOver="show_tooltip($(this), 'timoni west')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/timoni"><img src="https://graph.facebook.com/15616894/picture" /></a></div>
+
+
+<div user_id="3479" class="user_pic_square user_pic_square_small user_pic_square_3479" onMouseOver="show_tooltip($(this), 'Steve Jang')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/stevejang"><img src="https://graph.facebook.com/507740480/picture" /></a></div>
+
+
+<div user_id="2703" class="user_pic_square user_pic_square_small user_pic_square_2703" onMouseOver="show_tooltip($(this), 'Kevin Rose')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/k"><img src="https://graph.facebook.com/500014674/picture" /></a></div>
+
+
+<div user_id="2589" class="user_pic_square user_pic_square_small user_pic_square_2589" onMouseOver="show_tooltip($(this), 'Caroline McCarthy')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/caro"><img src="http://plancast.com/uploads/pics/2589_pic_square_1259709649.jpg" /></a></div>
+
+
+<div user_id="1154" class="user_pic_square user_pic_square_small user_pic_square_1154" onMouseOver="show_tooltip($(this), 'David Recordon')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/daveman692"><img src="https://graph.facebook.com/24400320/picture" /></a></div>
+
+
+<div user_id="7272" class="user_pic_square user_pic_square_small user_pic_square_7272" onMouseOver="show_tooltip($(this), 'Chris Messina')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/chrismessina"><img src="http://plancast.com/uploads/pics/7272_pic_square_1316461404.jpg" /></a></div>
+
+
+<div user_id="5120" class="user_pic_square user_pic_square_small user_pic_square_5120" onMouseOver="show_tooltip($(this), 'Thor Muller')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/thormuller"><img src="http://plancast.com/uploads/pics/5120_pic_square_1298935112.jpg" /></a></div>
+
+
+<div user_id="3760" class="user_pic_square user_pic_square_small user_pic_square_3760" onMouseOver="show_tooltip($(this), 'Jason Shellen')" onMouseOut="hide_tooltip()">
+	<a target="" href="http://plancast.com/user/3760"><img src="https://graph.facebook.com/173401772/picture" /></a></div>
+
+    <div style="clear:both"></div>
+  </div>
+  
+      <div id="user_col2_subscriptions_view_all"><a href="/t/subscriptions">View All</a></div>
+    
+
+<div style="clear:both;margin-bottom:25px;"></div>
+    
+  <h2>Export these plans</h2>
+  <div class="user_col2_section">
+    <ul id="user_export_options">
+      <li style="background-image: url('/images/icons/ical_format.png')" onclick="prompt_toggle(true,'calendar_export',{ type: 'user', user_id: 9544, export_options: 'ical' });">Calendar Feed</li>
+      <li style="background-image: url('/images/icons/rss.png')" onClick="prompt_toggle(true,'calendar_export',{ type: 'user', user_id: 9544, export_options: 'rss' }); return false;">RSS Feed</li>
+    </ul>
+  </div>
+  
+
+    <h2>Options</h2>
+  <div class="user_col2_section" style="margin-top:15px">
+    <ul style="font-size:1.2em">
+              <li style="margin-bottom:3px"><a href="/t?view_type=past">View All Past Plans</a></li>
+      
+          </ul>
+  </div>
+
+
+      <div style="clear:both"></div>
+      
+    </div>
+    
+  </div>
+
+  <div style="clear:both"></div>
+
+</div></div>
+      
+      <div id="footer">
+        <ul>
+          <li style="background: none; padding-right: 0; margin-right: 0;"><a href="/change-request-format">Mobile View</a></li>
+          <li><a href="/about/terms-of-use">Terms of Use</a></li>
+          <li><a href="/about/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/developers">API</a></li>
+          <li><a href="/goodies">Goodies</a></li>
+          <li><a href="/about/contact">Contact</a></li>
+          <li><a href="/about">About</a></li>
+          <div style="clear:both"></div>
+        </ul>
+      </div>
+      
+    </div>
+    
+    <script type="text/javascript">
+
+  // External service authorization URLs
+  var facebook_authorize_url  = 'https://graph.facebook.com/oauth/authorize?client_id=111137091050&redirect_uri=http%3A%2F%2Fplancast.com%2Ffacebook%2Fconnect&scope=publish_stream%2Coffline_access%2Cemail%2Cuser_events%2Cuser_about_me%2Cuser_location%2Cuser_website&display=popup';
+  var twitter_authorize_url   = '';
+  var google_authorize_url    = '';
+  var meetup_authorize_url    = '';
+  var linkedin_authorize_url  = '';
+  
+</script>
+
+<div id="fb-root"></div>
+<script src="http://connect.facebook.net/en_US/all.js"></script>
+<script>
+  // Initialize Facebook JavaScript SDK
+  FB.init({
+    appId  : '111137091050',
+    status : true, // check login status
+    cookie : true, // enable cookies to allow the server to access the session
+    xfbml  : true  // parse XFBML
+  });
+  
+  // Initialize the reporting of Facebook "likes" to the server for custom usage
+  FB.Event.subscribe('edge.create', function(response) { plan_like(); });
+  
+</script>
+
+<!-- Start Awe.sm -->
+<script src="http://widgets.awe.sm/v2/widgets.js?key=d1e2e1a15f46fc92af741e0e9c0f787d9f62cf2a242b91d684057fe8d3f2a230"></script>
+<!-- End Awe.sm -->
+
+  
+    
+  <!-- Start Google Analytics -->
+  <script type="text/javascript">
+
+    _gaq.push(['_setAccount', 'UA-11425492-1']);
+    
+    _gaq.push(['_setCustomVar', 1, 'session', 'false', 2]);
+
+          _gaq.push(['_setCustomVar', 5, 'page_type', 'user', 3]);
+        
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+  <!-- End Google Analytics -->
+      
+  <!-- Start Quantcast tag -->
+  <script type="text/javascript">
+    _qoptions={
+      qacct:"p-a5p7xsvuMwuyA"
+    };
+  </script>
+  <script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script>
+  <noscript>
+    <img src="http://pixel.quantserve.com/pixel/p-a5p7xsvuMwuyA.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/>
+  </noscript>
+  <!-- End Quantcast tag -->
+  
+
+<!-- Google+ -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+    
+  </body>
+</html>

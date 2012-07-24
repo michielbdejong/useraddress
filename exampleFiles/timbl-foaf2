@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:owl="http://www.w3.org/2002/07/owl#">
+  <foaf:PersonalProfileDocument rdf:about="">
+    <rdfs:label>Advogato FOAF profile for Tim Berners-Lee</rdfs:label>
+    <foaf:maker rdf:resource="#me"/>
+    <foaf:primaryTopic rdf:resource="#me"/>
+  </foaf:PersonalProfileDocument>
+  <foaf:Group rdf:about="http://www.advogato.org/ns/trust#Master">
+    <foaf:member rdf:resource="#me"/>
+  </foaf:Group>
+  <rdf:Description rdf:about="http://www.w3.org/People/Berners-Lee/card#i">
+    <owl:sameAs rdf:resource="#me"/>
+  </rdf:Description>
+  <foaf:Person rdf:about="#me">
+    <foaf:name>Tim Berners-Lee</foaf:name>
+    <foaf:nick>timbl</foaf:nick>
+    <foaf:mbox_sha1sum>6505cb7ac99c3e8b7cbe99a044cbe1c5d1faef21</foaf:mbox_sha1sum>
+    <foaf:homepage rdf:resource="http://www.w3.org/People/Berners-Lee/"/>
+    <foaf:weblog rdf:resource="http://www.advogato.org/person/timbl/diary.html"/>
+    <foaf:knows>
+      <foaf:Person rdf:about="http://www.advogato.org/person/connolly/foaf.rdf#me">
+        <foaf:nick>connolly</foaf:nick>
+        <rdfs:seeAlso rdf:resource="http://www.advogato.org/person/connolly/foaf.rdf"/>
+      </foaf:Person>
+    </foaf:knows>
+    <foaf:knows>
+      <foaf:Person rdf:about="http://www.advogato.org/person/presbrey/foaf.rdf#me">
+        <foaf:nick>presbrey</foaf:nick>
+        <rdfs:seeAlso rdf:resource="http://www.advogato.org/person/presbrey/foaf.rdf"/>
+      </foaf:Person>
+    </foaf:knows>
+    <foaf:knows>
+      <foaf:Person rdf:about="http://www.advogato.org/person/oshani/foaf.rdf#me">
+        <foaf:nick>oshani</foaf:nick>
+        <rdfs:seeAlso rdf:resource="http://www.advogato.org/person/oshani/foaf.rdf"/>
+      </foaf:Person>
+    </foaf:knows>
+    <foaf:currentProject rdf:resource="http://www.advogato.org/proj/SWAP/"/>
+    <foaf:currentProject rdf:resource="http://www.advogato.org/proj/Tabulator/"/>
+  </foaf:Person>
+</rdf:RDF>
