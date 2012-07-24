@@ -42,25 +42,30 @@ function findDocFor(str, cb) {
     var domainParts = str.substring(prefix).split('/')[0].split('.');
     if(domainParts.length > 1 && domainParts[1].length >= 2) {
       console.log('doc for '+str);
-      cb(null, str);
+      cb(null, {
+        url: str,
+        docRel: 'html'
+      });
     }
   }
 }
 function search(str) {
-  for(var i in index[str]) {
-    if(data[i]) {
-      var obj = data[i];
-      obj.from = 'index';
-      obj.query = str;
-      console.log('result from index');
-      rowCb(obj);
+  if(index[str]) {
+    for(var i in index[str]) {
+      if(data[i]) {
+        var obj = data[i];
+        obj.from = 'index';
+        obj.query = str;
+        console.log('result from index');
+        rowCb(obj);
+      }
     }
   }
   findDocFor(str, function(err, data) {
     pending++;
     console.log('pending++: '+pending+' '+data);
     statusCb(pending>0?'busy':'idle');
-    masterParser.parse(data, '', {}, function(err, obj) {
+    masterParser.parse(data.url, data.docRel, {}, function(err, obj) {
       pending--;
       console.log('pending--: '+pending);
       statusCb(pending>0?'busy':'idle');
