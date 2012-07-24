@@ -24,7 +24,7 @@ function doFile(url, docRel, identifiers, expect) {
   });
 }
 masterParser.setEnv('test');
-doFile('file://exampleFiles/id-xrd', 'lrdd', {'acct:michielbdejong@identi.ca': true}, {
+doFile('https://identi.ca/.well-known/host-meta?resource=acct:michielbdejong@identi.ca', 'lrdd', {'acct:michielbdejong@identi.ca': true}, {
   identifiers: 
    { 'acct:michielbdejong@identi.ca': true,
      'http://identi.ca/user/425878': true,
@@ -47,7 +47,7 @@ doFile('file://exampleFiles/id-xrd', 'lrdd', {'acct:michielbdejong@identi.ca': t
      'http://identi.ca/user/499580': true },
   tools: {}
 });
-doFile('file://exampleFiles/fr-xrd', 'lrdd', {'acct:michiel@revolutionari.es': true}, {
+doFile('https://revolutionari.es/.well-known/host-meta?resource=acct:michiel@revolutionari.es', 'lrdd', {'acct:michiel@revolutionari.es': true}, {
  identifiers: 
    { 'acct:michiel@revolutionari.es': true,
      'https://revolutionari.es/profile/michiel': true },
@@ -72,7 +72,7 @@ doFile('file://exampleFiles/fr-xrd', 'lrdd', {'acct:michiel@revolutionari.es': t
      'https://friendica.mafiaspiel.org/profile/leberwurscht': true },
   tools: {} 
 });
-doFile('file://exampleFiles/gm-xrd', 'lrdd', {'acct:dejong.michiel@gmail.com': true}, {
+doFile('https://gmail.com/.well-known/host-meta?resource=acct:dejong.michiel@gmail.com', 'lrdd', {'acct:dejong.michiel@gmail.com': true}, {
  identifiers: 
    { 'acct:dejong.michiel@gmail.com': true,
      'http://www.google.com/profiles/dejong.michiel': true },
@@ -85,26 +85,26 @@ doFile('file://exampleFiles/gm-xrd', 'lrdd', {'acct:dejong.michiel@gmail.com': t
   follows: {},
   tools: {}
 });
-doFile('file://exampleFiles/twitter-api', 'twitter-api', {'http://twitter.com/michielbdejong': true}, {
-  identifiers: { 'http://twitter.com/michielbdejong': true },
+doFile('https://api.twitter.com/1/users/show.json?screen_name=michielbdejong', 'twitter-api', {'https://twitter.com/michielbdejong': true}, {
+  identifiers: {},
   textFields: 
    { fullName: 'Michiel de Jong',
      bio: 'Freedom hacker at unhosted.org',
-     nick: '@michielbdejong' },
+     nick: 'michielbdejong' },
   images: { avatar: 'http://a0.twimg.com/profile_images/2194941545/picresized_th_5a6d23f1e8567cc9ccdac00ace4761c7_normal.jpg' },
   seeAlso: {},
   follows: {},
   tools: {} 
 });
-doFile('file://exampleFiles/fb-api', 'facebook-api', {'http://facebook.com/dejong.michiel': true}, {
- identifiers: { 'http://facebook.com/dejong.michiel': true },
+doFile('https://graph.facebook.com/dejong.michiel', 'facebook-api', {'https://graph.facebook.com/dejong.michiel': true}, {
+ identifiers: { 'https://graph.facebook.com/dejong.michiel': true },
   textFields: { fullName: 'Michiel De Jong', nick: 'dejong.michiel' },
   images: { avatar: 'http://graph.facebook.com/dejong.michiel/picture' },
   seeAlso: {},
   follows: {},
   tools: {}
 });
-doFile('file://exampleFiles/jd-xrd', 'lrdd', {'acct:michielbdejong@joindiaspora.com': true}, {
+doFile('https://joindiaspora.com/.well-known/host-meta?resource=acct:michielbdejong@joindiaspora.com', 'lrdd', {'acct:michielbdejong@joindiaspora.com': true}, {
   identifiers: { 'acct:michielbdejong@joindiaspora.com': true },
   textFields: { fullName: 'Michiel de Jong', nick: 'michielbdejong' },
   images: { avatar: 'https://joindiaspora.s3.amazonaws.com/uploads/images/thumb_small_ffbd568ab8d948d72703.jpg' },
@@ -112,7 +112,7 @@ doFile('file://exampleFiles/jd-xrd', 'lrdd', {'acct:michielbdejong@joindiaspora.
   follows: {},
   tools: {}
 });
-doFile('file://exampleFiles/melvin.html', '#me', {'http://melvincarvalho.com/#me': true}, {
+doFile('http://melvincarvalho.com/', '#me', {'http://melvincarvalho.com/#me': true}, {
  identifiers: { 'http://melvincarvalho.com/#me': true },
   textFields: { fullName: 'Melvin Carvalho' },
   images: { avatar: 'http://melvincarvalho.com/melvincarvalho.png' },

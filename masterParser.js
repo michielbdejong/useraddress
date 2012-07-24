@@ -58,6 +58,7 @@ function fetch(urlStr, cb) {
   if(urlStr.substring(0, 'file://exampleFiles/'.length) == 'file://exampleFiles/') {
     fs.readFile(urlStr.substring('file://'.length), cb);
   } else {
+    console.log('********* CACHE MISS: '+urlStr);
     var urlObj = url.parse(urlStr);
     var timer;
     var lib = (urlObj.protocol=='https:'?https:http);
@@ -81,6 +82,8 @@ function fetch(urlStr, cb) {
         if(timer) {//not timed out yet
           if(response.statusCode==200 || response.statusCode==201 || response.statusCode==204) {
             cb(null, str);
+          } else if(response.statusCode==301) {
+            fetch(response.headers.location, cb);
           } else {
             cb(response.statusCode);
           }
@@ -111,28 +114,35 @@ function fetch(urlStr, cb) {
   }
 }
 function checkStubs(url) {
-  if(url == 'http://identi.ca/michielbdejong/foaf') {
-    return 'file://exampleFiles/id-foaf';
+  var cache = {
+   'https://identi.ca/.well-known/host-meta?resource=acct:michielbdejong@identi.ca': 'file://exampleFiles/id-hostmeta',
+   'http://identi.ca/main/xrd?uri=acct:michielbdejong@identi.ca': 'file://exampleFiles/id-lrdd',
+   'http://identi.ca/michielbdejong/foaf': 'file://exampleFiles/id-foaf',
+
+   'https://gmail.com/.well-known/host-meta?resource=acct:dejong.michiel@gmail.com': 'file://exampleFiles/gm-hostmeta',
+   'http://www.google.com/s2/webfinger/?q=acct:dejong.michiel@gmail.com': 'file://exampleFiles/gm-lrdd',
+   'http://www.google.com/s2/webfinger/?q=acct%3Adejong.michiel%40gmail.com&fmt=foaf': 'file://exampleFiles/gm-foaf',
+   'http://www-opensocial.googleusercontent.com/api/people/108912615873187638071/': 'file://exampleFiles/gm-poco-me',
+   'http://www.google.com/profiles/dejong.michiel': 'file://exampleFiles/gm-hcard',
+
+   'https://revolutionari.es/.well-known/host-meta?resource=acct:michiel@revolutionari.es': 'file://exampleFiles/fr-hostmeta',
+   'https://revolutionari.es/xrd/?uri=acct:michiel@revolutionari.es': 'file://exampleFiles/fr-lrdd',
+   'https://revolutionari.es/poco/michiel': 'file://exampleFiles/fr-poco',
+   'https://revolutionari.es/hcard/michiel': 'file://exampleFiles/fr-hcard',
+   
+   'https://joindiaspora.com/.well-known/host-meta?resource=acct:michielbdejong@joindiaspora.com': 'file://exampleFiles/jd-hostmeta',
+   'https://joindiaspora.com/webfinger?q=acct:michielbdejong@joindiaspora.com': 'file://exampleFiles/jd-lrdd',
+   'https://joindiaspora.com/hcard/users/e583028f23ce0302': 'file://exampleFiles/jd-hcard',
+
+   'https://api.twitter.com/1/users/show.json?screen_name=michielbdejong': 'file://exampleFiles/twitter-api', 
+   'https://graph.facebook.com/dejong.michiel': 'file://exampleFiles/fb-api', 
+   'http://melvincarvalho.com/': 'file://exampleFiles/melvin.html', 
   }
-  if(url == 'http://www.google.com/s2/webfinger/?q=acct%3Adejong.michiel%40gmail.com&fmt=foaf') {
-    return 'file://exampleFiles/gm-foaf';
+  if(cache[url]) {
+    return cache[url];
+  } else {
+    return url;
   }
-  if(url == 'http://www-opensocial.googleusercontent.com/api/people/108912615873187638071/') {
-    return 'file://exampleFiles/gm-poco-me';
-  }
-  if(url == 'https://revolutionari.es/poco/michiel') {
-    return 'file://exampleFiles/fr-poco';
-  }
-  if(url == 'https://revolutionari.es/hcard/michiel') {
-    return 'file://exampleFiles/fr-hcard';
-  }
-  if(url == 'http://www.google.com/profiles/dejong.michiel') {
-    return 'file://exampleFiles/gm-hcard';
-  }
-  if(url == 'https://joindiaspora.com/hcard/users/e583028f23ce0302') {
-    return 'file://exampleFiles/jd-hcard';
-  }
-  return url;
 }
 function getEnv() {
  return _env;
