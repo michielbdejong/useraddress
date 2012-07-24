@@ -25,9 +25,19 @@ function add(userAddress, obj) {
   dumpDb();
 }
 function findDocFor(str, cb) {
-  if(str.substring(0, 'http://'.length)=='http://' || str.substring(0, 'https://'.length)=='https://') {
-    console.log('doc for '+str);
-    cb(null, str);
+  var prefix;
+  if(str.substring(0, 'http://'.length)=='http://') {
+    prefix = 'http://'.length;
+  }
+  if(str.substring(0, 'https://'.length)=='https://') {
+    prefix = 'https://'.length;
+  }
+  if(prefix) {
+    var domainParts = str.substring(prefix).split('/')[0].split('.');
+    if(domainParts.length > 1 && domainParts[1].length >= 2) {
+      console.log('doc for '+str);
+      cb(null, str);
+    }
   }
 }
 function search(str) {
@@ -42,7 +52,7 @@ function search(str) {
   }
   findDocFor(str, function(err, data) {
     pending++;
-    console.log('pending++: '+pending);
+    console.log('pending++: '+pending+' '+data);
     statusCb(pending>0?'busy':'idle');
     masterParser.parse(data, '', {}, function(err, obj) {
       pending--;
