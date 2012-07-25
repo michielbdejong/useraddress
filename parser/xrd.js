@@ -26,7 +26,10 @@ exports.parse = function(data2, identifiers, cb) {
       data2.Property = [data2.Property];
     }
   }
-  //console.log(data2.Link);
+  if(!data2.Link) {
+    console.log('no .Link:');
+    console.log(data2);
+  }
   if(data2.Link['@']) {
     data2.Link = [data2.Link];
   }

@@ -6,9 +6,9 @@ var xml2js=require('xml2js'),
   url=require('url'),
   _env='production';
 
-function doParse(content, language, identifiers, cb) {
-  console.log('parsing as '+language);
-  require('./parser/'+language).parse(content, identifiers, function(err, data) {
+function doParse(url, type, docRel, headers, content, documents, cb) {
+  console.log('parsing as '+type);
+  require('./parser/'+type).parse(url, docRel, headers, content, documents, function(err, data) {
     //data = {
     //  textFields: {},
     //  images: {},
@@ -20,7 +20,7 @@ function doParse(content, language, identifiers, cb) {
     var outstanding = 0;
     for(var i in data.seeAlso) {
       outstanding++;//map
-      parse(i, data.seeAlso[i], identifiers, function(err2, data2) {
+      parse(i, data.seeAlso[i], documents, function(err2, data2) {
         outstanding--;//reduce
         if(err2) {
           err = err2;
@@ -31,7 +31,7 @@ function doParse(content, language, identifiers, cb) {
           }
         }
         if(outstanding == 0) {
-          for(var i in identifiers) {
+          for(var i in documents) {
             if(i.substring(0, 'acct:'.length) == 'acct:') {
               data.textFields.nick=i.substring('acct:'.length).split('@')[0];
             }
@@ -42,7 +42,7 @@ function doParse(content, language, identifiers, cb) {
       });
     }
     if(outstanding == 0) {
-      for(var i in identifiers) {
+      for(var i in documents) {
         if(i.substring(0, 'acct:'.length) == 'acct:') {
           data.textFields.nick=i.substring('acct:'.length).split('@')[0];
         }
@@ -54,13 +54,15 @@ function doParse(content, language, identifiers, cb) {
 }
 
 function fetch(urlStr, cb) {
-  //console.log(urlStr);
+  console.log(urlStr);
   if(urlStr.substring(0, 'file://exampleFiles/'.length) == 'file://exampleFiles/') {
     fs.readFile(urlStr.substring('file://'.length), function(err, content) {
       var urlStrParts = urlStr.split('.');
       cb(err, {
         content: content,
-        type: urlStrParts[urlStrParts.length-1]//html, xrd, rdf, js, json
+        headers: {
+          'Content-Type': urlStrParts[urlStrParts.length-1]//html, xrd, rdf, js, json
+        }
       });
     });
   } else {
@@ -89,7 +91,7 @@ function fetch(urlStr, cb) {
           if(response.statusCode==200 || response.statusCode==201 || response.statusCode==204) {
             cb(null, {
               content: str,
-              type: response.headers['Content-Type'] 
+              headers: response.headers
             });
           } else if(response.statusCode==301 || response.statusCode==302) {
             fetch(response.headers.location, cb);
@@ -134,7 +136,7 @@ function checkStubs(url) {
    'http://www-opensocial.googleusercontent.com/api/people/108912615873187638071/': 'file://exampleFiles/gm-poco-me.html',
    'http://www.google.com/profiles/dejong.michiel': 'file://exampleFiles/gm-hcard.html',
 
-   'https://revolutionari.es/.well-known/host-meta?resource=acct:michiel@revolutionari.es': 'file://exampleFiles/fr-hostmeta.xrd',
+   'https://revolutionari.es/.well-known/host-meta?resource=acct:michiel@revolutionari.es': 'file://exampleFiles/fr-hostmeta.xml',
    'https://revolutionari.es/xrd/?uri=acct:michiel@revolutionari.es': 'file://exampleFiles/fr-lrdd.xrd',
    'https://revolutionari.es/poco/michiel': 'file://exampleFiles/fr-poco.html',
    'https://revolutionari.es/hcard/michiel': 'file://exampleFiles/fr-hcard.html',
@@ -188,41 +190,42 @@ function checkStubs(url) {
 function getEnv() {
  return _env;
 }
-function parse(url, docRel, identifiers, cb) {
+function parse(url, docRel, documents, cb) {
   //console.log('parse called for '+url);
   //console.log(cb);
+  var urlToFetch = url;
   if(getEnv()=='test') {
-    url = checkStubs(url);
+    urlToFetch = checkStubs(url);
   }
-  fetch(url, function(err, data) {
+  fetch(urlToFetch, function(err, data) {
     if(err) {
       //console.log('fetch error '+url+' '+err);
       cb(err);
     } else {
-      if(data.type=='js' || data.type=='json') {
+      if(data.headers['Content-Type']=='js' || data.headers['Content-Type']=='json') {
         var parsed;
         try {
-          parsed = JSON.parse(data);
-          if(parsed) {
-            doParse(parsed, docRel, identifiers, cb);
-          }
+          parsed = JSON.parse(data.content);
         } catch(e) {//JSON failed, try xml
-          cb('mime type was '+data.type+' but no valid JSON');
+          cb('mime type was '+data.headers['Content-Type']+' but no valid JSON');
         }
-      } else if(data.type=='xml' || data.type=='xrd' || data.type=='rdf') {
-        new xml2js.Parser().parseString(data, function(err, data2) {
+        if(parsed) {
+          doParse(url, 'json', docRel, data.headers, parsed, documents, cb);
+        }
+      } else if(data.headers['Content-Type']=='xml' || data.headers['Content-Type']=='xrd' || data.headers['Content-Type']=='rdf') {
+        new xml2js.Parser().parseString(data.content, function(err, data2) {
           if(err || data2==null) {//XML failed, try html
-            cb('mime type was '+data.type+' but no valid XML');
+            cb('mime type was '+data.headers['Content-Type']+' but no valid XML');
           } else {
             if(docRel=='lrdd' && data2['@'] && data2['@'].xmlns && data2['@'].xmlns == 'http://docs.oasis-open.org/ns/xri/xrd-1.0') {
               //console.log('doParse '+url);
-              doParse(data2, 'lrdd', identifiers, cb);
+              doParse(url, 'xml', 'lrdd', data.headers, data2, documents, cb);
             } else if(data2['@'] && data2['@'].xmlns && data2['@'].xmlns == 'http://xmlns.com/foaf/0.1/') {
               //console.log('doParse '+url);
-              doParse(data2, 'foaf', identifiers, cb);
+              doParse(url, 'xml', 'foaf', data.headers, data2, documents, cb);
             } else if(data2['@'] && data2['@'].xmlns && data2['@'].xmlns == 'http://www.w3.org/1999/xhtml') {
               //console.log('doParse '+url);
-              doParse(data2, 'html', identifiers, cb);
+              doParse(url, 'html', 'html', data.headers, data2, documents, cb);
             } else {
               console.log(JSON.stringify(data2));
               console.log('xml not recognized '+url);
@@ -231,18 +234,18 @@ function parse(url, docRel, identifiers, cb) {
           }
         });
         return;
-      } else if(data.type=='html') {
+      } else if(data.headers['Content-Type']=='html') {
         var handler = new htmlparser.DefaultHandler(function (err, data3) {
           if(err) {
-            cb('mime type was '+data.type+' but no valid HTML');
+            cb('mime type was '+data.headers['Content-Type']+' but no valid HTML');
           } else {
-            doParse(data3, docRel, identifiers, cb);
+            doParse(data3, 'html', docRel, documents, cb);
           }
         });
         var parser = new htmlparser.Parser(handler);
-        parser.parseComplete(data);
+        parser.parseComplete(data.content);
       } else {
-        cb('no idea what to do with Content-Type '+data.type);
+        cb('no idea what to do with Content-Type '+data.headers['Content-Type']);
       }
     }
   });

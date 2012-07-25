@@ -1,7 +1,9 @@
 var masterParser = require('./masterParser');
 
-function doFile(url, docRel, identifiers, expect) {
-  masterParser.parse(url, docRel, identifiers, function(err, data) {
+function doFile(url, expect) {
+  var documents = {};
+  documents[url]=true;
+  masterParser.parse(url, '', documents, function(err, data) {
     if(err) {
       console.log('********** FAIL '+url+': '+err);
     } else {
@@ -24,7 +26,7 @@ function doFile(url, docRel, identifiers, expect) {
   });
 }
 masterParser.setEnv('test');
-doFile('https://identi.ca/.well-known/host-meta?resource=acct:michielbdejong@identi.ca', 'lrdd', {'acct:michielbdejong@identi.ca': true}, {
+/*doFile('https://identi.ca/.well-known/host-meta?resource=acct:michielbdejong@identi.ca', 'lrdd', {'acct:michielbdejong@identi.ca': true}, {
   identifiers: 
    { 'acct:michielbdejong@identi.ca': true,
      'http://identi.ca/user/425878': true,
@@ -84,26 +86,36 @@ doFile('https://gmail.com/.well-known/host-meta?resource=acct:dejong.michiel@gma
      'http://www.google.com/s2/webfinger/?q=acct%3Adejong.michiel%40gmail.com&fmt=foaf': 'describedby' },
   follows: {},
   tools: {}
-});
-doFile('https://api.twitter.com/1/users/show.json?screen_name=michielbdejong', 'twitter', {'https://twitter.com/michielbdejong': true}, {
-  identifiers: {},
+});*/
+doFile('https://api.twitter.com/1/users/show.json?screen_name=michielbdejong', {
+  documents: {'https://api.twitter.com/1/users/show.json?screen_name=michielbdejong': true},
   textFields: 
    { fullName: 'Michiel de Jong',
      bio: 'Freedom hacker at unhosted.org',
-     nick: 'michielbdejong' },
+     nick: 'michielbdejong',
+     locale: 'en' },
   images: { avatar: 'http://a0.twimg.com/profile_images/2194941545/picresized_th_5a6d23f1e8567cc9ccdac00ace4761c7_normal.jpg' },
-  seeAlso: {},
   follows: {},
-  tools: {} 
+  tools: {
+    'https://twitter.com/michielbdejong': 'R',
+    'twitter:michielbdejong': 'MRF'
+  }
 });
-doFile('https://graph.facebook.com/dejong.michiel', 'facebook', {'https://graph.facebook.com/dejong.michiel': true}, {
- identifiers: { 'https://graph.facebook.com/dejong.michiel': true },
-  textFields: { fullName: 'Michiel De Jong', nick: 'dejong.michiel' },
-  images: { avatar: 'http://graph.facebook.com/dejong.michiel/picture' },
-  seeAlso: {},
+doFile('https://graph.facebook.com/dejong.michiel', {
+  documents: { 'https://graph.facebook.com/dejong.michiel': true },
+  textFields:
+    { fullName: 'Michiel De Jong',
+      nick: 'dejong.michiel',
+      locale: 'en_US' },
+  images: { avatar: 'https://graph.facebook.com/dejong.michiel/picture' },
   follows: {},
-  tools: {}
-});
+  tools: {
+    'mailto:dejong.michiel@facebook.com': 'M',
+    'xmpp:dejong.michiel@facebook.com': 'PM',
+    'https://facebook.com/dejong.michiel': 'R',
+    'facebook:dejong.michiel': 'PMRFC'
+  }
+});/*
 doFile('https://joindiaspora.com/.well-known/host-meta?resource=acct:michielbdejong@joindiaspora.com', 'lrdd', {'acct:michielbdejong@joindiaspora.com': true}, {
   identifiers: { 'acct:michielbdejong@joindiaspora.com': true },
   textFields: { fullName: 'Michiel de Jong', nick: 'michielbdejong' },
@@ -131,7 +143,7 @@ doFile('http://melvincarvalho.com/', '#me', {'http://melvincarvalho.com/#me': tr
      'http://www.bergnet.org/people/bergi/card#me': true },
   tools: {}
 });
-/*doFile('http://tantek.com/', 'html', {}, {
+doFile('http://tantek.com/', 'html', {}, {
   textFields: { fullName: 'Timothy Berners-Lee' }
 });
 doFile('http://www.w3.org/People/Berners-Lee/card.rdf', 'foaf', {}, {
