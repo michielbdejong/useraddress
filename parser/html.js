@@ -7,31 +7,33 @@ function parseSubTree(subTree, cb) {
     for(var i=0; i<classTags.length; i++) {
       if(classTags[i]=='fn') {
         fullNamer=true;
+      } else if(classTags[i]=='mpfriend') {
+        cb('follows', subTree.attribs.href, true);
       } else if(classTags[i]=='avatar') {
         cb('images', 'avatar', subTree.attribs.src);
       }
     }
   }
   if(subTree.children) {
-    for(var i=0; i<tree.children.length; i++) {
-      if(fullNamer && tree.children[i].type=='text') {
+    for(var i=0; i<subTree.children.length; i++) {
+      if(fullNamer && subTree.children[i].type=='text') {
         cb('textFields', 'fullName', subTree.children[i].raw);
       }
     }
   }
-  if(!subTree[eltType].length) {
-    subTree[eltType]=[subTree[eltType]];
-  }
   for(var eltType in subTree) {
+    if(!subTree[eltType].length) {
+      subTree[eltType]=[subTree[eltType]];
+    }
     if(eltType != '@' && eltType != '#') {
       for(var j=0; j<subTree[eltType].length; j++) {
         if(typeof(subTree[eltType][j]) == 'object') {
           if(subTree[eltType][j]['@']) {
             if(subTree[eltType][j]['@'].property) {
-              cb(subTree[eltType][j]['@'].property, subTree[eltType][j]['@'].content);
+              cb('foaf', subTree[eltType][j]['@'].property, subTree[eltType][j]['@'].content);
             }
           } else if(subTree[eltType][j].rel) {
-            cb(subTree[eltType][j].rel, subTree[eltType][j].href);
+            cb('foaf', subTree[eltType][j].rel, subTree[eltType][j].href);
           }
           parseSubTree(subTree[eltType][j], cb);
         }
@@ -54,17 +56,21 @@ exports.parse = function(url, docRel, headers, content, cb) {
         tools: {}
       };
       for(var i=0; i<data2.length; i++) {
-        parseSubTree(data2[i], function(property, content) {
-          if(property== 'foaf:name') {
-            obj.textFields.fullName = content; 
-          } else if(property== 'foaf:knows') {
-            obj.follows[content]=true; 
-          } else if(property== 'foaf:depiction') {
-            obj.images.avatar = content; 
-          } else if(property== 'me' && (
-              content.substring('http://'.length)=='http' ||
-              content.substring('https://'.length)=='https')) {
-            obj.documents[content]='magic'; 
+        parseSubTree(data2[i], function(category, property, content) {
+          if(category=='foaf') {
+            if(property== 'foaf:name') {
+              obj.textFields.fullName = content; 
+            } else if(property=='foaf:knows') {
+              obj.follows[content]=true; 
+            } else if(property== 'foaf:depiction') {
+              obj.images.avatar = content; 
+            } else if(property== 'me' && (
+                content.substring('http://'.length)=='http' ||
+                content.substring('https://'.length)=='https')) {
+              obj.documents[content]='magic'; 
+            }
+          } else {
+            obj[category][property]=content;
           }
         });
       }
