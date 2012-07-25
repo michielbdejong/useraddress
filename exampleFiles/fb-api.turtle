@@ -1,0 +1,18 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix api: <tag:graph.facebook.com,2011:/> .
+@prefix og: <http://ogp.me/ns#> .
+@prefix fb: <http://ogp.me/ns/fb#> .
+@prefix : <http://graph.facebook.com/schema/~/> .
+@prefix user: <http://graph.facebook.com/schema/user#> .
+</604362022#>
+	user:id "604362022" ;
+	user:name "Michiel De Jong" ;
+	user:first_name "Michiel" ;
+	user:middle_name "De" ;
+	user:last_name "Jong" ;
+	user:username "dejong.michiel" ;
+	user:gender "male" ;
+	user:locale "en_US" .

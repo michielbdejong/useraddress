@@ -66,7 +66,10 @@ function fetch(urlStr, cb) {
       host: urlObj.hostname,
       path: urlObj.path,
       port: (urlObj.port?port:(urlObj.protocol=='https:'?443:80)),
-      headers: {}
+      headers: {
+        'user-agent': 'Mozilla/5.0',
+        'accept': 'text/turtle'
+      }
     };
     
     var request = lib.request(options, function(response) {
@@ -119,6 +122,8 @@ function checkStubs(url) {
    'https://identi.ca/.well-known/host-meta?resource=acct:michielbdejong@identi.ca': 'file://exampleFiles/id-hostmeta.xrd',
    'http://identi.ca/main/xrd?uri=acct:michielbdejong@identi.ca': 'file://exampleFiles/id-lrdd.xrd',
    'http://identi.ca/michielbdejong/foaf': 'file://exampleFiles/id-foaf.html',
+   'http://identi.ca/michielbdejong': 'file://exampleFiles/id-profile.html',
+   'http://identi.ca/user/425878': 'file://exampleFiles/id-profile.html',
 
    'https://gmail.com/.well-known/host-meta?resource=acct:dejong.michiel@gmail.com': 'file://exampleFiles/gm-hostmeta.xrd',
    'http://www.google.com/s2/webfinger/?q=acct:dejong.michiel@gmail.com': 'file://exampleFiles/gm-lrdd.xrd',
@@ -136,11 +141,11 @@ function checkStubs(url) {
    'https://joindiaspora.com/hcard/users/e583028f23ce0302': 'file://exampleFiles/jd-hcard.html',
 
    'https://api.twitter.com/1/users/show.json?screen_name=michielbdejong': 'file://exampleFiles/twitter-api.json',
-   'https://graph.facebook.com/dejong.michiel': 'file://exampleFiles/fb-api.js',
+   'https://graph.facebook.com/dejong.michiel': 'file://exampleFiles/fb-api.turtle',
    'http://melvincarvalho.com/': 'file://exampleFiles/melvin.html',
    
    'http://www.w3.org/People/Berners-Lee/card.rdf': 'file://exampleFiles/timbl-foaf.html',
-   'http://graph.facebook.com/512908782': 'file://exampleFiles/timbl-fb.html',
+   'http://graph.facebook.com/512908782': 'file://exampleFiles/timbl-fb.turtle',
    'http://identi.ca/user/45563': 'file://exampleFiles/timbl-id.html',
    'http://www.advogato.org/person/timbl/foaf.rdf': 'file://exampleFiles/timbl-foaf2.html',
    'http://www4.wiwiss.fu-berlin.de/bookmashup/persons/Tim+Berners-Lee': 'file://exampleFiles/timbl-fu1.html',
