@@ -1,26 +1,26 @@
-var xml2js=require('xml2js'),
-  htmlparser = require("htmlparser"),
-  fs=require('fs'),
+var fs=require('fs'),
   http=require('http'),
   https=require('https'),
   url=require('url'),
   _env='production';
 
-function doParse(url, type, docRel, headers, content, documents, cb) {
+function doParse(url, type, docRel, headers, content, cb) {
   console.log('parsing as '+type);
-  require('./parser/'+type).parse(url, docRel, headers, content, documents, function(err, data) {
+  require('./parser/'+type).parse(url, docRel, headers, content, function(err, data) {
     //data = {
     //  textFields: {},
     //  images: {},
-    //  seeAlso: {},
+    //  documents: {},
     //  follows: {},
     //  tools: {},
     //  data: undefined
     //};
     var outstanding = 0;
-    for(var i in data.seeAlso) {
+    console.log('parsed to documents:');
+    console.log(data.documents);
+    for(var i in data.documents) {
       outstanding++;//map
-      parse(i, data.seeAlso[i], documents, function(err2, data2) {
+      parse(i, data.documents[i], function(err2, data2) {
         outstanding--;//reduce
         if(err2) {
           err = err2;
@@ -31,22 +31,12 @@ function doParse(url, type, docRel, headers, content, documents, cb) {
           }
         }
         if(outstanding == 0) {
-          for(var i in documents) {
-            if(i.substring(0, 'acct:'.length) == 'acct:') {
-              data.textFields.nick=i.substring('acct:'.length).split('@')[0];
-            }
-          }
           delete data.data;
           cb(err, data);
         }
       });
     }
     if(outstanding == 0) {
-      for(var i in documents) {
-        if(i.substring(0, 'acct:'.length) == 'acct:') {
-          data.textFields.nick=i.substring('acct:'.length).split('@')[0];
-        }
-      }
       delete data.data;
       cb(err, data);
     }
@@ -93,7 +83,7 @@ function fetch(urlStr, cb) {
               content: str,
               headers: response.headers
             });
-          } else if(response.statusCode==301 || response.statusCode==302) {
+          } else if(response.statusCode==301 || response.statusCode==302 || response.statusCode==303) {
             fetch(response.headers.location, cb);
           } else {
             cb(response.statusCode);
@@ -190,7 +180,18 @@ function checkStubs(url) {
 function getEnv() {
  return _env;
 }
-function parse(url, docRel, documents, cb) {
+function chooseParser(contentType) {
+  if(contentType=='js' || contentType=='json') {
+    return 'json';
+  } else if(contentType=='rdf') {
+    return 'rdf';
+  } else if(contentType=='xrd') {
+    return 'xrd';
+  } else {
+    return 'html';
+  }
+}
+function parse(url, docRel, cb) {
   //console.log('parse called for '+url);
   //console.log(cb);
   var urlToFetch = url;
@@ -202,50 +203,11 @@ function parse(url, docRel, documents, cb) {
       //console.log('fetch error '+url+' '+err);
       cb(err);
     } else {
-      if(data.headers['Content-Type']=='js' || data.headers['Content-Type']=='json') {
-        var parsed;
-        try {
-          parsed = JSON.parse(data.content);
-        } catch(e) {//JSON failed, try xml
-          cb('mime type was '+data.headers['Content-Type']+' but no valid JSON');
-        }
-        if(parsed) {
-          doParse(url, 'json', docRel, data.headers, parsed, documents, cb);
-        }
-      } else if(data.headers['Content-Type']=='xml' || data.headers['Content-Type']=='xrd' || data.headers['Content-Type']=='rdf') {
-        new xml2js.Parser().parseString(data.content, function(err, data2) {
-          if(err || data2==null) {//XML failed, try html
-            cb('mime type was '+data.headers['Content-Type']+' but no valid XML');
-          } else {
-            if(docRel=='lrdd' && data2['@'] && data2['@'].xmlns && data2['@'].xmlns == 'http://docs.oasis-open.org/ns/xri/xrd-1.0') {
-              //console.log('doParse '+url);
-              doParse(url, 'xml', 'lrdd', data.headers, data2, documents, cb);
-            } else if(data2['@'] && data2['@'].xmlns && data2['@'].xmlns == 'http://xmlns.com/foaf/0.1/') {
-              //console.log('doParse '+url);
-              doParse(url, 'xml', 'foaf', data.headers, data2, documents, cb);
-            } else if(data2['@'] && data2['@'].xmlns && data2['@'].xmlns == 'http://www.w3.org/1999/xhtml') {
-              //console.log('doParse '+url);
-              doParse(url, 'html', 'html', data.headers, data2, documents, cb);
-            } else {
-              console.log(JSON.stringify(data2));
-              console.log('xml not recognized '+url);
-              cb('xml document type not recognized');
-            }
-          }
-        });
-        return;
-      } else if(data.headers['Content-Type']=='html') {
-        var handler = new htmlparser.DefaultHandler(function (err, data3) {
-          if(err) {
-            cb('mime type was '+data.headers['Content-Type']+' but no valid HTML');
-          } else {
-            doParse(data3, 'html', docRel, documents, cb);
-          }
-        });
-        var parser = new htmlparser.Parser(handler);
-        parser.parseComplete(data.content);
+      var parser = chooseParser(data.headers['Content-Type']);
+      if(!parser) {
+        cb('unsupported Content-Type '+data.headers['Content-Type']);
       } else {
-        cb('no idea what to do with Content-Type '+data.headers['Content-Type']);
+        doParse(url, parser, docRel, data.headers, data.content, cb);
       }
     }
   });

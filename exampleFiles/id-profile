@@ -1,0 +1,493 @@
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+  <title>Michiel de Jong (michielbdejong) - Identi.ca</title>
+  <link rel="shortcut icon" href="http://identi.ca/favicon.ico"/>
+  <link rel="stylesheet" type="text/css" href="http://theme2.status.net/base/css/display.css?version=1.1.0-release" media="screen, projection, tv, print"/>
+  <link rel="stylesheet" type="text/css" href="http://theme2.status.net/neo/css/display.css?version=1.1.0-release" media="screen, projection, tv, print"/>
+  <link rel="stylesheet" type="text/css" href="http://plugins2.status.net/OStatus/theme/base/css/ostatus.css" media=""/>
+  <link rel="stylesheet" type="text/css" href="http://plugins2.status.net/ModPlus/modplus.css" media=""/>
+  <link rel="stylesheet" type="text/css" href="http://plugins2.status.net/Realtime/realtimeupdate.css" media="screen, projection, tv"/>
+  <link rel="stylesheet" type="text/css" href="http://identi.ca/js/css/smoothness/jquery-ui.css" media=""/>
+  <!--[if IE]><link rel="stylesheet" type="text/css" href="http://theme2.status.net/base/css/ie.css?version=1.1.0-release" /><![endif]-->
+  <!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="http://theme2.status.net/base/css/ie6.css?version=1.1.0-release" /><![endif]-->
+  <!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="http://theme2.status.net/base/css/ie7.css?version=1.1.0-release" /><![endif]-->
+  <style>#site_notice { width: 100% }</style>
+  <style>.form-train-spam input.submit { background: url(http://plugins2.status.net/ActivitySpam/icons/bullet_black.png) no-repeat 0px 0px } 
+.form-train-ham input.submit { background: url(http://plugins2.status.net/ActivitySpam/icons/exclamation.png) no-repeat 0px 0px } </style>
+  <link rel="stylesheet" type="text/css" href="http://plugins2.status.net/Bookmark/bookmark.css" media=""/>
+  <link rel="stylesheet" type="text/css" href="http://plugins2.status.net/Event/event.css" media=""/>
+  <link rel="stylesheet" type="text/css" href="http://plugins2.status.net/Poll/poll.css" media=""/>
+  <link rel="stylesheet" type="text/css" href="http://plugins2.status.net/QnA/css/qna.css" media=""/>
+  <link rel="search" type="application/opensearchdescription+xml" href="http://identi.ca/opensearch/people" title="Identi.ca People Search"/>
+  <link rel="search" type="application/opensearchdescription+xml" href="http://identi.ca/opensearch/notice" title="Identi.ca Notice Search"/>
+  <link rel="alternate" href="http://identi.ca/api/statuses/user_timeline/425878.as" type="application/stream+json" title="Notice feed for michielbdejong (Activity Streams JSON)"/>
+  <link rel="alternate" href="http://identi.ca/michielbdejong/rss" type="application/rdf+xml" title="Notice feed for michielbdejong (RSS 1.0)"/>
+  <link rel="alternate" href="http://identi.ca/api/statuses/user_timeline/425878.rss" type="application/rss+xml" title="Notice feed for michielbdejong (RSS 2.0)"/>
+  <link rel="alternate" href="http://identi.ca/api/statuses/user_timeline/425878.atom" type="application/atom+xml" title="Notice feed for michielbdejong (Atom)"/>
+  <link rel="meta" href="http://identi.ca/michielbdejong/foaf" type="application/rdf+xml" title="FOAF for michielbdejong"/>
+  <meta name="description" content="Lived in Bali last winter and was 'the guy that did unhosted'. Now live in Berlin and proud to be just one of many 'people who do unhosted'."/>
+  <meta name="microid" content="mailto+http:sha1:320f83194efbe77ac5579330e71963bbe3bc7092"/>
+  <link rel="microsummary" href="http://identi.ca/michielbdejong/microsummary"/>
+  <link rel="EditURI" type="application/rsd+xml" href="http://identi.ca/rsd.xml"/>
+  <link rel="openid2.provider" href="http://identi.ca/main/openidserver"/>
+  <link rel="openid2.local_id" href="http://identi.ca/michielbdejong"/>
+  <link rel="openid.server" href="http://identi.ca/main/openidserver"/>
+  <link rel="openid.delegate" href="http://identi.ca/michielbdejong"/>
+ </head>
+ <body id="showstream">
+  <div id="wrap">
+   <div id="fb-root"></div>
+   <div id="header">
+    <address id="site_contact" class="vcard">
+     <a class="url home bookmark" href="http://identi.ca/">
+      <img class="logo photo" src="http://file.status.net/i/identica/jordanc-20110919T224313-xycjlk9.png" alt="Identi.ca"/>
+       <span class="fn org">Identi.ca</span>
+     </a>
+    </address>
+    <div id="site_nav_global_primary">
+     <form id="header-search" class="form" method="get" action="http://identi.ca/search/notice">
+      <fieldset>
+       <input name="q" size="20" id="search-q"/>
+       <input type="submit" value="Search"/>
+      </fieldset>
+     </form>
+     <ul class="nav">
+      <li id="nav_login">
+       <a href="https://identi.ca/main/login" title="Login to the site.">Login</a>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div id="core">
+    <div id="aside_primary_wrapper">
+     <div id="content_wrapper">
+      <div id="site_nav_local_views_wrapper">
+       <div id="site_nav_local_views">
+        <ul id="nav_local_default">
+         <li>
+          <h3>Public</h3>
+          <ul class="nav">
+           <li id="nav_timeline_public">
+            <a href="http://identi.ca/" title="Public timeline">Public</a>
+           </li>
+           <li id="nav_groups">
+            <a href="http://identi.ca/group/" title="User groups">Groups</a>
+           </li>
+           <li id="nav_featured">
+            <a href="http://identi.ca/featured/" title="Featured users">Featured</a>
+           </li>
+           <li id="nav_timeline_favorited">
+            <a href="http://identi.ca/favorited/" title="Popular notices">Popular</a>
+           </li>
+          </ul>
+         </li>
+        </ul>
+       </div>
+       <div id="content">
+        <h1>Michiel de Jong (michielbdejong)</h1>
+        <div id="content_inner">
+         <div id="notices_primary">
+          <ol class="notices xoxo">
+           <li class="hentry notice notice-source-web" id="notice-73112917">
+            <div class="entry-title">
+             <div class="author">
+              <span class="vcard author">
+               <a href="http://identi.ca/michielbdejong" class="url" title="michielbdejong">
+                <img src="http://avatar3.status.net/i/identica/425878-48-20110427110559.jpeg" class="avatar photo" width="48" height="48" alt="Michiel de Jong"/>
+                 <span class="fn">Michiel de Jong</span>
+               </a>
+              </span>
+             </div>
+             <p class="entry-content">Is the Google IO live stream working for anybody? From here it looks like one of those vids that's unavailable in DE because of drm...</p>
+            </div>
+            <div class="entry-content">
+             <a rel="bookmark" class="timestamp" href="http://identi.ca/notice/73112917">
+              <abbr class="published" title="2011-05-10T16:08:32+00:00">about a year ago</abbr>
+             </a>
+              <span class="source">from               <span class="device">web</span>
+             </span>
+              <span class="location">at <a href="http://www.geonames.org/2950159" rel="external"><abbr class="geo" title="52.5243700;13.4105300">Berlin, Land Berlin, Germany</abbr></a></span>
+            </div>
+           </li>
+           <li class="hentry notice notice-source-web" id="notice-73100626">
+            <div class="entry-title">
+             <div class="author">
+              <span class="vcard author">
+               <a href="http://identi.ca/michielbdejong" class="url" title="michielbdejong">
+                <img src="http://avatar3.status.net/i/identica/425878-48-20110427110559.jpeg" class="avatar photo" width="48" height="48" alt="Michiel de Jong"/>
+                 <span class="fn">Michiel de Jong</span>
+               </a>
+              </span>
+             </div>
+             <p class="entry-content">Launching <a href="http://www.federoni.org/" title="http://www.federoni.org/" rel="external">http://www.federoni.org/</a> - our 'unhosted social demo app'</p>
+            </div>
+            <div class="entry-content thumbnails"></div>
+            <div class="entry-content">
+             <a rel="bookmark" class="timestamp" href="http://identi.ca/notice/73100626">
+              <abbr class="published" title="2011-05-10T12:58:49+00:00">about a year ago</abbr>
+             </a>
+              <span class="source">from               <span class="device">web</span>
+             </span>
+              <span class="location">at <a href="http://www.geonames.org/2950159" rel="external"><abbr class="geo" title="52.5243700;13.4105300">Berlin, Land Berlin, Germany</abbr></a></span>
+            </div>
+           </li>
+           <li class="hentry notice notice-source-web" id="notice-72961135">
+            <div class="entry-title">
+             <div class="author">
+              <span class="vcard author">
+               <a href="http://identi.ca/michielbdejong" class="url" title="michielbdejong">
+                <img src="http://avatar3.status.net/i/identica/425878-48-20110427110559.jpeg" class="avatar photo" width="48" height="48" alt="Michiel de Jong"/>
+                 <span class="fn">Michiel de Jong</span>
+               </a>
+              </span>
+              <span class="addressees">
+               <a href="http://identi.ca/smarks" title="smarks" class="addressee account">Shane Marks</a>
+              </span>
+             </div>
+             <p class="entry-content">Thank you @<span class="vcard"><a href="http://identi.ca/user/126137" class="url" title="Shane Marks"><span class="fn nickname">smarks</span></a></span> for getting us mentioned in <a href="http://www.linuxoutlaws.com/podcast/205" title="http://www.linuxoutlaws.com/podcast/205" rel="external">http://www.linuxoutlaws.com/podcast/205</a> (we're in minute 1:28 but listen to the rest as well!)</p>
+            </div>
+            <div class="entry-content thumbnails"></div>
+            <div class="entry-content">
+             <a rel="bookmark" class="timestamp" href="http://identi.ca/notice/72961135">
+              <abbr class="published" title="2011-05-08T17:01:16+00:00">about a year ago</abbr>
+             </a>
+              <span class="source">from               <span class="device">web</span>
+             </span>
+              <span class="location">at <a href="http://www.geonames.org/2950159" rel="external"><abbr class="geo" title="52.5243700;13.4105300">Berlin, Land Berlin, Germany</abbr></a></span>
+            </div>
+           </li>
+           <li class="hentry notice notice-source-web" id="notice-72956060">
+            <div class="entry-title">
+             <div class="author">
+              <span class="vcard author">
+               <a href="http://identi.ca/michielbdejong" class="url" title="michielbdejong">
+                <img src="http://avatar3.status.net/i/identica/425878-48-20110427110559.jpeg" class="avatar photo" width="48" height="48" alt="Michiel de Jong"/>
+                 <span class="fn">Michiel de Jong</span>
+               </a>
+              </span>
+             </div>
+             <p class="entry-content">cannot load <a href="http://identi.ca/.well-known/host-meta" title="http://identi.ca/.well-known/host-meta" class="attachment" id="attachment-44998028" rel="nofollow external">http://identi.ca/.well-known/host-meta</a>. Origin <a href="http://dev.unhosted.org/" title="http://dev.unhosted.org/" rel="external">http://dev.unhosted.org</a> is not allowed by Access-Control-Allow-Origin.</p>
+            </div>
+            <div class="entry-content thumbnails"></div>
+            <div class="entry-content">
+             <a rel="bookmark" class="timestamp" href="http://identi.ca/notice/72956060">
+              <abbr class="published" title="2011-05-08T15:20:57+00:00">about a year ago</abbr>
+             </a>
+              <span class="source">from               <span class="device">web</span>
+             </span>
+              <span class="location">at <a href="http://www.geonames.org/2950159" rel="external"><abbr class="geo" title="52.5243700;13.4105300">Berlin, Land Berlin, Germany</abbr></a></span>
+            </div>
+           </li>
+           <li class="hentry notice notice-source-web" id="notice-72080419">
+            <div class="entry-title">
+             <div class="author">
+              <span class="vcard author">
+               <a href="http://identi.ca/michielbdejong" class="url" title="michielbdejong">
+                <img src="http://avatar3.status.net/i/identica/425878-48-20110427110559.jpeg" class="avatar photo" width="48" height="48" alt="Michiel de Jong"/>
+                 <span class="fn">Michiel de Jong</span>
+               </a>
+              </span>
+              <span class="addressees">
+               <a href="http://identi.ca/unhosted" title="unhosted" class="addressee account">Unhosted</a>
+              </span>
+             </div>
+             <p class="entry-content">@cramforce would like to talk about @<span class="vcard"><a href="http://identi.ca/user/311670" class="url" title="UNHOSTED open source projects"><span class="fn nickname">unhosted</span></a></span> at @hhjs on 30 May. Do you have a slot left? CC @foertel</p>
+            </div>
+            <div class="entry-content">
+             <a rel="bookmark" class="timestamp" href="http://identi.ca/notice/72080419">
+              <abbr class="published" title="2011-04-27T08:48:43+00:00">about a year ago</abbr>
+             </a>
+              <span class="source">from               <span class="device">web</span>
+             </span>
+              <span class="location">at <a href="http://www.geonames.org/2950159" rel="external"><abbr class="geo" title="52.5243700;13.4105300">Berlin, Land Berlin, Germany</abbr></a></span>
+            </div>
+           </li>
+           <li class="hentry notice notice-source-web" id="notice-72076729">
+            <div class="entry-title">
+             <div class="author">
+              <span class="vcard author">
+               <a href="http://identi.ca/michielbdejong" class="url" title="michielbdejong">
+                <img src="http://avatar3.status.net/i/identica/425878-48-20110427110559.jpeg" class="avatar photo" width="48" height="48" alt="Michiel de Jong"/>
+                 <span class="fn">Michiel de Jong</span>
+               </a>
+              </span>
+              <span class="addressees">
+               <a href="http://identi.ca/unhosted" title="unhosted" class="addressee account">Unhosted</a>
+              </span>
+             </div>
+             <p class="entry-content">@edokoa i know you'll do a great job managing the @<span class="vcard"><a href="http://identi.ca/user/311670" class="url" title="UNHOSTED open source projects"><span class="fn nickname">unhosted</span></a></span> identica+twitter account. Let's get it up to 2000 followers! Save the web.</p>
+            </div>
+            <div class="entry-content">
+             <a rel="bookmark" class="timestamp" href="http://identi.ca/notice/72076729">
+              <abbr class="published" title="2011-04-27T07:46:29+00:00">about a year ago</abbr>
+             </a>
+              <span class="source">from               <span class="device">web</span>
+             </span>
+              <span class="location">at <a href="http://www.geonames.org/2950159" rel="external"><abbr class="geo" title="52.5243700;13.4105300">Berlin, Land Berlin, Germany</abbr></a></span>
+            </div>
+           </li>
+          </ol>
+         </div>
+        </div>
+       </div>
+       <div id="aside_primary" class="aside">
+        <div class="profile_block account_profile_block section">
+         <div class="entity_actions">
+          <h2>User actions</h2>
+          <ul>
+           <li class="entity_subscribe">
+            <a href="http://identi.ca/main/ostatus/nickname/michielbdejong" class="entity_remote_subscribe">Subscribe</a>
+           </li>
+           <li class="entity_tag">
+            <a href="http://identi.ca/main/ostatustag" class="entity_remote_tag">List</a>
+           </li>
+          </ul>
+         </div>
+         <img src="http://avatar3.status.net/i/identica/425878-96-20110427110559.jpeg" class="ur_face" alt="Michiel de Jong" width="96" height="96"/>
+         <p class="profile_block_name">
+          <a href="http://identi.ca/michielbdejong">Michiel de Jong</a>
+         </p>
+         <p class="profile_block_location">Berlin</p>
+         <a href="http://www.unhosted.org/" rel="me" class="profile_block_homepage">http://www.unhosted.org/</a>
+         <ul class="profile_block_otherprofile_list">
+          <li>
+           <a href="http://twitter.com/michielbdejong" rel="me" class="profile_block_otherprofile" title="@michielbdejong on Twitter">
+            <img src="http://plugins2.status.net/TwitterBridge/icons/twitter-bird-white-on-blue.png" class="profile_block_otherprofile_icon"/>
+           </a>
+          </li>
+         </ul>
+         <p class="profile_block_description">Lived in Bali last winter and was 'the guy that did unhosted'. Now live in Berlin and proud to be just one of many 'people who do unhosted'.</p>
+         <dl class="entity_tags user_profile_tags">
+          <dt>Tags</dt>
+          <dd>
+           <ul class="tags">
+            <li>(None)</li>
+           </ul>
+          </dd>
+         </dl>
+        </div>
+        <div id="generic_section" class="section">
+         <h2>Site notice</h2>
+<ul>
+<li><a href="http://ur1.ca/3j037">API</a></li>
+<li><a href="http://ur1.ca/gklg">Status</a></li>
+</ul></div>
+        <div id="entity_subscriptions" class="section">
+         <h2>
+          <a href="http://identi.ca/michielbdejong/subscriptions" class="">Following</a>
+ 4</h2>
+         <ul class="entities users xoxo">
+          <li class="vcard">
+           <a href="http://federoni.org/michielbdejong" class="url" rel="contact member" title="Michiel de Jong">
+            <img src="http://avatar3.status.net/i/identica/431727-24-20110510124610.png" width="24" height="24" class="avatar photo" alt="Michiel de Jong"/>
+            <span class="fn nickname">michielbdejong</span>
+           </a>
+          </li>
+          <li class="vcard">
+           <a href="http://dev.unhosted.org/statusnet/mich" class="url" rel="contact member" title="mich">
+            <img src="http://avatar3.status.net/i/identica/431136-24-20110509145226.png" width="24" height="24" class="avatar photo" alt="mich"/>
+            <span class="fn nickname">mich</span>
+           </a>
+          </li>
+          <li class="vcard">
+           <a href="http://identi.ca/smarks" class="url" rel="contact member" title="Shane Marks">
+            <img src="http://avatar3.status.net/i/identica/126137-24-20100919003858.png" width="24" height="24" class="avatar photo" alt="Shane Marks"/>
+            <span class="fn nickname">smarks</span>
+           </a>
+          </li>
+          <li class="vcard">
+           <a href="http://identi.ca/identica" class="url" rel="contact member" title="Identi.ca microblogging service">
+            <img src="http://avatar3.status.net/i/identica/136-24-20090408032140.png" width="24" height="24" class="avatar photo" alt="Identi.ca microblogging service"/>
+            <span class="fn nickname">identica</span>
+           </a>
+          </li>
+         </ul>
+        </div>
+        <div id="entity_subscribers" class="section">
+         <h2>
+          <a href="http://identi.ca/michielbdejong/subscribers" class="">Followers</a>
+ 8</h2>
+         <ul class="entities users xoxo">
+          <li class="vcard">
+           <a href="http://identi.ca/pagekite" class="url" rel="contact member nofollow" title="PageKite">
+            <img src="http://avatar3.status.net/i/identica/499580-24-20110803135254.png" width="24" height="24" class="avatar photo" alt="PageKite"/>
+            <span class="fn nickname">pagekite</span>
+           </a>
+          </li>
+          <li class="vcard">
+           <a href="http://identi.ca/owncloud" class="url" rel="contact member nofollow" title="owncloud">
+            <img src="http://avatar3.status.net/i/identica/453647-24-20110731121649.png" width="24" height="24" class="avatar photo" alt="owncloud"/>
+            <span class="fn nickname">owncloud</span>
+           </a>
+          </li>
+          <li class="vcard">
+           <a href="http://identi.ca/hugoroy" class="url" rel="contact member nofollow" title="Hugo Roy">
+            <img src="http://avatar3.status.net/i/identica/58458-24-20111212202527.jpeg" width="24" height="24" class="avatar photo" alt="Hugo Roy"/>
+            <span class="fn nickname">hugoroy</span>
+           </a>
+          </li>
+          <li class="vcard">
+           <a href="http://identi.ca/haroldnewman" class="url" rel="contact member nofollow" title="Harold Newman">
+            <img src="https://secure.gravatar.com/avatar.php?gravatar_id=0d0b26ffa29d26dce55596a3296d28d7&amp;default=http%3A%2F%2Ftheme2.status.net%2Fneo%2Fdefault-avatar-mini.png&amp;size=24" width="24" height="24" class="avatar photo" alt="Harold Newman"/>
+            <span class="fn nickname">haroldnewman</span>
+           </a>
+          </li>
+          <li class="vcard">
+           <a href="http://identi.ca/yareckon" class="url" rel="contact member nofollow" title="yareckon">
+            <img src="http://avatar3.status.net/i/identica/44188-24-20090525203835.jpeg" width="24" height="24" class="avatar photo" alt="yareckon"/>
+            <span class="fn nickname">yareckon</span>
+           </a>
+          </li>
+          <li class="vcard">
+           <a href="http://identi.ca/reutersrock" class="url" rel="contact member nofollow" title="reutersrock">
+            <img src="http://avatar3.status.net/i/identica/432896-24-20110512083501.jpeg" width="24" height="24" class="avatar photo" alt="reutersrock"/>
+            <span class="fn nickname">reutersrock</span>
+           </a>
+          </li>
+          <li class="vcard">
+           <a href="http://dev.unhosted.org/statusnet/mich" class="url" rel="contact member nofollow" title="mich">
+            <img src="http://avatar3.status.net/i/identica/431136-24-20110509145226.png" width="24" height="24" class="avatar photo" alt="mich"/>
+            <span class="fn nickname">mich</span>
+           </a>
+          </li>
+          <li class="vcard">
+           <a href="http://identi.ca/smarks" class="url" rel="contact member nofollow" title="Shane Marks">
+            <img src="http://avatar3.status.net/i/identica/126137-24-20100919003858.png" width="24" height="24" class="avatar photo" alt="Shane Marks"/>
+            <span class="fn nickname">smarks</span>
+           </a>
+          </li>
+         </ul>
+        </div>
+        <div id="entity_groups" class="section">
+         <h2>
+          <a href="http://identi.ca/michielbdejong/groups" class="">Groups</a>
+ 0</h2>
+         <ul class="entities groups xoxo"></ul>
+         <p>(None)</p>
+        </div>
+        <div id="entity_statistics" class="section">
+         <h2>Statistics</h2>
+         <dl class="entity_user-id">
+          <dt>User ID</dt>
+          <dd>425878</dd>
+         </dl>
+         <dl class="entity_member-since">
+          <dt>Member since</dt>
+          <dd>27 Apr 2011</dd>
+         </dl>
+         <dl class="entity_notices">
+          <dt>Notices</dt>
+          <dd>6</dd>
+         </dl>
+         <dl class="entity_daily_notices">
+          <dt>Daily average</dt>
+          <dd>0</dd>
+         </dl>
+        </div>
+        <div id="export_data" class="section">
+         <h2>Feeds</h2>
+         <ul class="xoxo">
+          <li>
+           <a href="http://identi.ca/api/statuses/user_timeline/425878.as" class="json" type="application/stream+json" title="Notice feed for michielbdejong (Activity Streams JSON)">Activity Streams</a>
+          </li>
+          <li>
+           <a href="http://identi.ca/michielbdejong/rss" class="rss" type="application/rdf+xml" title="Notice feed for michielbdejong (RSS 1.0)">RSS 1.0</a>
+          </li>
+          <li>
+           <a href="http://identi.ca/api/statuses/user_timeline/425878.rss" class="rss" type="application/rss+xml" title="Notice feed for michielbdejong (RSS 2.0)">RSS 2.0</a>
+          </li>
+          <li>
+           <a href="http://identi.ca/api/statuses/user_timeline/425878.atom" class="atom" type="application/atom+xml" title="Notice feed for michielbdejong (Atom)">Atom</a>
+          </li>
+          <li>
+           <a href="http://identi.ca/michielbdejong/foaf" class="foaf" type="application/rdf+xml" title="FOAF for michielbdejong">FOAF</a>
+          </li>
+         </ul>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div id="footer">
+    <ul class="nav" id="site_nav_global_secondary">
+     <li>
+      <a href="http://identi.ca/doc/help">Help</a>
+     </li>
+     <li>
+      <a href="http://identi.ca/doc/about">About</a>
+     </li>
+     <li>
+      <a href="http://identi.ca/doc/faq">FAQ</a>
+     </li>
+     <li>
+      <a href="http://identi.ca/doc/tos">TOS</a>
+     </li>
+     <li>
+      <a href="http://identi.ca/doc/privacy">Privacy</a>
+     </li>
+     <li>
+      <a href="http://identi.ca/doc/source">Source</a>
+     </li>
+     <li>
+      <a href="http://identi.ca/main/version">Version</a>
+     </li>
+     <li>
+      <a href="http://identi.ca/doc/contact">Contact</a>
+     </li>
+    </ul>
+<p><strong>Identi.ca</strong> is a microblogging service brought to you by <a href="http://status.net/">Status.net</a>. It runs the <a href="http://status.net/">StatusNet</a> microblogging software, version 1.1.0-release, available under the <a href="http://www.fsf.org/licensing/licenses/agpl-3.0.html">GNU Affero General Public License</a>.</p>
+    <p>
+     <img id="license_cc" src="http://i.creativecommons.org/l/by/3.0/80x15.png" alt="Creative Commons Attribution 3.0" width="80" height="15"/>
+ All Identi.ca content and data are available under the <a class="license" rel="external license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0</a> license.</p>
+    <p>
+     <a href="#" id="mobile-toggle-enable">Switch to mobile site layout.</a>
+    </p>
+    <div>
+     <a href="http://builtinmtl.com/">Built in Montreal</a>
+    </div>
+   </div>
+  </div>
+  <script type="text/javascript" src="http://js2.status.net/jquery.min.js?version=1.1.0-release"> </script>
+  <script type="text/javascript" src="http://js2.status.net/jquery.form.min.js?version=1.1.0-release"> </script>
+  <script type="text/javascript" src="http://js2.status.net/jquery-ui.min.js?version=1.1.0-release"> </script>
+  <script type="text/javascript" src="http://js2.status.net/jquery.cookie.min.js?version=1.1.0-release"> </script>
+  <script type="text/javascript">/*<![CDATA[*/ if (typeof window.JSON !== "object") { $.getScript("http://identi.ca/js/json2.min.js"); } /*]]>*/</script>
+  <script type="text/javascript" src="http://js2.status.net/jquery.joverlay.min.js?version=1.1.0-release"> </script>
+  <script type="text/javascript" src="http://js2.status.net/jquery.infieldlabel.min.js?version=1.1.0-release"> </script>
+  <script type="text/javascript" src="http://js2.status.net/util.min.js?version=1.1.0-release"> </script>
+  <script type="text/javascript">/*<![CDATA[*/ var _peopletagAC = "http://identi.ca/main/peopletagautocomplete"; /*]]>*/</script>
+  <script type="text/javascript">/*<![CDATA[*/ SN.messages={"showmore_tooltip":"Show more","reply_submit":"Reply","reply_placeholder":"Write a reply...","realtime_play":"Play","realtime_play_tooltip":"Play","realtime_pause":"Pause","realtime_pause_tooltip":"Pause","realtime_popup":"Pop up","realtime_popup_tooltip":"Pop up in a window"} /*]]>*/</script>
+  <script type="text/javascript">/*<![CDATA[*/ if (window.top !== window.self) { document.write = ""; window.top.location = window.self.location; setTimeout(function () { document.body.innerHTML = ""; }, 1); window.self.onload = function () { document.body.innerHTML = ""; }; } /*]]>*/</script>
+  <script type="text/javascript" src="http://plugins2.status.net/OStatus/js/ostatus.js"> </script>
+  <script type="text/javascript">/*<![CDATA[*/ 
+            $(function() {
+                $("#mobile-toggle-disable").click(function() {
+                    $.cookie("MobileOverride", "0", {path: "/"});
+                    window.location.reload();
+                    return false;
+                });
+                $("#mobile-toggle-enable").click(function() {
+                    $.cookie("MobileOverride", "1", {path: "/"});
+                    window.location.reload();
+                    return false;
+                });
+                $("#navtoggle").click(function () {
+                          $("#site_nav_local_views").fadeToggle();
+                          var text = $("#navtoggle").text();
+                          $("#navtoggle").text(
+                          text == "Show Navigation" ? "Hide Navigation" : "Show Navigation");
+                });
+            }); /*]]>*/</script>
+  <script type="text/javascript" src="http://plugins2.status.net/Realtime/realtimeupdate.min.js"> </script>
+  <script type="text/javascript" src="http://js.pusherapp.com/1.9/pusher.min.js"> </script>
+  <script type="text/javascript" src="http://identi.ca//local/plugins/Pusher/pusherupdater.js"> </script>
+  <script type="text/javascript">/*<![CDATA[*/  $(document).ready(function() {  RealtimeUpdate.initActions("http:\/\/identi.ca\/michielbdejong?realtime=1", "identica-a63fe5e06dc000c1eeddb0753d558e85", "http:\/\/identi.ca\/plugins\/Realtime\/", "http:\/\/identi.ca\/main\/channel\/a63fe5e06dc000c1eeddb0753d558e85\/keepalive", "http:\/\/identi.ca\/main\/channel\/a63fe5e06dc000c1eeddb0753d558e85\/close"); RealtimeUpdate.init(0, "http://identi.ca/notice/0000000000");  PusherUpdater.init("630df9daf3ac2d981076", "identica-a63fe5e06dc000c1eeddb0753d558e85", true);});  /*]]>*/</script>
+  <script type="text/javascript" src="http://plugins2.status.net/Bookmark/js/bookmark.js"> </script>
+  <script type="text/javascript" src="http://plugins2.status.net/Event/event.js"> </script>
+  <script type="text/javascript" src="http://plugins2.status.net/QnA/js/qna.js"> </script>
+ </body>
+<!-- 1065ms --></html>

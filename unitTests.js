@@ -1,9 +1,7 @@
 var masterParser = require('./masterParser');
 
 function doFile(url, expect) {
-  var documents = {};
-  documents[url]=true;
-  masterParser.parse(url, '', documents, function(err, data) {
+  masterParser.parse(url, '', function(err, data) {
     if(err) {
       console.log('********** FAIL '+url+': '+err);
     } else {
@@ -26,7 +24,7 @@ function doFile(url, expect) {
   });
 }
 masterParser.setEnv('test');
-/*doFile('https://identi.ca/.well-known/host-meta?resource=acct:michielbdejong@identi.ca', 'lrdd', {'acct:michielbdejong@identi.ca': true}, {
+doFile('https://identi.ca/.well-known/host-meta?resource=acct:michielbdejong@identi.ca', 'lrdd', {'acct:michielbdejong@identi.ca': true}, {
   identifiers: 
    { 'acct:michielbdejong@identi.ca': true,
      'http://identi.ca/user/425878': true,
@@ -48,7 +46,7 @@ masterParser.setEnv('test');
      'http://identi.ca/user/453647': true,
      'http://identi.ca/user/499580': true },
   tools: {}
-});
+});/*
 doFile('https://revolutionari.es/.well-known/host-meta?resource=acct:michiel@revolutionari.es', 'lrdd', {'acct:michiel@revolutionari.es': true}, {
  identifiers: 
    { 'acct:michiel@revolutionari.es': true,
