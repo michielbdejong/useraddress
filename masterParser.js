@@ -21,20 +21,21 @@ function doParse(url, type, docRel, headers, content, cb) {
         outstanding--;//reduce
         if(err2) {
           err = err2;
-        }
-        for(var i in data2.data) {
-          if(data.documents[i]) {
-            for(var j in data2.data[i]) {
-              for(var k in data2.data[i][j]) {
-                data[j][k]=data2.data[i][j][k];
+        } else {
+          for(var i in data2.data) {
+            if(data.documents[i]) {
+              for(var j in data2.data[i]) {
+                for(var k in data2.data[i][j]) {
+                  data[j][k]=data2.data[i][j][k];
+                }
               }
             }
           }
-        }
-        for(var j in data2) {
-          if(j != 'data') {
-            for(var k in data2[j]) {
-              data[j][k]=data2[j][k];
+          for(var j in data2) {
+            if(j != 'data') {
+              for(var k in data2[j]) {
+                data[j][k]=data2[j][k];
+              }
             }
           }
         }
@@ -82,7 +83,7 @@ function fetch(urlStr, cb) {
       port: (urlObj.port?port:(urlObj.protocol=='https:'?443:80)),
       headers: {
         'user-agent': 'Mozilla/5.0',
-        'accept': 'text/turtle'
+        'accept': 'text/turtle; q=1.0, application/rdf+xml; q=0.8, application/xrd+xml; 0.6, application/json; 0.4, text/html; q=0.2;'
       }
     };
     
@@ -145,11 +146,12 @@ function checkStubs(url) {
    'http://www-opensocial.googleusercontent.com/api/people/108912615873187638071/': 'file://exampleFiles/gm-poco-me.json',
    'http://www.google.com/profiles/dejong.michiel': 'file://exampleFiles/gm-hcard.html',
 
-   'https://revolutionari.es/.well-known/host-meta?resource=acct:michiel@revolutionari.es': 'file://exampleFiles/fr-hostmeta.xml',
+   'https://revolutionari.es/.well-known/host-meta?resource=acct:michiel@revolutionari.es': 'file://exampleFiles/fr-hostmeta.xrd',
    'https://revolutionari.es/xrd/?uri=acct:michiel@revolutionari.es': 'file://exampleFiles/fr-lrdd.xrd',
-   'https://revolutionari.es/poco/michiel': 'file://exampleFiles/fr-poco.html',
+   'https://revolutionari.es/poco/michiel': 'file://exampleFiles/fr-poco.json',
    'https://revolutionari.es/hcard/michiel': 'file://exampleFiles/fr-hcard.html',
-   
+   'https://revolutionari.es/profile/michiel': 'file://exampleFiles/fr-profile.html',
+
    'https://joindiaspora.com/.well-known/host-meta?resource=acct:michielbdejong@joindiaspora.com': 'file://exampleFiles/jd-hostmeta.xrd',
    'https://joindiaspora.com/webfinger?q=acct:michielbdejong@joindiaspora.com': 'file://exampleFiles/jd-lrdd.xrd',
    'https://joindiaspora.com/hcard/users/e583028f23ce0302': 'file://exampleFiles/jd-hcard.html',
@@ -228,7 +230,9 @@ function parse(url, docRel, cb) {
       if(!parser) {
         cb('unsupported Content-Type '+data.headers['Content-Type']);
       } else {
-        doParse(url, parser, docRel, data.headers, data.content, cb);
+        doParse(url, parser, docRel, data.headers, data.content, function(err, data) {
+          cb(err, data);
+        });
       }
     }
   });

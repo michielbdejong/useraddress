@@ -1,11 +1,29 @@
 var htmlparser = require("htmlparser");
 //---
 function parseSubTree(subTree, cb) {
+  var fullNamer=false;
+  if(subTree.attribs && subTree.attribs.class) {
+    var classTags=subTree.attribs.class.split(' ');
+    for(var i=0; i<classTags.length; i++) {
+      if(classTags[i]=='fn') {
+        fullNamer=true;
+      } else if(classTags[i]=='avatar') {
+        cb('images', 'avatar', subTree.attribs.src);
+      }
+    }
+  }
+  if(subTree.children) {
+    for(var i=0; i<tree.children.length; i++) {
+      if(fullNamer && tree.children[i].type=='text') {
+        cb('textFields', 'fullName', subTree.children[i].raw);
+      }
+    }
+  }
+  if(!subTree[eltType].length) {
+    subTree[eltType]=[subTree[eltType]];
+  }
   for(var eltType in subTree) {
     if(eltType != '@' && eltType != '#') {
-      if(!subTree[eltType].length) {
-        subTree[eltType]=[subTree[eltType]];
-      }
       for(var j=0; j<subTree[eltType].length; j++) {
         if(typeof(subTree[eltType][j]) == 'object') {
           if(subTree[eltType][j]['@']) {

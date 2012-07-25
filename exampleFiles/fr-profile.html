@@ -1,0 +1,1523 @@
+<!DOCTYPE html >
+<html>
+<head>
+  <title>Michiel De Jong @ revolutionari.es radical social network</title>
+  <script>var baseurl="https://revolutionari.es";</script>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<base href="https://revolutionari.es/" />
+<meta name="generator" content="Friendica 2.3.1182" />
+<link rel="stylesheet" href="https://revolutionari.es/library/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="https://revolutionari.es/library/tiptip/tipTip.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="https://revolutionari.es/library/jgrowl/jquery.jgrowl.css" type="text/css" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="https://revolutionari.es/view/theme/purplezero/style.css" media="all" />
+
+<link rel="shortcut icon" href="https://revolutionari.es/images/friendika-32.png" />
+<link rel="search"
+         href="https://revolutionari.es/opensearch" 
+         type="application/opensearchdescription+xml" 
+         title="Search in Friendika" />
+
+<!--[if IE]>
+<script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script type="text/javascript" src="https://revolutionari.es/js/jquery.js" ></script>
+<script type="text/javascript" src="https://revolutionari.es/js/jquery.textinputs.js" ></script>
+<script type="text/javascript" src="https://revolutionari.es/js/fk.autocomplete.js" ></script>
+<script type="text/javascript" src="https://revolutionari.es/library/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<script type="text/javascript" src="https://revolutionari.es/library/tiptip/jquery.tipTip.minified.js"></script>
+<script type="text/javascript" src="https://revolutionari.es/library/jgrowl/jquery.jgrowl_minimized.js"></script>
+<script type="text/javascript" src="https://revolutionari.es/library/tinymce/jscripts/tiny_mce/tiny_mce_src.js" ></script>
+<script type="text/javascript" src="https://revolutionari.es/js/acl.js" ></script>
+<script type="text/javascript" src="https://revolutionari.es/js/webtoolkit.base64.js" ></script>
+<script type="text/javascript" src="https://revolutionari.es/js/main.js" ></script>
+<script>
+
+	function confirmDelete() { return confirm("Delete this item?"); }
+	function commentOpen(obj,id) {
+		if(obj.value == 'Comment') {
+			obj.value = '';
+			obj.className = "comment-edit-text-full";
+			openMenu("comment-edit-submit-wrapper-" + id);
+		}
+	}
+	function commentClose(obj,id) {
+		if(obj.value == '') {
+			obj.value = 'Comment';
+			obj.className="comment-edit-text-empty";
+			closeMenu("comment-edit-submit-wrapper-" + id);
+		}
+	}
+
+	function showHideComments(id) {
+		if( $('#collapsed-comments-' + id).is(':visible')) {
+			$('#collapsed-comments-' + id).hide();
+			$('#hide-comments-' + id).html('show more');
+		}
+		else {
+			$('#collapsed-comments-' + id).show();
+			$('#hide-comments-' + id).html('show fewer');
+		}
+	}
+
+
+</script>
+
+
+<meta name="dfrn-global-visibility" content="true" />
+<link rel="alternate" type="application/atom+xml" href="https://revolutionari.es/dfrn_poll/michiel" />
+<link rel="lrdd" type="application/xrd+xml" href="https://revolutionari.es/xrd/?uri=acct%3Amichiel%40revolutionari.es" />
+<link rel="dfrn-request" href="https://revolutionari.es/dfrn_request/michiel" />
+<link rel="dfrn-confirm" href="https://revolutionari.es/dfrn_confirm/michiel" />
+<link rel="dfrn-notify" href="https://revolutionari.es/dfrn_notify/michiel" />
+<link rel="dfrn-poll" href="https://revolutionari.es/dfrn_poll/michiel" />
+<link rel="dfrn-poco" href="https://revolutionari.es/poco/michiel" />
+</head>
+<body>
+	<div id="panel" style="display: none;"></div><nav>
+	<div id="lang-select-icon" class="icon language" title="Select an alternate language" onclick="openClose('language-selector');" ></div><div id="language-selector" style="display: none;" ><form action="#" method="post" ><select name="system_language" onchange="this.form.submit();" ><option value=""  selected="selected" >default</option><option value="cs">cs</option><option value="de">de</option><option value="en">en</option><option value="es">es</option><option value="fr">fr</option><option value="it">it</option><option value="pt-br">pt-br</option><option value="ru">ru</option><option value="sv">sv</option></select></form></div>
+
+	<div id="site-location">revolutionari.es</div>
+
+	
+	<a id="nav-login-link" class="nav-login-link " href="login" title="Sign in" >Login</a> 
+
+	<span id="nav-link-wrapper" >
+
+	<a id="nav-register-link" class="nav-commlink  " href="register" title="Create an account" >Register</a>
+		
+	 <a id="nav-help-link" class="nav-link " target="friendika-help" href="https://revolutionari.es/help" title="Help and documentation" >Help</a>
+		
+	
+
+	<a id="nav-search-link" class="nav-link " href="search" title="Search site content" >Search</a>
+	<a id="nav-directory-link" class="nav-link " href="directory" title="People directory" >Directory</a>
+
+	
+
+	
+	
+	<a id="nav-home-link" class="nav-commlink  " href="" title="Home Page" >Home</a>
+	<span id="home-update" class="nav-ajax-left"></span>
+	
+	
+	<a id="nav-community-link" class="nav-commlink  " href="community" title="Conversations on this site" >Community</a>
+	
+	
+	
+
+	
+
+	
+	
+
+	
+	</span>
+	<span id="nav-end"></span>
+	<span id="banner"><a href="http://friendica.com"><img id="logo-img" src="images/friendika-32.png" alt="logo" /></a><span id="logo-text"><a href="http://friendica.com">Friendica</a></span></span>
+</nav>
+	<aside><div class="vcard">
+
+	<div class="fn label">Michiel De Jong</div>
+	
+				
+	
+	<div class="title"></div>
+	<div id="profile-photo-wrapper"><img class="photo" width="175" height="175" src="https://revolutionari.es/photo/profile/55.jpg?rev=2012-07-10+15%3A50%3A50" alt="Michiel De Jong"></div>
+
+
+
+	
+
+	
+	
+	<div class="key" style="display:none;">-----BEGIN PUBLIC KEY-----
+MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAsL1Q9IVBrQNZH+rp2I28
+U9HXCF3N9vQsE7fN5Hve8xxH3CFi3BNLiDK0lOSbrolSnE/VwL/teMHHn2pSsivm
+7ihHwYQ2hsMEI06q7nleG4YoOweMLwE13P0yblrXWjo4OYWkwouYVupnYBhope8n
+Orj7O+omBnoecLRkoucoEQ3yvD8itgXVjjjck7veDv05vTWcVYVlH36rtIMybUT2
+Ui4n8RmVuWcCYDsB8xPZWzqoOA+H+QD/+TmumiI7BS0+6ZsE+9cK3kzMNW3md1fe
+bPzPiIW4aiT7HPlu2JF1dCm5xD1bklb8YmvF+o5u8qNJserNVh3PmulUhrYykZmB
+bU6A5QszoP95193wyrFTzLi4VpmALDgKW12cwZazQzBSsEoJYsniKlSwnjMRnQWg
+KvVH0GJkw1nbrZuVJZTuA9dSOTk+jlhBTK20uaVfCPK+C4Mm+iphhwS5Yi5k9l1o
+ofEvgFNvY2ZnPtNeLt2JoC4QcmEklnv/VvA66uLsSvCFGU1lElhjn0HiuOJE9NBO
+eKAd60E3By5D3x8xfXKNn84oc1jU3CcxhTQta8tOBY6g1iJhH8z0X3PpZjxkomxw
+8bx1shb0ESJ5Xd1eFMn17i6DfJKLogdEul3n1K0UK1CE7glzOd/Vy6EuwPQ4/lIl
+1AjpkqoGp9HFqu29bXj+ll8CAwEAAQ==
+-----END PUBLIC KEY-----
+</div>
+
+	
+
+	
+
+	<div style="display:none;">
+	<dl class='entity_nickname'>
+		<dt>Nickname</dt>
+		<dd>		
+			<a class="nickname url uid" href="https://revolutionari.es/" rel="me">michiel</a>
+		</dd>
+	</dl>
+	<dl class='entity_fn'>
+		<dt>Full name</dt>
+		<dd>
+			<span class='fn'>Michiel De Jong</span>
+		</dd>
+	</dl>
+
+	<dl class='entity_given_name'>
+		<dt>First name</dt>
+		<dd>
+		<span class='given_name'>Michiel</span>
+		</dd>
+	</dl>
+	<dl class='entity_family_name'>
+		<dt>Family name</dt>
+		<dd>
+		<span class='family_name'>De Jong</span>
+		</dd>
+	</dl>
+	<dl class="entity_url">
+		<dt>URL</dt>
+		<dd>
+			<a class="url" href="https://revolutionari.es/" id="pod_location" rel="me">https://revolutionari.es/</a>
+		</dd>
+	</dl>
+	<dl class="entity_photo">
+		<dt>Photo</dt>
+		<dd>
+			<img class="photo avatar" height="300" width="300" src="https://revolutionari.es/photo/custom/300/55.jpg">
+		</dd>
+	</dl>
+	<dl class="entity_photo_medium">
+		<dt>Photo</dt>
+		<dd> 
+			<img class="photo avatar" height="100" width="100" src="https://revolutionari.es/photo/custom/100/55.jpg">
+		</dd>
+	</dl>
+	<dl class="entity_photo_small">
+		<dt>Photo</dt>
+		<dd>
+			<img class="photo avatar" height="50" width="50" src="https://revolutionari.es/photo/custom/50/55.jpg">
+		</dd>
+	</dl>
+	<dl class="entity_searchable">
+		<dt>Searchable</dt>
+		<dd>
+			<span class="searchable">true</span>
+		</dd>
+	</dl>
+</div>
+
+	
+	<div id="profile-extra-links">
+		<ul>
+			
+				<li><a id="dfrn-request-link" href="dfrn_request/michiel">Connect</a></li>
+			
+		</ul>
+	</div>
+</div>
+
+<div id="contact-block">
+<h4 class="contact-block-h4">12 Contacts</h4>
+
+		<a class="allcontact-link" href="viewcontacts/michiel">View Contacts</a>
+		<div class='contact-block-content'>
+		
+			<div class="contact-block-div mpfriend"><a class="contact-block-link mpfriend"  href="http://friend.elsmussols.net/profile/elmussol" ><img class="contact-block-img mpfriend" src="https://revolutionari.es/photo/76f7f5d415a20eb2c31d12c3ae6f11ce-6.jpg" title="Paul Taylor [http://friend.elsmussols.net/profile/elmussol]" alt="Paul Taylor" /></a></div>
+
+		
+			<div class="contact-block-div mpfriend"><a class="contact-block-link mpfriend"  href="https://macgirvin.com/profile/mike" ><img class="contact-block-img mpfriend" src="https://revolutionari.es/photo/de835c1adaf5a86346dea853b03e7fca-6.jpg" title="Mike the Friendican [https://macgirvin.com/profile/mike]" alt="Mike the Friendican" /></a></div>
+
+		
+			<div class="contact-block-div mpfriend"><a class="contact-block-link mpfriend"  href="https://friendica.mafiaspiel.org/profile/leberwurscht" ><img class="contact-block-img mpfriend" src="https://revolutionari.es/photo/428b4b38239c7a9d4284b5782eabae7a-6.jpg" title="Leberwurscht Brot [https://friendica.mafiaspiel.org/profile/leberwurscht]" alt="Leberwurscht Brot" /></a></div>
+
+		
+			<div class="contact-block-div mpfriend"><a class="contact-block-link mpfriend"  href="http://prate.io/profile/mike" ><img class="contact-block-img mpfriend" src="https://revolutionari.es/photo/14734a738f3a9c8bbdb9e38566d4f5f8-6.jpg" title="Michael Johnston [http://prate.io/profile/mike]" alt="Michael Johnston" /></a></div>
+
+		
+			<div class="contact-block-div mpfriend"><a class="contact-block-link mpfriend"  href="http://friendika.skilledtests.com/profile/erkan_yilmaz" ><img class="contact-block-img mpfriend" src="https://revolutionari.es/photo/0666f5a981c7c442df0c546168ed0123-6.jpg" title="Erkan Yilmaz [http://friendika.skilledtests.com/profile/erkan_yilmaz]" alt="Erkan Yilmaz" /></a></div>
+
+		
+			<div class="contact-block-div mpfriend"><a class="contact-block-link mpfriend"  href="http://bjerke.dk/ven/profile/flemming" ><img class="contact-block-img mpfriend" src="https://revolutionari.es/photo/bea189c98e714caa2b164c81fe30b722-6.jpg" title="Flemming Bjerke [http://bjerke.dk/ven/profile/flemming]" alt="Flemming Bjerke" /></a></div>
+
+		
+			<div class="contact-block-div mpfriend"><a class="contact-block-link mpfriend"  href="https://fnode.schirr.org/profile/harry" ><img class="contact-block-img mpfriend" src="https://revolutionari.es/photo/241168e3bc03ed6812ba035d14cd9689-6.jpg" title="Harry [https://fnode.schirr.org/profile/harry]" alt="Harry" /></a></div>
+
+		
+			<div class="contact-block-div mpfriend"><a class="contact-block-link mpfriend"  href="https://friendica.eu/profile/thomas_bierey" ><img class="contact-block-img mpfriend" src="https://revolutionari.es/photo/e0c2b3011661b91d0eb62fd09ae398c1-6.jpg" title="Thomas Bierey [https://friendica.eu/profile/thomas_bierey]" alt="Thomas Bierey" /></a></div>
+
+		
+			<div class="contact-block-div mpfriend"><a class="contact-block-link mpfriend"  href="https://friendica.dszdw.net/profile/klaus" ><img class="contact-block-img mpfriend" src="https://revolutionari.es/photo/0df895956d9ab8c5f24a593390ca16a8-6.jpg" title="Klaus Weidenbach [https://friendica.dszdw.net/profile/klaus]" alt="Klaus Weidenbach" /></a></div>
+
+		
+			<div class="contact-block-div mpfriend"><a class="contact-block-link mpfriend"  href="https://kakste.com/profile/bruce" ><img class="contact-block-img mpfriend" src="https://revolutionari.es/photo/74edbfc1501c2148fe9bbb0007c5bcce-6.jpg" title="Bruce Bane [https://kakste.com/profile/bruce]" alt="Bruce Bane" /></a></div>
+
+		
+			<div class="contact-block-div mpfriend"><a class="contact-block-link mpfriend"  href="http://kirgroup.com/profile/fabrixxm" ><img class="contact-block-img mpfriend" src="https://revolutionari.es/photo/dffe8da41c3181c20ca373200fadef77-6.jpg" title="Fabio Comuni [http://kirgroup.com/profile/fabrixxm]" alt="Fabio Comuni" /></a></div>
+
+		
+			<div class="contact-block-div mpfriend"><a class="contact-block-link mpfriend"  href="http://friendika.hipatia.net/profile/lnxwalt" ><img class="contact-block-img mpfriend" src="https://revolutionari.es/photo/a557c019db02c1880ee40819fa986616-6.jpg" title="foonetic (nternetx) [http://friendika.hipatia.net/profile/lnxwalt]" alt="foonetic (nternetx)" /></a></div>
+
+		
+		</div>
+
+</div>
+
+
+
+</aside>
+	<section><ul class="tabs">
+	
+		<li><a href="https://revolutionari.es/profile/michiel" class="tab button active">Status</a></li>
+	
+		<li><a href="https://revolutionari.es/profile/michiel/?tab=profile" class="tab button ">Profile</a></li>
+	
+		<li><a href="https://revolutionari.es/photos/michiel" class="tab button ">Photos</a></li>
+	
+</ul>
+<div id="live-profile"></div>
+<script> var profile_uid = 55; var netargs = '/?f='; var profile_page = 1; </script>
+
+<div id="tread-wrapper-1822" class="tread-wrapper">
+	<div class="wall-item-outside-wrapper" id="wall-item-outside-wrapper-1822" >
+	<div class="wall-item-content-wrapper" id="wall-item-content-wrapper-1822" >
+		<div class="wall-item-info" id="wall-item-info-1822">
+			<div class="wall-item-photo-wrapper" id="wall-item-photo-wrapper-1822" 
+				 onmouseover="if (typeof t1822 != 'undefined') clearTimeout(t1822); openMenu('wall-item-photo-menu-button-1822')" 
+				 onmouseout="t1822=setTimeout('closeMenu(\'wall-item-photo-menu-button-1822\'); closeMenu(\'wall-item-photo-menu-1822\');',200)">
+				<a href="https://revolutionari.es/profile/michiel" target="redir" title="View Michiel De Jong's profile @ https://revolutionari.es/profile/michiel" class="wall-item-photo-link" id="wall-item-photo-link-1822">
+					<img src="https://revolutionari.es/photo/avatar/55.jpg" class="wall-item-photo" id="wall-item-photo-1822" style="height: 80px; width: 80px;" alt="Michiel De Jong" />
+				</a>
+				<span onclick="openClose('wall-item-photo-menu-1822');" class="fakelink wall-item-photo-menu-button" id="wall-item-photo-menu-button-1822">menu</span>
+				<div class="wall-item-photo-menu" id="wall-item-photo-menu-1822">
+					<ul>
+						<li><a href='https://revolutionari.es/profile/michiel'>View profile</a></li>
+
+					</ul>
+				</div>
+			</div>
+			<div class="wall-item-photo-end"></div>
+			<div class="wall-item-wrapper" id="wall-item-wrapper-1822" >
+				<div class="wall-item-lock"></div>	
+				<div class="wall-item-location" id="wall-item-location-1822"></div>				
+			</div>
+		</div>
+		<div class="wall-item-author">
+				<a href="https://revolutionari.es/profile/michiel" target="redir" title="View Michiel De Jong's profile @ https://revolutionari.es/profile/michiel" class="wall-item-name-link"><span class="wall-item-name" id="wall-item-name-1822" >Michiel De Jong</span></a>
+				<div class="wall-item-ago"  id="wall-item-ago-1822">1 week ago</div>
+				
+		</div>	
+		<div class="wall-item-content" id="wall-item-content-1822" >
+			<div class="wall-item-title" id="wall-item-title-1822"></div>
+			<div class="wall-item-title-end"></div>
+			<div class="wall-item-body" id="wall-item-body-1822" ><a href="https://revolutionari.es/profile/michiel" target="external-link">Michiel De Jong</a> is now friends with <a href="https://friendica.mafiaspiel.org/profile/leberwurscht" target="external-link">Leberwurscht Brot</a><br />
+<br />
+<br />
+<a href="https://friendica.mafiaspiel.org/profile/leberwurscht" target="external-link"><img src="https://revolutionari.es/photo/428b4b38239c7a9d4284b5782eabae7a-5.jpg" alt="Image/photo" /></a><div class="body-attach"><div class="clear"></div></div>
+					<div class="body-tag">
+						
+					</div>
+			</div>
+		</div>
+		<div class="wall-item-tools" id="wall-item-tools-1822">
+			
+			
+			
+			 
+			
+			
+			<div class="wall-item-delete-wrapper" id="wall-item-delete-wrapper-1822" >
+				
+			</div>
+				
+			<div class="wall-item-delete-end"></div>
+		</div>
+	</div>
+	<div class="wall-item-wrapper-end"></div>
+	<div class="wall-item-like" id="wall-item-like-1822"></div>
+	<div class="wall-item-dislike" id="wall-item-dislike-1822"></div>
+	<div class="wall-item-comment-wrapper" >
+	
+	</div>
+
+<div class="wall-item-outside-wrapper-end" ></div>
+</div>
+
+</div>
+
+<div id="tread-wrapper-1821" class="tread-wrapper">
+	<div class="wall-item-outside-wrapper" id="wall-item-outside-wrapper-1821" >
+	<div class="wall-item-content-wrapper" id="wall-item-content-wrapper-1821" >
+		<div class="wall-item-info" id="wall-item-info-1821">
+			<div class="wall-item-photo-wrapper" id="wall-item-photo-wrapper-1821" 
+				 onmouseover="if (typeof t1821 != 'undefined') clearTimeout(t1821); openMenu('wall-item-photo-menu-button-1821')" 
+				 onmouseout="t1821=setTimeout('closeMenu(\'wall-item-photo-menu-button-1821\'); closeMenu(\'wall-item-photo-menu-1821\');',200)">
+				<a href="https://revolutionari.es/profile/michiel" target="redir" title="View Michiel De Jong's profile @ https://revolutionari.es/profile/michiel" class="wall-item-photo-link" id="wall-item-photo-link-1821">
+					<img src="https://revolutionari.es/photo/avatar/55.jpg" class="wall-item-photo" id="wall-item-photo-1821" style="height: 80px; width: 80px;" alt="Michiel De Jong" />
+				</a>
+				<span onclick="openClose('wall-item-photo-menu-1821');" class="fakelink wall-item-photo-menu-button" id="wall-item-photo-menu-button-1821">menu</span>
+				<div class="wall-item-photo-menu" id="wall-item-photo-menu-1821">
+					<ul>
+						<li><a href='https://revolutionari.es/profile/michiel'>View profile</a></li>
+
+					</ul>
+				</div>
+			</div>
+			<div class="wall-item-photo-end"></div>
+			<div class="wall-item-wrapper" id="wall-item-wrapper-1821" >
+				<div class="wall-item-lock"></div>	
+				<div class="wall-item-location" id="wall-item-location-1821"></div>				
+			</div>
+		</div>
+		<div class="wall-item-author">
+				<a href="https://revolutionari.es/profile/michiel" target="redir" title="View Michiel De Jong's profile @ https://revolutionari.es/profile/michiel" class="wall-item-name-link"><span class="wall-item-name" id="wall-item-name-1821" >Michiel De Jong</span></a>
+				<div class="wall-item-ago"  id="wall-item-ago-1821">1 week ago</div>
+				
+		</div>	
+		<div class="wall-item-content" id="wall-item-content-1821" >
+			<div class="wall-item-title" id="wall-item-title-1821"></div>
+			<div class="wall-item-title-end"></div>
+			<div class="wall-item-body" id="wall-item-body-1821" ><a href="https://revolutionari.es/profile/michiel" target="external-link">Michiel De Jong</a> is now friends with <a href="https://friendica.dszdw.net/profile/klaus" target="external-link">Klaus Weidenbach</a><br />
+<br />
+<br />
+<a href="https://friendica.dszdw.net/profile/klaus" target="external-link"><img src="https://revolutionari.es/photo/0df895956d9ab8c5f24a593390ca16a8-5.jpg" alt="Image/photo" /></a><div class="body-attach"><div class="clear"></div></div>
+					<div class="body-tag">
+						
+					</div>
+			</div>
+		</div>
+		<div class="wall-item-tools" id="wall-item-tools-1821">
+			
+			
+			
+			 
+			
+			
+			<div class="wall-item-delete-wrapper" id="wall-item-delete-wrapper-1821" >
+				
+			</div>
+				
+			<div class="wall-item-delete-end"></div>
+		</div>
+	</div>
+	<div class="wall-item-wrapper-end"></div>
+	<div class="wall-item-like" id="wall-item-like-1821"></div>
+	<div class="wall-item-dislike" id="wall-item-dislike-1821"></div>
+	<div class="wall-item-comment-wrapper" >
+	
+	</div>
+
+<div class="wall-item-outside-wrapper-end" ></div>
+</div>
+
+</div>
+
+<div id="tread-wrapper-1820" class="tread-wrapper">
+	<div class="wall-item-outside-wrapper" id="wall-item-outside-wrapper-1820" >
+	<div class="wall-item-content-wrapper" id="wall-item-content-wrapper-1820" >
+		<div class="wall-item-info" id="wall-item-info-1820">
+			<div class="wall-item-photo-wrapper" id="wall-item-photo-wrapper-1820" 
+				 onmouseover="if (typeof t1820 != 'undefined') clearTimeout(t1820); openMenu('wall-item-photo-menu-button-1820')" 
+				 onmouseout="t1820=setTimeout('closeMenu(\'wall-item-photo-menu-button-1820\'); closeMenu(\'wall-item-photo-menu-1820\');',200)">
+				<a href="https://revolutionari.es/profile/michiel" target="redir" title="View Michiel De Jong's profile @ https://revolutionari.es/profile/michiel" class="wall-item-photo-link" id="wall-item-photo-link-1820">
+					<img src="https://revolutionari.es/photo/avatar/55.jpg" class="wall-item-photo" id="wall-item-photo-1820" style="height: 80px; width: 80px;" alt="Michiel De Jong" />
+				</a>
+				<span onclick="openClose('wall-item-photo-menu-1820');" class="fakelink wall-item-photo-menu-button" id="wall-item-photo-menu-button-1820">menu</span>
+				<div class="wall-item-photo-menu" id="wall-item-photo-menu-1820">
+					<ul>
+						<li><a href='https://revolutionari.es/profile/michiel'>View profile</a></li>
+
+					</ul>
+				</div>
+			</div>
+			<div class="wall-item-photo-end"></div>
+			<div class="wall-item-wrapper" id="wall-item-wrapper-1820" >
+				<div class="wall-item-lock"></div>	
+				<div class="wall-item-location" id="wall-item-location-1820"></div>				
+			</div>
+		</div>
+		<div class="wall-item-author">
+				<a href="https://revolutionari.es/profile/michiel" target="redir" title="View Michiel De Jong's profile @ https://revolutionari.es/profile/michiel" class="wall-item-name-link"><span class="wall-item-name" id="wall-item-name-1820" >Michiel De Jong</span></a>
+				<div class="wall-item-ago"  id="wall-item-ago-1820">1 week ago</div>
+				
+		</div>	
+		<div class="wall-item-content" id="wall-item-content-1820" >
+			<div class="wall-item-title" id="wall-item-title-1820"></div>
+			<div class="wall-item-title-end"></div>
+			<div class="wall-item-body" id="wall-item-body-1820" ><a href="https://revolutionari.es/profile/michiel" target="external-link">Michiel De Jong</a> is now friends with <a href="https://fnode.schirr.org/profile/harry" target="external-link">Harry</a><br />
+<br />
+<br />
+<a href="https://fnode.schirr.org/profile/harry" target="external-link"><img src="https://revolutionari.es/photo/241168e3bc03ed6812ba035d14cd9689-5.jpg" alt="Image/photo" /></a><div class="body-attach"><div class="clear"></div></div>
+					<div class="body-tag">
+						
+					</div>
+			</div>
+		</div>
+		<div class="wall-item-tools" id="wall-item-tools-1820">
+			
+			
+			
+			 
+			
+			
+			<div class="wall-item-delete-wrapper" id="wall-item-delete-wrapper-1820" >
+				
+			</div>
+				
+			<div class="wall-item-delete-end"></div>
+		</div>
+	</div>
+	<div class="wall-item-wrapper-end"></div>
+	<div class="wall-item-like" id="wall-item-like-1820"></div>
+	<div class="wall-item-dislike" id="wall-item-dislike-1820"></div>
+	<div class="wall-item-comment-wrapper" >
+	
+	</div>
+
+<div class="wall-item-outside-wrapper-end" ></div>
+</div>
+
+</div>
+
+<div id="tread-wrapper-1819" class="tread-wrapper">
+	<div class="wall-item-outside-wrapper" id="wall-item-outside-wrapper-1819" >
+	<div class="wall-item-content-wrapper" id="wall-item-content-wrapper-1819" >
+		<div class="wall-item-info" id="wall-item-info-1819">
+			<div class="wall-item-photo-wrapper" id="wall-item-photo-wrapper-1819" 
+				 onmouseover="if (typeof t1819 != 'undefined') clearTimeout(t1819); openMenu('wall-item-photo-menu-button-1819')" 
+				 onmouseout="t1819=setTimeout('closeMenu(\'wall-item-photo-menu-button-1819\'); closeMenu(\'wall-item-photo-menu-1819\');',200)">
+				<a href="https://revolutionari.es/profile/michiel" target="redir" title="View Michiel De Jong's profile @ https://revolutionari.es/profile/michiel" class="wall-item-photo-link" id="wall-item-photo-link-1819">
+					<img src="https://revolutionari.es/photo/avatar/55.jpg" class="wall-item-photo" id="wall-item-photo-1819" style="height: 80px; width: 80px;" alt="Michiel De Jong" />
+				</a>
+				<span onclick="openClose('wall-item-photo-menu-1819');" class="fakelink wall-item-photo-menu-button" id="wall-item-photo-menu-button-1819">menu</span>
+				<div class="wall-item-photo-menu" id="wall-item-photo-menu-1819">
+					<ul>
+						<li><a href='https://revolutionari.es/profile/michiel'>View profile</a></li>
+
+					</ul>
+				</div>
+			</div>
+			<div class="wall-item-photo-end"></div>
+			<div class="wall-item-wrapper" id="wall-item-wrapper-1819" >
+				<div class="wall-item-lock"></div>	
+				<div class="wall-item-location" id="wall-item-location-1819"></div>				
+			</div>
+		</div>
+		<div class="wall-item-author">
+				<a href="https://revolutionari.es/profile/michiel" target="redir" title="View Michiel De Jong's profile @ https://revolutionari.es/profile/michiel" class="wall-item-name-link"><span class="wall-item-name" id="wall-item-name-1819" >Michiel De Jong</span></a>
+				<div class="wall-item-ago"  id="wall-item-ago-1819">1 week ago</div>
+				
+		</div>	
+		<div class="wall-item-content" id="wall-item-content-1819" >
+			<div class="wall-item-title" id="wall-item-title-1819"></div>
+			<div class="wall-item-title-end"></div>
+			<div class="wall-item-body" id="wall-item-body-1819" ><a href="https://revolutionari.es/profile/michiel" target="external-link">Michiel De Jong</a> is now friends with <a href="http://kirgroup.com/profile/fabrixxm" target="external-link">Fabio Comuni</a><br />
+<br />
+<br />
+<a href="http://kirgroup.com/profile/fabrixxm" target="external-link"><img src="https://revolutionari.es/photo/dffe8da41c3181c20ca373200fadef77-5.jpg" alt="Image/photo" /></a><div class="body-attach"><div class="clear"></div></div>
+					<div class="body-tag">
+						
+					</div>
+			</div>
+		</div>
+		<div class="wall-item-tools" id="wall-item-tools-1819">
+			
+			
+			
+			 
+			
+			
+			<div class="wall-item-delete-wrapper" id="wall-item-delete-wrapper-1819" >
+				
+			</div>
+				
+			<div class="wall-item-delete-end"></div>
+		</div>
+	</div>
+	<div class="wall-item-wrapper-end"></div>
+	<div class="wall-item-like" id="wall-item-like-1819"></div>
+	<div class="wall-item-dislike" id="wall-item-dislike-1819"></div>
+	<div class="wall-item-comment-wrapper" >
+	
+	</div>
+
+<div class="wall-item-outside-wrapper-end" ></div>
+</div>
+
+</div>
+
+<div id="tread-wrapper-1818" class="tread-wrapper">
+	<div class="wall-item-outside-wrapper" id="wall-item-outside-wrapper-1818" >
+	<div class="wall-item-content-wrapper" id="wall-item-content-wrapper-1818" >
+		<div class="wall-item-info" id="wall-item-info-1818">
+			<div class="wall-item-photo-wrapper" id="wall-item-photo-wrapper-1818" 
+				 onmouseover="if (typeof t1818 != 'undefined') clearTimeout(t1818); openMenu('wall-item-photo-menu-button-1818')" 
+				 onmouseout="t1818=setTimeout('closeMenu(\'wall-item-photo-menu-button-1818\'); closeMenu(\'wall-item-photo-menu-1818\');',200)">
+				<a href="https://revolutionari.es/profile/michiel" target="redir" title="View Michiel De Jong's profile @ https://revolutionari.es/profile/michiel" class="wall-item-photo-link" id="wall-item-photo-link-1818">
+					<img src="https://revolutionari.es/photo/avatar/55.jpg" class="wall-item-photo" id="wall-item-photo-1818" style="height: 80px; width: 80px;" alt="Michiel De Jong" />
+				</a>
+				<span onclick="openClose('wall-item-photo-menu-1818');" class="fakelink wall-item-photo-menu-button" id="wall-item-photo-menu-button-1818">menu</span>
+				<div class="wall-item-photo-menu" id="wall-item-photo-menu-1818">
+					<ul>
+						<li><a href='https://revolutionari.es/profile/michiel'>View profile</a></li>
+
+					</ul>
+				</div>
+			</div>
+			<div class="wall-item-photo-end"></div>
+			<div class="wall-item-wrapper" id="wall-item-wrapper-1818" >
+				<div class="wall-item-lock"></div>	
+				<div class="wall-item-location" id="wall-item-location-1818"></div>				
+			</div>
+		</div>
+		<div class="wall-item-author">
+				<a href="https://revolutionari.es/profile/michiel" target="redir" title="View Michiel De Jong's profile @ https://revolutionari.es/profile/michiel" class="wall-item-name-link"><span class="wall-item-name" id="wall-item-name-1818" >Michiel De Jong</span></a>
+				<div class="wall-item-ago"  id="wall-item-ago-1818">1 week ago</div>
+				
+		</div>	
+		<div class="wall-item-content" id="wall-item-content-1818" >
+			<div class="wall-item-title" id="wall-item-title-1818"></div>
+			<div class="wall-item-title-end"></div>
+			<div class="wall-item-body" id="wall-item-body-1818" ><a href="https://revolutionari.es/profile/michiel" target="external-link">Michiel De Jong</a> is now friends with <a href="https://kakste.com/profile/bruce" target="external-link">Bruce Bane</a><br />
+<br />
+<br />
+<a href="https://kakste.com/profile/bruce" target="external-link"><img src="https://revolutionari.es/photo/74edbfc1501c2148fe9bbb0007c5bcce-5.jpg" alt="Image/photo" /></a><div class="body-attach"><div class="clear"></div></div>
+					<div class="body-tag">
+						
+					</div>
+			</div>
+		</div>
+		<div class="wall-item-tools" id="wall-item-tools-1818">
+			
+			
+			
+			 
+			
+			
+			<div class="wall-item-delete-wrapper" id="wall-item-delete-wrapper-1818" >
+				
+			</div>
+				
+			<div class="wall-item-delete-end"></div>
+		</div>
+	</div>
+	<div class="wall-item-wrapper-end"></div>
+	<div class="wall-item-like" id="wall-item-like-1818"></div>
+	<div class="wall-item-dislike" id="wall-item-dislike-1818"></div>
+	<div class="wall-item-comment-wrapper" >
+	
+	</div>
+
+<div class="wall-item-outside-wrapper-end" ></div>
+</div>
+
+</div>
+
+<div id="tread-wrapper-1295" class="tread-wrapper">
+	<div class="wall-item-outside-wrapper" id="wall-item-outside-wrapper-1295" >
+	<div class="wall-item-content-wrapper" id="wall-item-content-wrapper-1295" >
+		<div class="wall-item-info" id="wall-item-info-1295">
+			<div class="wall-item-photo-wrapper" id="wall-item-photo-wrapper-1295" 
+				 onmouseover="if (typeof t1295 != 'undefined') clearTimeout(t1295); openMenu('wall-item-photo-menu-button-1295')" 
+				 onmouseout="t1295=setTimeout('closeMenu(\'wall-item-photo-menu-button-1295\'); closeMenu(\'wall-item-photo-menu-1295\');',200)">
+				<a href="https://revolutionari.es/profile/michiel" target="redir" title="View Michiel De Jong's profile @ https://revolutionari.es/profile/michiel" class="wall-item-photo-link" id="wall-item-photo-link-1295">
+					<img src="https://revolutionari.es/photo/avatar/55.jpg" class="wall-item-photo" id="wall-item-photo-1295" style="height: 80px; width: 80px;" alt="Michiel De Jong" />
+				</a>
+				<span onclick="openClose('wall-item-photo-menu-1295');" class="fakelink wall-item-photo-menu-button" id="wall-item-photo-menu-button-1295">menu</span>
+				<div class="wall-item-photo-menu" id="wall-item-photo-menu-1295">
+					<ul>
+						<li><a href='https://revolutionari.es/profile/michiel'>View profile</a></li>
+
+					</ul>
+				</div>
+			</div>
+			<div class="wall-item-photo-end"></div>
+			<div class="wall-item-wrapper" id="wall-item-wrapper-1295" >
+				<div class="wall-item-lock"></div>	
+				<div class="wall-item-location" id="wall-item-location-1295"></div>				
+			</div>
+		</div>
+		<div class="wall-item-author">
+				<a href="https://revolutionari.es/profile/michiel" target="redir" title="View Michiel De Jong's profile @ https://revolutionari.es/profile/michiel" class="wall-item-name-link"><span class="wall-item-name" id="wall-item-name-1295" >Michiel De Jong</span></a>
+				<div class="wall-item-ago"  id="wall-item-ago-1295">2 weeks ago</div>
+				
+		</div>	
+		<div class="wall-item-content" id="wall-item-content-1295" >
+			<div class="wall-item-title" id="wall-item-title-1295"></div>
+			<div class="wall-item-title-end"></div>
+			<div class="wall-item-body" id="wall-item-body-1295" ><a href="https://revolutionari.es/photos/michiel/image/2f62910e1e907475db5047d963d774bd" target="external-link"><img src="https://revolutionari.es/photo/2f62910e1e907475db5047d963d774bd-2.jpg" alt="Image/photo" /></a> view from my window, just now (overlooking Aegina island from Agistri island)<div class="body-attach"><div class="clear"></div></div>
+					<div class="body-tag">
+						
+					</div>
+			</div>
+		</div>
+		<div class="wall-item-tools" id="wall-item-tools-1295">
+			
+			
+				<div class="wall-item-links-wrapper"><a href="https://revolutionari.es/display/michiel/1295" title="link to source" target="external-link" class="icon remote-link"></a></div>
+			
+			
+			 
+			
+			
+			<div class="wall-item-delete-wrapper" id="wall-item-delete-wrapper-1295" >
+				
+			</div>
+				
+			<div class="wall-item-delete-end"></div>
+		</div>
+	</div>
+	<div class="wall-item-wrapper-end"></div>
+	<div class="wall-item-like" id="wall-item-like-1295"></div>
+	<div class="wall-item-dislike" id="wall-item-dislike-1295"></div>
+	<div class="wall-item-comment-wrapper" >
+	
+	</div>
+
+<div class="wall-item-outside-wrapper-end" ></div>
+</div>
+<div class="wall-item-outside-wrapper comment" id="wall-item-outside-wrapper-1304" >
+	<div class="wall-item-content-wrapper comment" id="wall-item-content-wrapper-1304" >
+		<div class="wall-item-info" id="wall-item-info-1304">
+			<div class="wall-item-photo-wrapper" id="wall-item-photo-wrapper-1304" 
+				 onmouseover="if (typeof t1304 != 'undefined') clearTimeout(t1304); openMenu('wall-item-photo-menu-button-1304')" 
+				 onmouseout="t1304=setTimeout('closeMenu(\'wall-item-photo-menu-button-1304\'); closeMenu(\'wall-item-photo-menu-1304\');',200)">
+				<a href="http://bjerke.dk/ven/profile/flemming" target="redir" title="View Flemming Bjerke's profile @ http://bjerke.dk/ven/profile/flemming" class="wall-item-photo-link" id="wall-item-photo-link-1304">
+					<img src="https://revolutionari.es/photo/bea189c98e714caa2b164c81fe30b722-5.jpg" class="wall-item-photo" id="wall-item-photo-1304" style="height: 80px; width: 80px;" alt="Flemming Bjerke" />
+				</a>
+				<span onclick="openClose('wall-item-photo-menu-1304');" class="fakelink wall-item-photo-menu-button" id="wall-item-photo-menu-button-1304">menu</span>
+				<div class="wall-item-photo-menu" id="wall-item-photo-menu-1304">
+					<ul>
+						<li><a href='http://bjerke.dk/ven/profile/flemming'>View profile</a></li>
+
+					</ul>
+				</div>
+			</div>
+			<div class="wall-item-photo-end"></div>
+			<div class="wall-item-wrapper" id="wall-item-wrapper-1304" >
+				<div class="wall-item-lock"></div>	
+				<div class="wall-item-location" id="wall-item-location-1304"></div>				
+			</div>
+		</div>
+		<div class="wall-item-author">
+				<a href="http://bjerke.dk/ven/profile/flemming" target="redir" title="View Flemming Bjerke's profile @ http://bjerke.dk/ven/profile/flemming" class="wall-item-name-link"><span class="wall-item-name" id="wall-item-name-1304" >Flemming Bjerke</span></a>
+				<div class="wall-item-ago"  id="wall-item-ago-1304">2 weeks ago</div>
+				
+		</div>	
+		<div class="wall-item-content" id="wall-item-content-1304" >
+			<div class="wall-item-title" id="wall-item-title-1304"></div>
+			<div class="wall-item-title-end"></div>
+			<div class="wall-item-body" id="wall-item-body-1304" >Beautifull.<div class="body-attach"><div class="clear"></div></div>
+					<div class="body-tag">
+						
+					</div>
+			</div>
+		</div>
+		<div class="wall-item-tools" id="wall-item-tools-1304">
+			
+			
+				<div class="wall-item-links-wrapper"><a href="http://ven.bjerke.dk/display/flemming/60" title="link to source" target="external-link" class="icon remote-link"></a></div>
+			
+			
+			 
+			
+			
+			<div class="wall-item-delete-wrapper" id="wall-item-delete-wrapper-1304" >
+				
+			</div>
+				
+			<div class="wall-item-delete-end"></div>
+		</div>
+	</div>
+	<div class="wall-item-wrapper-end"></div>
+	<div class="wall-item-like" id="wall-item-like-1304"></div>
+	<div class="wall-item-dislike" id="wall-item-dislike-1304"></div>
+	<div class="wall-item-comment-wrapper" >
+	
+	</div>
+
+<div class="wall-item-outside-wrapper-end comment" ></div>
+</div>
+
+</div>
+
+<div id="tread-wrapper-1201" class="tread-wrapper">
+	<div class="wall-item-outside-wrapper" id="wall-item-outside-wrapper-1201" >
+	<div class="wall-item-content-wrapper" id="wall-item-content-wrapper-1201" >
+		<div class="wall-item-info" id="wall-item-info-1201">
+			<div class="wall-item-photo-wrapper" id="wall-item-photo-wrapper-1201" 
+				 onmouseover="if (typeof t1201 != 'undefined') clearTimeout(t1201); openMenu('wall-item-photo-menu-button-1201')" 
+				 onmouseout="t1201=setTimeout('closeMenu(\'wall-item-photo-menu-button-1201\'); closeMenu(\'wall-item-photo-menu-1201\');',200)">
+				<a href="https://revolutionari.es/profile/michiel" target="redir" title="View Michiel De Jong's profile @ https://revolutionari.es/profile/michiel" class="wall-item-photo-link" id="wall-item-photo-link-1201">
+					<img src="https://revolutionari.es/photo/avatar/55.jpg" class="wall-item-photo" id="wall-item-photo-1201" style="height: 80px; width: 80px;" alt="Michiel De Jong" />
+				</a>
+				<span onclick="openClose('wall-item-photo-menu-1201');" class="fakelink wall-item-photo-menu-button" id="wall-item-photo-menu-button-1201">menu</span>
+				<div class="wall-item-photo-menu" id="wall-item-photo-menu-1201">
+					<ul>
+						<li><a href='https://revolutionari.es/profile/michiel'>View profile</a></li>
+
+					</ul>
+				</div>
+			</div>
+			<div class="wall-item-photo-end"></div>
+			<div class="wall-item-wrapper" id="wall-item-wrapper-1201" >
+				<div class="wall-item-lock"></div>	
+				<div class="wall-item-location" id="wall-item-location-1201"></div>				
+			</div>
+		</div>
+		<div class="wall-item-author">
+				<a href="https://revolutionari.es/profile/michiel" target="redir" title="View Michiel De Jong's profile @ https://revolutionari.es/profile/michiel" class="wall-item-name-link"><span class="wall-item-name" id="wall-item-name-1201" >Michiel De Jong</span></a>
+				<div class="wall-item-ago"  id="wall-item-ago-1201">2 weeks ago</div>
+				
+		</div>	
+		<div class="wall-item-content" id="wall-item-content-1201" >
+			<div class="wall-item-title" id="wall-item-title-1201"></div>
+			<div class="wall-item-title-end"></div>
+			<div class="wall-item-body" id="wall-item-body-1201" >if you want to help develop federation standards for software like Friendica, or at least follow the multi-platform discussion, then please join here: <a href="http://lists.w3.org/Archives/Public/public-fedsocweb/2012Jul/thread.html" target="external-link">http://lists.w3.org/Archives/Public/public-fedsocweb/2012Jul/thread.html</a><div class="body-attach"><div class="clear"></div></div>
+					<div class="body-tag">
+						
+					</div>
+			</div>
+		</div>
+		<div class="wall-item-tools" id="wall-item-tools-1201">
+			
+			
+				<div class="wall-item-links-wrapper"><a href="https://revolutionari.es/display/michiel/1201" title="link to source" target="external-link" class="icon remote-link"></a></div>
+			
+			
+			 
+			
+			
+			<div class="wall-item-delete-wrapper" id="wall-item-delete-wrapper-1201" >
+				
+			</div>
+				
+			<div class="wall-item-delete-end"></div>
+		</div>
+	</div>
+	<div class="wall-item-wrapper-end"></div>
+	<div class="wall-item-like" id="wall-item-like-1201"><a href="http://friendika.hipatia.net/profile/lnxwalt">foonetic (nternetx)</a> likes this.<br />
+</div>
+	<div class="wall-item-dislike" id="wall-item-dislike-1201"></div>
+	<div class="wall-item-comment-wrapper" >
+	
+	</div>
+
+<div class="wall-item-outside-wrapper-end" ></div>
+</div>
+<div class="hide-comments-outer">
+<span id="hide-comments-total-1201" class="hide-comments-total">9 comments</span> <span id="hide-comments-1201" class="hide-comments fakelink" onclick="showHideComments(1201);">show more</span>
+</div>
+<div id="collapsed-comments-1201" class="collapsed-comments" style="display: none;">
+<div class="wall-item-outside-wrapper comment" id="wall-item-outside-wrapper-1292" >
+	<div class="wall-item-content-wrapper comment" id="wall-item-content-wrapper-1292" >
+		<div class="wall-item-info" id="wall-item-info-1292">
+			<div class="wall-item-photo-wrapper" id="wall-item-photo-wrapper-1292" 
+				 onmouseover="if (typeof t1292 != 'undefined') clearTimeout(t1292); openMenu('wall-item-photo-menu-button-1292')" 
+				 onmouseout="t1292=setTimeout('closeMenu(\'wall-item-photo-menu-button-1292\'); closeMenu(\'wall-item-photo-menu-1292\');',200)">
+				<a href="http://bjerke.dk/ven/profile/flemming" target="redir" title="View Flemming Bjerke's profile @ http://bjerke.dk/ven/profile/flemming" class="wall-item-photo-link" id="wall-item-photo-link-1292">
+					<img src="https://revolutionari.es/photo/bea189c98e714caa2b164c81fe30b722-5.jpg" class="wall-item-photo" id="wall-item-photo-1292" style="height: 80px; width: 80px;" alt="Flemming Bjerke" />
+				</a>
+				<span onclick="openClose('wall-item-photo-menu-1292');" class="fakelink wall-item-photo-menu-button" id="wall-item-photo-menu-button-1292">menu</span>
+				<div class="wall-item-photo-menu" id="wall-item-photo-menu-1292">
+					<ul>
+						<li><a href='http://bjerke.dk/ven/profile/flemming'>View profile</a></li>
+
+					</ul>
+				</div>
+			</div>
+			<div class="wall-item-photo-end"></div>
+			<div class="wall-item-wrapper" id="wall-item-wrapper-1292" >
+				<div class="wall-item-lock"></div>	
+				<div class="wall-item-location" id="wall-item-location-1292"></div>				
+			</div>
+		</div>
+		<div class="wall-item-author">
+				<a href="http://bjerke.dk/ven/profile/flemming" target="redir" title="View Flemming Bjerke's profile @ http://bjerke.dk/ven/profile/flemming" class="wall-item-name-link"><span class="wall-item-name" id="wall-item-name-1292" >Flemming Bjerke</span></a>
+				<div class="wall-item-ago"  id="wall-item-ago-1292">2 weeks ago</div>
+				
+		</div>	
+		<div class="wall-item-content" id="wall-item-content-1292" >
+			<div class="wall-item-title" id="wall-item-title-1292"></div>
+			<div class="wall-item-title-end"></div>
+			<div class="wall-item-body" id="wall-item-body-1292" >We have already discussed this to some length ....<div class="body-attach"><div class="clear"></div></div>
+					<div class="body-tag">
+						
+					</div>
+			</div>
+		</div>
+		<div class="wall-item-tools" id="wall-item-tools-1292">
+			
+			
+				<div class="wall-item-links-wrapper"><a href="http://ven.bjerke.dk/display/flemming/45" title="link to source" target="external-link" class="icon remote-link"></a></div>
+			
+			
+			 
+			
+			
+			<div class="wall-item-delete-wrapper" id="wall-item-delete-wrapper-1292" >
+				
+			</div>
+				
+			<div class="wall-item-delete-end"></div>
+		</div>
+	</div>
+	<div class="wall-item-wrapper-end"></div>
+	<div class="wall-item-like" id="wall-item-like-1292"></div>
+	<div class="wall-item-dislike" id="wall-item-dislike-1292"></div>
+	<div class="wall-item-comment-wrapper" >
+	
+	</div>
+
+<div class="wall-item-outside-wrapper-end comment" ></div>
+</div>
+<div class="wall-item-outside-wrapper comment" id="wall-item-outside-wrapper-1294" >
+	<div class="wall-item-content-wrapper comment" id="wall-item-content-wrapper-1294" >
+		<div class="wall-item-info" id="wall-item-info-1294">
+			<div class="wall-item-photo-wrapper" id="wall-item-photo-wrapper-1294" 
+				 onmouseover="if (typeof t1294 != 'undefined') clearTimeout(t1294); openMenu('wall-item-photo-menu-button-1294')" 
+				 onmouseout="t1294=setTimeout('closeMenu(\'wall-item-photo-menu-button-1294\'); closeMenu(\'wall-item-photo-menu-1294\');',200)">
+				<a href="https://revolutionari.es/profile/michiel" target="redir" title="View Michiel De Jong's profile @ https://revolutionari.es/profile/michiel" class="wall-item-photo-link" id="wall-item-photo-link-1294">
+					<img src="https://revolutionari.es/photo/avatar/55.jpg" class="wall-item-photo" id="wall-item-photo-1294" style="height: 80px; width: 80px;" alt="Michiel De Jong" />
+				</a>
+				<span onclick="openClose('wall-item-photo-menu-1294');" class="fakelink wall-item-photo-menu-button" id="wall-item-photo-menu-button-1294">menu</span>
+				<div class="wall-item-photo-menu" id="wall-item-photo-menu-1294">
+					<ul>
+						<li><a href='https://revolutionari.es/profile/michiel'>View profile</a></li>
+
+					</ul>
+				</div>
+			</div>
+			<div class="wall-item-photo-end"></div>
+			<div class="wall-item-wrapper" id="wall-item-wrapper-1294" >
+				<div class="wall-item-lock"></div>	
+				<div class="wall-item-location" id="wall-item-location-1294"></div>				
+			</div>
+		</div>
+		<div class="wall-item-author">
+				<a href="https://revolutionari.es/profile/michiel" target="redir" title="View Michiel De Jong's profile @ https://revolutionari.es/profile/michiel" class="wall-item-name-link"><span class="wall-item-name" id="wall-item-name-1294" >Michiel De Jong</span></a>
+				<div class="wall-item-ago"  id="wall-item-ago-1294">2 weeks ago</div>
+				
+		</div>	
+		<div class="wall-item-content" id="wall-item-content-1294" >
+			<div class="wall-item-title" id="wall-item-title-1294"></div>
+			<div class="wall-item-title-end"></div>
+			<div class="wall-item-body" id="wall-item-body-1294" >right, i just saw you and Mike are actually on there <a href="http://www.w3.org/community/fedsocweb/participants" target="external-link">http://www.w3.org/community/fedsocweb/participants</a> so what's your view on whether that mailinglist can work? not so positive i understand? was this discussion on friendica-dev?<div class="body-attach"><div class="clear"></div></div>
+					<div class="body-tag">
+						
+					</div>
+			</div>
+		</div>
+		<div class="wall-item-tools" id="wall-item-tools-1294">
+			
+			
+				<div class="wall-item-links-wrapper"><a href="https://revolutionari.es/display/michiel/1294" title="link to source" target="external-link" class="icon remote-link"></a></div>
+			
+			
+			 
+			
+			
+			<div class="wall-item-delete-wrapper" id="wall-item-delete-wrapper-1294" >
+				
+			</div>
+				
+			<div class="wall-item-delete-end"></div>
+		</div>
+	</div>
+	<div class="wall-item-wrapper-end"></div>
+	<div class="wall-item-like" id="wall-item-like-1294"></div>
+	<div class="wall-item-dislike" id="wall-item-dislike-1294"></div>
+	<div class="wall-item-comment-wrapper" >
+	
+	</div>
+
+<div class="wall-item-outside-wrapper-end comment" ></div>
+</div>
+<div class="wall-item-outside-wrapper comment" id="wall-item-outside-wrapper-1296" >
+	<div class="wall-item-content-wrapper comment" id="wall-item-content-wrapper-1296" >
+		<div class="wall-item-info" id="wall-item-info-1296">
+			<div class="wall-item-photo-wrapper" id="wall-item-photo-wrapper-1296" 
+				 onmouseover="if (typeof t1296 != 'undefined') clearTimeout(t1296); openMenu('wall-item-photo-menu-button-1296')" 
+				 onmouseout="t1296=setTimeout('closeMenu(\'wall-item-photo-menu-button-1296\'); closeMenu(\'wall-item-photo-menu-1296\');',200)">
+				<a href="https://macgirvin.com/profile/mike" target="redir" title="View Mike the Friendican's profile @ https://macgirvin.com/profile/mike" class="wall-item-photo-link" id="wall-item-photo-link-1296">
+					<img src="https://revolutionari.es/photo/de835c1adaf5a86346dea853b03e7fca-5.jpg" class="wall-item-photo" id="wall-item-photo-1296" style="height: 80px; width: 80px;" alt="Mike the Friendican" />
+				</a>
+				<span onclick="openClose('wall-item-photo-menu-1296');" class="fakelink wall-item-photo-menu-button" id="wall-item-photo-menu-button-1296">menu</span>
+				<div class="wall-item-photo-menu" id="wall-item-photo-menu-1296">
+					<ul>
+						<li><a href='https://macgirvin.com/profile/mike'>View profile</a></li>
+
+					</ul>
+				</div>
+			</div>
+			<div class="wall-item-photo-end"></div>
+			<div class="wall-item-wrapper" id="wall-item-wrapper-1296" >
+				<div class="wall-item-lock"></div>	
+				<div class="wall-item-location" id="wall-item-location-1296"></div>				
+			</div>
+		</div>
+		<div class="wall-item-author">
+				<a href="https://macgirvin.com/profile/mike" target="redir" title="View Mike the Friendican's profile @ https://macgirvin.com/profile/mike" class="wall-item-name-link"><span class="wall-item-name" id="wall-item-name-1296" >Mike the Friendican</span></a>
+				<div class="wall-item-ago"  id="wall-item-ago-1296">2 weeks ago</div>
+				
+		</div>	
+		<div class="wall-item-content" id="wall-item-content-1296" >
+			<div class="wall-item-title" id="wall-item-title-1296"></div>
+			<div class="wall-item-title-end"></div>
+			<div class="wall-item-body" id="wall-item-body-1296" >I'm following the discussions, but as a &quot;read-only&quot; participant. I'm a persona non-grata in the Federated Social Web community.<div class="body-attach"><div class="clear"></div></div>
+					<div class="body-tag">
+						
+					</div>
+			</div>
+		</div>
+		<div class="wall-item-tools" id="wall-item-tools-1296">
+			
+			
+				<div class="wall-item-links-wrapper"><a href="https://macgirvin.com/display/mike/194017" title="link to source" target="external-link" class="icon remote-link"></a></div>
+			
+			
+			 
+			
+			
+			<div class="wall-item-delete-wrapper" id="wall-item-delete-wrapper-1296" >
+				
+			</div>
+				
+			<div class="wall-item-delete-end"></div>
+		</div>
+	</div>
+	<div class="wall-item-wrapper-end"></div>
+	<div class="wall-item-like" id="wall-item-like-1296"></div>
+	<div class="wall-item-dislike" id="wall-item-dislike-1296"></div>
+	<div class="wall-item-comment-wrapper" >
+	
+	</div>
+
+<div class="wall-item-outside-wrapper-end comment" ></div>
+</div>
+<div class="wall-item-outside-wrapper comment" id="wall-item-outside-wrapper-1299" >
+	<div class="wall-item-content-wrapper comment" id="wall-item-content-wrapper-1299" >
+		<div class="wall-item-info" id="wall-item-info-1299">
+			<div class="wall-item-photo-wrapper" id="wall-item-photo-wrapper-1299" 
+				 onmouseover="if (typeof t1299 != 'undefined') clearTimeout(t1299); openMenu('wall-item-photo-menu-button-1299')" 
+				 onmouseout="t1299=setTimeout('closeMenu(\'wall-item-photo-menu-button-1299\'); closeMenu(\'wall-item-photo-menu-1299\');',200)">
+				<a href="http://bjerke.dk/ven/profile/flemming" target="redir" title="View Flemming Bjerke's profile @ http://bjerke.dk/ven/profile/flemming" class="wall-item-photo-link" id="wall-item-photo-link-1299">
+					<img src="https://revolutionari.es/photo/bea189c98e714caa2b164c81fe30b722-5.jpg" class="wall-item-photo" id="wall-item-photo-1299" style="height: 80px; width: 80px;" alt="Flemming Bjerke" />
+				</a>
+				<span onclick="openClose('wall-item-photo-menu-1299');" class="fakelink wall-item-photo-menu-button" id="wall-item-photo-menu-button-1299">menu</span>
+				<div class="wall-item-photo-menu" id="wall-item-photo-menu-1299">
+					<ul>
+						<li><a href='http://bjerke.dk/ven/profile/flemming'>View profile</a></li>
+
+					</ul>
+				</div>
+			</div>
+			<div class="wall-item-photo-end"></div>
+			<div class="wall-item-wrapper" id="wall-item-wrapper-1299" >
+				<div class="wall-item-lock"></div>	
+				<div class="wall-item-location" id="wall-item-location-1299"></div>				
+			</div>
+		</div>
+		<div class="wall-item-author">
+				<a href="http://bjerke.dk/ven/profile/flemming" target="redir" title="View Flemming Bjerke's profile @ http://bjerke.dk/ven/profile/flemming" class="wall-item-name-link"><span class="wall-item-name" id="wall-item-name-1299" >Flemming Bjerke</span></a>
+				<div class="wall-item-ago"  id="wall-item-ago-1299">2 weeks ago</div>
+				
+		</div>	
+		<div class="wall-item-content" id="wall-item-content-1299" >
+			<div class="wall-item-title" id="wall-item-title-1299"></div>
+			<div class="wall-item-title-end"></div>
+			<div class="wall-item-body" id="wall-item-body-1299" >No, no, I am very positive. I am just a bit too tired to follow up.<div class="body-attach"><div class="clear"></div></div>
+					<div class="body-tag">
+						
+					</div>
+			</div>
+		</div>
+		<div class="wall-item-tools" id="wall-item-tools-1299">
+			
+			
+				<div class="wall-item-links-wrapper"><a href="http://ven.bjerke.dk/display/flemming/54" title="link to source" target="external-link" class="icon remote-link"></a></div>
+			
+			
+			 
+			
+			
+			<div class="wall-item-delete-wrapper" id="wall-item-delete-wrapper-1299" >
+				
+			</div>
+				
+			<div class="wall-item-delete-end"></div>
+		</div>
+	</div>
+	<div class="wall-item-wrapper-end"></div>
+	<div class="wall-item-like" id="wall-item-like-1299"></div>
+	<div class="wall-item-dislike" id="wall-item-dislike-1299"></div>
+	<div class="wall-item-comment-wrapper" >
+	
+	</div>
+
+<div class="wall-item-outside-wrapper-end comment" ></div>
+</div>
+<div class="wall-item-outside-wrapper comment" id="wall-item-outside-wrapper-1300" >
+	<div class="wall-item-content-wrapper comment" id="wall-item-content-wrapper-1300" >
+		<div class="wall-item-info" id="wall-item-info-1300">
+			<div class="wall-item-photo-wrapper" id="wall-item-photo-wrapper-1300" 
+				 onmouseover="if (typeof t1300 != 'undefined') clearTimeout(t1300); openMenu('wall-item-photo-menu-button-1300')" 
+				 onmouseout="t1300=setTimeout('closeMenu(\'wall-item-photo-menu-button-1300\'); closeMenu(\'wall-item-photo-menu-1300\');',200)">
+				<a href="https://revolutionari.es/profile/michiel" target="redir" title="View Michiel De Jong's profile @ https://revolutionari.es/profile/michiel" class="wall-item-photo-link" id="wall-item-photo-link-1300">
+					<img src="https://revolutionari.es/photo/avatar/55.jpg" class="wall-item-photo" id="wall-item-photo-1300" style="height: 80px; width: 80px;" alt="Michiel De Jong" />
+				</a>
+				<span onclick="openClose('wall-item-photo-menu-1300');" class="fakelink wall-item-photo-menu-button" id="wall-item-photo-menu-button-1300">menu</span>
+				<div class="wall-item-photo-menu" id="wall-item-photo-menu-1300">
+					<ul>
+						<li><a href='https://revolutionari.es/profile/michiel'>View profile</a></li>
+
+					</ul>
+				</div>
+			</div>
+			<div class="wall-item-photo-end"></div>
+			<div class="wall-item-wrapper" id="wall-item-wrapper-1300" >
+				<div class="wall-item-lock"></div>	
+				<div class="wall-item-location" id="wall-item-location-1300"></div>				
+			</div>
+		</div>
+		<div class="wall-item-author">
+				<a href="https://revolutionari.es/profile/michiel" target="redir" title="View Michiel De Jong's profile @ https://revolutionari.es/profile/michiel" class="wall-item-name-link"><span class="wall-item-name" id="wall-item-name-1300" >Michiel De Jong</span></a>
+				<div class="wall-item-ago"  id="wall-item-ago-1300">2 weeks ago</div>
+				
+		</div>	
+		<div class="wall-item-content" id="wall-item-content-1300" >
+			<div class="wall-item-title" id="wall-item-title-1300"></div>
+			<div class="wall-item-title-end"></div>
+			<div class="wall-item-body" id="wall-item-body-1300" >oh, i didn't know that sorry. anyway, we're talking about user search now, i'm freeing up some time to work on a cross-network search engine for users. once it's working, it will be possible to type a name, and see results from any webfinger-enabled service, as well as a few others. Then to interact it will still show which tools/protocols are supported and which not, but i think it could be an interesting start. It's something Google should have done of course, next to 'web', 'images' and 'map', have a pane for 'people'. but they stopped working on social graph api and also don't seem very active on webfinger since they got G+...<div class="body-attach"><div class="clear"></div></div>
+					<div class="body-tag">
+						
+					</div>
+			</div>
+		</div>
+		<div class="wall-item-tools" id="wall-item-tools-1300">
+			
+			
+				<div class="wall-item-links-wrapper"><a href="https://revolutionari.es/display/michiel/1300" title="link to source" target="external-link" class="icon remote-link"></a></div>
+			
+			
+			 
+			
+			
+			<div class="wall-item-delete-wrapper" id="wall-item-delete-wrapper-1300" >
+				
+			</div>
+				
+			<div class="wall-item-delete-end"></div>
+		</div>
+	</div>
+	<div class="wall-item-wrapper-end"></div>
+	<div class="wall-item-like" id="wall-item-like-1300"></div>
+	<div class="wall-item-dislike" id="wall-item-dislike-1300"></div>
+	<div class="wall-item-comment-wrapper" >
+	
+	</div>
+
+<div class="wall-item-outside-wrapper-end comment" ></div>
+</div>
+<div class="wall-item-outside-wrapper comment" id="wall-item-outside-wrapper-1302" >
+	<div class="wall-item-content-wrapper comment" id="wall-item-content-wrapper-1302" >
+		<div class="wall-item-info" id="wall-item-info-1302">
+			<div class="wall-item-photo-wrapper" id="wall-item-photo-wrapper-1302" 
+				 onmouseover="if (typeof t1302 != 'undefined') clearTimeout(t1302); openMenu('wall-item-photo-menu-button-1302')" 
+				 onmouseout="t1302=setTimeout('closeMenu(\'wall-item-photo-menu-button-1302\'); closeMenu(\'wall-item-photo-menu-1302\');',200)">
+				<a href="http://bjerke.dk/ven/profile/flemming" target="redir" title="View Flemming Bjerke's profile @ http://bjerke.dk/ven/profile/flemming" class="wall-item-photo-link" id="wall-item-photo-link-1302">
+					<img src="https://revolutionari.es/photo/bea189c98e714caa2b164c81fe30b722-5.jpg" class="wall-item-photo" id="wall-item-photo-1302" style="height: 80px; width: 80px;" alt="Flemming Bjerke" />
+				</a>
+				<span onclick="openClose('wall-item-photo-menu-1302');" class="fakelink wall-item-photo-menu-button" id="wall-item-photo-menu-button-1302">menu</span>
+				<div class="wall-item-photo-menu" id="wall-item-photo-menu-1302">
+					<ul>
+						<li><a href='http://bjerke.dk/ven/profile/flemming'>View profile</a></li>
+
+					</ul>
+				</div>
+			</div>
+			<div class="wall-item-photo-end"></div>
+			<div class="wall-item-wrapper" id="wall-item-wrapper-1302" >
+				<div class="wall-item-lock"></div>	
+				<div class="wall-item-location" id="wall-item-location-1302"></div>				
+			</div>
+		</div>
+		<div class="wall-item-author">
+				<a href="http://bjerke.dk/ven/profile/flemming" target="redir" title="View Flemming Bjerke's profile @ http://bjerke.dk/ven/profile/flemming" class="wall-item-name-link"><span class="wall-item-name" id="wall-item-name-1302" >Flemming Bjerke</span></a>
+				<div class="wall-item-ago"  id="wall-item-ago-1302">2 weeks ago</div>
+				
+		</div>	
+		<div class="wall-item-content" id="wall-item-content-1302" >
+			<div class="wall-item-title" id="wall-item-title-1302"></div>
+			<div class="wall-item-title-end"></div>
+			<div class="wall-item-body" id="wall-item-body-1302" >I just tried to explore an idea you may call identityneutrality, that is, that maximally privacy is given in a network which treat any identity (anonymous or whatever) in the same way. But, it a bit more complicated than I realised at first.<div class="body-attach"><div class="clear"></div></div>
+					<div class="body-tag">
+						
+					</div>
+			</div>
+		</div>
+		<div class="wall-item-tools" id="wall-item-tools-1302">
+			
+			
+				<div class="wall-item-links-wrapper"><a href="http://ven.bjerke.dk/display/flemming/58" title="link to source" target="external-link" class="icon remote-link"></a></div>
+			
+			
+			 
+			
+			
+			<div class="wall-item-delete-wrapper" id="wall-item-delete-wrapper-1302" >
+				
+			</div>
+				
+			<div class="wall-item-delete-end"></div>
+		</div>
+	</div>
+	<div class="wall-item-wrapper-end"></div>
+	<div class="wall-item-like" id="wall-item-like-1302"></div>
+	<div class="wall-item-dislike" id="wall-item-dislike-1302"></div>
+	<div class="wall-item-comment-wrapper" >
+	
+	</div>
+
+<div class="wall-item-outside-wrapper-end comment" ></div>
+</div>
+<div class="wall-item-outside-wrapper comment" id="wall-item-outside-wrapper-1303" >
+	<div class="wall-item-content-wrapper comment" id="wall-item-content-wrapper-1303" >
+		<div class="wall-item-info" id="wall-item-info-1303">
+			<div class="wall-item-photo-wrapper" id="wall-item-photo-wrapper-1303" 
+				 onmouseover="if (typeof t1303 != 'undefined') clearTimeout(t1303); openMenu('wall-item-photo-menu-button-1303')" 
+				 onmouseout="t1303=setTimeout('closeMenu(\'wall-item-photo-menu-button-1303\'); closeMenu(\'wall-item-photo-menu-1303\');',200)">
+				<a href="http://bjerke.dk/ven/profile/flemming" target="redir" title="View Flemming Bjerke's profile @ http://bjerke.dk/ven/profile/flemming" class="wall-item-photo-link" id="wall-item-photo-link-1303">
+					<img src="https://revolutionari.es/photo/bea189c98e714caa2b164c81fe30b722-5.jpg" class="wall-item-photo" id="wall-item-photo-1303" style="height: 80px; width: 80px;" alt="Flemming Bjerke" />
+				</a>
+				<span onclick="openClose('wall-item-photo-menu-1303');" class="fakelink wall-item-photo-menu-button" id="wall-item-photo-menu-button-1303">menu</span>
+				<div class="wall-item-photo-menu" id="wall-item-photo-menu-1303">
+					<ul>
+						<li><a href='http://bjerke.dk/ven/profile/flemming'>View profile</a></li>
+
+					</ul>
+				</div>
+			</div>
+			<div class="wall-item-photo-end"></div>
+			<div class="wall-item-wrapper" id="wall-item-wrapper-1303" >
+				<div class="wall-item-lock"></div>	
+				<div class="wall-item-location" id="wall-item-location-1303"></div>				
+			</div>
+		</div>
+		<div class="wall-item-author">
+				<a href="http://bjerke.dk/ven/profile/flemming" target="redir" title="View Flemming Bjerke's profile @ http://bjerke.dk/ven/profile/flemming" class="wall-item-name-link"><span class="wall-item-name" id="wall-item-name-1303" >Flemming Bjerke</span></a>
+				<div class="wall-item-ago"  id="wall-item-ago-1303">2 weeks ago</div>
+				
+		</div>	
+		<div class="wall-item-content" id="wall-item-content-1303" >
+			<div class="wall-item-title" id="wall-item-title-1303"></div>
+			<div class="wall-item-title-end"></div>
+			<div class="wall-item-body" id="wall-item-body-1303" >Indeed, I prefer you do a cross-network seach engine. I could be great. Google already has too much information about us. Wouldn't Facebook block it. They are very keen to bind people to Facebook.<div class="body-attach"><div class="clear"></div></div>
+					<div class="body-tag">
+						
+					</div>
+			</div>
+		</div>
+		<div class="wall-item-tools" id="wall-item-tools-1303">
+			
+			
+				<div class="wall-item-links-wrapper"><a href="http://ven.bjerke.dk/display/flemming/59" title="link to source" target="external-link" class="icon remote-link"></a></div>
+			
+			
+			 
+			
+			
+			<div class="wall-item-delete-wrapper" id="wall-item-delete-wrapper-1303" >
+				
+			</div>
+				
+			<div class="wall-item-delete-end"></div>
+		</div>
+	</div>
+	<div class="wall-item-wrapper-end"></div>
+	<div class="wall-item-like" id="wall-item-like-1303"></div>
+	<div class="wall-item-dislike" id="wall-item-dislike-1303"></div>
+	<div class="wall-item-comment-wrapper" >
+	
+	</div>
+
+<div class="wall-item-outside-wrapper-end comment" ></div>
+</div>
+</div><div class="wall-item-outside-wrapper comment" id="wall-item-outside-wrapper-1305" >
+	<div class="wall-item-content-wrapper comment" id="wall-item-content-wrapper-1305" >
+		<div class="wall-item-info" id="wall-item-info-1305">
+			<div class="wall-item-photo-wrapper" id="wall-item-photo-wrapper-1305" 
+				 onmouseover="if (typeof t1305 != 'undefined') clearTimeout(t1305); openMenu('wall-item-photo-menu-button-1305')" 
+				 onmouseout="t1305=setTimeout('closeMenu(\'wall-item-photo-menu-button-1305\'); closeMenu(\'wall-item-photo-menu-1305\');',200)">
+				<a href="https://macgirvin.com/profile/mike" target="redir" title="View Mike the Friendican's profile @ https://macgirvin.com/profile/mike" class="wall-item-photo-link" id="wall-item-photo-link-1305">
+					<img src="https://revolutionari.es/photo/de835c1adaf5a86346dea853b03e7fca-5.jpg" class="wall-item-photo" id="wall-item-photo-1305" style="height: 80px; width: 80px;" alt="Mike the Friendican" />
+				</a>
+				<span onclick="openClose('wall-item-photo-menu-1305');" class="fakelink wall-item-photo-menu-button" id="wall-item-photo-menu-button-1305">menu</span>
+				<div class="wall-item-photo-menu" id="wall-item-photo-menu-1305">
+					<ul>
+						<li><a href='https://macgirvin.com/profile/mike'>View profile</a></li>
+
+					</ul>
+				</div>
+			</div>
+			<div class="wall-item-photo-end"></div>
+			<div class="wall-item-wrapper" id="wall-item-wrapper-1305" >
+				<div class="wall-item-lock"></div>	
+				<div class="wall-item-location" id="wall-item-location-1305"></div>				
+			</div>
+		</div>
+		<div class="wall-item-author">
+				<a href="https://macgirvin.com/profile/mike" target="redir" title="View Mike the Friendican's profile @ https://macgirvin.com/profile/mike" class="wall-item-name-link"><span class="wall-item-name" id="wall-item-name-1305" >Mike the Friendican</span></a>
+				<div class="wall-item-ago"  id="wall-item-ago-1305">2 weeks ago</div>
+				
+		</div>	
+		<div class="wall-item-content" id="wall-item-content-1305" >
+			<div class="wall-item-title" id="wall-item-title-1305"></div>
+			<div class="wall-item-title-end"></div>
+			<div class="wall-item-body" id="wall-item-body-1305" >I really thought that Friendica's &quot;global directory&quot; would be short lived and Google would start indexing people on the web. But you're right - G+ came along and that hope died. <br />
+<br />
+I just wish for a way to get to webfinger from full name. If I'm looking for an ex co-worker, I'm only going to have a name. That doesn't give me a webbie (my new term for webfinger address). That's why I created a central directory even though it's a decentralised service. I don't see another solution short of every hub storing the entire directory and passing around deltas, which presents a scaling problem.<br />
+<br />
+By the way, every Friendica node has a webfinger and 'probe' utility to poke around and try and find a communication protocol we can use. That lets us follow email conversations and blogs as if they were fedsocweb people. It's a diagnostic tool and not pretty but you can go to yoursite/probe and see what it says for a given webbie/url/whatever.<div class="body-attach"><div class="clear"></div></div>
+					<div class="body-tag">
+						
+					</div>
+			</div>
+		</div>
+		<div class="wall-item-tools" id="wall-item-tools-1305">
+			
+			
+				<div class="wall-item-links-wrapper"><a href="https://macgirvin.com/display/mike/194023" title="link to source" target="external-link" class="icon remote-link"></a></div>
+			
+			
+			 
+			
+			
+			<div class="wall-item-delete-wrapper" id="wall-item-delete-wrapper-1305" >
+				
+			</div>
+				
+			<div class="wall-item-delete-end"></div>
+		</div>
+	</div>
+	<div class="wall-item-wrapper-end"></div>
+	<div class="wall-item-like" id="wall-item-like-1305"></div>
+	<div class="wall-item-dislike" id="wall-item-dislike-1305"></div>
+	<div class="wall-item-comment-wrapper" >
+	
+	</div>
+
+<div class="wall-item-outside-wrapper-end comment" ></div>
+</div>
+<div class="wall-item-outside-wrapper comment" id="wall-item-outside-wrapper-1574" >
+	<div class="wall-item-content-wrapper comment" id="wall-item-content-wrapper-1574" >
+		<div class="wall-item-info" id="wall-item-info-1574">
+			<div class="wall-item-photo-wrapper" id="wall-item-photo-wrapper-1574" 
+				 onmouseover="if (typeof t1574 != 'undefined') clearTimeout(t1574); openMenu('wall-item-photo-menu-button-1574')" 
+				 onmouseout="t1574=setTimeout('closeMenu(\'wall-item-photo-menu-button-1574\'); closeMenu(\'wall-item-photo-menu-1574\');',200)">
+				<a href="http://friendika.hipatia.net/profile/lnxwalt" target="redir" title="View foonetic (nternetx)'s profile @ http://friendika.hipatia.net/profile/lnxwalt" class="wall-item-photo-link" id="wall-item-photo-link-1574">
+					<img src="https://revolutionari.es/photo/a557c019db02c1880ee40819fa986616-5.jpg" class="wall-item-photo" id="wall-item-photo-1574" style="height: 80px; width: 80px;" alt="foonetic (nternetx)" />
+				</a>
+				<span onclick="openClose('wall-item-photo-menu-1574');" class="fakelink wall-item-photo-menu-button" id="wall-item-photo-menu-button-1574">menu</span>
+				<div class="wall-item-photo-menu" id="wall-item-photo-menu-1574">
+					<ul>
+						<li><a href='http://friendika.hipatia.net/profile/lnxwalt'>View profile</a></li>
+
+					</ul>
+				</div>
+			</div>
+			<div class="wall-item-photo-end"></div>
+			<div class="wall-item-wrapper" id="wall-item-wrapper-1574" >
+				<div class="wall-item-lock"></div>	
+				<div class="wall-item-location" id="wall-item-location-1574"></div>				
+			</div>
+		</div>
+		<div class="wall-item-author">
+				<a href="http://friendika.hipatia.net/profile/lnxwalt" target="redir" title="View foonetic (nternetx)'s profile @ http://friendika.hipatia.net/profile/lnxwalt" class="wall-item-name-link"><span class="wall-item-name" id="wall-item-name-1574" >foonetic (nternetx)</span></a>
+				<div class="wall-item-ago"  id="wall-item-ago-1574">2 weeks ago</div>
+				
+		</div>	
+		<div class="wall-item-content" id="wall-item-content-1574" >
+			<div class="wall-item-title" id="wall-item-title-1574"></div>
+			<div class="wall-item-title-end"></div>
+			<div class="wall-item-body" id="wall-item-body-1574" >I don't normally join those lists because I hate filling my inbox.<br />
+<br />
+I will point out that Evan P. made a suggestion and right away someone said it needed to have users entering http URIs instead of webfinger-type entries. <strong>You want to know why OpenID is having such a rough time? Because users do not understand why they have to enter <a href="http://example.com/username" target="external-link">http://example.com/username</a> instead of username@example.com.</strong><br />
+<br />
+If the people on the list have so little interaction with real people as not to know that, I see little use for it.<div class="body-attach"><div class="clear"></div></div>
+					<div class="body-tag">
+						
+					</div>
+			</div>
+		</div>
+		<div class="wall-item-tools" id="wall-item-tools-1574">
+			
+			
+				<div class="wall-item-links-wrapper"><a href="http://friendika.hipatia.net/display/lnxwalt/236528" title="link to source" target="external-link" class="icon remote-link"></a></div>
+			
+			
+			 
+			
+			
+			<div class="wall-item-delete-wrapper" id="wall-item-delete-wrapper-1574" >
+				
+			</div>
+				
+			<div class="wall-item-delete-end"></div>
+		</div>
+	</div>
+	<div class="wall-item-wrapper-end"></div>
+	<div class="wall-item-like" id="wall-item-like-1574"></div>
+	<div class="wall-item-dislike" id="wall-item-dislike-1574"></div>
+	<div class="wall-item-comment-wrapper" >
+	
+	</div>
+
+<div class="wall-item-outside-wrapper-end comment" ></div>
+</div>
+
+</div>
+
+<div id="tread-wrapper-1199" class="tread-wrapper">
+	<div class="wall-item-outside-wrapper" id="wall-item-outside-wrapper-1199" >
+	<div class="wall-item-content-wrapper" id="wall-item-content-wrapper-1199" >
+		<div class="wall-item-info" id="wall-item-info-1199">
+			<div class="wall-item-photo-wrapper" id="wall-item-photo-wrapper-1199" 
+				 onmouseover="if (typeof t1199 != 'undefined') clearTimeout(t1199); openMenu('wall-item-photo-menu-button-1199')" 
+				 onmouseout="t1199=setTimeout('closeMenu(\'wall-item-photo-menu-button-1199\'); closeMenu(\'wall-item-photo-menu-1199\');',200)">
+				<a href="https://revolutionari.es/profile/michiel" target="redir" title="View Michiel De Jong's profile @ https://revolutionari.es/profile/michiel" class="wall-item-photo-link" id="wall-item-photo-link-1199">
+					<img src="https://revolutionari.es/photo/avatar/55.jpg" class="wall-item-photo" id="wall-item-photo-1199" style="height: 80px; width: 80px;" alt="Michiel De Jong" />
+				</a>
+				<span onclick="openClose('wall-item-photo-menu-1199');" class="fakelink wall-item-photo-menu-button" id="wall-item-photo-menu-button-1199">menu</span>
+				<div class="wall-item-photo-menu" id="wall-item-photo-menu-1199">
+					<ul>
+						<li><a href='https://revolutionari.es/profile/michiel'>View profile</a></li>
+
+					</ul>
+				</div>
+			</div>
+			<div class="wall-item-photo-end"></div>
+			<div class="wall-item-wrapper" id="wall-item-wrapper-1199" >
+				<div class="wall-item-lock"></div>	
+				<div class="wall-item-location" id="wall-item-location-1199"></div>				
+			</div>
+		</div>
+		<div class="wall-item-author">
+				<a href="https://revolutionari.es/profile/michiel" target="redir" title="View Michiel De Jong's profile @ https://revolutionari.es/profile/michiel" class="wall-item-name-link"><span class="wall-item-name" id="wall-item-name-1199" >Michiel De Jong</span></a>
+				<div class="wall-item-ago"  id="wall-item-ago-1199">2 weeks ago</div>
+				
+		</div>	
+		<div class="wall-item-content" id="wall-item-content-1199" >
+			<div class="wall-item-title" id="wall-item-title-1199"></div>
+			<div class="wall-item-title-end"></div>
+			<div class="wall-item-body" id="wall-item-body-1199" ><a href="https://revolutionari.es/profile/michiel" target="external-link">Michiel De Jong</a> is now friends with <a href="http://bjerke.dk/ven/profile/flemming" target="external-link">Flemming Bjerke</a><br />
+<br />
+<br />
+<a href="http://bjerke.dk/ven/profile/flemming" target="external-link"><img src="https://revolutionari.es/photo/bea189c98e714caa2b164c81fe30b722-5.jpg" alt="Image/photo" /></a><div class="body-attach"><div class="clear"></div></div>
+					<div class="body-tag">
+						
+					</div>
+			</div>
+		</div>
+		<div class="wall-item-tools" id="wall-item-tools-1199">
+			
+			
+			
+			 
+			
+			
+			<div class="wall-item-delete-wrapper" id="wall-item-delete-wrapper-1199" >
+				
+			</div>
+				
+			<div class="wall-item-delete-end"></div>
+		</div>
+	</div>
+	<div class="wall-item-wrapper-end"></div>
+	<div class="wall-item-like" id="wall-item-like-1199"></div>
+	<div class="wall-item-dislike" id="wall-item-dislike-1199"></div>
+	<div class="wall-item-comment-wrapper" >
+	
+	</div>
+
+<div class="wall-item-outside-wrapper-end" ></div>
+</div>
+
+</div>
+
+<div id="tread-wrapper-889" class="tread-wrapper">
+	<div class="wall-item-outside-wrapper" id="wall-item-outside-wrapper-889" >
+	<div class="wall-item-content-wrapper" id="wall-item-content-wrapper-889" >
+		<div class="wall-item-info" id="wall-item-info-889">
+			<div class="wall-item-photo-wrapper" id="wall-item-photo-wrapper-889" 
+				 onmouseover="if (typeof t889 != 'undefined') clearTimeout(t889); openMenu('wall-item-photo-menu-button-889')" 
+				 onmouseout="t889=setTimeout('closeMenu(\'wall-item-photo-menu-button-889\'); closeMenu(\'wall-item-photo-menu-889\');',200)">
+				<a href="https://revolutionari.es/profile/michiel" target="redir" title="View Michiel De Jong's profile @ https://revolutionari.es/profile/michiel" class="wall-item-photo-link" id="wall-item-photo-link-889">
+					<img src="https://revolutionari.es/photo/avatar/55.jpg" class="wall-item-photo" id="wall-item-photo-889" style="height: 80px; width: 80px;" alt="Michiel De Jong" />
+				</a>
+				<span onclick="openClose('wall-item-photo-menu-889');" class="fakelink wall-item-photo-menu-button" id="wall-item-photo-menu-button-889">menu</span>
+				<div class="wall-item-photo-menu" id="wall-item-photo-menu-889">
+					<ul>
+						<li><a href='https://revolutionari.es/profile/michiel'>View profile</a></li>
+
+					</ul>
+				</div>
+			</div>
+			<div class="wall-item-photo-end"></div>
+			<div class="wall-item-wrapper" id="wall-item-wrapper-889" >
+				<div class="wall-item-lock"></div>	
+				<div class="wall-item-location" id="wall-item-location-889"></div>				
+			</div>
+		</div>
+		<div class="wall-item-author">
+				<a href="https://revolutionari.es/profile/michiel" target="redir" title="View Michiel De Jong's profile @ https://revolutionari.es/profile/michiel" class="wall-item-name-link"><span class="wall-item-name" id="wall-item-name-889" >Michiel De Jong</span></a>
+				<div class="wall-item-ago"  id="wall-item-ago-889">2 weeks ago</div>
+				
+		</div>	
+		<div class="wall-item-content" id="wall-item-content-889" >
+			<div class="wall-item-title" id="wall-item-title-889"></div>
+			<div class="wall-item-title-end"></div>
+			<div class="wall-item-body" id="wall-item-body-889" ><a href="https://macgirvin.com/display/mike/193686" target="external-link">https://macgirvin.com/display/mike/193686</a><div class="body-attach"><div class="clear"></div></div>
+					<div class="body-tag">
+						
+					</div>
+			</div>
+		</div>
+		<div class="wall-item-tools" id="wall-item-tools-889">
+			
+			
+				<div class="wall-item-links-wrapper"><a href="https://revolutionari.es/display/michiel/889" title="link to source" target="external-link" class="icon remote-link"></a></div>
+			
+			
+			 
+			
+			
+			<div class="wall-item-delete-wrapper" id="wall-item-delete-wrapper-889" >
+				
+			</div>
+				
+			<div class="wall-item-delete-end"></div>
+		</div>
+	</div>
+	<div class="wall-item-wrapper-end"></div>
+	<div class="wall-item-like" id="wall-item-like-889"></div>
+	<div class="wall-item-dislike" id="wall-item-dislike-889"></div>
+	<div class="wall-item-comment-wrapper" >
+	
+	</div>
+
+<div class="wall-item-outside-wrapper-end" ></div>
+</div>
+
+</div>
+
+
+
+<div id="pause"></div>		<div id="page-footer"></div>
+	</section>
+	<footer></footer>
+</body>
+</html>
+

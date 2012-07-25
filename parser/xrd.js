@@ -5,7 +5,6 @@ exports.parse = function(url, docRel, headers, content, cb) {
       documents: {},
       textFields: {},
       images: {},
-      documents: {},
       follows: {},
       tools: {}
     };
@@ -17,8 +16,10 @@ exports.parse = function(url, docRel, headers, content, cb) {
         data2.Alias = [data2.Alias];
       }
       for(var i in data2.Alias) {
-        if(data2.Alias[i] != '"https://joindiaspora.com/"') {//bug in that specific node
-          obj.documents[data2.Alias[i]]=true;
+        if(data2.Alias[i].substring(0, 'http://'.length)=='http://' || data2.Alias[i].substring(0, 'https://'.length)=='https://') {
+          if(data2.Alias[i].split('/').length != 4) {//both diaspora and friendica nodes advertise the host root as an alias of each user! :(
+            obj.documents[data2.Alias[i]]=true;
+          }
         }
       }
     }
@@ -52,6 +53,8 @@ exports.parse = function(url, docRel, headers, content, cb) {
         if(url.indexOf('/.well-known/host-meta?resource=acct:')) {
           obj.documents[templateParts[0]+url.substring(url.indexOf('/.well-known/host-meta?resource=acct:')+'/.well-known/host-meta?resource='.length)+templateParts[1]] = 'lrdd';
         }
+      } else if(data2.Link[i]['@'] && data2.Link[i]['@'].rel == 'http://webfinger.net/rel/profile-page') {
+        obj.tools[data2.Link[i]['@'].href] = 'R';
       }
     }
     cb(null, obj);
