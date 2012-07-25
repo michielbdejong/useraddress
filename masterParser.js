@@ -214,9 +214,19 @@ function chooseParser(contentType) {
     return 'html';
   }
 }
+function webfingerize(url) {
+  var parts = url.split('@');
+  if(parts.length==2) {
+    if(parts[0].indexOf(':')==-1 && parts[0].indexOf('/')==-1 && parts[1].indexOf('.')!=-1) {
+      return 'https://'+parts[1]+'/.well-known/host-meta?resource=acct:'+url;
+    }
+  }
+  return url;
+}
 function parse(url, docRel, cb) {
   //console.log('parse called for '+url);
   //console.log(cb);
+  url = webfingerize(url);
   var urlToFetch = url;
   if(getEnv()=='test') {
     urlToFetch = checkStubs(url);
