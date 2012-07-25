@@ -23,7 +23,7 @@ function doFile(url, expect) {
     }
   });
 }
-masterParser.setEnv('test');
+masterParser.setEnv('test');/*
 doFile('https://identi.ca/.well-known/host-meta?resource=acct:michielbdejong@identi.ca', {
   textFields: 
    { fullName: 'Michiel de Jong',
@@ -70,20 +70,18 @@ doFile('https://revolutionari.es/.well-known/host-meta?resource=acct:michiel@rev
      'https://friendica.dszdw.net/profile/klaus': true,
      'https://friendica.mafiaspiel.org/profile/leberwurscht': true },
   tools: {} 
-});
-doFile('https://gmail.com/.well-known/host-meta?resource=acct:dejong.michiel@gmail.com', {'acct:dejong.michiel@gmail.com': true}, {
- identifiers: 
-   { 'acct:dejong.michiel@gmail.com': true,
-     'http://www.google.com/profiles/dejong.michiel': true },
+});*/
+doFile('https://gmail.com/.well-known/host-meta?resource=acct:dejong.michiel@gmail.com', {
+ documents: {
+   'http://www.google.com/s2/webfinger/?q=acct:dejong.michiel@gmail.com': 'lrdd',
+   'http://www.google.com/profiles/dejong.michiel': 'hcard',
+   'http://www-opensocial.googleusercontent.com/api/people/108912615873187638071/': 'poco-me',
+   'http://www.google.com/s2/webfinger/?q=acct%3Adejong.michiel%40gmail.com&fmt=foaf': 'describedby' },
   textFields: { fullName: 'Michiel de Jong', nick: 'dejong.michiel' },
   images: { avatar: 'http://www.google.com/ig/c/photos/public/AIbEiAIAAABDCLfW7aamnf7XeyILdmNhcmRfcGhvdG8qKGIwYzNhNDg4ZWEwMTg4OWUwOGJmYzViZGU1NTQ0YzY0MWQ2Y2I2YWIwAf39FvvCldqF7AbAvi1Dprjs7_jF' },
-  seeAlso: 
-   { 'http://www-opensocial.googleusercontent.com/api/people/108912615873187638071/': 'poco-me',
-     'http://www.google.com/profiles/dejong.michiel': 'hcard',
-     'http://www.google.com/s2/webfinger/?q=acct%3Adejong.michiel%40gmail.com&fmt=foaf': 'describedby' },
   follows: {},
   tools: {}
-});*/
+});/*
 doFile('https://api.twitter.com/1/users/show.json?screen_name=michielbdejong', {
   textFields: 
    { fullName: 'Michiel de Jong',

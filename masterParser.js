@@ -22,23 +22,23 @@ function doParse(url, type, docRel, headers, content, cb) {
         if(err2) {
           err = err2;
         }
+        for(var i in data2.data) {
+          if(data.documents[i]) {
+            for(var j in data2.data[i]) {
+              for(var k in data2.data[i][j]) {
+                data[j][k]=data2.data[i][j][k];
+              }
+            }
+          }
+        }
+        for(var j in data2) {
+          if(j != 'data') {
+            for(var k in data2[j]) {
+              data[j][k]=data2[j][k];
+            }
+          }
+        }
         if(outstanding == 0) {
-          for(var i in data2.data) {
-            if(data.documents[i]) {
-              for(var j in data2.data[i]) {
-                for(var k in data2.data[i][j]) {
-                  data[j][k]=data2.data[i][j][k];
-                }
-              }
-            }
-          }
-          for(var j in data2) {
-            if(j != 'data') {
-              for(var k in data2[j]) {
-                data[j][k]=data2[j][k];
-              }
-            }
-          }
           cb(err, data);
         }
       });
@@ -141,8 +141,8 @@ function checkStubs(url) {
 
    'https://gmail.com/.well-known/host-meta?resource=acct:dejong.michiel@gmail.com': 'file://exampleFiles/gm-hostmeta.xrd',
    'http://www.google.com/s2/webfinger/?q=acct:dejong.michiel@gmail.com': 'file://exampleFiles/gm-lrdd.xrd',
-   'http://www.google.com/s2/webfinger/?q=acct%3Adejong.michiel%40gmail.com&fmt=foaf': 'file://exampleFiles/gm-foaf.html',
-   'http://www-opensocial.googleusercontent.com/api/people/108912615873187638071/': 'file://exampleFiles/gm-poco-me.html',
+   'http://www.google.com/s2/webfinger/?q=acct%3Adejong.michiel%40gmail.com&fmt=foaf': 'file://exampleFiles/gm-foaf.rdf',
+   'http://www-opensocial.googleusercontent.com/api/people/108912615873187638071/': 'file://exampleFiles/gm-poco-me.json',
    'http://www.google.com/profiles/dejong.michiel': 'file://exampleFiles/gm-hcard.html',
 
    'https://revolutionari.es/.well-known/host-meta?resource=acct:michiel@revolutionari.es': 'file://exampleFiles/fr-hostmeta.xml',
@@ -158,7 +158,7 @@ function checkStubs(url) {
    'https://graph.facebook.com/dejong.michiel': 'file://exampleFiles/fb-api.turtle',
    'http://melvincarvalho.com/': 'file://exampleFiles/melvin.html',
    
-   'http://www.w3.org/People/Berners-Lee/card.rdf': 'file://exampleFiles/timbl-foaf.html',
+   'http://www.w3.org/People/Berners-Lee/card.rdf': 'file://exampleFiles/timbl-foaf.rdf',
    'http://graph.facebook.com/512908782': 'file://exampleFiles/timbl-fb.turtle',
    'http://identi.ca/user/45563': 'file://exampleFiles/timbl-id.html',
    'http://www.advogato.org/person/timbl/foaf.rdf': 'file://exampleFiles/timbl-foaf2.html',

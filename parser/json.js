@@ -16,12 +16,16 @@ exports.parse = function(url, docRel, headers, content, cb) {
     };
     var isFacebook = (url.indexOf('facebook')!=-1);
     var isTwitter = (url.indexOf('twitter')!=-1);
-
+    if(docRel=='poco-me') {
+      obj.textFields.fullName = parsed.entry.name.formatted;
+      obj.images.avatar = parsed.entry.thumbnailUrl;
+    }
     obj.textFields.nick = (parsed.screen_name?parsed.screen_name:parsed.username);
     obj.textFields.fullName = parsed.name;
     obj.textFields.bio = parsed.description;
     obj.textFields.locale = (parsed.locale?parsed.locale:parsed.lang);
-    obj.images.avatar = (isFacebook?'https://graph.facebook.com/'+parsed.username+'/picture':parsed.profile_image_url);
+    if(isTwitter) {
+    }
     if(parsed.link) {
       obj.tools[parsed.link]='R';
     }
@@ -30,7 +34,9 @@ exports.parse = function(url, docRel, headers, content, cb) {
       obj.tools['xmpp:'+parsed.username+'@facebook.com']='PM';
       obj.tools['https://facebook.com/'+parsed.username]='R';
       obj.tools['facebook:'+parsed.username]='PMRFC';
+      obj.images.avatar = 'https://graph.facebook.com/'+parsed.username+'/picture';
     } else if(isTwitter) {
+      obj.images.avatar = parsed.profile_image_url;
       obj.tools['https://twitter.com/'+parsed.screen_name]='R';
       obj.tools['twitter:'+parsed.screen_name]='MRF';
     }
