@@ -43,7 +43,10 @@ doFile('https://identi.ca/.well-known/host-meta?resource=acct:michielbdejong@ide
      'http://identi.ca/user/58458': true,
      'http://identi.ca/user/453647': true,
      'http://identi.ca/user/499580': true },
-  tools: {}
+  tools: {
+    'http://identi.ca/michielbdejong': 'R',
+    'http://identi.ca/api/statuses/user_timeline/425878.atom': 'F',
+  }
 });
 doFile('https://revolutionari.es/.well-known/host-meta?resource=acct:michiel@revolutionari.es', {
  documents: {
@@ -65,7 +68,9 @@ doFile('https://revolutionari.es/.well-known/host-meta?resource=acct:michiel@rev
      'https://fnode.schirr.org/profile/harry': true,
      'https://friendica.dszdw.net/profile/klaus': true,
      'https://friendica.mafiaspiel.org/profile/leberwurscht': true },
-  tools: {} 
+  tools: {
+    'https://revolutionari.es/dfrn_poll/michiel': 'F',
+  } 
 });
 doFile('https://gmail.com/.well-known/host-meta?resource=acct:dejong.michiel@gmail.com', {
  documents: {
@@ -76,7 +81,12 @@ doFile('https://gmail.com/.well-known/host-meta?resource=acct:dejong.michiel@gma
   textFields: { fullName: 'Michiel de Jong', nick: 'dejong.michiel' },
   images: { avatar: 'http://www.google.com/ig/c/photos/public/AIbEiAIAAABDCLfW7aamnf7XeyILdmNhcmRfcGhvdG8qKGIwYzNhNDg4ZWEwMTg4OWUwOGJmYzViZGU1NTQ0YzY0MWQ2Y2I2YWIwAf39FvvCldqF7AbAvi1Dprjs7_jF' },
   follows: {},
-  tools: {}
+  tools: {
+    'mailto:dejong.michiel@gmail.com': 'M',
+    'xmpp:dejong.michiel@gmail.com': 'PM',
+    'http://www.google.com/profiles/dejong.michiel': 'R',
+    'https://www.googleapis.com/buzz/v1/activities/108912615873187638071/@public': 'F',
+  }
 });
 doFile('https://api.twitter.com/1/users/show.json?screen_name=michielbdejong', {
   textFields: 
@@ -105,20 +115,21 @@ doFile('https://graph.facebook.com/dejong.michiel', {
     'https://facebook.com/dejong.michiel': 'R',
     'facebook:dejong.michiel': 'PMRFC'
   }
-});/*
-doFile('https://joindiaspora.com/.well-known/host-meta?resource=acct:michielbdejong@joindiaspora.com', {'acct:michielbdejong@joindiaspora.com': true}, {
-  identifiers: { 'acct:michielbdejong@joindiaspora.com': true },
+});
+doFile('https://joindiaspora.com/.well-known/host-meta?resource=acct:michielbdejong@joindiaspora.com', {
   textFields: { fullName: 'Michiel de Jong', nick: 'michielbdejong' },
   images: { avatar: 'https://joindiaspora.s3.amazonaws.com/uploads/images/thumb_small_ffbd568ab8d948d72703.jpg' },
-  seeAlso: { 'https://joindiaspora.com/hcard/users/e583028f23ce0302': 'hcard' },
+  documents: { 'https://joindiaspora.com/hcard/users/e583028f23ce0302': 'hcard' },
   follows: {},
-  tools: {}
-});
+  tools: {
+    'https://joindiaspora.com/u/michielbdejong': 'R',
+    'https://joindiaspora.com/public/michielbdejong.atom': 'F',
+  }
+});/*
 doFile('http://melvincarvalho.com/', {
- identifiers: { 'http://melvincarvalho.com/#me': true },
   textFields: { fullName: 'Melvin Carvalho' },
   images: { avatar: 'http://melvincarvalho.com/melvincarvalho.png' },
-  seeAlso: {},
+  documents: {},
   follows: 
    { 'http://bblfish.net/people/henry/card#me': true,
      'http://webr3.org/nathan#me': true,
@@ -131,7 +142,9 @@ doFile('http://melvincarvalho.com/', {
      'http://bart.netage.nl/foaf#bvl': true,
      'http://presbrey.mit.edu/foaf#presbrey': true,
      'http://www.bergnet.org/people/bergi/card#me': true },
-  tools: {}
+  tools: {
+    'mailto:melvincarvalho@gmail.com': 'M',
+  }
 });
 doFile('http://tantek.com/', {
   textFields: { fullName: 'Timothy Berners-Lee' }
