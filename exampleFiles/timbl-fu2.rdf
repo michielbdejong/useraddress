@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#"
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:rev="http://dannyayers.com/xmlns/rev/#"
+   xmlns:scom="http://sites.wiwiss.fu-berlin.de/suhl/bizer/bookmashup/simpleCommerceVocab01.rdf#"
+   xmlns:bookRdf="http://www.hackcraft.net/bookrdf/vocab/0_1/">
+
+<rdf:Description rdf:about="http://www4.wiwiss.fu-berlin.de/booksMeshup/books/006251587X">
+   <rev:hasReview rdf:resource="http://www4.wiwiss.fu-berlin.de/bookmashup/reviews/006251587X_EditorialReview1"/>
+   <rev:hasReview rdf:resource="http://www4.wiwiss.fu-berlin.de/bookmashup/reviews/006251587X_EditorialReview2"/>
+   <dc:creator rdf:resource="http://www4.wiwiss.fu-berlin.de/bookmashup/persons/Tim+Berners-Lee"/>
+   <dc:date>2000-11-01</dc:date>
+   <dc:format>Paperback</dc:format>
+   <dc:identifier rdf:resource="urn:ISBN:006251587X"/>
+   <dc:publisher>Collins</dc:publisher>
+   <dc:title>Weaving the Web: The Original Design and Ultimate Destiny of the World Wide Web</dc:title>
+   <scom:hasOffer rdf:resource="http://www4.wiwiss.fu-berlin.de/bookmashup/offers/006251587XamazonOffer"/>
+   <owl:sameAs rdf:resource="http://www4.wiwiss.fu-berlin.de/bookmashup/books/006251587X"/>
+</rdf:Description>
+
+<scom:Book rdf:about="http://www4.wiwiss.fu-berlin.de/booksMeshup/books/006251587X">
+   <rdfs:label>Weaving the Web: The Original Design and Ultimate Destiny of the World Wide Web</rdfs:label>
+   <foaf:depiction rdf:resource="http://ec1.images-amazon.com/images/P/006251587X.01._SCLZZZZZZZ_V1057188155_.jpg"/>
+   <foaf:thumbnail rdf:resource="http://ec1.images-amazon.com/images/P/006251587X.01._SCTHUMBZZZ_V1057188155_.jpg"/>
+</scom:Book>
+
+<rdf:Description rdf:about="http://www4.wiwiss.fu-berlin.de/booksMeshup/doc/books/006251587X">
+   <dc:license rdf:resource="http://www.amazon.com/AWS-License-home-page-Money/b/ref=sc_fe_c_0_12738641_12/102-8791790-9885755?ie=UTF8&amp;node=3440661&amp;no=12738641&amp;me=A36L942TSJ2AJA"/>
+   <dc:license rdf:resource="http://www.google.com/terms_of_service.html"/>
+</rdf:Description>
+
+<foaf:Document rdf:about="http://www4.wiwiss.fu-berlin.de/booksMeshup/doc/books/006251587X">
+   <rdfs:label>RDF document about the book: Weaving the Web: The Original Design and Ultimate Destiny of the World Wide Web</rdfs:label>
+   <foaf:maker rdf:resource="http://www4.wiwiss.fu-berlin.de/is-group/resource/projects/Project10"/>
+   <foaf:primaryTopic rdf:resource="http://www4.wiwiss.fu-berlin.de/booksMeshup/books/006251587X"/>
+</foaf:Document>
+
+<rdf:Description rdf:about="http://www4.wiwiss.fu-berlin.de/bookmashup/offers/006251587XamazonOffer">
+   <rdfs:label>Offer for the book with the ISBN: 006251587X</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www4.wiwiss.fu-berlin.de/bookmashup/persons/Tim+Berners-Lee">
+   <rdfs:label>Tim Berners-Lee</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www4.wiwiss.fu-berlin.de/bookmashup/reviews/006251587X_EditorialReview1">
+   <rdfs:label>Review number 1 about: Weaving the Web: The Original Design and Ultimate Destiny of the World Wide Web</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www4.wiwiss.fu-berlin.de/bookmashup/reviews/006251587X_EditorialReview2">
+   <rdfs:label>Review number 2 about: Weaving the Web: The Original Design and Ultimate Destiny of the World Wide Web</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www4.wiwiss.fu-berlin.de/is-group/resource/projects/Project10">
+   <rdfs:label>Book Mashup</rdfs:label>
+</rdf:Description>
+
+</rdf:RDF>

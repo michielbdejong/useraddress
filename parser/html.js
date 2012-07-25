@@ -1,12 +1,17 @@
 var htmlparser = require("htmlparser");
 //---
 function parseSubTree(subTree, cb) {
-  var fullNamer=false;
+  var nameField;
   if(subTree.attribs && subTree.attribs.class) {
     var classTags=subTree.attribs.class.split(' ');
     for(var i=0; i<classTags.length; i++) {
       if(classTags[i]=='fn') {
-        fullNamer=true;
+        if(subTree.name=='abbr') {
+          cb('textFields', 'fullName', subTree.attribs.title);
+          nameField='nick';
+        } else {
+          nameField='fullName';
+        }
       } else if(classTags[i]=='mpfriend') {
         cb('follows', subTree.attribs.href, true);
       } else if(classTags[i]=='avatar') {
@@ -16,8 +21,8 @@ function parseSubTree(subTree, cb) {
   }
   if(subTree.children) {
     for(var i=0; i<subTree.children.length; i++) {
-      if(fullNamer && subTree.children[i].type=='text') {
-        cb('textFields', 'fullName', subTree.children[i].raw);
+      if(nameField && subTree.children[i].type=='text') {
+        cb('textFields', nameField, subTree.children[i].raw);
       }
     }
   }
@@ -28,6 +33,9 @@ function parseSubTree(subTree, cb) {
     if(eltType != '@' && eltType != '#') {
       for(var j=0; j<subTree[eltType].length; j++) {
         if(typeof(subTree[eltType][j]) == 'object') {
+          if(subTree[eltType][j].attribs) {
+            cb('foaf', subTree[eltType][j].attribs.property, subTree[eltType][j].attribs.content);
+          }
           if(subTree[eltType][j]['@']) {
             if(subTree[eltType][j]['@'].property) {
               cb('foaf', subTree[eltType][j]['@'].property, subTree[eltType][j]['@'].content);
@@ -60,6 +68,10 @@ exports.parse = function(url, docRel, headers, content, cb) {
           if(category=='foaf') {
             if(property== 'foaf:name') {
               obj.textFields.fullName = content; 
+            } else if(property=='foaf:nick') {
+              obj.textFields.nick = content; 
+            } else if(property=='foaf:mbox') {
+              obj.tools[content]='M'; 
             } else if(property=='foaf:knows') {
               obj.follows[content]=true; 
             } else if(property== 'foaf:depiction') {

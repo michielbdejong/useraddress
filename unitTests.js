@@ -117,7 +117,7 @@ doFile('https://graph.facebook.com/dejong.michiel', {
   }
 });
 doFile('https://joindiaspora.com/.well-known/host-meta?resource=acct:michielbdejong@joindiaspora.com', {
-  textFields: { fullName: 'Michiel de Jong', nick: 'michielbdejong' },
+  textFields: { fullName: 'Michiel de Jong' },
   images: { avatar: 'https://joindiaspora.s3.amazonaws.com/uploads/images/thumb_small_ffbd568ab8d948d72703.jpg' },
   documents: { 'https://joindiaspora.com/hcard/users/e583028f23ce0302': 'hcard' },
   follows: {},
@@ -125,7 +125,7 @@ doFile('https://joindiaspora.com/.well-known/host-meta?resource=acct:michielbdej
     'https://joindiaspora.com/u/michielbdejong': 'R',
     'https://joindiaspora.com/public/michielbdejong.atom': 'F',
   }
-});/*
+});
 doFile('http://melvincarvalho.com/', {
   textFields: { fullName: 'Melvin Carvalho' },
   images: { avatar: 'http://melvincarvalho.com/melvincarvalho.png' },
@@ -147,8 +147,8 @@ doFile('http://melvincarvalho.com/', {
   }
 });
 doFile('http://tantek.com/', {
-  textFields: { fullName: 'Timothy Berners-Lee' }
+  textFields: { fullName: 'Tantek &#xC7;elik', nick: 'tantekc' }
 });
 doFile('http://www.w3.org/People/Berners-Lee/card.rdf', {}, {
   textFields: { fullName: 'Timothy Berners-Lee' }
-});*/
+});

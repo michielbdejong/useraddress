@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#"
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:rev="http://purl.org/stuff/rev#"
+   xmlns:scom="http://sites.wiwiss.fu-berlin.de/suhl/bizer/bookmashup/simpleCommerceVocab01.rdf#"
+   xmlns:gr="http://purl.org/goodrelations/v1#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+
+<rdf:Description rdf:about="http://www4.wiwiss.fu-berlin.de/bookmashup/books/006251587X">
+   <dc:creator rdf:resource="http://www4.wiwiss.fu-berlin.de/bookmashup/persons/Tim+Berners-Lee"/>
+   <rdfs:label>Weaving the Web: The Original Design and Ultimate Destiny of the World Wide Web</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www4.wiwiss.fu-berlin.de/bookmashup/books/0752820907">
+   <dc:creator rdf:resource="http://www4.wiwiss.fu-berlin.de/bookmashup/persons/Tim+Berners-Lee"/>
+   <rdfs:label>Weaving the Web Hb</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www4.wiwiss.fu-berlin.de/bookmashup/doc/persons/Tim+Berners-Lee">
+   <dcterms:license rdf:resource="http://www.amazon.com/AWS-License-home-page-Money/b/ref=sc_fe_c_0_12738641_12/102-8791790-9885755?ie=UTF8&amp;node=3440661&amp;no=12738641&amp;me=A36L942TSJ2AJA"/>
+   <dcterms:license rdf:resource="http://www.google.com/terms_of_service.html"/>
+</rdf:Description>
+
+<foaf:Document rdf:about="http://www4.wiwiss.fu-berlin.de/bookmashup/doc/persons/Tim+Berners-Lee">
+   <rdfs:label>RDF document describing: Tim Berners-Lee</rdfs:label>
+   <foaf:maker rdf:resource="http://www4.wiwiss.fu-berlin.de/is-group/resource/projects/Project10"/>
+   <foaf:primaryTopic rdf:resource="http://www4.wiwiss.fu-berlin.de/bookmashup/persons/Tim+Berners-Lee"/>
+</foaf:Document>
+
+<foaf:Person rdf:about="http://www4.wiwiss.fu-berlin.de/bookmashup/persons/Tim+Berners-Lee">
+   <owl:sameAs rdf:resource="http://www4.wiwiss.fu-berlin.de/dblp/resource/person/100007"/>
+   <foaf:name>Tim Berners-Lee</foaf:name>
+</foaf:Person>
+
+<rdf:Description rdf:about="http://www4.wiwiss.fu-berlin.de/is-group/resource/projects/Project10">
+   <rdfs:label>RDF Book Mashup</rdfs:label>
+</rdf:Description>
+
+</rdf:RDF>

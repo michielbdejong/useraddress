@@ -1,5 +1,881 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE a
+<!DOCTYPE html
 PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<a href="http://identi.ca/timbl">http://identi.ca/timbl</a>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+  <title>Tim Berners-Lee (timbl) - Identi.ca</title>
+  <link rel="shortcut icon" href="http://identi.ca/favicon.ico"/>
+  <link rel="stylesheet" type="text/css" href="http://theme2.status.net/base/css/display.css?version=1.1.0-release" media="screen, projection, tv, print"/>
+  <link rel="stylesheet" type="text/css" href="http://theme2.status.net/neo/css/display.css?version=1.1.0-release" media="screen, projection, tv, print"/>
+  <link rel="stylesheet" type="text/css" href="http://plugins2.status.net/OStatus/theme/base/css/ostatus.css" media=""/>
+  <link rel="stylesheet" type="text/css" href="http://plugins2.status.net/ModPlus/modplus.css" media=""/>
+  <link rel="stylesheet" type="text/css" href="http://plugins2.status.net/Realtime/realtimeupdate.css" media="screen, projection, tv"/>
+  <link rel="stylesheet" type="text/css" href="http://identi.ca/js/css/smoothness/jquery-ui.css" media=""/>
+  <!--[if IE]><link rel="stylesheet" type="text/css" href="http://theme2.status.net/base/css/ie.css?version=1.1.0-release" /><![endif]-->
+  <!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="http://theme2.status.net/base/css/ie6.css?version=1.1.0-release" /><![endif]-->
+  <!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="http://theme2.status.net/base/css/ie7.css?version=1.1.0-release" /><![endif]-->
+  <style>#site_notice { width: 100% }</style>
+  <style>.form-train-spam input.submit { background: url(http://plugins2.status.net/ActivitySpam/icons/bullet_black.png) no-repeat 0px 0px } 
+.form-train-ham input.submit { background: url(http://plugins2.status.net/ActivitySpam/icons/exclamation.png) no-repeat 0px 0px } </style>
+  <link rel="stylesheet" type="text/css" href="http://plugins2.status.net/Bookmark/bookmark.css" media=""/>
+  <link rel="stylesheet" type="text/css" href="http://plugins2.status.net/Event/event.css" media=""/>
+  <link rel="stylesheet" type="text/css" href="http://plugins2.status.net/Poll/poll.css" media=""/>
+  <link rel="stylesheet" type="text/css" href="http://plugins2.status.net/QnA/css/qna.css" media=""/>
+  <link rel="search" type="application/opensearchdescription+xml" href="http://identi.ca/opensearch/people" title="Identi.ca People Search"/>
+  <link rel="search" type="application/opensearchdescription+xml" href="http://identi.ca/opensearch/notice" title="Identi.ca Notice Search"/>
+  <link rel="alternate" href="http://identi.ca/api/statuses/user_timeline/45563.as" type="application/stream+json" title="Notice feed for timbl (Activity Streams JSON)"/>
+  <link rel="alternate" href="http://identi.ca/timbl/rss" type="application/rdf+xml" title="Notice feed for timbl (RSS 1.0)"/>
+  <link rel="alternate" href="http://identi.ca/api/statuses/user_timeline/45563.rss" type="application/rss+xml" title="Notice feed for timbl (RSS 2.0)"/>
+  <link rel="alternate" href="http://identi.ca/api/statuses/user_timeline/45563.atom" type="application/atom+xml" title="Notice feed for timbl (Atom)"/>
+  <link rel="meta" href="http://identi.ca/timbl/foaf" type="application/rdf+xml" title="FOAF for timbl"/>
+  <meta name="description" content="My Web ID (FOAF) is: http://www.w3.org/People/Berners-Lee/card#i  I sometimes hang out on irc://irc.freenode.net/swig"/>
+  <meta name="microid" content="mailto+http:sha1:3c441c2f14969fb4ef8bd2f4278f71b5a841bc68"/>
+  <link rel="microsummary" href="http://identi.ca/timbl/microsummary"/>
+  <link rel="EditURI" type="application/rsd+xml" href="http://identi.ca/rsd.xml"/>
+  <link rel="openid2.provider" href="http://identi.ca/main/openidserver"/>
+  <link rel="openid2.local_id" href="http://identi.ca/timbl"/>
+  <link rel="openid.server" href="http://identi.ca/main/openidserver"/>
+  <link rel="openid.delegate" href="http://identi.ca/timbl"/>
+ </head>
+ <body id="showstream">
+  <div id="wrap">
+   <div id="fb-root"></div>
+   <div id="header">
+    <address id="site_contact" class="vcard">
+     <a class="url home bookmark" href="http://identi.ca/">
+      <img class="logo photo" src="http://file.status.net/i/identica/jordanc-20110919T224313-xycjlk9.png" alt="Identi.ca"/>
+       <span class="fn org">Identi.ca</span>
+     </a>
+    </address>
+    <div id="site_nav_global_primary">
+     <form id="header-search" class="form" method="get" action="http://identi.ca/search/notice">
+      <fieldset>
+       <input name="q" size="20" id="search-q"/>
+       <input type="submit" value="Search"/>
+      </fieldset>
+     </form>
+     <ul class="nav">
+      <li id="nav_login">
+       <a href="https://identi.ca/main/login" title="Login to the site.">Login</a>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div id="core">
+    <div id="aside_primary_wrapper">
+     <div id="content_wrapper">
+      <div id="site_nav_local_views_wrapper">
+       <div id="site_nav_local_views">
+        <ul id="nav_local_default">
+         <li>
+          <h3>Public</h3>
+          <ul class="nav">
+           <li id="nav_timeline_public">
+            <a href="http://identi.ca/" title="Public timeline">Public</a>
+           </li>
+           <li id="nav_groups">
+            <a href="http://identi.ca/group/" title="User groups">Groups</a>
+           </li>
+           <li id="nav_featured">
+            <a href="http://identi.ca/featured/" title="Featured users">Featured</a>
+           </li>
+           <li id="nav_timeline_favorited">
+            <a href="http://identi.ca/favorited/" title="Popular notices">Popular</a>
+           </li>
+          </ul>
+         </li>
+        </ul>
+       </div>
+       <div id="content">
+        <h1>Tim Berners-Lee (timbl)</h1>
+        <div id="content_inner">
+         <div id="notices_primary">
+          <ol class="notices xoxo">
+           <li class="hentry notice notice-source-TweetDeck" id="notice-86797421">
+            <div class="entry-title">
+             <div class="author">
+              <span class="vcard author">
+               <a href="http://identi.ca/timbl" class="url" title="timbl">
+                <img src="http://avatar3.status.net/i/identica/45563-48-20090329133119.jpeg" class="avatar photo" width="48" height="48" alt="Tim Berners-Lee"/>
+                 <span class="fn">Tim Berners-Lee</span>
+               </a>
+              </span>
+             </div>
+             <p class="entry-content">Stop American Censorship <a href="http://ur1.ca/5qk5a" title="http://americancensorship.org/" rel="external">http://ur1.ca/5qk5a</a> #<span class="tag"><a href="http://identi.ca/tag/netrights" rel="tag">netrights</a></span> #<span class="tag"><a href="http://identi.ca/tag/usa" rel="tag">usa</a></span> #<span class="tag"><a href="http://identi.ca/tag/humanrights" rel="tag">humanrights</a></span></p>
+            </div>
+            <div class="entry-content thumbnails">
+             <span class="inline-attachment">
+              <a class="attachment-thumbnail" href="http://americancensorship.org/" id="attachment-56600880" title="American Internet Censorship is Real and Happening -- Stop it!">
+               <img alt="" src="http://americancensorship.org/images/modal-screenshot.png" width="100" height="83"/>
+              </a>
+             </span>
+            </div>
+            <div class="entry-content">
+             <a rel="bookmark" class="timestamp" href="http://identi.ca/notice/86797421">
+              <abbr class="published" title="2011-12-13T14:53:59+00:00">about 8 months ago</abbr>
+             </a>
+              <span class="source">from               <span class="device">
+               <a href="http://www.tweetdeck.com/" rel="external">TweetDeck</a>
+              </span>
+             </span>
+              <a href="http://identi.ca/conversation/86682855#notice-86797421" class="response">in context</a>
+            </div>
+           </li>
+           <li class="hentry notice notice-source-TweetDeck" id="notice-86704510">
+            <div class="entry-title">
+             <div class="author">
+              <span class="vcard author">
+               <a href="http://identi.ca/timbl" class="url" title="timbl">
+                <img src="http://avatar3.status.net/i/identica/45563-48-20090329133119.jpeg" class="avatar photo" width="48" height="48" alt="Tim Berners-Lee"/>
+                 <span class="fn">Tim Berners-Lee</span>
+               </a>
+              </span>
+             </div>
+             <p class="entry-content">EU #<span class="tag"><a href="http://identi.ca/tag/opendata" rel="tag">opendata</a></span> press release <a href="http://ur1.ca/6mgjh" title="http://europa.eu/rapid/pressReleasesAction.do?reference=IP/11/1524" rel="external">http://ur1.ca/6mgjh</a></p>
+            </div>
+            <div class="entry-content thumbnails">
+             <span class="inline-attachment">
+              <a class="attachment-thumbnail" href="http://europa.eu/rapid/pressReleasesAction.do?reference=IP/11/1524" id="attachment-62243948" title="EUROPA  -  Press Releases -  Digital Agenda: Turning government data into gold">
+               <img alt="" src="http://europa.eu/rapid/exploit/2011/12/IP/EN/i11_1524.eni/Pictures/100002010000003B000000270EAF35C1.png" width="59" height="39"/>
+              </a>
+             </span>
+            </div>
+            <div class="entry-content">
+             <a rel="bookmark" class="timestamp" href="http://identi.ca/notice/86704510">
+              <abbr class="published" title="2011-12-12T14:10:11+00:00">about 8 months ago</abbr>
+             </a>
+              <span class="source">from               <span class="device">
+               <a href="http://www.tweetdeck.com/" rel="external">TweetDeck</a>
+              </span>
+             </span>
+              <a href="http://identi.ca/conversation/86591509#notice-86704510" class="response">in context</a>
+            </div>
+           </li>
+           <li class="hentry notice notice-source-TweetDeck" id="notice-86704454">
+            <div class="entry-title">
+             <div class="author">
+              <span class="vcard author">
+               <a href="http://identi.ca/timbl" class="url" title="timbl">
+                <img src="http://avatar3.status.net/i/identica/45563-48-20090329133119.jpeg" class="avatar photo" width="48" height="48" alt="Tim Berners-Lee"/>
+                 <span class="fn">Tim Berners-Lee</span>
+               </a>
+              </span>
+             </div>
+             <p class="entry-content">Excellent! RT @NeelieKroesEU: Unlocking the goldmine : NK  on new #<span class="tag"><a href="http://identi.ca/tag/opendata" rel="tag">opendata</a></span> proposals <a href="http://ur1.ca/6mjx7" title="http://t.co/DJFdfJphttp://ow.ly/7WlKG" rel="external">http://ur1.ca/6mjx7</a></p>
+            </div>
+            <div class="entry-content thumbnails"></div>
+            <div class="entry-content">
+             <a rel="bookmark" class="timestamp" href="http://identi.ca/notice/86704454">
+              <abbr class="published" title="2011-12-12T14:09:26+00:00">about 8 months ago</abbr>
+             </a>
+              <span class="source">from               <span class="device">
+               <a href="http://www.tweetdeck.com/" rel="external">TweetDeck</a>
+              </span>
+             </span>
+            </div>
+           </li>
+           <li class="hentry notice notice-source-TweetDeck" id="notice-86224006">
+            <div class="entry-title">
+             <div class="author">
+              <span class="vcard author">
+               <a href="http://identi.ca/timbl" class="url" title="timbl">
+                <img src="http://avatar3.status.net/i/identica/45563-48-20090329133119.jpeg" class="avatar photo" width="48" height="48" alt="Tim Berners-Lee"/>
+                 <span class="fn">Tim Berners-Lee</span>
+               </a>
+              </span>
+             </div>
+             <p class="entry-content">Iconic photo <a href="http://ur1.ca/6cu8g" title="http://www.pri.org/stories/world/africa/fiber-optic-cables-finally-bring-reliable-internet-to-liberia-west-africa-6899.html" rel="external">http://ur1.ca/6cu8g</a></p>
+            </div>
+            <div class="entry-content thumbnails"></div>
+            <div class="entry-content">
+             <a rel="bookmark" class="timestamp" href="http://identi.ca/notice/86224006">
+              <abbr class="published" title="2011-12-05T00:27:19+00:00">about 8 months ago</abbr>
+             </a>
+              <span class="source">from               <span class="device">
+               <a href="http://www.tweetdeck.com/" rel="external">TweetDeck</a>
+              </span>
+             </span>
+              <a href="http://identi.ca/conversation/86121690#notice-86224006" class="response">in context</a>
+            </div>
+           </li>
+           <li class="hentry notice notice-source-web" id="notice-83448790">
+            <div class="entry-title">
+             <div class="author">
+              <span class="vcard author">
+               <a href="http://identi.ca/timbl" class="url" title="timbl">
+                <img src="http://avatar3.status.net/i/identica/45563-48-20090329133119.jpeg" class="avatar photo" width="48" height="48" alt="Tim Berners-Lee"/>
+                 <span class="fn">Tim Berners-Lee</span>
+               </a>
+              </span>
+             </div>
+             <p class="entry-content">@<span class="vcard"><a href="http://identi.ca/user/311670" class="url" title="Unhosted"><span class="fn nickname">unhosted</span></a></span> We should talk... can you support RW #<span class="tag"><a href="http://identi.ca/tag/linkeddata" rel="tag">linkedData</a></span> a la <a href="http://w3.org/DesignIssues/ReadWriteLinkedData" title="http://www.w3.org/DesignIssues/ReadWriteLinkedData" rel="external">http://w3.org/DesignIssues/ReadWriteLinkedData</a> ?</p>
+            </div>
+            <div class="entry-content thumbnails"></div>
+            <div class="entry-content">
+             <a rel="bookmark" class="timestamp" href="http://identi.ca/notice/83448790">
+              <abbr class="published" title="2011-09-11T21:39:50+00:00">about 11 months ago</abbr>
+             </a>
+              <span class="source">from               <span class="device">web</span>
+             </span>
+              <a href="http://identi.ca/conversation/80758407#notice-83448790" class="response">in context</a>
+            </div>
+           </li>
+           <li class="hentry notice notice-source-TweetDeck" id="notice-77604047">
+            <div class="entry-title">
+             <div class="author">
+              <span class="vcard author">
+               <a href="http://identi.ca/timbl" class="url" title="timbl">
+                <img src="http://avatar3.status.net/i/identica/45563-48-20090329133119.jpeg" class="avatar photo" width="48" height="48" alt="Tim Berners-Lee"/>
+                 <span class="fn">Tim Berners-Lee</span>
+               </a>
+              </span>
+             </div>
+             <p class="entry-content">KUTGW Sandro - RT @bniemannsr: Best intro to W3C I have seen: <a href="http://www.w3.org/2011/Talks/0628-gld-sandro/talk.html" title="http://www.w3.org/2011/Talks/0628-gld-sandro/talk.html" rel="external">http://www.w3.org/2011/Talks/0628-gld-sandro/talk.html</a></p>
+            </div>
+            <div class="entry-content">
+             <a rel="bookmark" class="timestamp" href="http://identi.ca/notice/77604047">
+              <abbr class="published" title="2011-06-29T13:10:36+00:00">about a year ago</abbr>
+             </a>
+              <span class="source">from               <span class="device">
+               <a href="http://www.tweetdeck.com/" rel="external">TweetDeck</a>
+              </span>
+             </span>
+              <a href="http://identi.ca/conversation/75094822#notice-77604047" class="response">in context</a>
+            </div>
+           </li>
+           <li class="hentry notice notice-source-TweetDeck" id="notice-73515658">
+            <div class="entry-title">
+             <div class="author">
+              <span class="vcard author">
+               <a href="http://identi.ca/timbl" class="url" title="timbl">
+                <img src="http://avatar3.status.net/i/identica/45563-48-20090329133119.jpeg" class="avatar photo" width="48" height="48" alt="Tim Berners-Lee"/>
+                 <span class="fn">Tim Berners-Lee</span>
+               </a>
+              </span>
+             </div>
+             <p class="entry-content"><a href="http://www.beet.tv/2011/05/the-semantic-web-is-coming-to-newsrooms-this-summer-hearsts-cto-michael-dunn.html" title="http://www.beet.tv/2011/05/the-semantic-web-is-coming-to-newsrooms-this-summer-hearsts-cto-michael-dunn.html" rel="external">http://www.beet.tv/2011/05/the-semantic-web-is-coming-to-newsrooms-this-summer-hearsts-cto-michael-dunn.html</a> #<span class="tag"><a href="http://identi.ca/tag/linkeddata" rel="tag">linkeddata</a></span> #<span class="tag"><a href="http://identi.ca/tag/rdfa" rel="tag">rdfa</a></span></p>
+            </div>
+            <div class="entry-content thumbnails"></div>
+            <div class="entry-content">
+             <a rel="bookmark" class="timestamp" href="http://identi.ca/notice/73515658">
+              <abbr class="published" title="2011-05-14T20:26:17+00:00">about a year ago</abbr>
+             </a>
+              <span class="source">from               <span class="device">
+               <a href="http://www.tweetdeck.com/" rel="external">TweetDeck</a>
+              </span>
+             </span>
+            </div>
+           </li>
+           <li class="hentry notice notice-source-TweetDeck" id="notice-70781428">
+            <div class="entry-title">
+             <div class="author">
+              <span class="vcard author">
+               <a href="http://identi.ca/timbl" class="url" title="timbl">
+                <img src="http://avatar3.status.net/i/identica/45563-48-20090329133119.jpeg" class="avatar photo" width="48" height="48" alt="Tim Berners-Lee"/>
+                 <span class="fn">Tim Berners-Lee</span>
+               </a>
+              </span>
+             </div>
+             <p class="entry-content">RT Canada New Democratic Party promises nat. broadband and net neutrality <a href="http://www.boingboing.net/2011/04/10/canadas-new-democrat-1.html" title="http://www.boingboing.net/2011/04/10/canadas-new-democrat-1.html" rel="external">http://www.boingboing.net/2011/04/10/canadas-new-democrat-1.html</a></p>
+            </div>
+            <div class="entry-content">
+             <a rel="bookmark" class="timestamp" href="http://identi.ca/notice/70781428">
+              <abbr class="published" title="2011-04-10T18:55:57+00:00">about a year ago</abbr>
+             </a>
+              <span class="source">from               <span class="device">
+               <a href="http://www.tweetdeck.com/" rel="external">TweetDeck</a>
+              </span>
+             </span>
+            </div>
+           </li>
+           <li class="hentry notice notice-source-TweetDeck" id="notice-70170438">
+            <div class="entry-title">
+             <div class="author">
+              <span class="vcard author">
+               <a href="http://identi.ca/timbl" class="url" title="timbl">
+                <img src="http://avatar3.status.net/i/identica/45563-48-20090329133119.jpeg" class="avatar photo" width="48" height="48" alt="Tim Berners-Lee"/>
+                 <span class="fn">Tim Berners-Lee</span>
+               </a>
+              </span>
+             </div>
+             <p class="entry-content">Sign at <a href="http://sunlightfoundation.com/savethedata/" title="http://sunlightfoundation.com/savethedata/" rel="external">http://sunlightfoundation.com/savethedata/</a>  and retweet please</p>
+            </div>
+            <div class="entry-content">
+             <a rel="bookmark" class="timestamp" href="http://identi.ca/notice/70170438">
+              <abbr class="published" title="2011-04-01T02:08:12+00:00">Friday, 01-Apr-11 02:08:12 UTC</abbr>
+             </a>
+              <span class="source">from               <span class="device">
+               <a href="http://www.tweetdeck.com/" rel="external">TweetDeck</a>
+              </span>
+             </span>
+              <a href="http://identi.ca/conversation/67890827#notice-70170438" class="response">in context</a>
+            </div>
+           </li>
+           <li class="hentry notice notice-source-TweetDeck" id="notice-70170128">
+            <div class="entry-title">
+             <div class="author">
+              <span class="vcard author">
+               <a href="http://identi.ca/timbl" class="url" title="timbl">
+                <img src="http://avatar3.status.net/i/identica/45563-48-20090329133119.jpeg" class="avatar photo" width="48" height="48" alt="Tim Berners-Lee"/>
+                 <span class="fn">Tim Berners-Lee</span>
+               </a>
+              </span>
+              <span class="addressees">
+               <a href="http://identi.ca/jahendler" title="jahendler" class="addressee account">Jim hendler</a>
+              </span>
+             </div>
+             <p class="entry-content">RT @<span class="vcard"><a href="http://identi.ca/user/67370" class="url" title="Jim hendler"><span class="fn nickname">jahendler</span></a></span>: some good news -  China ibrings up Hong Kong data sharing site  -- <a href="http://bit.ly/ikgyQo" title="http://www.gov.hk/en/theme/psi/welcome/" rel="external">http://bit.ly/ikgyQo</a> #<span class="tag"><a href="http://identi.ca/tag/opengov" rel="tag">opengov</a></span> #<span class="tag"><a href="http://identi.ca/tag/opendata" rel="tag">opendata</a></span></p>
+            </div>
+            <div class="entry-content">
+             <a rel="bookmark" class="timestamp" href="http://identi.ca/notice/70170128">
+              <abbr class="published" title="2011-04-01T02:00:48+00:00">Friday, 01-Apr-11 02:00:48 UTC</abbr>
+             </a>
+              <span class="source">from               <span class="device">
+               <a href="http://www.tweetdeck.com/" rel="external">TweetDeck</a>
+              </span>
+             </span>
+            </div>
+           </li>
+           <li class="hentry notice notice-source-TweetDeck" id="notice-68391503">
+            <div class="entry-title">
+             <div class="author">
+              <span class="vcard author">
+               <a href="http://identi.ca/timbl" class="url" title="timbl">
+                <img src="http://avatar3.status.net/i/identica/45563-48-20090329133119.jpeg" class="avatar photo" width="48" height="48" alt="Tim Berners-Lee"/>
+                 <span class="fn">Tim Berners-Lee</span>
+               </a>
+              </span>
+              <span class="addressees">
+               <a href="http://identi.ca/mortenf" title="mortenf" class="addressee account">Morten Høybye Frederiksen</a>
+              </span>
+             </div>
+             <p class="entry-content">RT @<span class="vcard"><a href="http://identi.ca/user/15005" class="url" title="Morten H&#xF8;ybye Frederiksen"><span class="fn nickname">mortenf</span></a></span>: Future of the web? 20th WWW conf. using native mobile apps, not web apps: <a href="http://www.www2011india.com/mobile_apps.html" title="http://www.www2011india.com/mobile_apps.html" rel="external">http://www.www2011india.com/mobile_apps.html</a></p>
+            </div>
+            <div class="entry-content">
+             <a rel="bookmark" class="timestamp" href="http://identi.ca/notice/68391503">
+              <abbr class="published" title="2011-03-28T03:21:35+00:00">Monday, 28-Mar-11 03:21:35 UTC</abbr>
+             </a>
+              <span class="source">from               <span class="device">
+               <a href="http://www.tweetdeck.com/" rel="external">TweetDeck</a>
+              </span>
+             </span>
+            </div>
+           </li>
+           <li class="hentry notice notice-source-TweetDeck" id="notice-67990173">
+            <div class="entry-title">
+             <div class="author">
+              <span class="vcard author">
+               <a href="http://identi.ca/timbl" class="url" title="timbl">
+                <img src="http://avatar3.status.net/i/identica/45563-48-20090329133119.jpeg" class="avatar photo" width="48" height="48" alt="Tim Berners-Lee"/>
+                 <span class="fn">Tim Berners-Lee</span>
+               </a>
+              </span>
+             </div>
+             <p class="entry-content">Proposed  [US ]Congressional Budgets Slash Funding for Data Transparency #<span class="tag"><a href="http://identi.ca/tag/opendata" rel="tag">opendata</a></span> #<span class="tag"><a href="http://identi.ca/tag/datagov" rel="tag">data.gov</a></span>  threat to #<span class="tag"><a href="http://identi.ca/tag/transparency" rel="tag">transparency</a></span></p>
+            </div>
+            <div class="entry-content">
+             <a rel="bookmark" class="timestamp" href="http://identi.ca/notice/67990173">
+              <abbr class="published" title="2011-03-24T03:42:19+00:00">Thursday, 24-Mar-11 03:42:19 UTC</abbr>
+             </a>
+              <span class="source">from               <span class="device">
+               <a href="http://www.tweetdeck.com/" rel="external">TweetDeck</a>
+              </span>
+             </span>
+            </div>
+           </li>
+           <li class="hentry notice notice-source-TweetDeck" id="notice-66352755">
+            <div class="entry-title">
+             <div class="author">
+              <span class="vcard author">
+               <a href="http://identi.ca/timbl" class="url" title="timbl">
+                <img src="http://avatar3.status.net/i/identica/45563-48-20090329133119.jpeg" class="avatar photo" width="48" height="48" alt="Tim Berners-Lee"/>
+                 <span class="fn">Tim Berners-Lee</span>
+               </a>
+              </span>
+             </div>
+             <p class="entry-content">RT @DirDigEng @bethnoveck Finland commits in principle to make public data available #<span class="tag"><a href="http://identi.ca/tag/opendata" rel="tag">opendata</a></span> #<span class="tag"><a href="http://identi.ca/tag/gov20" rel="tag">gov20</a></span>  <a href="http://bit.ly/egUPEE" title="http://translate.google.com/translate?js=n&amp;prev=_t&amp;hl=en&amp;ie=UTF-8&amp;layout=2&amp;eotf=1&amp;sl=fi&amp;tl=en&amp;u=http%3A%2F%2Fwww.valtioneuvosto.fi%2Fajankohtaista%2Ftiedotteet%2Ftiedote%2Ffi.jsp%3Foid%3D322870" rel="external">http://bit.ly/egUPEE</a></p>
+            </div>
+            <div class="entry-content thumbnails"></div>
+            <div class="entry-content">
+             <a rel="bookmark" class="timestamp" href="http://identi.ca/notice/66352755">
+              <abbr class="published" title="2011-03-07T17:04:00+00:00">Monday, 07-Mar-11 17:04:00 UTC</abbr>
+             </a>
+              <span class="source">from               <span class="device">
+               <a href="http://www.tweetdeck.com/" rel="external">TweetDeck</a>
+              </span>
+             </span>
+            </div>
+           </li>
+           <li class="hentry notice notice-source-web" id="notice-66202774">
+            <div class="entry-title">
+             <div class="author">
+              <span class="vcard author">
+               <a href="http://identi.ca/timbl" class="url" title="timbl">
+                <img src="http://avatar3.status.net/i/identica/45563-48-20090329133119.jpeg" class="avatar photo" width="48" height="48" alt="Tim Berners-Lee"/>
+                 <span class="fn">Tim Berners-Lee</span>
+               </a>
+              </span>
+             </div>
+             <p class="entry-content">Click to add title <a href="http://www.google.com/search?q=click+to+add+title" title="http://www.google.com/search?q=click+to+add+title" rel="external">http://www.google.com/search?q=click+to+add+title</a> #<span class="tag"><a href="http://identi.ca/tag/random" rel="tag">random</a></span></p>
+            </div>
+            <div class="entry-content thumbnails"></div>
+            <div class="entry-content">
+             <a rel="bookmark" class="timestamp" href="http://identi.ca/notice/66202774">
+              <abbr class="published" title="2011-03-05T20:07:57+00:00">Saturday, 05-Mar-11 20:07:57 UTC</abbr>
+             </a>
+              <span class="source">from               <span class="device">web</span>
+             </span>
+              <span class="location">at <a href="http://www.geonames.org/4903898" rel="external"><abbr class="geo" title="42.0633600;-87.6975600">North Evanston, Wilmette, Illinois, United States</abbr></a></span>
+              <a href="http://identi.ca/conversation/65420606#notice-66202774" class="response">in context</a>
+            </div>
+           </li>
+           <li class="hentry notice notice-source-web" id="notice-63493020">
+            <div class="entry-title">
+             <div class="author">
+              <span class="vcard author">
+               <a href="http://identi.ca/timbl" class="url" title="timbl">
+                <img src="http://avatar3.status.net/i/identica/45563-48-20090329133119.jpeg" class="avatar photo" width="48" height="48" alt="Tim Berners-Lee"/>
+                 <span class="fn">Tim Berners-Lee</span>
+               </a>
+              </span>
+             </div>
+             <p class="entry-content">#<span class="tag"><a href="http://identi.ca/tag/netrights" rel="tag">netrights</a></span> Alex Pasternak's <a href="http://www.motherboard.tv/2011/1/30/egypt-net-neutrality-and-the-ethics-of-internet-suicide" title="http://www.motherboard.tv/2011/1/30/egypt-net-neutrality-and-the-ethics-of-internet-suicide" rel="external">http://www.motherboard.tv/2011/1/30/egypt-net-neutrality-and-the-ethics-of-internet-suicide</a></p>
+            </div>
+            <div class="entry-content thumbnails"></div>
+            <div class="entry-content">
+             <a rel="bookmark" class="timestamp" href="http://identi.ca/notice/63493020">
+              <abbr class="published" title="2011-02-02T05:01:52+00:00">Wednesday, 02-Feb-11 05:01:52 UTC</abbr>
+             </a>
+              <span class="source">from               <span class="device">web</span>
+             </span>
+            </div>
+           </li>
+           <li class="hentry notice notice-source-web" id="notice-63476766">
+            <div class="entry-title">
+             <div class="author">
+              <span class="vcard author">
+               <a href="http://identi.ca/timbl" class="url" title="timbl">
+                <img src="http://avatar3.status.net/i/identica/45563-48-20090329133119.jpeg" class="avatar photo" width="48" height="48" alt="Tim Berners-Lee"/>
+                 <span class="fn">Tim Berners-Lee</span>
+               </a>
+              </span>
+             </div>
+             <p class="entry-content">Please turn the Internet back on in Egypt now, President Mubarak. #<span class="tag"><a href="http://identi.ca/tag/netrights" rel="tag">netrights</a></span></p>
+            </div>
+            <div class="entry-content">
+             <a rel="bookmark" class="timestamp" href="http://identi.ca/notice/63476766">
+              <abbr class="published" title="2011-02-01T23:50:10+00:00">Tuesday, 01-Feb-11 23:50:10 UTC</abbr>
+             </a>
+              <span class="source">from               <span class="device">web</span>
+             </span>
+              <a href="http://identi.ca/conversation/62765322#notice-63476766" class="response">in context</a>
+            </div>
+           </li>
+           <li class="hentry notice notice-source-adium" id="notice-61156275">
+            <div class="entry-title">
+             <div class="author">
+              <span class="vcard author">
+               <a href="http://identi.ca/timbl" class="url" title="timbl">
+                <img src="http://avatar3.status.net/i/identica/45563-48-20090329133119.jpeg" class="avatar photo" width="48" height="48" alt="Tim Berners-Lee"/>
+                 <span class="fn">Tim Berners-Lee</span>
+               </a>
+              </span>
+             </div>
+             <p class="entry-content">@<span class="vcard"><a href="http://identi.ca/user/16938" class="url" title="Stephen Michael Kellat"><span class="fn nickname">alpacaherder</span></a></span>   I would be able to give the URI to a client and it would be able to set me up.  Like an RSS  but not like  CalDav.</p>
+            </div>
+            <div class="entry-content">
+             <a rel="bookmark" class="timestamp" href="http://identi.ca/notice/61156275">
+              <abbr class="published" title="2010-12-28T00:38:33+00:00">Tuesday, 28-Dec-10 00:38:33 UTC</abbr>
+             </a>
+              <span class="source">from               <span class="device">
+               <a href="http://www.adiumx.com/" rel="external">Adium</a>
+              </span>
+             </span>
+            </div>
+           </li>
+           <li class="hentry notice notice-source-adium" id="notice-61156127">
+            <div class="entry-title">
+             <div class="author">
+              <span class="vcard author">
+               <a href="http://identi.ca/timbl" class="url" title="timbl">
+                <img src="http://avatar3.status.net/i/identica/45563-48-20090329133119.jpeg" class="avatar photo" width="48" height="48" alt="Tim Berners-Lee"/>
+                 <span class="fn">Tim Berners-Lee</span>
+               </a>
+              </span>
+              <span class="addressees">
+               <a href="http://identi.ca/evan" title="evan" class="addressee account">Evan Prodromou</a>
+              </span>
+             </div>
+             <p class="entry-content">@<span class="vcard"><a href="http://identi.ca/user/1" class="url" title="Evan Prodromou"><span class="fn nickname">evan</span></a></span>, got a pointer to those proposed acct: uris?</p>
+            </div>
+            <div class="entry-content">
+             <a rel="bookmark" class="timestamp" href="http://identi.ca/notice/61156127">
+              <abbr class="published" title="2010-12-28T00:36:23+00:00">Tuesday, 28-Dec-10 00:36:23 UTC</abbr>
+             </a>
+              <span class="source">from               <span class="device">
+               <a href="http://www.adiumx.com/" rel="external">Adium</a>
+              </span>
+             </span>
+              <a href="http://identi.ca/conversation/60524241#notice-61156127" class="response">in context</a>
+            </div>
+           </li>
+           <li class="hentry notice notice-source-adium" id="notice-61135714">
+            <div class="entry-title">
+             <div class="author">
+              <span class="vcard author">
+               <a href="http://identi.ca/timbl" class="url" title="timbl">
+                <img src="http://avatar3.status.net/i/identica/45563-48-20090329133119.jpeg" class="avatar photo" width="48" height="48" alt="Tim Berners-Lee"/>
+                 <span class="fn">Tim Berners-Lee</span>
+               </a>
+              </span>
+             </div>
+             <p class="entry-content">@<span class="vcard"><a href="http://identi.ca/user/36165" class="url" title="Karl Dubost"><span class="fn nickname">karlpro</span></a></span> When it is a single URI I can drag/drop it, and make my web browser aware so that it can prompt me to subs Adium to that account</p>
+            </div>
+            <div class="entry-content">
+             <a rel="bookmark" class="timestamp" href="http://identi.ca/notice/61135714">
+              <abbr class="published" title="2010-12-27T15:56:43+00:00">Monday, 27-Dec-10 15:56:43 UTC</abbr>
+             </a>
+              <span class="source">from               <span class="device">
+               <a href="http://www.adiumx.com/" rel="external">Adium</a>
+              </span>
+             </span>
+              <a href="http://identi.ca/conversation/60504660#notice-61135714" class="response">in context</a>
+            </div>
+           </li>
+           <li class="hentry notice notice-source-adium" id="notice-61135407">
+            <div class="entry-title">
+             <div class="author">
+              <span class="vcard author">
+               <a href="http://identi.ca/timbl" class="url" title="timbl">
+                <img src="http://avatar3.status.net/i/identica/45563-48-20090329133119.jpeg" class="avatar photo" width="48" height="48" alt="Tim Berners-Lee"/>
+                 <span class="fn">Tim Berners-Lee</span>
+               </a>
+              </span>
+             </div>
+             <p class="entry-content">@<span class="vcard"><a href="http://identi.ca/user/12956" class="url" title="Marjolein Katsma"><span class="fn nickname">marjoleink</span></a></span> but the form asks you to fill in server, path and  username, or username and API separately</p>
+            </div>
+            <div class="entry-content">
+             <a rel="bookmark" class="timestamp" href="http://identi.ca/notice/61135407">
+              <abbr class="published" title="2010-12-27T15:48:30+00:00">Monday, 27-Dec-10 15:48:30 UTC</abbr>
+             </a>
+              <span class="source">from               <span class="device">
+               <a href="http://www.adiumx.com/" rel="external">Adium</a>
+              </span>
+             </span>
+              <a href="http://identi.ca/conversation/60504021#notice-61135407" class="response">in context</a>
+            </div>
+           </li>
+          </ol>
+         </div>
+         <ul class="nav" id="pagination">
+          <li class="nav_next">
+           <a href="http://identi.ca/timbl?page=2" rel="next">Before</a>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div id="aside_primary" class="aside">
+        <div class="profile_block account_profile_block section">
+         <div class="entity_actions">
+          <h2>User actions</h2>
+          <ul>
+           <li class="entity_subscribe">
+            <a href="http://identi.ca/main/ostatus/nickname/timbl" class="entity_remote_subscribe">Subscribe</a>
+           </li>
+           <li class="entity_tag">
+            <a href="http://identi.ca/main/ostatustag" class="entity_remote_tag">List</a>
+           </li>
+          </ul>
+         </div>
+         <img src="http://avatar3.status.net/i/identica/45563-96-20090329133119.jpeg" class="ur_face" alt="Tim Berners-Lee" width="96" height="96"/>
+         <p class="profile_block_name">
+          <a href="http://identi.ca/timbl">Tim Berners-Lee</a>
+         </p>
+         <p class="profile_block_location">US</p>
+         <a href="http://www.w3.org/People/Berners-Lee" rel="me" class="profile_block_homepage">http://www.w3.org/People/Berners-Lee</a>
+         <ul class="profile_block_otherprofile_list">
+          <li>
+           <a href="http://twitter.com/timberners_lee" rel="me" class="profile_block_otherprofile" title="@timberners_lee on Twitter">
+            <img src="http://plugins2.status.net/TwitterBridge/icons/twitter-bird-white-on-blue.png" class="profile_block_otherprofile_icon"/>
+           </a>
+          </li>
+          <li>
+           <a href="http://www.w3.org/People/Berners-Lee/" rel="me" class="profile_block_otherprofile" title="OpenID">
+            <img src="http://plugins2.status.net/OpenID/icons/openid-16x16.gif" class="profile_block_otherprofile_icon"/>
+           </a>
+          </li>
+         </ul>
+         <p class="profile_block_description">My Web ID (FOAF) is: http://www.w3.org/People/Berners-Lee/card#i  I sometimes hang out on irc://irc.freenode.net/swig</p>
+         <dl class="entity_tags user_profile_tags">
+          <dt>Tags</dt>
+          <dd>
+           <ul class="tags xoxo">
+            <li class="hashptag mode-public"><span class="mark_hash">#</span><a rel="tag" href="http://identi.ca/selftag/linkeddata">linkeddata</a></li>
+            <li class="hashptag mode-public"><span class="mark_hash">#</span><a rel="tag" href="http://identi.ca/selftag/openspace">openspace</a></li>
+            <li class="hashptag mode-public"><span class="mark_hash">#</span><a rel="tag" href="http://identi.ca/selftag/webarchitecture">webarchitecture</a></li>
+           </ul>
+          </dd>
+         </dl>
+        </div>
+        <div id="generic_section" class="section">
+         <h2>Site notice</h2>
+<ul>
+<li><a href="http://ur1.ca/3j037">API</a></li>
+<li><a href="http://ur1.ca/gklg">Status</a></li>
+</ul></div>
+        <div id="entity_subscriptions" class="section">
+         <h2>
+          <a href="http://identi.ca/timbl/subscriptions" class="">Following</a>
+ 25</h2>
+         <ul class="entities users xoxo">
+          <li class="vcard">
+           <a href="http://tweet.ie/nerin" class="url" rel="contact member" title="nerin">
+            <img src="http://avatar3.status.net/i/identica/144261-24-20100309141326.jpeg" width="24" height="24" class="avatar photo" alt="nerin"/>
+            <span class="fn nickname">nerin</span>
+           </a>
+          </li>
+          <li class="vcard">
+           <a href="http://tweet.ie/johnbreslin" class="url" rel="contact member" title="John Breslin">
+            <img src="http://avatar3.status.net/i/identica/144263-24-20100309141339.jpeg" width="24" height="24" class="avatar photo" alt="John Breslin"/>
+            <span class="fn nickname">johnbreslin</span>
+           </a>
+          </li>
+          <li class="vcard">
+           <a href="http://identi.ca/bluegrasspoet" class="url" rel="contact member" title="Sherry Chandler">
+            <img src="http://avatar3.status.net/i/identica/31996-24-20090716160405.jpeg" width="24" height="24" class="avatar photo" alt="Sherry Chandler"/>
+            <span class="fn nickname">bluegrasspoet</span>
+           </a>
+          </li>
+          <li class="vcard">
+           <a href="http://identi.ca/w3c" class="url" rel="contact member" title="W3C (World Wide Web Consortium)">
+            <img src="http://avatar3.status.net/i/identica/48404-24-20101207100031.png" width="24" height="24" class="avatar photo" alt="W3C (World Wide Web Consortium)"/>
+            <span class="fn nickname">w3c</span>
+           </a>
+          </li>
+          <li class="vcard">
+           <a href="http://identi.ca/timoreally" class="url" rel="contact member" title="Tim O'Really">
+            <img src="http://avatar3.status.net/i/identica/46626-24-20090401140812.jpeg" width="24" height="24" class="avatar photo" alt="Tim O'Really"/>
+            <span class="fn nickname">timoreally</span>
+           </a>
+          </li>
+          <li class="vcard">
+           <a href="http://identi.ca/scor" class="url" rel="contact member" title="Stephane Corlosquet">
+            <img src="http://avatar3.status.net/i/identica/40672-24-20090330104958.jpeg" width="24" height="24" class="avatar photo" alt="Stephane Corlosquet"/>
+            <span class="fn nickname">scor</span>
+           </a>
+          </li>
+          <li class="vcard">
+           <a href="http://identi.ca/kidehen" class="url" rel="contact member" title="Kingsley Uyi Idehen">
+            <img src="http://avatar3.status.net/i/identica/14092-24-20090413171139.jpeg" width="24" height="24" class="avatar photo" alt="Kingsley Uyi Idehen"/>
+            <span class="fn nickname">kidehen</span>
+           </a>
+          </li>
+          <li class="vcard">
+           <a href="http://identi.ca/cjmconnors" class="url" rel="contact member" title="Christine Connors">
+            <img src="http://avatar3.status.net/i/identica/6986-24-20090330003428.png" width="24" height="24" class="avatar photo" alt="Christine Connors"/>
+            <span class="fn nickname">cjmconnors</span>
+           </a>
+          </li>
+         </ul>
+        </div>
+        <div id="entity_subscribers" class="section">
+         <h2>
+          <a href="http://identi.ca/timbl/subscribers" class="">Followers</a>
+ 4848</h2>
+         <ul class="entities users xoxo">
+          <li class="vcard">
+           <a href="http://identi.ca/emransha88" class="url" rel="contact member nofollow" title="Amdadul Hoque Emran">
+            <img src="http://avatar3.status.net/i/identica/914884-24-20120724181414.jpeg" width="24" height="24" class="avatar photo" alt="Amdadul Hoque Emran"/>
+            <span class="fn nickname">emransha88</span>
+           </a>
+          </li>
+          <li class="vcard">
+           <a href="http://identi.ca/jthomas1000" class="url" rel="contact member nofollow" title="Justin Thomas">
+            <img src="http://avatar3.status.net/i/identica/830062-24-20120615194013.jpeg" width="24" height="24" class="avatar photo" alt="Justin Thomas"/>
+            <span class="fn nickname">jthomas1000</span>
+           </a>
+          </li>
+          <li class="vcard">
+           <a href="http://identi.ca/logicreviews1" class="url" rel="contact member nofollow" title="Logic Reviews">
+            <img src="http://avatar3.status.net/i/identica/908644-24-20120721212604.jpeg" width="24" height="24" class="avatar photo" alt="Logic Reviews"/>
+            <span class="fn nickname">logicreviews1</span>
+           </a>
+          </li>
+          <li class="vcard">
+           <a href="http://identi.ca/kondorflite" class="url" rel="contact member nofollow" title="kondorflite">
+            <img src="http://avatar3.status.net/i/identica/906978-24-20120721015659.jpeg" width="24" height="24" class="avatar photo" alt="kondorflite"/>
+            <span class="fn nickname">kondorflite</span>
+           </a>
+          </li>
+          <li class="vcard">
+           <a href="http://identi.ca/nerdim" class="url" rel="contact member nofollow" title="Felipe Brumatti Sentelhas">
+            <img src="http://avatar3.status.net/i/identica/30958-24-20090111061140.png" width="24" height="24" class="avatar photo" alt="Felipe Brumatti Sentelhas"/>
+            <span class="fn nickname">nerdim</span>
+           </a>
+          </li>
+          <li class="vcard">
+           <a href="http://identi.ca/mikefisher" class="url" rel="contact member nofollow" title="Mike Fisher">
+            <img src="http://theme2.status.net/neo/default-avatar-mini.png" width="24" height="24" class="avatar photo" alt="Mike Fisher"/>
+            <span class="fn nickname">mikefisher</span>
+           </a>
+          </li>
+          <li class="vcard">
+           <a href="http://identi.ca/auoffers" class="url" rel="contact member nofollow" title="Electronic bazaar AU">
+            <img src="http://theme2.status.net/neo/default-avatar-mini.png" width="24" height="24" class="avatar photo" alt="Electronic bazaar AU"/>
+            <span class="fn nickname">auoffers</span>
+           </a>
+          </li>
+          <li class="vcard">
+           <a href="http://identi.ca/antjanus" class="url" rel="contact member nofollow" title="Antonin Janus">
+            <img src="http://avatar3.status.net/i/identica/179713-24-20110727221043.jpeg" width="24" height="24" class="avatar photo" alt="Antonin Janus"/>
+            <span class="fn nickname">antjanus</span>
+           </a>
+          </li>
+         </ul>
+        </div>
+        <div id="entity_groups" class="section">
+         <h2>
+          <a href="http://identi.ca/timbl/groups" class="">Groups</a>
+ 1</h2>
+         <ul class="entities groups xoxo">
+          <li class="vcard">
+           <a title="RDForms and pushback technologies" href="http://identi.ca/group/rdforms" rel="contact group" class="url">
+            <img src="http://avatar.identi.ca/2139-24-20090405161320.png" width="24" height="24" class="avatar photo" alt="RDForms and pushback technologies"/>
+            <span class="fn org nickname">rdforms</span>
+           </a>
+          </li>
+         </ul>
+        </div>
+        <div id="entity_lists" class="section">
+         <h2>
+          <a href="http://identi.ca/timbl/peopletags">Lists</a>
+ 3</h2>
+         <ul>
+          <a href="http://identi.ca/timbl/all/webarchitecture">webarchitecture</a>
+,           <a href="http://identi.ca/timbl/all/openspace">openspace</a>
+,           <a href="http://identi.ca/timbl/all/linkeddata">linkeddata</a>
+         </ul>
+        </div>
+        <div id="entity_statistics" class="section">
+         <h2>Statistics</h2>
+         <dl class="entity_user-id">
+          <dt>User ID</dt>
+          <dd>45563</dd>
+         </dl>
+         <dl class="entity_member-since">
+          <dt>Member since</dt>
+          <dd>26 Mar 2009</dd>
+         </dl>
+         <dl class="entity_notices">
+          <dt>Notices</dt>
+          <dd>99</dd>
+         </dl>
+         <dl class="entity_daily_notices">
+          <dt>Daily average</dt>
+          <dd>0</dd>
+         </dl>
+        </div>
+        <div id="export_data" class="section">
+         <h2>Feeds</h2>
+         <ul class="xoxo">
+          <li>
+           <a href="http://identi.ca/api/statuses/user_timeline/45563.as" class="json" type="application/stream+json" title="Notice feed for timbl (Activity Streams JSON)">Activity Streams</a>
+          </li>
+          <li>
+           <a href="http://identi.ca/timbl/rss" class="rss" type="application/rdf+xml" title="Notice feed for timbl (RSS 1.0)">RSS 1.0</a>
+          </li>
+          <li>
+           <a href="http://identi.ca/api/statuses/user_timeline/45563.rss" class="rss" type="application/rss+xml" title="Notice feed for timbl (RSS 2.0)">RSS 2.0</a>
+          </li>
+          <li>
+           <a href="http://identi.ca/api/statuses/user_timeline/45563.atom" class="atom" type="application/atom+xml" title="Notice feed for timbl (Atom)">Atom</a>
+          </li>
+          <li>
+           <a href="http://identi.ca/timbl/foaf" class="foaf" type="application/rdf+xml" title="FOAF for timbl">FOAF</a>
+          </li>
+         </ul>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div id="footer">
+    <ul class="nav" id="site_nav_global_secondary">
+     <li>
+      <a href="http://identi.ca/doc/help">Help</a>
+     </li>
+     <li>
+      <a href="http://identi.ca/doc/about">About</a>
+     </li>
+     <li>
+      <a href="http://identi.ca/doc/faq">FAQ</a>
+     </li>
+     <li>
+      <a href="http://identi.ca/doc/tos">TOS</a>
+     </li>
+     <li>
+      <a href="http://identi.ca/doc/privacy">Privacy</a>
+     </li>
+     <li>
+      <a href="http://identi.ca/doc/source">Source</a>
+     </li>
+     <li>
+      <a href="http://identi.ca/main/version">Version</a>
+     </li>
+     <li>
+      <a href="http://identi.ca/doc/contact">Contact</a>
+     </li>
+    </ul>
+<p><strong>Identi.ca</strong> is a microblogging service brought to you by <a href="http://status.net/">Status.net</a>. It runs the <a href="http://status.net/">StatusNet</a> microblogging software, version 1.1.0-release, available under the <a href="http://www.fsf.org/licensing/licenses/agpl-3.0.html">GNU Affero General Public License</a>.</p>
+    <p>
+     <img id="license_cc" src="http://i.creativecommons.org/l/by/3.0/80x15.png" alt="Creative Commons Attribution 3.0" width="80" height="15"/>
+ All Identi.ca content and data are available under the <a class="license" rel="external license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0</a> license.</p>
+    <p>
+     <a href="#" id="mobile-toggle-enable">Switch to mobile site layout.</a>
+    </p>
+    <div>
+     <a href="http://builtinmtl.com/">Built in Montreal</a>
+    </div>
+   </div>
+  </div>
+  <script type="text/javascript" src="http://js2.status.net/jquery.min.js?version=1.1.0-release"> </script>
+  <script type="text/javascript" src="http://js2.status.net/jquery.form.min.js?version=1.1.0-release"> </script>
+  <script type="text/javascript" src="http://js2.status.net/jquery-ui.min.js?version=1.1.0-release"> </script>
+  <script type="text/javascript" src="http://js2.status.net/jquery.cookie.min.js?version=1.1.0-release"> </script>
+  <script type="text/javascript">/*<![CDATA[*/ if (typeof window.JSON !== "object") { $.getScript("http://identi.ca/js/json2.min.js"); } /*]]>*/</script>
+  <script type="text/javascript" src="http://js2.status.net/jquery.joverlay.min.js?version=1.1.0-release"> </script>
+  <script type="text/javascript" src="http://js2.status.net/jquery.infieldlabel.min.js?version=1.1.0-release"> </script>
+  <script type="text/javascript" src="http://js2.status.net/util.min.js?version=1.1.0-release"> </script>
+  <script type="text/javascript">/*<![CDATA[*/ var _peopletagAC = "http://identi.ca/main/peopletagautocomplete"; /*]]>*/</script>
+  <script type="text/javascript">/*<![CDATA[*/ SN.messages={"showmore_tooltip":"Show more","reply_submit":"Reply","reply_placeholder":"Write a reply...","realtime_play":"Play","realtime_play_tooltip":"Play","realtime_pause":"Pause","realtime_pause_tooltip":"Pause","realtime_popup":"Pop up","realtime_popup_tooltip":"Pop up in a window"} /*]]>*/</script>
+  <script type="text/javascript">/*<![CDATA[*/ if (window.top !== window.self) { document.write = ""; window.top.location = window.self.location; setTimeout(function () { document.body.innerHTML = ""; }, 1); window.self.onload = function () { document.body.innerHTML = ""; }; } /*]]>*/</script>
+  <script type="text/javascript" src="http://plugins2.status.net/OStatus/js/ostatus.js"> </script>
+  <script type="text/javascript">/*<![CDATA[*/ 
+            $(function() {
+                $("#mobile-toggle-disable").click(function() {
+                    $.cookie("MobileOverride", "0", {path: "/"});
+                    window.location.reload();
+                    return false;
+                });
+                $("#mobile-toggle-enable").click(function() {
+                    $.cookie("MobileOverride", "1", {path: "/"});
+                    window.location.reload();
+                    return false;
+                });
+                $("#navtoggle").click(function () {
+                          $("#site_nav_local_views").fadeToggle();
+                          var text = $("#navtoggle").text();
+                          $("#navtoggle").text(
+                          text == "Show Navigation" ? "Hide Navigation" : "Show Navigation");
+                });
+            }); /*]]>*/</script>
+  <script type="text/javascript" src="http://plugins2.status.net/Realtime/realtimeupdate.min.js"> </script>
+  <script type="text/javascript" src="http://js.pusherapp.com/1.9/pusher.min.js"> </script>
+  <script type="text/javascript" src="http://identi.ca//local/plugins/Pusher/pusherupdater.js"> </script>
+  <script type="text/javascript">/*<![CDATA[*/  $(document).ready(function() {  RealtimeUpdate.initActions("http:\/\/identi.ca\/timbl?realtime=1", "identica-89784b85e118cec18dd6b0f5c6fb294a", "http:\/\/identi.ca\/plugins\/Realtime\/", "http:\/\/identi.ca\/main\/channel\/89784b85e118cec18dd6b0f5c6fb294a\/keepalive", "http:\/\/identi.ca\/main\/channel\/89784b85e118cec18dd6b0f5c6fb294a\/close"); RealtimeUpdate.init(0, "http://identi.ca/notice/0000000000");  PusherUpdater.init("630df9daf3ac2d981076", "identica-89784b85e118cec18dd6b0f5c6fb294a", true);});  /*]]>*/</script>
+  <script type="text/javascript" src="http://plugins2.status.net/Bookmark/js/bookmark.js"> </script>
+  <script type="text/javascript" src="http://plugins2.status.net/Event/event.js"> </script>
+  <script type="text/javascript" src="http://plugins2.status.net/QnA/js/qna.js"> </script>
+ </body>
+<!-- 1666ms --></html>

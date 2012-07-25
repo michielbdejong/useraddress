@@ -163,9 +163,9 @@ function checkStubs(url) {
    'http://www.w3.org/People/Berners-Lee/card.rdf': 'file://exampleFiles/timbl-foaf.rdf',
    'http://graph.facebook.com/512908782': 'file://exampleFiles/timbl-fb.turtle',
    'http://identi.ca/user/45563': 'file://exampleFiles/timbl-id.html',
-   'http://www.advogato.org/person/timbl/foaf.rdf': 'file://exampleFiles/timbl-foaf2.html',
-   'http://www4.wiwiss.fu-berlin.de/bookmashup/persons/Tim+Berners-Lee': 'file://exampleFiles/timbl-fu1.html',
-   'http://www4.wiwiss.fu-berlin.de/dblp/resource/person/100007': 'file://exampleFiles/timbl-fu2.html',
+   'http://www.advogato.org/person/timbl/foaf.rdf': 'file://exampleFiles/timbl-foaf2.rdf',
+   'http://www4.wiwiss.fu-berlin.de/bookmashup/persons/Tim+Berners-Lee': 'file://exampleFiles/timbl-fu1.rdf',
+   'http://www4.wiwiss.fu-berlin.de/dblp/resource/person/100007': 'file://exampleFiles/timbl-fu2.rdf',
 
    'http://tantek.com/': 'file://exampleFiles/tantek.html',
    'http://www.facebook.com/tantek.celik': 'file://exampleFiles/tantek-fb.html',
@@ -231,6 +231,18 @@ function parse(url, docRel, cb) {
         cb('unsupported Content-Type '+data.headers['Content-Type']);
       } else {
         doParse(url, parser, docRel, data.headers, data.content, function(err, data) {
+          if(url.indexOf('gmail')!=-1) {
+            data.tools['mailto:'+data.textFields.nick+'@gmail.com']='M';
+            data.tools['xmpp:'+data.textFields.nick+'@gmail.com']='PM';
+          }
+          if(url.indexOf('facebook')!=-1) {
+            data.tools['mailto:'+data.textFields.nick+'@facebook.com']='M';
+            data.tools['xmpp:'+data.textFields.nick+'@facebook.com']='PM';
+            data.tools['facebook:'+data.textFields.nick]='PMRFC';
+          }
+          if(url.indexOf('twitter')!=-1) {
+            data.tools['twitter:'+data.textFields.nick]='MRF';
+          }
           cb(err, data);
         });
       }
