@@ -2,13 +2,12 @@ var xml2js=require('xml2js');
 exports.parse = function(url, docRel, headers, content, cb) {
   new xml2js.Parser().parseString(content, function(err, data2) {
     var obj= {
-      identifiers: identifiers,
       textFields: {},
       images: {},
-      seeAlso: {},
+      documents: {},
       follows: {},
       tools: {},
-      data: data2
+      data: {}
     };
     if(data2.PersonalProfileDocument) {
       for(var i=0; i<data2.PersonalProfileDocument.length; i++) {
@@ -28,18 +27,29 @@ exports.parse = function(url, docRel, headers, content, cb) {
     }
     if(data2.Agent) {
       for(var i=0; i<data2.Agent.length; i++) {
-        if(data2.Agent[i]['@'] && data2.Agent[i]['@']['rdf:about'] && obj.identifiers[data2.Agent[i]['@']['rdf:about']]) {
-          obj.textFields.fullName = data2.Agent[i].name;
-          obj.textFields.bio = data2.Agent[i]['bio:olb'];
-          obj.images.avatar = data2.Agent[i].img.Image['@']['rdf:about'];
+        var thisObj = {
+          textFields: {},
+          images: {},
+          documents: {},
+          follows: {},
+          tools: {},
+          data: {}
+        };
+        thisObj.textFields.fullName = data2.Agent[i].name;
+        thisObj.textFields.bio = data2.Agent[i]['bio:olb'];
+        if(data2.Agent[i].account && data2.Agent[i].account.OnlineAccount && data2.Agent[i].account.OnlineAccount.accountName) {
+          thisObj.textFields.nick = data2.Agent[i].account.OnlineAccount.accountName;
         }
+        if(data2.Agent[i].img && data2.Agent[i].img.Image && data2.Agent[i].img.Image['@'] && data2.Agent[i].img.Image['@']['rdf:about']) {
+          thisObj.images.avatar = data2.Agent[i].img.Image['@']['rdf:about'];
+        }
+        obj.data[data2.Agent[i]['@']['rdf:about']] = thisObj;
       }
     }
-    console.log('calling back from foaf');
     if(data2['con:Male'] && data2['con:Male']['owl:sameAs']) {
       for(var i=0; i<data2['con:Male']['owl:sameAs'].length; i++) {
         if(data2['con:Male']['owl:sameAs'][i]['@'] && data2['con:Male']['owl:sameAs'][i]['@']['rdf:resource']) {
-          obj.seeAlso[data2['con:Male']['owl:sameAs'][i]['@']['rdf:resource']]='magic';
+          obj.documents[data2['con:Male']['owl:sameAs'][i]['@']['rdf:resource']]='magic';
         }
       }
     }

@@ -29,13 +29,11 @@ exports.parse = function(url, docRel, headers, content, cb) {
       cb('mime type was '+data.headers['Content-Type']+' but no valid HTML');
     } else {
       var obj= {
-        identifiers: identifiers,
         textFields: {},
         images: {},
-        seeAlso: {},
+        documents: {},
         follows: {},
-        tools: {},
-        data: data2
+        tools: {}
       };
       for(var i=0; i<data2.length; i++) {
         parseSubTree(data2[i], function(property, content) {
@@ -48,7 +46,7 @@ exports.parse = function(url, docRel, headers, content, cb) {
           } else if(property== 'me' && (
               content.substring('http://'.length)=='http' ||
               content.substring('https://'.length)=='https')) {
-            obj.seeAlso[content]='magic'; 
+            obj.documents[content]='magic'; 
           }
         });
       }
@@ -56,5 +54,5 @@ exports.parse = function(url, docRel, headers, content, cb) {
     }
   });
   var parser = new htmlparser.Parser(handler);
-  parser.parseComplete(data.content);
+  parser.parseComplete(content);
 };

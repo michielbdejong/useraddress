@@ -5,7 +5,6 @@ var fs=require('fs'),
   _env='production';
 
 function doParse(url, type, docRel, headers, content, cb) {
-  console.log('parsing as '+type);
   require('./parser/'+type).parse(url, docRel, headers, content, function(err, data) {
     //data = {
     //  textFields: {},
@@ -16,8 +15,6 @@ function doParse(url, type, docRel, headers, content, cb) {
     //  data: undefined
     //};
     var outstanding = 0;
-    console.log('parsed to documents:');
-    console.log(data.documents);
     for(var i in data.documents) {
       outstanding++;//map
       parse(i, data.documents[i], function(err2, data2) {
@@ -25,26 +22,43 @@ function doParse(url, type, docRel, headers, content, cb) {
         if(err2) {
           err = err2;
         }
-        for(var attr in data2) {
-          for(var j in data2[attr]) {
-            data[attr][j]=data2[attr][j];
-          }
-        }
         if(outstanding == 0) {
-          delete data.data;
+          for(var i in data2.data) {
+            if(data.documents[i]) {
+              for(var j in data2.data[i]) {
+                for(var k in data2.data[i][j]) {
+                  data[j][k]=data2.data[i][j][k];
+                }
+              }
+            }
+          }
+          for(var j in data2) {
+            if(j != 'data') {
+              for(var k in data2[j]) {
+                data[j][k]=data2[j][k];
+              }
+            }
+          }
           cb(err, data);
         }
       });
     }
     if(outstanding == 0) {
-      delete data.data;
+      for(var i in data.data) {
+        if(data.documents[i]) {
+          for(var j in data.data[i]) {
+            for(var k in data.data[i][j]) {
+              data[j][k]=data.data[i][j][k];
+            }
+          }
+        }
+      }
       cb(err, data);
     }
   });
 }
 
 function fetch(urlStr, cb) {
-  console.log(urlStr);
   if(urlStr.substring(0, 'file://exampleFiles/'.length) == 'file://exampleFiles/') {
     fs.readFile(urlStr.substring('file://'.length), function(err, content) {
       var urlStrParts = urlStr.split('.');
@@ -121,7 +135,7 @@ function checkStubs(url) {
   var cache = {
    'https://identi.ca/.well-known/host-meta?resource=acct:michielbdejong@identi.ca': 'file://exampleFiles/id-hostmeta.xrd',
    'http://identi.ca/main/xrd?uri=acct:michielbdejong@identi.ca': 'file://exampleFiles/id-lrdd.xrd',
-   'http://identi.ca/michielbdejong/foaf': 'file://exampleFiles/id-foaf.html',
+   'http://identi.ca/michielbdejong/foaf': 'file://exampleFiles/id-foaf.rdf',
    'http://identi.ca/michielbdejong': 'file://exampleFiles/id-profile.html',
    'http://identi.ca/user/425878': 'file://exampleFiles/id-profile.html',
 
@@ -192,6 +206,8 @@ function chooseParser(contentType) {
     return 'rdf';
   } else if(contentType=='xrd') {
     return 'xrd';
+  } else if(contentType=='turtle') {
+    return 'turtle';
   } else {
     return 'html';
   }
