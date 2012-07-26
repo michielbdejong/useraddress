@@ -33,7 +33,7 @@
       if(str.length < 3) {
         return;
       }
-      if(str == row.userAddress) {
+      if(row.userAddress.indexOf(str)!=-1) {
         return row.textFields.fullName;
       }
       var words = [];
@@ -44,8 +44,8 @@
         words.push(row.textFields.nick);
       }
       for(var i=0; i<words.length; i++) {
-        if(words[i].toLowerCase().substring(0, str.length) == str) {
-          return words.slice(0, i).join(' ')+'<strong>'+words[i].substring(0, str.length)+'</strong>'+words[i].substring(str.length)+' '+words.slice(i+1).join(' ');
+        if(words[i].toLowerCase().indexOf(str)!=-1) {
+          return words.slice(0, i).join(' ')+'<strong>'+words[i].substring(words[i].toLowerCase().indexOf(str), str.length)+'</strong>'+words[i].substring(str.length)+' '+words.slice(i+1).join(' ');
         }
       }  
     }
@@ -58,7 +58,30 @@
         var nameMatch = matches(rows[i], document.getElementById('in').value);
         if(nameMatch) {
           str += '<li>'+(rows[i].images.avatar?'<img src="'+rows[i].images.avatar+'" style="width:64px;height:64px"> ':'')
-            +nameMatch+' &lt;'+rows[i].userAddress+'&gt;</li>';
+            +nameMatch+' &lt;'+rows[i].userAddress+'&gt; [';
+          var toolsAvailable={
+            P: false,//see this contact's presence
+            T: false,//send instant text message to this contact
+            Q: false,//send queued text message to this contact
+            A: false,//receive real-time audio stream from this contact
+            V: false,//receive real-time video stream from this contact
+            R: false,//read this contact's page (profile, blog, ...)
+            F: false,//follow this contact's updates feed
+            C: false,//write a public comment on this contact's page (wall, blog comments, ...)
+          };
+          for(var j in rows[i].tools) {
+            for(var k=0; k<rows[i].tools[j].length; k++) {
+              toolsAvailable[rows[i].tools[j][k]]=true;
+            }
+          }
+          for(var l in toolsAvailable) {
+            if(toolsAvailable[l]==true) {
+              str+=' <strong>'+l+'</strong>';
+            } else {
+              str+=' <strike>'+l+'</strike>';
+            }
+          }
+          str+=' ]</li>';
         }
       }
       document.getElementById('results').innerHTML = str;

@@ -8,8 +8,9 @@ function add(userAddress, obj) {
   console.log(obj);
   data[userAddress] = {
     userAddress: userAddress,
-    textFields: obj.textFields || [],
-    images: obj.images || [],
+    textFields: obj.textFields || {},
+    images: obj.images || {},
+    tools: obj.tools || {},
     type: 'row'
   }
   var words = [];
