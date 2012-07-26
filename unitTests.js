@@ -2,6 +2,9 @@ var masterParser = require('./masterParser');
 
 function doFile(url, expect) {
   masterParser.parse(url, 'input', function(err, data) {
+    console.log(err);
+    console.log(data);
+    console.log(expect);
     if(err) {
       console.log('********** FAIL '+url+': '+err);
     } else {
@@ -20,6 +23,17 @@ function doFile(url, expect) {
           }
         }
       }
+      for(var i in data) {
+        if(!expect[i]) {
+          console.log('********** EXTRA '+url+': extra category.'+i);
+        } else { 
+          for(var j in data[i]) {
+            if(expect[i][j] != data[i][j]) {
+              console.log('********** EXTRA '+url+': expected '+expect[i][j]+' instead of '+data[i][j]+' for data.'+i+'.'+j);
+            }
+          }
+        }
+      }
     }
   });
 }
@@ -32,7 +46,8 @@ doFile('michielbdejong@identi.ca', {
   images: { avatar: 'http://avatar.identi.ca/425878-480-20110427110559.jpeg' },
   documents: {
     'http://identi.ca/michielbdejong/foaf': 'describedby',
-    'http://identi.ca/user/425878': true },
+    'http://identi.ca/user/425878': true,
+    'http://identi.ca/main/xrd?uri=acct:michielbdejong@identi.ca': 'lrdd' },
   follows: 
    { 'http://identi.ca/user/425878': true,
      'http://identi.ca/user/136': true,
@@ -52,7 +67,8 @@ doFile('michiel@revolutionari.es', {
  documents: {
    'https://revolutionari.es/profile/michiel': true,
    'https://revolutionari.es/hcard/michiel': 'hcard',
-   'https://revolutionari.es/poco/michiel': 'poco' },
+   'https://revolutionari.es/poco/michiel': 'poco',
+   'https://revolutionari.es/xrd/?uri=acct:michiel@revolutionari.es': 'lrdd' },
   textFields: { fullName: 'Michiel De Jong' },
   images: { avatar: 'https://revolutionari.es/photo/custom/50/55.jpg' },
   follows: 
@@ -70,6 +86,7 @@ doFile('michiel@revolutionari.es', {
      'https://friendica.mafiaspiel.org/profile/leberwurscht': true },
   tools: {
     'https://revolutionari.es/dfrn_poll/michiel': 'F',
+    'https://revolutionari.es/profile/michiel': 'R'
   } 
 });
 doFile('dejong.michiel@gmail.com', {
@@ -107,6 +124,7 @@ doFile('https://graph.facebook.com/dejong.michiel', {
       nick: 'dejong.michiel',
       locale: 'en_US',
       gender: 'male' },
+  documents: {},
   images: { avatar: 'https://graph.facebook.com/dejong.michiel/picture' },
   follows: {},
   tools: {
@@ -119,7 +137,9 @@ doFile('https://graph.facebook.com/dejong.michiel', {
 doFile('michielbdejong@joindiaspora.com', {
   textFields: { fullName: 'Michiel de Jong' },
   images: { avatar: 'https://joindiaspora.s3.amazonaws.com/uploads/images/thumb_small_ffbd568ab8d948d72703.jpg' },
-  documents: { 'https://joindiaspora.com/hcard/users/e583028f23ce0302': 'hcard' },
+  documents: {
+    'https://joindiaspora.com/webfinger?q=acct:michielbdejong@joindiaspora.com': 'lrdd',
+    'https://joindiaspora.com/hcard/users/e583028f23ce0302': 'hcard' },
   follows: {},
   tools: {
     'https://joindiaspora.com/u/michielbdejong': 'R',
@@ -127,7 +147,7 @@ doFile('michielbdejong@joindiaspora.com', {
   }
 });
 doFile('http://melvincarvalho.com/', {
-  textFields: { fullName: 'Melvin Carvalho' },
+  textFields: { fullName: 'Melvin Carvalho', nick: 'melvincarvalho' },
   images: { avatar: 'http://melvincarvalho.com/melvincarvalho.png' },
   documents: {},
   follows: 
@@ -147,8 +167,29 @@ doFile('http://melvincarvalho.com/', {
   }
 });
 doFile('http://tantek.com/', {
-  textFields: { fullName: 'Tantek &#xC7;elik', nick: 'tantekc' }
+  textFields: { fullName: 'Tantek &#xC7;elik', nick: 'tantekc' },
+  images: {},
+  documents: {},
+  follows: {},
+  tools: {}
 });
-doFile('http://www.w3.org/People/Berners-Lee/card.rdf', {}, {
-  textFields: { fullName: 'Timothy Berners-Lee' }
+doFile('http://www.w3.org/People/Berners-Lee/card.rdf', {
+  textFields: 
+   { fullName: 'Tim Berners-Lee',
+     nick: 'tim.bernerslee.9',
+     locale: 'en_US',
+     gender: 'male' },
+  images: { avatar: 'https://graph.facebook.com/tim.bernerslee.9/picture' },
+  documents: 
+   { 'http://graph.facebook.com/512908782#': 'magic',
+     'http://identi.ca/user/45563': 'magic',
+     'http://www.advogato.org/person/timbl/foaf.rdf#me': 'magic',
+     'http://www4.wiwiss.fu-berlin.de/bookmashup/persons/Tim+Berners-Lee': 'magic',
+     'http://www4.wiwiss.fu-berlin.de/dblp/resource/person/100007': 'magic' },
+  follows: { 'http://www.w3.org/People/Berners-Lee/card#i': true },
+  tools: 
+   { 'mailto:tim.bernerslee.9@facebook.com': 'M',
+     'xmpp:tim.bernerslee.9@facebook.com': 'PM',
+     'https://facebook.com/tim.bernerslee.9': 'R',
+     'facebook:tim.bernerslee.9': 'PMRFC' }
 });

@@ -13,10 +13,12 @@ function doParse(url, type, docRel, headers, content, cb) {
     var outstanding = 0;
     for(var i in data.documents) {
       outstanding++;//map
+      console.log('outstanding: '+outstanding);
       parse(i, data.documents[i], function(err2, data2) {
         outstanding--;//reduce
+        console.log('outstanding: '+outstanding);
         if(err2) {
-          err = err2;
+          //err = err2;
         } else {
           for(var i in data2.data) {
             if(data.documents[i]) {
@@ -36,6 +38,7 @@ function doParse(url, type, docRel, headers, content, cb) {
           }
         }
         if(outstanding == 0) {
+          console.log('calling back with that and error '+err);
           cb(err, data);
         }
       });
@@ -55,14 +58,24 @@ function doParse(url, type, docRel, headers, content, cb) {
   });
 }
 
-function chooseParser(contentType) {
-  if(contentType=='js' || contentType=='json') {
-    return 'json';
-  } else if(contentType=='rdf') {
-    return 'rdf';
-  } else if(contentType=='xrd') {
+function chooseParser(contentType, url) {
+  //special hacks while people fix their code:
+  //  - joindiaspora.com serve text/html for the first one
+  //  - revolutionari.es serve text/xml for both
+  if(url.indexOf('/.well-known/host-meta')!=-1 || url.indexOf('/xrd/?uri=acct:')!=-1) {
     return 'xrd';
-  } else if(contentType=='turtle') {
+  }
+  console.log(contentType); console.log(url);
+  contentType=contentType.split(';')[0];
+  
+  console.log('Content-Type: '+contentType);
+  if(contentType=='json' || contentType=='text/javascript' || contentType=='application/json') {
+    return 'json';
+  } else if(contentType=='rdf' || contentType=='application/rdf+xml') {
+    return 'rdf';
+  } else if(contentType=='xrd' || contentType=='application/xrd+xml') {
+    return 'xrd';
+  } else if(contentType=='turtle' || contentType=='text/turtle') {
     return 'turtle';
   } else {
     return 'html';
@@ -84,12 +97,12 @@ function parse(url, docRel, cb) {
   var urlToFetch = url;
   fetcher.fetch(urlToFetch, function(err, data) {
     if(err) {
-      //console.log('fetch error '+url+' '+err);
+      console.log('fetch error '+url+' '+err);
       cb(err);
     } else {
-      var parser = chooseParser(data.headers['Content-Type']);
+      var parser = chooseParser(data.headers['content-type'], url);
       if(!parser) {
-        cb('unsupported Content-Type '+data.headers['Content-Type']);
+        cb('unsupported Content-Type '+data.headers['content-type']);
       } else {
         doParse(url, parser, docRel, data.headers, data.content, function(err, data) {
           if(url.indexOf('gmail')!=-1) {
@@ -104,6 +117,7 @@ function parse(url, docRel, cb) {
           if(url.indexOf('twitter')!=-1) {
             data.tools['twitter:'+data.textFields.nick]='MRF';
           }
+          delete data.data;
           cb(err, data);
         });
       }

@@ -14,7 +14,7 @@ function fetch(urlStr, cb) {
       cb(err, {
         content: content,
         headers: {
-          'Content-Type': urlStrParts[urlStrParts.length-1]//html, xrd, rdf, js, json
+          'content-type': urlStrParts[urlStrParts.length-1]//html, xrd, rdf, js, json
         }
       });
     });
@@ -65,9 +65,10 @@ function fetch(urlStr, cb) {
       });
       
       timer=setTimeout(function() { 
-        cb('timeout');
         console.log('timed out for '+urlStr);
+        cb('timeout');
         clearTimeout(timer);
+        request.abort();
         //console.log('responded timeout');
       }, 10000);//no thing on the web should ever take more than 3 seconds, except I'm testing over 3G, so setting 10 seconds
       request.on('error', function(e) {
