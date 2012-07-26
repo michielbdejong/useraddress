@@ -2,9 +2,7 @@ var masterParser = require('./masterParser');
 
 function doFile(url, expect) {
   masterParser.parse(url, 'input', function(err, data) {
-    console.log(err);
-    console.log(data);
-    console.log(expect);
+    delete data.data;
     if(err) {
       console.log('********** FAIL '+url+': '+err);
     } else {

@@ -37,7 +37,7 @@ exports.parse = function(url, docRel, headers, content, cb) {
         };
         thisObj.textFields.fullName = data2.Agent[i].name;
         thisObj.textFields.bio = data2.Agent[i]['bio:olb'];
-        if(data2.Agent[i].account && data2.Agent[i].account.OnlineAccount && data2.Agent[i].account.OnlineAccount.accountName) {
+        if(data2.Agent[i].account) {// && data2.Agent[i].account.OnlineAccount && data2.Agent[i].account.OnlineAccount.accountName) {
           thisObj.textFields.nick = data2.Agent[i].account.OnlineAccount.accountName;
         }
         if(data2.Agent[i].img && data2.Agent[i].img.Image && data2.Agent[i].img.Image['@'] && data2.Agent[i].img.Image['@']['rdf:about']) {

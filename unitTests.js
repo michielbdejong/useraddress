@@ -2,9 +2,7 @@ var masterParser = require('./masterParser');
 
 function doFile(url, expect) {
   masterParser.parse(url, 'input', function(err, data) {
-    console.log(err);
-    console.log(data);
-    console.log(expect);
+    delete data.data;
     if(err) {
       console.log('********** FAIL '+url+': '+err);
     } else {
@@ -64,7 +62,6 @@ doFile('michielbdejong@identi.ca', {
     'http://identi.ca/api/statuses/user_timeline/425878.atom': 'S',
   }
 });
-/*
 doFile('michiel@revolutionari.es', {
  documents: {
    'https://revolutionari.es/profile/michiel': true,
@@ -197,4 +194,4 @@ doFile('http://www.w3.org/People/Berners-Lee/card.rdf', {
      'xmpp:tim.bernerslee.9@facebook.com': 'SM',
      'https://facebook.com/tim.bernerslee.9': 'R',
      'facebook:tim.bernerslee.9': 'RSCM' }
-});*/
+});

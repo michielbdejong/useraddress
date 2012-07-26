@@ -12,9 +12,9 @@ function parseSubTree(subTree, state, cb) {
         } else {
           nameField='fullName';
         }
-      } else if(classTags[i]=='mpfriend') {
+      } else if(classTags[i]=='mpfriend' && !state.inANotice) {
         cb('follows', subTree.attribs.href, true);
-      } else if(classTags[i]=='avatar') {
+      } else if(classTags[i]=='avatar' && !state.inANotice) {
         cb('images', 'avatar', subTree.attribs.src);
       } else if(classTags[i]=='notice') {
         state.inANotice=true;

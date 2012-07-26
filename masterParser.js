@@ -120,7 +120,7 @@ function parse(url, docRel, cb) {
             data.tools['twitter:'+data.textFields.nick]='RSM';
           }
           data.textFields.type='user';
-          delete data.data;
+          //delete data.data;
           cb(err, data);
         });
       }
