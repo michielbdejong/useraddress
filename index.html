@@ -60,20 +60,19 @@
           str += '<li>'+(rows[i].images.avatar?'<img src="'+rows[i].images.avatar+'" style="width:64px;height:64px"> ':'')
             +nameMatch+' &lt;'+rows[i].userAddress+'&gt; [';
           var toolsAvailable={
-            P: false,//see this contact's presence
-            T: false,//send instant text message to this contact
-            Q: false,//send queued text message to this contact
-            A: false,//receive real-time audio stream from this contact
-            V: false,//receive real-time video stream from this contact
+            U: false,//this contact is a user
             R: false,//read this contact's page (profile, blog, ...)
-            F: false,//follow this contact's updates feed
+            S: false,//follow this contact's updates feed
             C: false,//write a public comment on this contact's page (wall, blog comments, ...)
+            M: false,//send a message to this contact
           };
           for(var j in rows[i].tools) {
             for(var k=0; k<rows[i].tools[j].length; k++) {
               toolsAvailable[rows[i].tools[j][k]]=true;
             }
           }
+          toolsAvailable.U=(rows[i].textFields.type=='user');
+          toolsAvailable.T=(rows[i].textFields.type=='topic');
           for(var l in toolsAvailable) {
             if(toolsAvailable[l]==true) {
               str+=' <strong>'+l+'</strong>';
