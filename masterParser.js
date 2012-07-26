@@ -21,7 +21,9 @@ function doParse(url, type, docRel, headers, content, cb) {
           //err = err2;
         } else {
           for(var i in data2.data) {
+            console.log('considering '+i);
             if(data.documents[i]) {
+              console.log('yes');
               for(var j in data2.data[i]) {
                 for(var k in data2.data[i][j]) {
                   data[j][k]=data2.data[i][j][k];

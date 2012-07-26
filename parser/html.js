@@ -1,11 +1,11 @@
 var htmlparser = require("htmlparser");
 //---
-function parseSubTree(subTree, cb) {
+function parseSubTree(subTree, state, cb) {
   var nameField;
   if(subTree.attribs && subTree.attribs.class) {
     var classTags=subTree.attribs.class.split(' ');
     for(var i=0; i<classTags.length; i++) {
-      if(classTags[i]=='fn') {
+      if(classTags[i]=='fn' && !state.inANotice) {
         if(subTree.name=='abbr') {
           cb('textFields', 'fullName', subTree.attribs.title);
           nameField='nick';
@@ -16,6 +16,8 @@ function parseSubTree(subTree, cb) {
         cb('follows', subTree.attribs.href, true);
       } else if(classTags[i]=='avatar') {
         cb('images', 'avatar', subTree.attribs.src);
+      } else if(classTags[i]=='notice') {
+        state.inANotice=true;
       }
     }
   }
@@ -43,7 +45,7 @@ function parseSubTree(subTree, cb) {
           } else if(subTree[eltType][j].rel) {
             cb('foaf', subTree[eltType][j].rel, subTree[eltType][j].href);
           }
-          parseSubTree(subTree[eltType][j], cb);
+          parseSubTree(subTree[eltType][j], state, cb);
         }
       }
     }
@@ -64,7 +66,7 @@ exports.parse = function(url, docRel, headers, content, cb) {
         tools: {}
       };
       for(var i=0; i<data2.length; i++) {
-        parseSubTree(data2[i], function(category, property, content) {
+        parseSubTree(data2[i], {}, function(category, property, content) {
           if(category=='foaf') {
             if(property== 'foaf:name') {
               obj.textFields.fullName = content; 
