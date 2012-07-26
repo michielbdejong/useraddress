@@ -56,7 +56,7 @@ exports.parse = function(url, docRel, headers, content, cb) {
       } else if(data2.Link[i]['@'] && data2.Link[i]['@'].rel == 'http://webfinger.net/rel/profile-page') {
         obj.tools[data2.Link[i]['@'].href] = 'R';
       } else if(data2.Link[i]['@'] && data2.Link[i]['@'].rel == 'http://schemas.google.com/g/2010#updates-from') {
-        obj.tools[data2.Link[i]['@'].href] = 'F';
+        obj.tools[data2.Link[i]['@'].href] = 'S';
       }
     }
     cb(null, obj);

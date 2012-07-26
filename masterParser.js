@@ -107,16 +107,17 @@ function parse(url, docRel, cb) {
         doParse(url, parser, docRel, data.headers, data.content, function(err, data) {
           if(url.indexOf('gmail')!=-1) {
             data.tools['mailto:'+data.textFields.nick+'@gmail.com']='M';
-            data.tools['xmpp:'+data.textFields.nick+'@gmail.com']='PM';
+            data.tools['xmpp:'+data.textFields.nick+'@gmail.com']='SM';
           }
           if(url.indexOf('facebook')!=-1) {
             data.tools['mailto:'+data.textFields.nick+'@facebook.com']='M';
-            data.tools['xmpp:'+data.textFields.nick+'@facebook.com']='PM';
-            data.tools['facebook:'+data.textFields.nick]='PMRFC';
+            data.tools['xmpp:'+data.textFields.nick+'@facebook.com']='SM';
+            data.tools['facebook:'+data.textFields.nick]='RSCM';
           }
           if(url.indexOf('twitter')!=-1) {
-            data.tools['twitter:'+data.textFields.nick]='MRF';
+            data.tools['twitter:'+data.textFields.nick]='RSM';
           }
+          data.textFields.type='user';
           delete data.data;
           cb(err, data);
         });

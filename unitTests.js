@@ -42,7 +42,8 @@ doFile('michielbdejong@identi.ca', {
   textFields: 
    { fullName: 'Michiel de Jong',
      bio: 'Lived in Bali last winter and was \'the guy that did unhosted\'. Now live in Berlin and proud to be just one of many \'people who do unhosted\'.',
-     nick: 'michielbdejong' },
+     nick: 'michielbdejong',
+     type: 'user' },
   images: { avatar: 'http://avatar.identi.ca/425878-480-20110427110559.jpeg' },
   documents: {
     'http://identi.ca/michielbdejong/foaf': 'describedby',
@@ -60,7 +61,7 @@ doFile('michielbdejong@identi.ca', {
      'http://identi.ca/user/499580': true },
   tools: {
     'http://identi.ca/michielbdejong': 'R',
-    'http://identi.ca/api/statuses/user_timeline/425878.atom': 'F',
+    'http://identi.ca/api/statuses/user_timeline/425878.atom': 'S',
   }
 });
 doFile('michiel@revolutionari.es', {
@@ -69,7 +70,7 @@ doFile('michiel@revolutionari.es', {
    'https://revolutionari.es/hcard/michiel': 'hcard',
    'https://revolutionari.es/poco/michiel': 'poco',
    'https://revolutionari.es/xrd/?uri=acct:michiel@revolutionari.es': 'lrdd' },
-  textFields: { fullName: 'Michiel De Jong' },
+  textFields: { fullName: 'Michiel De Jong', type: 'user' },
   images: { avatar: 'https://revolutionari.es/photo/custom/50/55.jpg' },
   follows: 
    { 'http://friendika.skilledtests.com/profile/erkan_yilmaz': true,
@@ -85,7 +86,7 @@ doFile('michiel@revolutionari.es', {
      'https://friendica.dszdw.net/profile/klaus': true,
      'https://friendica.mafiaspiel.org/profile/leberwurscht': true },
   tools: {
-    'https://revolutionari.es/dfrn_poll/michiel': 'F',
+    'https://revolutionari.es/dfrn_poll/michiel': 'S',
     'https://revolutionari.es/profile/michiel': 'R'
   } 
 });
@@ -95,14 +96,14 @@ doFile('dejong.michiel@gmail.com', {
    'http://www.google.com/profiles/dejong.michiel': 'hcard',
    'http://www-opensocial.googleusercontent.com/api/people/108912615873187638071/': 'poco-me',
    'http://www.google.com/s2/webfinger/?q=acct%3Adejong.michiel%40gmail.com&fmt=foaf': 'describedby' },
-  textFields: { fullName: 'Michiel de Jong', nick: 'dejong.michiel' },
+  textFields: { fullName: 'Michiel de Jong', nick: 'dejong.michiel', type: 'user' },
   images: { avatar: 'http://www.google.com/ig/c/photos/public/AIbEiAIAAABDCLfW7aamnf7XeyILdmNhcmRfcGhvdG8qKGIwYzNhNDg4ZWEwMTg4OWUwOGJmYzViZGU1NTQ0YzY0MWQ2Y2I2YWIwAf39FvvCldqF7AbAvi1Dprjs7_jF' },
   follows: {},
   tools: {
     'mailto:dejong.michiel@gmail.com': 'M',
-    'xmpp:dejong.michiel@gmail.com': 'PM',
+    'xmpp:dejong.michiel@gmail.com': 'SM',
     'http://www.google.com/profiles/dejong.michiel': 'R',
-    'https://www.googleapis.com/buzz/v1/activities/108912615873187638071/@public': 'F',
+    'https://www.googleapis.com/buzz/v1/activities/108912615873187638071/@public': 'S',
   }
 });
 doFile('https://api.twitter.com/1/users/show.json?screen_name=michielbdejong', {
@@ -110,12 +111,13 @@ doFile('https://api.twitter.com/1/users/show.json?screen_name=michielbdejong', {
    { fullName: 'Michiel de Jong',
      bio: 'Freedom hacker at unhosted.org',
      nick: 'michielbdejong',
-     locale: 'en' },
+     locale: 'en',
+     type: 'user'},
   images: { avatar: 'http://a0.twimg.com/profile_images/2194941545/picresized_th_5a6d23f1e8567cc9ccdac00ace4761c7_normal.jpg' },
   follows: {},
   tools: {
     'https://twitter.com/michielbdejong': 'R',
-    'twitter:michielbdejong': 'MRF'
+    'twitter:michielbdejong': 'RSM'
   }
 });
 doFile('https://graph.facebook.com/dejong.michiel', {
@@ -123,19 +125,20 @@ doFile('https://graph.facebook.com/dejong.michiel', {
     { fullName: 'Michiel De Jong',
       nick: 'dejong.michiel',
       locale: 'en_US',
-      gender: 'male' },
+      gender: 'male',
+      type: 'user'},
   documents: {},
   images: { avatar: 'https://graph.facebook.com/dejong.michiel/picture' },
   follows: {},
   tools: {
     'mailto:dejong.michiel@facebook.com': 'M',
-    'xmpp:dejong.michiel@facebook.com': 'PM',
+    'xmpp:dejong.michiel@facebook.com': 'SM',
     'https://facebook.com/dejong.michiel': 'R',
-    'facebook:dejong.michiel': 'PMRFC'
+    'facebook:dejong.michiel': 'RSCM'
   }
 });
 doFile('michielbdejong@joindiaspora.com', {
-  textFields: { fullName: 'Michiel de Jong' },
+  textFields: { fullName: 'Michiel de Jong', type: 'user' },
   images: { avatar: 'https://joindiaspora.s3.amazonaws.com/uploads/images/thumb_small_ffbd568ab8d948d72703.jpg' },
   documents: {
     'https://joindiaspora.com/webfinger?q=acct:michielbdejong@joindiaspora.com': 'lrdd',
@@ -143,11 +146,11 @@ doFile('michielbdejong@joindiaspora.com', {
   follows: {},
   tools: {
     'https://joindiaspora.com/u/michielbdejong': 'R',
-    'https://joindiaspora.com/public/michielbdejong.atom': 'F',
+    'https://joindiaspora.com/public/michielbdejong.atom': 'S',
   }
 });
 doFile('http://melvincarvalho.com/', {
-  textFields: { fullName: 'Melvin Carvalho', nick: 'melvincarvalho' },
+  textFields: { fullName: 'Melvin Carvalho', nick: 'melvincarvalho', type: 'user' },
   images: { avatar: 'http://melvincarvalho.com/melvincarvalho.png' },
   documents: {},
   follows: 
@@ -178,7 +181,8 @@ doFile('http://www.w3.org/People/Berners-Lee/card.rdf', {
    { fullName: 'Tim Berners-Lee',
      nick: 'tim.bernerslee.9',
      locale: 'en_US',
-     gender: 'male' },
+     gender: 'male',
+     type: 'user' },
   images: { avatar: 'https://graph.facebook.com/tim.bernerslee.9/picture' },
   documents: 
    { 'http://graph.facebook.com/512908782#': 'magic',
@@ -189,7 +193,7 @@ doFile('http://www.w3.org/People/Berners-Lee/card.rdf', {
   follows: { 'http://www.w3.org/People/Berners-Lee/card#i': true },
   tools: 
    { 'mailto:tim.bernerslee.9@facebook.com': 'M',
-     'xmpp:tim.bernerslee.9@facebook.com': 'PM',
+     'xmpp:tim.bernerslee.9@facebook.com': 'SM',
      'https://facebook.com/tim.bernerslee.9': 'R',
-     'facebook:tim.bernerslee.9': 'PMRFC' }
+     'facebook:tim.bernerslee.9': 'RSCM' }
 });

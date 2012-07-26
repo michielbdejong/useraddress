@@ -71,7 +71,7 @@ exports.parse = function(url, docRel, headers, content, cb) {
             } else if(property=='foaf:nick') {
               obj.textFields.nick = content; 
             } else if(property=='foaf:mbox') {
-              obj.tools[content]='Q'; 
+              obj.tools[content]='M'; 
             } else if(property=='foaf:knows') {
               obj.follows[content]=true; 
             } else if(property== 'foaf:depiction') {
