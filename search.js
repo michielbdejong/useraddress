@@ -30,48 +30,6 @@ function add(userAddress, obj) {
   }
   dumpDb();
 }
-function findDocFor(str, cb) {
-  var prefix;
-  if(str.substring(0, 'http://'.length)=='http://') {
-    prefix = 'http://'.length;
-  }
-  if(str.substring(0, 'https://'.length)=='https://') {
-    prefix = 'https://'.length;
-  }
-  if(prefix) {
-    var domain = str.substring(prefix).split('/')[0];
-    var domainParts = domain.split('.');
-    if(domainParts.length > 1 && domainParts[1].length >= 2) {
-      console.log('doc for '+str);
-      var identifiers = {};
-      identifiers[str]=true;
-      var docRel='html';
-      if(domain=='graph.facebook.com') {
-        docRel='facebook';
-      }
-      if(domain=='api.twitter.com') {
-        docRel='twitter';
-      }
-      console.log(domainParts[1]+' -> '+docRel);
-      cb(null, {
-        url: str,
-        docRel: docRel,
-        identifiers: identifiers
-      });
-    }
-  }
-  var parts = str.split('@');
-  if(parts.length==2 && parts[1].split('.').length>=1) {
-    var identifiers = {};
-    identifiers[str]=true;
-    identifiers['acct:'+str]=true;
-    cb(null, {
-      url: 'https://'+parts[1]+'/.well-known/host-meta?resource=acct:'+str,
-      docRel: 'lrdd',
-      identifiers: identifiers
-    });
-  }
-}
 function search(str) {
   if(index[str]) {
     for(var i in index[str]) {
@@ -84,23 +42,21 @@ function search(str) {
       }
     }
   }
-  findDocFor(str, function(err, data) {
-    pending++;
-    console.log('pending++: '+pending+' '+data);
+  pending++;
+  console.log('pending++: '+pending+' '+data);
+  statusCb(pending>0?'busy':'idle');
+  masterParser.parse(str, 'input', function(err, obj) {
+    pending--;
+    console.log('pending--: '+pending);
     statusCb(pending>0?'busy':'idle');
-    masterParser.parse(data.url, data.docRel, data.identifiers, function(err, obj) {
-      pending--;
-      console.log('pending--: '+pending);
-      statusCb(pending>0?'busy':'idle');
-      if(obj) {
-        obj.userAddress = str;
-        add(str, obj);
-        obj.from='live';
-        obj.query=str;
-        console.log('result from live');
-        rowCb(obj);
-      }
-    });
+    if(obj) {
+      obj.userAddress = str;
+      add(str, obj);
+      obj.from='live';
+      obj.query=str;
+      console.log('result from live');
+      rowCb(obj);
+    }
   });
 }
 function dumpDb() {
