@@ -70,8 +70,6 @@ function chooseParser(contentType) {
 }
 function webfingerize(url) {
   var parts = url.split('@');
-  console.log(parts);
-  console.log(parts.length);
   if(parts.length==2 && parts[0].length>0 && parts[1].length>2) {
     if(parts[0].indexOf(':')==-1 && parts[0].indexOf('/')==-1 && parts[1].indexOf('.')!=-1) {
       return 'https://'+parts[1]+'/.well-known/host-meta?resource=acct:'+url;

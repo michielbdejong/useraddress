@@ -1,7 +1,7 @@
 var masterParser = require('./masterParser');
 
 function doFile(url, expect) {
-  masterParser.parse(url, '', function(err, data) {
+  masterParser.parse(url, 'input', function(err, data) {
     if(err) {
       console.log('********** FAIL '+url+': '+err);
     } else {
@@ -24,7 +24,7 @@ function doFile(url, expect) {
   });
 }
 masterParser.setEnv('live');
-doFile('https://identi.ca/.well-known/host-meta?resource=acct:michielbdejong@identi.ca', {
+doFile('michielbdejong@identi.ca', {
   textFields: 
    { fullName: 'Michiel de Jong',
      bio: 'Lived in Bali last winter and was \'the guy that did unhosted\'. Now live in Berlin and proud to be just one of many \'people who do unhosted\'.',
@@ -48,7 +48,7 @@ doFile('https://identi.ca/.well-known/host-meta?resource=acct:michielbdejong@ide
     'http://identi.ca/api/statuses/user_timeline/425878.atom': 'F',
   }
 });
-doFile('https://revolutionari.es/.well-known/host-meta?resource=acct:michiel@revolutionari.es', {
+doFile('michiel@revolutionari.es', {
  documents: {
    'https://revolutionari.es/profile/michiel': true,
    'https://revolutionari.es/hcard/michiel': 'hcard',
@@ -72,7 +72,7 @@ doFile('https://revolutionari.es/.well-known/host-meta?resource=acct:michiel@rev
     'https://revolutionari.es/dfrn_poll/michiel': 'F',
   } 
 });
-doFile('https://gmail.com/.well-known/host-meta?resource=acct:dejong.michiel@gmail.com', {
+doFile('dejong.michiel@gmail.com', {
  documents: {
    'http://www.google.com/s2/webfinger/?q=acct:dejong.michiel@gmail.com': 'lrdd',
    'http://www.google.com/profiles/dejong.michiel': 'hcard',
@@ -116,7 +116,7 @@ doFile('https://graph.facebook.com/dejong.michiel', {
     'facebook:dejong.michiel': 'PMRFC'
   }
 });
-doFile('https://joindiaspora.com/.well-known/host-meta?resource=acct:michielbdejong@joindiaspora.com', {
+doFile('michielbdejong@joindiaspora.com', {
   textFields: { fullName: 'Michiel de Jong' },
   images: { avatar: 'https://joindiaspora.s3.amazonaws.com/uploads/images/thumb_small_ffbd568ab8d948d72703.jpg' },
   documents: { 'https://joindiaspora.com/hcard/users/e583028f23ce0302': 'hcard' },

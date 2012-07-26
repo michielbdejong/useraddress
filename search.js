@@ -30,35 +30,6 @@ function add(userAddress, obj) {
   }
   dumpDb();
 }
-function search(str) {
-  if(index[str]) {
-    for(var i in index[str]) {
-      if(data[i]) {
-        var obj = data[i];
-        obj.from = 'index';
-        obj.query = str;
-        console.log('result from index');
-        rowCb(obj);
-      }
-    }
-  }
-  pending++;
-  console.log('pending++: '+pending+' '+data);
-  statusCb(pending>0?'busy':'idle');
-  masterParser.parse(str, 'input', function(err, obj) {
-    pending--;
-    console.log('pending--: '+pending);
-    statusCb(pending>0?'busy':'idle');
-    if(obj) {
-      obj.userAddress = str;
-      add(str, obj);
-      obj.from='live';
-      obj.query=str;
-      console.log('result from live');
-      rowCb(obj);
-    }
-  });
-}
 function dumpDb() {
   fs.writeFile("./dump.json", JSON.stringify({data: data, index: index}), function(err) {
       if(err) {
@@ -84,17 +55,55 @@ function readDb() {
   });
 }
 readDb();
-var rowCb = function(row) {
-  console.log(row);
+var sessions = [];
+exports.getSession = function() {
+  return (function() {
+    var rowCb = function(row) {
+      console.log(row);
+    };
+    var statusCb = function(status) {
+      console.log(status);
+    };
+    return {
+      on: function(eventType, cb) {
+        if(eventType == 'row') {
+          rowCb = cb;
+        } else if(eventType == 'status') {
+          statusCb = cb;
+        }
+      },
+      search: function search(str) {
+        if(index[str]) {
+          for(var i in index[str]) {
+            if(data[i]) {
+              var obj = data[i];
+              obj.from = 'index';
+              obj.query = str;
+              console.log('result from index');
+              rowCb(obj);
+            }
+          }
+        }
+        pending++;
+        console.log('pending++: '+pending+' '+data);
+        statusCb(pending>0?'busy':'idle');
+        masterParser.parse(str, 'input', function(err, obj) {
+          pending--;
+          console.log('pending--: '+pending);
+          statusCb(pending>0?'busy':'idle');
+          if(obj) {
+            obj.userAddress = str;
+            add(str, obj);
+            obj.from='live';
+            obj.query=str;
+            console.log('result from live:');
+            console.log(obj);
+            rowCb(obj);
+          }
+        });
+      },
+      close: function() {
+      }
+    };
+  })();
 };
-var statusCb = function(status) {
-  console.log(status);
-};
-exports.on = function(eventType, cb) {
-  if(eventType == 'row') {
-    rowCb = cb;
-  } else if(eventType == 'status') {
-    statusCb = cb;
-  }
-};
-exports.search = search;

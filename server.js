@@ -3,14 +3,15 @@ var http = require('http'),
   sockjs = require('sockjs'),
   search = require('./search');
 
-var echo = sockjs.createServer();
-echo.on('connection', function(conn) {
-  search.on('row', function(row) {
+var sockServer = sockjs.createServer();
+sockServer.on('connection', function(conn) {
+  var searchSession = search.getSession();
+  searchSession.on('row', function(row) {
     row.type='row';
     console.log(row);
     conn.write(JSON.stringify(row));
   });
-  search.on('status', function(status) {
+  searchSession.on('status', function(status) {
     console.log(status);
     conn.write(JSON.stringify({
       type: 'status',
@@ -19,9 +20,11 @@ echo.on('connection', function(conn) {
   });
   conn.on('data', function(message) {
     console.log(message.toString());
-    search.search(message.toString());
+    searchSession.search(message.toString());
   });
-  conn.on('close', function() {});
+  conn.on('close', function() {
+    searchSession.close();
+  });
 });
 
 var server = http.createServer(function (req, res) {
@@ -36,5 +39,5 @@ var server = http.createServer(function (req, res) {
     res.end(data);
   });
 }).listen(80);
-echo.installHandlers(server, {prefix:'/echo'});
+sockServer.installHandlers(server, {prefix:'/q'});
 console.log('Server running');
