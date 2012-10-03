@@ -31,7 +31,7 @@ var server = http.createServer(function (req, res) {
   console.log(req.url);
   if(req.url == '/sockjs-0.3.min.js') {
     fileName = 'sockjs-0.3.min.js';
-  } else if(req.url=='/demo') {
+  } else if(req.url.substring(0,5)=='/demo') {
     fileName = 'demo.html';
   } else {
     fileName = 'index.html';
