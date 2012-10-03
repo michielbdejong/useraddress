@@ -75,7 +75,7 @@ function chooseParser(contentType, url) {
     return 'json';
   } else if(contentType=='rdf' || contentType=='application/rdf+xml') {
     return 'rdf';
-  } else if(contentType=='xrd' || contentType=='application/xrd+xml') {
+  } else if(contentType=='xrd' || contentType=='application/xrd+xml' || url=='http://nlnet.nl/people/acct:michiel@nlnet.nl') {
     return 'xrd';
   } else if(contentType=='turtle' || contentType=='text/turtle') {
     return 'turtle';
@@ -87,7 +87,8 @@ function webfingerize(url) {
   var parts = url.split('@');
   if(parts.length==2 && parts[0].length>0 && parts[1].length>2) {
     if(parts[0].indexOf(':')==-1 && parts[0].indexOf('/')==-1 && parts[1].indexOf('.')!=-1) {
-      return 'https://'+parts[1]+'/.well-known/host-meta?resource=acct:'+url;
+      //return 'https://'+parts[1]+'/.well-known/host-meta?resource=acct:'+url; // <~~ disabling this for tomorrow's demo because of nlnet.nl AAAA trouble
+      return 'http://'+parts[1]+'/.well-known/host-meta?resource=acct:'+url;
     }
   }
   return url;

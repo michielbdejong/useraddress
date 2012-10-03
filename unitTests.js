@@ -195,3 +195,22 @@ doFile('http://www.w3.org/People/Berners-Lee/card.rdf', {
      'https://facebook.com/tim.bernerslee.9': 'R',
      'facebook:tim.bernerslee.9': 'RSCM' }
 });
+doFile('michiel@nlnet.nl', {
+  textFields: { 
+    type: 'user',
+    fullName: 'Michiel Leenaars'
+  },
+  images: {
+    'avatar': 'http://nlnet.nl/people/leenaars.png' 
+  },
+  documents: {
+    'http://nlnet.nl/people/acct:michiel@nlnet.nl': 'lrdd',
+    'http://www.nlnet.nl/people/leenaars.hcard': 'hcard'
+  },
+  follows: {},
+  tools: {
+    'http://www.nlnet.nl/people/leenaars.html': 'R'
+  }
+});
+
+  

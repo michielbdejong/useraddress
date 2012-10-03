@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="sockjs-0.3.min.js">
+  </script>
+  <script>
+    var rows={};
+    var sock = new SockJS('http://useraddress.net/q');
+    sock.onopen = function() {
+      console.log('open');
+    };
+    sock.onmessage = function(e) {
+      console.log('message', e.data);
+      var e = JSON.parse(e.data);
+      if(e.type == 'row') {
+        addRow(e);
+        show();
+      } else if(e.type == 'status') {
+        showStatus(e.status);
+      }
+    };
+    sock.onclose = function() {
+      console.log('close');
+    };
+    function key() {
+      sock.send(document.getElementById('in').value);
+      show();
+    }
+    function addRow(data) {
+      rows[data.userAddress] = data;
+    }
+    function matches(row, str) {
+      if(str.length < 3) {
+        return;
+      }
+      if(row.userAddress.indexOf(str)!=-1) {
+        return row.textFields.fullName;
+      }
+      var words = [];
+      if(row.textFields.fullName) {
+        words = row.textFields.fullName.split(' ');
+      }
+      if(row.textFields.nick) {
+        words.push(row.textFields.nick);
+      }
+      for(var i=0; i<words.length; i++) {
+        if(words[i].toLowerCase().indexOf(str)!=-1) {
+          return words.slice(0, i).join(' ')+'<strong>'+words[i].substring(words[i].toLowerCase().indexOf(str), str.length)+'</strong>'+words[i].substring(str.length)+' '+words.slice(i+1).join(' ');
+        }
+      }  
+    }
+    function showStatus(status) {
+      document.getElementById('spinner').style.display = (status == 'busy' ? 'inline' : 'none');
+    }
+    function show() {
+      var str = '';
+      for(var i in rows) {
+        var nameMatch = matches(rows[i], document.getElementById('in').value);
+        if(nameMatch) {
+          str += '<li>'+(rows[i].images.avatar?'<img src="'+rows[i].images.avatar+'" style="width:64px;height:64px"> ':'')
+            +nameMatch+' &lt;'+rows[i].userAddress+'&gt; [';
+          var toolsAvailable={
+            U: false,//this contact is a user
+            R: false,//read this contact's page (profile, blog, ...)
+            S: false,//follow this contact's updates feed
+            C: false,//write a public comment on this contact's page (wall, blog comments, ...)
+            M: false,//send a message to this contact
+          };
+          for(var j in rows[i].tools) {
+            for(var k=0; k<rows[i].tools[j].length; k++) {
+              toolsAvailable[rows[i].tools[j][k]]=true;
+            }
+          }
+          toolsAvailable.U=(rows[i].textFields.type=='user');
+          toolsAvailable.T=(rows[i].textFields.type=='topic');
+          for(var l in toolsAvailable) {
+            if(toolsAvailable[l]==true) {
+              str+=' <strong>'+l+'</strong>';
+            } else {
+              str+=' <strike>'+l+'</strike>';
+            }
+          }
+          str+=' ]</li>';
+        }
+      }
+      document.getElementById('results').innerHTML = str;
+    }
+  </script>
+  <title>useraddress.net</title>
+  <meta charset="utf-8">
+</head>
+<body>
+  <article style="margin:10em auto;width:35em">
+    <h1>The Polyglot approach to the federated social web</h1>
+    <a href="/">What is this?</a>
+    <h3>Demo</h3>
+    <p>A little demo is below. It has no error reporting yet, and may fail without warning. Remember, this is only a proof-of-concept, not even an alpha service. But at least the examples should work.</p>
+     <div id="searchWidget" style="display:block">
+       <h3>To prime, search something like:</h3>
+       <ul>
+       <li>michielbdejong@identi.ca</li>
+       <li>michiel@revolutionari.es</li>
+       <li>dejong.michiel@gmail.com</li>
+       <li>https://api.twitter.com/1/users/show.json?screen_name=michielbdejong</li>
+       <li>https://graph.facebook.com/dejong.michiel</li>
+       <li>michielbdejong@joindiaspora.com</li>
+       <li>http://melvincarvalho.com/#me</li>
+       <li>http://tantek.com/</li>
+       <li>http://www.w3.org/People/Berners-Lee/card.rdf#i</li>
+       </ul>
+       <h3>or (once primed) free text.</h3>
+        <input onkeyup="key();" id="in">  
+        <span id="spinner" style="display:none"><h3>hmmmmmm...</h3></span>
+        <ul id="results"></ul>
+        <h3>Legend:</h3>
+        <ul>
+          <li>(U)SER/(T)OPIC - indicates if this is considered a user or a topic (group, channel, page, hangout, teleconference, &hellip;)</li>
+          <li>(R)EAD - read (visit) this person's or topic's web page, blog, profile, timeline, channel archive, &hellip;</li>
+          <li>(C)OMMENT - leave a comment on this person's or topic's blog, wiki, wall, channel, &hellip;</li>
+          <li>(S)UBSCRIBE - get notified about updates and streamed content from this user or topic. Updates may be text (online/offline status, ActivityStreams) or media (like podcasts), but two-way conversations like (video) chat fall under message, because it's not subscribing to a pre-existing feed.</li>
+          <li>(M)ESSAGE - send a one-off message to this user. This may be a chat message, an email-like message, but also an attempt to initiate a voice or video call</li>
+        </ul>
+      </div>
+  </article>
+</body>
+</html>
