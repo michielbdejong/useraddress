@@ -36,6 +36,7 @@ function doFile(url, expect) {
   });
 }
 masterParser.setEnv('test');
+/* 
 doFile('michielbdejong@identi.ca', {
   textFields: 
    { fullName: 'Michiel de Jong',
@@ -195,6 +196,7 @@ doFile('http://www.w3.org/People/Berners-Lee/card.rdf', {
      'https://facebook.com/tim.bernerslee.9': 'R',
      'facebook:tim.bernerslee.9': 'RSCM' }
 });
+*/
 doFile('michiel@nlnet.nl', {
   textFields: { 
     type: 'user',
