@@ -8,7 +8,7 @@
   "scripts": {
     "start": "server.js"
   },
-  "version": "0.0.0-59",
+  "version": "0.0.0-60",
   "engines": {
     "node": "0.6.x"
   },
