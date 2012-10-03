@@ -87,8 +87,7 @@ function webfingerize(url) {
   var parts = url.split('@');
   if(parts.length==2 && parts[0].length>0 && parts[1].length>2) {
     if(parts[0].indexOf(':')==-1 && parts[0].indexOf('/')==-1 && parts[1].indexOf('.')!=-1) {
-      //return 'https://'+parts[1]+'/.well-known/host-meta?resource=acct:'+url; // <~~ disabling this for tomorrow's demo because of nlnet.nl AAAA trouble
-      return 'http://'+parts[1]+'/.well-known/host-meta?resource=acct:'+url;
+      return 'https://'+parts[1]+'/.well-known/host-meta?resource=acct:'+url;
     }
   }
   return url;
