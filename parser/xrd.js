@@ -31,8 +31,7 @@ exports.parse = function(url, docRel, headers, content, cb) {
     if(!data2.Link) {
       console.log('no .Link:');
       console.log(data2);
-    }
-    if(data2.Link['@']) {
+    } else if(data2.Link['@']) {
       data2.Link = [data2.Link];
     }
     for(var i=0; i<data2.Link.length; i++) {
