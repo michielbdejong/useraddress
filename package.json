@@ -8,13 +8,13 @@
   "scripts": {
     "start": "server.js"
   },
-  "version": "0.0.0-60",
+  "version": "0.0.0-61",
   "engines": {
     "node": "0.6.x"
   },
   "dependencies": {
     "sockjs": "*",
-    "xml2js": "*",
+    "xml2js": "0.2.0",
     "htmlparser": "*"
   }
 }
