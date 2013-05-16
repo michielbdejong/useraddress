@@ -41,6 +41,6 @@ var server = http.createServer(function (req, res) {
     res.writeHead(200, {'Content-Type': 'text/html'});
     res.end(data);
   });
-}).listen(80);
+}).listen(12380);
 sockServer.installHandlers(server, {prefix:'/q'});
 console.log('Server running');

@@ -5,7 +5,7 @@
   </script>
   <script>
     var rows={};
-    var sock = new SockJS('http://useraddress.net/q');
+    var sock = new SockJS('http://useraddress.net:12380/q');
     sock.onopen = function() {
       console.log('open');
     };
