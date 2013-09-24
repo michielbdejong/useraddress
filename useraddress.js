@@ -1,7 +1,8 @@
-var http = require('http'),
+var https = require('https'),
   fs = require('fs'),
   sockjs = require('sockjs'),
-  search = require('./search');
+  search = require('./search'),
+  config = require('./config');
 
 var sockServer = sockjs.createServer();
 sockServer.on('connection', function(conn) {
@@ -27,7 +28,7 @@ sockServer.on('connection', function(conn) {
   });
 });
 
-var server = http.createServer(function (req, res) {
+var server = https.createServer(config.https, function (req, res) {
   console.log(req.url);
   if(req.url == '/sockjs-0.3.min.js') {
     fileName = 'sockjs-0.3.min.js';
