@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>nicolas cluzeau (Google+) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://plus.google.com/+nicolascluzeau" title="nicolas cluzeau (Google+)"
+   class="u-url">
+  <img class="profile u-photo" src="https://lh5.googleusercontent.com/-ficnYQhxWnE/AAAAAAAAAAI/AAAAAAAADo4/5qWJ1NjQEXI/photo.jpg?sz=50&amp;sz=128" width="64px" />
+  <img src="/static/googleplus_icon.png"
+       
+       alt="Google+" />
+  <span class="p-name">nicolas cluzeau</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://soundcloud.com/nicolascluz" class="publish-domain u-url">soundcloud.com</a>
+
+  
+  &middot;
+  <a href="http://www.last.fm/user/zoool/" class="publish-domain u-url">last.fm</a>
+
+  
+  &middot;
+  <a href="http://mabulledu.net" class="publish-domain u-url">mabulledu.net</a>
+
+  
+    <span id="more-websites" style="display: none">
+  
+  &middot;
+  <a href="http://pownce.com/mabulledunet" class="publish-domain u-url">pownce.com</a>
+
+
+  </span>
+  <a onclick="toggle('more-websites'); toggle('show-more-websites'); return false"
+     id="show-more-websites" href="#" />...</a>
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class=" big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTI3MTU4MDIwNzAwNzk3ODExNjAM" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416170824&key=aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTI3MTU4MDIwNzAwNzk3ODExNjAM">
+      12 hours, 6 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTI3MTU4MDIwNzAwNzk3ODExNjAM" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/111856144151832886302"
+       title="Jérôme Chesnot (l&#39;Ours)">
+      <img class="profile" src="https://lh4.googleusercontent.com/-A46s_fc3Rsw/AAAAAAAAAAI/AAAAAAAAAAA/ffi8d6YrV00/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112715802070079781160/posts/Mwxur3qgM2q">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/112715802070079781160/posts/Mwxur3qgM2q">
+      
+        --
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415957667&key=aglzfmJyaWQtZ3lyZwsSCFJlc3BvbnNlIll0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzZGYzcmF2bHZydmxibngyMm9qcGNoaXJmeHZiaXZkX2xpa2VkX2J5XzExMTg1NjE0NDE1MTgzMjg4NjMwMgw">
+    
+      2 days, 23 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://imgur.com/gallery/0He8pdD">imgur.com/gallery/0He8pd...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/111856144151832886302"
+       title="Jérôme Chesnot (l&#39;Ours)">
+      <img class="profile" src="https://lh4.googleusercontent.com/-A46s_fc3Rsw/AAAAAAAAAAI/AAAAAAAAAAA/ffi8d6YrV00/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112715802070079781160/posts/jhmgw3SyJAJ">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/112715802070079781160/posts/jhmgw3SyJAJ">
+      
+        --
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415791877&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyYnZob3E0c2p1empkcnowNGNlbHlwMXB1eGpyZ3h2aDRfbGlrZWRfYnlfMTExODU2MTQ0MTUxODMyODg2MzAyDA">
+    
+      4 days, 21 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.geeksandcom.com/2014/11/11/jonathan-nolan-serie-fondation-isaac-asimov-hbo/#sthash.qKz3xrEx.eeN3Qyne.hpvt">geeksandcom.com/2014/11/11/jon...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/111856144151832886302"
+       title="Jérôme Chesnot">
+      <img class="profile" src="https://lh4.googleusercontent.com/-A46s_fc3Rsw/AAAAAAAAAAI/AAAAAAAADkI/BMwoiUZUdNs/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112715802070079781160/posts/jhmgw3SyJAJ">
+        wahouuu !</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/112715802070079781160/posts/jhmgw3SyJAJ">
+      
+        --
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415791869&key=aglzfmJyaWQtZ3lyWwsSCFJlc3BvbnNlIk10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyYnZob3E0c2p1empkcnowNGNlbHlwMXB1eGpyZ3h2aDQuMTQxNTc4MTI2NDg1NTQ1NAw">
+    
+      4 days, 21 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.geeksandcom.com/2014/11/11/jonathan-nolan-serie-fondation-isaac-asimov-hbo/#sthash.qKz3xrEx.eeN3Qyne.hpvt">geeksandcom.com/2014/11/11/jon...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/111856144151832886302"
+       title="Jérôme Chesnot (l&#39;Ours)">
+      <img class="profile" src="https://lh4.googleusercontent.com/-A46s_fc3Rsw/AAAAAAAAAAI/AAAAAAAAAAA/ffi8d6YrV00/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/108054458791366257368/posts/FQo3av7nSUa">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/112715802070079781160/posts/WmkxrszRurK">
+      
+        Please help us defend our trademark ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415791866&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzYWl2bXI0cm1qdDV6eGwwNGNlbHlwMXB1eGpyZ3h2aDRfbGlrZWRfYnlfMTExODU2MTQ0MTUxODMyODg2MzAyDA">
+    
+      4 days, 21 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.gnome.org/groupon/">gnome.org/groupon/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/114869439804810633003"
+       title="Philippe GROUPE FDX">
+      <img class="profile" src="https://lh6.googleusercontent.com/-bU6i3Lj8KW8/AAAAAAAAAAI/AAAAAAAAAD4/Hwnrr6UN260/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112715802070079781160/posts/cjcGqe4Twgs">
+        La guillotine ! ;-)</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/112715802070079781160/posts/cjcGqe4Twgs">
+      
+        Je l&#39;ai retrouvé , le script ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415671861&key=aglzfmJyaWQtZ3lyWwsSCFJlc3BvbnNlIk10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyMGZmdHA0dHJodXRvcXAwNGNlbHlwMXB1eGpyZ3h2aDQuMTQxNTY3MDQ5NjkxMjI2Mgw">
+    
+      6 days, 6 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://pastebin.com/ujsJV71i">pastebin.com/ujsJV71i</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/114869439804810633003"
+       title="Philippe GROUPE FDX">
+      <img class="profile" src="https://lh6.googleusercontent.com/-bU6i3Lj8KW8/AAAAAAAAAAI/AAAAAAAAAD4/Hwnrr6UN260/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112715802070079781160/posts/cjcGqe4Twgs">
+        Terroriste ! ;-)</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/112715802070079781160/posts/cjcGqe4Twgs">
+      
+        Je l&#39;ai retrouvé , le script ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415648596&key=aglzfmJyaWQtZ3lyWwsSCFJlc3BvbnNlIk10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyMGZmdHA0dHJodXRvcXAwNGNlbHlwMXB1eGpyZ3h2aDQuMTQxNTY0MjgzNzk4NDI2Mgw">
+    
+      6 days, 13 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://pastebin.com/ujsJV71i">pastebin.com/ujsJV71i</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/112715802070079781160"
+       title="nicolas cluzeau">
+      <img class="profile" src="https://lh5.googleusercontent.com/-ficnYQhxWnE/AAAAAAAAAAI/AAAAAAAADo4/eI76Aa4xcAg/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112715802070079781160/posts/cjcGqe4Twgs">
+        Rooh , y a prescription , ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/112715802070079781160/posts/cjcGqe4Twgs">
+      
+        Je l&#39;ai retrouvé , le script ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415648558&key=aglzfmJyaWQtZ3lyWwsSCFJlc3BvbnNlIk10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyMGZmdHA0dHJodXRvcXAwNGNlbHlwMXB1eGpyZ3h2aDQuMTQxNTY0MzI5MTI4Mzk2MQw">
+    
+      6 days, 13 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://pastebin.com/ujsJV71i">pastebin.com/ujsJV71i</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/111856144151832886302"
+       title="Jérôme Chesnot (l&#39;Ours)">
+      <img class="profile" src="https://lh4.googleusercontent.com/-A46s_fc3Rsw/AAAAAAAAAAI/AAAAAAAAAAA/ffi8d6YrV00/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112715802070079781160/posts/cjcGqe4Twgs">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/112715802070079781160/posts/cjcGqe4Twgs">
+      
+        Je l&#39;ai retrouvé , le script ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415648538&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyMGZmdHA0dHJodXRvcXAwNGNlbHlwMXB1eGpyZ3h2aDRfbGlrZWRfYnlfMTExODU2MTQ0MTUxODMyODg2MzAyDA">
+    
+      6 days, 13 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://pastebin.com/ujsJV71i">pastebin.com/ujsJV71i</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/112715802070079781160"
+       title="nicolas cluzeau">
+      <img class="profile" src="https://lh5.googleusercontent.com/-ficnYQhxWnE/AAAAAAAAAAI/AAAAAAAADo4/eI76Aa4xcAg/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112715802070079781160/posts/cjcGqe4Twgs">
+        Ça fait un bout temps que ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/112715802070079781160/posts/cjcGqe4Twgs">
+      
+        Je l&#39;ai retrouvé , le script ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415648490&key=aglzfmJyaWQtZ3lyWwsSCFJlc3BvbnNlIk10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyMGZmdHA0dHJodXRvcXAwNGNlbHlwMXB1eGpyZ3h2aDQuMTQxNTYzOTc3MzQ2ODk2MQw">
+    
+      6 days, 13 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://pastebin.com/ujsJV71i">pastebin.com/ujsJV71i</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/102938190169296210135"
+       title="Cédric Monféfoul">
+      <img class="profile" src="https://lh4.googleusercontent.com/-UC-Wqlr61K0/AAAAAAAAAAI/AAAAAAAANrg/ku1Q96jvY1k/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112715802070079781160/posts/cjcGqe4Twgs">
+        Il marche encore ce script ? ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/112715802070079781160/posts/cjcGqe4Twgs">
+      
+        Je l&#39;ai retrouvé , le script ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415648465&key=aglzfmJyaWQtZ3lyWwsSCFJlc3BvbnNlIk10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyMGZmdHA0dHJodXRvcXAwNGNlbHlwMXB1eGpyZ3h2aDQuMTQxNTYzOTI0NjQ0NDgzMww">
+    
+      6 days, 13 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://pastebin.com/ujsJV71i">pastebin.com/ujsJV71i</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

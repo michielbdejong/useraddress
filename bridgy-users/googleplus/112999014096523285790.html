@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Matthew Eargle (Google+) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://plus.google.com/+MatthewEargle" title="Matthew Eargle (Google+)"
+   class="u-url">
+  <img class="profile u-photo" src="https://lh3.googleusercontent.com/-EIhnbdVwZls/AAAAAAAAAAI/AAAAAAAABpI/c1XIoVvFki0/photo.jpg?sz=50&amp;sz=128" width="64px" />
+  <img src="/static/googleplus_icon.png"
+       
+       alt="Google+" />
+  <span class="p-name">Matthew Eargle</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://airbornesurfer.com/" class="publish-domain u-url">airbornesurfer.com</a>
+
+  
+  &middot;
+  <a href="http://twmfrntman.deviantart.com/" class="publish-domain u-url">twmfrntman.deviantart.com</a>
+
+  
+  &middot;
+  <a href="http://victor70.comicgenesis.com/" class="publish-domain u-url">victor70.comicgenesis.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class=" big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTI5OTkwMTQwOTY1MjMyODU3OTAM" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416213903&key=aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTI5OTkwMTQwOTY1MjMyODU3OTAM">
+      8 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTI5OTkwMTQwOTY1MjMyODU3OTAM" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/100045983965145211743"
+       title="maribel pedroso">
+      <img class="profile" src="https://lh3.googleusercontent.com/-jmaMpDAQ0Ao/AAAAAAAAAAI/AAAAAAAAAAA/3jTatzFVLUI/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112999014096523285790/posts/TcoCtuNEuuX">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/112999014096523285790/posts/TcoCtuNEuuX">
+      
+        Humankind made history this morning when ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416025221&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzYmoxbnFiejJpc3o0Z3owNGNpeGw1d3EzeWdyb29iYTBfbGlrZWRfYnlfMTAwMDQ1OTgzOTY1MTQ1MjExNzQzDA">
+    
+      2 days, 4 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://airbornesurfer.com/2014/11/holy-shit-landed-spacecraft-comet/">airbornesurfer.com/2014/11/holy-s...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/115506548358405771706"
+       title="Eric John">
+      <img class="profile" src="https://lh3.googleusercontent.com/-LXGWuCtNVWE/AAAAAAAAAAI/AAAAAAAAAAA/MJmnO3VFepU/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112999014096523285790/posts/GZfZW59ttkf">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/112999014096523285790/posts/GZfZW59ttkf">
+      
+        How prophetic. A sign of things ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415756708&key=aglzfmJyaWQtZ3lyZwsSCFJlc3BvbnNlIll0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzNGdsdWJodGFmamYxZXgyM3JnZGo1a3puNXg1MXRrX2xpa2VkX2J5XzExNTUwNjU0ODM1ODQwNTc3MTcwNgw">
+    
+      5 days, 7 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://airbornesurfer.com/2013/11/sturgess-fillmore-presents-atlanta/">airbornesurfer.com/2013/11/sturge...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/109155598539550155494"
+       title="Christopher John">
+      <img class="profile" src="https://lh6.googleusercontent.com/-FMMnUMcGYJ0/AAAAAAAAAAI/AAAAAAAAAAA/blbTINLrdlw/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112999014096523285790/posts/LE93ytkSJ33">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/112999014096523285790/posts/LE93ytkSJ33">
+      
+        --
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415682453&key=aglzfmJyaWQtZ3lyZwsSCFJlc3BvbnNlIll0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzZGd4aTVlbGppdXB5Zm0yM3JnZGo1a3puNXg1MXRrX2xpa2VkX2J5XzEwOTE1NTU5ODUzOTU1MDE1NTQ5NAw">
+    
+      6 days, 3 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://airbornesurfer.com/2014/11/ghostbusters-vs-mythbusters-epic-rap-battles-of-history-season-4/">airbornesurfer.com/2014/11/ghostb...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/112851534642458738576"
+       title="Barbie Concepcion">
+      <img class="profile" src="https://lh4.googleusercontent.com/-SzKJv9lupiA/AAAAAAAAAAI/AAAAAAAAAAA/NAWIr8IinYY/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112999014096523285790/posts/2SiFjYULT3w">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/112999014096523285790/posts/2SiFjYULT3w">
+      
+        Alcohol for breakfast BECAUSE I’M AN ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415632081&key=aglzfmJyaWQtZ3lyZwsSCFJlc3BvbnNlIll0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzaGV2MnFldGFjZzFvMGMyM3JnZGo1a3puNXg1MXRrX2xpa2VkX2J5XzExMjg1MTUzNDY0MjQ1ODczODU3Ngw">
+    
+      6 days, 17 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://airbornesurfer.com/2014/11/3519/">airbornesurfer.com/2014/11/3519/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/109155598539550155494"
+       title="Christopher John">
+      <img class="profile" src="https://lh6.googleusercontent.com/-FMMnUMcGYJ0/AAAAAAAAAAI/AAAAAAAAAAA/blbTINLrdlw/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112999014096523285790/posts/fvUrSgdop4A">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/112999014096523285790/posts/fvUrSgdop4A">
+      
+        --
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415424463&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzbHVmcHkwcG5kZ3BxamMwNGNpeGw1d3EzeWdyb29iYTBfbGlrZWRfYnlfMTA5MTU1NTk4NTM5NTUwMTU1NDk0DA">
+    
+      1 week, 2 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://airbornesurfer.com/2014/11/wgn-tv-anchors-robert-jordan-and-jackie-banges-commercial-break-handshake/">airbornesurfer.com/2014/11/wgn-tv...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/109155598539550155494"
+       title="Christopher John">
+      <img class="profile" src="https://lh6.googleusercontent.com/-FMMnUMcGYJ0/AAAAAAAAAAI/AAAAAAAAAAA/blbTINLrdlw/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112999014096523285790/posts/9AtwQW1t1ri">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/112999014096523285790/posts/9AtwQW1t1ri">
+      
+        I miss painfully campy television specials. ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415161088&key=aglzfmJyaWQtZ3lyZwsSCFJlc3BvbnNlIll0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyaHYxdHlzbm1vaGR2MWsyM3JnZGo1a3puNXg1MXRrX2xpa2VkX2J5XzEwOTE1NTU5ODUzOTU1MDE1NTQ5NAw">
+    
+      1 week, 5 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://airbornesurfer.com/2014/10/paul-lynde-halloween-special-1976/">airbornesurfer.com/2014/10/paul-l...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/112851534642458738576"
+       title="Barbie Concepcion">
+      <img class="profile" src="https://lh4.googleusercontent.com/-SzKJv9lupiA/AAAAAAAAAAI/AAAAAAAAAAA/NAWIr8IinYY/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112999014096523285790/posts/hXnmPDomorf">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/112999014096523285790/posts/hXnmPDomorf">
+      
+        Think about a major milestone that ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414811505&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzd2VoMXhpb3ZlaHJlYm0wNGNpeGw1d3EzeWdyb29iYTBfbGlrZWRfYnlfMTEyODUxNTM0NjQyNDU4NzM4NTc2DA">
+    
+      2 weeks, 2 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://airbornesurfer.com/2014/09/10q-3/">airbornesurfer.com/2014/09/10q-3/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/112999014096523285790"
+       title="Matthew Eargle">
+      <img class="profile" src="https://lh3.googleusercontent.com/-EIhnbdVwZls/AAAAAAAAAAI/AAAAAAAABpI/O7X0iygXVs4/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112999014096523285790/posts/9AtwQW1t1ri">
+        +Christopher John</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/112999014096523285790/posts/9AtwQW1t1ri">
+      
+        I miss painfully campy television specials. ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414776124&key=aglzfmJyaWQtZ3lyWQsSCFJlc3BvbnNlIkt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyaHYxdHlzbm1vaGR2MWsyM3JnZGo1a3puNXg1MXRrLjE0MTQ3NzU5ODgxNjc3NzEM">
+    
+      2 weeks, 2 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://airbornesurfer.com/2014/10/paul-lynde-halloween-special-1976/">airbornesurfer.com/2014/10/paul-l...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/118358458737256171971"
+       title="Julia Onsbert">
+      <img class="profile" src="https://lh4.googleusercontent.com/--WpCzrmMdQE/AAAAAAAAAAI/AAAAAAAAAAA/jFVtmwGKqsk/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112999014096523285790/posts/9AtwQW1t1ri">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/112999014096523285790/posts/9AtwQW1t1ri">
+      
+        I miss painfully campy television specials. ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414776101&key=aglzfmJyaWQtZ3lyZwsSCFJlc3BvbnNlIll0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyaHYxdHlzbm1vaGR2MWsyM3JnZGo1a3puNXg1MXRrX2xpa2VkX2J5XzExODM1ODQ1ODczNzI1NjE3MTk3MQw">
+    
+      2 weeks, 2 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://airbornesurfer.com/2014/10/paul-lynde-halloween-special-1976/">airbornesurfer.com/2014/10/paul-l...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/109155598539550155494"
+       title="Christopher John">
+      <img class="profile" src="https://lh6.googleusercontent.com/-FMMnUMcGYJ0/AAAAAAAAAAI/AAAAAAAAAAA/blbTINLrdlw/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112999014096523285790/posts/WJXEzj7erW6">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/112999014096523285790/posts/WJXEzj7erW6">
+      
+        --
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414711354&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEybHNyZmhseXJjaWI1eGowNGNpeGw1d3EzeWdyb29iYTBfbGlrZWRfYnlfMTA5MTU1NTk4NTM5NTUwMTU1NDk0DA">
+    
+      2 weeks, 3 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://airbornesurfer.com/2014/10/rosebud-frozen-peas/">airbornesurfer.com/2014/10/rosebu...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

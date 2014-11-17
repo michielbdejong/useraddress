@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Johannes Ernst (Facebook) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://facebook.com/johannes.ernst" title="Johannes Ernst (Facebook)"
+   class="u-url">
+  <img class="profile u-photo" src="https://graph.facebook.com/johannes.ernst/picture?type=large" width="64px" />
+  <img src="/static/facebook_icon.png"
+       
+       alt="Facebook" />
+  <span class="p-name">Johannes Ernst</span></a>
+
+
+<!-- TODO: make this work without javascript too -->
+<a href="#" onclick="document.forms['listen-facebook-start'].submit();
+                     return false;">
+  <span class="glyphicon glyphicon-pause"
+        title="This account was disconnected on Facebook's end. Click to reconnect it!">
+</span></a>
+
+
+
+  
+  &middot;
+  <a href="http://upon2020.com/blog/" class="publish-domain u-url">upon2020.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+Click to enable <a href="/about#listen">listening</a>:
+
+<!-- Facebook listen signup -->
+<form method="post" name="listen-facebook-start" action="/facebook/start" class="signup">
+  <input type="image" alt="Sign in with Facebook"
+         src="/activitystreams/oauth_dropins/static/facebook.png" />
+  <input name="feature" type="hidden" value="listen" />
+  <!-- https://developers.facebook.com/docs/reference/login/ -->
+  <input name="scope" type="hidden"
+         value="offline_access,user_website,user_status,user_photos,user_events,read_stream">
+</form>
+
+
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+<span class="big">Click to enable <a href="/about#publish">publishing</a>:</span>
+<form method="post" name="publish-facebook-start" action="/facebook/start" class="signup">
+ <input type="image" alt="Sign in with Facebook"
+        src="/activitystreams/oauth_dropins/static/facebook.png" />
+ <input name="feature" type="hidden" value="publish" />
+ <!-- https://developers.facebook.com/docs/reference/login/ -->
+ <input name="scope" type="hidden"
+        value="offline_access,user_website,publish_actions,create_event,rsvp_event,user_status,friends_status,user_photos,friends_photos,user_videos,friends_videos,user_events,friends_events,user_likes,friends_likes" />
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1127010854"
+       title="Eddy Cormon">
+      <img class="profile" src="https://graph.facebook.com/1127010854/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/10153117881017796?comment_id=10153118005082796">
+        he should clean up the local ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/503237795/posts/10153117881017796">
+      
+        @cnn: "President to speak soon on ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1408463809&key=aglzfmJyaWQtZ3lyRwsSCFJlc3BvbnNlIjl0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTMxMTc4ODEwMTc3OTZfMTAxNTMxMTgwMDUwODI3OTYM">
+    
+      2 months, 4 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://upon2020.com/banter/2014/08/18/cnn-president-to-speak-soon-on-situations/">upon2020.com/banter/2014/08...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/554840717"
+       title="Kevin Mallory">
+      <img class="profile" src="https://graph.facebook.com/554840717/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/503237795/posts/10153084176612796">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/503237795/posts/10153084176612796">
+      
+        How cool!! 3D Object Manipulation in ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1407374606&key=aglzfmJyaWQtZ3lySAsSCFJlc3BvbnNlIjp0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTMwODQxNzY2MTI3OTZfbGlrZWRfYnlfNTU0ODQwNzE3DA">
+    
+      3 months, 1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.cs.cmu.edu/~om3d/">cs.cmu.edu/~om3d/</a></li>
+	<li><a class="original-post" target="_blank" href="http://upon2020.com/banter/2014/08/06/3d-object-manipulation-in-a-single-photograph-using-stock-3d-models/">upon2020.com/banter/2014/08...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/36802236"
+       title="Ben Werdmüller">
+      <img class="profile" src="https://graph.facebook.com/36802236/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/503237795/posts/10153079962162796">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/503237795/posts/10153079962162796">
+      
+        There are languages in which it ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1407212524&key=aglzfmJyaWQtZ3lyRwsSCFJlc3BvbnNlIjl0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTMwNzk5NjIxNjI3OTZfbGlrZWRfYnlfMzY4MDIyMzYM">
+    
+      3 months, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://upon2020.com/banter/2014/08/04/there-are-languages-in-which-it-easy-to/">upon2020.com/banter/2014/08...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/554840717"
+       title="Kevin Mallory">
+      <img class="profile" src="https://graph.facebook.com/554840717/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/503237795/posts/10153066604137796">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/503237795/posts/10153066604137796">
+      
+        My monitor just got a whole ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1406860647&key=aglzfmJyaWQtZ3lySAsSCFJlc3BvbnNlIjp0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTMwNjY2MDQxMzc3OTZfbGlrZWRfYnlfNTU0ODQwNzE3DA">
+    
+      3 months, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://upon2020.com/banter/2014/07/30/my-monitor-just-got-a-whole-lot-more/">upon2020.com/banter/2014/07...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/723560044"
+       title="Gabe Wachob">
+      <img class="profile" src="https://graph.facebook.com/723560044/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/10153066278997796?comment_id=10153066287257796">
+        No. Not really. Not even close. ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/503237795/posts/10153066278997796">
+      
+        PHP 82%, Ruby 0.5%, Python 0.2%? ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1406758020&key=aglzfmJyaWQtZ3lyRwsSCFJlc3BvbnNlIjl0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTMwNjYyNzg5OTc3OTZfMTAxNTMwNjYyODcyNTc3OTYM">
+    
+      3 months, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://upon2020.com/banter/2014/07/30/usage-statistics-and-market-share-of-server-side-programming-languages-for-websites-july-2014/">upon2020.com/banter/2014/07...</a></li>
+	<li><a class="original-post" target="_blank" href="http://w3techs.com/technologies/overview/programming_language/all">w3techs.com/technologies/o...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1127010854"
+       title="Eddy Cormon">
+      <img class="profile" src="https://graph.facebook.com/1127010854/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/503237795/posts/10153061603617796">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/503237795/posts/10153061603617796">
+      
+        @FT: "There is a war coming ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1406758018&key=aglzfmJyaWQtZ3lySQsSCFJlc3BvbnNlIjt0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTMwNjE2MDM2MTc3OTZfbGlrZWRfYnlfMTEyNzAxMDg1NAw">
+    
+      3 months, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.ft.com/cms/s/b01cfb72-1669-11e4-8210-00144feabdc0,Authorised=false.html?_i_location=http%3A%2F%2Fwww.ft.com%2Fcms%2Fs%2F0%2Fb01cfb72-1669-11e4-8210-00144feabdc0.html%3Fsiteedition%3Duk&siteedition=uk">ft.com/cms/s/b01cfb72...</a></li>
+	<li><a class="original-post" target="_blank" href="http://upon2020.com/banter/2014/07/28/yukos-shareholders-face-battle-to-claim-50bn-ft-com/">upon2020.com/banter/2014/07...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/723560044"
+       title="Gabe Wachob">
+      <img class="profile" src="https://graph.facebook.com/723560044/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/10153063701992796?comment_id=10153063707767796">
+        I just called U-Verse support this ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/503237795/posts/10153063701992796">
+      
+        Almost 1.5 hours later with @comcast ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1406679332&key=aglzfmJyaWQtZ3lyRwsSCFJlc3BvbnNlIjl0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTMwNjM3MDE5OTI3OTZfMTAxNTMwNjM3MDc3Njc3OTYM">
+    
+      3 months, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://upon2020.com/banter/2014/07/29/almost-1-5-hours-later-with-comcast-support-im/">upon2020.com/banter/2014/07...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/571354664"
+       title="Mark Wahl">
+      <img class="profile" src="https://graph.facebook.com/571354664/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/503237795/posts/10153019206987796">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/503237795/posts/10153019206987796">
+      
+        Quaternions. Never heard of them, but ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1405174377&key=aglzfmJyaWQtZ3lySAsSCFJlc3BvbnNlIjp0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTMwMTkyMDY5ODc3OTZfbGlrZWRfYnlfNTcxMzU0NjY0DA">
+    
+      4 months, 1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://en.m.wikipedia.org/wiki/Quaternion">en.m.wikipedia.org/wiki/Quaternio...</a></li>
+	<li><a class="original-post" target="_blank" href="http://upon2020.com/banter/2014/07/11/quaternions-never-heard-of-them-but-cute-warningmathisfollowing/">upon2020.com/banter/2014/07...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/554840717"
+       title="Kevin Mallory">
+      <img class="profile" src="https://graph.facebook.com/554840717/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/503237795/posts/10153013680737796">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/503237795/posts/10153013680737796">
+      
+        Perl, oh Perl. Ten years later ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1404961161&key=aglzfmJyaWQtZ3lySAsSCFJlc3BvbnNlIjp0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTMwMTM2ODA3Mzc3OTZfbGlrZWRfYnlfNTU0ODQwNzE3DA">
+    
+      4 months, 1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://upon2020.com/banter/2014/07/09/perl-oh-perl-ten-years-later-i-still/">upon2020.com/banter/2014/07...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/36802236"
+       title="Ben Werdmüller">
+      <img class="profile" src="https://graph.facebook.com/36802236/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/503237795/posts/10153013108772796">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/503237795/posts/10153013108772796">
+      
+        Developers are good at tolerating frustrations
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1404958665&key=aglzfmJyaWQtZ3lyRwsSCFJlc3BvbnNlIjl0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTMwMTMxMDg3NzI3OTZfbGlrZWRfYnlfMzY4MDIyMzYM">
+    
+      4 months, 1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://upon2020.com/blog/2014/07/developers-are-good-at-tolerating-frustrations/">upon2020.com/blog/2014/07/d...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

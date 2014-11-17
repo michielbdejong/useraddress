@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Glenn Jones (Google+) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://plus.google.com/105161464208920272734" title="Glenn Jones (Google+)"
+   class="u-url">
+  <img class="profile u-photo" src="https://lh3.googleusercontent.com/-L0QREeyauxE/AAAAAAAAAAI/AAAAAAAADLY/VjOO3eiHcyg/photo.jpg?sz=50&amp;sz=128" width="64px" />
+  <img src="/static/googleplus_icon.png"
+       
+       alt="Google+" />
+  <span class="p-name">Glenn Jones</span></a>
+
+
+
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row promo warning">
+<p id="edit-profile">First things first: what's your web site?
+
+Open your
+<a href="https://plus.google.com/me/about" target="_blank">
+  Google+ profile's <em>Links</em> section</a>, click the <em>Edit</em> link,
+and add your web site as the first link under <em>Other profiles</em>. Then
+click here:
+<!-- Google+ listen signup -->
+<form method="post" name="listen-googleplus-start" action="/googleplus/start" class="signup">
+  <input type="image" alt="Sign in with Google+"
+         src="/activitystreams/oauth_dropins/static/google_plus.png" />
+  <!-- The state param doesn't actually work for G+. Not sure why. Doesn't
+       matter for now since we don't support publish for G+. -->
+  <input name="feature" type="hidden" value="listen" />
+  <!-- https://developers.google.com/+/api/oauth#scopes -->
+  <input name="scope" type="hidden"
+         value="https://www.googleapis.com/auth/plus.login" />
+</form>
+
+
+</p>
+</div>
+
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class=" big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDUxNjE0NjQyMDg5MjAyNzI3MzQM" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416213644&key=aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDUxNjE0NjQyMDg5MjAyNzI3MzQM">
+      8 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDUxNjE0NjQyMDg5MjAyNzI3MzQM" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/108751138108005469822"
+       title="Sebastian Lasse">
+      <img class="profile" src="https://lh4.googleusercontent.com/-JberdLklCkk/AAAAAAAAAAI/AAAAAAAAAAA/jgElm9btNQg/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/105161464208920272734/posts/GFRG1RY8L76">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/105161464208920272734/posts/GFRG1RY8L76">
+      
+        Just uploaded new/updated collection of browser ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413805160&key=aglzfmJyaWQtZ3lyaAsSCFJlc3BvbnNlIlp0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyZXhqeWFheHVyZGY1ZXYyM3l2NXFoa3F5cGNyMHVlX3NoYXJlZF9ieV8xMDg3NTExMzgxMDgwMDU0Njk4MjIM">
+    
+      3 weeks, 6 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://codebits.glennjones.net/index.htm">codebits.glennjones.net/index.htm</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/116113014152499702246"
+       title="Jason Salas">
+      <img class="profile" src="https://lh3.googleusercontent.com/-AS2hT-rufDo/AAAAAAAAAAI/AAAAAAAAAAA/Ym7yjw1bEbs/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/105161464208920272734/posts/DN5tePmwiCZ">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/105161464208920272734/posts/DN5tePmwiCZ">
+      
+        Just posted an introduction to Web ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413799563&key=aglzfmJyaWQtZ3lyaAsSCFJlc3BvbnNlIlp0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyZGk1b3pvbWJsZXB4ZWQyM3l2NXFoa3F5cGNyMHVlX3NoYXJlZF9ieV8xMTYxMTMwMTQxNTI0OTk3MDIyNDYM">
+    
+      3 weeks, 6 days ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyaAsSCFJlc3BvbnNlIlp0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyZGk1b3pvbWJsZXB4ZWQyM3l2NXFoa3F5cGNyMHVlX3NoYXJlZF9ieV8xMTYxMTMwMTQxNTI0OTk3MDIyNDYM" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://glennjones.net/2011/08/web-intentsgluing-web-functionality-together/">glennjones.net/2011/08/web-in... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/103085129535131475109"
+       title="Radu Nicolescu">
+      <img class="profile" src="https://lh5.googleusercontent.com/-5bxv7L_gD0o/AAAAAAAAAAI/AAAAAAAAAAA/xg12d2LFguo/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/105161464208920272734/posts/Cvk7fdS3QmA">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/105161464208920272734/posts/Cvk7fdS3QmA">
+      
+        Drag/Drop and File APIs demo videoA ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413799551&key=aglzfmJyaWQtZ3lyaAsSCFJlc3BvbnNlIlp0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyaXdoM3JtcHI1enZkbWIyM3l2NXFoa3F5cGNyMHVlX3NoYXJlZF9ieV8xMDMwODUxMjk1MzUxMzE0NzUxMDkM">
+    
+      3 weeks, 6 days ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyaAsSCFJlc3BvbnNlIlp0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyaXdoM3JtcHI1enZkbWIyM3l2NXFoa3F5cGNyMHVlX3NoYXJlZF9ieV8xMDMwODUxMjk1MzUxMzE0NzUxMDkM" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://glennjones.net/2011/08/the-page-and-the-desktop">glennjones.net/2011/08/the-pa... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/105128291271883342879"
+       title="Sven Kaemper">
+      <img class="profile" src="https://lh6.googleusercontent.com/-rN5XhbWeE_0/AAAAAAAAAAI/AAAAAAAAAAA/-EirqBFTqzA/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/105161464208920272734/posts/Zm2YyQscfC5">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/105161464208920272734/posts/Zm2YyQscfC5">
+      
+        I have just built a few ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413799545&key=aglzfmJyaWQtZ3lyagsSCFJlc3BvbnNlIlx0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzZGdsZXp4ejN0ZWJ2aTMwNGNqdmdxdHEydnVwMnczZGNfc2hhcmVkX2J5XzEwNTEyODI5MTI3MTg4MzM0Mjg3OQw">
+    
+      3 weeks, 6 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://codebits.glennjones.net/webintents/wi-register-intent.html">codebits.glennjones.net/webintents/wi-...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/117202023387676406796"
+       title="Peter Eschler">
+      <img class="profile" src="https://lh3.googleusercontent.com/-0oAiie07X8w/AAAAAAAAAAI/AAAAAAAAAAA/JLm3VWlkARE/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/105161464208920272734/posts/JMctK6mKEGb">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/105161464208920272734/posts/JMctK6mKEGb">
+      
+        I have just released a new ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413799543&key=aglzfmJyaWQtZ3lyaAsSCFJlc3BvbnNlIlp0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyYWd4ZzRlcG01dzFzZmIyM3l2NXFoa3F5cGNyMHVlX3NoYXJlZF9ieV8xMTcyMDIwMjMzODc2NzY0MDY3OTYM">
+    
+      3 weeks, 6 days ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyaAsSCFJlc3BvbnNlIlp0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyYWd4ZzRlcG01dzFzZmIyM3l2NXFoa3F5cGNyMHVlX3NoYXJlZF9ieV8xMTcyMDIwMjMzODc2NzY0MDY3OTYM" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://microformat-node.jit.su">microformat-node.jit.su <span class="glyphicon glyphicon-exclamation-sign"></span></a></li>
+	<li><a class="original-post" target="_blank" href="http://glennjones.github.com/microformat-node">glennjones.github.com/microformat-no... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li>
+	<li><a class="original-post" target="_blank" href="http://glennjones.github.com/microformat-node/">glennjones.github.com/microformat-no... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://github.com/glennjones/microformat-node">github.com/glennjones/mic...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/103085129535131475109"
+       title="Radu Nicolescu">
+      <img class="profile" src="https://lh5.googleusercontent.com/-5bxv7L_gD0o/AAAAAAAAAAI/AAAAAAAAAAA/xg12d2LFguo/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/105161464208920272734/posts/DN5tePmwiCZ">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/105161464208920272734/posts/DN5tePmwiCZ">
+      
+        Just posted an introduction to Web ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413799538&key=aglzfmJyaWQtZ3lyaAsSCFJlc3BvbnNlIlp0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyZGk1b3pvbWJsZXB4ZWQyM3l2NXFoa3F5cGNyMHVlX3NoYXJlZF9ieV8xMDMwODUxMjk1MzUxMzE0NzUxMDkM">
+    
+      3 weeks, 6 days ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyaAsSCFJlc3BvbnNlIlp0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyZGk1b3pvbWJsZXB4ZWQyM3l2NXFoa3F5cGNyMHVlX3NoYXJlZF9ieV8xMDMwODUxMjk1MzUxMzE0NzUxMDkM" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://glennjones.net/2011/08/web-intentsgluing-web-functionality-together/">glennjones.net/2011/08/web-in... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/116059998563577101552"
+       title="Paul Kinlan">
+      <img class="profile" src="https://lh3.googleusercontent.com/-8dP5V5B_Uo0/AAAAAAAAAAI/AAAAAAAAAAA/a9jGbd2-G0A/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/105161464208920272734/posts/Zm2YyQscfC5">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/105161464208920272734/posts/Zm2YyQscfC5">
+      
+        I have just built a few ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413799533&key=aglzfmJyaWQtZ3lyagsSCFJlc3BvbnNlIlx0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzZGdsZXp4ejN0ZWJ2aTMwNGNqdmdxdHEydnVwMnczZGNfc2hhcmVkX2J5XzExNjA1OTk5ODU2MzU3NzEwMTU1Mgw">
+    
+      3 weeks, 6 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://codebits.glennjones.net/webintents/wi-register-intent.html">codebits.glennjones.net/webintents/wi-...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/101852146459255883909"
+       title="James Tindall">
+      <img class="profile" src="https://lh4.googleusercontent.com/-uUsN4AHlvps/AAAAAAAAAAI/AAAAAAAAAAA/shSJTp6v80s/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/105161464208920272734/posts/Cvk7fdS3QmA">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/105161464208920272734/posts/Cvk7fdS3QmA">
+      
+        Drag/Drop and File APIs demo videoA ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413799529&key=aglzfmJyaWQtZ3lyaAsSCFJlc3BvbnNlIlp0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyaXdoM3JtcHI1enZkbWIyM3l2NXFoa3F5cGNyMHVlX3NoYXJlZF9ieV8xMDE4NTIxNDY0NTkyNTU4ODM5MDkM">
+    
+      3 weeks, 6 days ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyaAsSCFJlc3BvbnNlIlp0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyaXdoM3JtcHI1enZkbWIyM3l2NXFoa3F5cGNyMHVlX3NoYXJlZF9ieV8xMDE4NTIxNDY0NTkyNTU4ODM5MDkM" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://glennjones.net/2011/08/the-page-and-the-desktop">glennjones.net/2011/08/the-pa... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/101544950458920846070"
+       title="Jose Luis Garcia">
+      <img class="profile" src="https://lh3.googleusercontent.com/-0Beul8dkUmI/AAAAAAAAAAI/AAAAAAAAAAA/hKqZKyAoz6E/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/105161464208920272734/posts/bpwi2Cfn3HP">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/105161464208920272734/posts/bpwi2Cfn3HP">
+      
+        Post on &#39;Beyond the page&#39; talk ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413799527&key=aglzfmJyaWQtZ3lyagsSCFJlc3BvbnNlIlx0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyM2h0a3BwbnFwdnZheWswNGNqdmdxdHEydnVwMnczZGNfc2hhcmVkX2J5XzEwMTU0NDk1MDQ1ODkyMDg0NjA3MAw">
+    
+      3 weeks, 6 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://glennjones.net/articles/beyond-the-page-fullfrontal-2011/">glennjones.net/articles/beyon...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/105128291271883342879"
+       title="Sven Kaemper">
+      <img class="profile" src="https://lh6.googleusercontent.com/-rN5XhbWeE_0/AAAAAAAAAAI/AAAAAAAAAAA/-EirqBFTqzA/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/105161464208920272734/posts/JMctK6mKEGb">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/105161464208920272734/posts/JMctK6mKEGb">
+      
+        I have just released a new ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413799523&key=aglzfmJyaWQtZ3lyaAsSCFJlc3BvbnNlIlp0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyYWd4ZzRlcG01dzFzZmIyM3l2NXFoa3F5cGNyMHVlX3NoYXJlZF9ieV8xMDUxMjgyOTEyNzE4ODMzNDI4NzkM">
+    
+      3 weeks, 6 days ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyaAsSCFJlc3BvbnNlIlp0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyYWd4ZzRlcG01dzFzZmIyM3l2NXFoa3F5cGNyMHVlX3NoYXJlZF9ieV8xMDUxMjgyOTEyNzE4ODMzNDI4NzkM" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://microformat-node.jit.su">microformat-node.jit.su <span class="glyphicon glyphicon-exclamation-sign"></span></a></li>
+	<li><a class="original-post" target="_blank" href="http://glennjones.github.com/microformat-node">glennjones.github.com/microformat-no... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li>
+	<li><a class="original-post" target="_blank" href="http://glennjones.github.com/microformat-node/">glennjones.github.com/microformat-no... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://github.com/glennjones/microformat-node">github.com/glennjones/mic...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

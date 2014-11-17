@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Cornelius Mueller (Google+) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://plus.google.com/+CorneliusMueller" title="Cornelius Mueller (Google+)"
+   class="u-url">
+  <img class="profile u-photo" src="https://lh4.googleusercontent.com/-t-1uaF8d4MM/AAAAAAAAAAI/AAAAAAAAAAA/6NXV8tUCAOM/photo.jpg?sz=50&amp;sz=128" width="64px" />
+  <img src="/static/googleplus_icon.png"
+       
+       alt="Google+" />
+  <span class="p-name">Cornelius Mueller</span></a>
+
+
+
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row promo warning">
+<p id="edit-profile">First things first: what's your web site?
+
+Open your
+<a href="https://plus.google.com/me/about" target="_blank">
+  Google+ profile's <em>Links</em> section</a>, click the <em>Edit</em> link,
+and add your web site as the first link under <em>Other profiles</em>. Then
+click here:
+<!-- Google+ listen signup -->
+<form method="post" name="listen-googleplus-start" action="/googleplus/start" class="signup">
+  <input type="image" alt="Sign in with Google+"
+         src="/activitystreams/oauth_dropins/static/google_plus.png" />
+  <!-- The state param doesn't actually work for G+. Not sure why. Doesn't
+       matter for now since we don't support publish for G+. -->
+  <input name="feature" type="hidden" value="listen" />
+  <!-- https://developers.google.com/+/api/oauth#scopes -->
+  <input name="scope" type="hidden"
+         value="https://www.googleapis.com/auth/plus.login" />
+</form>
+
+
+</p>
+</div>
+
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class=" big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDY1MTU4NTE3MDI2MjQzNzk3NjYM" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416198685&key=aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDY1MTU4NTE3MDI2MjQzNzk3NjYM">
+      4 hours, 18 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDY1MTU4NTE3MDI2MjQzNzk3NjYM" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/115650968157350323510"
+       title="LED charming">
+      <img class="profile" src="https://lh6.googleusercontent.com/-BuTuQhaOv5Y/AAAAAAAAAAI/AAAAAAAAAAA/dMiXysziEgo/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/106515851702624379766/posts/YDoH9Fo9Sf9">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/106515851702624379766/posts/YDoH9Fo9Sf9">
+      
+        --
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1411143305&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyNGN0a3J4cnl0enZveHUwNGNkanhpd21xbGgzdmdncHcwa19saWtlZF9ieV8xMTU2NTA5NjgxNTczNTAzMjM1MTAM">
+    
+      1 month, 4 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.sinolandquality.com/Blog/?page_id=5141">sinolandquality.com/Blog/?page_id=...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/112262342138605711191"
+       title="Brunold Loidl">
+      <img class="profile" src="https://lh3.googleusercontent.com/-ITh6mZngvf8/AAAAAAAAAAI/AAAAAAAAAAA/JnT3ZmaIfZY/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/106515851702624379766/posts/YfU8wDz9fqA">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/106515851702624379766/posts/YfU8wDz9fqA">
+      
+        --
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1409206948&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyY3RiNXJoa2VqeGhkcHgwNGNkanhpd21xbGgzdmdncHcwa19saWtlZF9ieV8xMTIyNjIzNDIxMzg2MDU3MTExOTEM">
+    
+      2 months, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.sinolandquality.com/Blog/?page_id=5025">sinolandquality.com/Blog/?page_id=...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/113974135493395093187"
+       title="aladdin ledlighting">
+      <img class="profile" src="https://lh5.googleusercontent.com/-u4PjMRLgIbw/AAAAAAAAAAI/AAAAAAAAAAA/qEkjpu33xt4/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/106515851702624379766/posts/499zdeejECg#+1ed-by-113974135493395093187">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/106515851702624379766/posts/499zdeejECg">
+      
+        LED Lighting applications - possibilities and ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1404624977&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzd3V2a3BleGlvZjNzc20yMmZ6ZnI0cG9mY3l2MzVqMDRfbGlrZWRfYnlfMTEzOTc0MTM1NDkzMzk1MDkzMTg3DA">
+    
+      4 months, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.sinolandquality.com/Blog/?page_id=74">sinolandquality.com/Blog/?page_id=...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/116990739437091947602"
+       title="Giacomo Pelagatti">
+      <img class="profile" src="https://lh3.googleusercontent.com/-g8ZAka0WBWQ/AAAAAAAAAAI/AAAAAAAAAAA/_E5NtLwIrFg/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/106515851702624379766/posts/AYhw7x8frcP">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/106515851702624379766/posts/AYhw7x8frcP">
+      
+        Who is Don?﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      5 months, 3 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/106515851702624379766"
+       title="Cornelius Mueller">
+      <img class="profile" src="https://lh4.googleusercontent.com/-t-1uaF8d4MM/AAAAAAAAAAI/AAAAAAAAAAA/7sNPlkBSD7I/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/106515851702624379766/posts/g5uy1D9pph4">
+        It&#39;s a pity that this needs ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/106515851702624379766/posts/g5uy1D9pph4">
+      
+        Shenzhen attempts another &#39;first&#39; in China﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1396073433&key=aglzfmJyaWQtZ3lyXQsSCFJlc3BvbnNlIk90YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyM3kxMGJnenY0c2ZwcmQwNGNkanhpd21xbGgzdmdncHcway4xMzIyNzg4Nzg0Mjk1MTI5DA">
+    
+      7 months, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www1.szdaily.com/content/2011-11/30/content_6271191.htm">www1.szdaily.com/content/2011-1...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/113703507576439161611"
+       title="Michele vonHild">
+      <img class="profile" src="https://lh4.googleusercontent.com/-wEtE7RXtE8k/AAAAAAAAAAI/AAAAAAAAAAA/nAwjXy7b5Uo/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/113703507576439161611/posts/L6pLWmZF5GW">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/106515851702624379766/posts/2RwiMcp1Qx5">
+      
+        d&#39;oh!...lol.... ﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      7 months, 3 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/113703507576439161611"
+       title="Michele vonHild">
+      <img class="profile" src="https://lh6.googleusercontent.com/-wEtE7RXtE8k/AAAAAAAAAAI/AAAAAAABTg8/EFBMio4oFCs/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/106515851702624379766/posts/2RwiMcp1Qx5">
+        Thx for sharing!!</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/106515851702624379766/posts/2RwiMcp1Qx5">
+      
+        d&#39;oh!...lol.... ﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      7 months, 3 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/116106492699958457211"
+       title="hona Kim">
+      <img class="profile" src="https://lh3.googleusercontent.com/-BFyA_Dc_NkE/AAAAAAAAAAI/AAAAAAAAAAA/6eqy2ws9QGo/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/106515851702624379766/posts/Sc6So3bGN2A">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/106515851702624379766/posts/Sc6So3bGN2A">
+      
+        --
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1396072899&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzcnMzcm93cGZwZ3Ayb3QwNGNkanhpd21xbGgzdmdncHcwa19saWtlZF9ieV8xMTYxMDY0OTI2OTk5NTg0NTcyMTEM">
+    
+      7 months, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.scmp.com/article/982423/apples-china-sales-show-why-us-trade-warriors-are-wrong">scmp.com/article/982423...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/106515851702624379766"
+       title="Cornelius Mueller">
+      <img class="profile" src="https://lh4.googleusercontent.com/-t-1uaF8d4MM/AAAAAAAAAAI/AAAAAAAAAAA/7sNPlkBSD7I/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/106515851702624379766/posts/Sc6So3bGN2A">
+        I&#39;m beyond the point that I ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/106515851702624379766/posts/Sc6So3bGN2A">
+      
+        --
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1396072899&key=aglzfmJyaWQtZ3lyXQsSCFJlc3BvbnNlIk90YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzcnMzcm93cGZwZ3Ayb3QwNGNkanhpd21xbGgzdmdncHcway4xMzE5MjM4MDE3NzUwMDAwDA">
+    
+      7 months, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.scmp.com/article/982423/apples-china-sales-show-why-us-trade-warriors-are-wrong">scmp.com/article/982423...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/112262342138605711191"
+       title="Brunold Loidl">
+      <img class="profile" src="https://lh3.googleusercontent.com/-ITh6mZngvf8/AAAAAAAAAAI/AAAAAAAAAAA/JnT3ZmaIfZY/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/106515851702624379766/posts/bwji3vhRzTT">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/106515851702624379766/posts/bwji3vhRzTT">
+      
+        Still free journalism or racism?A german ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1396072589&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzbGVsMzVyeHp1Y3Z4aWswNGNkanhpd21xbGgzdmdncHcwa19saWtlZF9ieV8xMTIyNjIzNDIxMzg2MDU3MTExOTEM">
+    
+      7 months, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.bild.de/politik/ausland/euro-krise/kommen-milliarden-euros-von-chinesen-20623352.bild.html">bild.de/politik/auslan...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

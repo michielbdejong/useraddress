@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Ross Goodman (Google+) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://plus.google.com/+RossGoodman1970" title="Ross Goodman (Google+)"
+   class="u-url">
+  <img class="profile u-photo" src="https://lh4.googleusercontent.com/-WAuCE8d7hoY/AAAAAAAAAAI/AAAAAAAAD8A/-u_yYzE_w10/photo.jpg?sz=50&amp;sz=128" width="64px" />
+  <img src="/static/googleplus_icon.png"
+       
+       alt="Google+" />
+  <span class="p-name">Ross Goodman</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://www.RossGoodman.com" class="publish-domain u-url">rossgoodman.com</a>
+
+  
+  &middot;
+  <a href="http://pulse.yahoo.com/_Y4HOZ7CXY5VNPD7DHOPI2EO6HI" class="publish-domain u-url">pulse.yahoo.com</a>
+
+  
+  &middot;
+  <a href="http://www.maxima.co.uk/about-us/maxima-blog/business-intelligence-blog/item/ross-goodman" class="publish-domain u-url">maxima.co.uk</a>
+
+  
+    <span id="more-websites" style="display: none">
+  
+  &middot;
+  <a href="http://www.maxima.co.uk/about-us/maxima-blog/business-intelligence-blog" class="publish-domain u-url">maxima.co.uk</a>
+
+  
+  &middot;
+  <a href="http://RossGoodman.com" class="publish-domain u-url">rossgoodman.com</a>
+
+  
+  &middot;
+  <a href="http://www.rossgoodman.com" class="publish-domain u-url">rossgoodman.com</a>
+
+  
+  &middot;
+  <a href="http://www.parkrun.org.uk/strathclyde/" class="publish-domain u-url">parkrun.org.uk</a>
+
+
+  </span>
+  <a onclick="toggle('more-websites'); toggle('show-more-websites'); return false"
+     id="show-more-websites" href="#" />...</a>
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class=" big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTQyNTI5MDMwODIxMjQ3NzU5OTIM" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416204152&key=aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTQyNTI5MDMwODIxMjQ3NzU5OTIM">
+      2 hours, 51 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTQyNTI5MDMwODIxMjQ3NzU5OTIM" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/112287787203692945112"
+       title="Jamie Stevenson">
+      <img class="profile" src="https://lh6.googleusercontent.com/-pEx0dz6U06Q/AAAAAAAAAAI/AAAAAAAAAAA/Y865TKg6mKk/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/114252903082124775992/posts/8C3esQ2Vx4U">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/114252903082124775992/posts/8C3esQ2Vx4U">
+      
+        Just like the true athlete that ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1411893643&key=aglzfmJyaWQtZ3lyZwsSCFJlc3BvbnNlIll0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzZXN4b3licmF0Z256bGUyM2F1cHZycm51MWNkd3RoX2xpa2VkX2J5XzExMjI4Nzc4NzIwMzY5Mjk0NTExMgw">
+    
+      1 month, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.rossgoodman.com/2014/09/27/day-two-of-acclimatisation/">rossgoodman.com/2014/09/27/day...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/114980345579206759322"
+       title="Fitbit UK">
+      <img class="profile" src="https://lh3.googleusercontent.com/-ngqT7yFU1fA/AAAAAAAAAAI/AAAAAAAAAAA/pcJUV98_PKg/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/114252903082124775992/posts/D8xw388mjUa">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/114252903082124775992/posts/D8xw388mjUa">
+      
+        I found a much shadier and ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1403857032&key=aglzfmJyaWQtZ3lyZwsSCFJlc3BvbnNlIll0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzZnMxd2ljd3EyZHZtMmMyM2F1cHZycm51MWNkd3RoX2xpa2VkX2J5XzExNDk4MDM0NTU3OTIwNjc1OTMyMgw">
+    
+      4 months, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.rossgoodman.com/2014/06/27/running-again/">rossgoodman.com/2014/06/27/run...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/104403800912062884925"
+       title="GAS LibraryApp">
+      <img class="profile" src="https://lh4.googleusercontent.com/-qArgIjXQLK8/AAAAAAAAAAI/AAAAAAAAAE8/Xp2Lk5uSF4g/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/114252903082124775992/posts/UjUMCQ96sYc">
+        For this use case an appropriate ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/114252903082124775992/posts/UjUMCQ96sYc">
+      
+        How To : Create URL to ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1402961740&key=aglzfmJyaWQtZ3lyWwsSCFJlc3BvbnNlIk10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyZ3l2Mnl0eHJldm50cDUwNGNndmVyaXl5amM1MWJuNW8uMTQwMjk2MDQ3NTY3MjAxOAw">
+    
+      5 months ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://accounts.google.com/ServiceLogin?service=mail&passive=true&rm=false&continue=https://mail.google.com/mail/ca/?ui%3D2%26amp;view%3Dbtop%26amp;search%3Dall%26amp;th&scc=1&ltmpl=default&ltmplcache=2&emr=1">accounts.google.com/ServiceLogin?s...</a></li>
+	<li><a class="original-post" target="_blank" href="https://accounts.google.com/ServiceLogin?service=mail&passive=true&rm=false&continue=https://mail.google.com/mail/ca/?ui%3D2%26view%3Dbtop%26ver%3D1csrg80ohzm1w%26search%3Dall%26th&scc=1&ltmpl=default&ltmplcache=2&emr=1">accounts.google.com/ServiceLogin?s...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/114219164219497873779"
+       title="Kim McMichael">
+      <img class="profile" src="https://lh4.googleusercontent.com/-1J4xH93QNSQ/AAAAAAAAAAI/AAAAAAAAAAA/2Q1ONMEkNlM/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/114252903082124775992/posts/UjUMCQ96sYc">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/114252903082124775992/posts/UjUMCQ96sYc">
+      
+        How To : Create URL to ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1402932592&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyZ3l2Mnl0eHJldm50cDUwNGNndmVyaXl5amM1MWJuNW9fbGlrZWRfYnlfMTE0MjE5MTY0MjE5NDk3ODczNzc5DA">
+    
+      5 months ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://accounts.google.com/ServiceLogin?service=mail&passive=true&rm=false&continue=https://mail.google.com/mail/ca/?ui%3D2%26amp;view%3Dbtop%26amp;search%3Dall%26amp;th&scc=1&ltmpl=default&ltmplcache=2&emr=1">accounts.google.com/ServiceLogin?s...</a></li>
+	<li><a class="original-post" target="_blank" href="https://accounts.google.com/ServiceLogin?service=mail&passive=true&rm=false&continue=https://mail.google.com/mail/ca/?ui%3D2%26view%3Dbtop%26ver%3D1csrg80ohzm1w%26search%3Dall%26th&scc=1&ltmpl=default&ltmplcache=2&emr=1">accounts.google.com/ServiceLogin?s...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/117346385807218227082"
+       title="Patrick Martinent">
+      <img class="profile" src="https://lh4.googleusercontent.com/-hnNzSN4H9LI/AAAAAAAAAAI/AAAAAAAAGeg/0YN2eABsxMM/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/114252903082124775992/posts/UjUMCQ96sYc">
+        How about thread.getPermalink() ?﻿https://developers.google.com/apps-script/reference/gmail/gmail-thread#getPermalink()</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/114252903082124775992/posts/UjUMCQ96sYc">
+      
+        How To : Create URL to ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1402932569&key=aglzfmJyaWQtZ3lyWwsSCFJlc3BvbnNlIk10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyZ3l2Mnl0eHJldm50cDUwNGNndmVyaXl5amM1MWJuNW8uMTQwMjkzMDk4OTYyNjExNww">
+    
+      5 months ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://accounts.google.com/ServiceLogin?service=mail&passive=true&rm=false&continue=https://mail.google.com/mail/ca/?ui%3D2%26amp;view%3Dbtop%26amp;search%3Dall%26amp;th&scc=1&ltmpl=default&ltmplcache=2&emr=1">accounts.google.com/ServiceLogin?s...</a></li>
+	<li><a class="original-post" target="_blank" href="https://accounts.google.com/ServiceLogin?service=mail&passive=true&rm=false&continue=https://mail.google.com/mail/ca/?ui%3D2%26view%3Dbtop%26ver%3D1csrg80ohzm1w%26search%3Dall%26th&scc=1&ltmpl=default&ltmplcache=2&emr=1">accounts.google.com/ServiceLogin?s...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/114252903082124775992"
+       title="Ross Goodman">
+      <img class="profile" src="https://lh4.googleusercontent.com/-WAuCE8d7hoY/AAAAAAAAAAI/AAAAAAAAD8A/zsHhjWGYnj4/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/114252903082124775992/posts/UjUMCQ96sYc">
+        I have just found the following ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/114252903082124775992/posts/UjUMCQ96sYc">
+      
+        How To : Create URL to ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1402930519&key=aglzfmJyaWQtZ3lyWwsSCFJlc3BvbnNlIk10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyZ3l2Mnl0eHJldm50cDUwNGNndmVyaXl5amM1MWJuNW8uMTQwMjkyOTc0NDYyOTE2Ngw">
+    
+      5 months ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://accounts.google.com/ServiceLogin?service=mail&passive=true&rm=false&continue=https://mail.google.com/mail/ca/?ui%3D2%26amp;view%3Dbtop%26amp;search%3Dall%26amp;th&scc=1&ltmpl=default&ltmplcache=2&emr=1">accounts.google.com/ServiceLogin?s...</a></li>
+	<li><a class="original-post" target="_blank" href="https://accounts.google.com/ServiceLogin?service=mail&passive=true&rm=false&continue=https://mail.google.com/mail/ca/?ui%3D2%26view%3Dbtop%26ver%3D1csrg80ohzm1w%26search%3Dall%26th&scc=1&ltmpl=default&ltmplcache=2&emr=1">accounts.google.com/ServiceLogin?s...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/104403800912062884925"
+       title="GAS LibraryApp">
+      <img class="profile" src="https://lh4.googleusercontent.com/-qArgIjXQLK8/AAAAAAAAAAI/AAAAAAAAAE8/Xp2Lk5uSF4g/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/114252903082124775992/posts/UjUMCQ96sYc">
+        https://mail.google.com/mail/ca/u/0/#label/&lt;YOURLAGEL&gt;/146242e6d4566e94 is the pattern that should ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/114252903082124775992/posts/UjUMCQ96sYc">
+      
+        How To : Create URL to ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1402928875&key=aglzfmJyaWQtZ3lyWwsSCFJlc3BvbnNlIk10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyZ3l2Mnl0eHJldm50cDUwNGNndmVyaXl5amM1MWJuNW8uMTQwMjkyNzkwMjA5MzAxOAw">
+    
+      5 months ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://accounts.google.com/ServiceLogin?service=mail&passive=true&rm=false&continue=https://mail.google.com/mail/ca/?ui%3D2%26amp;view%3Dbtop%26amp;search%3Dall%26amp;th&scc=1&ltmpl=default&ltmplcache=2&emr=1">accounts.google.com/ServiceLogin?s...</a></li>
+	<li><a class="original-post" target="_blank" href="https://accounts.google.com/ServiceLogin?service=mail&passive=true&rm=false&continue=https://mail.google.com/mail/ca/?ui%3D2%26view%3Dbtop%26ver%3D1csrg80ohzm1w%26search%3Dall%26th&scc=1&ltmpl=default&ltmplcache=2&emr=1">accounts.google.com/ServiceLogin?s...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/114252903082124775992"
+       title="Ross Goodman">
+      <img class="profile" src="https://lh4.googleusercontent.com/-WAuCE8d7hoY/AAAAAAAAAAI/AAAAAAAAD8A/zsHhjWGYnj4/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/114252903082124775992/posts/UjUMCQ96sYc">
+        Any time I try and manually ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/114252903082124775992/posts/UjUMCQ96sYc">
+      
+        How To : Create URL to ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1402926932&key=aglzfmJyaWQtZ3lyWwsSCFJlc3BvbnNlIk10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyZ3l2Mnl0eHJldm50cDUwNGNndmVyaXl5amM1MWJuNW8uMTQwMjkyNTYxNDI1MTE2Ngw">
+    
+      5 months ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://accounts.google.com/ServiceLogin?service=mail&passive=true&rm=false&continue=https://mail.google.com/mail/ca/?ui%3D2%26amp;view%3Dbtop%26amp;search%3Dall%26amp;th&scc=1&ltmpl=default&ltmplcache=2&emr=1">accounts.google.com/ServiceLogin?s...</a></li>
+	<li><a class="original-post" target="_blank" href="https://accounts.google.com/ServiceLogin?service=mail&passive=true&rm=false&continue=https://mail.google.com/mail/ca/?ui%3D2%26view%3Dbtop%26ver%3D1csrg80ohzm1w%26search%3Dall%26th&scc=1&ltmpl=default&ltmplcache=2&emr=1">accounts.google.com/ServiceLogin?s...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/114252903082124775992"
+       title="Ross Goodman">
+      <img class="profile" src="https://lh4.googleusercontent.com/-WAuCE8d7hoY/AAAAAAAAAAI/AAAAAAAAD8A/zsHhjWGYnj4/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/114252903082124775992/posts/UjUMCQ96sYc">
+        My script is scanning my mail ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/114252903082124775992/posts/UjUMCQ96sYc">
+      
+        How To : Create URL to ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1402926916&key=aglzfmJyaWQtZ3lyWwsSCFJlc3BvbnNlIk10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyZ3l2Mnl0eHJldm50cDUwNGNndmVyaXl5amM1MWJuNW8uMTQwMjkyNTM1MjM2MzE2Ngw">
+    
+      5 months ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://accounts.google.com/ServiceLogin?service=mail&passive=true&rm=false&continue=https://mail.google.com/mail/ca/?ui%3D2%26amp;view%3Dbtop%26amp;search%3Dall%26amp;th&scc=1&ltmpl=default&ltmplcache=2&emr=1">accounts.google.com/ServiceLogin?s...</a></li>
+	<li><a class="original-post" target="_blank" href="https://accounts.google.com/ServiceLogin?service=mail&passive=true&rm=false&continue=https://mail.google.com/mail/ca/?ui%3D2%26view%3Dbtop%26ver%3D1csrg80ohzm1w%26search%3Dall%26th&scc=1&ltmpl=default&ltmplcache=2&emr=1">accounts.google.com/ServiceLogin?s...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/104403800912062884925"
+       title="GAS LibraryApp">
+      <img class="profile" src="https://lh4.googleusercontent.com/-qArgIjXQLK8/AAAAAAAAAAI/AAAAAAAAAE8/Xp2Lk5uSF4g/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/114252903082124775992/posts/UjUMCQ96sYc">
+        Reconsider your use case and have ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/114252903082124775992/posts/UjUMCQ96sYc">
+      
+        How To : Create URL to ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1402925343&key=aglzfmJyaWQtZ3lyWwsSCFJlc3BvbnNlIk10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyZ3l2Mnl0eHJldm50cDUwNGNndmVyaXl5amM1MWJuNW8uMTQwMjkyNDk4ODQxOTAxOAw">
+    
+      5 months ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://accounts.google.com/ServiceLogin?service=mail&passive=true&rm=false&continue=https://mail.google.com/mail/ca/?ui%3D2%26amp;view%3Dbtop%26amp;search%3Dall%26amp;th&scc=1&ltmpl=default&ltmplcache=2&emr=1">accounts.google.com/ServiceLogin?s...</a></li>
+	<li><a class="original-post" target="_blank" href="https://accounts.google.com/ServiceLogin?service=mail&passive=true&rm=false&continue=https://mail.google.com/mail/ca/?ui%3D2%26view%3Dbtop%26ver%3D1csrg80ohzm1w%26search%3Dall%26th&scc=1&ltmpl=default&ltmplcache=2&emr=1">accounts.google.com/ServiceLogin?s...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

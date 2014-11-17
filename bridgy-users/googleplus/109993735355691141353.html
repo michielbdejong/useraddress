@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Evo Terra (Google+) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://plus.google.com/+EvoTerra" title="Evo Terra (Google+)"
+   class="u-url">
+  <img class="profile u-photo" src="https://lh3.googleusercontent.com/-MnoRRXEcDZg/AAAAAAAAAAI/AAAAAAAAwbo/dhiLmIyRw2U/photo.jpg?sz=50&amp;sz=128" width="64px" />
+  <img src="/static/googleplus_icon.png"
+       
+       alt="Google+" />
+  <span class="p-name">Evo Terra</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://www.linkedin.com/in/evoterra" class="publish-domain u-url">linkedin.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+
+<div class="row promo warning">
+You
+ need 
+<a href='http://indiewebify.me/#send-webmentions'>webmention</a> support.
+
+
+<a href="http://indiewebcamp.com/webmention#Publishing_Software">Here are some
+resources.</a> If you're on
+WordPress, <a href="http://wordpress.org/plugins/indieweb/">try the IndieWeb
+bundle plugin</a>. If you're on Blogger, Tumblr, or
+WordPress.com, <a href="/">sign up here!</a>
+
+
+
+</div>
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class=" big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDk5OTM3MzUzNTU2OTExNDEzNTMM" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416148967&key=aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDk5OTM3MzUzNTU2OTExNDEzNTMM">
+      18 hours, 8 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDk5OTM3MzUzNTU2OTExNDEzNTMM" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/113151977668440306386"
+       title="Elio Gordillo">
+      <img class="profile" src="https://lh5.googleusercontent.com/-FbWgUDB4YSk/AAAAAAAAAAI/AAAAAAAAAAA/jNYtXeu6iDQ/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/109993735355691141353/posts/aiHMYfCEGqm">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/109993735355691141353/posts/aiHMYfCEGqm">
+      
+        Tales of a reforming beer snob. ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416149216&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEza2ZoMm9lbXp1ZW5scWQwNGNqZjNydHZ1bHRqM3J6YmdfbGlrZWRfYnlfMTEzMTUxOTc3NjY4NDQwMzA2Mzg2DA">
+    
+      18 hours, 4 minutes ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEza2ZoMm9lbXp1ZW5scWQwNGNqZjNydHZ1bHRqM3J6YmdfbGlrZWRfYnlfMTEzMTUxOTc3NjY4NDQwMzA2Mzg2DA" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://ello.co/evoterra/post/X2CO56zJ-sZLWxxGUk5e2w">ello.co/evoterra/post/... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/116462010012083708304"
+       title="Wallace Hess">
+      <img class="profile" src="https://lh6.googleusercontent.com/-P_AEemaORWI/AAAAAAAAAAI/AAAAAAAAJyY/4T3ZSJBxBe8/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/109993735355691141353/posts/aiHMYfCEGqm">
+        AWESOME MY FRIEND, YOU and YOURS ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/109993735355691141353/posts/aiHMYfCEGqm">
+      
+        Tales of a reforming beer snob. ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416149155&key=aglzfmJyaWQtZ3lyWwsSCFJlc3BvbnNlIk10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEza2ZoMm9lbXp1ZW5scWQwNGNqZjNydHZ1bHRqM3J6YmcuMTQxNjA5MTM4Nzk3MzUxNgw">
+    
+      18 hours, 5 minutes ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyWwsSCFJlc3BvbnNlIk10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEza2ZoMm9lbXp1ZW5scWQwNGNqZjNydHZ1bHRqM3J6YmcuMTQxNjA5MTM4Nzk3MzUxNgw" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://ello.co/evoterra/post/X2CO56zJ-sZLWxxGUk5e2w">ello.co/evoterra/post/... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/117494985719968522085"
+       title="Benton Landry">
+      <img class="profile" src="https://lh6.googleusercontent.com/-B-qoPoMdjZM/AAAAAAAAAAI/AAAAAAAAAAA/muNfLZ0YAKs/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/109993735355691141353/posts/aiHMYfCEGqm">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/109993735355691141353/posts/aiHMYfCEGqm">
+      
+        Tales of a reforming beer snob. ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416149095&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEza2ZoMm9lbXp1ZW5scWQwNGNqZjNydHZ1bHRqM3J6YmdfbGlrZWRfYnlfMTE3NDk0OTg1NzE5OTY4NTIyMDg1DA">
+    
+      18 hours, 6 minutes ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEza2ZoMm9lbXp1ZW5scWQwNGNqZjNydHZ1bHRqM3J6YmdfbGlrZWRfYnlfMTE3NDk0OTg1NzE5OTY4NTIyMDg1DA" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://ello.co/evoterra/post/X2CO56zJ-sZLWxxGUk5e2w">ello.co/evoterra/post/... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/109917658179755123069"
+       title="Richard Drumm">
+      <img class="profile" src="https://lh5.googleusercontent.com/-59VD53IMai8/AAAAAAAAAAI/AAAAAAAAAE8/BTn7X6smVTU/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/109993735355691141353/posts/aiHMYfCEGqm">
+        I have only this to add: ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/109993735355691141353/posts/aiHMYfCEGqm">
+      
+        Tales of a reforming beer snob. ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416149036&key=aglzfmJyaWQtZ3lyWwsSCFJlc3BvbnNlIk10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEza2ZoMm9lbXp1ZW5scWQwNGNqZjNydHZ1bHRqM3J6YmcuMTQxNjEwODk5NDQ4NjUxNAw">
+    
+      18 hours, 7 minutes ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyWwsSCFJlc3BvbnNlIk10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEza2ZoMm9lbXp1ZW5scWQwNGNqZjNydHZ1bHRqM3J6YmcuMTQxNjEwODk5NDQ4NjUxNAw" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://ello.co/evoterra/post/X2CO56zJ-sZLWxxGUk5e2w">ello.co/evoterra/post/... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/106460508525236363626"
+       title="John Hattan">
+      <img class="profile" src="https://lh4.googleusercontent.com/-M2dWlwJueNg/AAAAAAAAAAI/AAAAAAAARzg/7hNRGraUnrI/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/109993735355691141353/posts/aiHMYfCEGqm">
+        For the record, I read your ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/109993735355691141353/posts/aiHMYfCEGqm">
+      
+        Tales of a reforming beer snob. ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416148975&key=aglzfmJyaWQtZ3lyWwsSCFJlc3BvbnNlIk10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEza2ZoMm9lbXp1ZW5scWQwNGNqZjNydHZ1bHRqM3J6YmcuMTQxNjEwNDk2MTgyMzgxNAw">
+    
+      18 hours, 8 minutes ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyWwsSCFJlc3BvbnNlIk10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEza2ZoMm9lbXp1ZW5scWQwNGNqZjNydHZ1bHRqM3J6YmcuMTQxNjEwNDk2MTgyMzgxNAw" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://ello.co/evoterra/post/X2CO56zJ-sZLWxxGUk5e2w">ello.co/evoterra/post/... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/115956495459904174329"
+       title="Krys VanSlyke">
+      <img class="profile" src="https://lh4.googleusercontent.com/-D3XAeb4KG_M/AAAAAAAAAAI/AAAAAAAAAAA/3mGlOWu5Exo/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/109993735355691141353/posts/ieYVj7FaMMm">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/109993735355691141353/posts/ieYVj7FaMMm">
+      
+        Last night was Ignite Phoenix After ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      18 hours, 8 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/101659252226361139820"
+       title="Juan De la Fuente">
+      <img class="profile" src="https://lh6.googleusercontent.com/-OKlA5YAJ984/AAAAAAAAAAI/AAAAAAAAAAA/w0Xan4V6T9c/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/109993735355691141353/posts/ieYVj7FaMMm">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/109993735355691141353/posts/ieYVj7FaMMm">
+      
+        Last night was Ignite Phoenix After ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      18 hours, 8 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/116286109996293070400"
+       title="Erik Christopher">
+      <img class="profile" src="https://lh6.googleusercontent.com/-w-pbwzBFRgY/AAAAAAAAAAI/AAAAAAAAAAA/OiOCfGycOyc/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/109993735355691141353/posts/ieYVj7FaMMm">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/109993735355691141353/posts/ieYVj7FaMMm">
+      
+        Last night was Ignite Phoenix After ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      18 hours, 8 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/103692233635379205593"
+       title="Andrieta Matusse">
+      <img class="profile" src="https://lh3.googleusercontent.com/-7B7VXGQril0/AAAAAAAAAAI/AAAAAAAAAAA/wW3rRZSbDrk/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/109993735355691141353/posts/5MYFcNgZXwt">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/109993735355691141353/posts/5MYFcNgZXwt">
+      
+        Words cannot explain how much I ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      18 hours, 8 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/110108003269282467898"
+       title="Marti Lawrence">
+      <img class="profile" src="https://lh6.googleusercontent.com/-ziLjJXdQNoo/AAAAAAAAAAI/AAAAAAAAAAA/6Peju3wjalY/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/109993735355691141353/posts/aiHMYfCEGqm">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/109993735355691141353/posts/aiHMYfCEGqm">
+      
+        Tales of a reforming beer snob. ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416148974&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEza2ZoMm9lbXp1ZW5scWQwNGNqZjNydHZ1bHRqM3J6YmdfbGlrZWRfYnlfMTEwMTA4MDAzMjY5MjgyNDY3ODk4DA">
+    
+      18 hours, 8 minutes ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEza2ZoMm9lbXp1ZW5scWQwNGNqZjNydHZ1bHRqM3J6YmdfbGlrZWRfYnlfMTEwMTA4MDAzMjY5MjgyNDY3ODk4DA" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://ello.co/evoterra/post/X2CO56zJ-sZLWxxGUk5e2w">ello.co/evoterra/post/... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

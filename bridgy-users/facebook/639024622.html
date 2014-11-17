@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Ross Goodman (Facebook) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://facebook.com/RossGoodman1970" title="Ross Goodman (Facebook)"
+   class="u-url">
+  <img class="profile u-photo" src="https://graph.facebook.com/RossGoodman1970/picture?type=large" width="64px" />
+  <img src="/static/facebook_icon.png"
+       
+       alt="Facebook" />
+  <span class="p-name">Ross Goodman</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://www.rossgoodman.com" class="publish-domain u-url">rossgoodman.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGwsSDEZhY2Vib29rUGFnZSIJNjM5MDI0NjIyDA" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416194722&key=aglzfmJyaWQtZ3lyGwsSDEZhY2Vib29rUGFnZSIJNjM5MDI0NjIyDA">
+      5 hours, 36 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGwsSDEZhY2Vib29rUGFnZSIJNjM5MDI0NjIyDA" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+<span class="big">Click to enable <a href="/about#publish">publishing</a>:</span>
+<form method="post" name="publish-facebook-start" action="/facebook/start" class="signup">
+ <input type="image" alt="Sign in with Facebook"
+        src="/activitystreams/oauth_dropins/static/facebook.png" />
+ <input name="feature" type="hidden" value="publish" />
+ <!-- https://developers.facebook.com/docs/reference/login/ -->
+ <input name="scope" type="hidden"
+        value="offline_access,user_website,publish_actions,create_event,rsvp_event,user_status,friends_status,user_photos,friends_photos,user_videos,friends_videos,user_events,friends_events,user_likes,friends_likes" />
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1098695413"
+       title="Ben Sanderson">
+      <img class="profile" src="https://graph.facebook.com/1098695413/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/10152810009556460?comment_id=10152810521181460">
+        I thought at first it was ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/639024622/posts/10152810009556460">
+      
+        Ross Goodman was tagged in Niall ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      5 hours, 36 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/100001087656657"
+       title="Kieran Mcnabb">
+      <img class="profile" src="https://graph.facebook.com/100001087656657/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/10152810009556460?comment_id=10152810203401460">
+        Very good</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/639024622/posts/10152810009556460">
+      
+        Ross Goodman was tagged in Niall ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      5 hours, 36 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/100000308861081"
+       title="Mark Stevenson">
+      <img class="profile" src="https://graph.facebook.com/100000308861081/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/10152810009556460?comment_id=10152810527531460">
+        Looking forward to all the notifications. ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/639024622/posts/10152810009556460">
+      
+        Ross Goodman was tagged in Niall ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      5 hours, 36 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/810730030"
+       title="Richard Lloyd">
+      <img class="profile" src="https://graph.facebook.com/810730030/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/10152810009556460?comment_id=10152810601081460">
+        Same here, Mark! After all I've ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/639024622/posts/10152810009556460">
+      
+        Ross Goodman was tagged in Niall ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      5 hours, 36 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/604135824"
+       title="Simon Farrell">
+      <img class="profile" src="https://graph.facebook.com/604135824/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/10152810009556460?comment_id=10152810395576460">
+        These will never go with my ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/639024622/posts/10152810009556460">
+      
+        Ross Goodman was tagged in Niall ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      5 hours, 36 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1098695413"
+       title="Ben Sanderson">
+      <img class="profile" src="https://graph.facebook.com/1098695413/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/10152810009556460?comment_id=10152810387026460">
+        Seems legit.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/639024622/posts/10152810009556460">
+      
+        Ross Goodman was tagged in Niall ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      5 hours, 36 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/513521205"
+       title="Ally Nicoll">
+      <img class="profile" src="https://graph.facebook.com/513521205/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/639024622/posts/10152927093909623">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/639024622/posts/10152927093909623">
+      
+        No one questions common knowledge. This ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 week, 2 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/100006973964488"
+       title="John Corbett">
+      <img class="profile" src="https://graph.facebook.com/100006973964488/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/639024622/posts/10152918858994623">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/639024622/posts/10152918846284623">
+      
+        I'm clearing out some of my ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415153046&key=aglzfmJyaWQtZ3lyTgsSCFJlc3BvbnNlIkB0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTI5MTg4NTg5OTQ2MjNfbGlrZWRfYnlfMTAwMDA2OTczOTY0NDg4DA">
+    
+      1 week, 5 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://buy.garmin.com/en-GB/GB/sports/discontinued/forerunner-205/prod348.html">buy.garmin.com/en-GB/GB/sport...</a></li>
+	<li><a class="original-post" target="_blank" href="https://www.justgiving.com/mndscotland">justgiving.com/mndscotland</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/386768660131"
+       title="Strathclyde parkrun">
+      <img class="profile" src="https://graph.facebook.com/386768660131/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/639024622/posts/10152821251235132">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/639024622/posts/10152821251235132">
+      
+        "Posting here as "me" - not ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 week, 6 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/758896498"
+       title="Karen JammyKaz Kilpatrick">
+      <img class="profile" src="https://graph.facebook.com/758896498/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/639024622/posts/827366097274202">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/639024622/posts/827366097274202">
+      
+        "Big thanks to all of the ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 month, 2 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

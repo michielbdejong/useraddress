@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Daan Wynen (Facebook) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://facebook.com/black.puppydog" title="Daan Wynen (Facebook)"
+   class="u-url">
+  <img class="profile u-photo" src="https://graph.facebook.com/black.puppydog/picture?type=large" width="64px" />
+  <img src="/static/facebook_icon.png"
+       
+       alt="Facebook" />
+  <span class="p-name">Daan Wynen</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://stockholm-for-a-year.blogspot.se" class="publish-domain u-url">stockholm-for-a-year.blogspot.se</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyIQsSDEZhY2Vib29rUGFnZSIPMTAwMDAzNjc4NTUxMTY0DA" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416213533&key=aglzfmJyaWQtZ3lyIQsSDEZhY2Vib29rUGFnZSIPMTAwMDAzNjc4NTUxMTY0DA">
+      10 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyIQsSDEZhY2Vib29rUGFnZSIPMTAwMDAzNjc4NTUxMTY0DA" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+<span class="big">Click to enable <a href="/about#publish">publishing</a>:</span>
+<form method="post" name="publish-facebook-start" action="/facebook/start" class="signup">
+ <input type="image" alt="Sign in with Facebook"
+        src="/activitystreams/oauth_dropins/static/facebook.png" />
+ <input name="feature" type="hidden" value="publish" />
+ <!-- https://developers.facebook.com/docs/reference/login/ -->
+ <input name="scope" type="hidden"
+        value="offline_access,user_website,publish_actions,create_event,rsvp_event,user_status,friends_status,user_photos,friends_photos,user_videos,friends_videos,user_events,friends_events,user_likes,friends_likes" />
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/697352970"
+       title="Najmus Bappy">
+      <img class="profile" src="https://graph.facebook.com/697352970/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/100003678551164/posts/569411626524784">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/100003678551164/posts/569411626524784">
+      
+        Cannot stop laughing... :D https://twitter.com/BarnabyEdwards/status/533720443442970624
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      22 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/100003678551164"
+       title="Daan Wynen">
+      <img class="profile" src="https://graph.facebook.com/100003678551164/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/569026339896646?comment_id=569182486547698">
+        knäckfeast :P</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/100003678551164/posts/569026339896646">
+      
+        Things I miss about #Sweden: Knäckebröd! ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416091143&key=aglzfmJyaWQtZ3lyQwsSCFJlc3BvbnNlIjV0YWc6ZmFjZWJvb2suY29tLDIwMTM6NTY5MDI2MzM5ODk2NjQ2XzU2OTE4MjQ4NjU0NzY5OAw">
+    
+      1 day, 10 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.amazon.fr/gp/product/B00KO2XMIG?keywords=pain+croquant&qid=1416064573&redirect=true&ref_=sr_1_3&sr=8-3">amazon.fr/gp/product/B00...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/100000534612945"
+       title="João Carvalho">
+      <img class="profile" src="https://graph.facebook.com/100000534612945/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/569026339896646?comment_id=569180996547847">
+        knäckfest</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/100003678551164/posts/569026339896646">
+      
+        Things I miss about #Sweden: Knäckebröd! ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416090509&key=aglzfmJyaWQtZ3lyQwsSCFJlc3BvbnNlIjV0YWc6ZmFjZWJvb2suY29tLDIwMTM6NTY5MDI2MzM5ODk2NjQ2XzU2OTE4MDk5NjU0Nzg0Nww">
+    
+      1 day, 10 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.amazon.fr/gp/product/B00KO2XMIG?keywords=pain+croquant&qid=1416064573&redirect=true&ref_=sr_1_3&sr=8-3">amazon.fr/gp/product/B00...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/100000534612945"
+       title="João Carvalho">
+      <img class="profile" src="https://graph.facebook.com/100000534612945/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/569026339896646?comment_id=569168123215801">
+        I miss it costing 7 SEK</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/100003678551164/posts/569026339896646">
+      
+        Things I miss about #Sweden: Knäckebröd! ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416088761&key=aglzfmJyaWQtZ3lyQwsSCFJlc3BvbnNlIjV0YWc6ZmFjZWJvb2suY29tLDIwMTM6NTY5MDI2MzM5ODk2NjQ2XzU2OTE2ODEyMzIxNTgwMQw">
+    
+      1 day, 10 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.amazon.fr/gp/product/B00KO2XMIG?keywords=pain+croquant&qid=1416064573&redirect=true&ref_=sr_1_3&sr=8-3">amazon.fr/gp/product/B00...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/100003678551164"
+       title="Daan Wynen">
+      <img class="profile" src="https://graph.facebook.com/100003678551164/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/569026339896646?comment_id=569168433215770">
+        makes you appreciate a good morning ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/100003678551164/posts/569026339896646">
+      
+        Things I miss about #Sweden: Knäckebröd! ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416088739&key=aglzfmJyaWQtZ3lyQwsSCFJlc3BvbnNlIjV0YWc6ZmFjZWJvb2suY29tLDIwMTM6NTY5MDI2MzM5ODk2NjQ2XzU2OTE2ODQzMzIxNTc3MAw">
+    
+      1 day, 10 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.amazon.fr/gp/product/B00KO2XMIG?keywords=pain+croquant&qid=1416064573&redirect=true&ref_=sr_1_3&sr=8-3">amazon.fr/gp/product/B00...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/100002918434498"
+       title="Max Losch">
+      <img class="profile" src="https://graph.facebook.com/100002918434498/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/100003678551164/posts/569026339896646">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/100003678551164/posts/569026339896646">
+      
+        Things I miss about #Sweden: Knäckebröd! ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416071005&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6ZmFjZWJvb2suY29tLDIwMTM6NTY5MDI2MzM5ODk2NjQ2X2xpa2VkX2J5XzEwMDAwMjkxODQzNDQ5OAw">
+    
+      1 day, 15 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.amazon.fr/gp/product/B00KO2XMIG?keywords=pain+croquant&qid=1416064573&redirect=true&ref_=sr_1_3&sr=8-3">amazon.fr/gp/product/B00...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/100002811547735"
+       title="Nans Baïsset">
+      <img class="profile" src="https://graph.facebook.com/100002811547735/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/100003678551164/posts/569026339896646">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/100003678551164/posts/569026339896646">
+      
+        Things I miss about #Sweden: Knäckebröd! ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416065960&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6ZmFjZWJvb2suY29tLDIwMTM6NTY5MDI2MzM5ODk2NjQ2X2xpa2VkX2J5XzEwMDAwMjgxMTU0NzczNQw">
+    
+      1 day, 17 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.amazon.fr/gp/product/B00KO2XMIG?keywords=pain+croquant&qid=1416064573&redirect=true&ref_=sr_1_3&sr=8-3">amazon.fr/gp/product/B00...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1148577293"
+       title="Thomas Poc">
+      <img class="profile" src="https://graph.facebook.com/1148577293/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/100003678551164/posts/569026339896646">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/100003678551164/posts/569026339896646">
+      
+        Things I miss about #Sweden: Knäckebröd! ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416065242&key=aglzfmJyaWQtZ3lyRwsSCFJlc3BvbnNlIjl0YWc6ZmFjZWJvb2suY29tLDIwMTM6NTY5MDI2MzM5ODk2NjQ2X2xpa2VkX2J5XzExNDg1NzcyOTMM">
+    
+      1 day, 17 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.amazon.fr/gp/product/B00KO2XMIG?keywords=pain+croquant&qid=1416064573&redirect=true&ref_=sr_1_3&sr=8-3">amazon.fr/gp/product/B00...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/100003296184861"
+       title="Kev In">
+      <img class="profile" src="https://graph.facebook.com/100003296184861/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/100003678551164/posts/568133079985972">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/100003678551164/posts/568133079985972">
+      
+        Daan Wynen updated his cover photo.
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 days, 23 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/100003296184861"
+       title="Kev In">
+      <img class="profile" src="https://graph.facebook.com/100003296184861/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/100003678551164/posts/568133156652631">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/100003678551164/posts/568133079985972">
+      
+        Daan Wynen updated his cover photo.
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 days, 23 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

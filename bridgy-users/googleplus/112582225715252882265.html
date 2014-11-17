@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Dominik Schwind (Google+) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://plus.google.com/+DominikSchwind" title="Dominik Schwind (Google+)"
+   class="u-url">
+  <img class="profile u-photo" src="https://lh6.googleusercontent.com/-EBo-X02cRwo/AAAAAAAAAAI/AAAAAAAAAvg/VwL1v8eXH1E/photo.jpg?sz=50&amp;sz=128" width="64px" />
+  <img src="/static/googleplus_icon.png"
+       
+       alt="Google+" />
+  <span class="p-name">Dominik Schwind</span></a>
+
+
+
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row promo warning">
+<p id="edit-profile">First things first: what's your web site?
+
+Open your
+<a href="https://plus.google.com/me/about" target="_blank">
+  Google+ profile's <em>Links</em> section</a>, click the <em>Edit</em> link,
+and add your web site as the first link under <em>Other profiles</em>. Then
+click here:
+<!-- Google+ listen signup -->
+<form method="post" name="listen-googleplus-start" action="/googleplus/start" class="signup">
+  <input type="image" alt="Sign in with Google+"
+         src="/activitystreams/oauth_dropins/static/google_plus.png" />
+  <!-- The state param doesn't actually work for G+. Not sure why. Doesn't
+       matter for now since we don't support publish for G+. -->
+  <input name="feature" type="hidden" value="listen" />
+  <!-- https://developers.google.com/+/api/oauth#scopes -->
+  <input name="scope" type="hidden"
+         value="https://www.googleapis.com/auth/plus.login" />
+</form>
+
+
+</p>
+</div>
+
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class=" big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTI1ODIyMjU3MTUyNTI4ODIyNjUM" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416119575&key=aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTI1ODIyMjU3MTUyNTI4ODIyNjUM">
+      1 day, 2 hours ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTI1ODIyMjU3MTUyNTI4ODIyNjUM" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/106356149152520986062"
+       title="Nadine Rénzi">
+      <img class="profile" src="https://lh3.googleusercontent.com/-GB6fEFm1n1M/AAAAAAAAAAI/AAAAAAAAAAA/pNG6mdS9etE/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112582225715252882265/posts/V4KcnZjMqtu">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/112582225715252882265/posts/V4KcnZjMqtu">
+      
+        Tune.﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413821620&key=aglzfmJyaWQtZ3lybAsSCFJlc3BvbnNlIl50YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyMWZ4bndjdGZlZGJyeGIwNGNkM3F5aGtlc3ZidnhrcmMwa19zaGFyZWRfYnlfMTA2MzU2MTQ5MTUyNTIwOTg2MDYyDA">
+    
+      3 weeks, 6 days ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lybAsSCFJlc3BvbnNlIl50YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyMWZ4bndjdGZlZGJyeGIwNGNkM3F5aGtlc3ZidnhrcmMwa19zaGFyZWRfYnlfMTA2MzU2MTQ5MTUyNTIwOTg2MDYyDA" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://soundcloud.com/london-nebel/tonite-only-we-run-the-night">soundcloud.com/london-nebel/t... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/100485116624742796643"
+       title="Matthew Pollard">
+      <img class="profile" src="https://lh3.googleusercontent.com/-rcDYUXPMfCw/AAAAAAAAAAI/AAAAAAAAAAA/5XDCS6jsLO4/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112706063817916378744/posts/LqpjkKTyMmB">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/112582225715252882265/posts/3UnCq8So8F9">
+      
+        Very interesting project: &quot;The idea is ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413821614&key=aglzfmJyaWQtZ3lyagsSCFJlc3BvbnNlIlx0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzY2dmdHI1dm1zc2h1Y2kyMmN4cm5nMnFhdHl6ZzV1MDRfc2hhcmVkX2J5XzEwMDQ4NTExNjYyNDc0Mjc5NjY0Mww">
+    
+      3 weeks, 6 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.theguardian.com/media/2011/oct/09/the-guardian-newslists-opening-up">theguardian.com/media/2011/oct...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/115325005872850812518"
+       title="Sebastian W.">
+      <img class="profile" src="https://lh6.googleusercontent.com/-TyGkPAyzvJ0/AAAAAAAAAAI/AAAAAAAAAAA/hA0LDRYhxUU/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112582225715252882265/posts/dCUuQWB4y5F">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/112582225715252882265/posts/dCUuQWB4y5F">
+      
+        Yes.﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      3 weeks, 6 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/107355279215483038462"
+       title="Lars Strojny">
+      <img class="profile" src="https://lh5.googleusercontent.com/-vKemU8sh2YY/AAAAAAAAAAI/AAAAAAAAAAA/WuDWJ4dI7hw/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112582225715252882265/posts/KWEkn4U3Ppd">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/112582225715252882265/posts/KWEkn4U3Ppd">
+      
+        --
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      3 weeks, 6 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/112704431675025264524"
+       title="Heiko Hoffmann">
+      <img class="profile" src="https://lh6.googleusercontent.com/--sjeH-4buRQ/AAAAAAAAAAI/AAAAAAAAAAA/Mryl4LbNM0I/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112582225715252882265/posts/dCUuQWB4y5F">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/112582225715252882265/posts/dCUuQWB4y5F">
+      
+        Yes.﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      3 weeks, 6 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/107343738561456737318"
+       title="Balaji Mp">
+      <img class="profile" src="https://lh3.googleusercontent.com/-h-h4yAQ7U2g/AAAAAAAAAAI/AAAAAAAAAAA/6PiQWMIccpI/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112582225715252882265/posts/dCUuQWB4y5F">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/112582225715252882265/posts/dCUuQWB4y5F">
+      
+        Yes.﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      3 weeks, 6 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/101711840625388231170"
+       title="Saurier Duval">
+      <img class="profile" src="https://lh3.googleusercontent.com/-WIdpU2_UGBA/AAAAAAAAAAI/AAAAAAAAAAA/UZl9Np3XJhY/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112582225715252882265/posts/4uyF6zivgzc">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/112582225715252882265/posts/4uyF6zivgzc">
+      
+        --
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 months, 3 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/107821523086567088596"
+       title="Maya Wiseman">
+      <img class="profile" src="https://lh5.googleusercontent.com/-FTT6PYVjXOo/AAAAAAAAAAI/AAAAAAAAAAA/04Gp7InhxTs/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112582225715252882265/posts/G8qDdNoHzad">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/112582225715252882265/posts/G8qDdNoHzad">
+      
+        Don&#39;t consume the city, be part ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1405066570&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEybGV4eXFidmExdTNqbXUyMmN4cm5nMnFhdHl6ZzV1MDRfbGlrZWRfYnlfMTA3ODIxNTIzMDg2NTY3MDg4NTk2DA">
+    
+      4 months, 1 week ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEybGV4eXFidmExdTNqbXUyMmN4cm5nMnFhdHl6ZzV1MDRfbGlrZWRfYnlfMTA3ODIxNTIzMDg2NTY3MDg4NTk2DA" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://bottledcityproject.com/workspace/">bottledcityproject.com/workspace/ <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/110035381162999793817"
+       title="Marc Görtz">
+      <img class="profile" src="https://lh3.googleusercontent.com/-arL8qwTRleg/AAAAAAAAAAI/AAAAAAAAAAA/gb-F8ASEY2g/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112582225715252882265/posts/9jMjJwNcdSH">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/112582225715252882265/posts/9jMjJwNcdSH">
+      
+        IndieWeb!﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1404807741&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyZGR6YnphdG5renJhMW8yMmN4cm5nMnFhdHl6ZzV1MDRfbGlrZWRfYnlfMTEwMDM1MzgxMTYyOTk5NzkzODE3DA">
+    
+      4 months, 1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://lostfocus.de/webmentions-and-brid-gy/">lostfocus.de/webmentions-an...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/112582225715252882265"
+       title="Dominik Schwind">
+      <img class="profile" src="https://lh6.googleusercontent.com/-EBo-X02cRwo/AAAAAAAAAAI/AAAAAAAAAvg/U0r5sGCDjSU/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112582225715252882265/posts/9jMjJwNcdSH">
+        Ja! Social-Search-Rank! Plus Eins!</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/112582225715252882265/posts/9jMjJwNcdSH">
+      
+        IndieWeb!﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1404807721&key=aglzfmJyaWQtZ3lyWwsSCFJlc3BvbnNlIk10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyZGR6YnphdG5renJhMW8yMmN4cm5nMnFhdHl6ZzV1MDQuMTQwNDgwNzQ1NDcwMjUwNQw">
+    
+      4 months, 1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://lostfocus.de/webmentions-and-brid-gy/">lostfocus.de/webmentions-an...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

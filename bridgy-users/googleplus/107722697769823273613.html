@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Peter Dörrie (Google+) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://plus.google.com/107722697769823273613" title="Peter Dörrie (Google+)"
+   class="u-url">
+  <img class="profile u-photo" src="https://lh3.googleusercontent.com/-pkWH8QZcUf4/AAAAAAAAAAI/AAAAAAAAAmg/u9nc5RIaCco/photo.jpg?sz=50&amp;sz=128" width="64px" />
+  <img src="/static/googleplus_icon.png"
+       
+       alt="Google+" />
+  <span class="p-name">Peter Dörrie</span></a>
+
+
+<!-- TODO: make this work without javascript too -->
+<a href="#" onclick="document.forms['listen-googleplus-start'].submit();
+                     return false;">
+  <span class="glyphicon glyphicon-pause"
+        title="This account was disconnected on Google+'s end. Click to reconnect it!">
+</span></a>
+
+
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class=" big">
+
+
+Click to enable <a href="/about#listen">listening</a>:
+
+<!-- Google+ listen signup -->
+<form method="post" name="listen-googleplus-start" action="/googleplus/start" class="signup">
+  <input type="image" alt="Sign in with Google+"
+         src="/activitystreams/oauth_dropins/static/google_plus.png" />
+  <!-- The state param doesn't actually work for G+. Not sure why. Doesn't
+       matter for now since we don't support publish for G+. -->
+  <input name="feature" type="hidden" value="listen" />
+  <!-- https://developers.google.com/+/api/oauth#scopes -->
+  <input name="scope" type="hidden"
+         value="https://www.googleapis.com/auth/plus.login" />
+</form>
+
+
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/117979407360933747183"
+       title="Hans Zomer">
+      <img class="profile" src="https://lh3.googleusercontent.com/-ImktuxNJG8k/AAAAAAAAAAI/AAAAAAAAAAA/ugKnWtA0VqI/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/116929117792281757043/posts/eHovziu3BGP">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/107722697769823273613/posts/VNVa55gprs9">
+      
+        Niger, Nigeria und Tschad: Schwere Überschwemmungenneu ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1396073439&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyNGVkaHlkbTNxemRucGQwNGNmbmM1dndma3RkdGIyMXNfbGlrZWRfYnlfMTE3OTc5NDA3MzYwOTMzNzQ3MTgzDA">
+    
+      7 months, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.AfrikaEcho.de/">AfrikaEcho.de/</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.afrikaecho.de/2012/09/niger-nigeria-tschad-uberschwemmungen/">afrikaecho.de/2012/09/niger-...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/113575236479915192291"
+       title="Grace Remnant">
+      <img class="profile" src="https://lh4.googleusercontent.com/-sZTB_e5lDBQ/AAAAAAAAAAI/AAAAAAAAAAA/B91U6LaCOP0/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/107722697769823273613/posts/Z9JReaDNY8k">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/107722697769823273613/posts/Z9JReaDNY8k">
+      
+        The attack on #Westgate Shopping Mall ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1396073421&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyMng1aXFjdm1yamI1aTAwNGNmbmM1dndma3RkdGIyMXNfbGlrZWRfYnlfMTEzNTc1MjM2NDc5OTE1MTkyMjkxDA">
+    
+      7 months, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://medium.com/war-is-boring/cb98c78b17af">medium.com/war-is-boring/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/112482032780181267192"
+       title="Andreas Schou">
+      <img class="profile" src="https://lh3.googleusercontent.com/-ZiGdRuwh2Pg/AAAAAAAAAAI/AAAAAAAAAAA/wT-OaoHu2Ig/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/107722697769823273613/posts/Z9JReaDNY8k">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/107722697769823273613/posts/Z9JReaDNY8k">
+      
+        The attack on #Westgate Shopping Mall ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1396073421&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyMng1aXFjdm1yamI1aTAwNGNmbmM1dndma3RkdGIyMXNfbGlrZWRfYnlfMTEyNDgyMDMyNzgwMTgxMjY3MTkyDA">
+    
+      7 months, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://medium.com/war-is-boring/cb98c78b17af">medium.com/war-is-boring/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/101735378602050657381"
+       title="Lars Ivar Igesund">
+      <img class="profile" src="https://lh3.googleusercontent.com/-84IrWbA6uGc/AAAAAAAAAAI/AAAAAAAAAAA/QUc_I-YSPdA/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/107722697769823273613/posts/Z9JReaDNY8k">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/107722697769823273613/posts/Z9JReaDNY8k">
+      
+        The attack on #Westgate Shopping Mall ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1396073421&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyMng1aXFjdm1yamI1aTAwNGNmbmM1dndma3RkdGIyMXNfbGlrZWRfYnlfMTAxNzM1Mzc4NjAyMDUwNjU3MzgxDA">
+    
+      7 months, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://medium.com/war-is-boring/cb98c78b17af">medium.com/war-is-boring/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/107722697769823273613"
+       title="Peter Dörrie">
+      <img class="profile" src="https://lh3.googleusercontent.com/-pkWH8QZcUf4/AAAAAAAAAAI/AAAAAAAAAAA/yXFDyK9ppYw/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/107722697769823273613/posts/XHXBstAeTPD">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/107722697769823273613/posts/XHXBstAeTPD">
+      
+        Getting crude oil out of the ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1396072835&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzb2Z0ejRoeGZqeXAxeHAwNGNmbmM1dndma3RkdGIyMXNfbGlrZWRfYnlfMTA3NzIyNjk3NzY5ODIzMjczNjEzDA">
+    
+      7 months, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://africanarguments.org/2014/01/10/south-sudan-fighting-could-cripple-oil-industry-for-decades-by-luke-patey/">africanarguments.org/2014/01/10/sou...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/114264685127168390839"
+       title="Irina Tcherednichenko">
+      <img class="profile" src="https://lh3.googleusercontent.com/-Zb_Gfa84bHE/AAAAAAAAAAI/AAAAAAAAAAA/eD-KU8yzomc/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/107722697769823273613/posts/X971p63Bo2Y">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/107722697769823273613/posts/X971p63Bo2Y">
+      
+        Heard of the Central African Republic? ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1396072569&key=aglzfmJyaWQtZ3lyagsSCFJlc3BvbnNlIlx0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEza3ZsM2p2cXExeWRhNW8wNGNmbmM1dndma3RkdGIyMXNfc2hhcmVkX2J5XzExNDI2NDY4NTEyNzE2ODM5MDgzOQw">
+    
+      7 months, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://medium.com/war-is-boring/19b08d5e4295">medium.com/war-is-boring/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/110526699553741189080"
+       title="Rob J">
+      <img class="profile" src="https://lh4.googleusercontent.com/-6Tqi6Vz7xXA/AAAAAAAAAAI/AAAAAAAAAAA/sVdh78vmxbw/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/107722697769823273613/posts/X971p63Bo2Y">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/107722697769823273613/posts/X971p63Bo2Y">
+      
+        Heard of the Central African Republic? ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1396072569&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEza3ZsM2p2cXExeWRhNW8wNGNmbmM1dndma3RkdGIyMXNfbGlrZWRfYnlfMTEwNTI2Njk5NTUzNzQxMTg5MDgwDA">
+    
+      7 months, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://medium.com/war-is-boring/19b08d5e4295">medium.com/war-is-boring/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/107722697769823273613"
+       title="Peter Dörrie">
+      <img class="profile" src="https://lh3.googleusercontent.com/-pkWH8QZcUf4/AAAAAAAAAAI/AAAAAAAAAAA/yXFDyK9ppYw/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/107722697769823273613/posts/A6kmeJrQpKg">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/107722697769823273613/posts/A6kmeJrQpKg">
+      
+        Some thoughtful analysis if the secession ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1396072488&key=aglzfmJyaWQtZ3lyZwsSCFJlc3BvbnNlIll0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzanZwM29nbm41dWRndHEyMnd1MWl6MndhZWlkc2tpX2xpa2VkX2J5XzEwNzcyMjY5Nzc2OTgyMzI3MzYxMww">
+    
+      7 months, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.dailymaverick.co.za/article/2014-01-07-analysis-was-the-secession-of-south-sudan-a-mistake/#.UsxNu_jCiXp">dailymaverick.co.za/article/2014-0...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/107722697769823273613"
+       title="Peter Dörrie">
+      <img class="profile" src="https://lh3.googleusercontent.com/-pkWH8QZcUf4/AAAAAAAAAAI/AAAAAAAAAAA/yXFDyK9ppYw/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/107722697769823273613/posts/PSG7wVBACyN">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/107722697769823273613/posts/PSG7wVBACyN">
+      
+        Has +Greenpeace Africa taken command of ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1396072328&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzZ3RkZnFzenV0Y2o0Z2EwNGNmbmM1dndma3RkdGIyMXNfbGlrZWRfYnlfMTA3NzIyNjk3NzY5ODIzMjczNjEzDA">
+    
+      7 months, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://continentofriches.com/senegals-navy-acting-orders-greenpeace/">continentofriches.com/senegals-navy-...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/117054888759879584963"
+       title="Azkisha Azona">
+      <img class="profile" src="https://lh4.googleusercontent.com/-jr1P_tl5FYQ/AAAAAAAAAAI/AAAAAAAAAAA/ZPoh5CsFnyA/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/116929117792281757043/posts/4Uqnf6PVqDj">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/107722697769823273613/posts/4rZxB31XEVz">
+      
+        Illegale Geldflüsse aus #Afrika nehmen zuEine ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1396072244&key=aglzfmJyaWQtZ3lyZwsSCFJlc3BvbnNlIll0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzZXloNHlzazN3aWYxY3IyMnd1MWl6MndhZWlkc2tpX2xpa2VkX2J5XzExNzA1NDg4ODc1OTg3OTU4NDk2Mww">
+    
+      7 months, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.afrikaecho.de/2013/01/illegale-geldflusse-aus-afrika-nehmen-zu/">afrikaecho.de/2013/01/illega...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

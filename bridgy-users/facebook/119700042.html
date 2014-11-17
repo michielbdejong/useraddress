@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Nabil Maynard (Facebook) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://facebook.com/Nadreck" title="Nabil Maynard (Facebook)"
+   class="u-url">
+  <img class="profile u-photo" src="https://graph.facebook.com/Nadreck/picture?type=large" width="64px" />
+  <img src="/static/facebook_icon.png"
+       
+       alt="Facebook" />
+  <span class="p-name">Nabil Maynard</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://nadreck.me" class="publish-domain u-url">nadreck.me</a>
+
+  
+  &middot;
+  <a href="http://nadreck.criticalgames.com" class="publish-domain u-url">nadreck.criticalgames.com</a>
+
+  
+  &middot;
+  <a href="http://www.criticalgames.com" class="publish-domain u-url">criticalgames.com</a>
+
+  
+    <span id="more-websites" style="display: none">
+  
+  &middot;
+  <a href="http://nadreck.tumblr.com" class="publish-domain u-url">nadreck.tumblr.com</a>
+
+  
+  &middot;
+  <a href="http://nadreck.livejournal.com" class="publish-domain u-url">nadreck.livejournal.com</a>
+
+  
+  &middot;
+  <a href="http://nadreck.500px.com" class="publish-domain u-url">nadreck.500px.com</a>
+
+
+  </span>
+  <a onclick="toggle('more-websites'); toggle('show-more-websites'); return false"
+     id="show-more-websites" href="#" />...</a>
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGwsSDEZhY2Vib29rUGFnZSIJMTE5NzAwMDQyDA" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416178726&key=aglzfmJyaWQtZ3lyGwsSDEZhY2Vib29rUGFnZSIJMTE5NzAwMDQyDA">
+      9 hours, 52 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGwsSDEZhY2Vib29rUGFnZSIJMTE5NzAwMDQyDA" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+<span class="big">Click to enable <a href="/about#publish">publishing</a>:</span>
+<form method="post" name="publish-facebook-start" action="/facebook/start" class="signup">
+ <input type="image" alt="Sign in with Facebook"
+        src="/activitystreams/oauth_dropins/static/facebook.png" />
+ <input name="feature" type="hidden" value="publish" />
+ <!-- https://developers.facebook.com/docs/reference/login/ -->
+ <input name="scope" type="hidden"
+        value="offline_access,user_website,publish_actions,create_event,rsvp_event,user_status,friends_status,user_photos,friends_photos,user_videos,friends_videos,user_events,friends_events,user_likes,friends_likes" />
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/650394920"
+       title="Amanda Sledz">
+      <img class="profile" src="https://graph.facebook.com/650394920/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/119700042/posts/506348008568">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/119700042/posts/506348008568">
+      
+        California coast, between Half Moon Bay ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 months, 1 week ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1675486591"
+       title="Bryony McDoomsday">
+      <img class="profile" src="https://graph.facebook.com/1675486591/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/119700042/posts/505400582218">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/119700042/posts/505400582218">
+      
+        In the middle of the forest, ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 months, 1 week ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1138996944"
+       title="David Scott">
+      <img class="profile" src="https://graph.facebook.com/1138996944/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/119700042/posts/506348008568">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/119700042/posts/506348008568">
+      
+        California coast, between Half Moon Bay ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 months, 1 week ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/100003132863896"
+       title="Jake Paris">
+      <img class="profile" src="https://graph.facebook.com/100003132863896/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/119700042/posts/504192687848">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/119700042/posts/504192687848">
+      
+        In case any of you were ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 months, 1 week ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/100006814961796"
+       title="Nathaniel Cagle">
+      <img class="profile" src="https://graph.facebook.com/100006814961796/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/119700042/posts/506348008568">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/119700042/posts/506348008568">
+      
+        California coast, between Half Moon Bay ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 months, 1 week ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/738998734"
+       title="Adam Hadlock">
+      <img class="profile" src="https://graph.facebook.com/738998734/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/506348008568?comment_id=30737">
+        Love that spot. :)</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/119700042/posts/506348008568">
+      
+        California coast, between Half Moon Bay ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 months, 1 week ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1321264163"
+       title="Sabrina Gogol">
+      <img class="profile" src="https://graph.facebook.com/1321264163/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/119700042/posts/505534658528">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/119700042/posts/505534658528">
+      
+        Freya!
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 months, 1 week ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/119700042"
+       title="Nabil Maynard">
+      <img class="profile" src="https://graph.facebook.com/119700042/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/506348008568?comment_id=30733">
+        Not entirely sure exactly where -- ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/119700042/posts/506348008568">
+      
+        California coast, between Half Moon Bay ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 months, 1 week ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/577549871"
+       title="TJ Farris">
+      <img class="profile" src="https://graph.facebook.com/577549871/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/506348008568?comment_id=30732">
+        Pescadero?</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/119700042/posts/506348008568">
+      
+        California coast, between Half Moon Bay ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 months, 1 week ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1335701761"
+       title="Nancy Maynard">
+      <img class="profile" src="https://graph.facebook.com/1335701761/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/119700042/posts/505981572908">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/119700042/posts/505981572908">
+      
+        Dinosaur Party at the White Eagle.
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 months, 1 week ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

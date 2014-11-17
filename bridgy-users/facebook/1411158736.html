@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Justin Diehl (Facebook) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://facebook.com/nulloperations" title="Justin Diehl (Facebook)"
+   class="u-url">
+  <img class="profile u-photo" src="https://graph.facebook.com/nulloperations/picture?type=large" width="64px" />
+  <img src="/static/facebook_icon.png"
+       
+       alt="Facebook" />
+  <span class="p-name">Justin Diehl</span></a>
+
+
+<!-- TODO: make this work without javascript too -->
+<a href="#" onclick="document.forms['listen-facebook-start'].submit();
+                     return false;">
+  <span class="glyphicon glyphicon-pause"
+        title="This account was disconnected on Facebook's end. Click to reconnect it!">
+</span></a>
+
+
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+Click to enable <a href="/about#listen">listening</a>:
+
+<!-- Facebook listen signup -->
+<form method="post" name="listen-facebook-start" action="/facebook/start" class="signup">
+  <input type="image" alt="Sign in with Facebook"
+         src="/activitystreams/oauth_dropins/static/facebook.png" />
+  <input name="feature" type="hidden" value="listen" />
+  <!-- https://developers.facebook.com/docs/reference/login/ -->
+  <input name="scope" type="hidden"
+         value="offline_access,user_website,user_status,user_photos,user_events,read_stream">
+</form>
+
+
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+<span class="big">Click to enable <a href="/about#publish">publishing</a>:</span>
+<form method="post" name="publish-facebook-start" action="/facebook/start" class="signup">
+ <input type="image" alt="Sign in with Facebook"
+        src="/activitystreams/oauth_dropins/static/facebook.png" />
+ <input name="feature" type="hidden" value="publish" />
+ <!-- https://developers.facebook.com/docs/reference/login/ -->
+ <input name="scope" type="hidden"
+        value="offline_access,user_website,publish_actions,create_event,rsvp_event,user_status,friends_status,user_photos,friends_photos,user_videos,friends_videos,user_events,friends_events,user_likes,friends_likes" />
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1151899783"
+       title="Optimistic Chad">
+      <img class="profile" src="https://graph.facebook.com/1151899783/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/1411158736/posts/10204860078247683">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/1411158736/posts/10204860078247683">
+      
+        Worth the read. Via Scott Roche
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413849953&key=aglzfmJyaWQtZ3lySQsSCFJlc3BvbnNlIjt0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAyMDQ4NjAwNzgyNDc2ODNfbGlrZWRfYnlfMTE1MTg5OTc4Mww">
+    
+      3 weeks, 6 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://johnpavlovitz.com/2014/10/07/distorted-love-the-toll-of-our-christian-theology-on-the-lgbt-community/">johnpavlovitz.com/2014/10/07/dis...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1144415102"
+       title="Billy Brown Sr.">
+      <img class="profile" src="https://graph.facebook.com/1144415102/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/1411158736/posts/10204797631006541">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/1411158736/posts/10204797631006541">
+      
+        Justin Diehl shared a link.
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413849952&key=aglzfmJyaWQtZ3lySQsSCFJlc3BvbnNlIjt0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAyMDQ3OTc2MzEwMDY1NDFfbGlrZWRfYnlfMTE0NDQxNTEwMgw">
+    
+      3 weeks, 6 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.businessinsider.com/female-characters-left-off-guardians-of-the-galaxy-merchandise-2014-8">businessinsider.com/female-charact...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1069171111"
+       title="Derek VanTilburg">
+      <img class="profile" src="https://graph.facebook.com/1069171111/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/1411158736/posts/10204845798970710">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/1411158736/posts/10204845798970710">
+      
+        I wish this was real...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413849918&key=aglzfmJyaWQtZ3lySQsSCFJlc3BvbnNlIjt0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAyMDQ4NDU3OTg5NzA3MTBfbGlrZWRfYnlfMTA2OTE3MTExMQw">
+    
+      3 weeks, 6 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.bleedingcool.com/2014/10/07/static-shock-comes-to-the-big-screen/">bleedingcool.com/2014/10/07/sta...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1635953290"
+       title="Paul E. Granen">
+      <img class="profile" src="https://graph.facebook.com/1635953290/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/10202834129680235?comment_id=4242484">
+        Try to take advantage of the ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/1411158736/posts/10202834129680235">
+      
+        This is happening right now. In ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      3 weeks, 6 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1775906561"
+       title="Zedith &#39;Zeth&#39; Starr">
+      <img class="profile" src="https://graph.facebook.com/1775906561/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/10204922791935486?comment_id=10204923161144716">
+        For a Halloween theme, Midnight Syndicate ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/1411158736/posts/10204922791935486">
+      
+        Hey creative friends, I need something ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      3 weeks, 6 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/628071809"
+       title="Trish Diehl">
+      <img class="profile" src="https://graph.facebook.com/628071809/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/1411158736/posts/10204845798970710">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/1411158736/posts/10204845798970710">
+      
+        I wish this was real...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413849917&key=aglzfmJyaWQtZ3lySAsSCFJlc3BvbnNlIjp0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAyMDQ4NDU3OTg5NzA3MTBfbGlrZWRfYnlfNjI4MDcxODA5DA">
+    
+      3 weeks, 6 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.bleedingcool.com/2014/10/07/static-shock-comes-to-the-big-screen/">bleedingcool.com/2014/10/07/sta...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/542302501"
+       title="Monique Chimento">
+      <img class="profile" src="https://graph.facebook.com/542302501/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/10202834129680235?comment_id=4242579">
+        Get Well Soon!</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/1411158736/posts/10202834129680235">
+      
+        This is happening right now. In ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      3 weeks, 6 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/100001043214576"
+       title="Alexander Diehl">
+      <img class="profile" src="https://graph.facebook.com/100001043214576/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/1411158736/posts/10204824649601989">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/1411158736/posts/10204824649601989">
+      
+        "Thank you for making a purchase ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      3 weeks, 6 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/5004194"
+       title="Ricky Sowers">
+      <img class="profile" src="https://graph.facebook.com/5004194/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/1411158736/posts/10204470503228551">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/1411158736/posts/10204470503228551">
+      
+        Yup. It was a cake after ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      3 weeks, 6 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1140627009"
+       title="Vivid Muse">
+      <img class="profile" src="https://graph.facebook.com/1140627009/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/1411158736/posts/10204747030092532">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/1411158736/posts/10204747030092532">
+      
+        "Hoping your birthday was full of ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      3 weeks, 6 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

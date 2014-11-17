@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Ernst-Jan Pfauth (Google+) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://plus.google.com/+pfauth" title="Ernst-Jan Pfauth (Google+)"
+   class="u-url">
+  <img class="profile u-photo" src="https://lh5.googleusercontent.com/-ne9Ch2b5CPw/AAAAAAAAAAI/AAAAAAAAAXg/EZjPhT7Azuw/photo.jpg?sz=50&amp;sz=128" width="64px" />
+  <img src="/static/googleplus_icon.png"
+       
+       alt="Google+" />
+  <span class="p-name">Ernst-Jan Pfauth</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://pfauth.com" class="publish-domain u-url">pfauth.com</a>
+
+  
+  &middot;
+  <a href="http://decorrespondent.nl/ernstjanpfauth" class="publish-domain u-url">decorrespondent.nl</a>
+
+  
+  &middot;
+  <a href="http://decorrespondent.nl" class="publish-domain u-url">decorrespondent.nl</a>
+
+  
+    <span id="more-websites" style="display: none">
+  
+  &middot;
+  <a href="http://literaturfest.nl" class="publish-domain u-url">literaturfest.nl</a>
+
+
+  </span>
+  <a onclick="toggle('more-websites'); toggle('show-more-websites'); return false"
+     id="show-more-websites" href="#" />...</a>
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class=" big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDY5MDAyNzA3ODQ3NzU2NDAwNDUM" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416213972&key=aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDY5MDAyNzA3ODQ3NzU2NDAwNDUM">
+      3 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDY5MDAyNzA3ODQ3NzU2NDAwNDUM" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/101387092275812938679"
+       title="Tom Voute">
+      <img class="profile" src="https://lh5.googleusercontent.com/-yVJ61aWch1U/AAAAAAAAAAI/AAAAAAAAAAA/yFM_6a5uIWk/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/106900270784775640045/posts/KkQPfEMBryN">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/106900270784775640045/posts/KkQPfEMBryN">
+      
+        Interview met oprichter Tumblr: “bij ons ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416121389&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyZ3d0bWkwc3F4djMydmsyMzRobHdncnUza2VicXAwMDRfbGlrZWRfYnlfMTAxMzg3MDkyMjc1ODEyOTM4Njc5DA">
+    
+      1 day, 1 hour ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyZ3d0bWkwc3F4djMydmsyMzRobHdncnUza2VicXAwMDRfbGlrZWRfYnlfMTAxMzg3MDkyMjc1ODEyOTM4Njc5DA" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://pfauth.com/blogtips/interview-met-oprichter-tumblr-bij-ons-staan-creatievelingen-wel-op-de-eerste-plaats/">pfauth.com/blogtips/inter... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/100768373433711096307"
+       title="Alper Çuğun">
+      <img class="profile" src="https://lh3.googleusercontent.com/-1IzHBLxettk/AAAAAAAAAAI/AAAAAAAADGk/sRgCKLWx60Y/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/106900270784775640045/posts/hT3Zyt5j2pz">
+        Ik ga standaard naar NDT in ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/106900270784775640045/posts/hT3Zyt5j2pz">
+      
+        Met ballet heb ik niets. Ik ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416121385&key=aglzfmJyaWQtZ3lyXQsSCFJlc3BvbnNlIk90YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEydHpia2gxeHV2c3h1cmwwNGNnbHFibG16Y2kxY3l1bzAway4xMzEyODg4MzY3ODIxMDAwDA">
+    
+      1 day, 1 hour ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyXQsSCFJlc3BvbnNlIk90YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEydHpia2gxeHV2c3h1cmwwNGNnbHFibG16Y2kxY3l1bzAway4xMzEyODg4MzY3ODIxMDAwDA" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://pfauth.com/kunst/de-onvermoeibare-sergej-diaghilev/">pfauth.com/kunst/de-onver... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/111905909771466810872"
+       title="Mikey van haaren">
+      <img class="profile" src="https://lh6.googleusercontent.com/-j6pq2LkKkBM/AAAAAAAAAAI/AAAAAAAAAAA/5Y65QfoFHeg/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/106900270784775640045/posts/KkQPfEMBryN">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/106900270784775640045/posts/KkQPfEMBryN">
+      
+        Interview met oprichter Tumblr: “bij ons ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416121383&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyZ3d0bWkwc3F4djMydmsyMzRobHdncnUza2VicXAwMDRfbGlrZWRfYnlfMTExOTA1OTA5NzcxNDY2ODEwODcyDA">
+    
+      1 day, 1 hour ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyZ3d0bWkwc3F4djMydmsyMzRobHdncnUza2VicXAwMDRfbGlrZWRfYnlfMTExOTA1OTA5NzcxNDY2ODEwODcyDA" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://pfauth.com/blogtips/interview-met-oprichter-tumblr-bij-ons-staan-creatievelingen-wel-op-de-eerste-plaats/">pfauth.com/blogtips/inter... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/117700783322524735280"
+       title="Richard Jong">
+      <img class="profile" src="https://lh3.googleusercontent.com/-ZhMBou50eBQ/AAAAAAAAAAI/AAAAAAAABGA/9lv4sVNhdms/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/106900270784775640045/posts/hT3Zyt5j2pz">
+        Goede boektip! Ik heb ook niets ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/106900270784775640045/posts/hT3Zyt5j2pz">
+      
+        Met ballet heb ik niets. Ik ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416121380&key=aglzfmJyaWQtZ3lyXQsSCFJlc3BvbnNlIk90YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEydHpia2gxeHV2c3h1cmwwNGNnbHFibG16Y2kxY3l1bzAway4xMzEyMzgyOTEzODUwMDAwDA">
+    
+      1 day, 1 hour ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyXQsSCFJlc3BvbnNlIk90YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEydHpia2gxeHV2c3h1cmwwNGNnbHFibG16Y2kxY3l1bzAway4xMzEyMzgyOTEzODUwMDAwDA" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://pfauth.com/kunst/de-onvermoeibare-sergej-diaghilev/">pfauth.com/kunst/de-onver... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/114076309161816695045"
+       title="Arien Kingma">
+      <img class="profile" src="https://lh5.googleusercontent.com/-_dF6g60xWnk/AAAAAAAAAAI/AAAAAAAAAlA/rfLe9wCNvGM/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/106900270784775640045/posts/hT3Zyt5j2pz">
+        Probleem met ballet (maar ook met ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/106900270784775640045/posts/hT3Zyt5j2pz">
+      
+        Met ballet heb ik niets. Ik ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416121377&key=aglzfmJyaWQtZ3lyXQsSCFJlc3BvbnNlIk90YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEydHpia2gxeHV2c3h1cmwwNGNnbHFibG16Y2kxY3l1bzAway4xMzEyMzc0MDk1NzA2MDAwDA">
+    
+      1 day, 1 hour ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyXQsSCFJlc3BvbnNlIk90YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEydHpia2gxeHV2c3h1cmwwNGNnbHFibG16Y2kxY3l1bzAway4xMzEyMzc0MDk1NzA2MDAwDA" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://pfauth.com/kunst/de-onvermoeibare-sergej-diaghilev/">pfauth.com/kunst/de-onver... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/101387092275812938679"
+       title="Tom Voute">
+      <img class="profile" src="https://lh5.googleusercontent.com/-yVJ61aWch1U/AAAAAAAAAAI/AAAAAAADB9g/378vrulyS6s/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/106900270784775640045/posts/aoVAVMUmkP5">
+        Wiens rechterhand? Ik dacht echt van ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/106900270784775640045/posts/aoVAVMUmkP5">
+      
+        At afgelopen weekend bij Bolenius en ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416121372&key=aglzfmJyaWQtZ3lyXQsSCFJlc3BvbnNlIk90YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyaWNqZG90d2UyengycWUwNGNnbHFibG16Y2kxY3l1bzAway4xMzIwNjY0OTM1MDYwMDAwDA">
+    
+      1 day, 1 hour ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyXQsSCFJlc3BvbnNlIk90YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyaWNqZG90d2UyengycWUwNGNnbHFibG16Y2kxY3l1bzAway4xMzIwNjY0OTM1MDYwMDAwDA" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://pfauth.com/het-goede-leven/eetbare-houtskool-en-andere-verrassingen-bij-bolenius/">pfauth.com/het-goede-leve... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/108680157004179041673"
+       title="Tim Kroesbergen">
+      <img class="profile" src="https://lh5.googleusercontent.com/-F84jvuoVFU4/AAAAAAAAAAI/AAAAAAAAAAA/13bo8M1uL08/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/106900270784775640045/posts/3LFwTgKVDxg">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/106900270784775640045/posts/3LFwTgKVDxg">
+      
+        TechCrunch publiceerde gisteren 44 stukken op ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416121369&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEycXZmdWcwdmFtd3h5MGgyMzRobHdncnUza2VicXAwMDRfbGlrZWRfYnlfMTA4NjgwMTU3MDA0MTc5MDQxNjczDA">
+    
+      1 day, 1 hour ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEycXZmdWcwdmFtd3h5MGgyMzRobHdncnUza2VicXAwMDRfbGlrZWRfYnlfMTA4NjgwMTU3MDA0MTc5MDQxNjczDA" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://pfauth.com/nieuwe-media/techbloggers-schrijven-te-veel/">pfauth.com/nieuwe-media/t... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/112758516782100936188"
+       title="Folco de Jong">
+      <img class="profile" src="https://lh4.googleusercontent.com/-fd2p5hCUBt4/AAAAAAAAAAI/AAAAAAAAAAA/6bblXivANAM/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/106900270784775640045/posts/RnUmLyJSrBN">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/106900270784775640045/posts/RnUmLyJSrBN">
+      
+        Je kan nu nog naar de ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416121366&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzdXZ2cTRpd25qdXI1b28wNGNnbHFibG16Y2kxY3l1bzAwa19saWtlZF9ieV8xMTI3NTg1MTY3ODIxMDA5MzYxODgM">
+    
+      1 day, 1 hour ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzdXZ2cTRpd25qdXI1b28wNGNnbHFibG16Y2kxY3l1bzAwa19saWtlZF9ieV8xMTI3NTg1MTY3ODIxMDA5MzYxODgM" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://pfauth.com/literatuur/lees-the-rum-diary-voordat-het-te-laat-is/">pfauth.com/literatuur/lee... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/103280987293013270933"
+       title="Paul Berghege">
+      <img class="profile" src="https://lh3.googleusercontent.com/-4SRYxmUhI_Y/AAAAAAAAAAI/AAAAAAAAAAA/DdehcrXUolo/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/106900270784775640045/posts/UR7Ji4UvPKk">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/106900270784775640045/posts/UR7Ji4UvPKk">
+      
+        Met leden van +De Correspondent haal ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416121361&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzcnNyanpzc2I0ZGZ4NTMwNGNnbHFibG16Y2kxY3l1bzAwa19saWtlZF9ieV8xMDMyODA5ODcyOTMwMTMyNzA5MzMM">
+    
+      1 day, 1 hour ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://decorrespondent.nl/594/94-boeken-die-we-volgens-jullie-moeten-inhalen/16746642-8087c84d">decorrespondent.nl/594/94-boeken-...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/100768373433711096307"
+       title="Alper Çuğun">
+      <img class="profile" src="https://lh3.googleusercontent.com/-1IzHBLxettk/AAAAAAAAAAI/AAAAAAAADGk/sRgCKLWx60Y/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/106900270784775640045/posts/hT3Zyt5j2pz">
+        Pina 3D is trouwen wel de ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/106900270784775640045/posts/hT3Zyt5j2pz">
+      
+        Met ballet heb ik niets. Ik ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416121357&key=aglzfmJyaWQtZ3lyXQsSCFJlc3BvbnNlIk90YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEydHpia2gxeHV2c3h1cmwwNGNnbHFibG16Y2kxY3l1bzAway4xMzEyODg4NDEyNTAxMDAwDA">
+    
+      1 day, 1 hour ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyXQsSCFJlc3BvbnNlIk90YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEydHpia2gxeHV2c3h1cmwwNGNnbHFibG16Y2kxY3l1bzAway4xMzEyODg4NDEyNTAxMDAwDA" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://pfauth.com/kunst/de-onvermoeibare-sergej-diaghilev/">pfauth.com/kunst/de-onver... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

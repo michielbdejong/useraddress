@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Tyler Gillies (Google+) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://plus.google.com/+TylerGillies42" title="Tyler Gillies (Google+)"
+   class="u-url">
+  <img class="profile u-photo" src="https://lh4.googleusercontent.com/-d5VF-SsnbQQ/AAAAAAAAAAI/AAAAAAAAbH0/RF9iheYDJbU/photo.jpg?sz=50&amp;sz=128" width="64px" />
+  <img src="/static/googleplus_icon.png"
+       
+       alt="Google+" />
+  <span class="p-name">Tyler Gillies</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://www.quora.com/Tyler-Gillies" class="publish-domain u-url">quora.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class=" big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDIzMDcwMDgyOTAwMDE4OTM5NjUM" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416205728&key=aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDIzMDcwMDgyOTAwMDE4OTM5NjUM">
+      2 hours, 18 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDIzMDcwMDgyOTAwMDE4OTM5NjUM" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/117277533748352519354"
+       title="Lakala Asiriya">
+      <img class="profile" src="https://lh6.googleusercontent.com/-H-oEDGMc8XA/AAAAAAAAAAI/AAAAAAAAAAA/p4QFmbttkYQ/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/109807866447826109768/posts/1Ui6hmMZaHh">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/102307008290001893965/posts/JfpJRb9Wp2A">
+      
+        --
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 hours, 18 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/108735288827134809414"
+       title="Bernadette Homor">
+      <img class="profile" src="https://lh5.googleusercontent.com/-tC4KmLpI0uQ/AAAAAAAAAAI/AAAAAAAAAAA/6TlXHvDdJ2M/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/109807866447826109768/posts/1Ui6hmMZaHh">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/102307008290001893965/posts/JfpJRb9Wp2A">
+      
+        --
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 hours, 18 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/105168056149680689364"
+       title="Tusharkumar Salunke">
+      <img class="profile" src="https://lh3.googleusercontent.com/-CmDK9hK9HRQ/AAAAAAAAAAI/AAAAAAAAAVg/_P4BAIsBMgQ/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/102307008290001893965/posts/XSNc2DnF11q">
+        cute</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/102307008290001893965/posts/XSNc2DnF11q">
+      
+        Omg so cute﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 hours, 18 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/111361786085576139985"
+       title="Brian Kelley">
+      <img class="profile" src="https://lh6.googleusercontent.com/-eijj4N9pVnk/AAAAAAAAAAI/AAAAAAAAAAA/4kolPDE8gWM/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/107651428609046959888/posts/goWnvqaxCx6">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/102307008290001893965/posts/RLY8BnyErZ2">
+      
+        So true No smoking :P#EveryDayHumour #Funny ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      22 hours, 49 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/102125770986753664392"
+       title="Uthman Baksh">
+      <img class="profile" src="https://lh5.googleusercontent.com/-Jj0Au0_ggNU/AAAAAAAAAAI/AAAAAAAAAAA/FuvFr1MIKYA/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/102307008290001893965/posts/XSNc2DnF11q">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/102307008290001893965/posts/XSNc2DnF11q">
+      
+        Omg so cute﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      22 hours, 49 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/108013404098562047132"
+       title="Joe Abbey">
+      <img class="profile" src="https://lh3.googleusercontent.com/-7tUvVGFDdV0/AAAAAAAAAAI/AAAAAAAAAAA/FmlpRtqqlCo/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/107651428609046959888/posts/goWnvqaxCx6">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/102307008290001893965/posts/RLY8BnyErZ2">
+      
+        So true No smoking :P#EveryDayHumour #Funny ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      22 hours, 49 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/116808257029715707879"
+       title="Scott Bollinger">
+      <img class="profile" src="https://lh5.googleusercontent.com/-VvIQyp7VnjE/AAAAAAAAAAI/AAAAAAAAAAA/s9qm1AS0Iq4/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/102307008290001893965/posts/XSNc2DnF11q">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/102307008290001893965/posts/XSNc2DnF11q">
+      
+        Omg so cute﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      22 hours, 49 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/101633866625202632619"
+       title="Kevin Weaver (HopyBombr)">
+      <img class="profile" src="https://lh4.googleusercontent.com/-1zvRM2WwnKk/AAAAAAAAAAI/AAAAAAAAAAA/pvhDgIxPXmU/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/107651428609046959888/posts/goWnvqaxCx6">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/102307008290001893965/posts/RLY8BnyErZ2">
+      
+        So true No smoking :P#EveryDayHumour #Funny ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      22 hours, 49 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/106018936289180022142"
+       title="Fred Blue">
+      <img class="profile" src="https://lh6.googleusercontent.com/-sbEbxe0ahYo/AAAAAAAAAAI/AAAAAAAAAAA/ZmxPMSo_EkA/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/109807866447826109768/posts/1Ui6hmMZaHh">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/102307008290001893965/posts/JfpJRb9Wp2A">
+      
+        --
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      22 hours, 49 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/116808257029715707879"
+       title="Scott Bollinger">
+      <img class="profile" src="https://lh5.googleusercontent.com/-VvIQyp7VnjE/AAAAAAAAAAI/AAAAAAAAAAA/s9qm1AS0Iq4/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/109807866447826109768/posts/1Ui6hmMZaHh">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/102307008290001893965/posts/JfpJRb9Wp2A">
+      
+        --
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      22 hours, 49 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Anne Hole (Google+) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://plus.google.com/+AnneHole" title="Anne Hole (Google+)"
+   class="u-url">
+  <img class="profile u-photo" src="https://lh6.googleusercontent.com/-2l2tkjGs7TY/AAAAAAAAAAI/AAAAAAAAH30/iNOXtOA4jmU/photo.jpg?sz=50&amp;sz=128" width="64px" />
+  <img src="/static/googleplus_icon.png"
+       
+       alt="Google+" />
+  <span class="p-name">Anne Hole</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://www.sussex.ac.uk/profiles/23029" class="publish-domain u-url">sussex.ac.uk</a>
+
+  
+  &middot;
+  <a href="http://annehole.wordpress.com" class="publish-domain u-url">annehole.wordpress.com</a>
+
+  
+  &middot;
+  <a href="http://edwickers.wordpress.com/" class="publish-domain u-url">edwickers.wordpress.com</a>
+
+  
+    <span id="more-websites" style="display: none">
+  
+  &middot;
+  <a href="http://rustleblog.wordpress.com" class="publish-domain u-url">rustleblog.wordpress.com</a>
+
+  
+  &middot;
+  <a href="http://dl.dropbox.com/u/11032258/THESIS%20-%20amendments.doc" class="publish-domain u-url">dl.dropbox.com</a>
+
+  
+  &middot;
+  <a href="http://www.tandfonline.com/doi/abs/10.1080/1468077032000166540" class="publish-domain u-url">tandfonline.com</a>
+
+  
+  &middot;
+  <a href="http://books.google.co.uk/books/about/Feminist_visual_culture.html?id=AtEYAAAAYAAJ" class="publish-domain u-url">books.google.co.uk</a>
+
+
+  </span>
+  <a onclick="toggle('more-websites'); toggle('show-more-websites'); return false"
+     id="show-more-websites" href="#" />...</a>
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+
+<div class="row promo warning">
+You
+ need 
+<a href='http://indiewebify.me/#send-webmentions'>webmention</a> support.
+
+
+Click here to add it:
+
+
+
+<form method="post" name="wordpress-start" action="/wordpress/start" class="signup">
+ <input type="image" alt="Sign in with WordPress.com"
+        src="/activitystreams/oauth_dropins/static/wordpress_com.png" />
+ <input name="feature" type="hidden" value="webmention" />
+ <!-- wordpress.com doesn't seem to use scope
+   https://developer.wordpress.com/docs/oauth2/ -->
+</form>
+
+
+
+
+
+</div>
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class=" big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDI5MDk2NjU0OTEyOTQxNTEyMDAM" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416145662&key=aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDI5MDk2NjU0OTEyOTQxNTEyMDAM">
+      19 hours ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDI5MDk2NjU0OTEyOTQxNTEyMDAM" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/113873289443253295484"
+       title="Eileen O&#39;Duffy">
+      <img class="profile" src="https://lh6.googleusercontent.com/-c3gFLRX6_G0/AAAAAAAAAAI/AAAAAAAAAAA/bqZMQpSzel0/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/102909665491294151200/posts/ZR5wEnebvqy">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/102909665491294151200/posts/ZR5wEnebvqy">
+      
+        Oh dear - it looks as ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416145671&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyYWRiZnh5dXlxZGZ0cTEwNGNjdmN6aXJtamVkaHdmZHNfbGlrZWRfYnlfMTEzODczMjg5NDQzMjUzMjk1NDg0DA">
+    
+      18 hours, 59 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.theguardian.com/lifeandstyle/2014/nov/16/born-before-1985-digital-immigrant-lauren-laverne">theguardian.com/lifeandstyle/2...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/113873289443253295484"
+       title="Eileen O&#39;Duffy">
+      <img class="profile" src="https://lh6.googleusercontent.com/-c3gFLRX6_G0/AAAAAAAAAAI/AAAAAAAAAAA/bqZMQpSzel0/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/102909665491294151200/posts/34Ya9zebizu">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/102909665491294151200/posts/34Ya9zebizu">
+      
+        A strong argument for retaining the ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416051293&key=aglzfmJyaWQtZ3lyZwsSCFJlc3BvbnNlIll0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEybGl2a29idWZ3ZWRlY2cyMmF1YnZwd251bWZqMnVpX2xpa2VkX2J5XzExMzg3MzI4OTQ0MzI1MzI5NTQ4NAw">
+    
+      1 day, 21 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://howsheilaseesit.wordpress.com/2014/11/14/why-we-need-to-talk-about-digital/">howsheilaseesit.wordpress.com/2014/11/14/why...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/100965626342897116766"
+       title="sherry terry">
+      <img class="profile" src="https://lh5.googleusercontent.com/-JZChqTK9AJo/AAAAAAAAAAI/AAAAAAAAAAA/OybX8FDEYQo/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/102909665491294151200/posts/fW4um7JcS1t">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/102909665491294151200/posts/fW4um7JcS1t">
+      
+        If this wasn&#39;t a story about ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416051292&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzenpyMWpueDN5ZnQ1emEwNGNjdmN6aXJtamVkaHdmZHNfbGlrZWRfYnlfMTAwOTY1NjI2MzQyODk3MTE2NzY2DA">
+    
+      1 day, 21 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.theguardian.com/politics/2014/nov/14/westminster-gardener-remove-leaves-trees-autumn-cancelled">theguardian.com/politics/2014/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/106223084650093919603"
+       title="Valerie Landau">
+      <img class="profile" src="https://lh3.googleusercontent.com/-rz7nfGsnTvU/AAAAAAAAAAI/AAAAAAAAAAA/wec7kDVyTh0/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/107350354213838732087/posts/hqCThyrAhmG">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/102909665491294151200/posts/gpPTpvUcrcZ">
+      
+        A new study shows that more ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 day, 21 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/105838068384362053014"
+       title="Ian Simpson">
+      <img class="profile" src="https://lh3.googleusercontent.com/-Ht3k0JzGsgI/AAAAAAAAAAI/AAAAAAAAAUI/QQmKy5EdTPY/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/102909665491294151200/posts/JZjUxX5E2f1">
+        Agreed. Although to me it looks ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/102909665491294151200/posts/JZjUxX5E2f1">
+      
+        This Google Robot&#39;s Karate Kid pose ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415967820&key=aglzfmJyaWQtZ3lyWQsSCFJlc3BvbnNlIkt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyNGQxdG9yb2l3ZXAwZmQyMmF1YnZwd251bWZqMnVpLjE0MTU4ODk5NjU5NDg0NTgM">
+    
+      2 days, 20 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://mashable.com/2014/11/11/google-robot-karate-kid-crane/?utm_cid=mash-com-G+-main-link">mashable.com/2014/11/11/goo...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/112154011634676310366"
+       title="bernadette cotner">
+      <img class="profile" src="https://lh5.googleusercontent.com/-Z9IsO8Le7Tw/AAAAAAAAAAI/AAAAAAAAAAA/DtZRcEF-YFo/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/102909665491294151200/posts/hy8op6R2FsY">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/102909665491294151200/posts/hy8op6R2FsY">
+      
+        I&#39;m so glad I have +Open ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415967760&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzdHdmaWlweXI1dDF4em8wNGNjdmN6aXJtamVkaHdmZHNfbGlrZWRfYnlfMTEyMTU0MDExNjM0Njc2MzEwMzY2DA">
+    
+      2 days, 20 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.openculture.com/2014/11/photos-of-a-very-young-frida-kahlo-taken-by-her-dad.html">openculture.com/2014/11/photos...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/105838068384362053014"
+       title="Ian Simpson">
+      <img class="profile" src="https://lh3.googleusercontent.com/-Ht3k0JzGsgI/AAAAAAAAAAI/AAAAAAAAAAA/mWzLCFeHPg0/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/113493854651753327245/posts/hDptbWdSNJn">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/102909665491294151200/posts/JZjUxX5E2f1">
+      
+        This Google Robot&#39;s Karate Kid pose ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415967701&key=aglzfmJyaWQtZ3lyZwsSCFJlc3BvbnNlIll0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyNGQxdG9yb2l3ZXAwZmQyMmF1YnZwd251bWZqMnVpX2xpa2VkX2J5XzEwNTgzODA2ODM4NDM2MjA1MzAxNAw">
+    
+      2 days, 20 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://mashable.com/2014/11/11/google-robot-karate-kid-crane/?utm_cid=mash-com-G+-main-link">mashable.com/2014/11/11/goo...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/111474406259561102151"
+       title="Laura Gibbs">
+      <img class="profile" src="https://lh3.googleusercontent.com/-aN1CJXM91vw/AAAAAAAAAAI/AAAAAAAAAAA/qZKnvYzzAgE/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/102909665491294151200/posts/hy8op6R2FsY">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/102909665491294151200/posts/hy8op6R2FsY">
+      
+        I&#39;m so glad I have +Open ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415967697&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzdHdmaWlweXI1dDF4em8wNGNjdmN6aXJtamVkaHdmZHNfbGlrZWRfYnlfMTExNDc0NDA2MjU5NTYxMTAyMTUxDA">
+    
+      2 days, 20 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.openculture.com/2014/11/photos-of-a-very-young-frida-kahlo-taken-by-her-dad.html">openculture.com/2014/11/photos...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/115425521155051147890"
+       title="Michelle  Johnson">
+      <img class="profile" src="https://lh5.googleusercontent.com/-ADGIgzjas-c/AAAAAAAAAAI/AAAAAAAAAAA/hjk0Wux0Knk/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/102909665491294151200/posts/RUyTiUtihxo">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/102909665491294151200/posts/RUyTiUtihxo">
+      
+        --
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415864675&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzeWlqYTV6d3p3dXpmd20wNGNjdmN6aXJtamVkaHdmZHNfbGlrZWRfYnlfMTE1NDI1NTIxMTU1MDUxMTQ3ODkwDA">
+    
+      4 days, 1 hour ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.bbc.co.uk/news/uk-england-29739284?ocid=socialflow_twitter">bbc.co.uk/news/uk-englan...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/109732539033661679080"
+       title="Randy Lyseng">
+      <img class="profile" src="https://lh3.googleusercontent.com/-VRz6Ydl9sLo/AAAAAAAAAAI/AAAAAAAAAAA/gLstTlT1xfU/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/113493854651753327245/posts/hDptbWdSNJn">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/102909665491294151200/posts/JZjUxX5E2f1">
+      
+        This Google Robot&#39;s Karate Kid pose ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415790937&key=aglzfmJyaWQtZ3lyZwsSCFJlc3BvbnNlIll0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyNGQxdG9yb2l3ZXAwZmQyMmF1YnZwd251bWZqMnVpX2xpa2VkX2J5XzEwOTczMjUzOTAzMzY2MTY3OTA4MAw">
+    
+      4 days, 21 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://mashable.com/2014/11/11/google-robot-karate-kid-crane/?utm_cid=mash-com-G+-main-link">mashable.com/2014/11/11/goo...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

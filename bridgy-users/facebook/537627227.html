@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Alex Hartley (Facebook) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://facebook.com/ahartley" title="Alex Hartley (Facebook)"
+   class="u-url">
+  <img class="profile u-photo" src="https://graph.facebook.com/ahartley/picture?type=large" width="64px" />
+  <img src="/static/facebook_icon.png"
+       
+       alt="Facebook" />
+  <span class="p-name">Alex Hartley</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="https://stream.hartley.cc" class="publish-domain u-url">stream.hartley.cc</a>
+
+  
+  &middot;
+  <a href="http://alexhartley.me" class="publish-domain u-url">alexhartley.me</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGwsSDEZhY2Vib29rUGFnZSIJNTM3NjI3MjI3DA" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416214642&key=aglzfmJyaWQtZ3lyGwsSDEZhY2Vib29rUGFnZSIJNTM3NjI3MjI3DA">
+      1 minute ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGwsSDEZhY2Vib29rUGFnZSIJNTM3NjI3MjI3DA" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+<form method="post" action="/delete/start">
+<p id="publishing-label" class="big">
+ Ready to publish.
+   <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGwsSDEZhY2Vib29rUGFnZSIJNTM3NjI3MjI3DA" />
+   <input name="feature" type="hidden" value="publish" />
+   <button id="delete-button" type="submit" class="btn btn-default"
+     title="Disable publishing for this account. (Won't delete posts you've already published.)"
+     >Disable</button>
+</p>
+</form>
+
+<form method="post" name="preview" action="/publish/preview"
+      onsubmit="do_preview('facebook'); return false;">
+<p id="preview-ui">
+ <label id="source-label" for="source-url">Enter post URL:</label>
+ <input id="source-url" name="source" type="url" required alt="Source URL"></input>
+ <input name="target" type="hidden"
+        value="http://brid.gy/publish/facebook"></input>
+
+ <nobr>
+ <!-- use a hidden input before the checkbox with the same name to set the value
+      to be sent when the checkbox is unchecked. -->
+ &nbsp;
+ <input id="include-link-unchecked" name="bridgy_omit_link" type="hidden"
+        value="true"></input>
+ <input id="include-link-checked" name="bridgy_omit_link" type="checkbox"
+        value="false" checked></input>
+ <label id="include-link-label" for="include-link-checked">Include link</label>
+ &nbsp;
+ <button id="preview-button" type="submit" class="btn btn-default">Preview</button>
+ </nobr>
+</p>
+</form>
+
+<!-- Publish signup buttons -->
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/537627227"
+       title="Alex Hartley">
+      <img class="profile" src="https://graph.facebook.com/537627227/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/10153290502317228?comment_id=10153292097072228">
+        You have a valid point ste.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/537627227/posts/10153290502317228">
+      
+        hmmm. not exactly like the cover ...
+      
+    </a></li>
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/537627227/posts/10153290502317228">
+      
+        hmmm. not exactly like the cover ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416046176&key=aglzfmJyaWQtZ3lyRwsSCFJlc3BvbnNlIjl0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTMyOTA1MDIzMTcyMjhfMTAxNTMyOTIwOTcwNzIyMjgM">
+    
+      1 day, 22 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://stream.hartley.cc/2014/hmmm-not-exactly-like-the-cover-art">stream.hartley.cc/2014/hmmm-not-...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/537627227"
+       title="Alex Hartley">
+      <img class="profile" src="https://graph.facebook.com/537627227/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/10153290502317228?comment_id=10153292098002228">
+        Yeah, I *may* have forgotten about ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/537627227/posts/10153290502317228">
+      
+        hmmm. not exactly like the cover ...
+      
+    </a></li>
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/537627227/posts/10153290502317228">
+      
+        hmmm. not exactly like the cover ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416046118&key=aglzfmJyaWQtZ3lyRwsSCFJlc3BvbnNlIjl0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTMyOTA1MDIzMTcyMjhfMTAxNTMyOTIwOTgwMDIyMjgM">
+    
+      1 day, 22 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://stream.hartley.cc/2014/hmmm-not-exactly-like-the-cover-art">stream.hartley.cc/2014/hmmm-not-...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/546498100"
+       title="Cathy Ginty">
+      <img class="profile" src="https://graph.facebook.com/546498100/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/10153290502317228?comment_id=10153290522932228">
+        It's a tad well done ;)</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/537627227/posts/10153290502317228">
+      
+        hmmm. not exactly like the cover ...
+      
+    </a></li>
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/537627227/posts/10153290502317228">
+      
+        hmmm. not exactly like the cover ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416013739&key=aglzfmJyaWQtZ3lyRwsSCFJlc3BvbnNlIjl0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTMyOTA1MDIzMTcyMjhfMTAxNTMyOTA1MjI5MzIyMjgM">
+    
+      2 days, 7 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://stream.hartley.cc/2014/hmmm-not-exactly-like-the-cover-art">stream.hartley.cc/2014/hmmm-not-...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/688883876"
+       title="Ste Shone">
+      <img class="profile" src="https://graph.facebook.com/688883876/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/10153290502317228?comment_id=10153290528397228">
+        It looked shit on the cover ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/537627227/posts/10153290502317228">
+      
+        hmmm. not exactly like the cover ...
+      
+    </a></li>
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/537627227/posts/10153290502317228">
+      
+        hmmm. not exactly like the cover ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416013685&key=aglzfmJyaWQtZ3lyRwsSCFJlc3BvbnNlIjl0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTMyOTA1MDIzMTcyMjhfMTAxNTMyOTA1MjgzOTcyMjgM">
+    
+      2 days, 7 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://stream.hartley.cc/2014/hmmm-not-exactly-like-the-cover-art">stream.hartley.cc/2014/hmmm-not-...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/696417751"
+       title="James Munro Boon">
+      <img class="profile" src="https://graph.facebook.com/696417751/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/537627227/posts/10153274034987228">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/537627227/posts/10153274034987228">
+      
+        Really good - http://twistedsifter.com/2014/11/3d-notepad-art-by-joao-carvalho/
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415669917&key=aglzfmJyaWQtZ3lySAsSCFJlc3BvbnNlIjp0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTMyNzQwMzQ5ODcyMjhfbGlrZWRfYnlfNjk2NDE3NzUxDA">
+    
+      6 days, 7 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://stream.hartley.cc/2014/really-good---2014113d-notepad-art-by-joao-carvalho">stream.hartley.cc/2014/really-go...</a></li></ul>
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://twistedsifter.com/2014/11/3d-notepad-art-by-joao-carvalho/">twistedsifter.com/2014/11/3d-not...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/718479715"
+       title="Nicola Jayne Barton">
+      <img class="profile" src="https://graph.facebook.com/718479715/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/537627227/posts/10153265132772228">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/537627227/posts/10153265132622228">
+      
+        went to get in bed, found ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415529275&key=aglzfmJyaWQtZ3lySAsSCFJlc3BvbnNlIjp0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTMyNjUxMzI3NzIyMjhfbGlrZWRfYnlfNzE4NDc5NzE1DA">
+    
+      1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://stream.hartley.cc/2014/went-to-get-in-bed-found-this">stream.hartley.cc/2014/went-to-g...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/718479715"
+       title="Nicola Jayne Barton">
+      <img class="profile" src="https://graph.facebook.com/718479715/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/537627227/posts/10153265132622228">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/537627227/posts/10153265132622228">
+      
+        went to get in bed, found ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415529227&key=aglzfmJyaWQtZ3lySAsSCFJlc3BvbnNlIjp0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTMyNjUxMzI2MjIyMjhfbGlrZWRfYnlfNzE4NDc5NzE1DA">
+    
+      1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://stream.hartley.cc/2014/went-to-get-in-bed-found-this">stream.hartley.cc/2014/went-to-g...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/602524997"
+       title="Kate Boon">
+      <img class="profile" src="https://graph.facebook.com/602524997/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/537627227/posts/10153265132622228">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/537627227/posts/10153265132622228">
+      
+        went to get in bed, found ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415528524&key=aglzfmJyaWQtZ3lySAsSCFJlc3BvbnNlIjp0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTMyNjUxMzI2MjIyMjhfbGlrZWRfYnlfNjAyNTI0OTk3DA">
+    
+      1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://stream.hartley.cc/2014/went-to-get-in-bed-found-this">stream.hartley.cc/2014/went-to-g...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/602524997"
+       title="Kate Boon">
+      <img class="profile" src="https://graph.facebook.com/602524997/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/537627227/posts/10153265132772228">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/537627227/posts/10153265132622228">
+      
+        went to get in bed, found ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415528476&key=aglzfmJyaWQtZ3lySAsSCFJlc3BvbnNlIjp0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTMyNjUxMzI3NzIyMjhfbGlrZWRfYnlfNjAyNTI0OTk3DA">
+    
+      1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://stream.hartley.cc/2014/went-to-get-in-bed-found-this">stream.hartley.cc/2014/went-to-g...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/629764697"
+       title="Joanne Gibson">
+      <img class="profile" src="https://graph.facebook.com/629764697/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/537627227/posts/10153265132622228">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/537627227/posts/10153265132622228">
+      
+        went to get in bed, found ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415492303&key=aglzfmJyaWQtZ3lySAsSCFJlc3BvbnNlIjp0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTMyNjUxMzI2MjIyMjhfbGlrZWRfYnlfNjI5NzY0Njk3DA">
+    
+      1 week, 1 day ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://stream.hartley.cc/2014/went-to-get-in-bed-found-this">stream.hartley.cc/2014/went-to-g...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+
+<p class="big">Nothing published yet.</p>
+
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

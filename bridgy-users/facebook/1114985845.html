@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Kevin Polley (Facebook) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://facebook.com/kevinpolley.0" title="Kevin Polley (Facebook)"
+   class="u-url">
+  <img class="profile u-photo" src="https://graph.facebook.com/kevinpolley.0/picture?type=large" width="64px" />
+  <img src="/static/facebook_icon.png"
+       
+       alt="Facebook" />
+  <span class="p-name">Kevin Polley</span></a>
+
+
+<!-- TODO: make this work without javascript too -->
+<a href="#" onclick="document.forms['listen-facebook-start'].submit();
+                     return false;">
+  <span class="glyphicon glyphicon-pause"
+        title="This account was disconnected on Facebook's end. Click to reconnect it!">
+</span></a>
+
+
+
+  
+  &middot;
+  <a href="http://www.kevinpolley.com/" class="publish-domain u-url">kevinpolley.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+Click to enable <a href="/about#listen">listening</a>:
+
+<!-- Facebook listen signup -->
+<form method="post" name="listen-facebook-start" action="/facebook/start" class="signup">
+  <input type="image" alt="Sign in with Facebook"
+         src="/activitystreams/oauth_dropins/static/facebook.png" />
+  <input name="feature" type="hidden" value="listen" />
+  <!-- https://developers.facebook.com/docs/reference/login/ -->
+  <input name="scope" type="hidden"
+         value="offline_access,user_website,user_status,user_photos,user_events,read_stream">
+</form>
+
+
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+<span class="big">Click to enable <a href="/about#publish">publishing</a>:</span>
+<form method="post" name="publish-facebook-start" action="/facebook/start" class="signup">
+ <input type="image" alt="Sign in with Facebook"
+        src="/activitystreams/oauth_dropins/static/facebook.png" />
+ <input name="feature" type="hidden" value="publish" />
+ <!-- https://developers.facebook.com/docs/reference/login/ -->
+ <input name="scope" type="hidden"
+        value="offline_access,user_website,publish_actions,create_event,rsvp_event,user_status,friends_status,user_photos,friends_photos,user_videos,friends_videos,user_events,friends_events,user_likes,friends_likes" />
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/590462227"
+       title="Rasta Nick">
+      <img class="profile" src="https://graph.facebook.com/590462227/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/1114985845/posts/10201796222443331">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/1114985845/posts/10201796222443331">
+      
+        OK .. I'm gonna throw this ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1406417317&key=aglzfmJyaWQtZ3lySAsSCFJlc3BvbnNlIjp0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAyMDE3OTYyMjI0NDMzMzFfbGlrZWRfYnlfNTkwNDYyMjI3DA">
+    
+      3 months, 3 weeks ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lySAsSCFJlc3BvbnNlIjp0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAyMDE3OTYyMjI0NDMzMzFfbGlrZWRfYnlfNTkwNDYyMjI3DA" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://ipv4.google.com/sorry/IndexRedirect?continue=https%3A%2F%2Fwww.google.com%2Fsearch%3Ftbo%3Dp%26tbm%3Dpts%26hl%3Den%26q%3Dininventor%253A%2522James%2BM.%2BRobitaille%2522">ipv4.google.com/sorry/IndexRed... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.google.co.uk/patents/US511916">google.co.uk/patents/US5119...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.fixtheworldproject.net/">fixtheworldproject.net/</a></li>
+	<li><a class="original-post" target="_blank" href="http://hopegirl2012.wordpress.com/">hopegirl2012.wordpress.com/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1114985845"
+       title="Kevin Polley">
+      <img class="profile" src="https://graph.facebook.com/1114985845/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/10201796222443331?comment_id=63394295">
+        Hi Kristyon Cresswell-Thomas, Thanks for your ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/1114985845/posts/10201796222443331">
+      
+        OK .. I'm gonna throw this ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1406417257&key=aglzfmJyaWQtZ3lyPgsSCFJlc3BvbnNlIjB0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAyMDE3OTYyMjI0NDMzMzFfNjMzOTQyOTUM">
+    
+      3 months, 3 weeks ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyPgsSCFJlc3BvbnNlIjB0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAyMDE3OTYyMjI0NDMzMzFfNjMzOTQyOTUM" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://ipv4.google.com/sorry/IndexRedirect?continue=https%3A%2F%2Fwww.google.com%2Fsearch%3Ftbo%3Dp%26tbm%3Dpts%26hl%3Den%26q%3Dininventor%253A%2522James%2BM.%2BRobitaille%2522">ipv4.google.com/sorry/IndexRed... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.google.co.uk/patents/US511916">google.co.uk/patents/US5119...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.fixtheworldproject.net/">fixtheworldproject.net/</a></li>
+	<li><a class="original-post" target="_blank" href="http://hopegirl2012.wordpress.com/">hopegirl2012.wordpress.com/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/552647410"
+       title="Karina Thacker">
+      <img class="profile" src="https://graph.facebook.com/552647410/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/1114985845/posts/10201796222443331">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/1114985845/posts/10201796222443331">
+      
+        OK .. I'm gonna throw this ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1406417062&key=aglzfmJyaWQtZ3lySAsSCFJlc3BvbnNlIjp0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAyMDE3OTYyMjI0NDMzMzFfbGlrZWRfYnlfNTUyNjQ3NDEwDA">
+    
+      3 months, 3 weeks ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lySAsSCFJlc3BvbnNlIjp0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAyMDE3OTYyMjI0NDMzMzFfbGlrZWRfYnlfNTUyNjQ3NDEwDA" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://ipv4.google.com/sorry/IndexRedirect?continue=https%3A%2F%2Fwww.google.com%2Fsearch%3Ftbo%3Dp%26tbm%3Dpts%26hl%3Den%26q%3Dininventor%253A%2522James%2BM.%2BRobitaille%2522">ipv4.google.com/sorry/IndexRed... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.google.co.uk/patents/US511916">google.co.uk/patents/US5119...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.fixtheworldproject.net/">fixtheworldproject.net/</a></li>
+	<li><a class="original-post" target="_blank" href="http://hopegirl2012.wordpress.com/">hopegirl2012.wordpress.com/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/721041768"
+       title="Kristyon Cresswell-Thomas">
+      <img class="profile" src="https://graph.facebook.com/721041768/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/10201796222443331?comment_id=63393885">
+        Nope. False. Breaks too many laws ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/1114985845/posts/10201796222443331">
+      
+        OK .. I'm gonna throw this ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1406416546&key=aglzfmJyaWQtZ3lyPgsSCFJlc3BvbnNlIjB0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAyMDE3OTYyMjI0NDMzMzFfNjMzOTM4ODUM">
+    
+      3 months, 3 weeks ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyPgsSCFJlc3BvbnNlIjB0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAyMDE3OTYyMjI0NDMzMzFfNjMzOTM4ODUM" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://ipv4.google.com/sorry/IndexRedirect?continue=https%3A%2F%2Fwww.google.com%2Fsearch%3Ftbo%3Dp%26tbm%3Dpts%26hl%3Den%26q%3Dininventor%253A%2522James%2BM.%2BRobitaille%2522">ipv4.google.com/sorry/IndexRed... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.google.co.uk/patents/US511916">google.co.uk/patents/US5119...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.fixtheworldproject.net/">fixtheworldproject.net/</a></li>
+	<li><a class="original-post" target="_blank" href="http://hopegirl2012.wordpress.com/">hopegirl2012.wordpress.com/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/100000327513819"
+       title="John Woodstock Rogers">
+      <img class="profile" src="https://graph.facebook.com/100000327513819/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/1114985845/posts/10202477894444705">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/1114985845/posts/10202477894444705">
+      
+        If you want to take back ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1406197482&key=aglzfmJyaWQtZ3lyTgsSCFJlc3BvbnNlIkB0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAyMDI0Nzc4OTQ0NDQ3MDVfbGlrZWRfYnlfMTAwMDAwMzI3NTEzODE5DA">
+    
+      3 months, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.kevinpolley.com/the-indieweb-im-taking-control/124">kevinpolley.com/the-indieweb-i...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/100000534415218"
+       title="Colette Mason">
+      <img class="profile" src="https://graph.facebook.com/100000534415218/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/1114985845/posts/10202477894444705">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/1114985845/posts/10202477894444705">
+      
+        If you want to take back ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1406183560&key=aglzfmJyaWQtZ3lyTgsSCFJlc3BvbnNlIkB0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAyMDI0Nzc4OTQ0NDQ3MDVfbGlrZWRfYnlfMTAwMDAwNTM0NDE1MjE4DA">
+    
+      3 months, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.kevinpolley.com/the-indieweb-im-taking-control/124">kevinpolley.com/the-indieweb-i...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/100003356610353"
+       title="Terrie Barker">
+      <img class="profile" src="https://graph.facebook.com/100003356610353/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/1114985845/posts/10202218739325989">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/1114985845/posts/10202218739325989">
+      
+        I went, I saw, I conquered ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      3 months, 3 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1069185818"
+       title="Nicolette Hughes">
+      <img class="profile" src="https://graph.facebook.com/1069185818/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/1114985845/posts/10202218739325989">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/1114985845/posts/10202218739325989">
+      
+        I went, I saw, I conquered ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      3 months, 3 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1261853803"
+       title="Sharon Kempster">
+      <img class="profile" src="https://graph.facebook.com/1261853803/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/1114985845/posts/10202218739325989">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/1114985845/posts/10202218739325989">
+      
+        I went, I saw, I conquered ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      3 months, 3 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1133839095"
+       title="Brad Lindsay">
+      <img class="profile" src="https://graph.facebook.com/1133839095/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/1114985845/posts/10202218739325989">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/1114985845/posts/10202218739325989">
+      
+        I went, I saw, I conquered ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      3 months, 3 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+
+<p id="publishes" class="big">Recently published:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://www.kevinpolley.com/the-indieweb-im-taking-control/124">kevinpolley.com/the-indieweb-i...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1406182982&key=aglzfmJyaWQtZ3lyZAsSDVB1Ymxpc2hlZFBhZ2UiPWh0dHA6Ly93d3cua2V2aW5wb2xsZXkuY29tL3RoZS1pbmRpZXdlYi1pbS10YWtpbmctY29udHJvbC8xMjQMCxIHUHVibGlzaBiAgICAgOSRCgw">
+      3 months, 3 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     preview
+     
+
+   </div>
+  </li>
+  
+</ul>
+
+
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

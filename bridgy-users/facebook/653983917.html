@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Brennan Novak (Facebook) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://facebook.com/brennannovak" title="Brennan Novak (Facebook)"
+   class="u-url">
+  <img class="profile u-photo" src="https://graph.facebook.com/brennannovak/picture?type=large" width="64px" />
+  <img src="/static/facebook_icon.png"
+       
+       alt="Facebook" />
+  <span class="p-name">Brennan Novak</span></a>
+
+
+<!-- TODO: make this work without javascript too -->
+<a href="#" onclick="document.forms['listen-facebook-start'].submit();
+                     return false;">
+  <span class="glyphicon glyphicon-pause"
+        title="This account was disconnected on Facebook's end. Click to reconnect it!">
+</span></a>
+
+
+
+  
+  &middot;
+  <a href="https://brennannovak.com/" class="publish-domain u-url">brennannovak.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+Click to enable <a href="/about#listen">listening</a>:
+
+<!-- Facebook listen signup -->
+<form method="post" name="listen-facebook-start" action="/facebook/start" class="signup">
+  <input type="image" alt="Sign in with Facebook"
+         src="/activitystreams/oauth_dropins/static/facebook.png" />
+  <input name="feature" type="hidden" value="listen" />
+  <!-- https://developers.facebook.com/docs/reference/login/ -->
+  <input name="scope" type="hidden"
+         value="offline_access,user_website,user_status,user_photos,user_events,read_stream">
+</form>
+
+
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+<span class="big">Click to enable <a href="/about#publish">publishing</a>:</span>
+<form method="post" name="publish-facebook-start" action="/facebook/start" class="signup">
+ <input type="image" alt="Sign in with Facebook"
+        src="/activitystreams/oauth_dropins/static/facebook.png" />
+ <input name="feature" type="hidden" value="publish" />
+ <!-- https://developers.facebook.com/docs/reference/login/ -->
+ <input name="scope" type="hidden"
+        value="offline_access,user_website,publish_actions,create_event,rsvp_event,user_status,friends_status,user_photos,friends_photos,user_videos,friends_videos,user_events,friends_events,user_likes,friends_likes" />
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1064790274"
+       title="Katherine Novak">
+      <img class="profile" src="https://graph.facebook.com/1064790274/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/653983917/posts/10152217152783918">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/653983917/posts/10152217152783918">
+      
+        I will be removing all my ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1402550136&key=aglzfmJyaWQtZ3lySQsSCFJlc3BvbnNlIjt0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTIyMTcxNTI3ODM5MThfbGlrZWRfYnlfMTA2NDc5MDI3NAw">
+    
+      5 months, 1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://brennannovak.com/essays/dear-facebook-goodbye">brennannovak.com/essays/dear-fa...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/4304372"
+       title="Mathew Lippincott">
+      <img class="profile" src="https://graph.facebook.com/4304372/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/10152217152783918?comment_id=10152228634598918">
+        I'm going to like this and ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/653983917/posts/10152217152783918">
+      
+        I will be removing all my ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1402549551&key=aglzfmJyaWQtZ3lyRwsSCFJlc3BvbnNlIjl0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTIyMTcxNTI3ODM5MThfMTAxNTIyMjg2MzQ1OTg5MTgM">
+    
+      5 months, 1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://brennannovak.com/essays/dear-facebook-goodbye">brennannovak.com/essays/dear-fa...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/4304372"
+       title="Mathew Lippincott">
+      <img class="profile" src="https://graph.facebook.com/4304372/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/653983917/posts/10152217152783918">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/653983917/posts/10152217152783918">
+      
+        I will be removing all my ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1402549520&key=aglzfmJyaWQtZ3lyRgsSCFJlc3BvbnNlIjh0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTIyMTcxNTI3ODM5MThfbGlrZWRfYnlfNDMwNDM3Mgw">
+    
+      5 months, 1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://brennannovak.com/essays/dear-facebook-goodbye">brennannovak.com/essays/dear-fa...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/619411271"
+       title="Snorri Þór Tryggvason">
+      <img class="profile" src="https://graph.facebook.com/619411271/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/653983917/posts/10152217152783918">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/653983917/posts/10152217152783918">
+      
+        I will be removing all my ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1402518400&key=aglzfmJyaWQtZ3lySAsSCFJlc3BvbnNlIjp0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTIyMTcxNTI3ODM5MThfbGlrZWRfYnlfNjE5NDExMjcxDA">
+    
+      5 months, 1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://brennannovak.com/essays/dear-facebook-goodbye">brennannovak.com/essays/dear-fa...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1249305311"
+       title="Kevin M Goode">
+      <img class="profile" src="https://graph.facebook.com/1249305311/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/653983917/posts/10152217152783918">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/653983917/posts/10152217152783918">
+      
+        I will be removing all my ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1402517040&key=aglzfmJyaWQtZ3lySQsSCFJlc3BvbnNlIjt0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTIyMTcxNTI3ODM5MThfbGlrZWRfYnlfMTI0OTMwNTMxMQw">
+    
+      5 months, 1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://brennannovak.com/essays/dear-facebook-goodbye">brennannovak.com/essays/dear-fa...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/11506389"
+       title="Megan McKinnie">
+      <img class="profile" src="https://graph.facebook.com/11506389/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/10152217152783918?comment_id=10152227928273918">
+        I don't know if I ever ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/653983917/posts/10152217152783918">
+      
+        I will be removing all my ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1402517009&key=aglzfmJyaWQtZ3lyRwsSCFJlc3BvbnNlIjl0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTIyMTcxNTI3ODM5MThfMTAxNTIyMjc5MjgyNzM5MTgM">
+    
+      5 months, 1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://brennannovak.com/essays/dear-facebook-goodbye">brennannovak.com/essays/dear-fa...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1367662964"
+       title="Erin Brothers">
+      <img class="profile" src="https://graph.facebook.com/1367662964/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/653983917/posts/10152217152783918">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/653983917/posts/10152217152783918">
+      
+        I will be removing all my ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1402506752&key=aglzfmJyaWQtZ3lySQsSCFJlc3BvbnNlIjt0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTIyMTcxNTI3ODM5MThfbGlrZWRfYnlfMTM2NzY2Mjk2NAw">
+    
+      5 months, 1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://brennannovak.com/essays/dear-facebook-goodbye">brennannovak.com/essays/dear-fa...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/653983917"
+       title="Brennan Novak">
+      <img class="profile" src="https://graph.facebook.com/653983917/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/10152217152783918?comment_id=10152227362698918">
+        Marty Bibi yes, but eventually once ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/653983917/posts/10152217152783918">
+      
+        I will be removing all my ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1402496030&key=aglzfmJyaWQtZ3lyRwsSCFJlc3BvbnNlIjl0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTIyMTcxNTI3ODM5MThfMTAxNTIyMjczNjI2OTg5MTgM">
+    
+      5 months, 1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://brennannovak.com/essays/dear-facebook-goodbye">brennannovak.com/essays/dear-fa...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/656205337"
+       title="Marty Bibi">
+      <img class="profile" src="https://graph.facebook.com/656205337/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/10152217152783918?comment_id=10152227254098918">
+        sorry i mean Brennan Novak</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/653983917/posts/10152217152783918">
+      
+        I will be removing all my ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1402492479&key=aglzfmJyaWQtZ3lyRwsSCFJlc3BvbnNlIjl0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTIyMTcxNTI3ODM5MThfMTAxNTIyMjcyNTQwOTg5MTgM">
+    
+      5 months, 1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://brennannovak.com/essays/dear-facebook-goodbye">brennannovak.com/essays/dear-fa...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/656205337"
+       title="Marty Bibi">
+      <img class="profile" src="https://graph.facebook.com/656205337/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/10152217152783918?comment_id=10152227253413918">
+        Will you still be on twitter ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/653983917/posts/10152217152783918">
+      
+        I will be removing all my ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1402492427&key=aglzfmJyaWQtZ3lyRwsSCFJlc3BvbnNlIjl0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTIyMTcxNTI3ODM5MThfMTAxNTIyMjcyNTM0MTM5MTgM">
+    
+      5 months, 1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://brennannovak.com/essays/dear-facebook-goodbye">brennannovak.com/essays/dear-fa...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+
+<p id="publishes" class="big">Recently published:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://brennannovak.com/notes/438">brennannovak.com/notes/438</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1400332361&key=aglzfmJyaWQtZ3lySQsSDVB1Ymxpc2hlZFBhZ2UiImh0dHBzOi8vYnJlbm5hbm5vdmFrLmNvbS9ub3Rlcy80MzgMCxIHUHVibGlzaBiAgICAgOSRCgw">
+      6 months ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://brennannovak.com/notes/438">brennannovak.com/notes/438</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1400332347&key=aglzfmJyaWQtZ3lySQsSDVB1Ymxpc2hlZFBhZ2UiImh0dHBzOi8vYnJlbm5hbm5vdmFrLmNvbS9ub3Rlcy80MzgMCxIHUHVibGlzaBiAgICAgICACgw">
+      6 months ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     preview
+     
+
+   </div>
+  </li>
+  
+</ul>
+
+
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

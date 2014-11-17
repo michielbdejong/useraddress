@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Ella Durham (Facebook) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://facebook.com/ella.durham" title="Ella Durham (Facebook)"
+   class="u-url">
+  <img class="profile u-photo" src="https://graph.facebook.com/ella.durham/picture?type=large" width="64px" />
+  <img src="/static/facebook_icon.png"
+       
+       alt="Facebook" />
+  <span class="p-name">Ella Durham</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://elladurham.com" class="publish-domain u-url">elladurham.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGgsSDEZhY2Vib29rUGFnZSIIMTcyMTI0NDEM" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416178889&key=aglzfmJyaWQtZ3lyGgsSDEZhY2Vib29rUGFnZSIIMTcyMTI0NDEM">
+      9 hours, 52 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGgsSDEZhY2Vib29rUGFnZSIIMTcyMTI0NDEM" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+<form method="post" action="/delete/start">
+<p id="publishing-label" class="big">
+ Ready to publish.
+   <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGgsSDEZhY2Vib29rUGFnZSIIMTcyMTI0NDEM" />
+   <input name="feature" type="hidden" value="publish" />
+   <button id="delete-button" type="submit" class="btn btn-default"
+     title="Disable publishing for this account. (Won't delete posts you've already published.)"
+     >Disable</button>
+</p>
+</form>
+
+<form method="post" name="preview" action="/publish/preview"
+      onsubmit="do_preview('facebook'); return false;">
+<p id="preview-ui">
+ <label id="source-label" for="source-url">Enter post URL:</label>
+ <input id="source-url" name="source" type="url" required alt="Source URL"></input>
+ <input name="target" type="hidden"
+        value="http://brid.gy/publish/facebook"></input>
+
+ <nobr>
+ <!-- use a hidden input before the checkbox with the same name to set the value
+      to be sent when the checkbox is unchecked. -->
+ &nbsp;
+ <input id="include-link-unchecked" name="bridgy_omit_link" type="hidden"
+        value="true"></input>
+ <input id="include-link-checked" name="bridgy_omit_link" type="checkbox"
+        value="false" checked></input>
+ <label id="include-link-label" for="include-link-checked">Include link</label>
+ &nbsp;
+ <button id="preview-button" type="submit" class="btn btn-default">Preview</button>
+ </nobr>
+</p>
+</form>
+
+<!-- Publish signup buttons -->
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1317120005"
+       title="Maddie Miller">
+      <img class="profile" src="https://graph.facebook.com/1317120005/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/17212441/posts/10101450313457173">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/17212441/posts/10101450313457173">
+      
+        Look what has become of me. ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413505714&key=aglzfmJyaWQtZ3lySQsSCFJlc3BvbnNlIjt0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxMDE0NTAzMTM0NTcxNzNfbGlrZWRfYnlfMTMxNzEyMDAwNQw">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://elladurham.com/?attachment_id=57">elladurham.com/?attachment_id...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/540759099"
+       title="Grim Womyn">
+      <img class="profile" src="https://graph.facebook.com/540759099/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/17212441/posts/10101450313457173">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/17212441/posts/10101450313457173">
+      
+        Look what has become of me. ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413505690&key=aglzfmJyaWQtZ3lySAsSCFJlc3BvbnNlIjp0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxMDE0NTAzMTM0NTcxNzNfbGlrZWRfYnlfNTQwNzU5MDk5DA">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://elladurham.com/?attachment_id=57">elladurham.com/?attachment_id...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1317870024"
+       title="Brianne Wolf">
+      <img class="profile" src="https://graph.facebook.com/1317870024/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/17212441/posts/10101450313457173">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/17212441/posts/10101450313457173">
+      
+        Look what has become of me. ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413505671&key=aglzfmJyaWQtZ3lySQsSCFJlc3BvbnNlIjt0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxMDE0NTAzMTM0NTcxNzNfbGlrZWRfYnlfMTMxNzg3MDAyNAw">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://elladurham.com/?attachment_id=57">elladurham.com/?attachment_id...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/12131665"
+       title="Daniel Kroll">
+      <img class="profile" src="https://graph.facebook.com/12131665/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/17212441/posts/10101450313457173">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/17212441/posts/10101450313457173">
+      
+        Look what has become of me. ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413505656&key=aglzfmJyaWQtZ3lyRwsSCFJlc3BvbnNlIjl0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxMDE0NTAzMTM0NTcxNzNfbGlrZWRfYnlfMTIxMzE2NjUM">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://elladurham.com/?attachment_id=57">elladurham.com/?attachment_id...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/550030703"
+       title="Joseph Johnson">
+      <img class="profile" src="https://graph.facebook.com/550030703/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/17212441/posts/10101450313457173">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/17212441/posts/10101450313457173">
+      
+        Look what has become of me. ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413505625&key=aglzfmJyaWQtZ3lySAsSCFJlc3BvbnNlIjp0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxMDE0NTAzMTM0NTcxNzNfbGlrZWRfYnlfNTUwMDMwNzAzDA">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://elladurham.com/?attachment_id=57">elladurham.com/?attachment_id...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1787574701"
+       title="Classic Pictures">
+      <img class="profile" src="https://graph.facebook.com/1787574701/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/17212441/posts/10101450313457173">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/17212441/posts/10101450313457173">
+      
+        Look what has become of me. ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413505606&key=aglzfmJyaWQtZ3lySQsSCFJlc3BvbnNlIjt0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxMDE0NTAzMTM0NTcxNzNfbGlrZWRfYnlfMTc4NzU3NDcwMQw">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://elladurham.com/?attachment_id=57">elladurham.com/?attachment_id...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/646160594"
+       title="Inga Jensen">
+      <img class="profile" src="https://graph.facebook.com/646160594/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/17212441/posts/10101450313457173">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/17212441/posts/10101450313457173">
+      
+        Look what has become of me. ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413505584&key=aglzfmJyaWQtZ3lySAsSCFJlc3BvbnNlIjp0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxMDE0NTAzMTM0NTcxNzNfbGlrZWRfYnlfNjQ2MTYwNTk0DA">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://elladurham.com/?attachment_id=57">elladurham.com/?attachment_id...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1454254912"
+       title="Mary Barnas Crisman">
+      <img class="profile" src="https://graph.facebook.com/1454254912/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/10101450313457173?comment_id=10101450440906763">
+        What a beautiful picture Ella</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/17212441/posts/10101450313457173">
+      
+        Look what has become of me. ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413505562&key=aglzfmJyaWQtZ3lyRwsSCFJlc3BvbnNlIjl0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxMDE0NTAzMTM0NTcxNzNfMTAxMDE0NTA0NDA5MDY3NjMM">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://elladurham.com/?attachment_id=57">elladurham.com/?attachment_id...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1037940786"
+       title="Dylan Baumann">
+      <img class="profile" src="https://graph.facebook.com/1037940786/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/17212441/posts/10101450313457173">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/17212441/posts/10101450313457173">
+      
+        Look what has become of me. ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413505543&key=aglzfmJyaWQtZ3lySQsSCFJlc3BvbnNlIjt0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxMDE0NTAzMTM0NTcxNzNfbGlrZWRfYnlfMTAzNzk0MDc4Ngw">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://elladurham.com/?attachment_id=57">elladurham.com/?attachment_id...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/100000187896729"
+       title="Sally Rapien">
+      <img class="profile" src="https://graph.facebook.com/100000187896729/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/10101450313457173?comment_id=10101450385587623">
+        Great picture! Miss you!</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/17212441/posts/10101450313457173">
+      
+        Look what has become of me. ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413505526&key=aglzfmJyaWQtZ3lyRwsSCFJlc3BvbnNlIjl0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxMDE0NTAzMTM0NTcxNzNfMTAxMDE0NTAzODU1ODc2MjMM">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://elladurham.com/?attachment_id=57">elladurham.com/?attachment_id...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+
+<p id="publishes" class="big">Recently published:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://elladurham.com/2014/08/03/testing-a-different-posse-plugin-with-this-adorable-picture-of-dot/">elladurham.com/2014/08/03/tes...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1407103290&key=aglzfmJyaWQtZ3lyiwELEg1QdWJsaXNoZWRQYWdlImRodHRwOi8vZWxsYWR1cmhhbS5jb20vMjAxNC8wOC8wMy90ZXN0aW5nLWEtZGlmZmVyZW50LXBvc3NlLXBsdWdpbi13aXRoLXRoaXMtYWRvcmFibGUtcGljdHVyZS1vZi1kb3QvDAsSB1B1Ymxpc2gYgICAgICAgAoM">
+      3 months, 2 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     preview
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://elladurham.com/?attachment_id=57">elladurham.com/?attachment_id...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1407096089&key=aglzfmJyaWQtZ3lyTgsSDVB1Ymxpc2hlZFBhZ2UiJ2h0dHA6Ly9lbGxhZHVyaGFtLmNvbS8_YXR0YWNobWVudF9pZD01NwwLEgdQdWJsaXNoGICAgICAgIAKDA">
+      3 months, 2 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     preview
+     
+
+   </div>
+  </li>
+  
+</ul>
+
+
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

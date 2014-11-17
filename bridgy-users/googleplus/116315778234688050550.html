@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Francis Sealey (Google+) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://plus.google.com/116315778234688050550" title="Francis Sealey (Google+)"
+   class="u-url">
+  <img class="profile u-photo" src="https://lh3.googleusercontent.com/-8SuWVQGnrUo/AAAAAAAAAAI/AAAAAAAAAX4/IVXh0dbt7HE/photo.jpg?sz=50&amp;sz=128" width="64px" />
+  <img src="/static/googleplus_icon.png"
+       
+       alt="Google+" />
+  <span class="p-name">Francis Sealey</span></a>
+
+
+
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row promo warning">
+<p id="edit-profile">First things first: what's your web site?
+
+Open your
+<a href="https://plus.google.com/me/about" target="_blank">
+  Google+ profile's <em>Links</em> section</a>, click the <em>Edit</em> link,
+and add your web site as the first link under <em>Other profiles</em>. Then
+click here:
+<!-- Google+ listen signup -->
+<form method="post" name="listen-googleplus-start" action="/googleplus/start" class="signup">
+  <input type="image" alt="Sign in with Google+"
+         src="/activitystreams/oauth_dropins/static/google_plus.png" />
+  <!-- The state param doesn't actually work for G+. Not sure why. Doesn't
+       matter for now since we don't support publish for G+. -->
+  <input name="feature" type="hidden" value="listen" />
+  <!-- https://developers.google.com/+/api/oauth#scopes -->
+  <input name="scope" type="hidden"
+         value="https://www.googleapis.com/auth/plus.login" />
+</form>
+
+
+</p>
+</div>
+
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class=" big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTYzMTU3NzgyMzQ2ODgwNTA1NTAM" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416177993&key=aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTYzMTU3NzgyMzQ2ODgwNTA1NTAM">
+      10 hours, 9 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTYzMTU3NzgyMzQ2ODgwNTA1NTAM" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/102991717314964132893"
+       title="Arun Singh Ruhela">
+      <img class="profile" src="https://lh6.googleusercontent.com/-8YTIXddzcXs/AAAAAAAAAAI/AAAAAAAAAAA/nHFOMNRFllA/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/116315778234688050550/posts/S9RDCv3Nwvr">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/116315778234688050550/posts/S9RDCv3Nwvr">
+      
+        Deep-rooted change to our governance structures ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414779119&key=aglzfmJyaWQtZ3lybAsSCFJlc3BvbnNlIl50YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyZHZkYWpkeHVnZ3hlb3EwNGNpbnZxdm1taWpqanA0bTAwa19zaGFyZWRfYnlfMTAyOTkxNzE3MzE0OTY0MTMyODkzDA">
+    
+      2 weeks, 2 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.meetup.com/GlobalNet21/events/95901022/?action=detail&eventId=95901022">meetup.com/GlobalNet21/ev...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/102991717314964132893"
+       title="Arun Singh Ruhela">
+      <img class="profile" src="https://lh6.googleusercontent.com/-8YTIXddzcXs/AAAAAAAAAAI/AAAAAAAAAAA/nHFOMNRFllA/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/116315778234688050550/posts/UcWaCE6W5Rm">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/116315778234688050550/posts/UcWaCE6W5Rm">
+      
+        In a society where the importance ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414234339&key=aglzfmJyaWQtZ3lybAsSCFJlc3BvbnNlIl50YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzbWM1Y29pbDJ4Z3QycDUwNGNpbnZxdm1taWpqanA0bTAwa19zaGFyZWRfYnlfMTAyOTkxNzE3MzE0OTY0MTMyODkzDA">
+    
+      3 weeks, 1 day ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://21st-centurynetwork.com/blog/">21st-centurynetwork.com/blog/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/105471159502847353618"
+       title="Angelos Kaloviduris">
+      <img class="profile" src="https://lh5.googleusercontent.com/-WUaifrHxEqw/AAAAAAAAAAI/AAAAAAAAAgA/NT9HIHHgnp4/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/116315778234688050550/posts/XSZKG3X8e8U">
+        It is the first time I ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/116315778234688050550/posts/XSZKG3X8e8U">
+      
+        Debate although fun and a useful ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1411852498&key=aglzfmJyaWQtZ3lyXQsSCFJlc3BvbnNlIk90YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzaXh2bXhkcG1zY2x6eHAwNGNpbnZxdm1taWpqanA0bTAway4xMzg0Mzg3MTk0NzQyMDkxDA">
+    
+      1 month, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.meetup.com/GlobalNet21/events/122167972/">meetup.com/GlobalNet21/ev...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/105471159502847353618"
+       title="Angelos Kaloviduris">
+      <img class="profile" src="https://lh5.googleusercontent.com/-WUaifrHxEqw/AAAAAAAAAAI/AAAAAAAAAgA/NT9HIHHgnp4/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/116315778234688050550/posts/JCgRZQMi8uA">
+        Very interesting topic indeed!</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/116315778234688050550/posts/JCgRZQMi8uA">
+      
+        Join us for our first Saturday ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1411847501&key=aglzfmJyaWQtZ3lyWwsSCFJlc3BvbnNlIk10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzZXpqazV1d2V3Z2p1dmEyM295eHF3b25udnZ4ZDRrMDQuMTM4NDM4Njk0NTY5NzA5MQw">
+    
+      1 month, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.meetup.com/GlobalNet21/events/124596922/">meetup.com/GlobalNet21/ev...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/111051039748078110427"
+       title="Ole Olson">
+      <img class="profile" src="https://lh5.googleusercontent.com/-dR-wlwkG3Rs/AAAAAAAAAAI/AAAAAAABYdU/Wu81I1ZdSB4/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/116315778234688050550/posts/YdJVxPCTbWc">
+        Francis, I&#39;m clearing this post by ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/116315778234688050550/posts/YdJVxPCTbWc">
+      
+        Just discovered your community and see ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 month, 2 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/103008963082975341976"
+       title="Andrij Harasewych">
+      <img class="profile" src="https://lh3.googleusercontent.com/-RiT4Ny7IE7U/AAAAAAAAAAI/AAAAAAACFek/Xu23EngPy4M/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/116315778234688050550/posts/fgM2wwJQpjR">
+        Why would you advertise a London ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/116315778234688050550/posts/fgM2wwJQpjR">
+      
+        One of the great values of ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1411847498&key=aglzfmJyaWQtZ3lyXQsSCFJlc3BvbnNlIk90YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEya2ozNXczeHkwc3JiemIwNGNpbnZxdm1taWpqanA0bTAway4xMzk4MzIwMTA1ODIzMDMzDA">
+    
+      1 month, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.meetup.com/GlobalNet21/">meetup.com/GlobalNet21/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/103008963082975341976"
+       title="Andrij Harasewych">
+      <img class="profile" src="https://lh3.googleusercontent.com/-RiT4Ny7IE7U/AAAAAAAAAAI/AAAAAAACFek/Xu23EngPy4M/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/116315778234688050550/posts/fgM2wwJQpjR">
+        Please please please be sure to ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/116315778234688050550/posts/fgM2wwJQpjR">
+      
+        One of the great values of ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1411847494&key=aglzfmJyaWQtZ3lyXQsSCFJlc3BvbnNlIk90YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEya2ozNXczeHkwc3JiemIwNGNpbnZxdm1taWpqanA0bTAway4xMzk4MzIwMTQ3MTM5MDMzDA">
+    
+      1 month, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.meetup.com/GlobalNet21/">meetup.com/GlobalNet21/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/103161794804584222621"
+       title="Anca Stoica">
+      <img class="profile" src="https://lh6.googleusercontent.com/-YCyy4K5esG0/AAAAAAAAAAI/AAAAAAAAF6Q/obosup5Lyvc/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/116315778234688050550/posts/SD5NGYpWvsg">
+        Here are those who are knowing ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/116315778234688050550/posts/SD5NGYpWvsg">
+      
+        This quote from Einstein is one ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 month, 2 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/112940558043402691900"
+       title="Merry Weathers">
+      <img class="profile" src="https://lh4.googleusercontent.com/-DaDnjuYnXaM/AAAAAAAAAAI/AAAAAAAAJwU/eXP56x-Qb3g/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/116315778234688050550/posts/JCgRZQMi8uA">
+        That will be a interesting discussion. ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/116315778234688050550/posts/JCgRZQMi8uA">
+      
+        Join us for our first Saturday ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1411847490&key=aglzfmJyaWQtZ3lyWwsSCFJlc3BvbnNlIk10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzZXpqazV1d2V3Z2p1dmEyM295eHF3b25udnZ4ZDRrMDQuMTM3NDE0NjU5Mzg5MzQxNww">
+    
+      1 month, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.meetup.com/GlobalNet21/events/124596922/">meetup.com/GlobalNet21/ev...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/102759355830187245942"
+       title="Jeannie Ferrara">
+      <img class="profile" src="https://lh5.googleusercontent.com/-7kLs_wga9YQ/AAAAAAAAAAI/AAAAAAAAAAA/MmiAIwEAzLA/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/116315778234688050550/posts/8Y2ew7DRU87">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/116315778234688050550/posts/8Y2ew7DRU87">
+      
+        As Gertten&#39;s film BANANAS is finished, ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1411846274&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyb2R6bnhxeG1zdHYxbGgyM295eHF3b25udnZ4ZDRrMDRfbGlrZWRfYnlfMTAyNzU5MzU1ODMwMTg3MjQ1OTQyDA">
+    
+      1 month, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.dochouse.org/film-screening/Big-Boys-Gone-Bananas--director-QandA/9">dochouse.org/film-screening...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

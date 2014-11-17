@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>David LaCivita (Google+) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://plus.google.com/+DavidLaCivita" title="David LaCivita (Google+)"
+   class="u-url">
+  <img class="profile u-photo" src="https://lh4.googleusercontent.com/-1Id99mRU-rA/AAAAAAAAAAI/AAAAAAAA8GA/FQOiYJ9jcM8/photo.jpg?sz=50&amp;sz=128" width="64px" />
+  <img src="/static/googleplus_icon.png"
+       
+       alt="Google+" />
+  <span class="p-name">David LaCivita</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://michaelsaysstuff.blogspot.com/" class="publish-domain u-url">michaelsaysstuff.blogspot.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class=" big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTM3MDQzNjEzMzM3OTI2NTM3ODQM" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416211709&key=aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTM3MDQzNjEzMzM3OTI2NTM3ODQM">
+      45 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTM3MDQzNjEzMzM3OTI2NTM3ODQM" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/112328278293333412316"
+       title="otis ellis">
+      <img class="profile" src="https://lh3.googleusercontent.com/-Ibip_p7nJM4/AAAAAAAAAAI/AAAAAAAAAAA/LcLs6aLUjzY/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/113704361333792653784/posts/Dw1kztmaxWv">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/113704361333792653784/posts/Dw1kztmaxWv">
+      
+        Maple smoke means bacon!﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      11 hours, 14 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/104971046690818539566"
+       title="Mark Jorgensen">
+      <img class="profile" src="https://lh5.googleusercontent.com/-3luP3F-C0LY/AAAAAAAAAAI/AAAAAAAAAAA/M961mwmsX4Y/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/113704361333792653784/posts/Dw1kztmaxWv">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/113704361333792653784/posts/Dw1kztmaxWv">
+      
+        Maple smoke means bacon!﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      14 hours, 26 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/101418310596379976109"
+       title="Kelvin “Zeke” Davis">
+      <img class="profile" src="https://lh3.googleusercontent.com/-bnEfNCSJzHc/AAAAAAAAAAI/AAAAAAAAAAA/Lvd6HVf2sE4/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/113704361333792653784/posts/Dw1kztmaxWv">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/113704361333792653784/posts/Dw1kztmaxWv">
+      
+        Maple smoke means bacon!﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 day, 7 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/111706341530950961972"
+       title="judy manchester">
+      <img class="profile" src="https://lh6.googleusercontent.com/-_YCNzRpBTFg/AAAAAAAAAAI/AAAAAAAAAAA/O6oGpkqcmyk/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/113704361333792653784/posts/Dw1kztmaxWv">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/113704361333792653784/posts/Dw1kztmaxWv">
+      
+        Maple smoke means bacon!﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 day, 18 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/117648678553392180005"
+       title="Mike Fresquez">
+      <img class="profile" src="https://lh3.googleusercontent.com/-wzEK7UKxLUY/AAAAAAAAAAI/AAAAAAAAAAA/SET1wDEiJmQ/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/113704361333792653784/posts/Dw1kztmaxWv">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/113704361333792653784/posts/Dw1kztmaxWv">
+      
+        Maple smoke means bacon!﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 day, 20 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/105238127119688476290"
+       title="Bryan Foster (TheDigitalDoctr)">
+      <img class="profile" src="https://lh5.googleusercontent.com/-WrUKZNQi8yI/AAAAAAAAAAI/AAAAAAAAAAA/Cf4wl5cdQ68/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/113704361333792653784/posts/Dw1kztmaxWv">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/113704361333792653784/posts/Dw1kztmaxWv">
+      
+        Maple smoke means bacon!﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 days, 7 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/114681286988085044632"
+       title="Matthew Brewer">
+      <img class="profile" src="https://lh6.googleusercontent.com/-YgrBn7ZtNbg/AAAAAAAAAAI/AAAAAAAAAAA/V5Thr3J-wr8/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/113704361333792653784/posts/Dw1kztmaxWv">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/113704361333792653784/posts/Dw1kztmaxWv">
+      
+        Maple smoke means bacon!﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 days, 14 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/115623702808833558579"
+       title="Maribel Josefina Mendoza">
+      <img class="profile" src="https://lh3.googleusercontent.com/-ZqI52kBcWKY/AAAAAAAAAAI/AAAAAAAAAAA/WFOaTTQwN4Y/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/113704361333792653784/posts/Dw1kztmaxWv">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/113704361333792653784/posts/Dw1kztmaxWv">
+      
+        Maple smoke means bacon!﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 days, 14 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/115804765623419188646"
+       title="Gilmoure Trimarian">
+      <img class="profile" src="https://lh3.googleusercontent.com/-sCPtJT_4aEw/AAAAAAAAAAI/AAAAAAAAAAA/LD7BF4misf8/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/113704361333792653784/posts/Dw1kztmaxWv">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/113704361333792653784/posts/Dw1kztmaxWv">
+      
+        Maple smoke means bacon!﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 days, 14 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/106644783181445982048"
+       title="BBQ Fans">
+      <img class="profile" src="https://lh5.googleusercontent.com/-hlRQ4xaPMgs/AAAAAAAAAAI/AAAAAAAAAAA/KLUaponRp4o/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/113704361333792653784/posts/Dw1kztmaxWv">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/113704361333792653784/posts/Dw1kztmaxWv">
+      
+        Maple smoke means bacon!﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 days, 14 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Peter Wilson (Google+) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://plus.google.com/+PeterWilsoncc" title="Peter Wilson (Google+)"
+   class="u-url">
+  <img class="profile u-photo" src="https://lh5.googleusercontent.com/-QgB02W5Pdds/AAAAAAAAAAI/AAAAAAAAAB8/UbYHg6sDyyY/photo.jpg?sz=50&amp;sz=128" width="64px" />
+  <img src="/static/googleplus_icon.png"
+       
+       alt="Google+" />
+  <span class="p-name">Peter Wilson</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://peterwilson.cc" class="publish-domain u-url">peterwilson.cc</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class=" big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTAxNjgzMDIyODY4MDc4MDM1NTMM" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416148243&key=aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTAxNjgzMDIyODY4MDc4MDM1NTMM">
+      18 hours, 20 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTAxNjgzMDIyODY4MDc4MDM1NTMM" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/103444702622251663441"
+       title="Melinda Samson">
+      <img class="profile" src="https://lh6.googleusercontent.com/-b7K3BfqqHl4/AAAAAAAAAAI/AAAAAAAAAAA/HAUK2tw0kVk/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/110168302286807803553/posts/VZNzpABBva8">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/110168302286807803553/posts/VZNzpABBva8">
+      
+        I’ll be speaking at this month’s ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413179693&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyMnRsYm94d2Jwd2hycGUwNGNmbDI1ZXR2emRmY3cxeDQwa19saWtlZF9ieV8xMDM0NDQ3MDI2MjIyNTE2NjM0NDEM">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyMnRsYm94d2Jwd2hycGUwNGNmbDI1ZXR2emRmY3cxeDQwa19saWtlZF9ieV8xMDM0NDQ3MDI2MjIyNTE2NjM0NDEM" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://peterwilson.cc/wcsyd2014/">peterwilson.cc/wcsyd2014/ <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/111092321649317722587"
+       title="Peter Mead">
+      <img class="profile" src="https://lh6.googleusercontent.com/-I_KDHw_b71g/AAAAAAAAAAI/AAAAAAAAAAA/0_X0cFEJcZY/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/110168302286807803553/posts/UBkhHARMd4P">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/110168302286807803553/posts/UBkhHARMd4P">
+      
+        Trying the SUIT CSS Naming Convention ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413177645&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyZWdscnJ5bHFvanBreDIwNGNmbDI1ZXR2emRmY3cxeDQwa19saWtlZF9ieV8xMTEwOTIzMjE2NDkzMTc3MjI1ODcM">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyZWdscnJ5bHFvanBreDIwNGNmbDI1ZXR2emRmY3cxeDQwa19saWtlZF9ieV8xMTEwOTIzMjE2NDkzMTc3MjI1ODcM" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://peterwilson.cc/suitcss-naming-convention/">peterwilson.cc/suitcss-naming... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/117720760754437587365"
+       title="Dee Teal">
+      <img class="profile" src="https://lh5.googleusercontent.com/-qpCVfwRMjbw/AAAAAAAAAAI/AAAAAAAAAAA/oFWXg2psF9c/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/110168302286807803553/posts/c8ZDr1SW6pv">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/110168302286807803553/posts/c8ZDr1SW6pv">
+      
+        Over on my blog, you can ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413177640&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzbnpqbnBzdTN4eXYweW0wNGNmbDI1ZXR2emRmY3cxeDQwa19saWtlZF9ieV8xMTc3MjA3NjA3NTQ0Mzc1ODczNjUM">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzbnpqbnBzdTN4eXYweW0wNGNmbDI1ZXR2emRmY3cxeDQwa19saWtlZF9ieV8xMTc3MjA3NjA3NTQ0Mzc1ODczNjUM" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://peterwilson.cc/pattern-lab-post-merge-hook/">peterwilson.cc/pattern-lab-po... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/117720760754437587365"
+       title="Dee Teal">
+      <img class="profile" src="https://lh5.googleusercontent.com/-qpCVfwRMjbw/AAAAAAAAAAI/AAAAAAAAAAA/oFWXg2psF9c/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/110168302286807803553/posts/NWuUkdhfxaS">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/110168302286807803553/posts/NWuUkdhfxaS">
+      
+        New plugin: Rapid Canonical URLs for ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413177632&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzenloencxd3VhY25vZzAwNGNmbDI1ZXR2emRmY3cxeDQwa19saWtlZF9ieV8xMTc3MjA3NjA3NTQ0Mzc1ODczNjUM">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzenloencxd3VhY25vZzAwNGNmbDI1ZXR2emRmY3cxeDQwa19saWtlZF9ieV8xMTc3MjA3NjA3NTQ0Mzc1ODczNjUM" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://peterwilson.cc/projects/wordpress-rapid-canonical-urls/">peterwilson.cc/projects/wordp... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/111092321649317722587"
+       title="Peter Mead">
+      <img class="profile" src="https://lh6.googleusercontent.com/-I_KDHw_b71g/AAAAAAAAAAI/AAAAAAAAAAA/0_X0cFEJcZY/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/110168302286807803553/posts/jjtSepsY4AC">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/110168302286807803553/posts/jjtSepsY4AC">
+      
+        Things I learnt at work today: ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413177627&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyZ3N2b2k1cXltaXhrcnowNGNmbDI1ZXR2emRmY3cxeDQwa19saWtlZF9ieV8xMTEwOTIzMjE2NDkzMTc3MjI1ODcM">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyZ3N2b2k1cXltaXhrcnowNGNmbDI1ZXR2emRmY3cxeDQwa19saWtlZF9ieV8xMTEwOTIzMjE2NDkzMTc3MjI1ODcM" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://peterwilson.cc/relative-unit-media-queries/">peterwilson.cc/relative-unit-... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/117720760754437587365"
+       title="Dee Teal">
+      <img class="profile" src="https://lh5.googleusercontent.com/-qpCVfwRMjbw/AAAAAAAAAAI/AAAAAAAAAAA/oFWXg2psF9c/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/110168302286807803553/posts/DVhUVjevBqQ">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/110168302286807803553/posts/DVhUVjevBqQ">
+      
+        Firefox version 30 removed the single ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413177623&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEydnNmcXJvbGJzaWRxZWUyMndjbGVxaXp1ZXViMGpkMDRfbGlrZWRfYnlfMTE3NzIwNzYwNzU0NDM3NTg3MzY1DA">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEydnNmcXJvbGJzaWRxZWUyMndjbGVxaXp1ZXViMGpkMDRfbGlrZWRfYnlfMTE3NzIwNzYwNzU0NDM3NTg3MzY1DA" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://peterwilson.cc/firefox-inputs-line-heights/">peterwilson.cc/firefox-inputs... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

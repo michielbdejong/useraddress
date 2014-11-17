@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Markus Heurung (Google+) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://plus.google.com/+MarkusHeurung" title="Markus Heurung (Google+)"
+   class="u-url">
+  <img class="profile u-photo" src="https://lh4.googleusercontent.com/-vTpQA62G-dM/AAAAAAAAAAI/AAAAAAAAAH0/mkFrc2_AZpA/photo.jpg?sz=50&amp;sz=128" width="64px" />
+  <img src="/static/googleplus_icon.png"
+       
+       alt="Google+" />
+  <span class="p-name">Markus Heurung</span></a>
+
+
+
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row promo warning">
+<p id="edit-profile">First things first: what's your web site?
+
+Open your
+<a href="https://plus.google.com/me/about" target="_blank">
+  Google+ profile's <em>Links</em> section</a>, click the <em>Edit</em> link,
+and add your web site as the first link under <em>Other profiles</em>. Then
+click here:
+<!-- Google+ listen signup -->
+<form method="post" name="listen-googleplus-start" action="/googleplus/start" class="signup">
+  <input type="image" alt="Sign in with Google+"
+         src="/activitystreams/oauth_dropins/static/google_plus.png" />
+  <!-- The state param doesn't actually work for G+. Not sure why. Doesn't
+       matter for now since we don't support publish for G+. -->
+  <input name="feature" type="hidden" value="listen" />
+  <!-- https://developers.google.com/+/api/oauth#scopes -->
+  <input name="scope" type="hidden"
+         value="https://www.googleapis.com/auth/plus.login" />
+</form>
+
+
+</p>
+</div>
+
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class=" big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDE0MDAyNTU5Mzc1NDE4NDAxMDMM" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416185432&key=aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDE0MDAyNTU5Mzc1NDE4NDAxMDMM">
+      7 hours, 56 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDE0MDAyNTU5Mzc1NDE4NDAxMDMM" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/102688990946212624160"
+       title="Sonja Kraus">
+      <img class="profile" src="https://lh4.googleusercontent.com/-ea02p2XNB3M/AAAAAAAAAAI/AAAAAAAAAAA/RYTQP8PCkCo/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/103458532207141047351/posts/LvjizoPtxxN">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/101400255937541840103/posts/gSbvGqqnJkW">
+      
+        Watch people struggle LIVE with Drupal. ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1396073433&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyM3lyNGIxenUwczV0emYwNGNkNWR4eXFxcWpqdHJqa28wa19saWtlZF9ieV8xMDI2ODg5OTA5NDYyMTI2MjQxNjAM">
+    
+      7 months, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://google-opensource.blogspot.com/2012/01/drupal-usability-study-at-google.html">google-opensource.blogspot.com/2012/01/drupal...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/108302178257763121632"
+       title="Waldemar Nebolsin">
+      <img class="profile" src="https://lh3.googleusercontent.com/-TYP-eEkMOb0/AAAAAAAAAAI/AAAAAAAAAAA/xhHFwo4t7MY/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/103833838001561272677/posts/FSgDK7eQGBi">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/101400255937541840103/posts/379DpugLhp2">
+      
+        Wir sind 1 – und die ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1396072902&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzcnZmdzU0cGo1Z2ptc2cyMmRlampwcHBudnlodnc1MDRfbGlrZWRfYnlfMTA4MzAyMTc4MjU3NzYzMTIxNjMyDA">
+    
+      7 months, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.mainpost.de/regional/wuerzburg/Coworking-Wuerzburg-feierte-ersten-Geburtstag;art735,6579818">mainpost.de/regional/wuerz...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/108800691881859475524"
+       title="David Neuhaus">
+      <img class="profile" src="https://lh3.googleusercontent.com/-sUAJZckPApw/AAAAAAAAAAI/AAAAAAAAAAA/RPBy5ecrUTM/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/118401999683932527257/posts/2azqcCUnBnH">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/101400255937541840103/posts/5eA8Gf7EDMQ">
+      
+        Und wieder ein #DCPod der von ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1396071394&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEydnZubTRndDJ4ZWpyc3YyMmRlampwcHBudnlodnc1MDRfbGlrZWRfYnlfMTA4ODAwNjkxODgxODU5NDc1NTI0DA">
+    
+      7 months, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.drupalcenter.de/podcast/39595">drupalcenter.de/podcast/39595</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/108800691881859475524"
+       title="David Neuhaus">
+      <img class="profile" src="https://lh5.googleusercontent.com/-sUAJZckPApw/AAAAAAAAAAI/AAAAAAAALyM/Rt2X-2jlNXE/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/101400255937541840103/posts/5eA8Gf7EDMQ">
+        Sehr cool, kannte den podcast gar ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/101400255937541840103/posts/5eA8Gf7EDMQ">
+      
+        Und wieder ein #DCPod der von ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1396071394&key=aglzfmJyaWQtZ3lyWwsSCFJlc3BvbnNlIk10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEydnZubTRndDJ4ZWpyc3YyMmRlampwcHBudnlodnc1MDQuMTMyODA0MDYzMjMzOTAwMAw">
+    
+      7 months, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.drupalcenter.de/podcast/39595">drupalcenter.de/podcast/39595</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/101400255937541840103"
+       title="Markus Heurung">
+      <img class="profile" src="https://lh4.googleusercontent.com/-vTpQA62G-dM/AAAAAAAAAAI/AAAAAAAAAH0/S-_i5S3cCgM/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/101400255937541840103/posts/VwnqxGv3HCw">
+        gute Frage, ehrlich gesagt: keine Ahnung ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/101400255937541840103/posts/VwnqxGv3HCw">
+      
+        ich hab mal wieder seit langem ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1396071298&key=aglzfmJyaWQtZ3lyXQsSCFJlc3BvbnNlIk90YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEydWhmMnh6cnUxZTExcGgwNGNkNWR4eXFxcWpqdHJqa28way4xMzQzNTc5NjM0NjcyMDQ0DA">
+    
+      7 months, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://prose.io/">prose.io/</a></li>
+	<li><a class="original-post" target="_blank" href="http://byzero.de/2012/07/28/a-post-with-prose/">byzero.de/2012/07/28/a-p...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/101400255937541840103"
+       title="Markus Heurung">
+      <img class="profile" src="https://lh4.googleusercontent.com/-vTpQA62G-dM/AAAAAAAAAAI/AAAAAAAAAH0/S-_i5S3cCgM/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/101400255937541840103/posts/S4xW8fXsNaL">
+        Hier gibt&#39;s Apple-Hater? Wirklich? Kann ich ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/101400255937541840103/posts/S4xW8fXsNaL">
+      
+        Kunden, die Apple-Produkte kauften, kauften auch ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      7 months, 3 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/104514437420477125478"
+       title="Martin Thielecke">
+      <img class="profile" src="https://lh3.googleusercontent.com/-isXeOfKzJII/AAAAAAAAAAI/AAAAAAAAYFs/qn2tvzIRIEw/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/101400255937541840103/posts/S4xW8fXsNaL">
+        Weil Apple-Posts viele Hater nach sich ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/101400255937541840103/posts/S4xW8fXsNaL">
+      
+        Kunden, die Apple-Produkte kauften, kauften auch ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      7 months, 3 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/114301686886802716502"
+       title="Jochen Lillich">
+      <img class="profile" src="https://lh3.googleusercontent.com/-fvPRIlPe6nk/AAAAAAAAAAI/AAAAAAAAAAA/AcY2bgcekkY/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/109134039441097458936/posts/62WYbuTqFaq">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/101400255937541840103/posts/if5bJ9kVMit">
+      
+        A look back on 2013﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1396069116&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyaXp2Z2J5a3lidGYxcnQwNGNkNWR4eXFxcWpqdHJqa28wa19saWtlZF9ieV8xMTQzMDE2ODY4ODY4MDI3MTY1MDIM">
+    
+      7 months, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.freistil.it/2014/01/a-look-back-on-2013/">freistil.it/2014/01/a-look...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/113259610497461674875"
+       title="Stefan Moch">
+      <img class="profile" src="https://lh3.googleusercontent.com/-AwLBvAAe8-c/AAAAAAAAAAI/AAAAAAAAAAA/kjn5ALs0KxE/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/109134039441097458936/posts/62WYbuTqFaq">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/101400255937541840103/posts/if5bJ9kVMit">
+      
+        A look back on 2013﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1396069116&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyaXp2Z2J5a3lidGYxcnQwNGNkNWR4eXFxcWpqdHJqa28wa19saWtlZF9ieV8xMTMyNTk2MTA0OTc0NjE2NzQ4NzUM">
+    
+      7 months, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.freistil.it/2014/01/a-look-back-on-2013/">freistil.it/2014/01/a-look...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/112056486191488761892"
+       title="maloon">
+      <img class="profile" src="https://lh3.googleusercontent.com/-ydITks8QRjo/AAAAAAAAAAI/AAAAAAAAAAA/kVD42jTxZzk/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/101400255937541840103/posts/DkSnujkz5he">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/101400255937541840103/posts/DkSnujkz5he">
+      
+        Nicht nur in Würzburg steht eine ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1396069116&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyaXlobGp1b2llZXhiMmcyMmRlampwcHBudnlodnc1MDRfbGlrZWRfYnlfMTEyMDU2NDg2MTkxNDg4NzYxODkyDA">
+    
+      7 months, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.drupalcenter.de/node/39196?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+Drupalcenter+%28DrupalCenter.de+%7C+Die+deutschsprachige+Drupal+Community+-%29">drupalcenter.de/node/39196?utm...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

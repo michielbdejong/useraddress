@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Tom Cannon (Google+) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://plus.google.com/+TomCannon" title="Tom Cannon (Google+)"
+   class="u-url">
+  <img class="profile u-photo" src="https://lh6.googleusercontent.com/-yRx7C67v4Oo/AAAAAAAAAAI/AAAAAAAAUxg/O4mvvlEOyXc/photo.jpg?sz=50&amp;sz=128" width="64px" />
+  <img src="/static/googleplus_icon.png"
+       
+       alt="Google+" />
+  <span class="p-name">Tom Cannon</span></a>
+
+
+
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row promo warning">
+<p id="edit-profile">First things first: what's your web site?
+
+Open your
+<a href="https://plus.google.com/me/about" target="_blank">
+  Google+ profile's <em>Links</em> section</a>, click the <em>Edit</em> link,
+and add your web site as the first link under <em>Other profiles</em>. Then
+click here:
+<!-- Google+ listen signup -->
+<form method="post" name="listen-googleplus-start" action="/googleplus/start" class="signup">
+  <input type="image" alt="Sign in with Google+"
+         src="/activitystreams/oauth_dropins/static/google_plus.png" />
+  <!-- The state param doesn't actually work for G+. Not sure why. Doesn't
+       matter for now since we don't support publish for G+. -->
+  <input name="feature" type="hidden" value="listen" />
+  <!-- https://developers.google.com/+/api/oauth#scopes -->
+  <input name="scope" type="hidden"
+         value="https://www.googleapis.com/auth/plus.login" />
+</form>
+
+
+</p>
+</div>
+
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class=" big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDcyMzQwNDU2OTU0MDA4NTc0MzIM" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416166250&key=aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDcyMzQwNDU2OTU0MDA4NTc0MzIM">
+      13 hours, 19 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDcyMzQwNDU2OTU0MDA4NTc0MzIM" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/109908434184902466720"
+       title="Pete Bond">
+      <img class="profile" src="https://lh6.googleusercontent.com/-r29Z4DVCGnE/AAAAAAAAAAI/AAAAAAAAur0/9z5YoDzutlc/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/107234045695400857432/posts/SpENSVq9t1n">
+        Archive != Done (tick) but close ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/107234045695400857432/posts/SpENSVq9t1n">
+      
+        Just got my Inbox invite. I ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 week, 5 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/107234045695400857432"
+       title="Tom Cannon">
+      <img class="profile" src="https://lh6.googleusercontent.com/-yRx7C67v4Oo/AAAAAAAAAAI/AAAAAAAAUxg/f76eYXUqtMQ/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/107234045695400857432/posts/SpENSVq9t1n">
+        +Pete Bond I suppose removing it ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/107234045695400857432/posts/SpENSVq9t1n">
+      
+        Just got my Inbox invite. I ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 week, 5 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/103490860642776648918"
+       title="luis liu">
+      <img class="profile" src="https://lh5.googleusercontent.com/-QLYOvexqbqM/AAAAAAAAAAI/AAAAAAAAI8o/nvY7g9OGIO0/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/107234045695400857432/posts/SpENSVq9t1n">
+        Need one and tnank you ! ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/107234045695400857432/posts/SpENSVq9t1n">
+      
+        Just got my Inbox invite. I ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 week, 5 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/101597193210578688608"
+       title="Lana Larue">
+      <img class="profile" src="https://lh3.googleusercontent.com/-PopeM6twbnU/AAAAAAAAAAI/AAAAAAAAAAA/hXe0YHSTntU/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/107234045695400857432/posts/KnbUHHib3Cz">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/107234045695400857432/posts/KnbUHHib3Cz">
+      
+        Check out the latest post on ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413240479&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzandobDV4dDNtdWZlM2syMjFkeGVxbHJ1dWl2ZHllMDRfbGlrZWRfYnlfMTAxNTk3MTkzMjEwNTc4Njg4NjA4DA">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.cannonic.com/salesforce-blog-salesforce-million-dollar-hackathon-round-1-results-are-in/">cannonic.com/salesforce-blo...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/111281451688288568856"
+       title="Emma Cannon">
+      <img class="profile" src="https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/107234045695400857432/posts/cR1muxbLx9X">
+        i thought you were in the ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/107234045695400857432/posts/cR1muxbLx9X">
+      
+        --
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 month, 2 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/108764130650159399696"
+       title="Rob Dyer">
+      <img class="profile" src="https://lh5.googleusercontent.com/-E7WaqrdegfI/AAAAAAAAAAI/AAAAAAAAAAA/7aJW7UpJoNE/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/107234045695400857432/posts/GjoiuVo1B5F">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/107234045695400857432/posts/GjoiuVo1B5F">
+      
+        OK, +Rob Dyer I have to ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1406546733&key=aglzfmJyaWQtZ3lyagsSCFJlc3BvbnNlIlx0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyemZsZzQxbG1zeHIydXkyMjFkeGVxbHJ1dWl2ZHllMDRfc2hhcmVkX2J5XzEwODc2NDEzMDY1MDE1OTM5OTY5Ngw">
+    
+      3 months, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.amazon.co.uk/LG-Electronics-HBS-730-Bluetooth-Headset/dp/B009A5204K">amazon.co.uk/LG-Electronics...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/111031746041140236873"
+       title="Ben Allen">
+      <img class="profile" src="https://lh4.googleusercontent.com/-gtZdBZTm6Q0/AAAAAAAAAAI/AAAAAAAABcE/gr1JII-imRI/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/107234045695400857432/posts/P87WmVxyU6B">
+        Very cool. I wonder what these ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/107234045695400857432/posts/P87WmVxyU6B">
+      
+        &quot;Ambient back scatter&quot; - battery free ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1402326865&key=aglzfmJyaWQtZ3lyXQsSCFJlc3BvbnNlIk90YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyb2Mxb2dia2V2Z3ZjZzQwNGNjNWJwZXVhemZkdmhidGMway4xMzgyNzI0NDA0NDE1OTg0DA">
+    
+      5 months, 1 week ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyXQsSCFJlc3BvbnNlIk90YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyb2Mxb2dia2V2Z3ZjZzQwNGNjNWJwZXVhemZkdmhidGMway4xMzgyNzI0NDA0NDE1OTg0DA" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.geekwire.com/2013/uw-madrona-prize/">geekwire.com/2013/uw-madron... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/107234045695400857432"
+       title="Tom Cannon">
+      <img class="profile" src="https://lh6.googleusercontent.com/-yRx7C67v4Oo/AAAAAAAAAAI/AAAAAAAAUxg/f76eYXUqtMQ/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/107234045695400857432/posts/P87WmVxyU6B">
+        The permanently on piece is really ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/107234045695400857432/posts/P87WmVxyU6B">
+      
+        &quot;Ambient back scatter&quot; - battery free ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1402326802&key=aglzfmJyaWQtZ3lyXQsSCFJlc3BvbnNlIk90YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyb2Mxb2dia2V2Z3ZjZzQwNGNjNWJwZXVhemZkdmhidGMway4xMzgyNzI1MjU3MTc0OTU4DA">
+    
+      5 months, 1 week ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyXQsSCFJlc3BvbnNlIk90YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyb2Mxb2dia2V2Z3ZjZzQwNGNjNWJwZXVhemZkdmhidGMway4xMzgyNzI1MjU3MTc0OTU4DA" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.geekwire.com/2013/uw-madrona-prize/">geekwire.com/2013/uw-madron... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/102453282874224431876"
+       title="Jaime Vega TH Account">
+      <img class="profile" src="https://lh4.googleusercontent.com/-CQmR9DvXNH4/AAAAAAAAAAI/AAAAAAAAAAA/0OsdSvyjaI0/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/107234045695400857432/posts/J1LBVEnguv9">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/107234045695400857432/posts/J1LBVEnguv9">
+      
+        The friendly neighbourhood ninjas and super ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      5 months, 1 week ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/113965286918758341156"
+       title="Neufeld Jones (Remax Kelowna)">
+      <img class="profile" src="https://lh4.googleusercontent.com/-3Atsd0G5Xlc/AAAAAAAAAAI/AAAAAAAAAAA/ihMYD1RQNFc/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/107234045695400857432/posts/QdUVCecYuNc">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/107234045695400857432/posts/QdUVCecYuNc">
+      
+        --
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      5 months, 1 week ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

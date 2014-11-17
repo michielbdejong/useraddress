@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Rick Dumais (Google+) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://plus.google.com/+RickDumais" title="Rick Dumais (Google+)"
+   class="u-url">
+  <img class="profile u-photo" src="https://lh4.googleusercontent.com/-ScgTaiPrOKs/AAAAAAAAAAI/AAAAAAAAD4Y/NLiBSSAYV7c/photo.jpg?sz=50&amp;sz=128" width="64px" />
+  <img src="/static/googleplus_icon.png"
+       
+       alt="Google+" />
+  <span class="p-name">Rick Dumais</span></a>
+
+
+<!-- TODO: make this work without javascript too -->
+<a href="#" onclick="document.forms['listen-googleplus-start'].submit();
+                     return false;">
+  <span class="glyphicon glyphicon-pause"
+        title="This account was disconnected on Google+'s end. Click to reconnect it!">
+</span></a>
+
+
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class=" big">
+
+
+Click to enable <a href="/about#listen">listening</a>:
+
+<!-- Google+ listen signup -->
+<form method="post" name="listen-googleplus-start" action="/googleplus/start" class="signup">
+  <input type="image" alt="Sign in with Google+"
+         src="/activitystreams/oauth_dropins/static/google_plus.png" />
+  <!-- The state param doesn't actually work for G+. Not sure why. Doesn't
+       matter for now since we don't support publish for G+. -->
+  <input name="feature" type="hidden" value="listen" />
+  <!-- https://developers.google.com/+/api/oauth#scopes -->
+  <input name="scope" type="hidden"
+         value="https://www.googleapis.com/auth/plus.login" />
+</form>
+
+
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/113592909583951061317"
+       title="Shawn Adams">
+      <img class="profile" src="https://lh6.googleusercontent.com/-xEy7o4yolI4/AAAAAAAAAAI/AAAAAAAABSI/1EoBKK57ReY/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/104261534360028848474/posts/bkpVTe8xwEC">
+        Does every google account automatically come ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/104261534360028848474/posts/bkpVTe8xwEC">
+      
+        Google+ Is Now the #2 Largest ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1400741298&key=aglzfmJyaWQtZ3lyXQsSCFJlc3BvbnNlIk90YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyeXcxZ2pseHJtY2p0aWowNGNkeHNwZnliMWloeXhrbjAway4xMzU5NDExNDY2MjczNTc1DA">
+    
+      5 months, 4 weeks ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyXQsSCFJlc3BvbnNlIk90YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyeXcxZ2pseHJtY2p0aWowNGNkeHNwZnliMWloeXhrbjAway4xMzU5NDExNDY2MjczNTc1DA" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://dustn.ws/10Zjkjl">dustn.ws/10Zjkjl <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/113592909583951061317"
+       title="Shawn Adams">
+      <img class="profile" src="https://lh6.googleusercontent.com/-xEy7o4yolI4/AAAAAAAAAAI/AAAAAAAABSI/1EoBKK57ReY/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/104261534360028848474/posts/4qu5BJxbvgV">
+        ITS A TRAP! Also really!? w-t-f. ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/104261534360028848474/posts/4qu5BJxbvgV">
+      
+        My facebook has been deactivated, FREE ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      5 months, 4 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/106176068586811766517"
+       title="Russ Renshaw">
+      <img class="profile" src="https://lh6.googleusercontent.com/-2ydpZhCjmpY/AAAAAAAAAAI/AAAAAAAAEWA/XM4hAq4rMK0/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/104261534360028848474/posts/LpJXKdBVvMN">
+        This is really the only song ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/104261534360028848474/posts/LpJXKdBVvMN">
+      
+        This sounds so damn good!﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      5 months, 4 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/106176068586811766517"
+       title="Russ Renshaw">
+      <img class="profile" src="https://lh6.googleusercontent.com/-2ydpZhCjmpY/AAAAAAAAAAI/AAAAAAAAEWA/XM4hAq4rMK0/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/104261534360028848474/posts/ZGVi8cSBzvb">
+        Who hurt you, Trevor? Who hurt ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/104261534360028848474/posts/ZGVi8cSBzvb">
+      
+        My favorite song off of my ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      5 months, 4 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/104261534360028848474"
+       title="Rick Dumais">
+      <img class="profile" src="https://lh4.googleusercontent.com/-ScgTaiPrOKs/AAAAAAAAAAI/AAAAAAAAD4Y/RwINSHfOWqI/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/104261534360028848474/posts/fgWT6QCfUAx">
+        they were praising amd and bashing ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/104261534360028848474/posts/fgWT6QCfUAx">
+      
+        +Russ Renshaw listen, and reflect http://twit.tv/show/this-week-in-tech/2﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1400741289&key=aglzfmJyaWQtZ3lyXQsSCFJlc3BvbnNlIk90YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzYXNoNWJvdWFndHZjamIwNGNkeHNwZnliMWloeXhrbjAway4xMzU4NjI5MTQ1NDE5Njk2DA">
+    
+      5 months, 4 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://twit.tv/show/this-week-in-tech/2">twit.tv/show/this-week...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/104261534360028848474"
+       title="Rick Dumais">
+      <img class="profile" src="https://lh4.googleusercontent.com/-ScgTaiPrOKs/AAAAAAAAAAI/AAAAAAAAD4Y/RwINSHfOWqI/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/104261534360028848474/posts/ZGVi8cSBzvb">
+        Alex and his wife. Steve was ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/104261534360028848474/posts/ZGVi8cSBzvb">
+      
+        My favorite song off of my ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      5 months, 4 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/104261534360028848474"
+       title="Rick Dumais">
+      <img class="profile" src="https://lh4.googleusercontent.com/-ScgTaiPrOKs/AAAAAAAAAAI/AAAAAAAAD4Y/RwINSHfOWqI/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/104261534360028848474/posts/15DTDNr6QWM">
+        +Phil Nickinson have you seen this?!?!?</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/104261534360028848474/posts/15DTDNr6QWM">
+      
+        Siri sucks﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      5 months, 4 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/113019304829080737032"
+       title="jillian woods">
+      <img class="profile" src="https://lh3.googleusercontent.com/-fTyYfw8GAi4/AAAAAAAAAAI/AAAAAAAAAAA/hRfOdOkYnfo/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/104261534360028848474/posts/QwSk93YDNhe">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/104261534360028848474/posts/QwSk93YDNhe">
+      
+        +jillian woods ha, pretty much everything ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1400741286&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyd3pyMWJqcGkzdXozd2owNGNkeHNwZnliMWloeXhrbjAwa19saWtlZF9ieV8xMTMwMTkzMDQ4MjkwODA3MzcwMzIM">
+    
+      5 months, 4 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.theverge.com/2013/2/13/3959868/photoshop-is-a-city-for-everyone-how-adobe-endlessly-rebuilds-its">theverge.com/2013/2/13/3959...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/106176068586811766517"
+       title="Russ Renshaw">
+      <img class="profile" src="https://lh6.googleusercontent.com/-2ydpZhCjmpY/AAAAAAAAAAI/AAAAAAAAEWA/XM4hAq4rMK0/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/104261534360028848474/posts/4qu5BJxbvgV">
+        Lazy</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/104261534360028848474/posts/4qu5BJxbvgV">
+      
+        My facebook has been deactivated, FREE ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      5 months, 4 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/104261534360028848474"
+       title="Rick Dumais">
+      <img class="profile" src="https://lh4.googleusercontent.com/-ScgTaiPrOKs/AAAAAAAAAAI/AAAAAAAAD4Y/RwINSHfOWqI/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/104261534360028848474/posts/PrCNCwZH5rT">
+        yup</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/104261534360028848474/posts/PrCNCwZH5rT">
+      
+        White knuckle grip on the world..﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      5 months, 4 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

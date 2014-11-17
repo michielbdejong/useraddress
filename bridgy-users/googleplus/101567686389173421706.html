@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Scott Kingery (Google+) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://plus.google.com/+ScottKingery" title="Scott Kingery (Google+)"
+   class="u-url">
+  <img class="profile u-photo" src="https://lh3.googleusercontent.com/-ffDC0XHx2Jc/AAAAAAAAAAI/AAAAAAAC4l4/zASFFMu52l8/photo.jpg?sz=50&amp;sz=128" width="64px" />
+  <img src="/static/googleplus_icon.png"
+       
+       alt="Google+" />
+  <span class="p-name">Scott Kingery</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://techlifeweb.com/" class="publish-domain u-url">techlifeweb.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class=" big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDE1Njc2ODYzODkxNzM0MjE3MDYM" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416213137&key=aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDE1Njc2ODYzODkxNzM0MjE3MDYM">
+      14 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDE1Njc2ODYzODkxNzM0MjE3MDYM" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/110470049216372688111"
+       title="Dany Mansour">
+      <img class="profile" src="https://lh6.googleusercontent.com/-y_52uQnGOvM/AAAAAAAAAAI/AAAAAAAAAAA/LK04ggB88Xo/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/101567686389173421706/posts/h16ZeSoYJ6p">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/101567686389173421706/posts/h16ZeSoYJ6p">
+      
+        Android 5.0 Lollipop for Nexus 7 ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 days, 2 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/108980867442998961850"
+       title="Marcie Gee">
+      <img class="profile" src="https://lh3.googleusercontent.com/-La2dhI_SdVY/AAAAAAAAAAI/AAAAAAAAAAA/RGsHuVAaWGs/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/101567686389173421706/posts/D4VHoStdXEg">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/101567686389173421706/posts/D4VHoStdXEg">
+      
+        “16GB iPhone got you down? Apple ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415994382&key=aglzfmJyaWQtZ3lyZwsSCFJlc3BvbnNlIll0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzMHloM3B4b3ZqZGQzZWMyMnV0bG00b2txYmRodWZ5X2xpa2VkX2J5XzEwODk4MDg2NzQ0Mjk5ODk2MTg1MAw">
+    
+      2 days, 13 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://techlifeweb.com/sandisk-makes-a-60-usb-drive-with-a-lightning-connector-for-your-iphone/">techlifeweb.com/sandisk-makes-...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/107653745877961206546"
+       title="Carlo W">
+      <img class="profile" src="https://lh6.googleusercontent.com/-yWXYPJF3o4s/AAAAAAAAAAI/AAAAAAAAAAA/5PDihZL-g0Q/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/101567686389173421706/posts/iZhP4Qybwai">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/101567686389173421706/posts/iZhP4Qybwai">
+      
+        “Microsoft has disclosed a potentially catastrophic ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415988459&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEycHo1aWlhcGVhdDVqenMwNGNmZmFhY21tMnN4NXJkanNfbGlrZWRfYnlfMTA3NjUzNzQ1ODc3OTYxMjA2NTQ2DA">
+    
+      2 days, 14 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://techlifeweb.com/potentially-catastrophic-bug-bites-all-versions-of-windows-patch-now/">techlifeweb.com/potentially-ca...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/100899433937526258868"
+       title="Rich Gillin">
+      <img class="profile" src="https://lh6.googleusercontent.com/-yy88YdenLiY/AAAAAAAAAAI/AAAAAAAAAAA/Oy1mKkYh_vE/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/101567686389173421706/posts/CvWxAni28s2">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/101567686389173421706/posts/CvWxAni28s2">
+      
+        “The six member studios of the ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415917983&key=aglzfmJyaWQtZ3lyaAsSCFJlc3BvbnNlIlp0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzb3RmNTVwcXFtanhjdWIyMnV0bG00b2txYmRodWZ5X3NoYXJlZF9ieV8xMDA4OTk0MzM5Mzc1MjYyNTg4NjgM">
+    
+      3 days, 10 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://techlifeweb.com/use-where-to-watch-to-search-for-legal-video-streaming-options/">techlifeweb.com/use-where-to-w...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/111819992820549130609"
+       title="Chris Anderson">
+      <img class="profile" src="https://lh6.googleusercontent.com/-ABnpRHkLj8s/AAAAAAAAAAI/AAAAAAAANbw/NjZMvo-VrIU/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/101567686389173421706/posts/TJpUKgx8W6C">
+        I haven&#39;t quite figured out how ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/101567686389173421706/posts/TJpUKgx8W6C">
+      
+        “Satya Nadella’s rapid reinvention of Microsoft ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415893878&key=aglzfmJyaWQtZ3lyWwsSCFJlc3BvbnNlIk10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyb3hsM3F5dXJpamRjd3gwNGNmZmFhY21tMnN4NXJkanMuMTQxNTg5MzczODg5NjkyMgw">
+    
+      3 days, 16 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://techlifeweb.com/microsoft-open-sources-net-saying-it-will-run-on-linux-and-mac/">techlifeweb.com/microsoft-open...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/117523972131956712375"
+       title="Stelio Freeman">
+      <img class="profile" src="https://lh4.googleusercontent.com/-zGoZBPnfZDA/AAAAAAAAAAI/AAAAAAAAAAA/NCYX8VumpAI/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/101567686389173421706/posts/G94ksFyqYc6">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/101567686389173421706/posts/G94ksFyqYc6">
+      
+        “”Net Neutrality” is Obamacare for the ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415829622&key=aglzfmJyaWQtZ3lyZwsSCFJlc3BvbnNlIll0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyYnpsNW90d3lqdXJrZXUyMnV0bG00b2txYmRodWZ5X2xpa2VkX2J5XzExNzUyMzk3MjEzMTk1NjcxMjM3NQw">
+    
+      4 days, 10 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://techlifeweb.com/dear-senator-ted-cruz-im-going-to-explain-to-you-how-net-neutrality-actually-works/">techlifeweb.com/dear-senator-t...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/114043221354734296204"
+       title="Matthew Platte">
+      <img class="profile" src="https://lh6.googleusercontent.com/-rTH3iC-H0RE/AAAAAAAAAAI/AAAAAAAAAsE/0_OFTHytrB0/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/101567686389173421706/posts/G94ksFyqYc6">
+        The category error is assuming Senator ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/101567686389173421706/posts/G94ksFyqYc6">
+      
+        “”Net Neutrality” is Obamacare for the ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415824706&key=aglzfmJyaWQtZ3lyWQsSCFJlc3BvbnNlIkt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyYnpsNW90d3lqdXJrZXUyMnV0bG00b2txYmRodWZ5LjE0MTU4MjM1NTA0MjUyNTIM">
+    
+      4 days, 12 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://techlifeweb.com/dear-senator-ted-cruz-im-going-to-explain-to-you-how-net-neutrality-actually-works/">techlifeweb.com/dear-senator-t...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/102170431816592344972"
+       title="Rob Gordon">
+      <img class="profile" src="https://lh3.googleusercontent.com/-S1ieTVnu4Wo/AAAAAAAAAAI/AAAAAAAAAAA/TQqDSl7DAxQ/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/101567686389173421706/posts/G94ksFyqYc6">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/101567686389173421706/posts/G94ksFyqYc6">
+      
+        “”Net Neutrality” is Obamacare for the ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415769995&key=aglzfmJyaWQtZ3lyZwsSCFJlc3BvbnNlIll0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyYnpsNW90d3lqdXJrZXUyMnV0bG00b2txYmRodWZ5X2xpa2VkX2J5XzEwMjE3MDQzMTgxNjU5MjM0NDk3Mgw">
+    
+      5 days, 3 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://techlifeweb.com/dear-senator-ted-cruz-im-going-to-explain-to-you-how-net-neutrality-actually-works/">techlifeweb.com/dear-senator-t...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/100232229014626845221"
+       title="SARAH obeid Enghlis">
+      <img class="profile" src="https://lh5.googleusercontent.com/-yIKo1YjiJfU/AAAAAAAAAAI/AAAAAAAAAAA/-ERc58GlyhU/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/101567686389173421706/posts/G94ksFyqYc6">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/101567686389173421706/posts/G94ksFyqYc6">
+      
+        “”Net Neutrality” is Obamacare for the ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415767443&key=aglzfmJyaWQtZ3lyZwsSCFJlc3BvbnNlIll0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyYnpsNW90d3lqdXJrZXUyMnV0bG00b2txYmRodWZ5X2xpa2VkX2J5XzEwMDIzMjIyOTAxNDYyNjg0NTIyMQw">
+    
+      5 days, 4 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://techlifeweb.com/dear-senator-ted-cruz-im-going-to-explain-to-you-how-net-neutrality-actually-works/">techlifeweb.com/dear-senator-t...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/112515890676206330591"
+       title="Anthony Blow">
+      <img class="profile" src="https://lh6.googleusercontent.com/-tkJQOdhBbC4/AAAAAAAAAAI/AAAAAAAAAAA/D955-Vog3zc/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/101567686389173421706/posts/SB5t5XniueD">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/101567686389173421706/posts/SB5t5XniueD">
+      
+        “Over the past year Chromecast has ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415764764&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEydmVwa2liem0zZ3ZrNHEwNGNmZmFhY21tMnN4NXJkanNfbGlrZWRfYnlfMTEyNTE1ODkwNjc2MjA2MzMwNTkxDA">
+    
+      5 days, 4 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://techlifeweb.com/introducing-fun-family-games-for-chromecast/">techlifeweb.com/introducing-fu...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

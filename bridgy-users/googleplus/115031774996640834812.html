@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Jonas M Luster (jml) (Google+) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://plus.google.com/+JonasLuster" title="Jonas M Luster (jml) (Google+)"
+   class="u-url">
+  <img class="profile u-photo" src="https://lh5.googleusercontent.com/-JC-dLBaNNUI/AAAAAAAAAAI/AAAAAAAC6VI/8Cp8VA98qzQ/photo.jpg?sz=50&amp;sz=128" width="64px" />
+  <img src="/static/googleplus_icon.png"
+       
+       alt="Google+" />
+  <span class="p-name">Jonas M Luster (jml)</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://jluster.yelp.com" class="publish-domain u-url">jluster.yelp.com</a>
+
+  
+  &middot;
+  <a href="http://500px.com/legerdemain" class="publish-domain u-url">500px.com</a>
+
+  
+  &middot;
+  <a href="http://stories.jml.is" class="publish-domain u-url">stories.jml.is</a>
+
+  
+    <span id="more-websites" style="display: none">
+  
+  &middot;
+  <a href="https://medium.com/@legerdemain" class="publish-domain u-url">medium.com</a>
+
+  
+  &middot;
+  <a href="http://106miles.jml.is" class="publish-domain u-url">106miles.jml.is</a>
+
+  
+  &middot;
+  <a href="http://jml.is" class="publish-domain u-url">jml.is</a>
+
+  
+  &middot;
+  <a href="http://de.jml.is" class="publish-domain u-url">de.jml.is</a>
+
+
+  </span>
+  <a onclick="toggle('more-websites'); toggle('show-more-websites'); return false"
+     id="show-more-websites" href="#" />...</a>
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class=" big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTUwMzE3NzQ5OTY2NDA4MzQ4MTIM" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416214156&key=aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTUwMzE3NzQ5OTY2NDA4MzQ4MTIM">
+      5 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTUwMzE3NzQ5OTY2NDA4MzQ4MTIM" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/115141892743557235447"
+       title="Juergen Nieveler">
+      <img class="profile" src="https://lh3.googleusercontent.com/-t4XZX1UC_iI/AAAAAAAAAAI/AAAAAAAFa9M/LODbHeTS6Hg/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/115031774996640834812/posts/RdG7jjkysEK">
+        +Jonas M Luster​ It&#39;s both an ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/115031774996640834812/posts/RdG7jjkysEK">
+      
+        More than the fact that Google ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      9 hours, 39 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/115031774996640834812"
+       title="Jonas M Luster">
+      <img class="profile" src="https://lh5.googleusercontent.com/-JC-dLBaNNUI/AAAAAAAAAAI/AAAAAAAC6VI/JnPvnhUPjHU/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/115031774996640834812/posts/RdG7jjkysEK">
+        +Juergen Nieveler And therein lies the ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/115031774996640834812/posts/RdG7jjkysEK">
+      
+        More than the fact that Google ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      9 hours, 39 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/115031774996640834812"
+       title="Jonas M Luster">
+      <img class="profile" src="https://lh5.googleusercontent.com/-JC-dLBaNNUI/AAAAAAAAAAI/AAAAAAAC6VI/JnPvnhUPjHU/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/115031774996640834812/posts/RdG7jjkysEK">
+        +Juergen Nieveler There&#39;s a whole box ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/115031774996640834812/posts/RdG7jjkysEK">
+      
+        More than the fact that Google ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      9 hours, 39 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/115141892743557235447"
+       title="Juergen Nieveler">
+      <img class="profile" src="https://lh3.googleusercontent.com/-t4XZX1UC_iI/AAAAAAAAAAI/AAAAAAAFa9M/LODbHeTS6Hg/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/115031774996640834812/posts/RdG7jjkysEK">
+        Well, the accuracy depends on the ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/115031774996640834812/posts/RdG7jjkysEK">
+      
+        More than the fact that Google ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      10 hours, 37 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/102135785477686748429"
+       title="David Metcalfe">
+      <img class="profile" src="https://lh5.googleusercontent.com/-XsVhqtuTgPc/AAAAAAAAAAI/AAAAAAAAAAA/oDvf2Ymbzpc/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/115031774996640834812/posts/RdG7jjkysEK">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/115031774996640834812/posts/RdG7jjkysEK">
+      
+        More than the fact that Google ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      16 hours, 25 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/102135785477686748429"
+       title="David Metcalfe">
+      <img class="profile" src="https://lh5.googleusercontent.com/-XsVhqtuTgPc/AAAAAAAAAAI/AAAAAAAAyNQ/UAfUcH4yfJQ/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/115031774996640834812/posts/RdG7jjkysEK">
+        Agreed with +Michael Warburton. I&#39;ve compared ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/115031774996640834812/posts/RdG7jjkysEK">
+      
+        More than the fact that Google ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      16 hours, 25 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/114648754661319641715"
+       title="Michael Warburton">
+      <img class="profile" src="https://lh4.googleusercontent.com/-t-CZhZwbBGE/AAAAAAAAAAI/AAAAAAAAJUY/ajb5I5Ergc0/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/115031774996640834812/posts/RdG7jjkysEK">
+        I&#39;m beginning to think accuracy is ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/115031774996640834812/posts/RdG7jjkysEK">
+      
+        More than the fact that Google ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      17 hours, 18 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/115141892743557235447"
+       title="Juergen Nieveler">
+      <img class="profile" src="https://lh3.googleusercontent.com/-t4XZX1UC_iI/AAAAAAAAAAI/AAAAAAAFa9M/LODbHeTS6Hg/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/115031774996640834812/posts/RdG7jjkysEK">
+        Withings told me they&#39;re working on ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/115031774996640834812/posts/RdG7jjkysEK">
+      
+        More than the fact that Google ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      17 hours, 18 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/102118172097584421380"
+       title="Martin Schröder">
+      <img class="profile" src="https://lh4.googleusercontent.com/-iSCWve0H_G8/AAAAAAAAAAI/AAAAAAAAAAA/fdNZ5rkP9io/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/115031774996640834812/posts/RdG7jjkysEK">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/115031774996640834812/posts/RdG7jjkysEK">
+      
+        More than the fact that Google ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      18 hours, 38 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/105090311831576620539"
+       title="Dave J">
+      <img class="profile" src="https://lh4.googleusercontent.com/-bSXuk_8jkkQ/AAAAAAAAAAI/AAAAAAAAAAA/9Go3uar-s-c/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/115031774996640834812/posts/RdG7jjkysEK">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/115031774996640834812/posts/RdG7jjkysEK">
+      
+        More than the fact that Google ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      18 hours, 38 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

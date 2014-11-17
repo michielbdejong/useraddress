@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Andrea DeMers (Facebook) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://facebook.com/andrea.demers" title="Andrea DeMers (Facebook)"
+   class="u-url">
+  <img class="profile u-photo" src="https://graph.facebook.com/andrea.demers/picture?type=large" width="64px" />
+  <img src="/static/facebook_icon.png"
+       
+       alt="Facebook" />
+  <span class="p-name">Andrea DeMers</span></a>
+
+
+<!-- TODO: make this work without javascript too -->
+<a href="#" onclick="document.forms['listen-facebook-start'].submit();
+                     return false;">
+  <span class="glyphicon glyphicon-pause"
+        title="This account was disconnected on Facebook's end. Click to reconnect it!">
+</span></a>
+
+
+
+  
+  &middot;
+  <a href="http://andreademers.com/" class="publish-domain u-url">andreademers.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+Click to enable <a href="/about#listen">listening</a>:
+
+<!-- Facebook listen signup -->
+<form method="post" name="listen-facebook-start" action="/facebook/start" class="signup">
+  <input type="image" alt="Sign in with Facebook"
+         src="/activitystreams/oauth_dropins/static/facebook.png" />
+  <input name="feature" type="hidden" value="listen" />
+  <!-- https://developers.facebook.com/docs/reference/login/ -->
+  <input name="scope" type="hidden"
+         value="offline_access,user_website,user_status,user_photos,user_events,read_stream">
+</form>
+
+
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+<span class="big">Click to enable <a href="/about#publish">publishing</a>:</span>
+<form method="post" name="publish-facebook-start" action="/facebook/start" class="signup">
+ <input type="image" alt="Sign in with Facebook"
+        src="/activitystreams/oauth_dropins/static/facebook.png" />
+ <input name="feature" type="hidden" value="publish" />
+ <!-- https://developers.facebook.com/docs/reference/login/ -->
+ <input name="scope" type="hidden"
+        value="offline_access,user_website,publish_actions,create_event,rsvp_event,user_status,friends_status,user_photos,friends_photos,user_videos,friends_videos,user_events,friends_events,user_likes,friends_likes" />
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/736971983"
+       title="Wendy Watt">
+      <img class="profile" src="https://graph.facebook.com/736971983/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/802549814/posts/10153409150474815">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/802549814/posts/10153409150474815">
+      
+        Me at the Berlin Wall in ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      6 days, 5 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/756635335"
+       title="Nathalie Waldman">
+      <img class="profile" src="https://graph.facebook.com/756635335/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/802549814/posts/10153409150474815">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/802549814/posts/10153409150474815">
+      
+        Me at the Berlin Wall in ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      6 days, 5 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/549916458"
+       title="Alison E Rogers">
+      <img class="profile" src="https://graph.facebook.com/549916458/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/802549814/posts/10153409150474815">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/802549814/posts/10153409150474815">
+      
+        Me at the Berlin Wall in ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      6 days, 11 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1168579502"
+       title="Juan Carlos Medina">
+      <img class="profile" src="https://graph.facebook.com/1168579502/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/802549814/posts/10153409150474815">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/802549814/posts/10153409150474815">
+      
+        Me at the Berlin Wall in ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      6 days, 14 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/100003219344124"
+       title="Elizabeth Cameron">
+      <img class="profile" src="https://graph.facebook.com/100003219344124/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/10153409150474815?comment_id=10153410601149815">
+        A hair-raising experience, obviously. Which side ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/802549814/posts/10153409150474815">
+      
+        Me at the Berlin Wall in ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      6 days, 18 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/100003219344124"
+       title="Elizabeth Cameron">
+      <img class="profile" src="https://graph.facebook.com/100003219344124/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/802549814/posts/10153409176264815">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/802549814/posts/10153409176264815">
+      
+        Andrea DeMers updated her cover photo.
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      6 days, 20 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/100003219344124"
+       title="Elizabeth Cameron">
+      <img class="profile" src="https://graph.facebook.com/100003219344124/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/802549814/posts/10153409176659815">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/802549814/posts/10153409176264815">
+      
+        Andrea DeMers updated her cover photo.
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      6 days, 20 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/705677076"
+       title="Matthew Cope">
+      <img class="profile" src="https://graph.facebook.com/705677076/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/802549814/posts/10153409150474815">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/802549814/posts/10153409150474815">
+      
+        Me at the Berlin Wall in ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      6 days, 22 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/632515177"
+       title="Lorna Brown">
+      <img class="profile" src="https://graph.facebook.com/632515177/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/802549814/posts/10153409150474815">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/802549814/posts/10153409150474815">
+      
+        Me at the Berlin Wall in ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      6 days, 22 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1542506509"
+       title="Peter Mccabe">
+      <img class="profile" src="https://graph.facebook.com/1542506509/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/10153409150474815?comment_id=10153409162634815">
+        and by the way.... how do ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/802549814/posts/10153409150474815">
+      
+        Me at the Berlin Wall in ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 week ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+
+<p id="publishes" class="big">Recently published:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://andreademers.com/photos/croquet">andreademers.com/photos/croquet</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1410556275&key=aglzfmJyaWQtZ3lyTQsSDVB1Ymxpc2hlZFBhZ2UiJmh0dHA6Ly9hbmRyZWFkZW1lcnMuY29tL3Bob3Rvcy9jcm9xdWV0DAsSB1B1Ymxpc2gYgICAgIDkkQoM">
+      2 months ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://facebook.com/10153221378084815">
+     
+     post
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://andreademers.com/photos/croquet">andreademers.com/photos/croquet</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1410556268&key=aglzfmJyaWQtZ3lyTQsSDVB1Ymxpc2hlZFBhZ2UiJmh0dHA6Ly9hbmRyZWFkZW1lcnMuY29tL3Bob3Rvcy9jcm9xdWV0DAsSB1B1Ymxpc2gYgICAgICAgAoM">
+      2 months ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     preview
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://andreademers.com/photos/chicago-theater-andrea-demers">andreademers.com/photos/chicago...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1410556196&key=aglzfmJyaWQtZ3lyYwsSDVB1Ymxpc2hlZFBhZ2UiPGh0dHA6Ly9hbmRyZWFkZW1lcnMuY29tL3Bob3Rvcy9jaGljYWdvLXRoZWF0ZXItYW5kcmVhLWRlbWVycwwLEgdQdWJsaXNoGICAgICArpkKDA">
+      2 months ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     post
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://andreademers.com/photos/chicago-theater-andrea-demers">andreademers.com/photos/chicago...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1410555734&key=aglzfmJyaWQtZ3lyYwsSDVB1Ymxpc2hlZFBhZ2UiPGh0dHA6Ly9hbmRyZWFkZW1lcnMuY29tL3Bob3Rvcy9jaGljYWdvLXRoZWF0ZXItYW5kcmVhLWRlbWVycwwLEgdQdWJsaXNoGICAgICA8ogJDA">
+      2 months ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     preview
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://andreademers.com/photos/chicago-theater-andrea-demers">andreademers.com/photos/chicago...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1410555701&key=aglzfmJyaWQtZ3lyYwsSDVB1Ymxpc2hlZFBhZ2UiPGh0dHA6Ly9hbmRyZWFkZW1lcnMuY29tL3Bob3Rvcy9jaGljYWdvLXRoZWF0ZXItYW5kcmVhLWRlbWVycwwLEgdQdWJsaXNoGICAgICA8ogKDA">
+      2 months ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     preview
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://andreademers.com/photos/chicago-theater-andrea-demers">andreademers.com/photos/chicago...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1410555285&key=aglzfmJyaWQtZ3lyYwsSDVB1Ymxpc2hlZFBhZ2UiPGh0dHA6Ly9hbmRyZWFkZW1lcnMuY29tL3Bob3Rvcy9jaGljYWdvLXRoZWF0ZXItYW5kcmVhLWRlbWVycwwLEgdQdWJsaXNoGICAgICA5JEKDA">
+      2 months ago
+      
+       <span title="Processing" class="glyphicon glyphicon-transfer"></span>
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     preview
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://andreademers.com/photos/chicago-theater-andrea-demers">andreademers.com/photos/chicago...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1410551656&key=aglzfmJyaWQtZ3lyYwsSDVB1Ymxpc2hlZFBhZ2UiPGh0dHA6Ly9hbmRyZWFkZW1lcnMuY29tL3Bob3Rvcy9jaGljYWdvLXRoZWF0ZXItYW5kcmVhLWRlbWVycwwLEgdQdWJsaXNoGICAgICAgIAKDA">
+      2 months ago
+      
+       <span title="Processing" class="glyphicon glyphicon-transfer"></span>
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     preview
+     
+
+   </div>
+  </li>
+  
+</ul>
+
+
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

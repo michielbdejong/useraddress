@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Warren Ellis (Facebook) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://facebook.com/warrenellis" title="Warren Ellis (Facebook)"
+   class="u-url">
+  <img class="profile u-photo" src="https://graph.facebook.com/warrenellis/picture?type=large" width="64px" />
+  <img src="/static/facebook_icon.png"
+       
+       alt="Facebook" />
+  <span class="p-name">Warren Ellis</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://www.endless.systems" class="publish-domain u-url">endless.systems</a>
+
+  
+  &middot;
+  <a href="http://www.warrenellis.com" class="publish-domain u-url">warrenellis.com</a>
+
+  
+  &middot;
+  <a href="http://morning.computer" class="publish-domain u-url">morning.computer</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGwsSDEZhY2Vib29rUGFnZSIJNTAwNDg2NTIzDA" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416214446&key=aglzfmJyaWQtZ3lyGwsSDEZhY2Vib29rUGFnZSIJNTAwNDg2NTIzDA">
+      2 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGwsSDEZhY2Vib29rUGFnZSIJNTAwNDg2NTIzDA" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+<span class="big">Click to enable <a href="/about#publish">publishing</a>:</span>
+<form method="post" name="publish-facebook-start" action="/facebook/start" class="signup">
+ <input type="image" alt="Sign in with Facebook"
+        src="/activitystreams/oauth_dropins/static/facebook.png" />
+ <input name="feature" type="hidden" value="publish" />
+ <!-- https://developers.facebook.com/docs/reference/login/ -->
+ <input name="scope" type="hidden"
+        value="offline_access,user_website,publish_actions,create_event,rsvp_event,user_status,friends_status,user_photos,friends_photos,user_videos,friends_videos,user_events,friends_events,user_likes,friends_likes" />
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/711689"
+       title="Zhan Li">
+      <img class="profile" src="https://graph.facebook.com/711689/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/500486523/posts/10152387091646524">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/500486523/posts/10152387091646524">
+      
+        14nov14 Original: http://www.endless.systems/2014/14nov14
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416032093&key=aglzfmJyaWQtZ3lyRQsSCFJlc3BvbnNlIjd0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTIzODcwOTE2NDY1MjRfbGlrZWRfYnlfNzExNjg5DA">
+    
+      2 days, 2 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.endless.systems/2014/14nov14">endless.systems/2014/14nov14</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/100000012617429"
+       title="Irene Adler">
+      <img class="profile" src="https://graph.facebook.com/100000012617429/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/500486523/posts/10152387091646524">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/500486523/posts/10152387091646524">
+      
+        14nov14 Original: http://www.endless.systems/2014/14nov14
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415990894&key=aglzfmJyaWQtZ3lyTgsSCFJlc3BvbnNlIkB0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTIzODcwOTE2NDY1MjRfbGlrZWRfYnlfMTAwMDAwMDEyNjE3NDI5DA">
+    
+      2 days, 14 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.endless.systems/2014/14nov14">endless.systems/2014/14nov14</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/100000012617429"
+       title="Irene Adler">
+      <img class="profile" src="https://graph.facebook.com/100000012617429/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/10152387091646524?comment_id=10152387417596524">
+        Yep. Grey as a...goose? Let's use ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/500486523/posts/10152387091646524">
+      
+        14nov14 Original: http://www.endless.systems/2014/14nov14
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415990859&key=aglzfmJyaWQtZ3lyRwsSCFJlc3BvbnNlIjl0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTIzODcwOTE2NDY1MjRfMTAxNTIzODc0MTc1OTY1MjQM">
+    
+      2 days, 14 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.endless.systems/2014/14nov14">endless.systems/2014/14nov14</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1834557604"
+       title="Julien Lambrechts">
+      <img class="profile" src="https://graph.facebook.com/1834557604/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/500486523/posts/10152387091646524">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/500486523/posts/10152387091646524">
+      
+        14nov14 Original: http://www.endless.systems/2014/14nov14
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415990821&key=aglzfmJyaWQtZ3lySQsSCFJlc3BvbnNlIjt0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTIzODcwOTE2NDY1MjRfbGlrZWRfYnlfMTgzNDU1NzYwNAw">
+    
+      2 days, 14 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.endless.systems/2014/14nov14">endless.systems/2014/14nov14</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/100000012617429"
+       title="Irene Adler">
+      <img class="profile" src="https://graph.facebook.com/100000012617429/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/10152387091646524?comment_id=10152387412616524">
+        Our weather's match!</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/500486523/posts/10152387091646524">
+      
+        14nov14 Original: http://www.endless.systems/2014/14nov14
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415990817&key=aglzfmJyaWQtZ3lyRwsSCFJlc3BvbnNlIjl0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTIzODcwOTE2NDY1MjRfMTAxNTIzODc0MTI2MTY1MjQM">
+    
+      2 days, 14 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.endless.systems/2014/14nov14">endless.systems/2014/14nov14</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/500486523"
+       title="Warren Ellis">
+      <img class="profile" src="https://graph.facebook.com/500486523/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/10152387091646524?comment_id=10152387414756524">
+        LA has gone monochrome too?</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/500486523/posts/10152387091646524">
+      
+        14nov14 Original: http://www.endless.systems/2014/14nov14
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415990812&key=aglzfmJyaWQtZ3lyRwsSCFJlc3BvbnNlIjl0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTIzODcwOTE2NDY1MjRfMTAxNTIzODc0MTQ3NTY1MjQM">
+    
+      2 days, 14 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.endless.systems/2014/14nov14">endless.systems/2014/14nov14</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/756820404"
+       title="Anab Jain">
+      <img class="profile" src="https://graph.facebook.com/756820404/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/500486523/posts/10152383859671524">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/500486523/posts/10152383859671524">
+      
+        Received: SOUTHERN REACH TRILOGY omnibus Original: ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415934259&key=aglzfmJyaWQtZ3lySAsSCFJlc3BvbnNlIjp0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTIzODM4NTk2NzE1MjRfbGlrZWRfYnlfNzU2ODIwNDA0DA">
+    
+      3 days, 5 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.endless.systems/2014/received-southern-reach-trilogy-omnibus">endless.systems/2014/received-...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/100000012617429"
+       title="Irene Adler">
+      <img class="profile" src="https://graph.facebook.com/100000012617429/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/500486523/posts/10152383810281524">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/500486523/posts/10152383810281524">
+      
+        12nov14 Original: http://www.endless.systems/2014/12nov14
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415809153&key=aglzfmJyaWQtZ3lyTgsSCFJlc3BvbnNlIkB0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTIzODM4MTAyODE1MjRfbGlrZWRfYnlfMTAwMDAwMDEyNjE3NDI5DA">
+    
+      4 days, 16 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.endless.systems/2014/12nov14">endless.systems/2014/12nov14</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/100000012617429"
+       title="Irene Adler">
+      <img class="profile" src="https://graph.facebook.com/100000012617429/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/500486523/posts/10152383859671524">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/500486523/posts/10152383859671524">
+      
+        Received: SOUTHERN REACH TRILOGY omnibus Original: ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415809008&key=aglzfmJyaWQtZ3lyTgsSCFJlc3BvbnNlIkB0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTIzODM4NTk2NzE1MjRfbGlrZWRfYnlfMTAwMDAwMDEyNjE3NDI5DA">
+    
+      4 days, 16 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.endless.systems/2014/received-southern-reach-trilogy-omnibus">endless.systems/2014/received-...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/100000012617429"
+       title="Irene Adler">
+      <img class="profile" src="https://graph.facebook.com/100000012617429/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/500486523/posts/10152378895766524">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/500486523/posts/10152378895766524">
+      
+        9nov14 Original: http://www.endless.systems/2014/9nov14
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415560170&key=aglzfmJyaWQtZ3lyTgsSCFJlc3BvbnNlIkB0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTIzNzg4OTU3NjY1MjRfbGlrZWRfYnlfMTAwMDAwMDEyNjE3NDI5DA">
+    
+      1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.endless.systems/2014/9nov14">endless.systems/2014/9nov14</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

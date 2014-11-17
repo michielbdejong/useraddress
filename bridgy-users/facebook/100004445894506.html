@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Emma Kuo (Facebook) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://facebook.com/emma.kuo.5209" title="Emma Kuo (Facebook)"
+   class="u-url">
+  <img class="profile u-photo" src="https://graph.facebook.com/emma.kuo.5209/picture?type=large" width="64px" />
+  <img src="/static/facebook_icon.png"
+       
+       alt="Facebook" />
+  <span class="p-name">Emma Kuo</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://notenoughneon.com" class="publish-domain u-url">notenoughneon.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyIQsSDEZhY2Vib29rUGFnZSIPMTAwMDA0NDQ1ODk0NTA2DA" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416205083&key=aglzfmJyaWQtZ3lyIQsSDEZhY2Vib29rUGFnZSIPMTAwMDA0NDQ1ODk0NTA2DA">
+      2 hours, 31 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyIQsSDEZhY2Vib29rUGFnZSIPMTAwMDA0NDQ1ODk0NTA2DA" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+<form method="post" action="/delete/start">
+<p id="publishing-label" class="big">
+ Ready to publish.
+   <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyIQsSDEZhY2Vib29rUGFnZSIPMTAwMDA0NDQ1ODk0NTA2DA" />
+   <input name="feature" type="hidden" value="publish" />
+   <button id="delete-button" type="submit" class="btn btn-default"
+     title="Disable publishing for this account. (Won't delete posts you've already published.)"
+     >Disable</button>
+</p>
+</form>
+
+<form method="post" name="preview" action="/publish/preview"
+      onsubmit="do_preview('facebook'); return false;">
+<p id="preview-ui">
+ <label id="source-label" for="source-url">Enter post URL:</label>
+ <input id="source-url" name="source" type="url" required alt="Source URL"></input>
+ <input name="target" type="hidden"
+        value="http://brid.gy/publish/facebook"></input>
+
+ <nobr>
+ <!-- use a hidden input before the checkbox with the same name to set the value
+      to be sent when the checkbox is unchecked. -->
+ &nbsp;
+ <input id="include-link-unchecked" name="bridgy_omit_link" type="hidden"
+        value="true"></input>
+ <input id="include-link-checked" name="bridgy_omit_link" type="checkbox"
+        value="false" checked></input>
+ <label id="include-link-label" for="include-link-checked">Include link</label>
+ &nbsp;
+ <button id="preview-button" type="submit" class="btn btn-default">Preview</button>
+ </nobr>
+</p>
+</form>
+
+<!-- Publish signup buttons -->
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1379185584"
+       title="Cyrene Domogalla">
+      <img class="profile" src="https://graph.facebook.com/1379185584/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/100004445894506/posts/369128179912042">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/100004445894506/posts/369128179912042">
+      
+        End of summer beats. #deephouse #sunvox ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1412220271&key=aglzfmJyaWQtZ3lyRwsSCFJlc3BvbnNlIjl0YWc6ZmFjZWJvb2suY29tLDIwMTM6MzY5MTI4MTc5OTEyMDQyX2xpa2VkX2J5XzEzNzkxODU1ODQM">
+    
+      1 month, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://notenoughneon.com/2014/9/29/1">notenoughneon.com/2014/9/29/1</a></li></ul>
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://soundcloud.com/notenoughneon/rain-dance">soundcloud.com/notenoughneon/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1516640440"
+       title="Jin-Tom Young">
+      <img class="profile" src="https://graph.facebook.com/1516640440/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/100004445894506/posts/10153816243170094">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/100004445894506/posts/10153816243170094">
+      
+        "Happy birthday!" on Jenny Lin's timeline.
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 month, 2 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/629180093"
+       title="Jenny Lin">
+      <img class="profile" src="https://graph.facebook.com/629180093/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/100004445894506/posts/10152702581610850">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/100004445894506/posts/10152702581610850">
+      
+        "Happy birthday Kevin!" on Kevin W ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 month, 2 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1359804082"
+       title="Tommy Schopp">
+      <img class="profile" src="https://graph.facebook.com/1359804082/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/100004445894506/posts/10204702055415499">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/100004445894506/posts/10204702055415499">
+      
+        "Happy birthday Tommy!" on Tommy Schopp's ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 month, 2 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/629180093"
+       title="Jenny Lin">
+      <img class="profile" src="https://graph.facebook.com/629180093/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/100004445894506/posts/10153816243170094">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/100004445894506/posts/10153816243170094">
+      
+        "Happy birthday!" on Jenny Lin's timeline.
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 month, 2 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1516640440"
+       title="Jin-Tom Young">
+      <img class="profile" src="https://graph.facebook.com/1516640440/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/100004445894506/posts/10152702581610850">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/100004445894506/posts/10152702581610850">
+      
+        "Happy birthday Kevin!" on Kevin W ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 month, 2 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/722310366"
+       title="Iris Lin">
+      <img class="profile" src="https://graph.facebook.com/722310366/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/10153816243170094?comment_id=46942490">
+        Emma we miss you! come see ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/100004445894506/posts/10153816243170094">
+      
+        "Happy birthday!" on Jenny Lin's timeline.
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 month, 2 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/629180093"
+       title="Jenny Lin">
+      <img class="profile" src="https://graph.facebook.com/629180093/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/100004445894506/posts/10153873913950367">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/100004445894506/posts/10153873913950367">
+      
+        "Happy birthday, Iris. :)" on Iris ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 month, 2 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/722310366"
+       title="Iris Lin">
+      <img class="profile" src="https://graph.facebook.com/722310366/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/100004445894506/posts/10153816243170094">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/100004445894506/posts/10153816243170094">
+      
+        "Happy birthday!" on Jenny Lin's timeline.
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 month, 2 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/722310366"
+       title="Iris Lin">
+      <img class="profile" src="https://graph.facebook.com/722310366/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/100004445894506/posts/10152702581610850">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/100004445894506/posts/10152702581610850">
+      
+        "Happy birthday Kevin!" on Kevin W ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 month, 2 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+
+<p id="publishes" class="big">Recently published:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://notenoughneon.com/2014/11/12/2">notenoughneon.com/2014/11/12/2</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1415845755&key=aglzfmJyaWQtZ3lyTAsSDVB1Ymxpc2hlZFBhZ2UiJWh0dHA6Ly9ub3Rlbm91Z2huZW9uLmNvbS8yMDE0LzExLzEyLzIMCxIHUHVibGlzaBiAgICAgOSRCgw">
+      4 days, 6 hours ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://facebook.com/100004445894506_388386497986210">
+     
+     post
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://notenoughneon.com/2014/11/12/1">notenoughneon.com/2014/11/12/1</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1415841383&key=aglzfmJyaWQtZ3lyTAsSDVB1Ymxpc2hlZFBhZ2UiJWh0dHA6Ly9ub3Rlbm91Z2huZW9uLmNvbS8yMDE0LzExLzEyLzEMCxIHUHVibGlzaBiAgICAgOSRCgw">
+      4 days, 7 hours ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://facebook.com/100004445894506_388370104654516">
+     
+     post
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://notenoughneon.com/2014/11/2/1">notenoughneon.com/2014/11/2/1</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1414972689&key=aglzfmJyaWQtZ3lySwsSDVB1Ymxpc2hlZFBhZ2UiJGh0dHA6Ly9ub3Rlbm91Z2huZW9uLmNvbS8yMDE0LzExLzIvMQwLEgdQdWJsaXNoGICAgICA5JEKDA">
+      2 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://facebook.com/100004445894506_384259741732219">
+     
+     post
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://notenoughneon.com/2014/10/26/1">notenoughneon.com/2014/10/26/1</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1414366436&key=aglzfmJyaWQtZ3lyTAsSDVB1Ymxpc2hlZFBhZ2UiJWh0dHA6Ly9ub3Rlbm91Z2huZW9uLmNvbS8yMDE0LzEwLzI2LzEMCxIHUHVibGlzaBiAgICAgOSRCgw">
+      3 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://facebook.com/100004445894506_381227982035395">
+     
+     post
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://notenoughneon.com/2014/10/26/mpc2000xl-midi-crash-fixed">notenoughneon.com/2014/10/26/mpc...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1414355465&key=aglzfmJyaWQtZ3lyZQsSDVB1Ymxpc2hlZFBhZ2UiPmh0dHA6Ly9ub3Rlbm91Z2huZW9uLmNvbS8yMDE0LzEwLzI2L21wYzIwMDB4bC1taWRpLWNyYXNoLWZpeGVkDAsSB1B1Ymxpc2gYgICAgIDkkQoM">
+      3 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://facebook.com/100004445894506_381182178706642">
+     
+     post
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://notenoughneon.com/2014/10/25/1">notenoughneon.com/2014/10/25/1</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1414264481&key=aglzfmJyaWQtZ3lyTAsSDVB1Ymxpc2hlZFBhZ2UiJWh0dHA6Ly9ub3Rlbm91Z2huZW9uLmNvbS8yMDE0LzEwLzI1LzEMCxIHUHVibGlzaBiAgICAgOSRCgw">
+      3 weeks, 1 day ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://facebook.com/100004445894506_380641525427374">
+     
+     post
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://notenoughneon.com/2014/10/15/2">notenoughneon.com/2014/10/15/2</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1413416228&key=aglzfmJyaWQtZ3lyTAsSDVB1Ymxpc2hlZFBhZ2UiJWh0dHA6Ly9ub3Rlbm91Z2huZW9uLmNvbS8yMDE0LzEwLzE1LzIMCxIHUHVibGlzaBiAgICAgOSRCgw">
+      1 month ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://facebook.com/100004445894506_376540742504119">
+     
+     post
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://notenoughneon.com/2014/10/6/1">notenoughneon.com/2014/10/6/1</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1412664720&key=aglzfmJyaWQtZ3lySwsSDVB1Ymxpc2hlZFBhZ2UiJGh0dHA6Ly9ub3Rlbm91Z2huZW9uLmNvbS8yMDE0LzEwLzYvMQwLEgdQdWJsaXNoGICAgICA5JEKDA">
+      1 month, 1 week ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://facebook.com/100004445894506_372505386240988">
+     
+     post
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://notenoughneon.com/2014/9/29/1">notenoughneon.com/2014/9/29/1</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1412012595&key=aglzfmJyaWQtZ3lySwsSDVB1Ymxpc2hlZFBhZ2UiJGh0dHA6Ly9ub3Rlbm91Z2huZW9uLmNvbS8yMDE0LzkvMjkvMQwLEgdQdWJsaXNoGICAgICA8ogKDA">
+      1 month, 2 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://facebook.com/100004445894506_369128179912042">
+     
+     post
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://notenoughneon.com/2014/9/29/1">notenoughneon.com/2014/9/29/1</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1412012529&key=aglzfmJyaWQtZ3lySwsSDVB1Ymxpc2hlZFBhZ2UiJGh0dHA6Ly9ub3Rlbm91Z2huZW9uLmNvbS8yMDE0LzkvMjkvMQwLEgdQdWJsaXNoGICAgICA5JEKDA">
+      1 month, 2 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     preview
+     
+
+   </div>
+  </li>
+  
+</ul>
+
+
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

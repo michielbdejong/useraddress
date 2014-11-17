@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Juuso Vilmunen (Google+) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://plus.google.com/+JuusoVilmunen" title="Juuso Vilmunen (Google+)"
+   class="u-url">
+  <img class="profile u-photo" src="https://lh3.googleusercontent.com/-ERbkuvaSFNY/AAAAAAAAAAI/AAAAAAAJyhc/OvUIEcRWom0/photo.jpg?sz=50&amp;sz=128" width="64px" />
+  <img src="/static/googleplus_icon.png"
+       
+       alt="Google+" />
+  <span class="p-name">Juuso Vilmunen</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://juuso.vilmunen.net" class="publish-domain u-url">juuso.vilmunen.net</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class=" big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTU5OTQwNjE0ODQ5MzU4NDk2MTAM" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416119435&key=aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTU5OTQwNjE0ODQ5MzU4NDk2MTAM">
+      1 day, 2 hours ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTU5OTQwNjE0ODQ5MzU4NDk2MTAM" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/116511793141837713048"
+       title="Alfonso Perna">
+      <img class="profile" src="https://lh6.googleusercontent.com/-ZVL-A2NpCOE/AAAAAAAAAAI/AAAAAAAAAAA/ATnbNOzN7yY/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/115994061484935849610/posts/VNsmVgxYyvj">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/115994061484935849610/posts/VNsmVgxYyvj">
+      
+        I&#39;m there too.&quot;There is a new ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416119443&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEydWlieWdha3FnanJveGQwNGNqNTRhd291d3dqeG9rd2cwa19saWtlZF9ieV8xMTY1MTE3OTMxNDE4Mzc3MTMwNDgM">
+    
+      1 day, 2 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://www.tsu.co/jeukku">tsu.co/jeukku</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/114961843097993787070"
+       title="SuperAirshot">
+      <img class="profile" src="https://lh4.googleusercontent.com/-M8Ja98sq_I8/AAAAAAAAAAI/AAAAAAAAAAA/8GwaeTVq4VI/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/115994061484935849610/posts/3DMvrktbwzM">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/115994061484935849610/posts/3DMvrktbwzM">
+      
+        That chorus reminds me of some ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 week, 6 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/106994541572371375920"
+       title="Tim Bailey">
+      <img class="profile" src="https://lh5.googleusercontent.com/-ZFUltoWE5wQ/AAAAAAAAAAI/AAAAAAAAAAA/hIy4KLylu6M/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/115994061484935849610/posts/NkCszNZdhcU">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/115994061484935849610/posts/NkCszNZdhcU">
+      
+        So Google of you, plus.﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 weeks, 1 day ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/100696725517602845923"
+       title="Heikki Leskinen">
+      <img class="profile" src="https://lh4.googleusercontent.com/-fzduj28N45I/AAAAAAAAAAI/AAAAAAAADkE/QbWjxbrqcNU/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/115994061484935849610/posts/VcuSLHnX5Dk">
+        Well, last month we came second ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/115994061484935849610/posts/VcuSLHnX5Dk">
+      
+        Oh no!http://www.kiva.org/invitedto/atheists/by/juuso4026﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414652958&key=aglzfmJyaWQtZ3lyXQsSCFJlc3BvbnNlIk90YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEydHZwZ2F0cW5rc2ozaGYwNGNqNTRhd291d3dqeG9rd2cway4xNDA5MDc3MjY4MDg0OTg5DA">
+    
+      2 weeks, 4 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.kiva.org/invitedto/atheists/by/juuso4026">kiva.org/invitedto/athe...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/115994061484935849610"
+       title="Juuso Vilmunen">
+      <img class="profile" src="https://lh3.googleusercontent.com/-ERbkuvaSFNY/AAAAAAAAAAI/AAAAAAAJ0aA/ggoImzWYJjo/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/115994061484935849610/posts/HhKivGBwQAB">
+        I don&#39;t really want be in ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/115994061484935849610/posts/HhKivGBwQAB">
+      
+        An insider&#39;s thoughts on the GamerGate ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414652929&key=aglzfmJyaWQtZ3lyWwsSCFJlc3BvbnNlIk10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyMGl6MnFpcHZ1ZHJ1MzMyM3RkMXI1YXJiM3poNGIzMDQuMTQwOTkwMDA5Njg5NDM0OQw">
+    
+      2 weeks, 4 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://badassdigest.com/2014/08/31/why-i-feel-bad-for-and-understand-the-angry-gamergate-gamers/">badassdigest.com/2014/08/31/why...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/100696725517602845923"
+       title="Heikki Leskinen">
+      <img class="profile" src="https://lh4.googleusercontent.com/-fzduj28N45I/AAAAAAAAAAI/AAAAAAAADkE/QbWjxbrqcNU/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/115994061484935849610/posts/HhKivGBwQAB">
+        I&#39;ll never be a member of ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/115994061484935849610/posts/HhKivGBwQAB">
+      
+        An insider&#39;s thoughts on the GamerGate ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414652923&key=aglzfmJyaWQtZ3lyWwsSCFJlc3BvbnNlIk10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyMGl6MnFpcHZ1ZHJ1MzMyM3RkMXI1YXJiM3poNGIzMDQuMTQxMDA5NDUyNDg0MTk4OQw">
+    
+      2 weeks, 4 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://badassdigest.com/2014/08/31/why-i-feel-bad-for-and-understand-the-angry-gamergate-gamers/">badassdigest.com/2014/08/31/why...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/100922530227577631493"
+       title="Michael Silk">
+      <img class="profile" src="https://lh5.googleusercontent.com/-iFwbv_a_94M/AAAAAAAAAAI/AAAAAAAAAls/Tgir_aXT-kQ/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/115994061484935849610/posts/W7MbUUBPoXr">
+        Toxins?</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/115994061484935849610/posts/W7MbUUBPoXr">
+      
+        Getting #angry﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 weeks, 4 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/115994061484935849610"
+       title="Juuso Vilmunen">
+      <img class="profile" src="https://lh3.googleusercontent.com/-ERbkuvaSFNY/AAAAAAAAAAI/AAAAAAAJ0aA/ggoImzWYJjo/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/115994061484935849610/posts/W7MbUUBPoXr">
+        Probably not, +Michael Silk Running low ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/115994061484935849610/posts/W7MbUUBPoXr">
+      
+        Getting #angry﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 weeks, 4 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/100696725517602845923"
+       title="Heikki Leskinen">
+      <img class="profile" src="https://lh4.googleusercontent.com/-fzduj28N45I/AAAAAAAAAAI/AAAAAAAADkE/QbWjxbrqcNU/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/115994061484935849610/posts/HhKivGBwQAB">
+        I have more contempt than understanding ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/115994061484935849610/posts/HhKivGBwQAB">
+      
+        An insider&#39;s thoughts on the GamerGate ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414652916&key=aglzfmJyaWQtZ3lyWwsSCFJlc3BvbnNlIk10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyMGl6MnFpcHZ1ZHJ1MzMyM3RkMXI1YXJiM3poNGIzMDQuMTQwOTYwNzc0ODAzMzk4OQw">
+    
+      2 weeks, 4 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://badassdigest.com/2014/08/31/why-i-feel-bad-for-and-understand-the-angry-gamergate-gamers/">badassdigest.com/2014/08/31/why...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/100751757333797485551"
+       title="Daniel Perez">
+      <img class="profile" src="https://lh4.googleusercontent.com/-QBNsaZvyfdU/AAAAAAAAAAI/AAAAAAAAAAA/ilJH32qb9ps/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/115994061484935849610/posts/W2AgpYystBN">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/115994061484935849610/posts/W2AgpYystBN">
+      
+        What do you propose? If you ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      3 weeks, 1 day ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Tony Fleming (Google+) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://plus.google.com/+TonyFleming" title="Tony Fleming (Google+)"
+   class="u-url">
+  <img class="profile u-photo" src="https://lh4.googleusercontent.com/-e-qOhV5A2Es/AAAAAAAAAAI/AAAAAAADCJI/LDBhgW77UiM/photo.jpg?sz=50&amp;sz=128" width="64px" />
+  <img src="/static/googleplus_icon.png"
+       
+       alt="Google+" />
+  <span class="p-name">Tony Fleming</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://mtony75-2.blogspot.com" class="publish-domain u-url">mtony75-2.blogspot.com</a>
+
+  
+  &middot;
+  <a href="http://mtony75.tumblr.com" class="publish-domain u-url">mtony75.tumblr.com</a>
+
+  
+  &middot;
+  <a href="http://pulse.yahoo.com/_XQTOQD5U4DIKDW7TFGH5OV5SOQ" class="publish-domain u-url">pulse.yahoo.com</a>
+
+  
+    <span id="more-websites" style="display: none">
+  
+  &middot;
+  <a href="https://pinterest.com/mtony75/" class="publish-domain u-url">pinterest.com</a>
+
+  
+  &middot;
+  <a href="http://tonyfleming.withknown.com" class="publish-domain u-url">tonyfleming.withknown.com</a>
+
+  
+  &middot;
+  <a href="http://trakt.tv/user/mtony75" class="publish-domain u-url">trakt.tv</a>
+
+  
+  &middot;
+  <a href="http://mylife.tonyfleming.me/" class="publish-domain u-url">mylife.tonyfleming.me</a>
+
+  
+  &middot;
+  <a href="http://gmail.com" class="publish-domain u-url">gmail.com</a>
+
+  
+  &middot;
+  <a href="http://www.hulu.com/profiles/mtony75/" class="publish-domain u-url">hulu.com</a>
+
+
+  </span>
+  <a onclick="toggle('more-websites'); toggle('show-more-websites'); return false"
+     id="show-more-websites" href="#" />...</a>
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class=" big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDQwNzAyMjM4ODIxMTc4MjQ1MjQM" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416212496&key=aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDQwNzAyMjM4ODIxMTc4MjQ1MjQM">
+      26 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDQwNzAyMjM4ODIxMTc4MjQ1MjQM" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/116105553194143623372"
+       title="Lilone Smurfett">
+      <img class="profile" src="https://lh4.googleusercontent.com/-igoprNGIDCQ/AAAAAAAAAAI/AAAAAAAAAAA/iaDNNy_aiUk/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/109129921515735293128/posts/BE2WGKcyRjC">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/104070223882117824524/posts/aXc2TJ91joF">
+      
+        Super Flamands by Sacha Goldbergerhttp://goo.gl/ZCE159👍 Check ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416211458&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyMWhmeGF5bWlmZmxpaWMwNGNkNWlnNHJhMWRibTUwc28wa19saWtlZF9ieV8xMTYxMDU1NTMxOTQxNDM2MjMzNzIM">
+    
+      44 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.steampunktendencies.com/post/102829329029/uggly-super-flamands">steampunktendencies.com/post/102829329...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/117108190179331085338"
+       title="Jason Wyatt">
+      <img class="profile" src="https://lh4.googleusercontent.com/-lGeiuk6UygI/AAAAAAAAAAI/AAAAAAAAAAA/Mjg2PiOZkd4/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/109129921515735293128/posts/BE2WGKcyRjC">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/104070223882117824524/posts/aXc2TJ91joF">
+      
+        Super Flamands by Sacha Goldbergerhttp://goo.gl/ZCE159👍 Check ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416208043&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyMWhmeGF5bWlmZmxpaWMwNGNkNWlnNHJhMWRibTUwc28wa19saWtlZF9ieV8xMTcxMDgxOTAxNzkzMzEwODUzMzgM">
+    
+      1 hour, 41 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.steampunktendencies.com/post/102829329029/uggly-super-flamands">steampunktendencies.com/post/102829329...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/108503924485201233072"
+       title="C. Keiona Anderson">
+      <img class="profile" src="https://lh5.googleusercontent.com/-oy-R08Dd3QU/AAAAAAAAAAI/AAAAAAAAAAA/AOtLKOsAkiw/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/104070223882117824524/posts/eQnM2DE1hf9">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/104070223882117824524/posts/eQnM2DE1hf9">
+      
+        --
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416207996&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzZWVmY3pjdm5wdnRwYXowNGNkNWlnNHJhMWRibTUwc28wa19saWtlZF9ieV8xMDg1MDM5MjQ0ODUyMDEyMzMwNzIM">
+    
+      1 hour, 41 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://tonyfleming.withknown.com/2014/yeah-watching-fridays-episode-of-constantine-was-a-huge-mistake">tonyfleming.withknown.com/2014/yeah-watc...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/108503924485201233072"
+       title="C. Keiona Anderson">
+      <img class="profile" src="https://lh5.googleusercontent.com/-oy-R08Dd3QU/AAAAAAAAAAI/AAAAAAAAhog/CnI-FLXrZ1g/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/104070223882117824524/posts/eQnM2DE1hf9">
+        It was a crazy episode, lol!!! ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/104070223882117824524/posts/eQnM2DE1hf9">
+      
+        --
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416207937&key=aglzfmJyaWQtZ3lyXQsSCFJlc3BvbnNlIk90YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzZWVmY3pjdm5wdnRwYXowNGNkNWlnNHJhMWRibTUwc28way4xNDE2MjA3NDgwMDMyNjgzDA">
+    
+      1 hour, 42 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://tonyfleming.withknown.com/2014/yeah-watching-fridays-episode-of-constantine-was-a-huge-mistake">tonyfleming.withknown.com/2014/yeah-watc...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/107706870571777066684"
+       title="Donna Clark">
+      <img class="profile" src="https://lh4.googleusercontent.com/-0eI3PZjx0EA/AAAAAAAAAAI/AAAAAAAAAAA/vDVCX68rJ-c/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/104070223882117824524/posts/eQnM2DE1hf9">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/104070223882117824524/posts/eQnM2DE1hf9">
+      
+        --
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416207905&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzZWVmY3pjdm5wdnRwYXowNGNkNWlnNHJhMWRibTUwc28wa19saWtlZF9ieV8xMDc3MDY4NzA1NzE3NzcwNjY2ODQM">
+    
+      1 hour, 43 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://tonyfleming.withknown.com/2014/yeah-watching-fridays-episode-of-constantine-was-a-huge-mistake">tonyfleming.withknown.com/2014/yeah-watc...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/114022616933820237016"
+       title="トーマスジゼル">
+      <img class="profile" src="https://lh4.googleusercontent.com/-p7KUTKheuvE/AAAAAAAAAAI/AAAAAAAAAAA/wYgyITwwOw4/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/109129921515735293128/posts/BE2WGKcyRjC">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/104070223882117824524/posts/aXc2TJ91joF">
+      
+        Super Flamands by Sacha Goldbergerhttp://goo.gl/ZCE159👍 Check ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416206594&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyMWhmeGF5bWlmZmxpaWMwNGNkNWlnNHJhMWRibTUwc28wa19saWtlZF9ieV8xMTQwMjI2MTY5MzM4MjAyMzcwMTYM">
+    
+      2 hours, 5 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.steampunktendencies.com/post/102829329029/uggly-super-flamands">steampunktendencies.com/post/102829329...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/107748469536736967018"
+       title="Tanya “Destinations Diva” Rowe">
+      <img class="profile" src="https://lh5.googleusercontent.com/-48tm8dA4qBQ/AAAAAAAAAAI/AAAAAAAAAAA/DvLxM9z4nGo/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/104070223882117824524/posts/eQnM2DE1hf9">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/104070223882117824524/posts/eQnM2DE1hf9">
+      
+        --
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416206556&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzZWVmY3pjdm5wdnRwYXowNGNkNWlnNHJhMWRibTUwc28wa19saWtlZF9ieV8xMDc3NDg0Njk1MzY3MzY5NjcwMTgM">
+    
+      2 hours, 5 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://tonyfleming.withknown.com/2014/yeah-watching-fridays-episode-of-constantine-was-a-huge-mistake">tonyfleming.withknown.com/2014/yeah-watc...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/116709651450969475128"
+       title="Early Davis">
+      <img class="profile" src="https://lh6.googleusercontent.com/-KuyjoWzP98E/AAAAAAAAAAI/AAAAAAAAAAA/f-jIWvuLvaQ/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/109129921515735293128/posts/BE2WGKcyRjC">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/104070223882117824524/posts/aXc2TJ91joF">
+      
+        Super Flamands by Sacha Goldbergerhttp://goo.gl/ZCE159👍 Check ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416202867&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyMWhmeGF5bWlmZmxpaWMwNGNkNWlnNHJhMWRibTUwc28wa19saWtlZF9ieV8xMTY3MDk2NTE0NTA5Njk0NzUxMjgM">
+    
+      3 hours, 7 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.steampunktendencies.com/post/102829329029/uggly-super-flamands">steampunktendencies.com/post/102829329...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/102341783762793417835"
+       title="latanya gordon">
+      <img class="profile" src="https://lh6.googleusercontent.com/-BFdMjhCcMBs/AAAAAAAAAAI/AAAAAAAAAAA/7-nTuweA7K8/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/109129921515735293128/posts/BE2WGKcyRjC">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/104070223882117824524/posts/aXc2TJ91joF">
+      
+        Super Flamands by Sacha Goldbergerhttp://goo.gl/ZCE159👍 Check ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416197891&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyMWhmeGF5bWlmZmxpaWMwNGNkNWlnNHJhMWRibTUwc28wa19saWtlZF9ieV8xMDIzNDE3ODM3NjI3OTM0MTc4MzUM">
+    
+      4 hours, 30 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.steampunktendencies.com/post/102829329029/uggly-super-flamands">steampunktendencies.com/post/102829329...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/111295110758291418667"
+       title="Tyler Ferguson">
+      <img class="profile" src="https://lh4.googleusercontent.com/-rnzkOmra1TI/AAAAAAAAAAI/AAAAAAAAAAA/UTyrH8vC4kw/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/109129921515735293128/posts/BE2WGKcyRjC">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/104070223882117824524/posts/aXc2TJ91joF">
+      
+        Super Flamands by Sacha Goldbergerhttp://goo.gl/ZCE159👍 Check ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416196604&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyMWhmeGF5bWlmZmxpaWMwNGNkNWlnNHJhMWRibTUwc28wa19saWtlZF9ieV8xMTEyOTUxMTA3NTgyOTE0MTg2NjcM">
+    
+      4 hours, 51 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.steampunktendencies.com/post/102829329029/uggly-super-flamands">steampunktendencies.com/post/102829329...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

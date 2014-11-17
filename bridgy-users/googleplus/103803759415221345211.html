@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Darius Dunlap (Google+) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://plus.google.com/+DariusDunlap" title="Darius Dunlap (Google+)"
+   class="u-url">
+  <img class="profile u-photo" src="https://lh5.googleusercontent.com/-05eH1jSZfT0/AAAAAAAAAAI/AAAAAAAAAH0/N20QKasWKQ8/photo.jpg?sz=50&amp;sz=128" width="64px" />
+  <img src="/static/googleplus_icon.png"
+       
+       alt="Google+" />
+  <span class="p-name">Darius Dunlap</span></a>
+
+
+
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row promo warning">
+<p id="edit-profile">First things first: what's your web site?
+
+Open your
+<a href="https://plus.google.com/me/about" target="_blank">
+  Google+ profile's <em>Links</em> section</a>, click the <em>Edit</em> link,
+and add your web site as the first link under <em>Other profiles</em>. Then
+click here:
+<!-- Google+ listen signup -->
+<form method="post" name="listen-googleplus-start" action="/googleplus/start" class="signup">
+  <input type="image" alt="Sign in with Google+"
+         src="/activitystreams/oauth_dropins/static/google_plus.png" />
+  <!-- The state param doesn't actually work for G+. Not sure why. Doesn't
+       matter for now since we don't support publish for G+. -->
+  <input name="feature" type="hidden" value="listen" />
+  <!-- https://developers.google.com/+/api/oauth#scopes -->
+  <input name="scope" type="hidden"
+         value="https://www.googleapis.com/auth/plus.login" />
+</form>
+
+
+</p>
+</div>
+
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class=" big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDM4MDM3NTk0MTUyMjEzNDUyMTEM" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416179498&key=aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDM4MDM3NTk0MTUyMjEzNDUyMTEM">
+      9 hours, 36 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDM4MDM3NTk0MTUyMjEzNDUyMTEM" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/113534704509596161677"
+       title="Big Nerd Ranch">
+      <img class="profile" src="https://lh5.googleusercontent.com/-xcMQslpiwjU/AAAAAAAAAAI/AAAAAAAAAAA/U3cO5tremQg/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/103803759415221345211/posts/8uiPePpEF3a">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/103803759415221345211/posts/8uiPePpEF3a">
+      
+        If you want to come up ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      4 days, 6 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/117373186752666867801"
+       title="Dave Gray">
+      <img class="profile" src="https://lh5.googleusercontent.com/-fk-5tESR2fk/AAAAAAAAAAI/AAAAAAAAAAA/gFXJOYfIHqs/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/103803759415221345211/posts/KjmiLeYQgLL">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/103803759415221345211/posts/KjmiLeYQgLL">
+      
+        Eric Ries&#39; new book is now ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1412077526&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzMnUzZnFrbnV5Y2YwdmsyM3R6ZnVpY3Zqd3N0c3p6MDRfbGlrZWRfYnlfMTE3MzczMTg2NzUyNjY2ODY3ODAxDA">
+    
+      1 month, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.startuplessonslearned.com/2011/07/lean-startup-book-is-here.html">startuplessonslearned.com/2011/07/lean-s...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/111771746041908963584"
+       title="Mary kate">
+      <img class="profile" src="https://lh5.googleusercontent.com/-GUEdUsbraxk/AAAAAAAAAAI/AAAAAAAAABA/aBHJzSZ4yIU/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/103803759415221345211/posts/ZKgvTs5z5cm">
+        I am mary by name..Am single ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/103803759415221345211/posts/ZKgvTs5z5cm">
+      
+        Very cool set of free stuff!﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1399360412&key=aglzfmJyaWQtZ3lyXQsSCFJlc3BvbnNlIk90YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyZGd4M3ozcWp5anBicTEwNGNqYnhqZHQzaHpuM2Izencway4xMzk5MzU5ODYxNjE4MTEyDA">
+    
+      6 months, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://www.paddle.com/freebie/490790/the-free-creative-bundle/">paddle.com/freebie/490790...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/105743500938501555123"
+       title="Harpin Calaquendi">
+      <img class="profile" src="https://lh4.googleusercontent.com/-0yn6BMOYIuE/AAAAAAAAAAI/AAAAAAAAAAA/ioRHJNNJtcA/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/103803759415221345211/posts/JGADWV6R2WQ">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/103803759415221345211/posts/JGADWV6R2WQ">
+      
+        The beautiful thing about &quot;It Gets ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1398474498&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyaXRucnh6eWlrdnJhZmIyM3R6ZnVpY3Zqd3N0c3p6MDRfbGlrZWRfYnlfMTA1NzQzNTAwOTM4NTAxNTU1MTIzDA">
+    
+      6 months, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.itgetsbetter.org/">itgetsbetter.org/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/111591591825660419884"
+       title="NiftyHat Tom Mitchell">
+      <img class="profile" src="https://lh3.googleusercontent.com/-zIWWdCyk-8A/AAAAAAAAAAI/AAAAAAAAAAA/-Lo1EQiOocU/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/103803759415221345211/posts/RaiKx1HU2jU">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/103803759415221345211/posts/RaiKx1HU2jU">
+      
+        For my part, I prefer to ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      6 months, 3 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/109417313079764396285"
+       title="Hillary Hartley">
+      <img class="profile" src="https://lh4.googleusercontent.com/-OLw5E1Qzpho/AAAAAAAAAAI/AAAAAAAAAAA/mE_hxM2mxxw/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/103803759415221345211/posts/JGADWV6R2WQ">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/103803759415221345211/posts/JGADWV6R2WQ">
+      
+        The beautiful thing about &quot;It Gets ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1398474397&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyaXRucnh6eWlrdnJhZmIyM3R6ZnVpY3Zqd3N0c3p6MDRfbGlrZWRfYnlfMTA5NDE3MzEzMDc5NzY0Mzk2Mjg1DA">
+    
+      6 months, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.itgetsbetter.org/">itgetsbetter.org/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/109417313079764396285"
+       title="Hillary Hartley">
+      <img class="profile" src="https://lh4.googleusercontent.com/-OLw5E1Qzpho/AAAAAAAAAAI/AAAAAAAAAAA/mE_hxM2mxxw/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/103803759415221345211/posts/DqWu27MhxKD">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/103803759415221345211/posts/DqWu27MhxKD">
+      
+        Garrick Davis is rocking Pescadero. ﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      6 months, 3 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/110385713208757699702"
+       title="Mushin MW">
+      <img class="profile" src="https://lh4.googleusercontent.com/-uCpE9nc3azk/AAAAAAAAAAI/AAAAAAAAAAA/zq7PgFth3aA/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/106684394261860468438/posts/CBV6xKVqtSi">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/103803759415221345211/posts/hqBVCaUbpzd">
+      
+        i&#39;m panicking a bit tonight, because ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1398286235&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyNWh4Y3dqdjNsZGozcm8wNGNqYnhqZHQzaHpuM2Izencwa19saWtlZF9ieV8xMTAzODU3MTMyMDg3NTc2OTk3MDIM">
+    
+      6 months, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.lawfareblog.com/2014/04/heartbleed-as-metaphor/">lawfareblog.com/2014/04/heartb...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/110385713208757699702"
+       title="Mushin MW">
+      <img class="profile" src="https://lh6.googleusercontent.com/-uCpE9nc3azk/AAAAAAAAAAI/AAAAAAAAABI/VDeVsXbdo90/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/103803759415221345211/posts/hqBVCaUbpzd">
+        Paul,Very interesting article and good luck ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/103803759415221345211/posts/hqBVCaUbpzd">
+      
+        i&#39;m panicking a bit tonight, because ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1398286196&key=aglzfmJyaWQtZ3lyXQsSCFJlc3BvbnNlIk90YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyNWh4Y3dqdjNsZGozcm8wNGNqYnhqZHQzaHpuM2Izencway4xMzk4Mjg1ODA4MTUwNjQyDA">
+    
+      6 months, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.lawfareblog.com/2014/04/heartbleed-as-metaphor/">lawfareblog.com/2014/04/heartb...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/114927550142325929366"
+       title="Rajasekhar Reddy Mettu">
+      <img class="profile" src="https://lh3.googleusercontent.com/-1uVY6MyzXDo/AAAAAAAAAAI/AAAAAAAAAAA/1xKe1DJl0tg/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/103803759415221345211/posts/gyoJiCQG25R">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/103803759415221345211/posts/gyoJiCQG25R">
+      
+        +Emory L - Great Show this ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1396073459&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyYWZyY3JvbWUzeDEwcmowNGNqYnhqZHQzaHpuM2Izencwa19saWtlZF9ieV8xMTQ5Mjc1NTAxNDIzMjU5MjkzNjYM">
+    
+      7 months, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://show.hellyeah.com/2012/01/06/1x20-hellyeah-show-would-you-like-the-protection-plan/#more-185">show.hellyeah.com/2012/01/06/1x2...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

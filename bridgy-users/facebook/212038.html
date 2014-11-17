@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Ryan Barrett (Facebook) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://facebook.com/snarfed.org" title="Ryan Barrett (Facebook)"
+   class="u-url">
+  <img class="profile u-photo" src="https://graph.facebook.com/snarfed.org/picture?type=large" width="64px" />
+  <img src="/static/facebook_icon.png"
+       
+       alt="Facebook" />
+  <span class="p-name">Ryan Barrett</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="https://snarfed.org" class="publish-domain u-url">snarfed.org</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGAsSDEZhY2Vib29rUGFnZSIGMjEyMDM4DA" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416214352&key=aglzfmJyaWQtZ3lyGAsSDEZhY2Vib29rUGFnZSIGMjEyMDM4DA">
+      2 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGAsSDEZhY2Vib29rUGFnZSIGMjEyMDM4DA" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+<form method="post" action="/delete/start">
+<p id="publishing-label" class="big">
+ Ready to publish.
+   <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGAsSDEZhY2Vib29rUGFnZSIGMjEyMDM4DA" />
+   <input name="feature" type="hidden" value="publish" />
+   <button id="delete-button" type="submit" class="btn btn-default"
+     title="Disable publishing for this account. (Won't delete posts you've already published.)"
+     >Disable</button>
+</p>
+</form>
+
+<form method="post" name="preview" action="/publish/preview"
+      onsubmit="do_preview('facebook'); return false;">
+<p id="preview-ui">
+ <label id="source-label" for="source-url">Enter post URL:</label>
+ <input id="source-url" name="source" type="url" required alt="Source URL"></input>
+ <input name="target" type="hidden"
+        value="http://brid.gy/publish/facebook"></input>
+
+ <nobr>
+ <!-- use a hidden input before the checkbox with the same name to set the value
+      to be sent when the checkbox is unchecked. -->
+ &nbsp;
+ <input id="include-link-unchecked" name="bridgy_omit_link" type="hidden"
+        value="true"></input>
+ <input id="include-link-checked" name="bridgy_omit_link" type="checkbox"
+        value="false" checked></input>
+ <label id="include-link-label" for="include-link-checked">Include link</label>
+ &nbsp;
+ <button id="preview-button" type="submit" class="btn btn-default">Preview</button>
+ </nobr>
+</p>
+</form>
+
+<!-- Publish signup buttons -->
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/677971145"
+       title="Ulrik Binzer">
+      <img class="profile" src="https://graph.facebook.com/677971145/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/212038/posts/10101366141553173">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/212038/posts/10152403922687327">
+      
+        Ryan Barrett was tagged in Daniel ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 hours, 44 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1813294136"
+       title="Ellie Zhang">
+      <img class="profile" src="https://graph.facebook.com/1813294136/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/212038/posts/10101366141553173">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/212038/posts/10152403922687327">
+      
+        Ryan Barrett was tagged in Daniel ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      6 hours, 43 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/100000495729206"
+       title="Robin Parker Guerrero">
+      <img class="profile" src="https://graph.facebook.com/100000495729206/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/212038/posts/10101366787513663">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/212038/posts/10101366787513663">
+      
+        "Your thoughts are suddenly consumed by ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416177959&key=aglzfmJyaWQtZ3lyTgsSCFJlc3BvbnNlIkB0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxMDEzNjY3ODc1MTM2NjNfbGlrZWRfYnlfMTAwMDAwNDk1NzI5MjA2DA">
+    
+      10 hours, 8 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://snarfed.org/2014-11-14_thoughts-on-having-a-baby">snarfed.org/2014-11-14_tho...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/500011789"
+       title="Natala Menezes">
+      <img class="profile" src="https://graph.facebook.com/500011789/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/212038/posts/10101366787513663">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/212038/posts/10101366787513663">
+      
+        "Your thoughts are suddenly consumed by ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416142898&key=aglzfmJyaWQtZ3lySAsSCFJlc3BvbnNlIjp0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxMDEzNjY3ODc1MTM2NjNfbGlrZWRfYnlfNTAwMDExNzg5DA">
+    
+      19 hours, 52 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://snarfed.org/2014-11-14_thoughts-on-having-a-baby">snarfed.org/2014-11-14_tho...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/513403165"
+       title="Krista Jones">
+      <img class="profile" src="https://graph.facebook.com/513403165/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/212038/posts/10101366787513663">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/212038/posts/10101366787513663">
+      
+        "Your thoughts are suddenly consumed by ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416142259&key=aglzfmJyaWQtZ3lySAsSCFJlc3BvbnNlIjp0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxMDEzNjY3ODc1MTM2NjNfbGlrZWRfYnlfNTEzNDAzMTY1DA">
+    
+      20 hours, 3 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://snarfed.org/2014-11-14_thoughts-on-having-a-baby">snarfed.org/2014-11-14_tho...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/695687650"
+       title="Michael Mandel">
+      <img class="profile" src="https://graph.facebook.com/695687650/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/212038/posts/10101366787513663">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/212038/posts/10101366787513663">
+      
+        "Your thoughts are suddenly consumed by ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416105685&key=aglzfmJyaWQtZ3lySAsSCFJlc3BvbnNlIjp0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxMDEzNjY3ODc1MTM2NjNfbGlrZWRfYnlfNjk1Njg3NjUwDA">
+    
+      1 day, 6 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://snarfed.org/2014-11-14_thoughts-on-having-a-baby">snarfed.org/2014-11-14_tho...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/505222263"
+       title="Greg Stein">
+      <img class="profile" src="https://graph.facebook.com/505222263/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/212038/posts/10101366787513663">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/212038/posts/10101366787513663">
+      
+        "Your thoughts are suddenly consumed by ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416101756&key=aglzfmJyaWQtZ3lySAsSCFJlc3BvbnNlIjp0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxMDEzNjY3ODc1MTM2NjNfbGlrZWRfYnlfNTA1MjIyMjYzDA">
+    
+      1 day, 7 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://snarfed.org/2014-11-14_thoughts-on-having-a-baby">snarfed.org/2014-11-14_tho...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1041585392"
+       title="Joan Parato">
+      <img class="profile" src="https://graph.facebook.com/1041585392/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/212038/posts/10101366141553173">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/212038/posts/10152403922687327">
+      
+        Ryan Barrett was tagged in Daniel ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 day, 7 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/100001823928213"
+       title="Evelyn Barrett">
+      <img class="profile" src="https://graph.facebook.com/100001823928213/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/212038/posts/10101366787513663">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/212038/posts/10101366787513663">
+      
+        "Your thoughts are suddenly consumed by ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416096978&key=aglzfmJyaWQtZ3lyTgsSCFJlc3BvbnNlIkB0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxMDEzNjY3ODc1MTM2NjNfbGlrZWRfYnlfMTAwMDAxODIzOTI4MjEzDA">
+    
+      1 day, 8 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://snarfed.org/2014-11-14_thoughts-on-having-a-baby">snarfed.org/2014-11-14_tho...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1053760758"
+       title="LeRoy Rowland">
+      <img class="profile" src="https://graph.facebook.com/1053760758/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/212038/posts/10101366141553173">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/212038/posts/10152403922687327">
+      
+        Ryan Barrett was tagged in Daniel ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 day, 9 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+
+<p id="publishes" class="big">Recently published:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://snarfed.org/2014-11-14_facebook">snarfed.org/2014-11-14_fac...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1416015842&key=aglzfmJyaWQtZ3lyTgsSDVB1Ymxpc2hlZFBhZ2UiJ2h0dHBzOi8vc25hcmZlZC5vcmcvMjAxNC0xMS0xNF9mYWNlYm9vawwLEgdQdWJsaXNoGICAgICAgIAKDA">
+      2 days, 7 hours ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://www.facebook.com/photo.php?fbid=10101364381305723&amp;set=a.726126803903.2291274.202888&amp;type=1&amp;theater">
+     
+     like
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://snarfed.org/2014-11-03_the-top-podcasts-are-professional-but-everyones-voice-should-be-heard-podcastsunday">snarfed.org/2014-11-03_the...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1415056623&key=aglzfmJyaWQtZ3lymQELEg1QdWJsaXNoZWRQYWdlInJodHRwczovL3NuYXJmZWQub3JnLzIwMTQtMTEtMDNfdGhlLXRvcC1wb2RjYXN0cy1hcmUtcHJvZmVzc2lvbmFsLWJ1dC1ldmVyeW9uZXMtdm9pY2Utc2hvdWxkLWJlLWhlYXJkLXBvZGNhc3RzdW5kYXkMCxIHUHVibGlzaBiAgICAgOSRCgw">
+      1 week, 6 days ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://facebook.com/36802236/posts/10100972025854559?comment_id=36802236:10100972025854559:63_10100972862507899">
+     
+     comment
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://snarfed.org/2014-10-31_setting-up-webmentions-thru-withknown-and-bridgy-probably-skipped-some-steps-somewhere-hmm-somebody-say-hi-please-and-let-me-see">snarfed.org/2014-10-31_set...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1414797035&key=aglzfmJyaWQtZ3lyxwELEg1QdWJsaXNoZWRQYWdlIp8BaHR0cHM6Ly9zbmFyZmVkLm9yZy8yMDE0LTEwLTMxX3NldHRpbmctdXAtd2VibWVudGlvbnMtdGhydS13aXRoa25vd24tYW5kLWJyaWRneS1wcm9iYWJseS1za2lwcGVkLXNvbWUtc3RlcHMtc29tZXdoZXJlLWhtbS1zb21lYm9keS1zYXktaGktcGxlYXNlLWFuZC1sZXQtbWUtc2VlDAsSB1B1Ymxpc2gYgICAgIDkkQoM">
+      2 weeks, 2 days ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://snarfed.org/2014-10-31_day-of-the-devs">snarfed.org/2014-10-31_day...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1414779906&key=aglzfmJyaWQtZ3lyVQsSDVB1Ymxpc2hlZFBhZ2UiLmh0dHBzOi8vc25hcmZlZC5vcmcvMjAxNC0xMC0zMV9kYXktb2YtdGhlLWRldnMMCxIHUHVibGlzaBiAgICAgOSRCgw">
+      2 weeks, 2 days ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://www.facebook.com/events/1562733387282948">
+     
+     rsvp
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://snarfed.org/2014-10-31_day-of-the-devs">snarfed.org/2014-10-31_day...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1414779895&key=aglzfmJyaWQtZ3lyVQsSDVB1Ymxpc2hlZFBhZ2UiLmh0dHBzOi8vc25hcmZlZC5vcmcvMjAxNC0xMC0zMV9kYXktb2YtdGhlLWRldnMMCxIHUHVibGlzaBiAgICAgICACgw">
+      2 weeks, 2 days ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     preview
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://snarfed.org/2014-10-30_time-to-test-brid-gy">snarfed.org/2014-10-30_tim...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1414738051&key=aglzfmJyaWQtZ3lyWgsSDVB1Ymxpc2hlZFBhZ2UiM2h0dHBzOi8vc25hcmZlZC5vcmcvMjAxNC0xMC0zMF90aW1lLXRvLXRlc3QtYnJpZC1neQwLEgdQdWJsaXNoGICAgICA5JEKDA">
+      2 weeks, 3 days ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://snarfed.org/2014-10-24_more-roseangle-graffiti">snarfed.org/2014-10-24_mor...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1414200460&key=aglzfmJyaWQtZ3lyXQsSDVB1Ymxpc2hlZFBhZ2UiNmh0dHBzOi8vc25hcmZlZC5vcmcvMjAxNC0xMC0yNF9tb3JlLXJvc2VhbmdsZS1ncmFmZml0aQwLEgdQdWJsaXNoGICAgICAgIAKDA">
+      3 weeks, 2 days ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://snarfed.org/2014-10-21_michael-mandel-today-fantasia-music-evolved-is-out-a-game-i">snarfed.org/2014-10-21_mic...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1413948762&key=aglzfmJyaWQtZ3lygQELEg1QdWJsaXNoZWRQYWdlIlpodHRwczovL3NuYXJmZWQub3JnLzIwMTQtMTAtMjFfbWljaGFlbC1tYW5kZWwtdG9kYXktZmFudGFzaWEtbXVzaWMtZXZvbHZlZC1pcy1vdXQtYS1nYW1lLWkMCxIHUHVibGlzaBiAgICAgICACgw">
+      3 weeks, 5 days ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://facebook.com/michael.mandel.77/posts/10152382099642651?comment_id=10152382099642651_10152383083637651">
+     
+     comment
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://snarfed.org/2014-10-21_day-of-the-devs-presented-by-double-fine-and-iam8bit">snarfed.org/2014-10-21_day...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1413939899&key=aglzfmJyaWQtZ3lyegsSDVB1Ymxpc2hlZFBhZ2UiU2h0dHBzOi8vc25hcmZlZC5vcmcvMjAxNC0xMC0yMV9kYXktb2YtdGhlLWRldnMtcHJlc2VudGVkLWJ5LWRvdWJsZS1maW5lLWFuZC1pYW04Yml0DAsSB1B1Ymxpc2gYgICAgICAgAoM">
+      3 weeks, 5 days ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://www.facebook.com/events/1562733387282948">
+     
+     rsvp
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://snarfed.org/2014-10-18_hello-world">snarfed.org/2014-10-18_hel...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1413676269&key=aglzfmJyaWQtZ3lyUQsSDVB1Ymxpc2hlZFBhZ2UiKmh0dHBzOi8vc25hcmZlZC5vcmcvMjAxNC0xMC0xOF9oZWxsby13b3JsZAwLEgdQdWJsaXNoGICAgICA5JEJDA">
+      4 weeks, 1 day ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     
+     
+
+   </div>
+  </li>
+  
+</ul>
+
+
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Mitch Wagner (Google+) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://plus.google.com/+MitchWagner" title="Mitch Wagner (Google+)"
+   class="u-url">
+  <img class="profile u-photo" src="https://lh6.googleusercontent.com/-DgGWPlzxwiY/AAAAAAAAAAI/AAAAAAAAbR4/Z7-69-mVrEI/photo.jpg?sz=50&amp;sz=128" width="64px" />
+  <img src="/static/googleplus_icon.png"
+       
+       alt="Google+" />
+  <span class="p-name">Mitch Wagner</span></a>
+
+
+
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row promo warning">
+<p id="edit-profile">First things first: what's your web site?
+
+Open your
+<a href="https://plus.google.com/me/about" target="_blank">
+  Google+ profile's <em>Links</em> section</a>, click the <em>Edit</em> link,
+and add your web site as the first link under <em>Other profiles</em>. Then
+click here:
+<!-- Google+ listen signup -->
+<form method="post" name="listen-googleplus-start" action="/googleplus/start" class="signup">
+  <input type="image" alt="Sign in with Google+"
+         src="/activitystreams/oauth_dropins/static/google_plus.png" />
+  <!-- The state param doesn't actually work for G+. Not sure why. Doesn't
+       matter for now since we don't support publish for G+. -->
+  <input name="feature" type="hidden" value="listen" />
+  <!-- https://developers.google.com/+/api/oauth#scopes -->
+  <input name="scope" type="hidden"
+         value="https://www.googleapis.com/auth/plus.login" />
+</form>
+
+
+</p>
+</div>
+
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class=" big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTUxNTc4ODIwOTcwODk4NDUxNTMM" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416143564&key=aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTUxNTc4ODIwOTcwODk4NDUxNTMM">
+      19 hours, 42 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTUxNTc4ODIwOTcwODk4NDUxNTMM" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/100369972233046636039"
+       title="Ahmed Amer">
+      <img class="profile" src="https://lh6.googleusercontent.com/-aOmerk-v5E8/AAAAAAAAAAI/AAAAAAAAAAA/P0YvW0LxMHQ/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/115157882097089845153/posts/URKd21Lw5VS">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/115157882097089845153/posts/URKd21Lw5VS">
+      
+        How Sweden virtually wiped out prostitution.Swedish ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416143675&key=aglzfmJyaWQtZ3lyagsSCFJlc3BvbnNlIlx0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEza3NyZGF3dHFmanR4cDMwNGNnem9ncHJ2Z3RwajRoamNfc2hhcmVkX2J5XzEwMDM2OTk3MjIzMzA0NjYzNjAzOQw">
+    
+      19 hours, 40 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://esnoticia.co/noticia-8790-swedens-prostitution-solution-why-hasnt-anyone-tried-this-before">esnoticia.co/noticia-8790-s...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/115777986523331582191"
+       title="Peggy Elchert">
+      <img class="profile" src="https://lh4.googleusercontent.com/-bbUZm_B5Tp0/AAAAAAAAAAI/AAAAAAAAAHo/sD8oWHoSZZA/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/115157882097089845153/posts/D2WxNAFLjGm">
+        +phil strawman Precisely !</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/115157882097089845153/posts/D2WxNAFLjGm">
+      
+        Every time I read an article ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416143674&key=aglzfmJyaWQtZ3lyWQsSCFJlc3BvbnNlIkt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEydGNiemhkejMwZGJ3dWIyM2J4MzVoeXZhaGZ0M2Z1LjE0MTYxMzgyMDIzODI1ODYM">
+    
+      19 hours, 40 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.politico.com/magazine/story/2014/11/rand-pauls-greatest-weakness-112816.html#.VGRT7R-9KK0">politico.com/magazine/story...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/105155928433204533398"
+       title="Bryan Kroger (krogebry)">
+      <img class="profile" src="https://lh4.googleusercontent.com/-tO-CV8EYXbE/AAAAAAAAAAI/AAAAAAAAAAA/h1xxRCH8lcU/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/115157882097089845153/posts/H7zHbGdmSQN">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/115157882097089845153/posts/H7zHbGdmSQN">
+      
+        Interesting study, but full of baloney. ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416143671&key=aglzfmJyaWQtZ3lyZwsSCFJlc3BvbnNlIll0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzYnozM2d6eGJrdjNnMzAyM2J4MzVoeXZhaGZ0M2Z1X2xpa2VkX2J5XzEwNTE1NTkyODQzMzIwNDUzMzM5OAw">
+    
+      19 hours, 40 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.theatlantic.com/health/archive/2014/11/why-to-marry-someone-your-own-age/382520/">theatlantic.com/health/archive...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/116778611088000767597"
+       title="John Livingston">
+      <img class="profile" src="https://lh4.googleusercontent.com/-dekSYC3KHbg/AAAAAAAAAAI/AAAAAAAAAAA/0CVQU1NCDm0/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/115157882097089845153/posts/H7zHbGdmSQN">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/115157882097089845153/posts/H7zHbGdmSQN">
+      
+        Interesting study, but full of baloney. ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416143668&key=aglzfmJyaWQtZ3lyZwsSCFJlc3BvbnNlIll0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzYnozM2d6eGJrdjNnMzAyM2J4MzVoeXZhaGZ0M2Z1X2xpa2VkX2J5XzExNjc3ODYxMTA4ODAwMDc2NzU5Nww">
+    
+      19 hours, 40 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.theatlantic.com/health/archive/2014/11/why-to-marry-someone-your-own-age/382520/">theatlantic.com/health/archive...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/114640538333165230158"
+       title="John Mitchell">
+      <img class="profile" src="https://lh4.googleusercontent.com/-n5pA-hSJbhc/AAAAAAAAAAI/AAAAAAAAAAA/UQLjQcqW204/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/110716763540971282005/posts/JhZAqGv63fa">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/115157882097089845153/posts/foy2AQnqwJr">
+      
+        Lost in Space, 1965.http://bit.ly/1x5xkqq#scifi #sciencefiction #Robot﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416143666&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyZHhweGlkbmpxeDEwemMwNGNnem9ncHJ2Z3RwajRoamNfbGlrZWRfYnlfMTE0NjQwNTM4MzMzMTY1MjMwMTU4DA">
+    
+      19 hours, 40 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://scifi-covers.com/post/102634029144/sciencefictiongallery-lost-in-space-1965">scifi-covers.com/post/102634029...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/104351597167292130158"
+       title="Ray Radlein">
+      <img class="profile" src="https://lh4.googleusercontent.com/-FCF2YJsQ3Ko/AAAAAAAAAAI/AAAAAAAAAAA/Y0zFkV5KRcY/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/110716763540971282005/posts/JhZAqGv63fa">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/115157882097089845153/posts/foy2AQnqwJr">
+      
+        Lost in Space, 1965.http://bit.ly/1x5xkqq#scifi #sciencefiction #Robot﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416143663&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyZHhweGlkbmpxeDEwemMwNGNnem9ncHJ2Z3RwajRoamNfbGlrZWRfYnlfMTA0MzUxNTk3MTY3MjkyMTMwMTU4DA">
+    
+      19 hours, 40 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://scifi-covers.com/post/102634029144/sciencefictiongallery-lost-in-space-1965">scifi-covers.com/post/102634029...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/116858830667556216897"
+       title="Keith Warner">
+      <img class="profile" src="https://lh3.googleusercontent.com/-iplsBn28ywY/AAAAAAAAAAI/AAAAAAAAAAA/6mVZVS9IjwE/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/110716763540971282005/posts/JhZAqGv63fa">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/115157882097089845153/posts/foy2AQnqwJr">
+      
+        Lost in Space, 1965.http://bit.ly/1x5xkqq#scifi #sciencefiction #Robot﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416143660&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyZHhweGlkbmpxeDEwemMwNGNnem9ncHJ2Z3RwajRoamNfbGlrZWRfYnlfMTE2ODU4ODMwNjY3NTU2MjE2ODk3DA">
+    
+      19 hours, 40 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://scifi-covers.com/post/102634029144/sciencefictiongallery-lost-in-space-1965">scifi-covers.com/post/102634029...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/118026785008652460267"
+       title="Kimmy Queen">
+      <img class="profile" src="https://lh3.googleusercontent.com/-SsbxB-wiPLQ/AAAAAAAAAAI/AAAAAAAAAAA/UJ-N1ZIGmcA/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/115157882097089845153/posts/D2WxNAFLjGm">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/115157882097089845153/posts/D2WxNAFLjGm">
+      
+        Every time I read an article ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416143657&key=aglzfmJyaWQtZ3lyaAsSCFJlc3BvbnNlIlp0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEydGNiemhkejMwZGJ3dWIyM2J4MzVoeXZhaGZ0M2Z1X3NoYXJlZF9ieV8xMTgwMjY3ODUwMDg2NTI0NjAyNjcM">
+    
+      19 hours, 40 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.politico.com/magazine/story/2014/11/rand-pauls-greatest-weakness-112816.html#.VGRT7R-9KK0">politico.com/magazine/story...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/103465139955428116774"
+       title="Bill Proctor">
+      <img class="profile" src="https://lh4.googleusercontent.com/-8R1qqBp_b_o/AAAAAAAAAAI/AAAAAAAAAW0/bSMq-lsZ9Do/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/115157882097089845153/posts/D2WxNAFLjGm">
+        +Mitch Wagner​ Mitch, just to take ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/115157882097089845153/posts/D2WxNAFLjGm">
+      
+        Every time I read an article ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416143654&key=aglzfmJyaWQtZ3lyWQsSCFJlc3BvbnNlIkt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEydGNiemhkejMwZGJ3dWIyM2J4MzVoeXZhaGZ0M2Z1LjE0MTYwODM4MzI1NDIxNzEM">
+    
+      19 hours, 41 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.politico.com/magazine/story/2014/11/rand-pauls-greatest-weakness-112816.html#.VGRT7R-9KK0">politico.com/magazine/story...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/117303081651824342575"
+       title="Farhad Divecha">
+      <img class="profile" src="https://lh4.googleusercontent.com/-T6xvAqZco_c/AAAAAAAAAAI/AAAAAAAAAAA/L7AE0Tlfmkc/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/110716763540971282005/posts/hgTtzULmHJS">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/115157882097089845153/posts/9KoPPc63j9c">
+      
+        I’d like to think the aliens ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416143651&key=aglzfmJyaWQtZ3lyZwsSCFJlc3BvbnNlIll0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzaHd2c2dobWVwdDVzbGwyM2J4MzVoeXZhaGZ0M2Z1X2xpa2VkX2J5XzExNzMwMzA4MTY1MTgyNDM0MjU3NQw">
+    
+      19 hours, 41 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://scifi-covers.com/post/102643068392/id-like-to-think-the-aliens-are-reacting-to-his">scifi-covers.com/post/102643068...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

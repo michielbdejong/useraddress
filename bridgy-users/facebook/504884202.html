@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Mark Fleming (Facebook) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://facebook.com/mtony75" title="Mark Fleming (Facebook)"
+   class="u-url">
+  <img class="profile u-photo" src="https://graph.facebook.com/mtony75/picture?type=large" width="64px" />
+  <img src="/static/facebook_icon.png"
+       
+       alt="Facebook" />
+  <span class="p-name">Mark Fleming</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://tonyfleming.withknown.com" class="publish-domain u-url">tonyfleming.withknown.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGwsSDEZhY2Vib29rUGFnZSIJNTA0ODg0MjAyDA" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416214005&key=aglzfmJyaWQtZ3lyGwsSDEZhY2Vib29rUGFnZSIJNTA0ODg0MjAyDA">
+      11 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGwsSDEZhY2Vib29rUGFnZSIJNTA0ODg0MjAyDA" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+<span class="big">Click to enable <a href="/about#publish">publishing</a>:</span>
+<form method="post" name="publish-facebook-start" action="/facebook/start" class="signup">
+ <input type="image" alt="Sign in with Facebook"
+        src="/activitystreams/oauth_dropins/static/facebook.png" />
+ <input name="feature" type="hidden" value="publish" />
+ <!-- https://developers.facebook.com/docs/reference/login/ -->
+ <input name="scope" type="hidden"
+        value="offline_access,user_website,publish_actions,create_event,rsvp_event,user_status,friends_status,user_photos,friends_photos,user_videos,friends_videos,user_events,friends_events,user_likes,friends_likes" />
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/100005013250524"
+       title="Yancine Richardson">
+      <img class="profile" src="https://graph.facebook.com/100005013250524/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/504884202/posts/10152925748339203">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/504884202/posts/10152925748339203">
+      
+        I need better shoes Original: http://tonyfleming.withknown.com/2014/i-need-better-shoes
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415927905&key=aglzfmJyaWQtZ3lyTgsSCFJlc3BvbnNlIkB0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTI5MjU3NDgzMzkyMDNfbGlrZWRfYnlfMTAwMDA1MDEzMjUwNTI0DA">
+    
+      3 days, 7 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://tonyfleming.withknown.com/2014/i-need-better-shoes">tonyfleming.withknown.com/2014/i-need-be...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/100005013250524"
+       title="Yancine Richardson">
+      <img class="profile" src="https://graph.facebook.com/100005013250524/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/504884202/posts/10152925748354203">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/504884202/posts/10152925748339203">
+      
+        I need better shoes Original: http://tonyfleming.withknown.com/2014/i-need-better-shoes
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415927892&key=aglzfmJyaWQtZ3lyTgsSCFJlc3BvbnNlIkB0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTI5MjU3NDgzNTQyMDNfbGlrZWRfYnlfMTAwMDA1MDEzMjUwNTI0DA">
+    
+      3 days, 7 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://tonyfleming.withknown.com/2014/i-need-better-shoes">tonyfleming.withknown.com/2014/i-need-be...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1637183026"
+       title="Cheneda Jordan Nelson">
+      <img class="profile" src="https://graph.facebook.com/1637183026/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/504884202/posts/10152925748354203">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/504884202/posts/10152925748339203">
+      
+        I need better shoes Original: http://tonyfleming.withknown.com/2014/i-need-better-shoes
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415911767&key=aglzfmJyaWQtZ3lySQsSCFJlc3BvbnNlIjt0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTI5MjU3NDgzNTQyMDNfbGlrZWRfYnlfMTYzNzE4MzAyNgw">
+    
+      3 days, 12 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://tonyfleming.withknown.com/2014/i-need-better-shoes">tonyfleming.withknown.com/2014/i-need-be...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1637183026"
+       title="Cheneda Jordan Nelson">
+      <img class="profile" src="https://graph.facebook.com/1637183026/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/504884202/posts/10152925748339203">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/504884202/posts/10152925748339203">
+      
+        I need better shoes Original: http://tonyfleming.withknown.com/2014/i-need-better-shoes
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415911746&key=aglzfmJyaWQtZ3lySQsSCFJlc3BvbnNlIjt0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTI5MjU3NDgzMzkyMDNfbGlrZWRfYnlfMTYzNzE4MzAyNgw">
+    
+      3 days, 12 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://tonyfleming.withknown.com/2014/i-need-better-shoes">tonyfleming.withknown.com/2014/i-need-be...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/100001405296330"
+       title="Patrice Woodard">
+      <img class="profile" src="https://graph.facebook.com/100001405296330/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/10152925748339203?comment_id=10152926620799203">
+        EXCELLENT</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/504884202/posts/10152925748339203">
+      
+        I need better shoes Original: http://tonyfleming.withknown.com/2014/i-need-better-shoes
+      
+    </a></li>
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/504884202/posts/10152925748339203">
+      
+        I need better shoes Original: http://tonyfleming.withknown.com/2014/i-need-better-shoes
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415903595&key=aglzfmJyaWQtZ3lyRwsSCFJlc3BvbnNlIjl0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTI5MjU3NDgzMzkyMDNfMTAxNTI5MjY2MjA3OTkyMDMM">
+    
+      3 days, 14 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://tonyfleming.withknown.com/2014/i-need-better-shoes">tonyfleming.withknown.com/2014/i-need-be...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/100001405296330"
+       title="Patrice Woodard">
+      <img class="profile" src="https://graph.facebook.com/100001405296330/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/504884202/posts/10152925748339203">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/504884202/posts/10152925748339203">
+      
+        I need better shoes Original: http://tonyfleming.withknown.com/2014/i-need-better-shoes
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415901548&key=aglzfmJyaWQtZ3lyTgsSCFJlc3BvbnNlIkB0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTI5MjU3NDgzMzkyMDNfbGlrZWRfYnlfMTAwMDAxNDA1Mjk2MzMwDA">
+    
+      3 days, 14 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://tonyfleming.withknown.com/2014/i-need-better-shoes">tonyfleming.withknown.com/2014/i-need-be...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/100001405296330"
+       title="Patrice Woodard">
+      <img class="profile" src="https://graph.facebook.com/100001405296330/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/504884202/posts/10152925748354203">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/504884202/posts/10152925748339203">
+      
+        I need better shoes Original: http://tonyfleming.withknown.com/2014/i-need-better-shoes
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415901528&key=aglzfmJyaWQtZ3lyTgsSCFJlc3BvbnNlIkB0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTI5MjU3NDgzNTQyMDNfbGlrZWRfYnlfMTAwMDAxNDA1Mjk2MzMwDA">
+    
+      3 days, 14 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://tonyfleming.withknown.com/2014/i-need-better-shoes">tonyfleming.withknown.com/2014/i-need-be...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/100006332346276"
+       title="Alicia Booker">
+      <img class="profile" src="https://graph.facebook.com/100006332346276/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/504884202/posts/10152913012884203">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/504884202/posts/10152913012849203">
+      
+        The Disney Movie Anywhere app is ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415472746&key=aglzfmJyaWQtZ3lyTgsSCFJlc3BvbnNlIkB0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTI5MTMwMTI4ODQyMDNfbGlrZWRfYnlfMTAwMDA2MzMyMzQ2Mjc2DA">
+    
+      1 week, 1 day ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://tonyfleming.withknown.com/2014/the-disney-movie-anywhere-app-is-live-on-google-play">tonyfleming.withknown.com/2014/the-disne...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/100006332346276"
+       title="Alicia Booker">
+      <img class="profile" src="https://graph.facebook.com/100006332346276/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/504884202/posts/10152913012849203">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/504884202/posts/10152913012849203">
+      
+        The Disney Movie Anywhere app is ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415472723&key=aglzfmJyaWQtZ3lyTgsSCFJlc3BvbnNlIkB0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTI5MTMwMTI4NDkyMDNfbGlrZWRfYnlfMTAwMDA2MzMyMzQ2Mjc2DA">
+    
+      1 week, 1 day ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://tonyfleming.withknown.com/2014/the-disney-movie-anywhere-app-is-live-on-google-play">tonyfleming.withknown.com/2014/the-disne...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/100001542235595"
+       title="Ted Richardson">
+      <img class="profile" src="https://graph.facebook.com/100001542235595/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/504884202/posts/10152909557089203">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/504884202/posts/10152909557089203">
+      
+        First Election Day Was Not A ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415466945&key=aglzfmJyaWQtZ3lyTgsSCFJlc3BvbnNlIkB0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTI5MDk1NTcwODkyMDNfbGlrZWRfYnlfMTAwMDAxNTQyMjM1NTk1DA">
+    
+      1 week, 1 day ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://tonyfleming.withknown.com/2014/first-election-day-was-not-a-good-start-2">tonyfleming.withknown.com/2014/first-ele...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Chooch Schubert (Google+) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://plus.google.com/+ChoochSchubert" title="Chooch Schubert (Google+)"
+   class="u-url">
+  <img class="profile u-photo" src="https://lh6.googleusercontent.com/-yhobJcyzs18/AAAAAAAAAAI/AAAAAAAAMuA/wNATeqGhS94/photo.jpg?sz=50&amp;sz=128" width="64px" />
+  <img src="/static/googleplus_icon.png"
+       
+       alt="Google+" />
+  <span class="p-name">Chooch Schubert</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://chooch.us" class="publish-domain u-url">chooch.us</a>
+
+  
+  &middot;
+  <a href="http://specficmedia.com/btw" class="publish-domain u-url">specficmedia.com</a>
+
+  
+  &middot;
+  <a href="http://specficmedia.com/podcast/consumption/" class="publish-domain u-url">specficmedia.com</a>
+
+  
+    <span id="more-websites" style="display: none">
+  
+  &middot;
+  <a href="http://www.intotheblender.com/" class="publish-domain u-url">intotheblender.com</a>
+
+  
+  &middot;
+  <a href="http://promos.chooch.us" class="publish-domain u-url">promos.chooch.us</a>
+
+  
+  &middot;
+  <a href="http://cohpodcast.com/" class="publish-domain u-url">cohpodcast.com</a>
+
+
+  </span>
+  <a onclick="toggle('more-websites'); toggle('show-more-websites'); return false"
+     id="show-more-websites" href="#" />...</a>
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class=" big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDgxOTc1MTU0OTI5NjkyODQxNTMM" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416211207&key=aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDgxOTc1MTU0OTI5NjkyODQxNTMM">
+      50 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDgxOTc1MTU0OTI5NjkyODQxNTMM" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/102673878375723029301"
+       title="E. Wolke">
+      <img class="profile" src="https://lh5.googleusercontent.com/-lQjzvBps6jA/AAAAAAAAAAI/AAAAAAAAAAA/CJdL4bxmWJo/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/108197515492969284153/posts/93HujWLSyir">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/108197515492969284153/posts/93HujWLSyir">
+      
+        A quick click to watch a ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414345471&key=aglzfmJyaWQtZ3lyZwsSCFJlc3BvbnNlIll0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyZHR4d2h3bG1yZXAyMWsyMmt0YmR4NHR6MHcxcjN4X2xpa2VkX2J5XzEwMjY3Mzg3ODM3NTcyMzAyOTMwMQw">
+    
+      3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://thedaywefightback.org/">thedaywefightback.org/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/101042089373452344064"
+       title="Beq vyper (BelaWren)">
+      <img class="profile" src="https://lh4.googleusercontent.com/-LJd2-wt0kyM/AAAAAAAAAAI/AAAAAAAAAAA/k6M11b0asuE/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/108197515492969284153/posts/93HujWLSyir">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/108197515492969284153/posts/93HujWLSyir">
+      
+        A quick click to watch a ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414345412&key=aglzfmJyaWQtZ3lyZwsSCFJlc3BvbnNlIll0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyZHR4d2h3bG1yZXAyMWsyMmt0YmR4NHR6MHcxcjN4X2xpa2VkX2J5XzEwMTA0MjA4OTM3MzQ1MjM0NDA2NAw">
+    
+      3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://thedaywefightback.org/">thedaywefightback.org/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/101054250041754298571"
+       title="christopher house">
+      <img class="profile" src="https://lh3.googleusercontent.com/-cYGAyUcHnP0/AAAAAAAAAAI/AAAAAAAAAAA/RnwinK6jkg8/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/108197515492969284153/posts/93HujWLSyir">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/108197515492969284153/posts/93HujWLSyir">
+      
+        A quick click to watch a ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414345352&key=aglzfmJyaWQtZ3lyaAsSCFJlc3BvbnNlIlp0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyZHR4d2h3bG1yZXAyMWsyMmt0YmR4NHR6MHcxcjN4X3NoYXJlZF9ieV8xMDEwNTQyNTAwNDE3NTQyOTg1NzEM">
+    
+      3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://thedaywefightback.org/">thedaywefightback.org/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/101042089373452344064"
+       title="Beq vyper">
+      <img class="profile" src="https://lh4.googleusercontent.com/-LJd2-wt0kyM/AAAAAAAAAAI/AAAAAAAAAAA/k6M11b0asuE/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/108197515492969284153/posts/93HujWLSyir">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/108197515492969284153/posts/93HujWLSyir">
+      
+        A quick click to watch a ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414345350&key=aglzfmJyaWQtZ3lyaAsSCFJlc3BvbnNlIlp0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyZHR4d2h3bG1yZXAyMWsyMmt0YmR4NHR6MHcxcjN4X3NoYXJlZF9ieV8xMDEwNDIwODkzNzM0NTIzNDQwNjQM">
+    
+      3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://thedaywefightback.org/">thedaywefightback.org/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/116095340752718064971"
+       title="Jacob Schubert">
+      <img class="profile" src="https://lh3.googleusercontent.com/-HMbCSPjMeZs/AAAAAAAAAAI/AAAAAAAAAAA/RCNG8tGR7Io/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/111877605042646768705/posts/MHR4GYWXd7h">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/108197515492969284153/posts/QpHeRwQ6tLe">
+      
+        SharePlay is coming to PS4 next ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414202372&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyZnR0aXl6bHVkemxnNGkwNGNlMzR4Ym9uYncza2F3am9fbGlrZWRfYnlfMTE2MDk1MzQwNzUyNzE4MDY0OTcxDA">
+    
+      3 weeks, 2 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://venturebeat.com/2014/10/23/ps4s-system-update-2-0-goes-live-next-week/">venturebeat.com/2014/10/23/ps4...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/108197515492969284153"
+       title="Chooch Schubert">
+      <img class="profile" src="https://lh6.googleusercontent.com/-yhobJcyzs18/AAAAAAAAAAI/AAAAAAAAMuA/FXJi6Ok8FnM/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/108197515492969284153/posts/GFW9kkxXYor">
+        Thanks for the viewpoint, Markéta. I ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/108197515492969284153/posts/GFW9kkxXYor">
+      
+        I saw news that Ello raised ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414095070&key=aglzfmJyaWQtZ3lyWQsSCFJlc3BvbnNlIkt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyd3gzMWgzdXpvZWI1bXYyMmt0YmR4NHR6MHcxcjN4LjE0MTQwOTEzODk4MTI5NjQM">
+    
+      3 weeks, 3 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://blog.chooch.us/2014/ello-raises-55-million-but-is-it-already-too-late">blog.chooch.us/2014/ello-rais...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/107215086993506960653"
+       title="Markéta Gajdošová">
+      <img class="profile" src="https://lh6.googleusercontent.com/-FdvOz7JMuBs/AAAAAAAAAAI/AAAAAAAAMA0/w-5561pQLbc/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/108197515492969284153/posts/GFW9kkxXYor">
+        I have 20 &quot;friends&quot; and all ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/108197515492969284153/posts/GFW9kkxXYor">
+      
+        I saw news that Ello raised ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414095048&key=aglzfmJyaWQtZ3lyWQsSCFJlc3BvbnNlIkt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyd3gzMWgzdXpvZWI1bXYyMmt0YmR4NHR6MHcxcjN4LjE0MTQwODkxMzE4OTM0NzgM">
+    
+      3 weeks, 3 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://blog.chooch.us/2014/ello-raises-55-million-but-is-it-already-too-late">blog.chooch.us/2014/ello-rais...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/116680657021771561594"
+       title="Randy Noseworthy">
+      <img class="profile" src="https://lh5.googleusercontent.com/-aw0xgw1afrs/AAAAAAAAAAI/AAAAAAAAAAA/wf_DHUvMUcY/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/108197515492969284153/posts/UEsKvQ5TRo3">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/108197515492969284153/posts/UEsKvQ5TRo3">
+      
+        A short, well presented, tour of ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 month, 1 week ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/112094910323888572836"
+       title="Chad Douillard">
+      <img class="profile" src="https://lh3.googleusercontent.com/-7zxY35Uesqk/AAAAAAAAAAI/AAAAAAAAABA/kkPyUKYGU9Q/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/108197515492969284153/posts/bPNvVmUBePA">
+        just wait for it&#39;s first CRASH!!!!</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/108197515492969284153/posts/bPNvVmUBePA">
+      
+        Google turned 16 today so legally ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 month, 1 week ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/104654350019643906590"
+       title="Jason Ramboz">
+      <img class="profile" src="https://lh4.googleusercontent.com/-Ap4tggAL334/AAAAAAAAAAI/AAAAAAAAAAA/kJ0T8kBXPHQ/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112978565024921206774/posts/Q6Xy6tdbiRF">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/108197515492969284153/posts/gJbED7MYk2Q">
+      
+        +J.C. Hutchins is launching a brand-new ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1412396376&key=aglzfmJyaWQtZ3lyagsSCFJlc3BvbnNlIlx0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEydXlmNWJheHE0ZWp6amUwNGNlMzR4Ym9uYncza2F3am9fc2hhcmVkX2J5XzEwNDY1NDM1MDAxOTY0MzkwNjU5MAw">
+    
+      1 month, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://jchutchins.net/the-33">jchutchins.net/the-33</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

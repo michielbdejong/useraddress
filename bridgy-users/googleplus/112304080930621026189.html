@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Sebastian Herold (Google+) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://plus.google.com/112304080930621026189" title="Sebastian Herold (Google+)"
+   class="u-url">
+  <img class="profile u-photo" src="https://lh3.googleusercontent.com/-XIB0vrNxAIo/AAAAAAAAAAI/AAAAAAAAAlY/QRC0PyESiqI/photo.jpg?sz=50&amp;sz=128" width="64px" />
+  <img src="/static/googleplus_icon.png"
+       
+       alt="Google+" />
+  <span class="p-name">Sebastian Herold</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://www.linkedin.com/profile/view?id=299297590" class="publish-domain u-url">linkedin.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+
+<div class="row promo warning">
+You
+ need 
+<a href='http://indiewebify.me/#send-webmentions'>webmention</a> support.
+
+
+<a href="http://indiewebcamp.com/webmention#Publishing_Software">Here are some
+resources.</a> If you're on
+WordPress, <a href="http://wordpress.org/plugins/indieweb/">try the IndieWeb
+bundle plugin</a>. If you're on Blogger, Tumblr, or
+WordPress.com, <a href="/">sign up here!</a>
+
+
+
+</div>
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class=" big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTIzMDQwODA5MzA2MjEwMjYxODkM" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416195819&key=aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTIzMDQwODA5MzA2MjEwMjYxODkM">
+      5 hours, 9 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTIzMDQwODA5MzA2MjEwMjYxODkM" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/102112750515367027354"
+       title="Olli Barrenbrügge">
+      <img class="profile" src="https://lh5.googleusercontent.com/-2JVlaWdn-1g/AAAAAAAAAAI/AAAAAAAAAAA/yY5NWiowZaA/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112304080930621026189/posts/9H6gyAsisZP">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/112304080930621026189/posts/9H6gyAsisZP">
+      
+        Lieber Steve Jobs, du hast uns ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1410021742&key=aglzfmJyaWQtZ3lyZwsSCFJlc3BvbnNlIll0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyM2VwM3AwemJhdnpqbGwyMnllbGpidnRhYmVyazBqX2xpa2VkX2J5XzEwMjExMjc1MDUxNTM2NzAyNzM1NAw">
+    
+      2 months, 1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://blog.zdf.de/hyperland/2011/10/lieber-steve-jobs-du-hast-uns-die-freiheit-genommen-vielen-dank-dafuer/">blog.zdf.de/hyperland/2011...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/102112750515367027354"
+       title="Olli Barrenbrügge">
+      <img class="profile" src="https://lh5.googleusercontent.com/-2JVlaWdn-1g/AAAAAAAAAAI/AAAAAAAAAAA/yY5NWiowZaA/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112304080930621026189/posts/FWVgNd1JhK8">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/112304080930621026189/posts/FWVgNd1JhK8">
+      
+        --
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1410021742&key=aglzfmJyaWQtZ3lyZwsSCFJlc3BvbnNlIll0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEybHpqaHFzcGFxaW5ybXEyMnllbGpidnRhYmVyazBqX2xpa2VkX2J5XzEwMjExMjc1MDUxNTM2NzAyNzM1NAw">
+    
+      2 months, 1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://shitthatsirisays.tumblr.com/">shitthatsirisays.tumblr.com/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/102112750515367027354"
+       title="Olli Barrenbrügge">
+      <img class="profile" src="https://lh5.googleusercontent.com/-2JVlaWdn-1g/AAAAAAAAAAI/AAAAAAAAeh8/QQUoeRxNWAE/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112304080930621026189/posts/9H6gyAsisZP">
+        etwas harsch, aber im grunde ja ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/112304080930621026189/posts/9H6gyAsisZP">
+      
+        Lieber Steve Jobs, du hast uns ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1410021741&key=aglzfmJyaWQtZ3lyWQsSCFJlc3BvbnNlIkt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyM2VwM3AwemJhdnpqbGwyMnllbGpidnRhYmVyazBqLjEzMTg0MTI3NTA5NjkwMDAM">
+    
+      2 months, 1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://blog.zdf.de/hyperland/2011/10/lieber-steve-jobs-du-hast-uns-die-freiheit-genommen-vielen-dank-dafuer/">blog.zdf.de/hyperland/2011...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/102112750515367027354"
+       title="Olli Barrenbrügge">
+      <img class="profile" src="https://lh5.googleusercontent.com/-2JVlaWdn-1g/AAAAAAAAAAI/AAAAAAAAeh8/QQUoeRxNWAE/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112304080930621026189/posts/GPeJVkT8or8">
+        stimmt, da hilft nur noch vodka</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/112304080930621026189/posts/GPeJVkT8or8">
+      
+        --
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1410021432&key=aglzfmJyaWQtZ3lyWQsSCFJlc3BvbnNlIkt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyc3lmc3Jiem55eGowZXcyMnllbGpidnRhYmVyazBqLjEzMzAxODU0NTA3ODU4MDgM">
+    
+      2 months, 1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.heise.de/mac-and-i/meldung/Nach-Motorola-Klage-Apple-dreht-E-Mail-Push-in-Deutschland-ab-1442182.html">heise.de/mac-and-i/meld...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/102112750515367027354"
+       title="Olli Barrenbrügge">
+      <img class="profile" src="https://lh5.googleusercontent.com/-2JVlaWdn-1g/AAAAAAAAAAI/AAAAAAAAAAA/yY5NWiowZaA/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112304080930621026189/posts/2nyMNkSxUZm">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/112304080930621026189/posts/2nyMNkSxUZm">
+      
+        --
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1410021429&key=aglzfmJyaWQtZ3lyZwsSCFJlc3BvbnNlIll0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyMGVuaXd0cW5vaWxxc2UyMnllbGpidnRhYmVyazBqX2xpa2VkX2J5XzEwMjExMjc1MDUxNTM2NzAyNzM1NAw">
+    
+      2 months, 1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://himmelende.de/2011/09/28/a-better-more-peaceful-person/">himmelende.de/2011/09/28/a-b...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/102112750515367027354"
+       title="Olli Barrenbrügge">
+      <img class="profile" src="https://lh5.googleusercontent.com/-2JVlaWdn-1g/AAAAAAAAAAI/AAAAAAAAeh8/QQUoeRxNWAE/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112304080930621026189/posts/2nyMNkSxUZm">
+        Hab ich irgendwie bei dem kurzen ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/112304080930621026189/posts/2nyMNkSxUZm">
+      
+        --
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1410021426&key=aglzfmJyaWQtZ3lyWQsSCFJlc3BvbnNlIkt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyMGVuaXd0cW5vaWxxc2UyMnllbGpidnRhYmVyazBqLjEzMjA0ODcwMzQ4ODkwMDAM">
+    
+      2 months, 1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://himmelende.de/2011/09/28/a-better-more-peaceful-person/">himmelende.de/2011/09/28/a-b...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/105635091247497334720"
+       title="Samira Weiß">
+      <img class="profile" src="https://lh3.googleusercontent.com/-9pRsP0dqzfw/AAAAAAAAAAI/AAAAAAAAAAA/QpGz4uISvlo/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112304080930621026189/posts/ZQGMDLuZCGy">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/112304080930621026189/posts/ZQGMDLuZCGy">
+      
+        Tut mir einen Gefallen und tut ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1410021423&key=aglzfmJyaWQtZ3lyagsSCFJlc3BvbnNlIlx0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzNWpwcHhvb25odXJxeTEwNGNmdGU1d3pqNHN4ZXkwMXdfc2hhcmVkX2J5XzEwNTYzNTA5MTI0NzQ5NzMzNDcyMAw">
+    
+      2 months, 1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://samira-weiss.de/mobile-wellness-massage-muenchen/">samira-weiss.de/mobile-wellnes...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/102112750515367027354"
+       title="Olli Barrenbrügge">
+      <img class="profile" src="https://lh5.googleusercontent.com/-2JVlaWdn-1g/AAAAAAAAAAI/AAAAAAAAeh8/QQUoeRxNWAE/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112304080930621026189/posts/3JiAXXrK3vo">
+        hab ich, yep</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/112304080930621026189/posts/3JiAXXrK3vo">
+      
+        --
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1410021419&key=aglzfmJyaWQtZ3lyWQsSCFJlc3BvbnNlIkt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyZ2RoNHkwenlodGx0MGgyMnllbGpidnRhYmVyazBqLjEzMTgxMTIxMTIzMDgwMDAM">
+    
+      2 months, 1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.zeit.de/wirtschaft/2011-10/nespresso-kapseln-oekobilanz/komplettansicht">zeit.de/wirtschaft/201...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/105635091247497334720"
+       title="Samira Weiß">
+      <img class="profile" src="https://lh3.googleusercontent.com/-9pRsP0dqzfw/AAAAAAAAAAI/AAAAAAAAAAA/QpGz4uISvlo/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112304080930621026189/posts/ZQGMDLuZCGy">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/112304080930621026189/posts/ZQGMDLuZCGy">
+      
+        Tut mir einen Gefallen und tut ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1410021419&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzNWpwcHhvb25odXJxeTEwNGNmdGU1d3pqNHN4ZXkwMXdfbGlrZWRfYnlfMTA1NjM1MDkxMjQ3NDk3MzM0NzIwDA">
+    
+      2 months, 1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://samira-weiss.de/mobile-wellness-massage-muenchen/">samira-weiss.de/mobile-wellnes...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/102112750515367027354"
+       title="Olli Barrenbrügge">
+      <img class="profile" src="https://lh5.googleusercontent.com/-2JVlaWdn-1g/AAAAAAAAAAI/AAAAAAAAeh8/QQUoeRxNWAE/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112304080930621026189/posts/2nyMNkSxUZm">
+        well, yeah ;)</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/112304080930621026189/posts/2nyMNkSxUZm">
+      
+        --
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1410021411&key=aglzfmJyaWQtZ3lyWQsSCFJlc3BvbnNlIkt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyMGVuaXd0cW5vaWxxc2UyMnllbGpidnRhYmVyazBqLjEzMjA1OTE4MzM1MTc4MDgM">
+    
+      2 months, 1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://himmelende.de/2011/09/28/a-better-more-peaceful-person/">himmelende.de/2011/09/28/a-b...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

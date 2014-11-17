@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Kevin Marks (Facebook) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://facebook.com/kevinmarks" title="Kevin Marks (Facebook)"
+   class="u-url">
+  <img class="profile u-photo" src="https://graph.facebook.com/kevinmarks/picture?type=large" width="64px" />
+  <img src="/static/facebook_icon.png"
+       
+       alt="Facebook" />
+  <span class="p-name">Kevin Marks</span></a>
+
+
+<!-- TODO: make this work without javascript too -->
+<a href="#" onclick="document.forms['listen-facebook-start'].submit();
+                     return false;">
+  <span class="glyphicon glyphicon-pause"
+        title="This account was disconnected on Facebook's end. Click to reconnect it!">
+</span></a>
+
+
+
+  
+  &middot;
+  <a href="http://www.kevinmarks.com/" class="publish-domain u-url">kevinmarks.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+Click to enable <a href="/about#listen">listening</a>:
+
+<!-- Facebook listen signup -->
+<form method="post" name="listen-facebook-start" action="/facebook/start" class="signup">
+  <input type="image" alt="Sign in with Facebook"
+         src="/activitystreams/oauth_dropins/static/facebook.png" />
+  <input name="feature" type="hidden" value="listen" />
+  <!-- https://developers.facebook.com/docs/reference/login/ -->
+  <input name="scope" type="hidden"
+         value="offline_access,user_website,user_status,user_photos,user_events,read_stream">
+</form>
+
+
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+<span class="big">Click to enable <a href="/about#publish">publishing</a>:</span>
+<form method="post" name="publish-facebook-start" action="/facebook/start" class="signup">
+ <input type="image" alt="Sign in with Facebook"
+        src="/activitystreams/oauth_dropins/static/facebook.png" />
+ <input name="feature" type="hidden" value="publish" />
+ <!-- https://developers.facebook.com/docs/reference/login/ -->
+ <input name="scope" type="hidden"
+        value="offline_access,user_website,publish_actions,create_event,rsvp_event,user_status,friends_status,user_photos,friends_photos,user_videos,friends_videos,user_events,friends_events,user_likes,friends_likes" />
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1298010021"
+       title="Anthony Rudkin">
+      <img class="profile" src="https://graph.facebook.com/1298010021/picture?type=large" width="32" /></a>
+      <a target="_blank" href="">
+        is attending.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/1566815933547350">
+      
+        Want your own website? Have one ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1412146723&key=aglzfmJyaWQtZ3lyRAsSCFJlc3BvbnNlIjZ0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTU2NjgxNTkzMzU0NzM1MF9yc3ZwXzEyOTgwMTAwMjEM">
+    
+      1 month, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://indiewebcamp.com/events/2014-09-24-homebrew-website-club">indiewebcamp.com/events/2014-09...</a></li>
+	<li><a class="original-post" target="_blank" href="http://known.kevinmarks.com/2014/homebrew-website-club">known.kevinmarks.com/2014/homebrew-...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1187989918"
+       title="Andrew Marks">
+      <img class="profile" src="https://graph.facebook.com/1187989918/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/724885424/posts/10153656125385425">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/724885424/posts/10153656125385425">
+      
+        Waiting for Christopher to finish his ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 month, 2 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1322016747"
+       title="Saad Butt">
+      <img class="profile" src="https://graph.facebook.com/1322016747/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/724885424/posts/10154235061555425">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/724885424/posts/10154235061555425">
+      
+        Graduation
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 month, 3 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1322016747"
+       title="Saad Butt">
+      <img class="profile" src="https://graph.facebook.com/1322016747/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/724885424/posts/10154228744255425">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/724885424/posts/10154228744255425">
+      
+        Graduate and poodle
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 month, 3 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/736739458"
+       title="Jean Russell">
+      <img class="profile" src="https://graph.facebook.com/736739458/picture?type=large" width="32" /></a>
+      <a target="_blank" href="">
+        is invited.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/1566815933547350">
+      
+        Want your own website? Have one ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1411586901&key=aglzfmJyaWQtZ3lyQwsSCFJlc3BvbnNlIjV0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTU2NjgxNTkzMzU0NzM1MF9yc3ZwXzczNjczOTQ1OAw">
+    
+      1 month, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://indiewebcamp.com/events/2014-09-24-homebrew-website-club">indiewebcamp.com/events/2014-09...</a></li>
+	<li><a class="original-post" target="_blank" href="http://known.kevinmarks.com/2014/homebrew-website-club">known.kevinmarks.com/2014/homebrew-...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1148850645"
+       title="Zach Tratar">
+      <img class="profile" src="https://graph.facebook.com/1148850645/picture?type=large" width="32" /></a>
+      <a target="_blank" href="">
+        is invited.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/1566815933547350">
+      
+        Want your own website? Have one ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1411542941&key=aglzfmJyaWQtZ3lyRAsSCFJlc3BvbnNlIjZ0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTU2NjgxNTkzMzU0NzM1MF9yc3ZwXzExNDg4NTA2NDUM">
+    
+      1 month, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://indiewebcamp.com/events/2014-09-24-homebrew-website-club">indiewebcamp.com/events/2014-09...</a></li>
+	<li><a class="original-post" target="_blank" href="http://known.kevinmarks.com/2014/homebrew-website-club">known.kevinmarks.com/2014/homebrew-...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/589682874"
+       title="Kara Murphy">
+      <img class="profile" src="https://graph.facebook.com/589682874/picture?type=large" width="32" /></a>
+      <a target="_blank" href="">
+        is invited.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/1566815933547350">
+      
+        Want your own website? Have one ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1411502335&key=aglzfmJyaWQtZ3lyQwsSCFJlc3BvbnNlIjV0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTU2NjgxNTkzMzU0NzM1MF9yc3ZwXzU4OTY4Mjg3NAw">
+    
+      1 month, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://indiewebcamp.com/events/2014-09-24-homebrew-website-club">indiewebcamp.com/events/2014-09...</a></li>
+	<li><a class="original-post" target="_blank" href="http://known.kevinmarks.com/2014/homebrew-website-club">known.kevinmarks.com/2014/homebrew-...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/740212784"
+       title="David Baron">
+      <img class="profile" src="https://graph.facebook.com/740212784/picture?type=large" width="32" /></a>
+      <a target="_blank" href="">
+        is invited.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/1566815933547350">
+      
+        Want your own website? Have one ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1411397347&key=aglzfmJyaWQtZ3lyQwsSCFJlc3BvbnNlIjV0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTU2NjgxNTkzMzU0NzM1MF9yc3ZwXzc0MDIxMjc4NAw">
+    
+      1 month, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://indiewebcamp.com/events/2014-09-24-homebrew-website-club">indiewebcamp.com/events/2014-09...</a></li>
+	<li><a class="original-post" target="_blank" href="http://known.kevinmarks.com/2014/homebrew-website-club">known.kevinmarks.com/2014/homebrew-...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/14500255"
+       title="Erin Jo Richey">
+      <img class="profile" src="https://graph.facebook.com/14500255/picture?type=large" width="32" /></a>
+      <a target="_blank" href="">
+        is invited.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/1566815933547350">
+      
+        Want your own website? Have one ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1411397315&key=aglzfmJyaWQtZ3lyQgsSCFJlc3BvbnNlIjR0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTU2NjgxNTkzMzU0NzM1MF9yc3ZwXzE0NTAwMjU1DA">
+    
+      1 month, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://indiewebcamp.com/events/2014-09-24-homebrew-website-club">indiewebcamp.com/events/2014-09...</a></li>
+	<li><a class="original-post" target="_blank" href="http://known.kevinmarks.com/2014/homebrew-website-club">known.kevinmarks.com/2014/homebrew-...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/215522"
+       title="Diane Tate">
+      <img class="profile" src="https://graph.facebook.com/215522/picture?type=large" width="32" /></a>
+      <a target="_blank" href="">
+        is invited.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/1566815933547350">
+      
+        Want your own website? Have one ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1411397284&key=aglzfmJyaWQtZ3lyQAsSCFJlc3BvbnNlIjJ0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTU2NjgxNTkzMzU0NzM1MF9yc3ZwXzIxNTUyMgw">
+    
+      1 month, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://indiewebcamp.com/events/2014-09-24-homebrew-website-club">indiewebcamp.com/events/2014-09...</a></li>
+	<li><a class="original-post" target="_blank" href="http://known.kevinmarks.com/2014/homebrew-website-club">known.kevinmarks.com/2014/homebrew-...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+
+<p class="big">Nothing published yet.</p>
+
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

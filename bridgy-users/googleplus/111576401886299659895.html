@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Ian O'Byrne (Google+) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://plus.google.com/+IanOByrne" title="Ian O'Byrne (Google+)"
+   class="u-url">
+  <img class="profile u-photo" src="https://lh3.googleusercontent.com/-yYB8CIDOQLA/AAAAAAAAAAI/AAAAAAAAoSQ/woyxps2eNUI/photo.jpg?sz=50&amp;sz=128" width="64px" />
+  <img src="/static/googleplus_icon.png"
+       
+       alt="Google+" />
+  <span class="p-name">Ian O'Byrne</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://uconn.academia.edu/wiobyrne" class="publish-domain u-url">uconn.academia.edu</a>
+
+  
+  &middot;
+  <a href="http://www.scribd.com/wiobyrne" class="publish-domain u-url">scribd.com</a>
+
+  
+  &middot;
+  <a href="http://wiobyrne.com/" class="publish-domain u-url">wiobyrne.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class=" big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTE1NzY0MDE4ODYyOTk2NTk4OTUM" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416214267&key=aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTE1NzY0MDE4ODYyOTk2NTk4OTUM">
+      1 minute ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTE1NzY0MDE4ODYyOTk2NTk4OTUM" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/113671166537765903761"
+       title="Crystal Brooks">
+      <img class="profile" src="https://lh5.googleusercontent.com/-gLUSA6EHxRE/AAAAAAAAAAI/AAAAAAAAAAA/xX_6AU6cTRo/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/111576401886299659895/posts/CYTC54zM7gg">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/111576401886299659895/posts/CYTC54zM7gg">
+      
+        Good Twitter visual guide presented in ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416190374&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzbXdudjRnbXUwaXgwMjUyMmdkcGtpaG5xZHNydXpjMDRfbGlrZWRfYnlfMTEzNjcxMTY2NTM3NzY1OTAzNzYxDA">
+    
+      6 hours, 39 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://feed.wiobyrne.com/2014/a-good-twitter-visual-guide-in-dr-seuss-style">feed.wiobyrne.com/2014/a-good-tw...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/111594226538787829881"
+       title="Ryan Rish">
+      <img class="profile" src="https://lh4.googleusercontent.com/-Dd-m0Izkwnk/AAAAAAAAAAI/AAAAAAAAAAA/qr4gmneWelo/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/events/cr1v5qq61omehkaden7q6rbfdik">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/events/cr1v5qq61omehkaden7q6rbfdik">
+      
+        --
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      7 hours, 38 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/108390509469829218014"
+       title="Verena Roberts">
+      <img class="profile" src="https://lh3.googleusercontent.com/-I-YCKNDfPJo/AAAAAAAAAAI/AAAAAAAAAAA/KUnqlDG02L4/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/111576401886299659895/posts/fFgyJKwgL3W">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/111576401886299659895/posts/fFgyJKwgL3W">
+      
+        Four Questions for Don Wettrick about ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415987049&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEydXp0c295eXVnaTVxajQwNGNkbGFxMXRxaXRiMnpmeDAwa19saWtlZF9ieV8xMDgzOTA1MDk0Njk4MjkyMTgwMTQM">
+    
+      2 days, 15 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://wiobyrne.com/four-questions-for-don-wettrick-about-teaching-learning-sharing-openly-online/">wiobyrne.com/four-questions...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/117911554501805772911"
+       title="Peggy Semingson">
+      <img class="profile" src="https://lh5.googleusercontent.com/-VwyZNM8CMeo/AAAAAAAAAAI/AAAAAAAAAAA/8ACajGI1jpM/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/111576401886299659895/posts/EN6m2GbZA6r">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/111576401886299659895/posts/EN6m2GbZA6r">
+      
+        Four questions for David Reinking about ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415981249&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzZnRsd3pxa2JhaWZ3bWoyMmdkcGtpaG5xZHNydXpjMDRfbGlrZWRfYnlfMTE3OTExNTU0NTAxODA1NzcyOTExDA">
+    
+      2 days, 16 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://wiobyrne.com/four-questions-for-david-reinking-about-teaching-learning-sharing-openly-online/">wiobyrne.com/four-questions...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/113545029138022527122"
+       title="Judy Arzt">
+      <img class="profile" src="https://lh3.googleusercontent.com/-IW4sxjgocYk/AAAAAAAAAAI/AAAAAAAAAAA/D7Lk4QoVrdA/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/111576401886299659895/posts/hjrLwPor699">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/111576401886299659895/posts/hjrLwPor699">
+      
+        Four Questions for Verena Roberts about ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415828545&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzZWN6emE1d2lheXhsem4wNGNkbGFxMXRxaXRiMnpmeDAwa19saWtlZF9ieV8xMTM1NDUwMjkxMzgwMjI1MjcxMjIM">
+    
+      4 days, 11 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://wiobyrne.com/four-questions-for-verena-roberts-about-teaching-learning-sharing-openly-online/">wiobyrne.com/four-questions...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/104106310060877271341"
+       title="Jon Barilone">
+      <img class="profile" src="https://lh5.googleusercontent.com/-1Ac9SgZDEBY/AAAAAAAAAAI/AAAAAAAAAAA/W2w0Av_dWTE/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/111576401886299659895/posts/hjrLwPor699">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/111576401886299659895/posts/hjrLwPor699">
+      
+        Four Questions for Verena Roberts about ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415804582&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzZWN6emE1d2lheXhsem4wNGNkbGFxMXRxaXRiMnpmeDAwa19saWtlZF9ieV8xMDQxMDYzMTAwNjA4NzcyNzEzNDEM">
+    
+      4 days, 17 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://wiobyrne.com/four-questions-for-verena-roberts-about-teaching-learning-sharing-openly-online/">wiobyrne.com/four-questions...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/117911554501805772911"
+       title="Peggy Semingson">
+      <img class="profile" src="https://lh5.googleusercontent.com/-VwyZNM8CMeo/AAAAAAAAAAI/AAAAAAAAAN4/5kbh_r3L1Xo/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/111576401886299659895/posts/PdfZTnwpY5H">
+        I just saw this and intend ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/111576401886299659895/posts/PdfZTnwpY5H">
+      
+        Four questions for Ronda Dorsey about ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415756267&key=aglzfmJyaWQtZ3lyXQsSCFJlc3BvbnNlIk90YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEycWRuMHgxc2Vvd2Jkd2IwNGNkbGFxMXRxaXRiMnpmeDAway4xNDE1NzU2MjIwNDczMTc1DA">
+    
+      5 days, 7 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://wiobyrne.com/four-questions-for-ronda-dorsey-about-teaching-learning-sharing-openly-online/">wiobyrne.com/four-questions...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/108390509469829218014"
+       title="Verena Roberts">
+      <img class="profile" src="https://lh3.googleusercontent.com/-I-YCKNDfPJo/AAAAAAAAAAI/AAAAAAAAAAA/KUnqlDG02L4/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/111576401886299659895/posts/hjrLwPor699">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/111576401886299659895/posts/hjrLwPor699">
+      
+        Four Questions for Verena Roberts about ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415738428&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzZWN6emE1d2lheXhsem4wNGNkbGFxMXRxaXRiMnpmeDAwa19saWtlZF9ieV8xMDgzOTA1MDk0Njk4MjkyMTgwMTQM">
+    
+      5 days, 12 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://wiobyrne.com/four-questions-for-verena-roberts-about-teaching-learning-sharing-openly-online/">wiobyrne.com/four-questions...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/108390509469829218014"
+       title="Verena Roberts">
+      <img class="profile" src="https://lh3.googleusercontent.com/-I-YCKNDfPJo/AAAAAAAAAAI/AAAAAAAAAAA/KUnqlDG02L4/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/111576401886299659895/posts/PdfZTnwpY5H">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/111576401886299659895/posts/PdfZTnwpY5H">
+      
+        Four questions for Ronda Dorsey about ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415738414&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEycWRuMHgxc2Vvd2Jkd2IwNGNkbGFxMXRxaXRiMnpmeDAwa19saWtlZF9ieV8xMDgzOTA1MDk0Njk4MjkyMTgwMTQM">
+    
+      5 days, 12 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://wiobyrne.com/four-questions-for-ronda-dorsey-about-teaching-learning-sharing-openly-online/">wiobyrne.com/four-questions...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/106036471405732925801"
+       title="Gail Dandelske">
+      <img class="profile" src="https://lh6.googleusercontent.com/-nBG8MRMIPmU/AAAAAAAAAAI/AAAAAAAAAAA/sV8cSFQkxG8/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/111576401886299659895/posts/bX4oWVeJ8Mg">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/111576401886299659895/posts/bX4oWVeJ8Mg">
+      
+        Enjoyed the Disney Electrical Parade last ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      6 days, 14 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

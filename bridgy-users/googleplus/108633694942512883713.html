@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Aaron Gibson (Google+) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://plus.google.com/+AEGibson" title="Aaron Gibson (Google+)"
+   class="u-url">
+  <img class="profile u-photo" src="https://lh5.googleusercontent.com/-acIAR09_RjA/AAAAAAAAAAI/AAAAAAAABt4/4BRQykHCb2E/photo.jpg?sz=50&amp;sz=128" width="64px" />
+  <img src="/static/googleplus_icon.png"
+       
+       alt="Google+" />
+  <span class="p-name">Aaron Gibson</span></a>
+
+
+<!-- TODO: make this work without javascript too -->
+<a href="#" onclick="document.forms['listen-googleplus-start'].submit();
+                     return false;">
+  <span class="glyphicon glyphicon-pause"
+        title="This account was disconnected on Google+'s end. Click to reconnect it!">
+</span></a>
+
+
+
+  
+  &middot;
+  <a href="http://aaronegibson.com/" class="publish-domain u-url">aaronegibson.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class=" big">
+
+
+Click to enable <a href="/about#listen">listening</a>:
+
+<!-- Google+ listen signup -->
+<form method="post" name="listen-googleplus-start" action="/googleplus/start" class="signup">
+  <input type="image" alt="Sign in with Google+"
+         src="/activitystreams/oauth_dropins/static/google_plus.png" />
+  <!-- The state param doesn't actually work for G+. Not sure why. Doesn't
+       matter for now since we don't support publish for G+. -->
+  <input name="feature" type="hidden" value="listen" />
+  <!-- https://developers.google.com/+/api/oauth#scopes -->
+  <input name="scope" type="hidden"
+         value="https://www.googleapis.com/auth/plus.login" />
+</form>
+
+
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/109515804646236484829"
+       title="Ryan Koenigs">
+      <img class="profile" src="https://lh4.googleusercontent.com/-tVgvDl1ozFs/AAAAAAAAAAI/AAAAAAAAAAA/3IhuW2cYAOQ/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/114516047414042281846/posts/K87LPYSbzET">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/108633694942512883713/posts/1xW5wzgMwr5">
+      
+        :-)﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 months ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/109558211351700954290"
+       title="Joseph Pollard">
+      <img class="profile" src="https://lh6.googleusercontent.com/-dvi6trS4aw0/AAAAAAAAAAI/AAAAAAAAAAA/iefajTOOT9w/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/114516047414042281846/posts/K87LPYSbzET">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/108633694942512883713/posts/1xW5wzgMwr5">
+      
+        :-)﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 months ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/109515804646236484829"
+       title="Ryan Koenigs">
+      <img class="profile" src="https://lh4.googleusercontent.com/-tVgvDl1ozFs/AAAAAAAAAAI/AAAAAAAAAAA/3IhuW2cYAOQ/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/108633694942512883713/posts/iMtFXGW7VSG">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/108633694942512883713/posts/iMtFXGW7VSG">
+      
+        Looking to start a fight in ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1410441510&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzNHp4dG8zc3FydWRjenIwNGNjdmxvM3kybnl6c3lwbzAwa19saWtlZF9ieV8xMDk1MTU4MDQ2NDYyMzY0ODQ4MjkM">
+    
+      2 months ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://abc7news.com/303052/">abc7news.com/303052/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/109515804646236484829"
+       title="Ryan Koenigs">
+      <img class="profile" src="https://lh4.googleusercontent.com/-tVgvDl1ozFs/AAAAAAAAAAI/AAAAAAAAAAA/3IhuW2cYAOQ/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/108633694942512883713/posts/AKDvNNdcui9">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/108633694942512883713/posts/AKDvNNdcui9">
+      
+        SFW.﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1410441508&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyeGoxenhxbXF1aWZwdHIyMmF3aDB6a296cnlicGgwMDRfbGlrZWRfYnlfMTA5NTE1ODA0NjQ2MjM2NDg0ODI5DA">
+    
+      2 months ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.playboy.com/galleries/modeling-poses-by-cats/slide-3">playboy.com/galleries/mode...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/109515804646236484829"
+       title="Ryan Koenigs">
+      <img class="profile" src="https://lh4.googleusercontent.com/-tVgvDl1ozFs/AAAAAAAAAAI/AAAAAAAAAAA/3IhuW2cYAOQ/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/107495891235534441818/posts/8Lk7CZeJSJP">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/108633694942512883713/posts/Zm89qTtXpT2">
+      
+        EA Sports Drops Ray Rice from ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1410346163&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEya3RqdWJ2eWZ6Z2h2cTMwNGNjdmxvM3kybnl6c3lwbzAwa19saWtlZF9ieV8xMDk1MTU4MDQ2NDYyMzY0ODQ4MjkM">
+    
+      2 months, 1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://news.kron4.com/news/ea-sports-drops-ray-rice-from-madden-15/">news.kron4.com/news/ea-sports...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/104038129219628500991"
+       title="Pradheep Shanker">
+      <img class="profile" src="https://lh5.googleusercontent.com/-1eCxq5K3alU/AAAAAAAAAAI/AAAAAAAAAAA/VufZC0i9YGM/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/108633694942512883713/posts/Jf2UmyRtJRC">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/108633694942512883713/posts/Jf2UmyRtJRC">
+      
+        --
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 months, 1 week ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/114270303534198304492"
+       title="John Baker">
+      <img class="profile" src="https://lh6.googleusercontent.com/-dCcY1WCBw-Q/AAAAAAAAAAI/AAAAAAAAAAA/9pG07HhBzGk/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/103255130479497734964/posts/5ceK4SS4Ya1">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/108633694942512883713/posts/Z8zktshBdqq">
+      
+        --
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 months, 1 week ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/117822594661831619571"
+       title="Michael Pike">
+      <img class="profile" src="https://lh4.googleusercontent.com/-lfNiXvmnDm0/AAAAAAAAAAI/AAAAAAAAAAA/jtsJ_10oqCw/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/107495891235534441818/posts/8Lk7CZeJSJP">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/108633694942512883713/posts/Zm89qTtXpT2">
+      
+        EA Sports Drops Ray Rice from ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1410346161&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEya3RqdWJ2eWZ6Z2h2cTMwNGNjdmxvM3kybnl6c3lwbzAwa19saWtlZF9ieV8xMTc4MjI1OTQ2NjE4MzE2MTk1NzEM">
+    
+      2 months, 1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://news.kron4.com/news/ea-sports-drops-ray-rice-from-madden-15/">news.kron4.com/news/ea-sports...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/113711914128630393434"
+       title="AFL Slasher">
+      <img class="profile" src="https://lh5.googleusercontent.com/-7uJu1c6EnFE/AAAAAAAAAAI/AAAAAAAAAAA/xozAARg6WKY/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/108633694942512883713/posts/Jf2UmyRtJRC">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/108633694942512883713/posts/Jf2UmyRtJRC">
+      
+        --
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 months, 1 week ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/113759946757167534490"
+       title="Darin R. McClure">
+      <img class="profile" src="https://lh6.googleusercontent.com/-OS11oKqtDqg/AAAAAAAAAAI/AAAAAAAAAAA/z72phL6rptg/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/108633694942512883713/posts/Jf2UmyRtJRC">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/108633694942512883713/posts/Jf2UmyRtJRC">
+      
+        --
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 months, 1 week ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

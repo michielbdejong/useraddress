@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Marcus Povey (Google+) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://plus.google.com/+MarcusPovey" title="Marcus Povey (Google+)"
+   class="u-url">
+  <img class="profile u-photo" src="https://lh5.googleusercontent.com/-tZqKXN5qplA/AAAAAAAAAAI/AAAAAAAAArk/juinEHEhwGI/photo.jpg?sz=50&amp;sz=128" width="64px" />
+  <img src="/static/googleplus_icon.png"
+       
+       alt="Google+" />
+  <span class="p-name">Marcus Povey</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://www.marcus-povey.co.uk/" class="publish-domain u-url">marcus-povey.co.uk</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class=" big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDk2MjIyNDkwNjAxNzA3MDMzNzQM" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416163836&key=aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDk2MjIyNDkwNjAxNzA3MDMzNzQM">
+      14 hours ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDk2MjIyNDkwNjAxNzA3MDMzNzQM" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/105905693022638600749"
+       title="Paul Squires">
+      <img class="profile" src="https://lh5.googleusercontent.com/-FX22tDehGQ4/AAAAAAAAAAI/AAAAAAAAAAA/R2RW7DeDWKA/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/109622249060170703374/posts/2CZM6XFueCS">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/109622249060170703374/posts/2CZM6XFueCS">
+      
+        Migrating away from dropbox.﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1411110521&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzNXRqbnFwcnpuaTE1Y2IyM3FkajBwd2t2dXl0cGphMDRfbGlrZWRfYnlfMTA1OTA1NjkzMDIyNjM4NjAwNzQ5DA">
+    
+      1 month, 4 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.marcus-povey.co.uk/2014/09/18/saving-flickr-favourites-to-owncloud-using-ifttt/">marcus-povey.co.uk/2014/09/18/sav...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/108239170571434866241"
+       title="Gabriel Wilkes">
+      <img class="profile" src="https://lh5.googleusercontent.com/-35aHb9ej1wg/AAAAAAAAAAI/AAAAAAAAAAA/xu2HL_PiUWE/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/109622249060170703374/posts/ikFhfCvngbC">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/109622249060170703374/posts/ikFhfCvngbC">
+      
+        Migrating away from dropbox, piece by ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1410811573&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzdHNuZWJ4eDNrdmptcnQwNGNpdDV3MnJtM2pmdmFwd3Mwa19saWtlZF9ieV8xMDgyMzkxNzA1NzE0MzQ4NjYyNDEM">
+    
+      2 months ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.marcus-povey.co.uk/2014/09/11/backing-up-facebook-tagged-photos-to-owncloud-using-ifttt/">marcus-povey.co.uk/2014/09/11/bac...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/105905693022638600749"
+       title="Paul Squires">
+      <img class="profile" src="https://lh5.googleusercontent.com/-FX22tDehGQ4/AAAAAAAAAAI/AAAAAAAAEBU/O0vV-AeCoEQ/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/109622249060170703374/posts/ikFhfCvngbC">
+        Liking Owncloud a lot. We now ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/109622249060170703374/posts/GpDvTtspXjQ">
+      
+        http://www.marcus-povey.co.uk/2013/11/07/php-open-graph-parser-library/﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1410535231&key=aglzfmJyaWQtZ3lyXQsSCFJlc3BvbnNlIk90YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzdHNuZWJ4eDNrdmptcnQwNGNpdDV3MnJtM2pmdmFwd3Mway4xNDEwNTM0NDc5ODk4OTU5DA">
+    
+      2 months ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.marcus-povey.co.uk/2013/11/07/php-open-graph-parser-library/">marcus-povey.co.uk/2013/11/07/php...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/108239170571434866241"
+       title="Gabriel Wilkes">
+      <img class="profile" src="https://lh5.googleusercontent.com/-35aHb9ej1wg/AAAAAAAAAAI/AAAAAAAAAAA/xu2HL_PiUWE/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/109622249060170703374/posts/ikFhfCvngbC">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/109622249060170703374/posts/ikFhfCvngbC">
+      
+        Migrating away from dropbox, piece by ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1410519430&key=aglzfmJyaWQtZ3lybAsSCFJlc3BvbnNlIl50YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzdHNuZWJ4eDNrdmptcnQwNGNpdDV3MnJtM2pmdmFwd3Mwa19zaGFyZWRfYnlfMTA4MjM5MTcwNTcxNDM0ODY2MjQxDA">
+    
+      2 months ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.marcus-povey.co.uk/2014/09/11/backing-up-facebook-tagged-photos-to-owncloud-using-ifttt/">marcus-povey.co.uk/2014/09/11/bac...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/104119410403415011561"
+       title="Lainey Batham">
+      <img class="profile" src="https://lh5.googleusercontent.com/-IMdL0OIUl8I/AAAAAAAAAAI/AAAAAAAAAAA/zw21tKq3Pyk/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/109622249060170703374/posts/ikFhfCvngbC">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/109622249060170703374/posts/ikFhfCvngbC">
+      
+        Migrating away from dropbox, piece by ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1410480537&key=aglzfmJyaWQtZ3lybAsSCFJlc3BvbnNlIl50YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzdHNuZWJ4eDNrdmptcnQwNGNpdDV3MnJtM2pmdmFwd3Mwa19zaGFyZWRfYnlfMTA0MTE5NDEwNDAzNDE1MDExNTYxDA">
+    
+      2 months ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.marcus-povey.co.uk/2014/09/11/backing-up-facebook-tagged-photos-to-owncloud-using-ifttt/">marcus-povey.co.uk/2014/09/11/bac...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/118280518445211134325"
+       title="Ernmander">
+      <img class="profile" src="https://lh6.googleusercontent.com/-PhU02YosapQ/AAAAAAAAAAI/AAAAAAAAAAA/13he0n62Ihw/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/109622249060170703374/posts/gzBVj691UV2">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/109622249060170703374/posts/gzBVj691UV2">
+      
+        Attempting to remove the white screen ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1409848725&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzMnpkbjQ1d21meGgxemowNGNpdDV3MnJtM2pmdmFwd3Mwa19saWtlZF9ieV8xMTgyODA1MTg0NDUyMTExMzQzMjUM">
+    
+      2 months, 1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.marcus-povey.co.uk/2014/09/04/stopping-wsod-in-php/">marcus-povey.co.uk/2014/09/04/sto...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/118280518445211134325"
+       title="Ernmander">
+      <img class="profile" src="https://lh6.googleusercontent.com/-PhU02YosapQ/AAAAAAAAAAI/AAAAAAAAAAA/13he0n62Ihw/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/109622249060170703374/posts/Q7z3ZuW7pR2">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/109622249060170703374/posts/Q7z3ZuW7pR2">
+      
+        Automatically turn soundcloud links in your ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1408082684&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzYXY1ZGpueGl5ZGZiZ2UwNGNpdDV3MnJtM2pmdmFwd3Mwa19saWtlZF9ieV8xMTgyODA1MTg0NDUyMTExMzQzMjUM">
+    
+      3 months ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.marcus-povey.co.uk/2014/08/14/soundcloud-embed-for-idno/">marcus-povey.co.uk/2014/08/14/sou...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/118280518445211134325"
+       title="Ernmander">
+      <img class="profile" src="https://lh6.googleusercontent.com/-PhU02YosapQ/AAAAAAAAAAI/AAAAAAAAAAA/13he0n62Ihw/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/109622249060170703374/posts/c84jZs6iLDd">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/109622249060170703374/posts/c84jZs6iLDd">
+      
+        I had to tweak Jetpack to ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1406835548&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyMGRyMmpweWl4ZjF6aWwwNGNpdDV3MnJtM2pmdmFwd3Mwa19saWtlZF9ieV8xMTgyODA1MTg0NDUyMTExMzQzMjUM">
+    
+      3 months, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.marcus-povey.co.uk/2014/07/31/tweaking-jetpack-opengraph/">marcus-povey.co.uk/2014/07/31/twe...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/118280518445211134325"
+       title="Ernmander">
+      <img class="profile" src="https://lh6.googleusercontent.com/-PhU02YosapQ/AAAAAAAAAAI/AAAAAAAAAAA/13he0n62Ihw/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/109622249060170703374/posts/cRAafAeBZAK">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/109622249060170703374/posts/cRAafAeBZAK">
+      
+        Introducing a plugin that adds basic ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1406225173&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyaWp4cmdqdWVoczNyeW4wNGNpdDV3MnJtM2pmdmFwd3Mwa19saWtlZF9ieV8xMTgyODA1MTg0NDUyMTExMzQzMjUM">
+    
+      3 months, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.marcus-povey.co.uk/2014/07/24/markdown-support-for-idno/">marcus-povey.co.uk/2014/07/24/mar...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/118280518445211134325"
+       title="Ernmander .">
+      <img class="profile" src="https://lh6.googleusercontent.com/-PhU02YosapQ/AAAAAAAAAAI/AAAAAAAAAAA/13he0n62Ihw/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/109622249060170703374/posts/KfhHXHL9hmL">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/109622249060170703374/posts/KfhHXHL9hmL">
+      
+        Updating my Idno/Known email posting plugin ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1405667377&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyaHRmcTVudmlidTNuZmoyM3FkajBwd2t2dXl0cGphMDRfbGlrZWRfYnlfMTE4MjgwNTE4NDQ1MjExMTM0MzI1DA">
+    
+      4 months ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.marcus-povey.co.uk/2014/07/17/in-body-syndication-tags-now-supported-by-idno-email-posting-plugin/">marcus-povey.co.uk/2014/07/17/in-...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

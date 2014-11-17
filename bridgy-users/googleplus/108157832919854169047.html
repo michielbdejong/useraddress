@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Tj Cooper (Google+) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://plus.google.com/108157832919854169047" title="Tj Cooper (Google+)"
+   class="u-url">
+  <img class="profile u-photo" src="https://lh3.googleusercontent.com/-WkPePFZfsYA/AAAAAAAAAAI/AAAAAAAAABo/RrSDpYotWm4/photo.jpg?sz=50&amp;sz=128" width="64px" />
+  <img src="/static/googleplus_icon.png"
+       
+       alt="Google+" />
+  <span class="p-name">Tj Cooper</span></a>
+
+
+
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row promo warning">
+<p id="edit-profile">First things first: what's your web site?
+
+Open your
+<a href="https://plus.google.com/me/about" target="_blank">
+  Google+ profile's <em>Links</em> section</a>, click the <em>Edit</em> link,
+and add your web site as the first link under <em>Other profiles</em>. Then
+click here:
+<!-- Google+ listen signup -->
+<form method="post" name="listen-googleplus-start" action="/googleplus/start" class="signup">
+  <input type="image" alt="Sign in with Google+"
+         src="/activitystreams/oauth_dropins/static/google_plus.png" />
+  <!-- The state param doesn't actually work for G+. Not sure why. Doesn't
+       matter for now since we don't support publish for G+. -->
+  <input name="feature" type="hidden" value="listen" />
+  <!-- https://developers.google.com/+/api/oauth#scopes -->
+  <input name="scope" type="hidden"
+         value="https://www.googleapis.com/auth/plus.login" />
+</form>
+
+
+</p>
+</div>
+
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class=" big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDgxNTc4MzI5MTk4NTQxNjkwNDcM" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416152625&key=aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDgxNTc4MzI5MTk4NTQxNjkwNDcM">
+      17 hours, 6 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDgxNTc4MzI5MTk4NTQxNjkwNDcM" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/118229750345562207808"
+       title="Theresa Santa (iBrandYourBusiness)">
+      <img class="profile" src="https://lh6.googleusercontent.com/-URbfV29ZhLQ/AAAAAAAAAAI/AAAAAAAAAAA/hvTmRV7WDuU/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/108157832919854169047/posts/hoYAomQyteH">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/108157832919854169047/posts/hoYAomQyteH">
+      
+        Here&#39;s what you should really be ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1409716255&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzYmRsZzVsdnFudzF5Ym4wNGNqZjNoYnh1YWl2cHJ4am9fbGlrZWRfYnlfMTE4MjI5NzUwMzQ1NTYyMjA3ODA4DA">
+    
+      2 months, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzYmRsZzVsdnFudzF5Ym4wNGNqZjNoYnh1YWl2cHJ4am9fbGlrZWRfYnlfMTE4MjI5NzUwMzQ1NTYyMjA3ODA4DA" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://blog.crazyegg.com/2014/06/04/customer-value-optimization">blog.crazyegg.com/2014/06/04/cus... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/118229750345562207808"
+       title="Theresa Santa (iBrandYourBusiness)">
+      <img class="profile" src="https://lh6.googleusercontent.com/-URbfV29ZhLQ/AAAAAAAAAAI/AAAAAAAAAAA/hvTmRV7WDuU/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/108157832919854169047/posts/ZypdZ2oKMNH">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/108157832919854169047/posts/RfbN8XGvKKw">
+      
+        Awesome article by Tommy Walker yet ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1409716196&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyNWR0dGFxdTN3ZnZpd24wNGNqZjNoYnh1YWl2cHJ4am9fbGlrZWRfYnlfMTE4MjI5NzUwMzQ1NTYyMjA3ODA4DA">
+    
+      2 months, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://conversionxl.com/landing-page-best-practices-remove-distractions-bold-tell-story/">conversionxl.com/landing-page-b...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/118229750345562207808"
+       title="Theresa Santa (iBrandYourBusiness)">
+      <img class="profile" src="https://lh6.googleusercontent.com/-URbfV29ZhLQ/AAAAAAAAAAI/AAAAAAAAAAA/hvTmRV7WDuU/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/108157832919854169047/posts/JY37kqHVwHe">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/108157832919854169047/posts/JY37kqHVwHe">
+      
+        Great post by Oli on moz ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1409716142&key=aglzfmJyaWQtZ3lyZwsSCFJlc3BvbnNlIll0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzeXZsNWlpcnFoenB1bmMyM3VzdmR6aWxucXhoemZ4X2xpa2VkX2J5XzExODIyOTc1MDM0NTU2MjIwNzgwOAw">
+    
+      2 months, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://moz.com/blog/most-entertaining-guide-to-landing-page-optimization">moz.com/blog/most-ente...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/118229750345562207808"
+       title="Theresa Santa (iBrandYourBusiness)">
+      <img class="profile" src="https://lh6.googleusercontent.com/-URbfV29ZhLQ/AAAAAAAAAAI/AAAAAAAAAAA/hvTmRV7WDuU/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/118404643206737336211/posts/8SoaVCbZ15b">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/108157832919854169047/posts/cL2tSwSEjra">
+      
+        Our Independence as a country was ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 months, 2 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/102208357712681692223"
+       title="Rayne Dowell">
+      <img class="profile" src="https://lh6.googleusercontent.com/-wUnLoNOFeYU/AAAAAAAAAAI/AAAAAAAAAAA/wxCB2WRjUtA/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/108157832919854169047/posts/UWLPmArALGt">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/108157832919854169047/posts/UWLPmArALGt">
+      
+        BTW I watched this interesting video ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      4 months ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/110241593474835576053"
+       title="dottotech">
+      <img class="profile" src="https://lh4.googleusercontent.com/-Z_ntdaoYEAY/AAAAAAAAAAI/AAAAAAAAABU/RcDvKfa4Qn8/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/108157832919854169047/posts/UWLPmArALGt">
+        +Tj Cooperhttp://www.crtc.gc.ca/eng/com500/faq500.htm</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/108157832919854169047/posts/UWLPmArALGt">
+      
+        BTW I watched this interesting video ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      4 months, 1 week ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/110241593474835576053"
+       title="dottotech">
+      <img class="profile" src="https://lh4.googleusercontent.com/-Z_ntdaoYEAY/AAAAAAAAAAI/AAAAAAAAABU/RcDvKfa4Qn8/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/108157832919854169047/posts/UWLPmArALGt">
+        +Tj CooperSome of your concerns are ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/108157832919854169047/posts/UWLPmArALGt">
+      
+        BTW I watched this interesting video ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      4 months, 1 week ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/108157832919854169047"
+       title="Tj Cooper">
+      <img class="profile" src="https://lh3.googleusercontent.com/-WkPePFZfsYA/AAAAAAAAAAI/AAAAAAAAABo/mbZKMp1y9fc/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/108157832919854169047/posts/UWLPmArALGt">
+        You have the the hyperlink the ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/108157832919854169047/posts/UWLPmArALGt">
+      
+        BTW I watched this interesting video ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      4 months, 1 week ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/110241593474835576053"
+       title="dottotech">
+      <img class="profile" src="https://lh4.googleusercontent.com/-Z_ntdaoYEAY/AAAAAAAAAAI/AAAAAAAAABU/RcDvKfa4Qn8/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/108157832919854169047/posts/UWLPmArALGt#comment-z13iut54isbucxih404cjf3hbxuaivprxjo.1404683660506083">
+        +Tj CooperIf you have all the ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/108157832919854169047/posts/UWLPmArALGt">
+      
+        BTW I watched this interesting video ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      4 months, 1 week ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/108157832919854169047"
+       title="Tj Cooper">
+      <img class="profile" src="https://lh3.googleusercontent.com/-WkPePFZfsYA/AAAAAAAAAAI/AAAAAAAAABo/mbZKMp1y9fc/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/108157832919854169047/posts/UWLPmArALGt#comment-z13iut54isbucxih404cjf3hbxuaivprxjo.1404689991141059">
+        +dottotech perhaps, and I might consider ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/108157832919854169047/posts/UWLPmArALGt">
+      
+        BTW I watched this interesting video ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      4 months, 1 week ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

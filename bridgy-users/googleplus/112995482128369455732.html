@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Björn Koblow (Google+) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://plus.google.com/+BjörnKoblow" title="Björn Koblow (Google+)"
+   class="u-url">
+  <img class="profile u-photo" src="https://lh4.googleusercontent.com/-f-vHdWMhkQA/AAAAAAAAAAI/AAAAAAAAD-Y/qwaC3K10vyc/photo.jpg?sz=50&amp;sz=128" width="64px" />
+  <img src="/static/googleplus_icon.png"
+       
+       alt="Google+" />
+  <span class="p-name">Björn Koblow</span></a>
+
+
+
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row promo warning">
+<p id="edit-profile">First things first: what's your web site?
+
+Open your
+<a href="https://plus.google.com/me/about" target="_blank">
+  Google+ profile's <em>Links</em> section</a>, click the <em>Edit</em> link,
+and add your web site as the first link under <em>Other profiles</em>. Then
+click here:
+<!-- Google+ listen signup -->
+<form method="post" name="listen-googleplus-start" action="/googleplus/start" class="signup">
+  <input type="image" alt="Sign in with Google+"
+         src="/activitystreams/oauth_dropins/static/google_plus.png" />
+  <!-- The state param doesn't actually work for G+. Not sure why. Doesn't
+       matter for now since we don't support publish for G+. -->
+  <input name="feature" type="hidden" value="listen" />
+  <!-- https://developers.google.com/+/api/oauth#scopes -->
+  <input name="scope" type="hidden"
+         value="https://www.googleapis.com/auth/plus.login" />
+</form>
+
+
+</p>
+</div>
+
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class=" big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTI5OTU0ODIxMjgzNjk0NTU3MzIM" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416201981&key=aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTI5OTU0ODIxMjgzNjk0NTU3MzIM">
+      3 hours, 26 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTI5OTU0ODIxMjgzNjk0NTU3MzIM" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/118349088665008220962"
+       title="Jana Manja Trautzsch">
+      <img class="profile" src="https://lh5.googleusercontent.com/-JpFS4CzvVoc/AAAAAAAAAAI/AAAAAAAAAAA/Xbf_O9akgFg/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112995482128369455732/posts/JeSPSJyMZ8i">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/112995482128369455732/posts/JeSPSJyMZ8i">
+      
+        --
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415448042&key=aglzfmJyaWQtZ3lyZwsSCFJlc3BvbnNlIll0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyenp2YmF6emZ2ZmRqdmQyM3lpanhwYnRhZ3dqcnZqX2xpa2VkX2J5XzExODM0OTA4ODY2NTAwODIyMDk2Mgw">
+    
+      1 week, 1 day ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://life.b30.in/rauchfrei-3-0/">life.b30.in/rauchfrei-3-0/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/100209987655773434318"
+       title="sascha aßbach">
+      <img class="profile" src="https://lh6.googleusercontent.com/-ltnvFqbC-Vw/AAAAAAAAAAI/AAAAAAAAAAA/spSo3DxYqco/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112995482128369455732/posts/JeSPSJyMZ8i">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/112995482128369455732/posts/JeSPSJyMZ8i">
+      
+        --
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415115884&key=aglzfmJyaWQtZ3lyZwsSCFJlc3BvbnNlIll0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyenp2YmF6emZ2ZmRqdmQyM3lpanhwYnRhZ3dqcnZqX2xpa2VkX2J5XzEwMDIwOTk4NzY1NTc3MzQzNDMxOAw">
+    
+      1 week, 5 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://life.b30.in/rauchfrei-3-0/">life.b30.in/rauchfrei-3-0/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/112933995156592139427"
+       title="westerbarkey jan">
+      <img class="profile" src="https://lh3.googleusercontent.com/-ySzAPj7XvP8/AAAAAAAAAAI/AAAAAAAAAAA/7IdDuflSsJE/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112995482128369455732/posts/JeSPSJyMZ8i">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/112995482128369455732/posts/JeSPSJyMZ8i">
+      
+        --
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415032154&key=aglzfmJyaWQtZ3lyZwsSCFJlc3BvbnNlIll0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyenp2YmF6emZ2ZmRqdmQyM3lpanhwYnRhZ3dqcnZqX2xpa2VkX2J5XzExMjkzMzk5NTE1NjU5MjEzOTQyNww">
+    
+      1 week, 6 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://life.b30.in/rauchfrei-3-0/">life.b30.in/rauchfrei-3-0/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/112995482128369455732"
+       title="Björn Koblow">
+      <img class="profile" src="https://lh4.googleusercontent.com/-f-vHdWMhkQA/AAAAAAAAAAI/AAAAAAAAqzE/QBhaFdZ15og/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112995482128369455732/posts/9VSVtKwRMek">
+        Neues Google Feature, Polls ... wird ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/112995482128369455732/posts/9VSVtKwRMek">
+      
+        Wollen wir mal was abstimmen?﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 month ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/100209987655773434318"
+       title="sascha aßbach">
+      <img class="profile" src="https://lh6.googleusercontent.com/-ltnvFqbC-Vw/AAAAAAAAAAI/AAAAAAAAnrA/g2-7Pb4DaZI/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112995482128369455732/posts/9VSVtKwRMek">
+        isn ditte?</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/112995482128369455732/posts/9VSVtKwRMek">
+      
+        Wollen wir mal was abstimmen?﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 month, 1 week ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/107455281321749010239"
+       title="Jörn Sieveneck (NERO)">
+      <img class="profile" src="https://lh4.googleusercontent.com/-YBHu0_Hqsfs/AAAAAAAAAAI/AAAAAAAAAAA/lFjqgUMS6iw/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112995482128369455732/posts/Ke2an68Tbs7">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/112995482128369455732/posts/Ke2an68Tbs7">
+      
+        Ab auf die #wishlist :)﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1412337381&key=aglzfmJyaWQtZ3lyZwsSCFJlc3BvbnNlIll0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyMWozc2lsb3lvdTNodmoyM3lpanhwYnRhZ3dqcnZqX2xpa2VkX2J5XzEwNzQ1NTI4MTMyMTc0OTAxMDIzOQw">
+    
+      1 month, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://life.b30.in/flic-press-button-wishlist/">life.b30.in/flic-press-but...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/107455281321749010239"
+       title="Jörn Sieveneck">
+      <img class="profile" src="https://lh4.googleusercontent.com/-YBHu0_Hqsfs/AAAAAAAAAAI/AAAAAAAADlk/9ohgcrkHESw/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112995482128369455732/posts/Ke2an68Tbs7">
+        Coole Sache, direkt mal gesignupped</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/112995482128369455732/posts/Ke2an68Tbs7">
+      
+        Ab auf die #wishlist :)﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1412337322&key=aglzfmJyaWQtZ3lyWQsSCFJlc3BvbnNlIkt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyMWozc2lsb3lvdTNodmoyM3lpanhwYnRhZ3dqcnZqLjE0MTIzMjkyMTA3MzgyMTEM">
+    
+      1 month, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://life.b30.in/flic-press-button-wishlist/">life.b30.in/flic-press-but...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/100209987655773434318"
+       title="sascha aßbach">
+      <img class="profile" src="https://lh6.googleusercontent.com/-ltnvFqbC-Vw/AAAAAAAAAAI/AAAAAAAAAAA/spSo3DxYqco/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112995482128369455732/posts/4vm2fgZ8aHe">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/112995482128369455732/posts/4vm2fgZ8aHe">
+      
+        Hamma! (Oder?!) ;)﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1410695774&key=aglzfmJyaWQtZ3lyZwsSCFJlc3BvbnNlIll0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEza3RqdnIzcmZ1Y3JqY3IyM3lpanhwYnRhZ3dqcnZqX2xpa2VkX2J5XzEwMDIwOTk4NzY1NTc3MzQzNDMxOAw">
+    
+      2 months ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://life.b30.in/tiiny-yet-another-sinnlose-photo-app/">life.b30.in/tiiny-yet-anot...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/109166643547278903848"
+       title="Matthias Möller">
+      <img class="profile" src="https://lh6.googleusercontent.com/-K4BZ4wcGNkk/AAAAAAAAAAI/AAAAAAAAAAA/ZnukRd12-Sg/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/101734694711465212917/posts/aVyASnLBu5a">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/112995482128369455732/posts/EYxN8xnGxxx">
+      
+        Neuer Beitrag: Taptalk - es geht ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1409161694&key=aglzfmJyaWQtZ3lyZwsSCFJlc3BvbnNlIll0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyc3lkbWEzemIzYzUwbWwyM3lpanhwYnRhZ3dqcnZqX2xpa2VkX2J5XzEwOTE2NjY0MzU0NzI3ODkwMzg0OAw">
+    
+      2 months, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://life.b30.in/taptalk-es-geht-nicht-mehr-ohne/">life.b30.in/taptalk-es-geh...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/112995482128369455732"
+       title="Björn Koblow">
+      <img class="profile" src="https://lh4.googleusercontent.com/-f-vHdWMhkQA/AAAAAAAAAAI/AAAAAAAAqzE/QBhaFdZ15og/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/112995482128369455732/posts/LD5yGHkTMcU">
+        Das haste recht :)</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/112995482128369455732/posts/LD5yGHkTMcU">
+      
+        Neuer Beitrag: Ello - der neue ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1409073481&key=aglzfmJyaWQtZ3lyWQsSCFJlc3BvbnNlIkt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzZ3VsNXd3bzJkdmx1dm0yM3lpanhwYnRhZ3dqcnZqLjE0MDkwMzI1OTcwNTcwNTAM">
+    
+      2 months, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://life.b30.in/ello-der-neue-hice-shice/">life.b30.in/ello-der-neue-...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

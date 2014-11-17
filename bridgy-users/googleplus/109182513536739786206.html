@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Tantek Çelik (Google+) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://plus.google.com/109182513536739786206" title="Tantek Çelik (Google+)"
+   class="u-url">
+  <img class="profile u-photo" src="https://lh5.googleusercontent.com/-TkT4pdhnAW8/AAAAAAAAAAI/AAAAAAAAAWk/ltfIoIVNSgo/photo.jpg?sz=50&amp;sz=128" width="64px" />
+  <img src="/static/googleplus_icon.png"
+       
+       alt="Google+" />
+  <span class="p-name">Tantek Çelik</span></a>
+
+
+
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row promo warning">
+<p id="edit-profile">First things first: what's your web site?
+
+Open your
+<a href="https://plus.google.com/me/about" target="_blank">
+  Google+ profile's <em>Links</em> section</a>, click the <em>Edit</em> link,
+and add your web site as the first link under <em>Other profiles</em>. Then
+click here:
+<!-- Google+ listen signup -->
+<form method="post" name="listen-googleplus-start" action="/googleplus/start" class="signup">
+  <input type="image" alt="Sign in with Google+"
+         src="/activitystreams/oauth_dropins/static/google_plus.png" />
+  <!-- The state param doesn't actually work for G+. Not sure why. Doesn't
+       matter for now since we don't support publish for G+. -->
+  <input name="feature" type="hidden" value="listen" />
+  <!-- https://developers.google.com/+/api/oauth#scopes -->
+  <input name="scope" type="hidden"
+         value="https://www.googleapis.com/auth/plus.login" />
+</form>
+
+
+</p>
+</div>
+
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class=" big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDkxODI1MTM1MzY3Mzk3ODYyMDYM" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416203880&key=aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDkxODI1MTM1MzY3Mzk3ODYyMDYM">
+      2 hours, 52 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDkxODI1MTM1MzY3Mzk3ODYyMDYM" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/112088462407783855918"
+       title="Kang-Hao Lu">
+      <img class="profile" src="https://lh5.googleusercontent.com/-rd8h4Htsnc4/AAAAAAAAAAI/AAAAAAAAAAA/UYq-gPYHAps/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/109182513536739786206/posts/TC7sqHXvDg2">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/109182513536739786206/posts/TC7sqHXvDg2">
+      
+        Finally blogged late last night on ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414890855&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEycnl6ZTRqcHYzdzNtd3cwNGNjaHJ5dmtqcHZmbTR2eHcwa19saWtlZF9ieV8xMTIwODg0NjI0MDc3ODM4NTU5MTgM">
+    
+      2 weeks, 1 day ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://tantek.com/2011/220/b1/web-actions-a-new-building-block">tantek.com/2011/220/b1/we...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/106249475190599857474"
+       title="Abigail Gosset">
+      <img class="profile" src="https://lh3.googleusercontent.com/-EfICsiap71g/AAAAAAAAAAI/AAAAAAAAAAA/RLAu25se7s8/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/109182513536739786206/posts/Cuec1mw8p8E">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/109182513536739786206/posts/Cuec1mw8p8E">
+      
+        2013-04-19: the day the indieweb successfully ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414671666&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEydndqMml5eWlrZ2RhMmIyMjNoenF3M3hpdXdsYXpqMDRfbGlrZWRfYnlfMTA2MjQ5NDc1MTkwNTk5ODU3NDc0DA">
+    
+      2 weeks, 3 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://tantek.com/2013/113/b1/first-federated-indieweb-comment-thread">tantek.com/2013/113/b1/fi...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/101159257904904216245"
+       title="Somkiat Ruangsuk">
+      <img class="profile" src="https://lh6.googleusercontent.com/-LvyqR2QyBZA/AAAAAAAAAAI/AAAAAAAAAAA/2UKFjJXYy1s/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/109182513536739786206/posts/RPRR2KMvkL7">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/109182513536739786206/posts/RPRR2KMvkL7">
+      
+        http://tantek.com/2012/286/t2/indiewebcamp-chat-activitystreams-wiki cc: +Chris Messina +Martin Atkins ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414634467&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzb2dsbWk1bWYzY3h0b2wwNGNjaHJ5dmtqcHZmbTR2eHcwa19saWtlZF9ieV8xMDExNTkyNTc5MDQ5MDQyMTYyNDUM">
+    
+      2 weeks, 4 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://tantek.com/2012/286/t2/indiewebcamp-chat-activitystreams-wiki">tantek.com/2012/286/t2/in...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/101159257904904216245"
+       title="Somkiat Ruangsuk">
+      <img class="profile" src="https://lh6.googleusercontent.com/-LvyqR2QyBZA/AAAAAAAAAAI/AAAAAAAAAAA/2UKFjJXYy1s/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/109182513536739786206/posts/Cuec1mw8p8E">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/109182513536739786206/posts/Cuec1mw8p8E">
+      
+        2013-04-19: the day the indieweb successfully ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414634427&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEydndqMml5eWlrZ2RhMmIyMjNoenF3M3hpdXdsYXpqMDRfbGlrZWRfYnlfMTAxMTU5MjU3OTA0OTA0MjE2MjQ1DA">
+    
+      2 weeks, 4 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://tantek.com/2013/113/b1/first-federated-indieweb-comment-thread">tantek.com/2013/113/b1/fi...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/101159257904904216245"
+       title="Somkiat Ruangsuk">
+      <img class="profile" src="https://lh6.googleusercontent.com/-LvyqR2QyBZA/AAAAAAAAAAI/AAAAAAAAAAA/2UKFjJXYy1s/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/109182513536739786206/posts/ZLkaPiJ2VM1">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/109182513536739786206/posts/ZLkaPiJ2VM1">
+      
+        --
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414634389&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzY2cxamc0cXFpanhmYTEwNGNjaHJ5dmtqcHZmbTR2eHcwa19saWtlZF9ieV8xMDExNTkyNTc5MDQ5MDQyMTYyNDUM">
+    
+      2 weeks, 4 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://tantek.com/2013/073/b1/silos-vs-open-social-web">tantek.com/2013/073/b1/si...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/101159257904904216245"
+       title="Somkiat Ruangsuk">
+      <img class="profile" src="https://lh6.googleusercontent.com/-LvyqR2QyBZA/AAAAAAAAAAI/AAAAAAAAAAA/2UKFjJXYy1s/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/109182513536739786206/posts/MzjTUAeQpFU">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/109182513536739786206/posts/MzjTUAeQpFU">
+      
+        Why I won&#39;t be buying any ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414634364&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEycHRkMnFicW5kenJrbngyMjNoenF3M3hpdXdsYXpqMDRfbGlrZWRfYnlfMTAxMTU5MjU3OTA0OTA0MjE2MjQ1DA">
+    
+      2 weeks, 4 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://articles.latimes.com/2012/dec/22/business/la-fi-hiltzik-20121223">articles.latimes.com/2012/dec/22/bu...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/101159257904904216245"
+       title="Somkiat Ruangsuk">
+      <img class="profile" src="https://lh6.googleusercontent.com/-LvyqR2QyBZA/AAAAAAAAAAI/AAAAAAAAAAA/2UKFjJXYy1s/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/109182513536739786206/posts/FDYTdVYc7mP">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/109182513536739786206/posts/FDYTdVYc7mP">
+      
+        The G+ iOS app is quite ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 weeks, 4 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/115971232610617876835"
+       title="Jean Jordaan">
+      <img class="profile" src="https://lh5.googleusercontent.com/-OVdjrJInRMs/AAAAAAAAAAI/AAAAAAAAAAA/6Ps2pzCkhJk/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/109182513536739786206/posts/AR6xLV5YjAN">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/109182513536739786206/posts/AR6xLV5YjAN">
+      
+        Buzz permalinks have diedRecently I raised ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413335683&key=aglzfmJyaWQtZ3lyagsSCFJlc3BvbnNlIlx0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzanV6dHh5dWJnZXpkZHMyMjNoenF3M3hpdXdsYXpqMDRfc2hhcmVkX2J5XzExNTk3MTIzMjYxMDYxNzg3NjgzNQw">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://tantek.com/2010/332/t2/blackberry-delete-key-favorite-email-txting">tantek.com/2010/332/t2/bl...</a></li>
+	<li><a class="original-post" target="_blank" href="http://tantek.com/2010/302/b1/xhtml-dead-long-live-xml-valid-html5">tantek.com/2010/302/b1/xh...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/104770726494207178533"
+       title="Brian Hendrickson">
+      <img class="profile" src="https://lh3.googleusercontent.com/-yDFMSrbSo5g/AAAAAAAAAAI/AAAAAAAAAAA/4fEGb3c-u1Y/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/109182513536739786206/posts/Cuec1mw8p8E">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/109182513536739786206/posts/Cuec1mw8p8E">
+      
+        2013-04-19: the day the indieweb successfully ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413335653&key=aglzfmJyaWQtZ3lyagsSCFJlc3BvbnNlIlx0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEydndqMml5eWlrZ2RhMmIyMjNoenF3M3hpdXdsYXpqMDRfc2hhcmVkX2J5XzEwNDc3MDcyNjQ5NDIwNzE3ODUzMww">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://tantek.com/2013/113/b1/first-federated-indieweb-comment-thread">tantek.com/2013/113/b1/fi...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/111991826926222544385"
+       title="Michael[tm] Smith">
+      <img class="profile" src="https://lh3.googleusercontent.com/-n7XErbbShCY/AAAAAAAAAAI/AAAAAAAAAAA/IBC6lCTqFMA/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/109182513536739786206/posts/Cuec1mw8p8E">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/109182513536739786206/posts/Cuec1mw8p8E">
+      
+        2013-04-19: the day the indieweb successfully ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413335627&key=aglzfmJyaWQtZ3lyagsSCFJlc3BvbnNlIlx0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEydndqMml5eWlrZ2RhMmIyMjNoenF3M3hpdXdsYXpqMDRfc2hhcmVkX2J5XzExMTk5MTgyNjkyNjIyMjU0NDM4NQw">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://tantek.com/2013/113/b1/first-federated-indieweb-comment-thread">tantek.com/2013/113/b1/fi...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

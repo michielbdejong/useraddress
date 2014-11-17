@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Matthias Pfefferle (Google+) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://plus.google.com/+MatthiasPfefferle" title="Matthias Pfefferle (Google+)"
+   class="u-url">
+  <img class="profile u-photo" src="https://lh4.googleusercontent.com/-Lb2abonZao4/AAAAAAAAAAI/AAAAAAAAAD8/eiX43c9i34o/photo.jpg?sz=50&amp;sz=128" width="64px" />
+  <img src="/static/googleplus_icon.png"
+       
+       alt="Google+" />
+  <span class="p-name">Matthias Pfefferle</span></a>
+
+
+
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row promo warning">
+<p id="edit-profile">First things first: what's your web site?
+
+Open your
+<a href="https://plus.google.com/me/about" target="_blank">
+  Google+ profile's <em>Links</em> section</a>, click the <em>Edit</em> link,
+and add your web site as the first link under <em>Other profiles</em>. Then
+click here:
+<!-- Google+ listen signup -->
+<form method="post" name="listen-googleplus-start" action="/googleplus/start" class="signup">
+  <input type="image" alt="Sign in with Google+"
+         src="/activitystreams/oauth_dropins/static/google_plus.png" />
+  <!-- The state param doesn't actually work for G+. Not sure why. Doesn't
+       matter for now since we don't support publish for G+. -->
+  <input name="feature" type="hidden" value="listen" />
+  <!-- https://developers.google.com/+/api/oauth#scopes -->
+  <input name="scope" type="hidden"
+         value="https://www.googleapis.com/auth/plus.login" />
+</form>
+
+
+</p>
+</div>
+
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class=" big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTgyMDUzODk0NTUyNjkyMjkyMDQM" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416187539&key=aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTgyMDUzODk0NTUyNjkyMjkyMDQM">
+      7 hours, 31 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTgyMDUzODk0NTUyNjkyMjkyMDQM" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/102694188490946876191"
+       title="Peter Krautzberger">
+      <img class="profile" src="https://lh4.googleusercontent.com/-RENo8NFdzEo/AAAAAAAAAAI/AAAAAAAAAAA/lqEbmJcjcik/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/118205389455269229204/posts/6AbrFNQj2tH">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/118205389455269229204/posts/6AbrFNQj2tH">
+      
+        added #xmpp, #html5 and #css3 icons﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413401758&key=aglzfmJyaWQtZ3lyagsSCFJlc3BvbnNlIlx0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzbGh6dXFyeHVhenh3MHkyMzFqdHpyNHJpamNwNTRyMDRfc2hhcmVkX2J5XzEwMjY5NDE4ODQ5MDk0Njg3NjE5MQw">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://pfefferle.github.io/openwebicons/">pfefferle.github.io/openwebicons/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/102833090315682344519"
+       title="Georg Portenkirchner">
+      <img class="profile" src="https://lh3.googleusercontent.com/-RyvGXl8EdS0/AAAAAAAAAAI/AAAAAAAAAAA/5Uradp-n8DY/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/118205389455269229204/posts/K7V53izmRAm">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/118205389455269229204/posts/K7V53izmRAm">
+      
+        neue folge mit +Jens Grochtdreis und ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413387418&key=aglzfmJyaWQtZ3lyagsSCFJlc3BvbnNlIlx0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEybmVkdmh0b2liZTVkM2cyMzFqdHpyNHJpamNwNTRyMDRfc2hhcmVkX2J5XzEwMjgzMzA5MDMxNTY4MjM0NDUxOQw">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://technikwuerze.de/podcast/technikwurze-188-die-lieblings-tools-der-frontend-entwickler/">technikwuerze.de/podcast/techni...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/102694188490946876191"
+       title="Peter Krautzberger">
+      <img class="profile" src="https://lh4.googleusercontent.com/-RENo8NFdzEo/AAAAAAAAAAI/AAAAAAAAAAA/lqEbmJcjcik/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/118205389455269229204/posts/gSNJX9NDvJd">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/118205389455269229204/posts/gSNJX9NDvJd">
+      
+        gebloggt...﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413387400&key=aglzfmJyaWQtZ3lybAsSCFJlc3BvbnNlIl50YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEybGp2YjUyd3oxemZzemYwNGNnNXpieXdteHR4Mm9vbXcwa19zaGFyZWRfYnlfMTAyNjk0MTg4NDkwOTQ2ODc2MTkxDA">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://notizblog.org/2012/11/15/dezentrale-walled-gardens/">notizblog.org/2012/11/15/dez...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/102694188490946876191"
+       title="Peter Krautzberger">
+      <img class="profile" src="https://lh4.googleusercontent.com/-RENo8NFdzEo/AAAAAAAAAAI/AAAAAAAAAAA/lqEbmJcjcik/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/118205389455269229204/posts/6MRSCpvTrYe">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/118205389455269229204/posts/6MRSCpvTrYe">
+      
+        Teil 2﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413387365&key=aglzfmJyaWQtZ3lyagsSCFJlc3BvbnNlIlx0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyYnp4bHJia3VraTF6c3oyMzFqdHpyNHJpamNwNTRyMDRfc2hhcmVkX2J5XzEwMjY5NDE4ODQ5MDk0Njg3NjE5MQw">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://hueniverse.com/2012/07/30/on-leaving-oauth/">hueniverse.com/2012/07/30/on-...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/100571815714499947809"
+       title="Sylvia Egger">
+      <img class="profile" src="https://lh3.googleusercontent.com/-5TDNpZwZxFU/AAAAAAAAAAI/AAAAAAAAAAA/5qtyrzqi7IQ/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/102458928073783517690/posts/JRBtnSFcH5Q">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/118205389455269229204/posts/hyJHLNHiaEq">
+      
+        Ja ist denn heute schon Weihnachten? ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413387327&key=aglzfmJyaWQtZ3lybAsSCFJlc3BvbnNlIl50YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyYmpsaWl1dWF5ZWR5am8wNGNnNXpieXdteHR4Mm9vbXcwa19zaGFyZWRfYnlfMTAwNTcxODE1NzE0NDk5OTQ3ODA5DA">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://technikwuerze.de/podcast/technikwuerze-187-metainformationen-und-semantisches-web/">technikwuerze.de/podcast/techni...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/116250636874207924347"
+       title="Thomas Weise">
+      <img class="profile" src="https://lh4.googleusercontent.com/-K0sYYNli4HQ/AAAAAAAAAAI/AAAAAAAAAAA/oqhCvkSzgcw/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/102133777623504027137/posts/cBmPfj3aDiD">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/118205389455269229204/posts/j5p1fcHtStY">
+      
+        http://netzwertig.com/2011/11/24/eure-lieblingsdienste-2011-netzwertig-com-sucht-den-onlineservice-des-jahres/﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413387324&key=aglzfmJyaWQtZ3lybAsSCFJlc3BvbnNlIl50YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyNHZuNGo1bGpvZnRuYnYwNGNnNXpieXdteHR4Mm9vbXcwa19zaGFyZWRfYnlfMTE2MjUwNjM2ODc0MjA3OTI0MzQ3DA">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://netzwertig.com/2011/11/24/eure-lieblingsdienste-2011-netzwertig-com-sucht-den-onlineservice-des-jahres/">netzwertig.com/2011/11/24/eur...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/102833090315682344519"
+       title="Georg Portenkirchner">
+      <img class="profile" src="https://lh3.googleusercontent.com/-RyvGXl8EdS0/AAAAAAAAAAI/AAAAAAAAAAA/5Uradp-n8DY/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/117377434815709898403/posts/fc13AREAHcV">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/118205389455269229204/posts/VFHHMnw3eNz">
+      
+        &quot;Today, we are announcing the OAuth ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413387319&key=aglzfmJyaWQtZ3lybAsSCFJlc3BvbnNlIl50YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzenZ2eGJkcmE0aTN2eGMwNGNnNXpieXdteHR4Mm9vbXcwa19zaGFyZWRfYnlfMTAyODMzMDkwMzE1NjgyMzQ0NTE5DA">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://googlecode.blogspot.com/2011/11/oauth-20-playground-open-to-developers.html">googlecode.blogspot.com/2011/11/oauth-...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/109693896432057207496"
+       title="Henry Story">
+      <img class="profile" src="https://lh5.googleusercontent.com/-ndo3bzKzt0A/AAAAAAAAAAI/AAAAAAAAAbs/MzVJ1w-h1u8/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/118205389455269229204/posts/8zUvonHycnE">
+        It would be interesting to compare ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/118205389455269229204/posts/8zUvonHycnE">
+      
+        Kleine Anleitung wie man BrowserID mit ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1396073453&key=aglzfmJyaWQtZ3lyWwsSCFJlc3BvbnNlIk10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyNXZkZHF4c2ZjdTFzdGoyMzFqdHpyNHJpamNwNTRyMDQuMTMyNjAzNjgyMzM2MjAwMww">
+    
+      7 months, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://notizblog.org/2012/01/07/browserid-as-easy-as-copy-and-paste/">notizblog.org/2012/01/07/bro...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/118030677932128662474"
+       title="Alexander Kaiser (poolie)">
+      <img class="profile" src="https://lh4.googleusercontent.com/-kfqBSxkuRIw/AAAAAAAAAAI/AAAAAAAAAAA/bVXCxoTH6rI/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/118205389455269229204/posts/Ma1nUGP4q93">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/118205389455269229204/posts/Ma1nUGP4q93">
+      
+        :)﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1396073450&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyNWl0bXgwcnJpeW56M3UyMzFqdHpyNHJpamNwNTRyMDRfbGlrZWRfYnlfMTE4MDMwNjc3OTMyMTI4NjYyNDc0DA">
+    
+      7 months, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.beardowear.com/">beardowear.com/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/101711840625388231170"
+       title="Saurier Duval">
+      <img class="profile" src="https://lh3.googleusercontent.com/-WIdpU2_UGBA/AAAAAAAAAAI/AAAAAAAAAAA/UZl9Np3XJhY/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/118205389455269229204/posts/SYcnuMpdpnm">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/118205389455269229204/posts/SYcnuMpdpnm">
+      
+        Sehr guter Text über die Verkomplizierung ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1396073449&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyNWdmaGJna3EzeHJyNHMwNGNnNXpieXdteHR4Mm9vbXcwa19saWtlZF9ieV8xMDE3MTE4NDA2MjUzODgyMzExNzAM">
+    
+      7 months, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://hueniverse.com/2012/07/oauth-2-0-and-the-road-to-hell/">hueniverse.com/2012/07/oauth-...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Paul Chapman (Facebook) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://facebook.com/pauleec" title="Paul Chapman (Facebook)"
+   class="u-url">
+  <img class="profile u-photo" src="https://graph.facebook.com/pauleec/picture?type=large" width="64px" />
+  <img src="/static/facebook_icon.png"
+       
+       alt="Facebook" />
+  <span class="p-name">Paul Chapman</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://www.redhotbelgian.com" class="publish-domain u-url">redhotbelgian.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGwsSDEZhY2Vib29rUGFnZSIJNzI0MDAxMDYzDA" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416214381&key=aglzfmJyaWQtZ3lyGwsSDEZhY2Vib29rUGFnZSIJNzI0MDAxMDYzDA">
+      11 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGwsSDEZhY2Vib29rUGFnZSIJNzI0MDAxMDYzDA" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+<form method="post" action="/delete/start">
+<p id="publishing-label" class="big">
+ Ready to publish.
+   <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGwsSDEZhY2Vib29rUGFnZSIJNzI0MDAxMDYzDA" />
+   <input name="feature" type="hidden" value="publish" />
+   <button id="delete-button" type="submit" class="btn btn-default"
+     title="Disable publishing for this account. (Won't delete posts you've already published.)"
+     >Disable</button>
+</p>
+</form>
+
+<form method="post" name="preview" action="/publish/preview"
+      onsubmit="do_preview('facebook'); return false;">
+<p id="preview-ui">
+ <label id="source-label" for="source-url">Enter post URL:</label>
+ <input id="source-url" name="source" type="url" required alt="Source URL"></input>
+ <input name="target" type="hidden"
+        value="http://brid.gy/publish/facebook"></input>
+
+ <nobr>
+ <!-- use a hidden input before the checkbox with the same name to set the value
+      to be sent when the checkbox is unchecked. -->
+ &nbsp;
+ <input id="include-link-unchecked" name="bridgy_omit_link" type="hidden"
+        value="true"></input>
+ <input id="include-link-checked" name="bridgy_omit_link" type="checkbox"
+        value="false" checked></input>
+ <label id="include-link-label" for="include-link-checked">Include link</label>
+ &nbsp;
+ <button id="preview-button" type="submit" class="btn btn-default">Preview</button>
+ </nobr>
+</p>
+</form>
+
+<!-- Publish signup buttons -->
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/724001063"
+       title="Paul Chapman">
+      <img class="profile" src="https://graph.facebook.com/724001063/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/10152846074081064?comment_id=10152846081491064">
+        Ignore the link folks, just testing ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/724001063/posts/10152846074081064">
+      
+        ## Me and Max walking in ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415634843&key=aglzfmJyaWQtZ3lyRwsSCFJlc3BvbnNlIjl0YWc6ZmFjZWJvb2suY29tLDIwMTM6MTAxNTI4NDYwNzQwODEwNjRfMTAxNTI4NDYwODE0OTEwNjQM">
+    
+      6 days, 17 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.redhotbelgian.com/2014/me-and-max-walking-in-maryon-wilson-park">redhotbelgian.com/2014/me-and-ma...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/100000653229479"
+       title="Thenuka Mahendra">
+      <img class="profile" src="https://graph.facebook.com/100000653229479/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/724001063/posts/10152559373661064">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/724001063/posts/10152559373661064">
+      
+        Goddammit, my friends are ruthless! I ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 week ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/100000341621167"
+       title="Catherine Ashman">
+      <img class="profile" src="https://graph.facebook.com/100000341621167/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/724001063/posts/10152803211236064">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/724001063/posts/10152803211236064">
+      
+        Three legends of the dancefloor, past, ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 week, 1 day ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/647974621"
+       title="Tanya Brooman">
+      <img class="profile" src="https://graph.facebook.com/647974621/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/724001063/posts/10152803211236064">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/724001063/posts/10152803211236064">
+      
+        Three legends of the dancefloor, past, ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 week, 1 day ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/646967941"
+       title="Elaine Ponte">
+      <img class="profile" src="https://graph.facebook.com/646967941/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/10152753446571064?comment_id=10152753514991064">
+        What's wrong with having 24 ripples ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/724001063/posts/10152753446571064">
+      
+        I see Tanya Snaith is still ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 week, 1 day ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/624536026"
+       title="Rosa Leung">
+      <img class="profile" src="https://graph.facebook.com/624536026/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/724001063/posts/10152806464416064">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/724001063/posts/10152806464416064">
+      
+        Good skills from Max earlier. He ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 week, 1 day ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/656330447"
+       title="Sarah Drake">
+      <img class="profile" src="https://graph.facebook.com/656330447/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/724001063/posts/10152753446571064">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/724001063/posts/10152753446571064">
+      
+        I see Tanya Snaith is still ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 week, 1 day ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/646967941"
+       title="Elaine Ponte">
+      <img class="profile" src="https://graph.facebook.com/646967941/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/724001063/posts/10152753446571064">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/724001063/posts/10152753446571064">
+      
+        I see Tanya Snaith is still ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 week, 1 day ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/655341213"
+       title="Lyn Jacomb">
+      <img class="profile" src="https://graph.facebook.com/655341213/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/724001063/posts/10152803211236064">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/724001063/posts/10152803211236064">
+      
+        Three legends of the dancefloor, past, ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 week, 1 day ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/522332198"
+       title="John Kramer">
+      <img class="profile" src="https://graph.facebook.com/522332198/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/724001063/posts/10152803211236064">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/724001063/posts/10152803211236064">
+      
+        Three legends of the dancefloor, past, ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 week, 1 day ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+
+<p id="publishes" class="big">Recently published:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://www.redhotbelgian.com/2014/me-and-max-walking-in-maryon-wilson-park">redhotbelgian.com/2014/me-and-ma...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1415632173&key=aglzfmJyaWQtZ3lycQsSDVB1Ymxpc2hlZFBhZ2UiSmh0dHA6Ly93d3cucmVkaG90YmVsZ2lhbi5jb20vMjAxNC9tZS1hbmQtbWF4LXdhbGtpbmctaW4tbWFyeW9uLXdpbHNvbi1wYXJrDAsSB1B1Ymxpc2gYgICAgIC5hAoM">
+      6 days, 17 hours ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://facebook.com/10152846074081064">
+     
+     post
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://www.redhotbelgian.com/2014/maryon-wilson-park">redhotbelgian.com/2014/maryon-wi...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1415536198&key=aglzfmJyaWQtZ3lyWwsSDVB1Ymxpc2hlZFBhZ2UiNGh0dHA6Ly93d3cucmVkaG90YmVsZ2lhbi5jb20vMjAxNC9tYXJ5b24td2lsc29uLXBhcmsMCxIHUHVibGlzaBiAgICAgOSRCgw">
+      1 week ago
+      
+       <span title="Processing" class="glyphicon glyphicon-transfer"></span>
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     preview
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://www.redhotbelgian.com/2014/maryon-wilson-park">redhotbelgian.com/2014/maryon-wi...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1415536186&key=aglzfmJyaWQtZ3lyWwsSDVB1Ymxpc2hlZFBhZ2UiNGh0dHA6Ly93d3cucmVkaG90YmVsZ2lhbi5jb20vMjAxNC9tYXJ5b24td2lsc29uLXBhcmsMCxIHUHVibGlzaBiAgICAgICACgw">
+      1 week ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://www.redhotbelgian.com/2014/me-and-max-walking-in-maryon-wilson-park/">redhotbelgian.com/2014/me-and-ma...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1415498256&key=aglzfmJyaWQtZ3lycgsSDVB1Ymxpc2hlZFBhZ2UiS2h0dHA6Ly93d3cucmVkaG90YmVsZ2lhbi5jb20vMjAxNC9tZS1hbmQtbWF4LXdhbGtpbmctaW4tbWFyeW9uLXdpbHNvbi1wYXJrLwwLEgdQdWJsaXNoGICAgICAgIAKDA">
+      1 week, 1 day ago
+      
+       <span title="Processing" class="glyphicon glyphicon-transfer"></span>
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     preview
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://www.redhotbelgian.com/2014/me-and-max-walking-in-maryon-wilson-park">redhotbelgian.com/2014/me-and-ma...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1415498248&key=aglzfmJyaWQtZ3lycQsSDVB1Ymxpc2hlZFBhZ2UiSmh0dHA6Ly93d3cucmVkaG90YmVsZ2lhbi5jb20vMjAxNC9tZS1hbmQtbWF4LXdhbGtpbmctaW4tbWFyeW9uLXdpbHNvbi1wYXJrDAsSB1B1Ymxpc2gYgICAgICumQoM">
+      1 week, 1 day ago
+      
+       <span title="Processing" class="glyphicon glyphicon-transfer"></span>
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     preview
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://www.redhotbelgian.com/2014/me-and-max-walking-in-maryon-wilson-park">redhotbelgian.com/2014/me-and-ma...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1415498236&key=aglzfmJyaWQtZ3lycQsSDVB1Ymxpc2hlZFBhZ2UiSmh0dHA6Ly93d3cucmVkaG90YmVsZ2lhbi5jb20vMjAxNC9tZS1hbmQtbWF4LXdhbGtpbmctaW4tbWFyeW9uLXdpbHNvbi1wYXJrDAsSB1B1Ymxpc2gYgICAgIDyiAoM">
+      1 week, 1 day ago
+      
+       <span title="Processing" class="glyphicon glyphicon-transfer"></span>
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     preview
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://www.redhotbelgian.com/2014/me-and-max-walking-in-maryon-wilson-park">redhotbelgian.com/2014/me-and-ma...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1415498208&key=aglzfmJyaWQtZ3lycQsSDVB1Ymxpc2hlZFBhZ2UiSmh0dHA6Ly93d3cucmVkaG90YmVsZ2lhbi5jb20vMjAxNC9tZS1hbmQtbWF4LXdhbGtpbmctaW4tbWFyeW9uLXdpbHNvbi1wYXJrDAsSB1B1Ymxpc2gYgICAgIDkkQoM">
+      1 week, 1 day ago
+      
+       <span title="Processing" class="glyphicon glyphicon-transfer"></span>
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     preview
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://www.redhotbelgian.com/2014/me-and-max-walking-in-maryon-wilson-park">redhotbelgian.com/2014/me-and-ma...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1415498192&key=aglzfmJyaWQtZ3lycQsSDVB1Ymxpc2hlZFBhZ2UiSmh0dHA6Ly93d3cucmVkaG90YmVsZ2lhbi5jb20vMjAxNC9tZS1hbmQtbWF4LXdhbGtpbmctaW4tbWFyeW9uLXdpbHNvbi1wYXJrDAsSB1B1Ymxpc2gYgICAgICAgAoM">
+      1 week, 1 day ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     
+     
+
+   </div>
+  </li>
+  
+</ul>
+
+
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

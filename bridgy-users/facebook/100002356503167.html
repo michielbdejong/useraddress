@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>David Shanske (Facebook) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://facebook.com/dshanske" title="David Shanske (Facebook)"
+   class="u-url">
+  <img class="profile u-photo" src="https://graph.facebook.com/dshanske/picture?type=large" width="64px" />
+  <img src="/static/facebook_icon.png"
+       
+       alt="Facebook" />
+  <span class="p-name">David Shanske</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="https://david.shanske.com" class="publish-domain u-url">david.shanske.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyIQsSDEZhY2Vib29rUGFnZSIPMTAwMDAyMzU2NTAzMTY3DA" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416212888&key=aglzfmJyaWQtZ3lyIQsSDEZhY2Vib29rUGFnZSIPMTAwMDAyMzU2NTAzMTY3DA">
+      19 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyIQsSDEZhY2Vib29rUGFnZSIPMTAwMDAyMzU2NTAzMTY3DA" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+<form method="post" action="/delete/start">
+<p id="publishing-label" class="big">
+ Ready to publish.
+   <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyIQsSDEZhY2Vib29rUGFnZSIPMTAwMDAyMzU2NTAzMTY3DA" />
+   <input name="feature" type="hidden" value="publish" />
+   <button id="delete-button" type="submit" class="btn btn-default"
+     title="Disable publishing for this account. (Won't delete posts you've already published.)"
+     >Disable</button>
+</p>
+</form>
+
+<form method="post" name="preview" action="/publish/preview"
+      onsubmit="do_preview('facebook'); return false;">
+<p id="preview-ui">
+ <label id="source-label" for="source-url">Enter post URL:</label>
+ <input id="source-url" name="source" type="url" required alt="Source URL"></input>
+ <input name="target" type="hidden"
+        value="http://brid.gy/publish/facebook"></input>
+
+ <nobr>
+ <!-- use a hidden input before the checkbox with the same name to set the value
+      to be sent when the checkbox is unchecked. -->
+ &nbsp;
+ <input id="include-link-unchecked" name="bridgy_omit_link" type="hidden"
+        value="true"></input>
+ <input id="include-link-checked" name="bridgy_omit_link" type="checkbox"
+        value="false" checked></input>
+ <label id="include-link-label" for="include-link-checked">Include link</label>
+ &nbsp;
+ <button id="preview-button" type="submit" class="btn btn-default">Preview</button>
+ </nobr>
+</p>
+</form>
+
+<!-- Publish signup buttons -->
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/100001607515456"
+       title="Suzanne Wendolovske">
+      <img class="profile" src="https://graph.facebook.com/100001607515456/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/735744249847452?comment_id=736378956450648">
+        Just throw it out...let it go.....</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/100002356503167/posts/735744249847452">
+      
+        Discovered the backing of my rugs ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415073102&key=aglzfmJyaWQtZ3lyQwsSCFJlc3BvbnNlIjV0YWc6ZmFjZWJvb2suY29tLDIwMTM6NzM1NzQ0MjQ5ODQ3NDUyXzczNjM3ODk1NjQ1MDY0OAw">
+    
+      1 week, 6 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://david.shanske.com/notes/2014/11/02/back-grind/">david.shanske.com/notes/2014/11/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/100001346422096"
+       title="Mai Gough">
+      <img class="profile" src="https://graph.facebook.com/100001346422096/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/100002356503167/posts/735744249847452">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/100002356503167/posts/735744249847452">
+      
+        Discovered the backing of my rugs ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415071280&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6ZmFjZWJvb2suY29tLDIwMTM6NzM1NzQ0MjQ5ODQ3NDUyX2xpa2VkX2J5XzEwMDAwMTM0NjQyMjA5Ngw">
+    
+      1 week, 6 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://david.shanske.com/notes/2014/11/02/back-grind/">david.shanske.com/notes/2014/11/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/100001346422096"
+       title="Mai Gough">
+      <img class="profile" src="https://graph.facebook.com/100001346422096/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/735744249847452?comment_id=736370996451444">
+        Just clue your eyes and dump.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/100002356503167/posts/735744249847452">
+      
+        Discovered the backing of my rugs ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415071265&key=aglzfmJyaWQtZ3lyQwsSCFJlc3BvbnNlIjV0YWc6ZmFjZWJvb2suY29tLDIwMTM6NzM1NzQ0MjQ5ODQ3NDUyXzczNjM3MDk5NjQ1MTQ0NAw">
+    
+      1 week, 6 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://david.shanske.com/notes/2014/11/02/back-grind/">david.shanske.com/notes/2014/11/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1363646086"
+       title="Anna Weismantel Sorrentino">
+      <img class="profile" src="https://graph.facebook.com/1363646086/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/735744249847452?comment_id=735779866510557">
+        Have someone else throw it out</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/100002356503167/posts/735744249847452">
+      
+        Discovered the backing of my rugs ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414973818&key=aglzfmJyaWQtZ3lyQwsSCFJlc3BvbnNlIjV0YWc6ZmFjZWJvb2suY29tLDIwMTM6NzM1NzQ0MjQ5ODQ3NDUyXzczNTc3OTg2NjUxMDU1Nww">
+    
+      2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://david.shanske.com/notes/2014/11/02/back-grind/">david.shanske.com/notes/2014/11/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/508140444"
+       title="Naomi Swerdlow">
+      <img class="profile" src="https://graph.facebook.com/508140444/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/735744249847452?comment_id=735761689845708">
+        http://www.nyc.gov/html/nycwasteless/html/stuff/harmful_hh_prod_electronics.shtml</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/100002356503167/posts/735744249847452">
+      
+        Discovered the backing of my rugs ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414971420&key=aglzfmJyaWQtZ3lyQwsSCFJlc3BvbnNlIjV0YWc6ZmFjZWJvb2suY29tLDIwMTM6NzM1NzQ0MjQ5ODQ3NDUyXzczNTc2MTY4OTg0NTcwOAw">
+    
+      2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://david.shanske.com/notes/2014/11/02/back-grind/">david.shanske.com/notes/2014/11/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1254393450"
+       title="Lillian McGrath">
+      <img class="profile" src="https://graph.facebook.com/1254393450/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/735744249847452?comment_id=735760663179144">
+        Take picture of things you want ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/100002356503167/posts/735744249847452">
+      
+        Discovered the backing of my rugs ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414970790&key=aglzfmJyaWQtZ3lyQwsSCFJlc3BvbnNlIjV0YWc6ZmFjZWJvb2suY29tLDIwMTM6NzM1NzQ0MjQ5ODQ3NDUyXzczNTc2MDY2MzE3OTE0NAw">
+    
+      2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://david.shanske.com/notes/2014/11/02/back-grind/">david.shanske.com/notes/2014/11/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/508140444"
+       title="Naomi Swerdlow">
+      <img class="profile" src="https://graph.facebook.com/508140444/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/735744249847452?comment_id=735760813179129">
+        or donate stuff- but not broken ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/100002356503167/posts/735744249847452">
+      
+        Discovered the backing of my rugs ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414970770&key=aglzfmJyaWQtZ3lyQwsSCFJlc3BvbnNlIjV0YWc6ZmFjZWJvb2suY29tLDIwMTM6NzM1NzQ0MjQ5ODQ3NDUyXzczNTc2MDgxMzE3OTEyOQw">
+    
+      2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://david.shanske.com/notes/2014/11/02/back-grind/">david.shanske.com/notes/2014/11/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/508140444"
+       title="Naomi Swerdlow">
+      <img class="profile" src="https://graph.facebook.com/508140444/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/735744249847452?comment_id=735751743180036">
+        are there places you can drop ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/100002356503167/posts/735744249847452">
+      
+        Discovered the backing of my rugs ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414969550&key=aglzfmJyaWQtZ3lyQwsSCFJlc3BvbnNlIjV0YWc6ZmFjZWJvb2suY29tLDIwMTM6NzM1NzQ0MjQ5ODQ3NDUyXzczNTc1MTc0MzE4MDAzNgw">
+    
+      2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://david.shanske.com/notes/2014/11/02/back-grind/">david.shanske.com/notes/2014/11/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/508140444"
+       title="Naomi Swerdlow">
+      <img class="profile" src="https://graph.facebook.com/508140444/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/735744249847452?comment_id=735750243180186">
+        recycle</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/100002356503167/posts/735744249847452">
+      
+        Discovered the backing of my rugs ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414969533&key=aglzfmJyaWQtZ3lyQwsSCFJlc3BvbnNlIjV0YWc6ZmFjZWJvb2suY29tLDIwMTM6NzM1NzQ0MjQ5ODQ3NDUyXzczNTc1MDI0MzE4MDE4Ngw">
+    
+      2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://david.shanske.com/notes/2014/11/02/back-grind/">david.shanske.com/notes/2014/11/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/100002356503167"
+       title="David Shanske">
+      <img class="profile" src="https://graph.facebook.com/100002356503167/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/735744249847452?comment_id=735750946513449">
+        I will certainly recycle to the ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/100002356503167/posts/735744249847452">
+      
+        Discovered the backing of my rugs ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414969497&key=aglzfmJyaWQtZ3lyQwsSCFJlc3BvbnNlIjV0YWc6ZmFjZWJvb2suY29tLDIwMTM6NzM1NzQ0MjQ5ODQ3NDUyXzczNTc1MDk0NjUxMzQ0OQw">
+    
+      2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://david.shanske.com/notes/2014/11/02/back-grind/">david.shanske.com/notes/2014/11/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+
+<p id="publishes" class="big">Recently published:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://david.shanske.com/notes/2014/10/23/farewell-dublin/">david.shanske.com/notes/2014/10/...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1414097683&key=aglzfmJyaWQtZ3lyYgsSDVB1Ymxpc2hlZFBhZ2UiO2h0dHBzOi8vZGF2aWQuc2hhbnNrZS5jb20vbm90ZXMvMjAxNC8xMC8yMy9mYXJld2VsbC1kdWJsaW4vDAsSB1B1Ymxpc2gYgICAgIDkkQoM">
+      3 weeks, 3 days ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     post
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://david.shanske.com/notes/2014/10/23/farewell-dublin/">david.shanske.com/notes/2014/10/...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1414092461&key=aglzfmJyaWQtZ3lyYgsSDVB1Ymxpc2hlZFBhZ2UiO2h0dHBzOi8vZGF2aWQuc2hhbnNrZS5jb20vbm90ZXMvMjAxNC8xMC8yMy9mYXJld2VsbC1kdWJsaW4vDAsSB1B1Ymxpc2gYgICAgICAgAoM">
+      3 weeks, 3 days ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     preview
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://david.shanske.com/articles/2014/09/07/announced-website-version-3-0/">david.shanske.com/articles/2014/...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1410063027&key=aglzfmJyaWQtZ3lycwsSDVB1Ymxpc2hlZFBhZ2UiTGh0dHBzOi8vZGF2aWQuc2hhbnNrZS5jb20vYXJ0aWNsZXMvMjAxNC8wOS8wNy9hbm5vdW5jZWQtd2Vic2l0ZS12ZXJzaW9uLTMtMC8MCxIHUHVibGlzaBiAgICAgOSRCgw">
+      2 months, 1 week ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://facebook.com/100002356503167_703128226442388">
+     
+     post
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://david.shanske.com/articles/2014/09/07/announced-website-version-3-0/">david.shanske.com/articles/2014/...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1410063012&key=aglzfmJyaWQtZ3lycwsSDVB1Ymxpc2hlZFBhZ2UiTGh0dHBzOi8vZGF2aWQuc2hhbnNrZS5jb20vYXJ0aWNsZXMvMjAxNC8wOS8wNy9hbm5vdW5jZWQtd2Vic2l0ZS12ZXJzaW9uLTMtMC8MCxIHUHVibGlzaBiAgICAgICACgw">
+      2 months, 1 week ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     preview
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://david.shanske.com/notes/2014/05/02/press/">david.shanske.com/notes/2014/05/...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1399069349&key=aglzfmJyaWQtZ3lyVwsSDVB1Ymxpc2hlZFBhZ2UiMGh0dHA6Ly9kYXZpZC5zaGFuc2tlLmNvbS9ub3Rlcy8yMDE0LzA1LzAyL3ByZXNzLwwLEgdQdWJsaXNoGICAgICA5JEKDA">
+      6 months, 2 weeks ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://david.shanske.com/notes/2014/05/02/press/">david.shanske.com/notes/2014/05/...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1399069338&key=aglzfmJyaWQtZ3lyVwsSDVB1Ymxpc2hlZFBhZ2UiMGh0dHA6Ly9kYXZpZC5zaGFuc2tlLmNvbS9ub3Rlcy8yMDE0LzA1LzAyL3ByZXNzLwwLEgdQdWJsaXNoGICAgICAgIAKDA">
+      6 months, 2 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     preview
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://david.shanske.com/notes/2014/05/01/weekend/">david.shanske.com/notes/2014/05/...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1399001709&key=aglzfmJyaWQtZ3lyWQsSDVB1Ymxpc2hlZFBhZ2UiMmh0dHA6Ly9kYXZpZC5zaGFuc2tlLmNvbS9ub3Rlcy8yMDE0LzA1LzAxL3dlZWtlbmQvDAsSB1B1Ymxpc2gYgICAgICAgAoM">
+      6 months, 2 weeks ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     
+     
+
+   </div>
+  </li>
+  
+</ul>
+
+
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

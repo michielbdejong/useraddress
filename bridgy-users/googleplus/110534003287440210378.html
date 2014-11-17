@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Ian Slinger (Google+) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://plus.google.com/+IanSlinger" title="Ian Slinger (Google+)"
+   class="u-url">
+  <img class="profile u-photo" src="https://lh5.googleusercontent.com/-VYIsXfRx3Xc/AAAAAAAAAAI/AAAAAAAAAo4/-6BYYAz5cqs/photo.jpg?sz=50&amp;sz=128" width="64px" />
+  <img src="/static/googleplus_icon.png"
+       
+       alt="Google+" />
+  <span class="p-name">Ian Slinger</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://aliensgrin.com" class="publish-domain u-url">aliensgrin.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class=" big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTA1MzQwMDMyODc0NDAyMTAzNzgM" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416203253&key=aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTA1MzQwMDMyODc0NDAyMTAzNzgM">
+      3 hours, 4 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTA1MzQwMDMyODc0NDAyMTAzNzgM" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/117662210402182227108"
+       title="Samrat Gadamsetty">
+      <img class="profile" src="https://lh3.googleusercontent.com/-CpJ0lq7gHbQ/AAAAAAAAAAI/AAAAAAAAAAA/dToXtwJSuOE/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/110534003287440210378/posts/5Z2qzBn2nvs">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/110534003287440210378/posts/5Z2qzBn2nvs">
+      
+        So, that&#39;s the end of that ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414588178&key=aglzfmJyaWQtZ3lyagsSCFJlc3BvbnNlIlx0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyMGN4eXozdWlmeGphc3YyM3Rjamt4enkzbnpmaGlrMDRfc2hhcmVkX2J5XzExNzY2MjIxMDQwMjE4MjIyNzEwOAw">
+    
+      2 weeks, 4 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://arstechnica.com/science/2011/10/massive-15-year-study-finds-no-link-between-cell-phones-cancer/">arstechnica.com/science/2011/1...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/101765729288740310287"
+       title="Equipment Street">
+      <img class="profile" src="https://lh4.googleusercontent.com/-Owhee-Mx9lI/AAAAAAAAAAI/AAAAAAAAAWY/d1rmSGju3qo/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/110534003287440210378/posts/d5Q8fsfR2eN">
+        Thanks for submitting!</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/110534003287440210378/posts/d5Q8fsfR2eN">
+      
+        A quick overview of our experience ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414578025&key=aglzfmJyaWQtZ3lyXQsSCFJlc3BvbnNlIk90YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzeHozMWhjdG1sdnRweXIwNGNqNTF5M3J6c2lqeGhwdTAway4xMzkyNDIxMjMyMDAzODQ5DA">
+    
+      2 weeks, 4 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://aliensgrin.com/2014/01/20/pbx-in-a-flash-piaf-on-amazon-ec2/">aliensgrin.com/2014/01/20/pbx...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/115579758111466405406"
+       title="M Rai">
+      <img class="profile" src="https://lh5.googleusercontent.com/-l6rBjZUJkkI/AAAAAAAAAAI/AAAAAAAAQvI/WtUP5FqI4hY/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/110534003287440210378/posts/gTwVARnvqcS">
+        Don&#39;t get me wrong, most of ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/110534003287440210378/posts/gTwVARnvqcS">
+      
+        Try this out if you use ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1411891639&key=aglzfmJyaWQtZ3lyXQsSCFJlc3BvbnNlIk90YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyanUxYWFwbmZjaGR5YmYwNGNqNTF5M3J6c2lqeGhwdTAway4xMzQyNTk0MTM4OTcxMDAwDA">
+    
+      1 month, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://arstechnica.com/gadgets/2012/07/google-app-for-ipad-makes-giving-google-another-look-worthwhile/">arstechnica.com/gadgets/2012/0...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/103886753187082859922"
+       title="Bill Mckim">
+      <img class="profile" src="https://lh5.googleusercontent.com/-U_hkBDWLxto/AAAAAAAAAAI/AAAAAAABJJw/rq1TBhrMaSE/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/110534003287440210378/posts/gTwVARnvqcS">
+        No search feature the google plus ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/110534003287440210378/posts/gTwVARnvqcS">
+      
+        Try this out if you use ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1411891639&key=aglzfmJyaWQtZ3lyXQsSCFJlc3BvbnNlIk90YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyanUxYWFwbmZjaGR5YmYwNGNqNTF5M3J6c2lqeGhwdTAway4xMzQyMjAzMTQ2ODkxMDAwDA">
+    
+      1 month, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://arstechnica.com/gadgets/2012/07/google-app-for-ipad-makes-giving-google-another-look-worthwhile/">arstechnica.com/gadgets/2012/0...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/110534003287440210378"
+       title="Ian Slinger">
+      <img class="profile" src="https://lh5.googleusercontent.com/-VYIsXfRx3Xc/AAAAAAAAAAI/AAAAAAAAAo4/6J58Ib_PKxk/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/110534003287440210378/posts/gTwVARnvqcS">
+        Interesting. I didn&#39;t notice that because ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/110534003287440210378/posts/gTwVARnvqcS">
+      
+        Try this out if you use ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1411891639&key=aglzfmJyaWQtZ3lyXQsSCFJlc3BvbnNlIk90YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyanUxYWFwbmZjaGR5YmYwNGNqNTF5M3J6c2lqeGhwdTAway4xMzQyMzMyMjI2MjMxMDAwDA">
+    
+      1 month, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://arstechnica.com/gadgets/2012/07/google-app-for-ipad-makes-giving-google-another-look-worthwhile/">arstechnica.com/gadgets/2012/0...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/110534003287440210378"
+       title="Ian Slinger">
+      <img class="profile" src="https://lh5.googleusercontent.com/-VYIsXfRx3Xc/AAAAAAAAAAI/AAAAAAAAAo4/6J58Ib_PKxk/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/110534003287440210378/posts/gTwVARnvqcS">
+        This is especially true of anything ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/110534003287440210378/posts/gTwVARnvqcS">
+      
+        Try this out if you use ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1411891638&key=aglzfmJyaWQtZ3lyXQsSCFJlc3BvbnNlIk90YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyanUxYWFwbmZjaGR5YmYwNGNqNTF5M3J6c2lqeGhwdTAway4xMzQyNjkxMzM0NzgyNDY3DA">
+    
+      1 month, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://arstechnica.com/gadgets/2012/07/google-app-for-ipad-makes-giving-google-another-look-worthwhile/">arstechnica.com/gadgets/2012/0...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/115579758111466405406"
+       title="M Rai">
+      <img class="profile" src="https://lh5.googleusercontent.com/-l6rBjZUJkkI/AAAAAAAAAAI/AAAAAAAAQvI/WtUP5FqI4hY/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/110534003287440210378/posts/gTwVARnvqcS">
+        I find twitter search very rewarding. ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/110534003287440210378/posts/gTwVARnvqcS">
+      
+        Try this out if you use ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1411891638&key=aglzfmJyaWQtZ3lyXQsSCFJlc3BvbnNlIk90YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyanUxYWFwbmZjaGR5YmYwNGNqNTF5M3J6c2lqeGhwdTAway4xMzQyNTMzNDA2NzMwMTQyDA">
+    
+      1 month, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://arstechnica.com/gadgets/2012/07/google-app-for-ipad-makes-giving-google-another-look-worthwhile/">arstechnica.com/gadgets/2012/0...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/110534003287440210378"
+       title="Ian Slinger">
+      <img class="profile" src="https://lh5.googleusercontent.com/-VYIsXfRx3Xc/AAAAAAAAAAI/AAAAAAAAAo4/6J58Ib_PKxk/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/110534003287440210378/posts/gTwVARnvqcS">
+        Seriously? If anything I find Twitter ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/110534003287440210378/posts/gTwVARnvqcS">
+      
+        Try this out if you use ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1411891586&key=aglzfmJyaWQtZ3lyXQsSCFJlc3BvbnNlIk90YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyanUxYWFwbmZjaGR5YmYwNGNqNTF5M3J6c2lqeGhwdTAway4xMzQyNTY3MDgwNjM3NDY3DA">
+    
+      1 month, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://arstechnica.com/gadgets/2012/07/google-app-for-ipad-makes-giving-google-another-look-worthwhile/">arstechnica.com/gadgets/2012/0...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/105256470293537262944"
+       title="James Kennedy">
+      <img class="profile" src="https://lh4.googleusercontent.com/-4ba5fGvkizw/AAAAAAAAAAI/AAAAAAAAAPU/ba0C-e02bvs/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/110534003287440210378/posts/178HhrTCpXe">
+        So true, but now you can ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/110534003287440210378/posts/178HhrTCpXe">
+      
+        Just threw out my 3.5&quot; install ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 month, 3 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/113784042785776542331"
+       title="Ben Slinger">
+      <img class="profile" src="https://lh5.googleusercontent.com/-Ttht3M8qXuA/AAAAAAAAAAI/AAAAAAAAAAA/6DXNQShu4sQ/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/110534003287440210378/posts/eRNSvAdwEbn">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/110534003287440210378/posts/eRNSvAdwEbn">
+      
+        --
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1411718794&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzMnZmeW9xeWJvZHZyYXowNGNqNTF5M3J6c2lqeGhwdTAwa19saWtlZF9ieV8xMTM3ODQwNDI3ODU3NzY1NDIzMzEM">
+    
+      1 month, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://xkcd.com/974/">xkcd.com/974/</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

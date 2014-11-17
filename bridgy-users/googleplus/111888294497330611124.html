@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Francis Siefken (Google+) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://plus.google.com/111888294497330611124" title="Francis Siefken (Google+)"
+   class="u-url">
+  <img class="profile u-photo" src="https://lh5.googleusercontent.com/-_k_jEdXJNu0/AAAAAAAAAAI/AAAAAAAABSE/lIh0KM3M57U/photo.jpg?sz=50&amp;sz=128" width="64px" />
+  <img src="/static/googleplus_icon.png"
+       
+       alt="Google+" />
+  <span class="p-name">Francis Siefken</span></a>
+
+
+
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row promo warning">
+<p id="edit-profile">First things first: what's your web site?
+
+Open your
+<a href="https://plus.google.com/me/about" target="_blank">
+  Google+ profile's <em>Links</em> section</a>, click the <em>Edit</em> link,
+and add your web site as the first link under <em>Other profiles</em>. Then
+click here:
+<!-- Google+ listen signup -->
+<form method="post" name="listen-googleplus-start" action="/googleplus/start" class="signup">
+  <input type="image" alt="Sign in with Google+"
+         src="/activitystreams/oauth_dropins/static/google_plus.png" />
+  <!-- The state param doesn't actually work for G+. Not sure why. Doesn't
+       matter for now since we don't support publish for G+. -->
+  <input name="feature" type="hidden" value="listen" />
+  <!-- https://developers.google.com/+/api/oauth#scopes -->
+  <input name="scope" type="hidden"
+         value="https://www.googleapis.com/auth/plus.login" />
+</form>
+
+
+</p>
+</div>
+
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class=" big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTE4ODgyOTQ0OTczMzA2MTExMjQM" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416185683&key=aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTE4ODgyOTQ0OTczMzA2MTExMjQM">
+      7 hours, 57 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTE4ODgyOTQ0OTczMzA2MTExMjQM" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/117042630652652031769"
+       title="Andreas Eder">
+      <img class="profile" src="https://lh4.googleusercontent.com/-j87dFjMGjPk/AAAAAAAAAAI/AAAAAAAAAAA/eX95PlCJBbk/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/111888294497330611124/posts/WfTRThnTGie">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/111888294497330611124/posts/WfTRThnTGie">
+      
+        Intruiged by he worldview of the ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416185810&key=aglzfmJyaWQtZ3lybAsSCFJlc3BvbnNlIl50YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzcHhqMHg1dWVxanhleGwwNGNpNWw0eHJhNHlmbXplcTQwa19zaGFyZWRfYnlfMTE3MDQyNjMwNjUyNjUyMDMxNzY5DA">
+    
+      7 hours, 55 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://www.sciencenews.org/article/sensitivity-harmony-things">sciencenews.org/article/sensit...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.grothendieckcircle.org/">grothendieckcircle.org/</a></li>
+	<li><a class="original-post" target="_blank" href="http://webusers.imj-prg.fr/~leila.schneps/grothendieckcircle/Scharlau3.html">webusers.imj-prg.fr/~leila.schneps...</a></li>
+	<li><a class="original-post" target="_blank" href="http://webusers.imj-prg.fr/">webusers.imj-prg.fr/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/115190755573682723420"
+       title="Luis Fernando Gutiérrez Vélez">
+      <img class="profile" src="https://lh6.googleusercontent.com/-VF2wA7cbqhM/AAAAAAAAAAI/AAAAAAAAAAA/s8e4cesZKBg/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/111888294497330611124/posts/WfTRThnTGie">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/111888294497330611124/posts/WfTRThnTGie">
+      
+        Intruiged by he worldview of the ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416185750&key=aglzfmJyaWQtZ3lybAsSCFJlc3BvbnNlIl50YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzcHhqMHg1dWVxanhleGwwNGNpNWw0eHJhNHlmbXplcTQwa19zaGFyZWRfYnlfMTE1MTkwNzU1NTczNjgyNzIzNDIwDA">
+    
+      7 hours, 56 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://www.sciencenews.org/article/sensitivity-harmony-things">sciencenews.org/article/sensit...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.grothendieckcircle.org/">grothendieckcircle.org/</a></li>
+	<li><a class="original-post" target="_blank" href="http://webusers.imj-prg.fr/~leila.schneps/grothendieckcircle/Scharlau3.html">webusers.imj-prg.fr/~leila.schneps...</a></li>
+	<li><a class="original-post" target="_blank" href="http://webusers.imj-prg.fr/">webusers.imj-prg.fr/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/114093573601607793370"
+       title="Marcos Barretto Junior">
+      <img class="profile" src="https://lh3.googleusercontent.com/-eLyos2mmZ1U/AAAAAAAAAAI/AAAAAAAAAAA/yKVtZTdNQ0o/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/111888294497330611124/posts/WfTRThnTGie">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/111888294497330611124/posts/WfTRThnTGie">
+      
+        Intruiged by he worldview of the ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416185750&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzcHhqMHg1dWVxanhleGwwNGNpNWw0eHJhNHlmbXplcTQwa19saWtlZF9ieV8xMTQwOTM1NzM2MDE2MDc3OTMzNzAM">
+    
+      7 hours, 56 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://www.sciencenews.org/article/sensitivity-harmony-things">sciencenews.org/article/sensit...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.grothendieckcircle.org/">grothendieckcircle.org/</a></li>
+	<li><a class="original-post" target="_blank" href="http://webusers.imj-prg.fr/~leila.schneps/grothendieckcircle/Scharlau3.html">webusers.imj-prg.fr/~leila.schneps...</a></li>
+	<li><a class="original-post" target="_blank" href="http://webusers.imj-prg.fr/">webusers.imj-prg.fr/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/115234799693802813436"
+       title="george oloo">
+      <img class="profile" src="https://lh6.googleusercontent.com/-AZAN1VtjleM/AAAAAAAAAAI/AAAAAAAAAAA/HXIb7frRTx8/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/111888294497330611124/posts/WfTRThnTGie">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/111888294497330611124/posts/WfTRThnTGie">
+      
+        Intruiged by he worldview of the ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416185749&key=aglzfmJyaWQtZ3lybAsSCFJlc3BvbnNlIl50YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzcHhqMHg1dWVxanhleGwwNGNpNWw0eHJhNHlmbXplcTQwa19zaGFyZWRfYnlfMTE1MjM0Nzk5NjkzODAyODEzNDM2DA">
+    
+      7 hours, 56 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://www.sciencenews.org/article/sensitivity-harmony-things">sciencenews.org/article/sensit...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.grothendieckcircle.org/">grothendieckcircle.org/</a></li>
+	<li><a class="original-post" target="_blank" href="http://webusers.imj-prg.fr/~leila.schneps/grothendieckcircle/Scharlau3.html">webusers.imj-prg.fr/~leila.schneps...</a></li>
+	<li><a class="original-post" target="_blank" href="http://webusers.imj-prg.fr/">webusers.imj-prg.fr/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/115515979434996240979"
+       title="Emmanuel Florac">
+      <img class="profile" src="https://lh6.googleusercontent.com/-EMjBAr008UI/AAAAAAAAAAI/AAAAAAAAAAA/0ALJchDToG8/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/111888294497330611124/posts/WfTRThnTGie">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/111888294497330611124/posts/WfTRThnTGie">
+      
+        Intruiged by he worldview of the ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416185749&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzcHhqMHg1dWVxanhleGwwNGNpNWw0eHJhNHlmbXplcTQwa19saWtlZF9ieV8xMTU1MTU5Nzk0MzQ5OTYyNDA5NzkM">
+    
+      7 hours, 56 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://www.sciencenews.org/article/sensitivity-harmony-things">sciencenews.org/article/sensit...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.grothendieckcircle.org/">grothendieckcircle.org/</a></li>
+	<li><a class="original-post" target="_blank" href="http://webusers.imj-prg.fr/~leila.schneps/grothendieckcircle/Scharlau3.html">webusers.imj-prg.fr/~leila.schneps...</a></li>
+	<li><a class="original-post" target="_blank" href="http://webusers.imj-prg.fr/">webusers.imj-prg.fr/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/112757647855302148298"
+       title="Xah Lee">
+      <img class="profile" src="https://lh6.googleusercontent.com/-pUm2--nei1Y/AAAAAAAAAAI/AAAAAAAAAAA/QHZq-Is3MLs/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/111888294497330611124/posts/WfTRThnTGie">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/111888294497330611124/posts/WfTRThnTGie">
+      
+        Intruiged by he worldview of the ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416185692&key=aglzfmJyaWQtZ3lybAsSCFJlc3BvbnNlIl50YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzcHhqMHg1dWVxanhleGwwNGNpNWw0eHJhNHlmbXplcTQwa19zaGFyZWRfYnlfMTEyNzU3NjQ3ODU1MzAyMTQ4Mjk4DA">
+    
+      7 hours, 57 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://www.sciencenews.org/article/sensitivity-harmony-things">sciencenews.org/article/sensit...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.grothendieckcircle.org/">grothendieckcircle.org/</a></li>
+	<li><a class="original-post" target="_blank" href="http://webusers.imj-prg.fr/~leila.schneps/grothendieckcircle/Scharlau3.html">webusers.imj-prg.fr/~leila.schneps...</a></li>
+	<li><a class="original-post" target="_blank" href="http://webusers.imj-prg.fr/">webusers.imj-prg.fr/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/114884041141332600312"
+       title="Andrew Vorobyov">
+      <img class="profile" src="https://lh5.googleusercontent.com/-d-aJxA6YtB8/AAAAAAAAAAI/AAAAAAAAAAA/8cburWpmMRI/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/111888294497330611124/posts/h1NjRPzhosM">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/111888294497330611124/posts/h1NjRPzhosM">
+      
+        One of the worst prisons in ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415238559&key=aglzfmJyaWQtZ3lybAsSCFJlc3BvbnNlIl50YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzc2N0cjRoc3Fodmg1emowNGNpNWw0eHJhNHlmbXplcTQwa19zaGFyZWRfYnlfMTE0ODg0MDQxMTQxMzMyNjAwMzEyDA">
+    
+      1 week, 4 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.washingtonpost.com/wp-dyn/content/article/2008/12/10/AR2008121003855_pf.html">washingtonpost.com/wp-dyn/content...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/110884806628612402954"
+       title="Coco Bailey">
+      <img class="profile" src="https://lh6.googleusercontent.com/-Ab_1SHC6ebk/AAAAAAAAAAI/AAAAAAAAAAA/4FXSaWutHJA/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/111888294497330611124/posts/ZdrZzDu92ui">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/111888294497330611124/posts/ZdrZzDu92ui">
+      
+        &quot;Riots are about power, and they ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1410511487&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzZXdkM3h5dG1qeGIzcTMwNGNpNWw0eHJhNHlmbXplcTQwa19saWtlZF9ieV8xMTA4ODQ4MDY2Mjg2MTI0MDI5NTQM">
+    
+      2 months ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://pennyred.blogspot.com/2011/08/panic-on-streets-of-london.html">pennyred.blogspot.com/2011/08/panic-...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/117508147608097557559"
+       title="Espio the Chameleon">
+      <img class="profile" src="https://lh6.googleusercontent.com/-L9lyzwXBXQs/AAAAAAAAAAI/AAAAAAAAAAA/vQxE44aOmfs/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/111888294497330611124/posts/9vdzVZ2LNas">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/111888294497330611124/posts/9vdzVZ2LNas">
+      
+        The VeldtIn memory of Ray Bradbury, ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1408598571&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyb2o1MGJmeDNleWhmZHAyM2xnZGJodGxibXdydXBsMDRfbGlrZWRfYnlfMTE3NTA4MTQ3NjA4MDk3NTU3NTU5DA">
+    
+      2 months, 4 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.veddma.com/veddma/Veldt.htm">veddma.com/veddma/Veldt.h...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/105169275308031556193"
+       title="Ingrid Bergman">
+      <img class="profile" src="https://lh4.googleusercontent.com/-ceqgAw0XMec/AAAAAAAAAAI/AAAAAAAAAAA/qan9LGlQeS8/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/111888294497330611124/posts/LC5gFKhmAe5">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/111888294497330611124/posts/LC5gFKhmAe5">
+      
+        Krijn Roan﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      6 months ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

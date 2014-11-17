@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Benoit Descary (Google+) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://plus.google.com/+BenoitDescary" title="Benoit Descary (Google+)"
+   class="u-url">
+  <img class="profile u-photo" src="https://lh6.googleusercontent.com/-Q4wd61uwEJg/AAAAAAAAAAI/AAAAAAAAcx8/6nFxn18Nyo8/photo.jpg?sz=50&amp;sz=128" width="64px" />
+  <img src="/static/googleplus_icon.png"
+       
+       alt="Google+" />
+  <span class="p-name">Benoit Descary</span></a>
+
+
+
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row promo warning">
+<p id="edit-profile">First things first: what's your web site?
+
+Open your
+<a href="https://plus.google.com/me/about" target="_blank">
+  Google+ profile's <em>Links</em> section</a>, click the <em>Edit</em> link,
+and add your web site as the first link under <em>Other profiles</em>. Then
+click here:
+<!-- Google+ listen signup -->
+<form method="post" name="listen-googleplus-start" action="/googleplus/start" class="signup">
+  <input type="image" alt="Sign in with Google+"
+         src="/activitystreams/oauth_dropins/static/google_plus.png" />
+  <!-- The state param doesn't actually work for G+. Not sure why. Doesn't
+       matter for now since we don't support publish for G+. -->
+  <input name="feature" type="hidden" value="listen" />
+  <!-- https://developers.google.com/+/api/oauth#scopes -->
+  <input name="scope" type="hidden"
+         value="https://www.googleapis.com/auth/plus.login" />
+</form>
+
+
+</p>
+</div>
+
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class=" big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDcwNjMyMTY2MDYxNTI0ODE1MDgM" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416156038&key=aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDcwNjMyMTY2MDYxNTI0ODE1MDgM">
+      16 hours, 9 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDcwNjMyMTY2MDYxNTI0ODE1MDgM" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/111631984875118168060"
+       title="Boris Boungou">
+      <img class="profile" src="https://lh3.googleusercontent.com/-SjUAeCIcXcA/AAAAAAAAAAI/AAAAAAAAAAA/dckIFCkl8kM/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/111734501964848200242/posts/SqpHfgHfGZW">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/107063216606152481508/posts/ho2kyApAsz1">
+      
+        L’onglet #Mentions arrive sur la version ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416156101&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzcGMxdGgxbnJ1eWp3am4wNGNmdnQ1cXMzM2R6Z2duZjRfbGlrZWRfYnlfMTExNjMxOTg0ODc1MTE4MTY4MDYwDA">
+    
+      16 hours, 8 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://descary.com/longlet-mentions-arrive-sur-la-version-web-de-google/">descary.com/longlet-mentio...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/111631984875118168060"
+       title="Boris Boungou">
+      <img class="profile" src="https://lh3.googleusercontent.com/-SjUAeCIcXcA/AAAAAAAAAAI/AAAAAAAAAAA/dckIFCkl8kM/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/111734501964848200242/posts/SqpHfgHfGZW">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/107063216606152481508/posts/ho2kyApAsz1">
+      
+        L’onglet #Mentions arrive sur la version ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416156046&key=aglzfmJyaWQtZ3lyagsSCFJlc3BvbnNlIlx0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzcGMxdGgxbnJ1eWp3am4wNGNmdnQ1cXMzM2R6Z2duZjRfc2hhcmVkX2J5XzExMTYzMTk4NDg3NTExODE2ODA2MAw">
+    
+      16 hours, 9 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://descary.com/longlet-mentions-arrive-sur-la-version-web-de-google/">descary.com/longlet-mentio...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/109846631070582832592"
+       title="Roch Courcy">
+      <img class="profile" src="https://lh3.googleusercontent.com/-kv-SSpHn2s8/AAAAAAAAAAI/AAAAAAAAAAA/v9zoOahivp4/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/105028695033942524472/posts/PPSMvptBCJS">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/107063216606152481508/posts/BKtbFcfcyww">
+      
+        Yes Vendredi !WOW, je veux cette ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      16 hours, 9 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/110409596268455968099"
+       title="Jean Paul Jourdan">
+      <img class="profile" src="https://lh4.googleusercontent.com/-kKqK1DYV3sE/AAAAAAAAAAI/AAAAAAAAAAA/-QlcSq4NZjw/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/105028695033942524472/posts/PPSMvptBCJS">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/107063216606152481508/posts/BKtbFcfcyww">
+      
+        Yes Vendredi !WOW, je veux cette ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      16 hours, 9 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/104538949125345814895"
+       title="Georges Cordewiener">
+      <img class="profile" src="https://lh5.googleusercontent.com/-HvMpVO2jaX8/AAAAAAAAAAI/AAAAAAAAAAA/-R3Bnj0ZtGo/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/105028695033942524472/posts/PPSMvptBCJS">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/107063216606152481508/posts/BKtbFcfcyww">
+      
+        Yes Vendredi !WOW, je veux cette ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      16 hours, 9 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/100739392044234025405"
+       title="Atout Web Local">
+      <img class="profile" src="https://lh5.googleusercontent.com/-2ac-nxhjsgA/AAAAAAAAAAI/AAAAAAAAAAA/328Trs0HTBk/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/105028695033942524472/posts/PPSMvptBCJS">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/107063216606152481508/posts/BKtbFcfcyww">
+      
+        Yes Vendredi !WOW, je veux cette ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      16 hours, 9 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/106831953193385299800"
+       title="Francis Robert">
+      <img class="profile" src="https://lh6.googleusercontent.com/-94KBY8ZT_60/AAAAAAAAAAI/AAAAAAAAAAA/znYQZ4PTc_M/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/111734501964848200242/posts/SqpHfgHfGZW">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/107063216606152481508/posts/ho2kyApAsz1">
+      
+        L’onglet #Mentions arrive sur la version ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416062143&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzcGMxdGgxbnJ1eWp3am4wNGNmdnQ1cXMzM2R6Z2duZjRfbGlrZWRfYnlfMTA2ODMxOTUzMTkzMzg1Mjk5ODAwDA">
+    
+      1 day, 18 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://descary.com/longlet-mentions-arrive-sur-la-version-web-de-google/">descary.com/longlet-mentio...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/109590613905771059187"
+       title="Guy-Paul Carpentier-Paquin">
+      <img class="profile" src="https://lh3.googleusercontent.com/-tCvRWlW1iDU/AAAAAAAAAAI/AAAAAAAAAAA/CqdCkbBFYsE/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/107063216606152481508/posts/YrrqaJ5kv4A">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/107063216606152481508/posts/YrrqaJ5kv4A">
+      
+        Twitter se redéfinit et s’éloigne de ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416062141&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyMXh4dngzeGZjenRqNXkwNGNmdnQ1cXMzM2R6Z2duZjRfbGlrZWRfYnlfMTA5NTkwNjEzOTA1NzcxMDU5MTg3DA">
+    
+      1 day, 18 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://descary.com/twitter-se-redefinit-seloigne-de-plus-en-plus-des-140-caracteres/">descary.com/twitter-se-red...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/104335173087244357446"
+       title="Laurent Cornalino">
+      <img class="profile" src="https://lh6.googleusercontent.com/-PR_jKi_WUcA/AAAAAAAAAAI/AAAAAAAAAAA/ecnXRfycM8A/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/111734501964848200242/posts/SqpHfgHfGZW">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/107063216606152481508/posts/ho2kyApAsz1">
+      
+        L’onglet #Mentions arrive sur la version ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416062138&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzcGMxdGgxbnJ1eWp3am4wNGNmdnQ1cXMzM2R6Z2duZjRfbGlrZWRfYnlfMTA0MzM1MTczMDg3MjQ0MzU3NDQ2DA">
+    
+      1 day, 18 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://descary.com/longlet-mentions-arrive-sur-la-version-web-de-google/">descary.com/longlet-mentio...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/110914000734309922288"
+       title="David Lariviere">
+      <img class="profile" src="https://lh5.googleusercontent.com/-B94ZVXyxsC0/AAAAAAAAAAI/AAAAAAABElg/iXqwXvjnUu0/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/107063216606152481508/posts/ho2kyApAsz1">
+        Enfin ;)</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/107063216606152481508/posts/ho2kyApAsz1">
+      
+        L’onglet #Mentions arrive sur la version ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416062136&key=aglzfmJyaWQtZ3lyWwsSCFJlc3BvbnNlIk10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzcGMxdGgxbnJ1eWp3am4wNGNmdnQ1cXMzM2R6Z2duZjQuMTQxNTk3NjI5MTI0MTMwNAw">
+    
+      1 day, 18 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://descary.com/longlet-mentions-arrive-sur-la-version-web-de-google/">descary.com/longlet-mentio...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

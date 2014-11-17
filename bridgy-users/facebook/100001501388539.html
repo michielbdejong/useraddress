@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Marcus Povey (Facebook) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://facebook.com/marcus.povey" title="Marcus Povey (Facebook)"
+   class="u-url">
+  <img class="profile u-photo" src="https://graph.facebook.com/marcus.povey/picture?type=large" width="64px" />
+  <img src="/static/facebook_icon.png"
+       
+       alt="Facebook" />
+  <span class="p-name">Marcus Povey</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://www.marcus-povey.co.uk" class="publish-domain u-url">marcus-povey.co.uk</a>
+
+  
+  &middot;
+  <a href="https://mapkyca.com" class="publish-domain u-url">mapkyca.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyIQsSDEZhY2Vib29rUGFnZSIPMTAwMDAxNTAxMzg4NTM5DA" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416213309&key=aglzfmJyaWQtZ3lyIQsSDEZhY2Vib29rUGFnZSIPMTAwMDAxNTAxMzg4NTM5DA">
+      12 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyIQsSDEZhY2Vib29rUGFnZSIPMTAwMDAxNTAxMzg4NTM5DA" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+<span class="big">Click to enable <a href="/about#publish">publishing</a>:</span>
+<form method="post" name="publish-facebook-start" action="/facebook/start" class="signup">
+ <input type="image" alt="Sign in with Facebook"
+        src="/activitystreams/oauth_dropins/static/facebook.png" />
+ <input name="feature" type="hidden" value="publish" />
+ <!-- https://developers.facebook.com/docs/reference/login/ -->
+ <input name="scope" type="hidden"
+        value="offline_access,user_website,publish_actions,create_event,rsvp_event,user_status,friends_status,user_photos,friends_photos,user_videos,friends_videos,user_events,friends_events,user_likes,friends_likes" />
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/518052802"
+       title="Mark Allen">
+      <img class="profile" src="https://graph.facebook.com/518052802/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/100001501388539/posts/794962667230439">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/100001501388539/posts/794962667230439">
+      
+        So, apparently, it's now not possible ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416080059&key=aglzfmJyaWQtZ3lyRgsSCFJlc3BvbnNlIjh0YWc6ZmFjZWJvb2suY29tLDIwMTM6Nzk0OTYyNjY3MjMwNDM5X2xpa2VkX2J5XzUxODA1MjgwMgw">
+    
+      1 day, 13 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://mapkyca.com/2014/so-apparently-its-now-not-possible-to-go-to-a">mapkyca.com/2014/so-appare...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/592016020"
+       title="Marion Dubois">
+      <img class="profile" src="https://graph.facebook.com/592016020/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/100001501388539/posts/793511857375520">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/100001501388539/posts/793511857375520">
+      
+        Just because it isn't happening here, ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415831301&key=aglzfmJyaWQtZ3lyRgsSCFJlc3BvbnNlIjh0YWc6ZmFjZWJvb2suY29tLDIwMTM6NzkzNTExODU3Mzc1NTIwX2xpa2VkX2J5XzU5MjAxNjAyMAw">
+    
+      4 days, 10 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://mapkyca.com/2014/just-because-it-isnt-happening-here-doesnt-mean-its-not">mapkyca.com/2014/just-beca...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/36806878"
+       title="Kelly Smith">
+      <img class="profile" src="https://graph.facebook.com/36806878/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/100001501388539/posts/793511857375520">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/100001501388539/posts/793511857375520">
+      
+        Just because it isn't happening here, ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415810339&key=aglzfmJyaWQtZ3lyRQsSCFJlc3BvbnNlIjd0YWc6ZmFjZWJvb2suY29tLDIwMTM6NzkzNTExODU3Mzc1NTIwX2xpa2VkX2J5XzM2ODA2ODc4DA">
+    
+      4 days, 16 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://mapkyca.com/2014/just-because-it-isnt-happening-here-doesnt-mean-its-not">mapkyca.com/2014/just-beca...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/615777692"
+       title="Boffin Rachel Cousins">
+      <img class="profile" src="https://graph.facebook.com/615777692/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/100001501388539/posts/793139140746125">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/100001501388539/posts/793139097412796">
+      
+        You definitely want to check this ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415747645&key=aglzfmJyaWQtZ3lyRgsSCFJlc3BvbnNlIjh0YWc6ZmFjZWJvb2suY29tLDIwMTM6NzkzMTM5MTQwNzQ2MTI1X2xpa2VkX2J5XzYxNTc3NzY5Mgw">
+    
+      5 days, 9 hours ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyRgsSCFJlc3BvbnNlIjh0YWc6ZmFjZWJvb2suY29tLDIwMTM6NzkzMTM5MTQwNzQ2MTI1X2xpa2VkX2J5XzYxNTc3NzY5Mgw" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://mapkyca.com/2014/oxfordshire-craft-guild-christmas-exhibition---15th-nov-2014">mapkyca.com/2014/oxfordshi... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/615777692"
+       title="Boffin Rachel Cousins">
+      <img class="profile" src="https://graph.facebook.com/615777692/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/100001501388539/posts/793139097412796">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/100001501388539/posts/793139097412796">
+      
+        You definitely want to check this ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415747628&key=aglzfmJyaWQtZ3lyRgsSCFJlc3BvbnNlIjh0YWc6ZmFjZWJvb2suY29tLDIwMTM6NzkzMTM5MDk3NDEyNzk2X2xpa2VkX2J5XzYxNTc3NzY5Mgw">
+    
+      5 days, 9 hours ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyRgsSCFJlc3BvbnNlIjh0YWc6ZmFjZWJvb2suY29tLDIwMTM6NzkzMTM5MDk3NDEyNzk2X2xpa2VkX2J5XzYxNTc3NzY5Mgw" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://mapkyca.com/2014/oxfordshire-craft-guild-christmas-exhibition---15th-nov-2014">mapkyca.com/2014/oxfordshi... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1110924425"
+       title="Laura Marwede">
+      <img class="profile" src="https://graph.facebook.com/1110924425/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/100001501388539/posts/791842610875778">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/100001501388539/posts/791842610875778">
+      
+        Tear down the wall! Happy 25th ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415535976&key=aglzfmJyaWQtZ3lyRwsSCFJlc3BvbnNlIjl0YWc6ZmFjZWJvb2suY29tLDIwMTM6NzkxODQyNjEwODc1Nzc4X2xpa2VkX2J5XzExMTA5MjQ0MjUM">
+    
+      1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://mapkyca.com/2014/tear-down-the-wall-happy-25th-berlin-1sshaxd">mapkyca.com/2014/tear-down...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1523182971263392"
+       title="I Love Meaningless Platitudes">
+      <img class="profile" src="https://graph.facebook.com/1523182971263392/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/1523590167889339?comment_id=1523593311222358">
+        --</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://facebook.com/100001501388539/posts/1523590167889339">
+      
+        "Kelly asked me to explain what ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 week, 2 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/636361706"
+       title="Jonathan Prout">
+      <img class="profile" src="https://graph.facebook.com/636361706/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/100001501388539/posts/789655534427819">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/100001501388539/posts/789655534427819">
+      
+        I'm sure someone from the intelligence ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415206330&key=aglzfmJyaWQtZ3lyRgsSCFJlc3BvbnNlIjh0YWc6ZmFjZWJvb2suY29tLDIwMTM6Nzg5NjU1NTM0NDI3ODE5X2xpa2VkX2J5XzYzNjM2MTcwNgw">
+    
+      1 week, 4 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://mapkyca.com/2014/im-sure-someone-from-the-intelligence-community-will-soon-claim">mapkyca.com/2014/im-sure-s...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/599610146"
+       title="Kirstie Cunningham">
+      <img class="profile" src="https://graph.facebook.com/599610146/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/100001501388539/posts/10154740019300147">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/100001501388539/posts/10154740019300147">
+      
+        "Happy birthday!" on Kirstie Cunningham's timeline.
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 week, 5 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://facebook.com/1569768723"
+       title="John Morris">
+      <img class="profile" src="https://graph.facebook.com/1569768723/picture?type=large" width="32" /></a>
+      <a target="_blank" href="https://facebook.com/100001501388539/posts/10203073981041656">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://facebook.com/100001501388539/posts/10203073981041656">
+      
+        "Happy birthday dude!" on John Morris's ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 week, 6 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

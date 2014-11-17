@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Chris Aldrich (Google+) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://plus.google.com/+ChrisAldrich1" title="Chris Aldrich (Google+)"
+   class="u-url">
+  <img class="profile u-photo" src="https://lh3.googleusercontent.com/-w0z-ZGvOuaY/AAAAAAAAAAI/AAAAAAAAChc/QA2oLYrcQMc/photo.jpg?sz=50&amp;sz=128" width="64px" />
+  <img src="/static/googleplus_icon.png"
+       
+       alt="Google+" />
+  <span class="p-name">Chris Aldrich</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://boffosocko.com/" class="publish-domain u-url">boffosocko.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class=" big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDE1NTg2MjkxNDc5MzMxODc4NzUM" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416213292&key=aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDE1NTg2MjkxNDc5MzMxODc4NzUM">
+      12 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDE1NTg2MjkxNDc5MzMxODc4NzUM" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/104507251705812285679"
+       title="Rama Kunapuli">
+      <img class="profile" src="https://lh4.googleusercontent.com/-YsJiLzyMOsg/AAAAAAAAAAI/AAAAAAAAAAA/b2rvAfMfNAw/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/101558629147933187875/posts/D5S9aU13KNG">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/101558629147933187875/posts/D5S9aU13KNG">
+      
+        Introduction to Lie Groups and Lie ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415763202&key=aglzfmJyaWQtZ3lyaAsSCFJlc3BvbnNlIlp0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzNHczdDRmd2lheDVhZWMyM256YjVicHFlZnVsbzB6X3NoYXJlZF9ieV8xMDQ1MDcyNTE3MDU4MTIyODU2NzkM">
+    
+      5 days, 5 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://boffosocko.com/2014/11/11/introduction-to-lie-groups-and-lie-algebras-part-2-ucla-extension/">boffosocko.com/2014/11/11/int...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/104507251705812285679"
+       title="Rama Kunapuli">
+      <img class="profile" src="https://lh4.googleusercontent.com/-YsJiLzyMOsg/AAAAAAAAAAI/AAAAAAAAAAA/b2rvAfMfNAw/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/101558629147933187875/posts/D5S9aU13KNG">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/101558629147933187875/posts/D5S9aU13KNG">
+      
+        Introduction to Lie Groups and Lie ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415763187&key=aglzfmJyaWQtZ3lyZwsSCFJlc3BvbnNlIll0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzNHczdDRmd2lheDVhZWMyM256YjVicHFlZnVsbzB6X2xpa2VkX2J5XzEwNDUwNzI1MTcwNTgxMjI4NTY3OQw">
+    
+      5 days, 5 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://boffosocko.com/2014/11/11/introduction-to-lie-groups-and-lie-algebras-part-2-ucla-extension/">boffosocko.com/2014/11/11/int...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/113842841821552079007"
+       title="Justin Brannock">
+      <img class="profile" src="https://lh3.googleusercontent.com/-1mwbmRCqUxE/AAAAAAAAAAI/AAAAAAAAAAA/T-MF5nntGe8/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/113169713749496726739/posts/VeJW1warph1">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/101558629147933187875/posts/HmyUNKk1fhZ">
+      
+        It&#39;s fascinating looking at how movie ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414779795&key=aglzfmJyaWQtZ3lyaAsSCFJlc3BvbnNlIlp0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyd2dkdWpucWowd3BkZjQyM256YjVicHFlZnVsbzB6X3NoYXJlZF9ieV8xMTM4NDI4NDE4MjE1NTIwNzkwMDcM">
+    
+      2 weeks, 2 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.pastemagazine.com/blogs/lists/2012/02/the-best-movie-posters-of-the-past-100-years.html">pastemagazine.com/blogs/lists/20...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/101360225169286271892"
+       title="Ajai Mani Tripathi">
+      <img class="profile" src="https://lh3.googleusercontent.com/-0TxynnbFGuI/AAAAAAAAAAI/AAAAAAAAAAA/JJEdv_BJWjE/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/101558629147933187875/posts/H1cvvMew97w">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/101558629147933187875/posts/H1cvvMew97w">
+      
+        &quot;Information Theory is the new central ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414672149&key=aglzfmJyaWQtZ3lyaAsSCFJlc3BvbnNlIlp0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEydGZyMXh5eXJsdXhyMnoyM256YjVicHFlZnVsbzB6X3NoYXJlZF9ieV8xMDEzNjAyMjUxNjkyODYyNzE4OTIM">
+    
+      2 weeks, 3 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://boffosocko.com/2014/10/03/information-theory-is-the-new-central-discipline/">boffosocko.com/2014/10/03/inf...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/104507251705812285679"
+       title="Rama Kunapuli">
+      <img class="profile" src="https://lh4.googleusercontent.com/-YsJiLzyMOsg/AAAAAAAAAAI/AAAAAAAAAAA/b2rvAfMfNAw/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/101558629147933187875/posts/ZaqYUvhw2zg">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/101558629147933187875/posts/ZaqYUvhw2zg">
+      
+        BIRS Workshop on Biological and Bio-Inspired ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414471810&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyMnZqYjRmd3JueXB0cTIwNGNpand3b3lxdGRqZWFrM3dfbGlrZWRfYnlfMTA0NTA3MjUxNzA1ODEyMjg1Njc5DA">
+    
+      2 weeks, 6 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://boffosocko.com/2014/10/27/birs-workshop-on-biological-and-bio-inspired-information-theory-storify-stream/">boffosocko.com/2014/10/27/bir...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/104507251705812285679"
+       title="Rama Kunapuli">
+      <img class="profile" src="https://lh4.googleusercontent.com/-YsJiLzyMOsg/AAAAAAAAAAI/AAAAAAAAAAA/b2rvAfMfNAw/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/101558629147933187875/posts/X5FqDfJESST">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/101558629147933187875/posts/X5FqDfJESST">
+      
+        --
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1412433962&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEya2d4YjRoc2lxczN0cG4wNGNpand3b3lxdGRqZWFrM3dfbGlrZWRfYnlfMTA0NTA3MjUxNzA1ODEyMjg1Njc5DA">
+    
+      1 month, 1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://boffosocko.com/2014/10/03/information-theory-is-the-new-central-discipline/">boffosocko.com/2014/10/03/inf...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/104507251705812285679"
+       title="Rama Kunapuli">
+      <img class="profile" src="https://lh4.googleusercontent.com/-YsJiLzyMOsg/AAAAAAAAAAI/AAAAAAAAAAA/b2rvAfMfNAw/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/101558629147933187875/posts/fiJgUSV7Yb9">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/101558629147933187875/posts/fiJgUSV7Yb9">
+      
+        Looking for a way to tame ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1411023896&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyb2pqbGFtdGFoamxpYmIwNGNpand3b3lxdGRqZWFrM3dfbGlrZWRfYnlfMTA0NTA3MjUxNzA1ODEyMjg1Njc5DA">
+    
+      2 months ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://boffosocko.com/2014/09/17/revision-control/">boffosocko.com/2014/09/17/rev...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/115096374883509198745"
+       title="Bob Calder">
+      <img class="profile" src="https://lh6.googleusercontent.com/-HItPXRVOvXw/AAAAAAAAAAI/AAAAAAAAAAA/QK88v0Po8Rs/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/101558629147933187875/posts/fiJgUSV7Yb9">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/101558629147933187875/posts/fiJgUSV7Yb9">
+      
+        Looking for a way to tame ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1411023731&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyb2pqbGFtdGFoamxpYmIwNGNpand3b3lxdGRqZWFrM3dfbGlrZWRfYnlfMTE1MDk2Mzc0ODgzNTA5MTk4NzQ1DA">
+    
+      2 months ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://boffosocko.com/2014/09/17/revision-control/">boffosocko.com/2014/09/17/rev...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/100623405897908280349"
+       title="Robert Talbert">
+      <img class="profile" src="https://lh6.googleusercontent.com/-RXobI7R2cwM/AAAAAAAAAAI/AAAAAAAAAAA/FpnuFsA2ewc/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/101558629147933187875/posts/fiJgUSV7Yb9">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/101558629147933187875/posts/fiJgUSV7Yb9">
+      
+        Looking for a way to tame ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1410987370&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyb2pqbGFtdGFoamxpYmIwNGNpand3b3lxdGRqZWFrM3dfbGlrZWRfYnlfMTAwNjIzNDA1ODk3OTA4MjgwMzQ5DA">
+    
+      2 months ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://boffosocko.com/2014/09/17/revision-control/">boffosocko.com/2014/09/17/rev...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/101398838964134188713"
+       title="Ken Krivitzky">
+      <img class="profile" src="https://lh5.googleusercontent.com/-weJjbSuEGiU/AAAAAAAAAAI/AAAAAAAAAAA/OLrBpfSlyPg/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/101558629147933187875/posts/5drEsuz1CmW">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/101558629147933187875/posts/5drEsuz1CmW">
+      
+        Two great sites for chewing on, ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1410419282&key=aglzfmJyaWQtZ3lyZwsSCFJlc3BvbnNlIll0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyc3liYXFheXJkZHhxc3YyM256YjVicHFlZnVsbzB6X2xpa2VkX2J5XzEwMTM5ODgzODk2NDEzNDE4ODcxMww">
+    
+      2 months, 1 week ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyZwsSCFJlc3BvbnNlIll0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyc3liYXFheXJkZHhxc3YyM256YjVicHFlZnVsbzB6X2xpa2VkX2J5XzEwMTM5ODgzODk2NDEzNDE4ODcxMww" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://bit.ly/p2zglO">bit.ly/p2zglO <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://www.byliner.com/">byliner.com/</a></li>
+	<li><a class="original-post" target="_blank" href="http://longreads.com/">longreads.com/</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

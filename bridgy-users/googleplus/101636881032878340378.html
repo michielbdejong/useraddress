@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Leo Gaggl (Google+) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://plus.google.com/+LeoGaggl" title="Leo Gaggl (Google+)"
+   class="u-url">
+  <img class="profile u-photo" src="https://lh3.googleusercontent.com/-kON8kA5Dw2I/AAAAAAAAAAI/AAAAAAAACnk/RFmIPHEvQ2I/photo.jpg?sz=50&amp;sz=128" width="64px" />
+  <img src="/static/googleplus_icon.png"
+       
+       alt="Google+" />
+  <span class="p-name">Leo Gaggl</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://identi.ca/leogaggl/" class="publish-domain u-url">identi.ca</a>
+
+  
+  &middot;
+  <a href="http://www.gaggl.com" class="publish-domain u-url">gaggl.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+
+<div class="row promo warning">
+You
+ need 
+<a href='http://indiewebify.me/#send-webmentions'>webmention</a> support.
+
+
+<a href="http://indiewebcamp.com/webmention#Publishing_Software">Here are some
+resources.</a> If you're on
+WordPress, <a href="http://wordpress.org/plugins/indieweb/">try the IndieWeb
+bundle plugin</a>. If you're on Blogger, Tumblr, or
+WordPress.com, <a href="/">sign up here!</a>
+
+
+
+</div>
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class=" big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDE2MzY4ODEwMzI4NzgzNDAzNzgM" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416196711&key=aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDE2MzY4ODEwMzI4NzgzNDAzNzgM">
+      4 hours, 48 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDE2MzY4ODEwMzI4NzgzNDAzNzgM" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/106425989829993126305"
+       title="Jaron Swab">
+      <img class="profile" src="https://lh4.googleusercontent.com/-9besz4WdqQI/AAAAAAAAAAI/AAAAAAAAMBI/4cGH_b3DvtE/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/101636881032878340378/posts/h5h3iSiD7RH">
+        Ever hear of &#39;LFTR&#39;?</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/101636881032878340378/posts/h5h3iSiD7RH">
+      
+        Highly recommended listen. ABC Radio National ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415777350&key=aglzfmJyaWQtZ3lyWwsSCFJlc3BvbnNlIk10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyb2d6cTV5dXZ3ZXhvYmowNGNmcHZ3cXN2end2ZDVkMncuMTQxNTcxNzczNjQ0MzIzMQw">
+    
+      5 days, 1 hour ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.abc.net.au/radionational/programs/backgroundbriefing/mr-clean-coal/5865876">abc.net.au/radionational/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/117050171798626982198"
+       title="Joerg Boeselt">
+      <img class="profile" src="https://lh6.googleusercontent.com/-_fC-bzT7vTQ/AAAAAAAAAAI/AAAAAAAAAAA/H2Z7EZA4du4/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/101636881032878340378/posts/QraZs8efnAK">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/101636881032878340378/posts/QraZs8efnAK">
+      
+        Recommended read: Radical new economic system ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415624646&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyY2RydHEwc2I0dGhud2kwNGNmcHZ3cXN2end2ZDVkMndfbGlrZWRfYnlfMTE3MDUwMTcxNzk4NjI2OTgyMTk4DA">
+    
+      6 days, 19 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.theguardian.com/sustainable-business/2014/nov/07/radical-new-economic-system-will-emerge-from-collapse-of-capitalism">theguardian.com/sustainable-bu...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/105715311095386873082"
+       title="Steven Parker">
+      <img class="profile" src="https://lh6.googleusercontent.com/-hcOMbGJ1SnY/AAAAAAAAAAI/AAAAAAAAAAA/mjHEwvlr4qg/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/101636881032878340378/posts/QraZs8efnAK">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/101636881032878340378/posts/QraZs8efnAK">
+      
+        Recommended read: Radical new economic system ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415624614&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyY2RydHEwc2I0dGhud2kwNGNmcHZ3cXN2end2ZDVkMndfbGlrZWRfYnlfMTA1NzE1MzExMDk1Mzg2ODczMDgyDA">
+    
+      6 days, 19 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.theguardian.com/sustainable-business/2014/nov/07/radical-new-economic-system-will-emerge-from-collapse-of-capitalism">theguardian.com/sustainable-bu...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/115351320670366461457"
+       title="Paul Lambros">
+      <img class="profile" src="https://lh3.googleusercontent.com/-VlTic8dAIjM/AAAAAAAAAAI/AAAAAAAAAAA/CBU6eai9rI8/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/101636881032878340378/posts/QraZs8efnAK">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/101636881032878340378/posts/QraZs8efnAK">
+      
+        Recommended read: Radical new economic system ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415624548&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyY2RydHEwc2I0dGhud2kwNGNmcHZ3cXN2end2ZDVkMndfbGlrZWRfYnlfMTE1MzUxMzIwNjcwMzY2NDYxNDU3DA">
+    
+      6 days, 19 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.theguardian.com/sustainable-business/2014/nov/07/radical-new-economic-system-will-emerge-from-collapse-of-capitalism">theguardian.com/sustainable-bu...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/112605389452243853020"
+       title="DE Sheridan">
+      <img class="profile" src="https://lh5.googleusercontent.com/-IsF9XWfNMJw/AAAAAAAAAAI/AAAAAAAAAAA/uBk6XxrjAJA/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/101636881032878340378/posts/J46CF9n7qJn">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/101636881032878340378/posts/J46CF9n7qJn">
+      
+        Good listen on the #tppa from ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415461054&key=aglzfmJyaWQtZ3lyaAsSCFJlc3BvbnNlIlp0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyM3VmMmh6b3Z1ZHJ5bjUyMnhpejVxYXp6YXVkZWNyX3NoYXJlZF9ieV8xMTI2MDUzODk0NTIyNDM4NTMwMjAM">
+    
+      1 week, 1 day ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://radio.adelaide.edu.au/a-blind-agreement/">radio.adelaide.edu.au/a-blind-agreem...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/100643749745354475461"
+       title="ဒီဃ ခ်စ္">
+      <img class="profile" src="https://lh5.googleusercontent.com/-j2cyVjNygys/AAAAAAAAAAI/AAAAAAAAAAA/BKTkOYwVP3I/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/101636881032878340378/posts/4BhxFEyWydk">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/101636881032878340378/posts/4BhxFEyWydk">
+      
+        #StopDataRetention﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 week, 3 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/114406898363975562296"
+       title="Neryl East Media Success">
+      <img class="profile" src="https://lh6.googleusercontent.com/-3k6JH0RBqrM/AAAAAAAAAAI/AAAAAAAAAAA/7rTDcHZQgFE/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/101636881032878340378/posts/fvuYQpB3mJb">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/101636881032878340378/posts/fvuYQpB3mJb">
+      
+        And another #tpp warning one from ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415121926&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyeWozczVkdnYydG5yemMwNGNmcHZ3cXN2end2ZDVkMndfbGlrZWRfYnlfMTE0NDA2ODk4MzYzOTc1NTYyMjk2DA">
+    
+      1 week, 5 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://theconversation.com/australia-shouldnt-sacrifice-food-safety-standards-for-free-trade-32963">theconversation.com/australia-shou...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/109468968095632670675"
+       title="Derek Munneke">
+      <img class="profile" src="https://lh3.googleusercontent.com/-lEf2E_Wh4og/AAAAAAAAAAI/AAAAAAAAAAA/tfaGvEZ5Ip8/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/101636881032878340378/posts/EW1GDJjt9ue">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/101636881032878340378/posts/EW1GDJjt9ue">
+      
+        The face of somebody who just ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414877703&key=aglzfmJyaWQtZ3lyZwsSCFJlc3BvbnNlIll0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzMnhyZ2FtdHVyc3RxdWsyMnhpejVxYXp6YXVkZWNyX2xpa2VkX2J5XzEwOTQ2ODk2ODA5NTYzMjY3MDY3NQw">
+    
+      2 weeks, 1 day ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://storify.com/MsLods/australia-s-data-retention-bill-initial-reaction">storify.com/MsLods/austral...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/110279511361603882003"
+       title="Arjen Lentz">
+      <img class="profile" src="https://lh6.googleusercontent.com/-Y0Aqzgxso-s/AAAAAAAAAAI/AAAAAAAAEUQ/6K28oKtNHpw/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/101636881032878340378/posts/EW1GDJjt9ue">
+        well he is a lawyer...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://plus.google.com/101636881032878340378/posts/EW1GDJjt9ue">
+      
+        The face of somebody who just ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414877691&key=aglzfmJyaWQtZ3lyWQsSCFJlc3BvbnNlIkt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzMnhyZ2FtdHVyc3RxdWsyMnhpejVxYXp6YXVkZWNyLjE0MTQ4MDY5NjM3MTQwMzkM">
+    
+      2 weeks, 1 day ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://storify.com/MsLods/australia-s-data-retention-bill-initial-reaction">storify.com/MsLods/austral...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/115351320670366461457"
+       title="Paul Lambros">
+      <img class="profile" src="https://lh3.googleusercontent.com/-VlTic8dAIjM/AAAAAAAAAAI/AAAAAAAAAAA/CBU6eai9rI8/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/101636881032878340378/posts/PMRiTVpCBZr">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/101636881032878340378/posts/PMRiTVpCBZr">
+      
+        The problem of messing with complex ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414295538&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyMHV4cXpydWIxZTVvZzUwNGNmcHZ3cXN2end2ZDVkMndfbGlrZWRfYnlfMTE1MzUxMzIwNjcwMzY2NDYxNDU3DA">
+    
+      3 weeks, 1 day ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.theguardian.com/environment/2014/oct/13/drugs-flushed-into-the-environment-could-be-cause-of-wildlife-decline">theguardian.com/environment/20...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

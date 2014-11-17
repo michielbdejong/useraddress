@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Thierry Marianne (Google+) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://plus.google.com/+ThierryMarianneAlexandre" title="Thierry Marianne (Google+)"
+   class="u-url">
+  <img class="profile u-photo" src="https://lh4.googleusercontent.com/-ABnX6e5YbsY/AAAAAAAAAAI/AAAAAAAAEIs/_I7FU4EaCWI/photo.jpg?sz=50&amp;sz=128" width="64px" />
+  <img src="/static/googleplus_icon.png"
+       
+       alt="Google+" />
+  <span class="p-name">Thierry Marianne</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="https://thierry.marianne.weaving-the-web.org" class="publish-domain u-url">thierry.marianne.weaving-the-web.org</a>
+
+  
+  &middot;
+  <a href="https://thierry.marianne.io" class="publish-domain u-url">thierry.marianne.io</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+
+<div class="row promo warning">
+You
+ need 
+<a href='http://indiewebify.me/#send-webmentions'>webmention</a> support.
+
+
+<a href="http://indiewebcamp.com/webmention#Publishing_Software">Here are some
+resources.</a> If you're on
+WordPress, <a href="http://wordpress.org/plugins/indieweb/">try the IndieWeb
+bundle plugin</a>. If you're on Blogger, Tumblr, or
+WordPress.com, <a href="/">sign up here!</a>
+
+
+
+</div>
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class=" big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDk3MTM0NzUxNDIyMzgyNDQ3MTcM" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416199558&key=aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDk3MTM0NzUxNDIyMzgyNDQ3MTcM">
+      4 hours, 5 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMDk3MTM0NzUxNDIyMzgyNDQ3MTcM" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/116873380212462409886"
+       title="Christophe Ducamp">
+      <img class="profile" src="https://lh4.googleusercontent.com/--SxHfgGpe2w/AAAAAAAAAAI/AAAAAAAAAAA/WdnJ6cEkv9k/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/109713475142238244717/posts/MSkX7TEhspG">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/109713475142238244717/posts/MSkX7TEhspG">
+      
+        4ème édition de Disco Salade au ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      4 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/110875827835783014544"
+       title="Hasnae Benhaddou">
+      <img class="profile" src="https://lh4.googleusercontent.com/-8t-5WYzrwTs/AAAAAAAAAAI/AAAAAAAAAAA/5JyaSZcmfmo/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/105854477836714634695/posts/f7kwdbsMjZ8">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/109713475142238244717/posts/VD5C1umaBop">
+      
+        --
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      4 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/103902313504227674472"
+       title="Maxime Tchouanmou">
+      <img class="profile" src="https://lh3.googleusercontent.com/-A5ST2aCZDkQ/AAAAAAAAAAI/AAAAAAAAAAA/QKuzFR2r3jo/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/108896556048763968559/posts/FLGMYt9pdcR">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/109713475142238244717/posts/YRbwMQRs2nv">
+      
+        The &quot;Invisible Mercedes&quot;. A very unique ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413748828&key=aglzfmJyaWQtZ3lybAsSCFJlc3BvbnNlIl50YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyeHcxem9hbmV1eHZ2eHYwNGNqM2xoanZidXZsemcwdGswa19zaGFyZWRfYnlfMTAzOTAyMzEzNTA0MjI3Njc0NDcyDA">
+    
+      4 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.slashgear.com/mercedes-creates-invisible-f-cell-car-05216763/">slashgear.com/mercedes-creat...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/115326560185178580062"
+       title="Bent Rasmussen">
+      <img class="profile" src="https://lh5.googleusercontent.com/-16VSsiRc-3Y/AAAAAAAAAAI/AAAAAAAAAAA/ViF__IRwB0c/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/100313086520534185887/posts/LLocVu43Y1L">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/109713475142238244717/posts/CRWc69Vm8sq">
+      
+        Random shit being blown up in ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      4 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/101170171614733302516"
+       title="John Rodrigues">
+      <img class="profile" src="https://lh4.googleusercontent.com/-Mm1vrC4WJqQ/AAAAAAAAAAI/AAAAAAAAAAA/Js6jIfJoKL0/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/100313086520534185887/posts/LLocVu43Y1L">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/109713475142238244717/posts/CRWc69Vm8sq">
+      
+        Random shit being blown up in ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      4 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://plus.google.com/104551695704206251482"
+       title="Farida ALIBAY">
+      <img class="profile" src="https://lh6.googleusercontent.com/-VUTiBX4phEI/AAAAAAAAAAI/AAAAAAAAAAA/8WE9yd5lC2c/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/108896556048763968559/posts/FLGMYt9pdcR">
+        reshared this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/109713475142238244717/posts/YRbwMQRs2nv">
+      
+        The &quot;Invisible Mercedes&quot;. A very unique ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413748826&key=aglzfmJyaWQtZ3lybAsSCFJlc3BvbnNlIl50YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyeHcxem9hbmV1eHZ2eHYwNGNqM2xoanZidXZsemcwdGswa19zaGFyZWRfYnlfMTA0NTUxNjk1NzA0MjA2MjUxNDgyDA">
+    
+      4 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.slashgear.com/mercedes-creates-invisible-f-cell-car-05216763/">slashgear.com/mercedes-creat...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/102751986139669004584"
+       title="Fabien Cadet (fabic)">
+      <img class="profile" src="https://lh3.googleusercontent.com/-AktLXejTxiE/AAAAAAAAAAI/AAAAAAAAAAA/yrCX5kTHjYg/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/105854477836714634695/posts/f7kwdbsMjZ8">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/109713475142238244717/posts/VD5C1umaBop">
+      
+        --
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      4 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/114814654762614846971"
+       title="innoteam">
+      <img class="profile" src="https://lh3.googleusercontent.com/-XjeXBPmAWrY/AAAAAAAAAAI/AAAAAAAAAAA/kYaehRyDlMs/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/115091715679003832601/posts/DrSrbr95kvq">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/109713475142238244717/posts/E7MXCmHnApZ">
+      
+        &quot;I can hide all day behind ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      4 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/112336044640479738427"
+       title="Julien Guéznet">
+      <img class="profile" src="https://lh6.googleusercontent.com/-wyH7WvJj41U/AAAAAAAAAAI/AAAAAAAAAAA/BDj3Nene5Fs/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/105059362788808645801/posts/ZLGUxHhxM5E">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/109713475142238244717/posts/9spPpSh7QA2">
+      
+        LaTeX is a wonderful text creation ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413748825&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyZnNsdW9ma3UwZ3IyMXAyM3N3ZmZ5dHlxd2p2MGFnMDRfbGlrZWRfYnlfMTEyMzM2MDQ0NjQwNDc5NzM4NDI3DA">
+    
+      4 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.latextemplates.com/">latextemplates.com/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/104551695704206251482"
+       title="Farida ALIBAY">
+      <img class="profile" src="https://lh6.googleusercontent.com/-VUTiBX4phEI/AAAAAAAAAAI/AAAAAAAAAAA/8WE9yd5lC2c/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/108896556048763968559/posts/FLGMYt9pdcR">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/109713475142238244717/posts/YRbwMQRs2nv">
+      
+        The &quot;Invisible Mercedes&quot;. A very unique ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413748824&key=aglzfmJyaWQtZ3lyawsSCFJlc3BvbnNlIl10YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEyeHcxem9hbmV1eHZ2eHYwNGNqM2xoanZidXZsemcwdGswa19saWtlZF9ieV8xMDQ1NTE2OTU3MDQyMDYyNTE0ODIM">
+    
+      4 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.slashgear.com/mercedes-creates-invisible-f-cell-car-05216763/">slashgear.com/mercedes-creat...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

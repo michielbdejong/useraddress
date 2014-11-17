@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Christophe Ducamp (Google+) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://plus.google.com/+ChristopheDucamp" title="Christophe Ducamp (Google+)"
+   class="u-url">
+  <img class="profile u-photo" src="https://lh4.googleusercontent.com/--SxHfgGpe2w/AAAAAAAAAAI/AAAAAAAAQsk/o5Y6wZL1te8/photo.jpg?sz=50&amp;sz=128" width="64px" />
+  <img src="/static/googleplus_icon.png"
+       
+       alt="Google+" />
+  <span class="p-name">Christophe Ducamp</span></a>
+
+
+
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row promo warning">
+<p id="edit-profile">First things first: what's your web site?
+
+Open your
+<a href="https://plus.google.com/me/about" target="_blank">
+  Google+ profile's <em>Links</em> section</a>, click the <em>Edit</em> link,
+and add your web site as the first link under <em>Other profiles</em>. Then
+click here:
+<!-- Google+ listen signup -->
+<form method="post" name="listen-googleplus-start" action="/googleplus/start" class="signup">
+  <input type="image" alt="Sign in with Google+"
+         src="/activitystreams/oauth_dropins/static/google_plus.png" />
+  <!-- The state param doesn't actually work for G+. Not sure why. Doesn't
+       matter for now since we don't support publish for G+. -->
+  <input name="feature" type="hidden" value="listen" />
+  <!-- https://developers.google.com/+/api/oauth#scopes -->
+  <input name="scope" type="hidden"
+         value="https://www.googleapis.com/auth/plus.login" />
+</form>
+
+
+</p>
+</div>
+
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class=" big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTY4NzMzODAyMTI0NjI0MDk4ODYM" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416192616&key=aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTY4NzMzODAyMTI0NjI0MDk4ODYM">
+      6 hours, 5 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyKQsSDkdvb2dsZVBsdXNQYWdlIhUxMTY4NzMzODAyMTI0NjI0MDk4ODYM" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/102339312231622408431"
+       title="Hervé Sorée">
+      <img class="profile" src="https://lh5.googleusercontent.com/-ZCmC9IKhRSE/AAAAAAAAAAI/AAAAAAAAAAA/VXE988f16y0/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/116873380212462409886/posts/RvXRAgZa25M">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/116873380212462409886/posts/RvXRAgZa25M">
+      
+        Humeur Pyché-Rock + dopamine dans la ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 months, 1 week ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/102339312231622408431"
+       title="Hervé Sorée">
+      <img class="profile" src="https://lh5.googleusercontent.com/-ZCmC9IKhRSE/AAAAAAAAAAI/AAAAAAAAAAA/VXE988f16y0/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/116873380212462409886/posts/SSbvgX1iVTv">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/116873380212462409886/posts/SSbvgX1iVTv">
+      
+        --
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 months, 1 week ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/105584588774945638811"
+       title="Luc Legay">
+      <img class="profile" src="https://lh3.googleusercontent.com/-J-RPHfaxGQs/AAAAAAAAAAI/AAAAAAAAAAA/s4wvNdF6V4k/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/108062308365649106319/posts/NChugr8zKqL">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/116873380212462409886/posts/P2VWXhobopR">
+      
+        --
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      3 months, 3 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/102574192407760980360"
+       title="Yann Dortindeguey">
+      <img class="profile" src="https://lh6.googleusercontent.com/-VLYdMmPN4FM/AAAAAAAAAAI/AAAAAAAAAAA/7CxsAXCKWSY/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/116873380212462409886/posts/ftnycdGyAXt">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/116873380212462409886/posts/ftnycdGyAXt">
+      
+        Couvre-Feu à Londres... 22h30 Pfff ...(pour ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1405661101&key=aglzfmJyaWQtZ3lyaQsSCFJlc3BvbnNlIlt0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEydHZ0aWpoeDNlZWxremMwNGNlZGJvcXNqNXp0dGg0ZmtfbGlrZWRfYnlfMTAyNTc0MTkyNDA3NzYwOTgwMzYwDA">
+    
+      4 months ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.7sur7.be/7s7/fr/1526/Showbiz/article/detail/1540339/2012/11/27/247-000-euros-d-amende-pour-les-Rolling-Stones.dhtml">7sur7.be/7s7/fr/1526/Sh...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/100033888377343212705"
+       title="olivier schimpf">
+      <img class="profile" src="https://lh3.googleusercontent.com/-TZbdXIFPn68/AAAAAAAAAAI/AAAAAAAAAAA/CsCXxfeuMg4/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/116873380212462409886/posts/48u49nRiF66">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/116873380212462409886/posts/48u49nRiF66">
+      
+        #personaldata #events ﻿
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1404907099&key=aglzfmJyaWQtZ3lyZwsSCFJlc3BvbnNlIll0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEybnV6aHFvbHVvanhyc20yMm1keDVxM3RqeWlmZDJ3X2xpa2VkX2J5XzEwMDAzMzg4ODM3NzM0MzIxMjcwNQw">
+    
+      4 months, 1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://mydatalabs.com/Events">mydatalabs.com/Events</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/115050168031032628769"
+       title="Robert Vinet">
+      <img class="profile" src="https://lh6.googleusercontent.com/-RxAf58IEYJg/AAAAAAAAAAI/AAAAAAAAAAA/GiasIIoGZ_U/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/102800378120583985907/posts/MXFBLLabK9J">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/116873380212462409886/posts/B7Xyyce1Hg3">
+      
+        Photo Quality - Glass vs DSLRWhen ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      4 months, 1 week ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/113565007281137939815"
+       title="Paul Hodson">
+      <img class="profile" src="https://lh3.googleusercontent.com/-363nyQs6SV4/AAAAAAAAAAI/AAAAAAAAAAA/5gLs_8_iWmc/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/102800378120583985907/posts/MXFBLLabK9J">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/116873380212462409886/posts/B7Xyyce1Hg3">
+      
+        Photo Quality - Glass vs DSLRWhen ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      4 months, 1 week ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/108384201920217141722"
+       title="Denis Labelle">
+      <img class="profile" src="https://lh4.googleusercontent.com/-2Nt1eh8mOkw/AAAAAAAAAAI/AAAAAAAAAAA/c74k552rIVI/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/116873380212462409886/posts/LFteNBsmj9m">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/116873380212462409886/posts/LFteNBsmj9m">
+      
+        Très envie.. d&#39;imprimer mon adresse bitcoin ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1403103562&key=aglzfmJyaWQtZ3lyZwsSCFJlc3BvbnNlIll0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEzbWMzYXpwcWp2Zmw0M24yMm1keDVxM3RqeWlmZDJ3X2xpa2VkX2J5XzEwODM4NDIwMTkyMDIxNzE0MTcyMgw">
+    
+      5 months ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://localbitcoins.com/">localbitcoins.com/</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.wiseweb.fr/2013/04/bitcoin-le-systeme-monetaire-de-l%E2%80%99ere-du-web/">wiseweb.fr/2013/04/bitcoi...</a></li>
+	<li><a class="original-post" target="_blank" href="http://christopheducamp.com/w/Bitcoin">christopheducamp.com/w/Bitcoin</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/106471286427312456630"
+       title="Dylan Devillers">
+      <img class="profile" src="https://lh3.googleusercontent.com/-RexOStfAoYg/AAAAAAAAAAI/AAAAAAAAAAA/22i4C41dN6M/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/116873380212462409886/posts/BFCuBWw4eR5">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/116873380212462409886/posts/BFCuBWw4eR5">
+      
+        Pour info si vous êtes par ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1403056420&key=aglzfmJyaWQtZ3lyZwsSCFJlc3BvbnNlIll0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEya2R0b3EzbDNvY2ZjMXgyMm1keDVxM3RqeWlmZDJ3X2xpa2VkX2J5XzEwNjQ3MTI4NjQyNzMxMjQ1NjYzMAw">
+    
+      5 months ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://christopheducamp.com/b/2013-04-18/agenda-mobile-monday-sante-et-bien-etre/">christopheducamp.com/b/2013-04-18/a...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://profiles.google.com/115050168031032628769"
+       title="Robert Vinet">
+      <img class="profile" src="https://lh4.googleusercontent.com/-RxAf58IEYJg/AAAAAAAAAAI/AAAAAAAAAAA/GiasIIoGZ_U/photo.jpg?sz=50" width="32" /></a>
+      <a target="_blank" href="https://plus.google.com/116873380212462409886/posts/BFCuBWw4eR5">
+        +1ed this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://plus.google.com/116873380212462409886/posts/BFCuBWw4eR5">
+      
+        Pour info si vous êtes par ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1403056371&key=aglzfmJyaWQtZ3lyZwsSCFJlc3BvbnNlIll0YWc6cGx1cy5nb29nbGUuY29tLDIwMTM6ejEya2R0b3EzbDNvY2ZjMXgyMm1keDVxM3RqeWlmZDJ3X2xpa2VkX2J5XzExNTA1MDE2ODAzMTAzMjYyODc2OQw">
+    
+      5 months ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://christopheducamp.com/b/2013-04-18/agenda-mobile-monday-sante-et-bien-etre/">christopheducamp.com/b/2013-04-18/a...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+
