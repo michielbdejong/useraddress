@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Kimberly Blessing (Twitter) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://twitter.com/obiwankimberly" title="Kimberly Blessing (Twitter)"
+   class="u-url">
+  <img class="profile u-photo" src="https://pbs.twimg.com/profile_images/481220472772640768/p-cYc6kO.jpeg" width="64px" />
+  <img src="/static/twitter_icon.png"
+       
+       alt="Twitter" />
+  <span class="p-name">Kimberly Blessing</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://www.kimberlyblessing.com/" class="publish-domain u-url">kimberlyblessing.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGwsSB1R3aXR0ZXIiDm9iaXdhbmtpbWJlcmx5DA" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416210916&key=aglzfmJyaWQtZ3lyGwsSB1R3aXR0ZXIiDm9iaXdhbmtpbWJlcmx5DA">
+      47 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGwsSB1R3aXR0ZXIiDm9iaXdhbmtpbWJlcmx5DA" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+<span class="big">Click to enable <a href="/about#publish">publishing</a>:</span>
+<form method="post" name="publish-twitter-start" action="/twitter/start" class="signup">
+ <input type="image" alt="Sign in with Twitter"
+        src="/activitystreams/oauth_dropins/static/twitter.png" />
+ <input name="feature" type="hidden" value="publish" />
+</form>
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.mattrogish.com"
+       title="Matt Rogish">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/455759733958246400/WRR8DCFS.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/MattRogish/status/534103485818474496">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/obiwankimberly/status/534103417954639872">
+      
+        #BCPhilly I forgot to mention yesterday: ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416210982&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzQxMDM0ODU4MTg0NzQ0OTYM">
+    
+      45 minutes ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzQxMDM0ODU4MTg0NzQ0OTYM" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.thinkbrownstone.com/csshappyhour/">thinkbrownstone.com/csshappyhour/ <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.aliciacraciti.com"
+       title="Alicia Raciti">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/477156894302167040/42iyJdtf.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/acr523/status/534119575164440576">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/obiwankimberly/status/534103613899956224">
+      
+        .@gdiphilly Want to let your followers ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416210958&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzQxMTk1NzUxNjQ0NDA1NzYM">
+    
+      46 minutes ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzQxMTk1NzUxNjQ0NDA1NzYM" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.thinkbrownstone.com/csshappyhour/">thinkbrownstone.com/csshappyhour/ <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.kimberlyblessing.com"
+       title="Kimberly Blessing">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/481220472772640768/p-cYc6kO.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/obiwankimberly/status/534127790736408576">
+        @ruthkalinka About 6:30-7 PM, probably. Hope ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/obiwankimberly/status/534103417954639872">
+      
+        #BCPhilly I forgot to mention yesterday: ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416210924&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzQxMjc3OTA3MzY0MDg1NzYM">
+    
+      46 minutes ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzQxMjc3OTA3MzY0MDg1NzYM" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.thinkbrownstone.com/csshappyhour/">thinkbrownstone.com/csshappyhour/ <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/RodneyAnon"
+       title="Rodney Anonymous">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000157658132/b516ba3aec8068a6f26ecf600fea0abb.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/obiwankimberly/status/533975945980305410">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/obiwankimberly/status/533975945980305410">
+      
+        @RodneyAnon Truth!
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      46 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.ruthkalinka.com"
+       title="Ruth Kalinka">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000060081564/2bedd8db5a3af4442d0afeadc62c9d05.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/ruthkalinka/status/534128758450847744">
+        @obiwankimberly Thanks. Might be tight, but ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/obiwankimberly/status/534127790736408576">
+      
+        @ruthkalinka About 6:30-7 PM, probably. Hope ...
+      
+    </a></li>
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/obiwankimberly/status/534103417954639872">
+      
+        #BCPhilly I forgot to mention yesterday: ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416210923&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzQxMjg3NTg0NTA4NDc3NDQM">
+    
+      46 minutes ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzQxMjg3NTg0NTA4NDc3NDQM" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.thinkbrownstone.com/csshappyhour/">thinkbrownstone.com/csshappyhour/ <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://ponderousprog.blogspot.com"
+       title="Joe Campbell">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/957037078/DSC_4635.JPG" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/joercampbell/status/534103729025597440">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/obiwankimberly/status/534103417954639872">
+      
+        #BCPhilly I forgot to mention yesterday: ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416210922&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzQxMDM3MjkwMjU1OTc0NDAM">
+    
+      46 minutes ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzQxMDM3MjkwMjU1OTc0NDAM" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.thinkbrownstone.com/csshappyhour/">thinkbrownstone.com/csshappyhour/ <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/ruthkalinka"
+       title="Ruth Kalinka">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000060081564/2bedd8db5a3af4442d0afeadc62c9d05.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/obiwankimberly/status/534103417954639872">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/obiwankimberly/status/534103417954639872">
+      
+        #BCPhilly I forgot to mention yesterday: ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416210922&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1MzQxMDM0MTc5NTQ2Mzk4NzJfZmF2b3JpdGVkX2J5XzQxMjgwMDM5DA">
+    
+      46 minutes ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1MzQxMDM0MTc5NTQ2Mzk4NzJfZmF2b3JpdGVkX2J5XzQxMjgwMDM5DA" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.thinkbrownstone.com/csshappyhour/">thinkbrownstone.com/csshappyhour/ <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://ponderousprog.blogspot.com"
+       title="Joe Campbell">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/957037078/DSC_4635.JPG" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/joercampbell/status/533983608789553152">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/obiwankimberly/status/533976311954300929">
+      
+        I talked a lot at #bcphilly ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      46 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/mariatsciarrino"
+       title="Maria T Sciarrino">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/3736307692/5a6acb79f0db636f3afe1b5899f28100.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/obiwankimberly/status/533976311954300929">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/obiwankimberly/status/533976311954300929">
+      
+        I talked a lot at #bcphilly ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      46 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/megandifeo"
+       title="Megan DiFeo">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/1429042252/twitter_mc.JPG" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/obiwankimberly/status/533976311954300929">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/obiwankimberly/status/533976311954300929">
+      
+        I talked a lot at #bcphilly ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      46 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

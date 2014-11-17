@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Julien Genestoux (Twitter) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://twitter.com/julien51" title="Julien Genestoux (Twitter)"
+   class="u-url">
+  <img class="profile u-photo" src="https://pbs.twimg.com/profile_images/425183656487841792/oI17U1UR.jpeg" width="64px" />
+  <img src="/static/twitter_icon.png"
+       
+       alt="Twitter" />
+  <span class="p-name">Julien Genestoux</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="https://www.ouvre-boite.com" class="publish-domain u-url">ouvre-boite.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyFQsSB1R3aXR0ZXIiCGp1bGllbjUxDA" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416212855&key=aglzfmJyaWQtZ3lyFQsSB1R3aXR0ZXIiCGp1bGllbjUxDA">
+      9 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyFQsSB1R3aXR0ZXIiCGp1bGllbjUxDA" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+<span class="big">Click to enable <a href="/about#publish">publishing</a>:</span>
+<form method="post" name="publish-twitter-start" action="/twitter/start" class="signup">
+ <input type="image" alt="Sign in with Twitter"
+        src="/activitystreams/oauth_dropins/static/twitter.png" />
+ <input name="feature" type="hidden" value="publish" />
+</form>
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/richardsonchris"
+       title="Chris Richardson">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/512978650241581056/sAWQcFFF.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/julien51/status/534097593694183424">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/julien51/status/534097593694183424">
+      
+        Reason #237129 to charge your customers: ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 hour, 26 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://mattcutts.com/blog/"
+       title="Matt Cutts">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/3570465295/b2d56caae1ce11258301a5946a1d9a9e.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/mattcutts/status/534231688507715584">
+        @julien51 with any luck, we'll cross ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/julien51/status/533956144239493120">
+      
+        @mattcutts We met once (founder's diner), ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 hours, 7 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/ralphm"
+       title="Ralph Meijer">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/459006420390649856/eMX8uh4q.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/julien51/status/534097593694183424">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/julien51/status/534097593694183424">
+      
+        Reason #237129 to charge your customers: ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 hours, 7 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://maximevalette.com"
+       title="Maxime VALETTE">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/445963595784810497/UBd1lpPC.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/maxime/status/534181934520614912">
+        @julien51 This x1000.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/julien51/status/534097593694183424">
+      
+        Reason #237129 to charge your customers: ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      5 hours, 19 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/ayirpelle"
+       title="priya joseph">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/412126192150401024/BGjaQNXk.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/ayirpelle/status/534098139121074177">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/julien51/status/534097593694183424">
+      
+        Reason #237129 to charge your customers: ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      10 hours, 51 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/ayirpelle"
+       title="priya joseph">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/412126192150401024/BGjaQNXk.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/julien51/status/534097593694183424">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/julien51/status/534097593694183424">
+      
+        Reason #237129 to charge your customers: ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      10 hours, 51 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/benguild"
+       title="Ben Guild">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/500529737656061953/ySMePLuQ.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/julien51/status/534097593694183424">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/julien51/status/534097593694183424">
+      
+        Reason #237129 to charge your customers: ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      10 hours, 51 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/adambrault"
+       title="Adam Brault">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/474848741849968641/vN5qcXaZ.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/julien51/status/533892524168212480">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/julien51/status/533892524168212480">
+      
+        Wow. Thanks @mattcutts for mattcutts.com/blog/level-pla…
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416151639&key=aglzfmJyaWQtZ3lyRwsSCFJlc3BvbnNlIjl0YWc6dHdpdHRlci5jb20sMjAxMzo1MzM4OTI1MjQxNjgyMTI0ODBfZmF2b3JpdGVkX2J5XzE1NjgM">
+    
+      17 hours, 10 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://www.mattcutts.com/blog/level-playing-field/">mattcutts.com/blog/level-pla...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/zooldk"
+       title="Steffen Larsen">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/3217646651/8a69bf974e600934baa7d0fbd6843332.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/julien51/status/533892524168212480">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/julien51/status/533892524168212480">
+      
+        Wow. Thanks @mattcutts for mattcutts.com/blog/level-pla…
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416145106&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo1MzM4OTI1MjQxNjgyMTI0ODBfZmF2b3JpdGVkX2J5XzU1OTMzMDg5MQw">
+    
+      18 hours, 59 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://www.mattcutts.com/blog/level-playing-field/">mattcutts.com/blog/level-pla...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.moishelettvin.com/"
+       title="Moishe Lettvin">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/18767712/moishel.jpg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/moishel/status/533969957470478337">
+        @julien51 @mattcutts that's a fantastic post. ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/julien51/status/533892524168212480">
+      
+        Wow. Thanks @mattcutts for mattcutts.com/blog/level-pla…
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416143366&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzM5Njk5NTc0NzA0NzgzMzcM">
+    
+      19 hours, 28 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://www.mattcutts.com/blog/level-playing-field/">mattcutts.com/blog/level-pla...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

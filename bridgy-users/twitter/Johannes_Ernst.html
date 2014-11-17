@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Johannes Ernst (Twitter) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://twitter.com/Johannes_Ernst" title="Johannes Ernst (Twitter)"
+   class="u-url">
+  <img class="profile u-photo" src="https://pbs.twimg.com/profile_images/462335209015238656/ie0cRjdx.jpeg" width="64px" />
+  <img src="/static/twitter_icon.png"
+       
+       alt="Twitter" />
+  <span class="p-name">Johannes Ernst</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://upon2020.com/blog/" class="publish-domain u-url">upon2020.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGwsSB1R3aXR0ZXIiDkpvaGFubmVzX0VybnN0DA" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416153177&key=aglzfmJyaWQtZ3lyGwsSB1R3aXR0ZXIiDkpvaGFubmVzX0VybnN0DA">
+      16 hours, 44 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGwsSB1R3aXR0ZXIiDkpvaGFubmVzX0VybnN0DA" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+<span class="big">Click to enable <a href="/about#publish">publishing</a>:</span>
+<form method="post" name="publish-twitter-start" action="/twitter/start" class="signup">
+ <input type="image" alt="Sign in with Twitter"
+        src="/activitystreams/oauth_dropins/static/twitter.png" />
+ <input name="feature" type="hidden" value="publish" />
+</form>
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/madewithsisu"
+       title="Sisu">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/464426811409977346/s4bq4AxN.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/Johannes_Ernst/status/532726706197372928">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/Johannes_Ernst/status/532726706197372928">
+      
+        @benwerd Blenheim Palace, ha! You know ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      16 hours, 44 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/benwerd"
+       title="Ben Werdmüller">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000785382039/5951d8b25d500500c4094baa1851c095.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/Johannes_Ernst/status/533369586284892163">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/Johannes_Ernst/status/533369586284892163">
+      
+        I just liked Known (@withknown) on ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416054482&key=aglzfmJyaWQtZ3lySQsSCFJlc3BvbnNlIjt0YWc6dHdpdHRlci5jb20sMjAxMzo1MzMzNjk1ODYyODQ4OTIxNjNfZmF2b3JpdGVkX2J5Xzc4MzA5Mgw">
+    
+      1 day, 20 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://alternativeto.net/software/known/">alternativeto.net/software/known...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://werd.io/"
+       title="Ben Werdmüller">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000785382039/5951d8b25d500500c4094baa1851c095.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/benwerd/status/533370312063082496">
+        @johannes_ernst Thank you!</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/Johannes_Ernst/status/533369586284892163">
+      
+        I just liked Known (@withknown) on ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416054456&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzMzNzAzMTIwNjMwODI0OTYM">
+    
+      1 day, 20 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://alternativeto.net/software/known/">alternativeto.net/software/known...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.safeway.com"
+       title="Safeway">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/473877692035514368/D0JSFIoz.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/Safeway/status/533313593047916544">
+        @Johannes_Ernst oh my! What store is ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/Johannes_Ernst/status/533108013276487680">
+      
+        @safeway is understaffed as usual at ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 day, 20 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.linkedin.com/in/nathandwilliams"
+       title="Nate Williams">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/447196451831963649/YLDvc2_n.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/naywilliams/status/532982536948187138">
+        @Johannes_Ernst @jayadelson @kabbenbock Best ideas I've ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/Johannes_Ernst/status/532981144426266624">
+      
+        @naywilliams @jayadelson @kabbenbock How would an ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 days, 20 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://axel.nennker.de"
+       title="Axel Nennker">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/3617048984/c89b8800985476fee6f0310fd0363c68.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/AxelNennker/status/533004314730856448">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/Johannes_Ernst/status/532965061162061825">
+      
+        ISPs removing STARTTLS? Next thing you ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415965346&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzMwMDQzMTQ3MzA4NTY0NDgM">
+    
+      2 days, 20 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://upon2020.com/banter/2014/11/13/isps-removing-their-customers-email-encryption-electronic-frontier-foundation/">upon2020.com/banter/2014/11...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/marcedavis"
+       title="Marc Davis">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/499636626792792064/3ebbHre7.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/Johannes_Ernst/status/532706223800725505">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/Johannes_Ernst/status/532706223800725505">
+      
+        @personal @honestlobbyist @techontires Disagree. Simple answer: ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      3 days, 17 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/benwerd"
+       title="Ben Werdmüller">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000785382039/5951d8b25d500500c4094baa1851c095.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/Johannes_Ernst/status/532726706197372928">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/Johannes_Ernst/status/532726706197372928">
+      
+        @benwerd Blenheim Palace, ha! You know ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      3 days, 17 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/pmarca"
+       title="Marc Andreessen">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/436973293053034496/Rc_YcyTy.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/Johannes_Ernst/status/532657378542759936">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/Johannes_Ernst/status/532657378542759936">
+      
+        “@pmarca: I think my iPhone 6 ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      3 days, 17 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://upon2020.com/"
+       title="Johannes Ernst">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/462335209015238656/ie0cRjdx.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/Johannes_Ernst/status/531933608060399616">
+        @GPGTools Thank you.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/Johannes_Ernst/status/531284388923731968">
+      
+        @gpgtools I much rather have a ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      5 days, 19 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

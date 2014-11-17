@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Ryan Barrett (Twitter) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://twitter.com/schnarfed" title="Ryan Barrett (Twitter)"
+   class="u-url">
+  <img class="profile u-photo" src="https://pbs.twimg.com/profile_images/459041662707060736/Kb9Ex4X8.jpeg" width="64px" />
+  <img src="/static/twitter_icon.png"
+       
+       alt="Twitter" />
+  <span class="p-name">Ryan Barrett</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="https://snarfed.org/" class="publish-domain u-url">snarfed.org</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyFgsSB1R3aXR0ZXIiCXNjaG5hcmZlZAw" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416213252&key=aglzfmJyaWQtZ3lyFgsSB1R3aXR0ZXIiCXNjaG5hcmZlZAw">
+      9 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyFgsSB1R3aXR0ZXIiCXNjaG5hcmZlZAw" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+<form method="post" action="/delete/start">
+<p id="publishing-label" class="big">
+ Ready to publish.
+   <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyFgsSB1R3aXR0ZXIiCXNjaG5hcmZlZAw" />
+   <input name="feature" type="hidden" value="publish" />
+   <button id="delete-button" type="submit" class="btn btn-default"
+     title="Disable publishing for this account. (Won't delete posts you've already published.)"
+     >Disable</button>
+</p>
+</form>
+
+<form method="post" name="preview" action="/publish/preview"
+      onsubmit="do_preview('twitter'); return false;">
+<p id="preview-ui">
+ <label id="source-label" for="source-url">Enter post URL:</label>
+ <input id="source-url" name="source" type="url" required alt="Source URL"></input>
+ <input name="target" type="hidden"
+        value="http://brid.gy/publish/twitter"></input>
+
+ <nobr>
+ <!-- use a hidden input before the checkbox with the same name to set the value
+      to be sent when the checkbox is unchecked. -->
+ &nbsp;
+ <input id="include-link-unchecked" name="bridgy_omit_link" type="hidden"
+        value="true"></input>
+ <input id="include-link-checked" name="bridgy_omit_link" type="checkbox"
+        value="false" checked></input>
+ <label id="include-link-label" for="include-link-checked">Include link</label>
+ &nbsp;
+ <button id="preview-button" type="submit" class="btn btn-default">Preview</button>
+ </nobr>
+</p>
+</form>
+
+<!-- Publish signup buttons -->
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/TimothyAlex"
+       title="Tim Alexander">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/416673988186615809/CnFgUcsT.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/schnarfed/status/533779833608609792">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/schnarfed/status/533779833608609792">
+      
+        @kylwm @ifwinterends @KyleWm standard practice is, ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 day, 7 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://brennannovak.com"
+       title="Brennan Novak">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/3465346200/3887a9d367bf61ad50fa794a32c7ce21.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/brennannovak/status/533546297408892929">
+        @schnarfed @DanielSolove thanks I'll give it ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/schnarfed/status/533383214522302464">
+      
+        @brennannovak .@DanielSolove is my favorite writer/thinker ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 day, 23 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/brennannovak"
+       title="Brennan Novak">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/3465346200/3887a9d367bf61ad50fa794a32c7ce21.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/schnarfed/status/533383214522302464">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/schnarfed/status/533383214522302464">
+      
+        @brennannovak .@DanielSolove is my favorite writer/thinker ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 day, 23 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/gvanrossum"
+       title="Guido van Rossum">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/424495004/GuidoAvatar.jpg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/schnarfed/status/533376176232734720">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/schnarfed/status/533376176232734720">
+      
+        @gvanrossum “PDF;DR”
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 days, 10 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/prasanna"
+       title="Prasanna Srikhanta">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/1529124667/264564_10150223742353360_500293359_7076799_5980427_n.jpg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/schnarfed/status/533376176232734720">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/schnarfed/status/533376176232734720">
+      
+        @gvanrossum “PDF;DR”
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 days, 10 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/bradfitz"
+       title="Brad Fitzpatrick">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/1376628217/brad.jpg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/schnarfed/status/533376176232734720">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/schnarfed/status/533376176232734720">
+      
+        @gvanrossum “PDF;DR”
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 days, 10 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://www.ouvre-boite.com"
+       title="Julien Genestoux">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/425183656487841792/oI17U1UR.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/julien51/status/532573713477435393">
+        @schnarfed Thanks!</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/schnarfed/status/532569475329966080">
+      
+        @superfeedr @julien51 congratulations! the new design ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      4 days, 15 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.google.com/+CynthiaJohanson"
+       title="cynthia johanson">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/477939069922459649/BEfyTD4P.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/cynk/status/532284529134665728">
+        @schnarfed haha- you? contrarian with your ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/schnarfed/status/532280089007120385">
+      
+        @cynk cool! …fwiw though, email as ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      5 days, 11 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://www.pierre-o.fr"
+       title="Pierre">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/3113195043/b86c7a52fd063c9823fabd6f56a66a83.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/pierreozoux/status/531898948756054016">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/schnarfed/status/530492446619492352">
+      
+        Bridgy hit 1000 users! I got ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415649686&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzE4OTg5NDg3NTYwNTQwMTYM">
+    
+      6 days, 12 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://snarfed.org/2014-11-06_happy-1000th-bridgy">snarfed.org/2014-11-06_hap...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://indiehosters.net/"
+       title="IndieHosters">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/523115805332885505/BpfLeuTl.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/IndieHosters/status/531893313474150401">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/schnarfed/status/530492446619492352">
+      
+        Bridgy hit 1000 users! I got ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415648245&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzE4OTMzMTM0NzQxNTA0MDEM">
+    
+      6 days, 13 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://snarfed.org/2014-11-06_happy-1000th-bridgy">snarfed.org/2014-11-06_hap...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+
+<p id="publishes" class="big">Recently published:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://snarfed.org/2014-11-16_sonic-net-blog-net-neutrality-is-just-a-symptom">snarfed.org/2014-11-16_son...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1416197358&key=aglzfmJyaWQtZ3lydQsSDVB1Ymxpc2hlZFBhZ2UiTmh0dHBzOi8vc25hcmZlZC5vcmcvMjAxNC0xMS0xNl9zb25pYy1uZXQtYmxvZy1uZXQtbmV1dHJhbGl0eS1pcy1qdXN0LWEtc3ltcHRvbQwLEgdQdWJsaXNoGICAgICAgIAKDA">
+      4 hours, 34 minutes ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://snarfed.org/2014-11-16_nelson-minar-on-twitter-proposal-museum-of-the-american-genocide-ive-spent-more-time-than-was-fun-at-various-german-museums-and-httpt-coestexffoul">snarfed.org/2014-11-16_nel...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1416193225&key=aglzfmJyaWQtZ3ly2QELEg1QdWJsaXNoZWRQYWdlIrEBaHR0cHM6Ly9zbmFyZmVkLm9yZy8yMDE0LTExLTE2X25lbHNvbi1taW5hci1vbi10d2l0dGVyLXByb3Bvc2FsLW11c2V1bS1vZi10aGUtYW1lcmljYW4tZ2Vub2NpZGUtaXZlLXNwZW50LW1vcmUtdGltZS10aGFuLXdhcy1mdW4tYXQtdmFyaW91cy1nZXJtYW4tbXVzZXVtcy1hbmQtaHR0cHQtY29lc3RleGZmb3VsDAsSB1B1Ymxpc2gYgICAgICAgAoM">
+      5 hours, 43 minutes ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://twitter.com/somebitsLinks/status/534101159640702976">
+     
+     favorite
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://snarfed.org/2014-11-16_%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%93%d7%99%d7%92%d7%99%d7%98%d7%9c%d7%99%d7%95%d7%aa-on-twitter-2014online-indiewebcamp-starts-in-a-few-hours-log-on-and-share-the-knowledge-httpt-co">snarfed.org/2014-11-16_%d7...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1416192395&key=aglzfmJyaWQtZ3lygwILEg1QdWJsaXNoZWRQYWdlItsBaHR0cHM6Ly9zbmFyZmVkLm9yZy8yMDE0LTExLTE2XyVkNyU5NiVkNyU5YiVkNyU5NSVkNyU5OSVkNyU5NSVkNyVhYS0lZDclOTMlZDclOTklZDclOTIlZDclOTklZDclOTglZDclOWMlZDclOTklZDclOTUlZDclYWEtb24tdHdpdHRlci0yMDE0b25saW5lLWluZGlld2ViY2FtcC1zdGFydHMtaW4tYS1mZXctaG91cnMtbG9nLW9uLWFuZC1zaGFyZS10aGUta25vd2xlZGdlLWh0dHB0LWNvDAsSB1B1Ymxpc2gYgICAgICAgAoM">
+      5 hours, 57 minutes ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://twitter.com/DigiRightsIL/status/533918647384018945">
+     
+     favorite
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://snarfed.org/2014-11-16_kyle-mahan-cat-on-a-telecon">snarfed.org/2014-11-16_kyl...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1416173478&key=aglzfmJyaWQtZ3lyYQsSDVB1Ymxpc2hlZFBhZ2UiOmh0dHBzOi8vc25hcmZlZC5vcmcvMjAxNC0xMS0xNl9reWxlLW1haGFuLWNhdC1vbi1hLXRlbGVjb24MCxIHUHVibGlzaBiAgICAgICACgw">
+      11 hours, 12 minutes ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://twitter.com/kylwm/status/534046754363031552">
+     
+     favorite
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://snarfed.org/2014-11-16_armin-ronacher-on-twitter-ssl-client-certs-are-the-worst-startssl-cp-gives-me-ssl_error_unknown_ca_alert-in-firefox-but-works-in-safair-meh">snarfed.org/2014-11-16_arm...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1416172484&key=aglzfmJyaWQtZ3ly0gELEg1QdWJsaXNoZWRQYWdlIqoBaHR0cHM6Ly9zbmFyZmVkLm9yZy8yMDE0LTExLTE2X2FybWluLXJvbmFjaGVyLW9uLXR3aXR0ZXItc3NsLWNsaWVudC1jZXJ0cy1hcmUtdGhlLXdvcnN0LXN0YXJ0c3NsLWNwLWdpdmVzLW1lLXNzbF9lcnJvcl91bmtub3duX2NhX2FsZXJ0LWluLWZpcmVmb3gtYnV0LXdvcmtzLWluLXNhZmFpci1tZWgMCxIHUHVibGlzaBiAgICAgICACgw">
+      11 hours, 28 minutes ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://twitter.com/mitsuhiko/status/497877894933536768">
+     
+     favorite
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://snarfed.org/2014-11-16_rt-effectivepython-the-final-draft-is-done-stay-tuned-for-a-sneak-peek-of">snarfed.org/2014-11-16_rt-...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1416150373&key=aglzfmJyaWQtZ3lyjwELEg1QdWJsaXNoZWRQYWdlImhodHRwczovL3NuYXJmZWQub3JnLzIwMTQtMTEtMTZfcnQtZWZmZWN0aXZlcHl0aG9uLXRoZS1maW5hbC1kcmFmdC1pcy1kb25lLXN0YXktdHVuZWQtZm9yLWEtc25lYWstcGVlay1vZgwLEgdQdWJsaXNoGICAgICAgIAKDA">
+      17 hours, 37 minutes ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://twitter.com/haxor/status/533897042074931200">
+     
+     favorite
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://snarfed.org/2014-11-15_dmitry-ignatiev-on-twitter-cons-cat-cons-cat-nil-httpt-cobmmykhpet8">snarfed.org/2014-11-15_dmi...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1416110867&key=aglzfmJyaWQtZ3lyiQELEg1QdWJsaXNoZWRQYWdlImJodHRwczovL3NuYXJmZWQub3JnLzIwMTQtMTEtMTVfZG1pdHJ5LWlnbmF0aWV2LW9uLXR3aXR0ZXItY29ucy1jYXQtY29ucy1jYXQtbmlsLWh0dHB0LWNvYm1teWtocGV0OAwLEgdQdWJsaXNoGICAgICAgIAKDA">
+      1 day, 4 hours ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://twitter.com/lvsn/status/533685461957349376">
+     
+     favorite
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://snarfed.org/2014-11-15_nelson-minar-on-twitter-huslage-yeah-thats-what-im-after-nothing-beats-sql-for-easy-data-exploration-p">snarfed.org/2014-11-15_nel...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1416102920&key=aglzfmJyaWQtZ3lyrQELEg1QdWJsaXNoZWRQYWdlIoUBaHR0cHM6Ly9zbmFyZmVkLm9yZy8yMDE0LTExLTE1X25lbHNvbi1taW5hci1vbi10d2l0dGVyLWh1c2xhZ2UteWVhaC10aGF0cy13aGF0LWltLWFmdGVyLW5vdGhpbmctYmVhdHMtc3FsLWZvci1lYXN5LWRhdGEtZXhwbG9yYXRpb24tcAwLEgdQdWJsaXNoGICAgICAgIAKDA">
+      1 day, 6 hours ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://twitter.com/nelson/status/533757820085092352">
+     
+     favorite
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://snarfed.org/2014-11-15_brad-fitzpatrick-on-twitter-ipa-now-i-forget-which-i-was-searching-for-amused-that-both-links-are-already-purple-httpt-coyqscbiuayz">snarfed.org/2014-11-15_bra...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1416098224&key=aglzfmJyaWQtZ3lyygELEg1QdWJsaXNoZWRQYWdlIqIBaHR0cHM6Ly9zbmFyZmVkLm9yZy8yMDE0LTExLTE1X2JyYWQtZml0enBhdHJpY2stb24tdHdpdHRlci1pcGEtbm93LWktZm9yZ2V0LXdoaWNoLWktd2FzLXNlYXJjaGluZy1mb3ItYW11c2VkLXRoYXQtYm90aC1saW5rcy1hcmUtYWxyZWFkeS1wdXJwbGUtaHR0cHQtY295cXNjYml1YXl6DAsSB1B1Ymxpc2gYgICAgICAgAoM">
+      1 day, 8 hours ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://twitter.com/bradfitz/status/533429028489678849">
+     
+     favorite
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://snarfed.org/2014-11-15_kyle-mahan-on-twitter-ifwinterends-kylwm-kylewm-i-thought-about-offering-to-buy-it-but-thats-apparently-against-the-rules">snarfed.org/2014-11-15_kyl...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1416098004&key=aglzfmJyaWQtZ3lywAELEg1QdWJsaXNoZWRQYWdlIpgBaHR0cHM6Ly9zbmFyZmVkLm9yZy8yMDE0LTExLTE1X2t5bGUtbWFoYW4tb24tdHdpdHRlci1pZndpbnRlcmVuZHMta3lsd20ta3lsZXdtLWktdGhvdWdodC1hYm91dC1vZmZlcmluZy10by1idXktaXQtYnV0LXRoYXRzLWFwcGFyZW50bHktYWdhaW5zdC10aGUtcnVsZXMMCxIHUHVibGlzaBiAgICAgICACgw">
+      1 day, 8 hours ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://twitter.com/schnarfed/status/533779833608609792">
+     
+     @-reply
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+</ul>
+
+
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

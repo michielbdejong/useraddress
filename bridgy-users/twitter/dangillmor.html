@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Dan Gillmor (Twitter) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://twitter.com/dangillmor" title="Dan Gillmor (Twitter)"
+   class="u-url">
+  <img class="profile u-photo" src="https://pbs.twimg.com/profile_images/531650871533117440/zHSKbNRU.png" width="64px" />
+  <img src="/static/twitter_icon.png"
+       
+       alt="Twitter" />
+  <span class="p-name">Dan Gillmor</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://dangillmor.com/" class="publish-domain u-url">dangillmor.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyFwsSB1R3aXR0ZXIiCmRhbmdpbGxtb3IM" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416139910&key=aglzfmJyaWQtZ3lyFwsSB1R3aXR0ZXIiCmRhbmdpbGxtb3IM">
+      20 hours, 21 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyFwsSB1R3aXR0ZXIiCmRhbmdpbGxtb3IM" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+<form method="post" action="/delete/start">
+<p id="publishing-label" class="big">
+ Ready to publish.
+   <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyFwsSB1R3aXR0ZXIiCmRhbmdpbGxtb3IM" />
+   <input name="feature" type="hidden" value="publish" />
+   <button id="delete-button" type="submit" class="btn btn-default"
+     title="Disable publishing for this account. (Won't delete posts you've already published.)"
+     >Disable</button>
+</p>
+</form>
+
+<form method="post" name="preview" action="/publish/preview"
+      onsubmit="do_preview('twitter'); return false;">
+<p id="preview-ui">
+ <label id="source-label" for="source-url">Enter post URL:</label>
+ <input id="source-url" name="source" type="url" required alt="Source URL"></input>
+ <input name="target" type="hidden"
+        value="http://brid.gy/publish/twitter"></input>
+
+ <nobr>
+ <!-- use a hidden input before the checkbox with the same name to set the value
+      to be sent when the checkbox is unchecked. -->
+ &nbsp;
+ <input id="include-link-unchecked" name="bridgy_omit_link" type="hidden"
+        value="true"></input>
+ <input id="include-link-checked" name="bridgy_omit_link" type="checkbox"
+        value="false" checked></input>
+ <label id="include-link-label" for="include-link-checked">Include link</label>
+ &nbsp;
+ <button id="preview-button" type="submit" class="btn btn-default">Preview</button>
+ </nobr>
+</p>
+</form>
+
+<!-- Publish signup buttons -->
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/schneid3306"
+       title="Sarah">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/533684859949297665/BzpLHHhG.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/dangillmor/status/533735464981626880">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/dangillmor/status/533735464981626880">
+      
+        Remember, when you lie under oath, ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416140110&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1MzM3MzU0NjQ5ODE2MjY4ODBfZmF2b3JpdGVkX2J5XzE0MzI0NzUyDA">
+    
+      20 hours, 18 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.nationaljournal.com/tech/justice-department-admits-it-misled-court-about-fbi-s-secret-surveillance-program-20141113">nationaljournal.com/tech/justice-d...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/kowalabearhugs"
+       title="Matthew P. Kowal">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000308381514/17424cb0667cb7ba93f2f6dd413721ea.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/dangillmor/status/533821478093856768">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/dangillmor/status/533821478093856768">
+      
+        The American plutocracy is getting essentially ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416140109&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1MzM4MjE0NzgwOTM4NTY3NjhfZmF2b3JpdGVkX2J5XzIwNjg5NTQ0DA">
+    
+      20 hours, 18 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://mobile.nytimes.com/2014/11/16/business/another-widening-gap-the-haves-vs-the-have-mores.html?_r=1">mobile.nytimes.com/2014/11/16/bus...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/DennisPOwens1"
+       title="Dennis P. Owens">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000371021427/873a4f6b341b0ed08a1dcf85e17407e8.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/dangillmor/status/533735464981626880">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/dangillmor/status/533735464981626880">
+      
+        Remember, when you lie under oath, ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416140108&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo1MzM3MzU0NjQ5ODE2MjY4ODBfZmF2b3JpdGVkX2J5XzYyNjg3MDQ5NQw">
+    
+      20 hours, 18 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.nationaljournal.com/tech/justice-department-admits-it-misled-court-about-fbi-s-secret-surveillance-program-20141113">nationaljournal.com/tech/justice-d...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/DataAndMath"
+       title="Michael Rosen">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/479633437809078272/D4gM1Uti.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/DataAndMath/status/533825110252089344">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/dangillmor/status/533822138868707330">
+      
+        Mortgage fraud by lenders is back ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416140107&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzM4MjUxMTAyNTIwODkzNDQM">
+    
+      20 hours, 18 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.nytimes.com/2014/11/16/business/borrowers-beware-the-robosigners-arent-finished-yet.html?_r=1">nytimes.com/2014/11/16/bus...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/babslops"
+       title="Bárbara Lopes">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/1260954280/babi_parati.jpg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/dangillmor/status/533822138868707330">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/dangillmor/status/533822138868707330">
+      
+        Mortgage fraud by lenders is back ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416140106&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1MzM4MjIxMzg4Njg3MDczMzBfZmF2b3JpdGVkX2J5XzM5MjkxNDE4DA">
+    
+      20 hours, 18 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.nytimes.com/2014/11/16/business/borrowers-beware-the-robosigners-arent-finished-yet.html?_r=1">nytimes.com/2014/11/16/bus...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://patterico.com"
+       title="Patterico">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/496491090757681152/U3TMn5nl.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/Patterico/status/533911021015298049">
+        @dangillmor No idea what you're talking ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/dangillmor/status/533909665046724608">
+      
+        @Patterico I keep waiting for conservative, ...
+      
+    </a></li>
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/dangillmor/status/533735464981626880">
+      
+        Remember, when you lie under oath, ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416140105&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzM5MTEwMjEwMTUyOTgwNDkM">
+    
+      20 hours, 18 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.nationaljournal.com/tech/justice-department-admits-it-misled-court-about-fbi-s-secret-surveillance-program-20141113">nationaljournal.com/tech/justice-d...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/jbenton"
+       title="Joshua Benton">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/500365878269984768/OYxjyPTb.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/dangillmor/status/533818581130420224">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/dangillmor/status/533818581130420224">
+      
+        Do read @marshallproj editor @billkeller2014 explainer ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416140104&key=aglzfmJyaWQtZ3lySAsSCFJlc3BvbnNlIjp0YWc6dHdpdHRlci5jb20sMjAxMzo1MzM4MTg1ODExMzA0MjAyMjRfZmF2b3JpdGVkX2J5XzM2NjIzDA">
+    
+      20 hours, 18 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://www.themarshallproject.org/about#editor">themarshallproject.org/about#editor</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.livingstoncontent.com"
+       title="Kirk Livingston">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/267765958/Kirk_good_photo_A.jpg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/kirkistan/status/533823346505682944">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/dangillmor/status/533821478093856768">
+      
+        The American plutocracy is getting essentially ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416140103&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzM4MjMzNDY1MDU2ODI5NDQM">
+    
+      20 hours, 18 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://mobile.nytimes.com/2014/11/16/business/another-widening-gap-the-haves-vs-the-have-mores.html?_r=1">mobile.nytimes.com/2014/11/16/bus...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://neeravbhatt.com"
+       title="Neerav Bhatt">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/461472080530124801/ZC5I6F8O.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/neerav/status/533823747845672961">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/dangillmor/status/533821478093856768">
+      
+        The American plutocracy is getting essentially ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416140102&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzM4MjM3NDc4NDU2NzI5NjEM">
+    
+      20 hours, 18 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://mobile.nytimes.com/2014/11/16/business/another-widening-gap-the-haves-vs-the-have-mores.html?_r=1">mobile.nytimes.com/2014/11/16/bus...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/pdbutch"
+       title="Walter Johnson">
+      <img class="profile" src="https://abs.twimg.com/sticky/default_profile_images/default_profile_2.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/dangillmor/status/533735464981626880">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/dangillmor/status/533735464981626880">
+      
+        Remember, when you lie under oath, ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416140101&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1MzM3MzU0NjQ5ODE2MjY4ODBfZmF2b3JpdGVkX2J5XzI1Njc0MDU2DA">
+    
+      20 hours, 18 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.nationaljournal.com/tech/justice-department-admits-it-misled-court-about-fbi-s-secret-surveillance-program-20141113">nationaljournal.com/tech/justice-d...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+
+<p id="publishes" class="big">Recently published:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://dangillmor.com/2014/11/09/journalists-need-to-be-literate-about-their-media-environment-too/">dangillmor.com/2014/11/09/jou...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1415682001&key=aglzfmJyaWQtZ3lyigELEg1QdWJsaXNoZWRQYWdlImNodHRwOi8vZGFuZ2lsbG1vci5jb20vMjAxNC8xMS8wOS9qb3VybmFsaXN0cy1uZWVkLXRvLWJlLWxpdGVyYXRlLWFib3V0LXRoZWlyLW1lZGlhLWVudmlyb25tZW50LXRvby8MCxIHUHVibGlzaBiAgICAgICACgw">
+      6 days, 3 hours ago
+      
+       <span title="Processing" class="glyphicon glyphicon-transfer"></span>
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     preview
+     
+
+   </div>
+  </li>
+  
+</ul>
+
+
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

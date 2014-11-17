@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Hanni Ross (Twitter) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://twitter.com/hanniross" title="Hanni Ross (Twitter)"
+   class="u-url">
+  <img class="profile u-photo" src="https://pbs.twimg.com/profile_images/2566890695/hanni-3.jpg" width="64px" />
+  <img src="/static/twitter_icon.png"
+       
+       alt="Twitter" />
+  <span class="p-name">Hanni Ross</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://hanni.me/" class="publish-domain u-url">hanni.me</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyFgsSB1R3aXR0ZXIiCWhhbm5pcm9zcww" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416188197&key=aglzfmJyaWQtZ3lyFgsSB1R3aXR0ZXIiCWhhbm5pcm9zcww">
+      6 hours, 58 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyFgsSB1R3aXR0ZXIiCWhhbm5pcm9zcww" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+<form method="post" action="/delete/start">
+<p id="publishing-label" class="big">
+ Ready to publish.
+   <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyFgsSB1R3aXR0ZXIiCWhhbm5pcm9zcww" />
+   <input name="feature" type="hidden" value="publish" />
+   <button id="delete-button" type="submit" class="btn btn-default"
+     title="Disable publishing for this account. (Won't delete posts you've already published.)"
+     >Disable</button>
+</p>
+</form>
+
+<form method="post" name="preview" action="/publish/preview"
+      onsubmit="do_preview('twitter'); return false;">
+<p id="preview-ui">
+ <label id="source-label" for="source-url">Enter post URL:</label>
+ <input id="source-url" name="source" type="url" required alt="Source URL"></input>
+ <input name="target" type="hidden"
+        value="http://brid.gy/publish/twitter"></input>
+
+ <nobr>
+ <!-- use a hidden input before the checkbox with the same name to set the value
+      to be sent when the checkbox is unchecked. -->
+ &nbsp;
+ <input id="include-link-unchecked" name="bridgy_omit_link" type="hidden"
+        value="true"></input>
+ <input id="include-link-checked" name="bridgy_omit_link" type="checkbox"
+        value="false" checked></input>
+ <label id="include-link-label" for="include-link-checked">Include link</label>
+ &nbsp;
+ <button id="preview-button" type="submit" class="btn btn-default">Preview</button>
+ </nobr>
+</p>
+</form>
+
+<!-- Publish signup buttons -->
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.three.co.uk/support"
+       title="ThreeUKSupport">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/1840692010/Three-UK-Twitter-Logo_reasonably_small.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/ThreeUKSupport/status/517574354000158720">
+        @hanniross Hi Hanni - Sorry I ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/hanniross/status/517331533690970112">
+      
+        @ThreeUKSupport Slack — see slack.com. Seen ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1412256922&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MTc1NzQzNTQwMDAxNTg3MjAM">
+    
+      1 month, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://slack.com/">slack.com/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.three.co.uk/support"
+       title="ThreeUKSupport">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/1840692010/Three-UK-Twitter-Logo_reasonably_small.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/ThreeUKSupport/status/517293310344708096">
+        @hanniross I can try and help ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/hanniross/status/517224524484325376">
+      
+        @ThreeUkSupport who can I talk to ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 month, 2 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.airfrance.com"
+       title="Air France ">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/458888752887111680/tOrTfOn1.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/airfrance/status/515575883730399232">
+        @hanniross HI Hanni, we apologise for ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/hanniross/status/515363975765458944">
+      
+        @airfrance it is, I don’t have ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 month, 2 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.airfrance.com"
+       title="Air France ">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/458888752887111680/tOrTfOn1.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/airfrance/status/515363670897864704">
+        @hanniross Hi, we found that you've ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/hanniross/status/515337111583858688">
+      
+        @airfrance just got flight cancellation email ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 month, 3 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/om"
+       title="Om Malik">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/2601170258/z3bo77mwfuz7ll7fd9z0.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/hanniross/status/502488140054282240">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/hanniross/status/502488140054282240">
+      
+        @tomcoates @om dying here.
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 months, 3 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://lovejmorhate.me"
+       title="JM Agbayani">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/1826164322/jm1.JPG" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/janmae04/status/494610109176086528">
+        “@hanniross: wp-lunch.php at #wpdk [picture]” -- ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/hanniross/status/470157505092648960">
+      
+        wp-lunch.php at #wpdk [picture]
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      3 months, 2 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://lovejmorhate.me"
+       title="JM Agbayani">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/1826164322/jm1.JPG" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/janmae04/status/494611406788886528">
+        “@hanniross: wp-lunch.php at #wpdk [picture]” #fb</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/hanniross/status/470157505092648960">
+      
+        wp-lunch.php at #wpdk [picture]
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      3 months, 2 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://mattgemmell.com"
+       title="Matt Gemmell">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000553182110/a86e9e6cbbcde598777d6b0451a4acf1.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/mattgemmell/status/489317727564476416">
+        @hanniross I do about 2h15m on ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/hanniross/status/489305673126404096">
+      
+        @mattgemmell how often do you generally ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      4 months ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/ToddZebert"
+       title="Todd Zebert">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/519736300/IMG_1190-2.jpg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/hanniross/status/470157505092648960">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/hanniross/status/470157505092648960">
+      
+        wp-lunch.php at #wpdk [picture]
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      4 months ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/yoyoohrho"
+       title="Nick Bennett">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/414223506608373760/-ZwSxJzY.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/hanniross/status/470157505092648960">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/hanniross/status/470157505092648960">
+      
+        wp-lunch.php at #wpdk [picture]
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      5 months ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+
+<p class="big">Nothing published yet.</p>
+
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

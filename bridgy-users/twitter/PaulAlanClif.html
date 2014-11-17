@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Paul Alan Clifford (Twitter) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://twitter.com/PaulAlanClif" title="Paul Alan Clifford (Twitter)"
+   class="u-url">
+  <img class="profile u-photo" src="https://pbs.twimg.com/profile_images/2634631590/c75c05cb61ba795ce7745a4fc3a05c40.jpeg" width="64px" />
+  <img src="/static/twitter_icon.png"
+       
+       alt="Twitter" />
+  <span class="p-name">Paul Alan Clifford</span></a>
+
+
+<!-- TODO: make this work without javascript too -->
+<a href="#" onclick="document.forms['listen-twitter-start'].submit();
+                     return false;">
+  <span class="glyphicon glyphicon-pause"
+        title="This account was disconnected on Twitter's end. Click to reconnect it!">
+</span></a>
+
+
+
+  
+  &middot;
+  <a href="http://trinitydigitalmedia.com/" class="publish-domain u-url">trinitydigitalmedia.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+Click to enable <a href="/about#listen">listening</a>:
+
+<!-- Twitter listen signup -->
+<form method="post" name="listen-twitter-start" action="/twitter/start" class="signup">
+  <input type="image" alt="Sign in with Twitter"
+         src="/activitystreams/oauth_dropins/static/twitter.png" />
+  <input name="feature" type="hidden" value="listen" />
+</form>
+
+
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+<span class="big">Click to enable <a href="/about#publish">publishing</a>:</span>
+<form method="post" name="publish-twitter-start" action="/twitter/start" class="signup">
+ <input type="image" alt="Sign in with Twitter"
+        src="/activitystreams/oauth_dropins/static/twitter.png" />
+ <input name="feature" type="hidden" value="publish" />
+</form>
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/nuvolarossa18"
+       title="chief red cloud">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/489480232576249856/MgwwxP4i.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/nuvolarossa18/status/512617383748718592">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/PaulAlanClif/status/512612477389918209">
+      
+        What's a DA &amp; why should ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1411083569&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MTI2MTczODM3NDg3MTg1OTIM">
+    
+      1 month, 4 weeks ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MTI2MTczODM3NDg3MTg1OTIM" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://churchtechcast.com">churchtechcast.com <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/managergee"
+       title="sly">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/512664310162550784/iHgc6b5p.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/managergee/status/512613142829228033">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/PaulAlanClif/status/512612477389918209">
+      
+        What's a DA &amp; why should ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1411083528&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MTI2MTMxNDI4MjkyMjgwMzMM">
+    
+      1 month, 4 weeks ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MTI2MTMxNDI4MjkyMjgwMzMM" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://churchtechcast.com">churchtechcast.com <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/churchtech_"
+       title="Church Tech">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/479718470783741952/qCxlAAyY.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/churchtech_/status/512661756649299970">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/PaulAlanClif/status/512612477389918209">
+      
+        What's a DA &amp; why should ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1411083439&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MTI2NjE3NTY2NDkyOTk5NzAM">
+    
+      1 month, 4 weeks ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MTI2NjE3NTY2NDkyOTk5NzAM" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://churchtechcast.com">churchtechcast.com <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/avisrobinson23"
+       title="SassyCoach">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/441007534430646273/MGfBFtuw.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/PaulAlanClif/status/512607613112963072">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/PaulAlanClif/status/512607613112963072">
+      
+        Enjoying the new features of IOS ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 month, 4 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/CesarPinz"
+       title="Cesar Pinzon">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/466758235202932736/RihUxNgQ.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/PaulAlanClif/status/512607613112963072">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/PaulAlanClif/status/512607613112963072">
+      
+        Enjoying the new features of IOS ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 month, 4 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/KeHeKi"
+       title="Keith Henry King">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/498351780036874241/vtC1x6Lg.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/PaulAlanClif/status/512607613112963072">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/PaulAlanClif/status/512607613112963072">
+      
+        Enjoying the new features of IOS ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 month, 4 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://freedom2pray.blogspot.com"
+       title="jimmy nelson">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/503391899307487232/OttnpMR7.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/jimmyandmandie/status/512612285253447680">
+        @PaulAlanClif I do like the updates, ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/PaulAlanClif/status/512607613112963072">
+      
+        Enjoying the new features of IOS ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 month, 4 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/revbrown1"
+       title="Mikel Brown, M.Div. ">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000134549289/30aadadd005b80db0ef3be655271d176.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/PaulAlanClif/status/511634641552293888">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/PaulAlanClif/status/511634641552293888">
+      
+        Here are the ways you're using ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1411011457&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo1MTE2MzQ2NDE1NTIyOTM4ODhfZmF2b3JpdGVkX2J5XzEzMjYwNjU4MQw">
+    
+      2 months ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://trinitydigitalmedia.com/2014/09/twitter-what-it-is-and-what-it-isnt-tech-help-for-churches/">trinitydigitalmedia.com/2014/09/twitte...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/KramerElec"
+       title="Kramer Electronics">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000039188920/949f93a0fa01a5eef011593d26b51038.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/PaulAlanClif/status/512340248630943744">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/PaulAlanClif/status/512340248630943744">
+      
+        @KramerElec Making sure you never regret ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 months ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/chari_61"
+       title="maria del rosario">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000393053220/43641aa2ad359da5c60230ab26a020e7.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/chari_61/status/512263306938429440">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/PaulAlanClif/status/512263264445542400">
+      
+        I won Kramer Electronics' Twitter contest. ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1411011397&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MTIyNjMzMDY5Mzg0Mjk0NDAM">
+    
+      2 months ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://trinitydigitalmedia.com/2014/09/i-won-a-kramer-electronics-twitter-contest-you-wont-believe-how-they-surprised-me/">trinitydigitalmedia.com/2014/09/i-won-...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+
+<p class="big">Nothing published yet.</p>
+
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

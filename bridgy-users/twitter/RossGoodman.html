@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Ross Goodman (Twitter) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://twitter.com/RossGoodman" title="Ross Goodman (Twitter)"
+   class="u-url">
+  <img class="profile u-photo" src="https://pbs.twimg.com/profile_images/1013616395/ca154fed-eb65-43c4-b99c-2ad52ef476d5.png" width="64px" />
+  <img src="/static/twitter_icon.png"
+       
+       alt="Twitter" />
+  <span class="p-name">Ross Goodman</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://www.rossgoodman.com" class="publish-domain u-url">rossgoodman.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGAsSB1R3aXR0ZXIiC1Jvc3NHb29kbWFuDA" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416212163&key=aglzfmJyaWQtZ3lyGAsSB1R3aXR0ZXIiC1Jvc3NHb29kbWFuDA">
+      27 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGAsSB1R3aXR0ZXIiC1Jvc3NHb29kbWFuDA" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+<span class="big">Click to enable <a href="/about#publish">publishing</a>:</span>
+<form method="post" name="publish-twitter-start" action="/twitter/start" class="signup">
+ <input type="image" alt="Sign in with Twitter"
+        src="/activitystreams/oauth_dropins/static/twitter.png" />
+ <input name="feature" type="hidden" value="publish" />
+</form>
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/ArvidAxland"
+       title="Arvid Axland">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/211604770/Bild_3.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/RossGoodman/status/528128895648677889">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/RossGoodman/status/528128895648677889">
+      
+        Favourite video The Haunted Poster – ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414947501&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1MjgxMjg4OTU2NDg2Nzc4ODlfZmF2b3JpdGVkX2J5XzI1MzYyMzE1DA">
+    
+      2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.rossgoodman.com/2014/10/31/favourite-video-the-haunted-poster-grona-lund-scare-prank-by-grona-lund/">rossgoodman.com/2014/10/31/fav...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/philiparvidson"
+       title="Philip Arvidson">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/2506672426/image.jpg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/RossGoodman/status/528128895648677889">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/RossGoodman/status/528128895648677889">
+      
+        Favourite video The Haunted Poster – ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414755798&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1MjgxMjg4OTU2NDg2Nzc4ODlfZmF2b3JpdGVkX2J5Xzk3Njg2OTU0DA">
+    
+      2 weeks, 2 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.rossgoodman.com/2014/10/31/favourite-video-the-haunted-poster-grona-lund-scare-prank-by-grona-lund/">rossgoodman.com/2014/10/31/fav...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/MekQuarrie"
+       title="Ian MacQuarrie">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/524169296788729856/Z_1TcfF8.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/RossGoodman/status/526771684049559553">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/RossGoodman/status/526771684049559553">
+      
+        Bookmarked Half Marathon List – UK ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414432631&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1MjY3NzE2ODQwNDk1NTk1NTNfZmF2b3JpdGVkX2J5XzE5Mzc1ODMxDA">
+    
+      2 weeks, 6 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.rossgoodman.com/2014/10/27/bookmarked-half-marathon-list-uk-half-marathons-in-2014-2015/">rossgoodman.com/2014/10/27/boo...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/CameronDubs"
+       title="Cameron Dubs">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/448145511980077056/mJeQfv2O.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/RossGoodman/status/517660166259363841">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/RossGoodman/status/517660166259363841">
+      
+        Favourite video Cassetteboy – Cameron’s Conference ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1412257734&key=aglzfmJyaWQtZ3lyTQsSCFJlc3BvbnNlIj90YWc6dHdpdHRlci5jb20sMjAxMzo1MTc2NjAxNjYyNTkzNjM4NDFfZmF2b3JpdGVkX2J5XzIxNjI5MTU2NDYM">
+    
+      1 month, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.rossgoodman.com/2014/10/02/favourite-video-cassetteboy-camerons-conference-rap-by-cassetteboy/">rossgoodman.com/2014/10/02/fav...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://ginandfundraising.wordpress.com/"
+       title="Sara Thomas">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/2857688577/0cfe4bef39928465194f7b12cbc3f88e.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/lirazelf/status/516671322433523714">
+        @RossGoodman ah, thought i’d said! Not ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/RossGoodman/status/516659169915846656">
+      
+        @lirazelf happy to finally get a ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 month, 2 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://ginandfundraising.wordpress.com/"
+       title="Sara Thomas">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/2857688577/0cfe4bef39928465194f7b12cbc3f88e.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/lirazelf/status/516672018339864576">
+        @RossGoodman so happy you finished, know ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/RossGoodman/status/516659169915846656">
+      
+        @lirazelf happy to finally get a ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 month, 2 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/MITOCW"
+       title="MIT OpenCourseWare">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/457168753826873344/nLwtMna2.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/RossGoodman/status/514419236714708992">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/RossGoodman/status/514419236714708992">
+      
+        Bookmarked Documentary Photography and Photojournalism: Still ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1411668028&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1MTQ0MTkyMzY3MTQ3MDg5OTJfZmF2b3JpdGVkX2J5XzE5NTQwNDgzDA">
+    
+      1 month, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.rossgoodman.com/2014/09/23/bookmarked-documentary-photography-and-photojournalism-still-images-of-a-world-in-motion-writing-and-humanistic-studies-mit-opencourseware/">rossgoodman.com/2014/09/23/boo...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://support.soundhound.com/"
+       title="SoundHound Support">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/428587567823327232/FM0a_S4R.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/SoundHoundHelps/status/514839950592716800">
+        @RossGoodman You are having issues posting ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/RossGoodman/status/514706633188851712">
+      
+        @SoundHoundHelps Problem with SH and Twitter. ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 month, 3 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/javascriptd"
+       title="Javascript Digest">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/495992701750239232/gKyvlH6q.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/javascriptd/status/514426689452249088">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/RossGoodman/status/514419244579045377">
+      
+        Bookmarked Eloquent JavaScript wp.me/p6bqu-jN
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1411484094&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MTQ0MjY2ODk0NTIyNDkwODgM">
+    
+      1 month, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.rossgoodman.com/2014/09/23/bookmarked-eloquent-javascript/">rossgoodman.com/2014/09/23/boo...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/mushfiqme"
+       title="Mushfiq-E Mahabub">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/462199882950782976/n8Wpn103.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/RossGoodman/status/514419244579045377">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/RossGoodman/status/514419244579045377">
+      
+        Bookmarked Eloquent JavaScript wp.me/p6bqu-jN
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1411482817&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1MTQ0MTkyNDQ1NzkwNDUzNzdfZmF2b3JpdGVkX2J5XzkyNzE2NjI0DA">
+    
+      1 month, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.rossgoodman.com/2014/09/23/bookmarked-eloquent-javascript/">rossgoodman.com/2014/09/23/boo...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

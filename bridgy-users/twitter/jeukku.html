@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Juuso Vilmunen (Twitter) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://twitter.com/jeukku" title="Juuso Vilmunen (Twitter)"
+   class="u-url">
+  <img class="profile u-photo" src="https://pbs.twimg.com/profile_images/528770713390678017/1I_Zuyi6.jpeg" width="64px" />
+  <img src="/static/twitter_icon.png"
+       
+       alt="Twitter" />
+  <span class="p-name">Juuso Vilmunen</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://juuso.vilmunen.net" class="publish-domain u-url">juuso.vilmunen.net</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyEwsSB1R3aXR0ZXIiBmpldWtrdQw" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416162397&key=aglzfmJyaWQtZ3lyEwsSB1R3aXR0ZXIiBmpldWtrdQw">
+      14 hours, 10 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyEwsSB1R3aXR0ZXIiBmpldWtrdQw" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+<span class="big">Click to enable <a href="/about#publish">publishing</a>:</span>
+<form method="post" name="publish-twitter-start" action="/twitter/start" class="signup">
+ <input type="image" alt="Sign in with Twitter"
+        src="/activitystreams/oauth_dropins/static/twitter.png" />
+ <input name="feature" type="hidden" value="publish" />
+</form>
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://juuso.vilmunen.net"
+       title="Juuso Vilmunen">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/528770713390678017/1I_Zuyi6.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/jeukku/status/530675623598227459">
+        @juhanilohikoski @Maiwwo En tiedä. Sitä mitä ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/jeukku/status/530605415844032512">
+      
+        @Maiwwo @juhanilohikoski Vasemmisto ei ole tarpeeksi ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 week, 2 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/Maiwwo"
+       title="MaiFIN">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/530411281988452352/Anu1nIQa.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/Maiwwo/status/530607949576929280">
+        @jeukku @juhanilohikoski Ei mielestäni.Taloudellinen hyvinvointi ja ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/jeukku/status/530605415844032512">
+      
+        @Maiwwo @juhanilohikoski Vasemmisto ei ole tarpeeksi ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 week, 2 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://juhanilohikoski.wordpress.com/"
+       title="Juhani Lohikoski">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000821388765/962deeb7e0b2ab4f81a9a0b860b519ea.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/juhanilohikoski/status/530656639360466944">
+        @jeukku @Maiwwo Mitä on "tarpeeksi vihreä"?</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/jeukku/status/530605415844032512">
+      
+        @Maiwwo @juhanilohikoski Vasemmisto ei ole tarpeeksi ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 week, 2 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://juuso.vilmunen.net"
+       title="Juuso Vilmunen">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/525858123274547200/3f2FugdX.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/jeukku/status/528073651128897536">
+        @rolle do less? Move to a ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/jeukku/status/528072877267247104">
+      
+        @rolle sleep more? change settings?
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 weeks, 2 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.rollemaa.org/info"
+       title="Roni Laukkarinen">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/1451995753/uusi-twitter-avatar-omg.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/rolle/status/528074415909920768">
+        Never give up, never surrender! Another ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/jeukku/status/528073651128897536">
+      
+        @rolle do less? Move to a ...
+      
+    </a></li>
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/jeukku/status/528072877267247104">
+      
+        @rolle sleep more? change settings?
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 weeks, 2 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.rollemaa.org/info"
+       title="Roni Laukkarinen">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/1451995753/uusi-twitter-avatar-omg.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/rolle/status/528073209992990721">
+        #Sleep more = less time to ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/jeukku/status/528072877267247104">
+      
+        @rolle sleep more? change settings?
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 weeks, 2 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://about.me/esamiettinen"
+       title="Esa Miettinen">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/480764137694584832/XpguPdWi.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/esamietti/status/527720010870169600">
+        @jeukku "Eläkkeellä voi sitten käyttää tämänkin ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/jeukku/status/527718629476143104">
+      
+        @esamietti Eläkkeellä sitten.
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 weeks, 3 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://markosuomi.wordpress.com/"
+       title="Marko Suomi">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/515910361640632320/bVkQRw9_.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/markosuomi/status/525577243633147904">
+        @jeukku hyvä strategia!</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/jeukku/status/525576622095994880">
+      
+        @markosuomi 0% strategiaa.
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      3 weeks, 2 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/Telkku_com"
+       title="Telkku.com">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/498697956032540672/nuNlbORO.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/jeukku/status/521346923211800577">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/jeukku/status/521346923211800577">
+      
+        Nyt foxille telkkari! #cosmos
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 month ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://sites.google.com/site/zeitgeistpennsylvania/home"
+       title="TZMPennsylvania">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/499701840015941633/3BPG3M5V.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/ZeitgeistPA/status/518706093007335424">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/jeukku/status/516484708968837120">
+      
+        The Secret Goldman Sachs Tapes fplus.me/p/9FI5/5400462f ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 month, 1 week ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

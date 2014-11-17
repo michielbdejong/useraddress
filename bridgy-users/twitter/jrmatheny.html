@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>J. Randal Matheny (Twitter) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://twitter.com/jrmatheny" title="J. Randal Matheny (Twitter)"
+   class="u-url">
+  <img class="profile u-photo" src="https://pbs.twimg.com/profile_images/533283048574689281/YaFB0__z.jpeg" width="64px" />
+  <img src="/static/twitter_icon.png"
+       
+       alt="Twitter" />
+  <span class="p-name">J. Randal Matheny</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://jasrandal.withknown.com" class="publish-domain u-url">jasrandal.withknown.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyFgsSB1R3aXR0ZXIiCWpybWF0aGVueQw" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416213065&key=aglzfmJyaWQtZ3lyFgsSB1R3aXR0ZXIiCWpybWF0aGVueQw">
+      6 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyFgsSB1R3aXR0ZXIiCWpybWF0aGVueQw" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+<form method="post" action="/delete/start">
+<p id="publishing-label" class="big">
+ Ready to publish.
+   <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyFgsSB1R3aXR0ZXIiCWpybWF0aGVueQw" />
+   <input name="feature" type="hidden" value="publish" />
+   <button id="delete-button" type="submit" class="btn btn-default"
+     title="Disable publishing for this account. (Won't delete posts you've already published.)"
+     >Disable</button>
+</p>
+</form>
+
+<form method="post" name="preview" action="/publish/preview"
+      onsubmit="do_preview('twitter'); return false;">
+<p id="preview-ui">
+ <label id="source-label" for="source-url">Enter post URL:</label>
+ <input id="source-url" name="source" type="url" required alt="Source URL"></input>
+ <input name="target" type="hidden"
+        value="http://brid.gy/publish/twitter"></input>
+
+ <nobr>
+ <!-- use a hidden input before the checkbox with the same name to set the value
+      to be sent when the checkbox is unchecked. -->
+ &nbsp;
+ <input id="include-link-unchecked" name="bridgy_omit_link" type="hidden"
+        value="true"></input>
+ <input id="include-link-checked" name="bridgy_omit_link" type="checkbox"
+        value="false" checked></input>
+ <label id="include-link-label" for="include-link-checked">Include link</label>
+ &nbsp;
+ <button id="preview-button" type="submit" class="btn btn-default">Preview</button>
+ </nobr>
+</p>
+</form>
+
+<!-- Publish signup buttons -->
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/kentom8149"
+       title="Tommy Jones">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/465819923306909697/lU7syGL5.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/jrmatheny/status/533736366626975744">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/jrmatheny/status/533736366626975744">
+      
+        Using Our Brain For Memorizing Scripture ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416139522&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo1MzM3MzYzNjY2MjY5NzU3NDRfZmF2b3JpdGVkX2J5XzUwODE3OTAyMww">
+    
+      20 hours, 32 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://jasrandal.withknown.com/2014/using-our-brain-for-memorizing-scripture-201411using-our-brain-for-memorizing-scripturehtmlbible">jasrandal.withknown.com/2014/using-our...</a></li></ul>
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://gospelsnippets.blogspot.com.br/2014/11/using-our-brain-for-memorizing-scripture.html">gospelsnippets.blogspot.com.br/2014/11/using-...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/kentom8149"
+       title="Tommy Jones">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/465819923306909697/lU7syGL5.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/kentom8149/status/533952173755748353">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/jrmatheny/status/533736366626975744">
+      
+        Using Our Brain For Memorizing Scripture ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416139491&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzM5NTIxNzM3NTU3NDgzNTMM">
+    
+      20 hours, 32 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://jasrandal.withknown.com/2014/using-our-brain-for-memorizing-scripture-201411using-our-brain-for-memorizing-scripturehtmlbible">jasrandal.withknown.com/2014/using-our...</a></li></ul>
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://gospelsnippets.blogspot.com.br/2014/11/using-our-brain-for-memorizing-scripture.html">gospelsnippets.blogspot.com.br/2014/11/using-...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://gospeladvocate.com"
+       title="Gregory Tidwell">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/3730418663/02d0c07d7a48d42d4721ad1177791e57.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/GATidwell/status/533753404401520640">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/jrmatheny/status/533736366626975744">
+      
+        Using Our Brain For Memorizing Scripture ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416092438&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzM3NTM0MDQ0MDE1MjA2NDAM">
+    
+      1 day, 9 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://jasrandal.withknown.com/2014/using-our-brain-for-memorizing-scripture-201411using-our-brain-for-memorizing-scripturehtmlbible">jasrandal.withknown.com/2014/using-our...</a></li></ul>
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://gospelsnippets.blogspot.com.br/2014/11/using-our-brain-for-memorizing-scripture.html">gospelsnippets.blogspot.com.br/2014/11/using-...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://jasrandal.withknown.com"
+       title="J. Randal Matheny">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/533283048574689281/YaFB0__z.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/jrmatheny/status/533643874166927360">
+        @DerGrisch libertypod.com</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/jrmatheny/status/533541177170341888">
+      
+        Not been able to post on ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 day, 16 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://christian-vogeley.de/channel/dergrisch"
+       title="DerGrisch">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000380618849/e339507e8baaf04ee409f73fcfb30c53.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/DerGrisch/status/533638952407011328">
+        @jrmatheny do you have more information? ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/jrmatheny/status/533541177170341888">
+      
+        Not been able to post on ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 day, 17 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://gospeladvocate.com"
+       title="Gregory Tidwell">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/3730418663/02d0c07d7a48d42d4721ad1177791e57.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/GATidwell/status/533622553596526592">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/jrmatheny/status/533615324852006914">
+      
+        Facebook is cutting brand reach, again. ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416060913&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzM2MjI1NTM1OTY1MjY1OTIM">
+    
+      1 day, 18 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://stream.withknown.com/2014/facebook-is-cutting-brand-reach-again-we-believe-theres-a">stream.withknown.com/2014/facebook-...</a></li>
+	<li><a class="original-post" target="_blank" href="http://jasrandal.withknown.com/2014/facebook-is-cutting-brand-reach-again-we-believe-theres-a">jasrandal.withknown.com/2014/facebook-...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/ThePoemRose"
+       title="The Poem Rose">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/465841677983174656/aapSV5YZ.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/jrmatheny/status/533570152781320192">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/jrmatheny/status/533570152781320192">
+      
+        The poem isn't there (email only) ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416048536&key=aglzfmJyaWQtZ3lyTQsSCFJlc3BvbnNlIj90YWc6dHdpdHRlci5jb20sMjAxMzo1MzM1NzAxNTI3ODEzMjAxOTJfZmF2b3JpdGVkX2J5XzIyNzgxNjcyNDcM">
+    
+      1 day, 21 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://quitter.no/notice/46275">quitter.no/notice/46275</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://gospelsnippets.blogspot.com"
+       title="Michael Riley">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/1659331125/Fear_God.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/bibleprofessor/status/533270902147133441">
+        @jrmatheny John 6:30, when the people ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/jrmatheny/status/533266496227524609">
+      
+        The only time I recall reading ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415977459&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzMyNzA5MDIxNDcxMzM0NDEM">
+    
+      2 days, 17 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://jasrandal.withknown.com/2014/the-only-time-i-recall-reading-in-the-bible-about">jasrandal.withknown.com/2014/the-only-...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/wesmcadams"
+       title="Wes McAdams">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/529258697885638657/HFQof2J-.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/jrmatheny/status/533253133149814784">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/jrmatheny/status/533253133149814784">
+      
+        Speaking without practicing is to God ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415974957&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo1MzMyNTMxMzMxNDk4MTQ3ODRfZmF2b3JpdGVkX2J5XzIwNTM5NDk1Mww">
+    
+      2 days, 18 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://randalmatheny.com/2014/11/14/speak-pratice/">randalmatheny.com/2014/11/14/spe...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/jhenson2014"
+       title="John Henson">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/441330100596789248/wj4fsjDQ.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/jrmatheny/status/532957629450944512">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/jrmatheny/status/532957629450944512">
+      
+        "Help us all to understand the ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415903806&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1MzI5NTc2Mjk0NTA5NDQ1MTJfZmF2b3JpdGVkX2J5XzYyMDQxNjU0DA">
+    
+      3 days, 14 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://jasrandal.withknown.com/2014/help-us-all-to-understand-the-awesome-power-that-is">jasrandal.withknown.com/2014/help-us-a...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+
+<p class="big">Nothing published yet.</p>
+
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

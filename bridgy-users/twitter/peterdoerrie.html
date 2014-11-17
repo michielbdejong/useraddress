@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Peter Dörrie (Twitter) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://twitter.com/peterdoerrie" title="Peter Dörrie (Twitter)"
+   class="u-url">
+  <img class="profile u-photo" src="https://pbs.twimg.com/profile_images/3722947239/79e19a323397d5fcd4ce5340100d4374.png" width="64px" />
+  <img src="/static/twitter_icon.png"
+       
+       alt="Twitter" />
+  <span class="p-name">Peter Dörrie</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://www.peter-doerrie.de/" class="publish-domain u-url">peter-doerrie.de</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+
+<div class="row promo warning">
+You
+ need 
+<a href='http://indiewebify.me/#send-webmentions'>webmention</a> support.
+
+
+<a href="http://indiewebcamp.com/webmention#Publishing_Software">Here are some
+resources.</a> If you're on
+WordPress, <a href="http://wordpress.org/plugins/indieweb/">try the IndieWeb
+bundle plugin</a>. If you're on Blogger, Tumblr, or
+WordPress.com, <a href="/">sign up here!</a>
+
+
+
+</div>
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGQsSB1R3aXR0ZXIiDHBldGVyZG9lcnJpZQw" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416146253&key=aglzfmJyaWQtZ3lyGQsSB1R3aXR0ZXIiDHBldGVyZG9lcnJpZQw">
+      18 hours, 45 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGQsSB1R3aXR0ZXIiDHBldGVyZG9lcnJpZQw" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+<span class="big">Click to enable <a href="/about#publish">publishing</a>:</span>
+<form method="post" name="publish-twitter-start" action="/twitter/start" class="signup">
+ <input type="image" alt="Sign in with Twitter"
+        src="/activitystreams/oauth_dropins/static/twitter.png" />
+ <input name="feature" type="hidden" value="publish" />
+</form>
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.contributoria.com"
+       title="Contributoria">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/483570804374769665/w7mno0UO.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/contributoria/status/533351895000444929">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/peterdoerrie/status/533304860654206976">
+      
+        Land of Plenty or Plenty of ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416076721&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzMzNTE4OTUwMDA0NDQ5MjkM">
+    
+      1 day, 14 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://www.contributoria.com/issue/2015-01/54661d6e6239e6c215000050/proposal">contributoria.com/issue/2015-01/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/MarkGKirshner"
+       title="MarkGeoffreyKirshner">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000021383104/80acdc938be8747ff9edfe072c28c31b.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/peterdoerrie/status/533304860654206976">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/peterdoerrie/status/533304860654206976">
+      
+        Land of Plenty or Plenty of ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416076720&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo1MzMzMDQ4NjA2NTQyMDY5NzZfZmF2b3JpdGVkX2J5XzQwMTcxMDk0Mww">
+    
+      1 day, 14 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://www.contributoria.com/issue/2015-01/54661d6e6239e6c215000050/proposal">contributoria.com/issue/2015-01/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://www.omarchabbi.wordpress.com"
+       title="Omar Shabbi عمر شابي">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000245590352/3c073bcee8c447b777a4a86ca6c50382.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/OmarShabbi/status/533305160567881728">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/peterdoerrie/status/533304860654206976">
+      
+        Land of Plenty or Plenty of ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416076720&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzMzMDUxNjA1Njc4ODE3MjgM">
+    
+      1 day, 14 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://www.contributoria.com/issue/2015-01/54661d6e6239e6c215000050/proposal">contributoria.com/issue/2015-01/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/kdungul"
+       title="Kevin Dungul ">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/451192110713028609/xcV2WQ11.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/kdungul/status/533306444087840768">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/peterdoerrie/status/533304860654206976">
+      
+        Land of Plenty or Plenty of ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416076720&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzMzMDY0NDQwODc4NDA3NjgM">
+    
+      1 day, 14 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://www.contributoria.com/issue/2015-01/54661d6e6239e6c215000050/proposal">contributoria.com/issue/2015-01/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://TheAfricanGourmet.blogspot.com/"
+       title="Chic African Blog">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/525095307579645952/43uMOGac.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/AfricanGourmet/status/533417348754333696">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/peterdoerrie/status/533304860654206976">
+      
+        Land of Plenty or Plenty of ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416076719&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzM0MTczNDg3NTQzMzM2OTYM">
+    
+      1 day, 14 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://www.contributoria.com/issue/2015-01/54661d6e6239e6c215000050/proposal">contributoria.com/issue/2015-01/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/contributoria"
+       title="Contributoria">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/483570804374769665/w7mno0UO.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/peterdoerrie/status/533304860654206976">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/peterdoerrie/status/533304860654206976">
+      
+        Land of Plenty or Plenty of ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416076719&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo1MzMzMDQ4NjA2NTQyMDY5NzZfZmF2b3JpdGVkX2J5XzU2Mjk3NDExNQw">
+    
+      1 day, 14 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://www.contributoria.com/issue/2015-01/54661d6e6239e6c215000050/proposal">contributoria.com/issue/2015-01/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.amnestyusa.org"
+       title="Senegal/Niger AIUSA">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/476419226563915776/7RyRDTIJ.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/NIGERAIUSA/status/533319190342819840">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/peterdoerrie/status/533304860654206976">
+      
+        Land of Plenty or Plenty of ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416076718&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzMzMTkxOTAzNDI4MTk4NDAM">
+    
+      1 day, 14 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://www.contributoria.com/issue/2015-01/54661d6e6239e6c215000050/proposal">contributoria.com/issue/2015-01/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://about.me/markkirshner"
+       title="MarkGeoffreyKirshner">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000021383104/80acdc938be8747ff9edfe072c28c31b.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/MarkGKirshner/status/533307188329320448">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/peterdoerrie/status/533304860654206976">
+      
+        Land of Plenty or Plenty of ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416076711&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzMzMDcxODgzMjkzMjA0NDgM">
+    
+      1 day, 14 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://www.contributoria.com/issue/2015-01/54661d6e6239e6c215000050/proposal">contributoria.com/issue/2015-01/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/OmarShabbi"
+       title="Omar Shabbi عمر شابي">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000245590352/3c073bcee8c447b777a4a86ca6c50382.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/peterdoerrie/status/530785197982502912">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/peterdoerrie/status/530785197982502912">
+      
+        I've got some Google #Inbox invites ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 week, 1 day ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/NaijaHistory"
+       title="#BringBackOurGirls">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/527085192620806144/Jz8dGbm-.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/peterdoerrie/status/528917933578543104">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/peterdoerrie/status/528917933578543104">
+      
+        So now that constitution in #Burkina ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 week, 4 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Ben Roberts (Twitter) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://twitter.com/dissolve333" title="Ben Roberts (Twitter)"
+   class="u-url">
+  <img class="profile u-photo" src="https://pbs.twimg.com/profile_images/3495896730/7cecf2b827dadde109cb85dc30f458e4.jpeg" width="64px" />
+  <img src="/static/twitter_icon.png"
+       
+       alt="Twitter" />
+  <span class="p-name">Ben Roberts</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://ben.thatmustbe.me" class="publish-domain u-url">ben.thatmustbe.me</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGAsSB1R3aXR0ZXIiC2Rpc3NvbHZlMzMzDA" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416209641&key=aglzfmJyaWQtZ3lyGAsSB1R3aXR0ZXIiC2Rpc3NvbHZlMzMzDA">
+      59 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGAsSB1R3aXR0ZXIiC2Rpc3NvbHZlMzMzDA" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+<form method="post" action="/delete/start">
+<p id="publishing-label" class="big">
+ Ready to publish.
+   <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGAsSB1R3aXR0ZXIiC2Rpc3NvbHZlMzMzDA" />
+   <input name="feature" type="hidden" value="publish" />
+   <button id="delete-button" type="submit" class="btn btn-default"
+     title="Disable publishing for this account. (Won't delete posts you've already published.)"
+     >Disable</button>
+</p>
+</form>
+
+<form method="post" name="preview" action="/publish/preview"
+      onsubmit="do_preview('twitter'); return false;">
+<p id="preview-ui">
+ <label id="source-label" for="source-url">Enter post URL:</label>
+ <input id="source-url" name="source" type="url" required alt="Source URL"></input>
+ <input name="target" type="hidden"
+        value="http://brid.gy/publish/twitter"></input>
+
+ <nobr>
+ <!-- use a hidden input before the checkbox with the same name to set the value
+      to be sent when the checkbox is unchecked. -->
+ &nbsp;
+ <input id="include-link-unchecked" name="bridgy_omit_link" type="hidden"
+        value="true"></input>
+ <input id="include-link-checked" name="bridgy_omit_link" type="checkbox"
+        value="false" checked></input>
+ <label id="include-link-label" for="include-link-checked">Include link</label>
+ &nbsp;
+ <button id="preview-button" type="submit" class="btn btn-default">Preview</button>
+ </nobr>
+</p>
+</form>
+
+<!-- Publish signup buttons -->
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/t"
+       title="Tantek Çelik">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/423350922408767488/nlA_m2WH.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/dissolve333/status/524636299139899392">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/dissolve333/status/524636299139899392">
+      
+        #indieweb @t Just leftover W words ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413918148&key=aglzfmJyaWQtZ3lySAsSCFJlc3BvbnNlIjp0YWc6dHdpdHRlci5jb20sMjAxMzo1MjQ2MzYyOTkxMzk4OTkzOTJfZmF2b3JpdGVkX2J5XzExNjI4DA">
+    
+      3 weeks, 5 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://ben.thatmustbe.me/index.php?route=blog%2Fphoto&year=2014&month=10&day=21&daycount=1">ben.thatmustbe.me/index.php?rout...</a></li>
+	<li><a class="original-post" target="_blank" href="https://ben.thatmustbe.me/photo/2014/10/21/1">ben.thatmustbe.me/photo/2014/10/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://cynulation.vsco.co/"
+       title="Cynthia Prudence">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/425997845251235840/UsAr4C9a.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/C_y_ns/status/523142434034053120">
+        @dissolve333 @wwsean08 I would need bigger ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/dissolve333/status/522753638499106818">
+      
+        @oneplus is what @leolaporte called the ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 month ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/JessieHonigs"
+       title="Jessie Honigs">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/435477256203694080/ro5Q4jNZ.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/dissolve333/status/522137432880189440">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/dissolve333/status/522137432880189440">
+      
+        @JessieHonigs I enjoyed #indiewebcamp too. Glad ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413392884&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1MjIxMzc0MzI4ODAxODk0NDBfZmF2b3JpdGVkX2J5XzUzOTY2NTM1DA">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://ben.thatmustbe.me/note/2014/10/14/4/">ben.thatmustbe.me/note/2014/10/1...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/benwerd"
+       title="Ben Werdmüller">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000785382039/5951d8b25d500500c4094baa1851c095.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/dissolve333/status/522137432880189440">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/dissolve333/status/522137432880189440">
+      
+        @JessieHonigs I enjoyed #indiewebcamp too. Glad ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413323179&key=aglzfmJyaWQtZ3lySQsSCFJlc3BvbnNlIjt0YWc6dHdpdHRlci5jb20sMjAxMzo1MjIxMzc0MzI4ODAxODk0NDBfZmF2b3JpdGVkX2J5Xzc4MzA5Mgw">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://ben.thatmustbe.me/note/2014/10/14/4/">ben.thatmustbe.me/note/2014/10/1...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/bretolius"
+       title="Bret Comnes">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/473135457975283712/41oMFXBB.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/dissolve333/status/521470395514253312">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/dissolve333/status/521470395514253312">
+      
+        Had an excellent couple days at ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413255078&key=aglzfmJyaWQtZ3lyTQsSCFJlc3BvbnNlIj90YWc6dHdpdHRlci5jb20sMjAxMzo1MjE0NzAzOTU1MTQyNTMzMTJfZmF2b3JpdGVkX2J5XzIxNDk4NTAwMTgM">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://ben.thatmustbe.me/note/2014/10/13/1/">ben.thatmustbe.me/note/2014/10/1...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/kyle_wm"
+       title="Kyle Mahan">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/515304969033875456/z6JhAERL.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/dissolve333/status/520939404949348352">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/dissolve333/status/520939404949348352">
+      
+        Settling in at #indiewebcamp Cambridge. Finally! ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413148299&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1MjA5Mzk0MDQ5NDkzNDgzNTJfZmF2b3JpdGVkX2J5XzE5MDkwNzcwDA">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://ben.thatmustbe.me/note/2014/10/11/4/">ben.thatmustbe.me/note/2014/10/1...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/schnarfed"
+       title="Ryan Barrett">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/459041662707060736/Kb9Ex4X8.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/dissolve333/status/520939404949348352">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/dissolve333/status/520939404949348352">
+      
+        Settling in at #indiewebcamp Cambridge. Finally! ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413042508&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo1MjA5Mzk0MDQ5NDkzNDgzNTJfZmF2b3JpdGVkX2J5XzEzOTE5OTIxMQw">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://ben.thatmustbe.me/note/2014/10/11/4/">ben.thatmustbe.me/note/2014/10/1...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/t"
+       title="Tantek Çelik">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/423350922408767488/nlA_m2WH.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/dissolve333/status/520879435520565248">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/dissolve333/status/520879435520565248">
+      
+        @mlncn Nice to see I'm having ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413030405&key=aglzfmJyaWQtZ3lySAsSCFJlc3BvbnNlIjp0YWc6dHdpdHRlci5jb20sMjAxMzo1MjA4Nzk0MzU1MjA1NjUyNDhfZmF2b3JpdGVkX2J5XzExNjI4DA">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://ben.thatmustbe.me/note/2014/10/11/2/">ben.thatmustbe.me/note/2014/10/1...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/bucketsio"
+       title="Buckets">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/476447068420972544/fw5-fStG.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/dissolve333/status/513060078828544000">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/dissolve333/status/513060078828544000">
+      
+        @el_boby While some in #indiewebcamp don't ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1411400616&key=aglzfmJyaWQtZ3lyTQsSCFJlc3BvbnNlIj90YWc6dHdpdHRlci5jb20sMjAxMzo1MTMwNjAwNzg4Mjg1NDQwMDBfZmF2b3JpdGVkX2J5XzI1NTk1OTk2NDYM">
+    
+      1 month, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://ben.thatmustbe.me/note/2014/9/19/3/_">ben.thatmustbe.me/note/2014/9/19...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://tantek.com/"
+       title="Tantek Çelik">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/423350922408767488/nlA_m2WH.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/t/status/513705594218631168">
+        Well done @dissolve333! 2014-09-12 First #indieweb ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/dissolve333/status/510483222686216195">
+      
+        Ben Roberts September 12, 2014 1:40 ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1411312197&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MTM3MDU1OTQyMTg2MzExNjgM">
+    
+      1 month, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://ben.thatmustbe.me/note/2014/9/12/1/_">ben.thatmustbe.me/note/2014/9/12...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+
+<p id="publishes" class="big">Recently published:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://ben.thatmustbe.me/note/2014/11/11/1/">ben.thatmustbe.me/note/2014/11/1...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1415709606&key=aglzfmJyaWQtZ3lyUwsSDVB1Ymxpc2hlZFBhZ2UiLGh0dHBzOi8vYmVuLnRoYXRtdXN0YmUubWUvbm90ZS8yMDE0LzExLzExLzEvDAsSB1B1Ymxpc2gYgICAgICAgAoM">
+      5 days, 19 hours ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://twitter.com/dissolve333/status/532150776907313152">
+     
+     tweet
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://ben.thatmustbe.me/note/2014/11/1/2/">ben.thatmustbe.me/note/2014/11/1...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1414869305&key=aglzfmJyaWQtZ3lyUgsSDVB1Ymxpc2hlZFBhZ2UiK2h0dHBzOi8vYmVuLnRoYXRtdXN0YmUubWUvbm90ZS8yMDE0LzExLzEvMi8MCxIHUHVibGlzaBiAgICAgICACgw">
+      2 weeks, 1 day ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://twitter.com/dissolve333/status/528626297677692928">
+     
+     tweet
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://ben.thatmustbe.me/photo/2014/11/1/1">ben.thatmustbe.me/photo/2014/11/...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1414868506&key=aglzfmJyaWQtZ3lyUgsSDVB1Ymxpc2hlZFBhZ2UiK2h0dHBzOi8vYmVuLnRoYXRtdXN0YmUubWUvcGhvdG8vMjAxNC8xMS8xLzEMCxIHUHVibGlzaBiAgICAgICACgw">
+      2 weeks, 1 day ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://twitter.com/dissolve333/status/528622944356818944">
+     
+     tweet
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://ben.thatmustbe.me/index.php?route=blog%2Fphoto&year=2014&month=11&day=1&daycount=1">ben.thatmustbe.me/index.php?rout...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1414851613&key=aglzfmJyaWQtZ3lygQELEg1QdWJsaXNoZWRQYWdlIlpodHRwczovL2Jlbi50aGF0bXVzdGJlLm1lL2luZGV4LnBocD9yb3V0ZT1ibG9nJTJGcGhvdG8meWVhcj0yMDE0Jm1vbnRoPTExJmRheT0xJmRheWNvdW50PTEMCxIHUHVibGlzaBiAgICAgICACgw">
+      2 weeks, 1 day ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://twitter.com/dissolve333/status/528552093548691456">
+     
+     tweet
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://ben.thatmustbe.me/index.php?route=blog%2Fphoto&year=2014&month=10&day=27&daycount=1">ben.thatmustbe.me/index.php?rout...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1414370114&key=aglzfmJyaWQtZ3lyggELEg1QdWJsaXNoZWRQYWdlIltodHRwczovL2Jlbi50aGF0bXVzdGJlLm1lL2luZGV4LnBocD9yb3V0ZT1ibG9nJTJGcGhvdG8meWVhcj0yMDE0Jm1vbnRoPTEwJmRheT0yNyZkYXljb3VudD0xDAsSB1B1Ymxpc2gYgICAgICAgAoM">
+      3 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://twitter.com/dissolve333/status/526532538299187200">
+     
+     tweet
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://ben.thatmustbe.me/index.php?route=blog%2Fphoto&year=2014&month=10&day=21&daycount=1">ben.thatmustbe.me/index.php?rout...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1413918015&key=aglzfmJyaWQtZ3lyggELEg1QdWJsaXNoZWRQYWdlIltodHRwczovL2Jlbi50aGF0bXVzdGJlLm1lL2luZGV4LnBocD9yb3V0ZT1ibG9nJTJGcGhvdG8meWVhcj0yMDE0Jm1vbnRoPTEwJmRheT0yMSZkYXljb3VudD0xDAsSB1B1Ymxpc2gYgICAgICAgAoM">
+      3 weeks, 5 days ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://twitter.com/dissolve333/status/524636299139899392">
+     
+     tweet
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://ben.thatmustbe.me/note/2014/10/20/1/">ben.thatmustbe.me/note/2014/10/2...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1413837613&key=aglzfmJyaWQtZ3lyUwsSDVB1Ymxpc2hlZFBhZ2UiLGh0dHBzOi8vYmVuLnRoYXRtdXN0YmUubWUvbm90ZS8yMDE0LzEwLzIwLzEvDAsSB1B1Ymxpc2gYgICAgICAgAoM">
+      3 weeks, 6 days ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://ben.thatmustbe.me/photo/2014/10/17/1">ben.thatmustbe.me/photo/2014/10/...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1413516306&key=aglzfmJyaWQtZ3lyUwsSDVB1Ymxpc2hlZFBhZ2UiLGh0dHBzOi8vYmVuLnRoYXRtdXN0YmUubWUvcGhvdG8vMjAxNC8xMC8xNy8xDAsSB1B1Ymxpc2gYgICAgICAgAoM">
+      1 month ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://twitter.com/dissolve333/status/522951406903242752">
+     
+     tweet
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://ben.thatmustbe.me/post/2014/10/16/1/totp_and_you">ben.thatmustbe.me/post/2014/10/1...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1413460814&key=aglzfmJyaWQtZ3lyXwsSDVB1Ymxpc2hlZFBhZ2UiOGh0dHBzOi8vYmVuLnRoYXRtdXN0YmUubWUvcG9zdC8yMDE0LzEwLzE2LzEvdG90cF9hbmRfeW91DAsSB1B1Ymxpc2gYgICAgICAgAoM">
+      1 month ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://twitter.com/dissolve333/status/522718658603134976">
+     
+     tweet
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://ben.thatmustbe.me/note/2014/10/14/4/">ben.thatmustbe.me/note/2014/10/1...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1413322239&key=aglzfmJyaWQtZ3lyUwsSDVB1Ymxpc2hlZFBhZ2UiLGh0dHBzOi8vYmVuLnRoYXRtdXN0YmUubWUvbm90ZS8yMDE0LzEwLzE0LzQvDAsSB1B1Ymxpc2gYgICAgICAgAoM">
+      1 month ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://twitter.com/dissolve333/status/522137432880189440">
+     
+     @-reply
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+</ul>
+
+
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Kepler Cezzar Zilar (Twitter) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://twitter.com/keplr" title="Kepler Cezzar Zilar (Twitter)"
+   class="u-url">
+  <img class="profile u-photo" src="https://pbs.twimg.com/profile_images/498146219878006784/14vaacey.jpeg" width="64px" />
+  <img src="/static/twitter_icon.png"
+       
+       alt="Twitter" />
+  <span class="p-name">Kepler Cezzar Zilar</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://keplr.me/" class="publish-domain u-url">keplr.me</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyEgsSB1R3aXR0ZXIiBWtlcGxyDA" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416211212&key=aglzfmJyaWQtZ3lyEgsSB1R3aXR0ZXIiBWtlcGxyDA">
+      37 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyEgsSB1R3aXR0ZXIiBWtlcGxyDA" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+<form method="post" action="/delete/start">
+<p id="publishing-label" class="big">
+ Ready to publish.
+   <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyEgsSB1R3aXR0ZXIiBWtlcGxyDA" />
+   <input name="feature" type="hidden" value="publish" />
+   <button id="delete-button" type="submit" class="btn btn-default"
+     title="Disable publishing for this account. (Won't delete posts you've already published.)"
+     >Disable</button>
+</p>
+</form>
+
+<form method="post" name="preview" action="/publish/preview"
+      onsubmit="do_preview('twitter'); return false;">
+<p id="preview-ui">
+ <label id="source-label" for="source-url">Enter post URL:</label>
+ <input id="source-url" name="source" type="url" required alt="Source URL"></input>
+ <input name="target" type="hidden"
+        value="http://brid.gy/publish/twitter"></input>
+
+ <nobr>
+ <!-- use a hidden input before the checkbox with the same name to set the value
+      to be sent when the checkbox is unchecked. -->
+ &nbsp;
+ <input id="include-link-unchecked" name="bridgy_omit_link" type="hidden"
+        value="true"></input>
+ <input id="include-link-checked" name="bridgy_omit_link" type="checkbox"
+        value="false" checked></input>
+ <label id="include-link-label" for="include-link-checked">Include link</label>
+ &nbsp;
+ <button id="preview-button" type="submit" class="btn btn-default">Preview</button>
+ </nobr>
+</p>
+</form>
+
+<!-- Publish signup buttons -->
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/jeremyzilar"
+       title="Jeremy Zilar">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/477231011374194688/DoX1Io24.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/keplr/status/528964339735068675">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/keplr/status/528964339735068675">
+      
+        Daphne And Kepler water sAlt wp.me/s4TbVq-61
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415265239&key=aglzfmJyaWQtZ3lySQsSCFJlc3BvbnNlIjt0YWc6dHdpdHRlci5jb20sMjAxMzo1Mjg5NjQzMzk3MzUwNjg2NzVfZmF2b3JpdGVkX2J5XzI5MTM2Mww">
+    
+      1 week, 3 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://keplr.me/blog/2014/11/02/61/">keplr.me/blog/2014/11/0...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/jeremyzilar"
+       title="Jeremy Zilar">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/477231011374194688/DoX1Io24.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/keplr/status/507600813208788992">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/keplr/status/507600813208788992">
+      
+        Renda wp.me/s4TbVq-56
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413481072&key=aglzfmJyaWQtZ3lySQsSCFJlc3BvbnNlIjt0YWc6dHdpdHRlci5jb20sMjAxMzo1MDc2MDA4MTMyMDg3ODg5OTJfZmF2b3JpdGVkX2J5XzI5MTM2Mww">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://keplr.me/blog/2014/09/04/56/">keplr.me/blog/2014/09/0...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/sueapfe"
+       title="Sue Apfelbaum">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/476103095/3121502433_67cca400ef_o.jpg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/keplr/status/513755028876566528">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/keplr/status/513755028876566528">
+      
+        Kepler CezzAr Zilar wp.me/s4TbVq-58
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1411323997&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1MTM3NTUwMjg4NzY1NjY1MjhfZmF2b3JpdGVkX2J5XzE5MzU0NzYxDA">
+    
+      1 month, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://keplr.me/blog/2014/09/21/58/">keplr.me/blog/2014/09/2...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/keplr"
+       title="Kepler Cezzar Zilar">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/498146219878006784/14vaacey.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/keplr/status/498589463392440320">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/keplr/status/498589463392440320">
+      
+        HELLO wp.me/s4TbVq-40
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1410303414&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo0OTg1ODk0NjMzOTI0NDAzMjBfZmF2b3JpdGVkX2J5XzY5NDMyNTI4DA">
+    
+      2 months, 1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://keplr.me/blog/2014/08/10/40/">keplr.me/blog/2014/08/1...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/rendamorton"
+       title="Renda Morton">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/420323348178956288/rr5bQniE.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/keplr/status/507600813208788992">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/keplr/status/507600813208788992">
+      
+        Renda wp.me/s4TbVq-56
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1409856768&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1MDc2MDA4MTMyMDg3ODg5OTJfZmF2b3JpdGVkX2J5XzE5MzY3NDc3DA">
+    
+      2 months, 1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://keplr.me/blog/2014/09/04/56/">keplr.me/blog/2014/09/0...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/keplr"
+       title="Kepler Cezzar Zilar">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/498146219878006784/14vaacey.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/keplr/status/498594307851317248">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/keplr/status/498594307851317248">
+      
+        HELLO DINGO DOG MAMA AND DADA ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1409192211&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo0OTg1OTQzMDc4NTEzMTcyNDhfZmF2b3JpdGVkX2J5XzY5NDMyNTI4DA">
+    
+      2 months, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://keplr.me/blog/2014/08/10/42/">keplr.me/blog/2014/08/1...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/t"
+       title="Tantek Çelik">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/423350922408767488/nlA_m2WH.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/keplr/status/498595796434952192">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/keplr/status/498595796434952192">
+      
+        HELLO LUNCH wp.me/s4TbVq-43
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1408644069&key=aglzfmJyaWQtZ3lySAsSCFJlc3BvbnNlIjp0YWc6dHdpdHRlci5jb20sMjAxMzo0OTg1OTU3OTY0MzQ5NTIxOTJfZmF2b3JpdGVkX2J5XzExNjI4DA">
+    
+      2 months, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://keplr.me/blog/2014/08/10/43/">keplr.me/blog/2014/08/1...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/oubliette"
+       title="Juliette Cezzar">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/484409990082351104/fIW3JP1k.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/keplr/status/498595796434952192">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/keplr/status/498595796434952192">
+      
+        HELLO LUNCH wp.me/s4TbVq-43
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1407974249&key=aglzfmJyaWQtZ3lySgsSCFJlc3BvbnNlIjx0YWc6dHdpdHRlci5jb20sMjAxMzo0OTg1OTU3OTY0MzQ5NTIxOTJfZmF2b3JpdGVkX2J5XzEwNTkxNTEM">
+    
+      3 months ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://keplr.me/blog/2014/08/10/43/">keplr.me/blog/2014/08/1...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/oubliette"
+       title="Juliette Cezzar">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/484409990082351104/fIW3JP1k.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/keplr/status/498590839556157440">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/keplr/status/498590839556157440">
+      
+        WHAT DID YOU SAYDADA wp.me/s4TbVq-41
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1407974190&key=aglzfmJyaWQtZ3lySgsSCFJlc3BvbnNlIjx0YWc6dHdpdHRlci5jb20sMjAxMzo0OTg1OTA4Mzk1NTYxNTc0NDBfZmF2b3JpdGVkX2J5XzEwNTkxNTEM">
+    
+      3 months ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://keplr.me/blog/2014/08/10/41/">keplr.me/blog/2014/08/1...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/oubliette"
+       title="Juliette Cezzar">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/484409990082351104/fIW3JP1k.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/keplr/status/498594307851317248">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/keplr/status/498594307851317248">
+      
+        HELLO DINGO DOG MAMA AND DADA ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1407974166&key=aglzfmJyaWQtZ3lySgsSCFJlc3BvbnNlIjx0YWc6dHdpdHRlci5jb20sMjAxMzo0OTg1OTQzMDc4NTEzMTcyNDhfZmF2b3JpdGVkX2J5XzEwNTkxNTEM">
+    
+      3 months ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://keplr.me/blog/2014/08/10/42/">keplr.me/blog/2014/08/1...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+
+<p class="big">Nothing published yet.</p>
+
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

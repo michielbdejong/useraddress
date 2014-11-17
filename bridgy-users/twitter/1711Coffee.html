@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>1711 Coffee (Twitter) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://twitter.com/1711Coffee" title="1711 Coffee (Twitter)"
+   class="u-url">
+  <img class="profile u-photo" src="https://pbs.twimg.com/profile_images/497051836436602880/AiRgninh.jpeg" width="64px" />
+  <img src="/static/twitter_icon.png"
+       
+       alt="Twitter" />
+  <span class="p-name">1711 Coffee</span></a>
+
+
+<!-- TODO: make this work without javascript too -->
+<a href="#" onclick="document.forms['listen-twitter-start'].submit();
+                     return false;">
+  <span class="glyphicon glyphicon-pause"
+        title="This account was disconnected on Twitter's end. Click to reconnect it!">
+</span></a>
+
+
+
+  
+  &middot;
+  <a href="http://1711coffee.com/" class="publish-domain u-url">1711coffee.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+Click to enable <a href="/about#listen">listening</a>:
+
+<!-- Twitter listen signup -->
+<form method="post" name="listen-twitter-start" action="/twitter/start" class="signup">
+  <input type="image" alt="Sign in with Twitter"
+         src="/activitystreams/oauth_dropins/static/twitter.png" />
+  <input name="feature" type="hidden" value="listen" />
+</form>
+
+
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+<span class="big">Click to enable <a href="/about#publish">publishing</a>:</span>
+<form method="post" name="publish-twitter-start" action="/twitter/start" class="signup">
+ <input type="image" alt="Sign in with Twitter"
+        src="/activitystreams/oauth_dropins/static/twitter.png" />
+ <input name="feature" type="hidden" value="publish" />
+</form>
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/coffeekenworld"
+       title="coffeekenworld.">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/3475784926/2656fdc5a2a8cc4d591a7023ed2ac434.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/1711Coffee/status/454650870127681536">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/1711Coffee/status/454650870127681536">
+      
+        @coffeekenworld Three up here, though it's ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      5 months, 4 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://coffeeken.com"
+       title="coffeekenworld.">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/3475784926/2656fdc5a2a8cc4d591a7023ed2ac434.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/coffeekenworld/status/454700315560771584">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/1711Coffee/status/454650870127681536">
+      
+        @coffeekenworld Three up here, though it's ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      5 months, 4 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://coffeeken.com"
+       title="coffeekenworld.">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/3475784926/2656fdc5a2a8cc4d591a7023ed2ac434.jpeg" width="32" /></a>
+      <a target="_blank" href="http://twitter.com/coffeekenworld/status/453319105680920576">
+        @QueenBeanCoffee @1711Coffee @Stacey12News @blanchespalding @danielspalding1 I ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="http://twitter.com/1711Coffee/status/453216111069499392">
+      
+        RT @coffeekenworld: Happy Monday! What is ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      7 months, 1 week ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://twitter.com/danielspalding1"
+       title="Daniel Spalding">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/446321213720121344/Iw4hapWy.jpeg" width="32" /></a>
+      <a target="_blank" href="http://twitter.com/1711Coffee/status/453216111069499392">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://twitter.com/1711Coffee/status/453216111069499392">
+      
+        RT @coffeekenworld: Happy Monday! What is ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      7 months, 1 week ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.thequeenbean.com"
+       title="TheQueenBean">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000117112723/83122a38994049d60ecafd1192894d6e.jpeg" width="32" /></a>
+      <a target="_blank" href="http://twitter.com/QueenBeanCoffee/status/453274761268064256">
+        @1711Coffee @coffeekenworld @Stacey12News @blanchespalding @danielspalding1 Peru ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="http://twitter.com/1711Coffee/status/453216111069499392">
+      
+        RT @coffeekenworld: Happy Monday! What is ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      7 months, 1 week ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://twitter.com/Stacey12News"
+       title="12 News - Stacey ">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/2677738246/8d8f4a292a68e7d7b1731c84a87aa4a2.jpeg" width="32" /></a>
+      <a target="_blank" href="http://twitter.com/1711Coffee/status/453216111069499392">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://twitter.com/1711Coffee/status/453216111069499392">
+      
+        RT @coffeekenworld: Happy Monday! What is ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      7 months, 1 week ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://coffeeken.com"
+       title="coffeekenworld.">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/3475784926/2656fdc5a2a8cc4d591a7023ed2ac434.jpeg" width="32" /></a>
+      <a target="_blank" href="http://twitter.com/coffeekenworld/status/453223344926511105">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://twitter.com/1711Coffee/status/453216111069499392">
+      
+        RT @coffeekenworld: Happy Monday! What is ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      7 months, 1 week ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://twitter.com/coffeekenworld"
+       title="coffeekenworld.">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/3475784926/2656fdc5a2a8cc4d591a7023ed2ac434.jpeg" width="32" /></a>
+      <a target="_blank" href="http://twitter.com/1711Coffee/status/453216111069499392">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://twitter.com/1711Coffee/status/453216111069499392">
+      
+        RT @coffeekenworld: Happy Monday! What is ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      7 months, 1 week ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://twitter.com/CoffeeGeek"
+       title="Mark">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/416330372255719424/9_EjwLQU_normal.jpeg" width="32" /></a>
+      <a target="_blank" href="http://twitter.com/1711Coffee/status/449916775715835904">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://twitter.com/1711Coffee/status/449916775715835904">
+      
+        Ever gone a cafe only to ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1396514086&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo0NDk5MTY3NzU3MTU4MzU5MDRfZmF2b3JpdGVkX2J5XzEzNTk5ODEyDA">
+    
+      7 months, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.coffeegeek.com/opinions/coffeeatthemoment/03-27-2014">coffeegeek.com/opinions/coffe...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://twitter.com/CoffeeGeek"
+       title="Mark">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/416330372255719424/9_EjwLQU_normal.jpeg" width="32" /></a>
+      <a target="_blank" href="http://twitter.com/1711Coffee/status/449916500523360256">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://twitter.com/1711Coffee/status/449916500523360256">
+      
+        Nobody likes going to a cafe ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1396514042&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo0NDk5MTY1MDA1MjMzNjAyNTZfZmF2b3JpdGVkX2J5XzEzNTk5ODEyDA">
+    
+      7 months, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.coffeegeek.com/opinions/coffeeatthemoment/03-27-2014">coffeegeek.com/opinions/coffe...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

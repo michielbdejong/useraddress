@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Tom Bruning (Twitter) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://twitter.com/tgb" title="Tom Bruning (Twitter)"
+   class="u-url">
+  <img class="profile u-photo" src="https://pbs.twimg.com/profile_images/421694631458656256/JmNP-nf4.png" width="64px" />
+  <img src="/static/twitter_icon.png"
+       
+       alt="Twitter" />
+  <span class="p-name">Tom Bruning</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://tombruning.com" class="publish-domain u-url">tombruning.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyEAsSB1R3aXR0ZXIiA3RnYgw" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416212436&key=aglzfmJyaWQtZ3lyEAsSB1R3aXR0ZXIiA3RnYgw">
+      24 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyEAsSB1R3aXR0ZXIiA3RnYgw" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+<form method="post" action="/delete/start">
+<p id="publishing-label" class="big">
+ Ready to publish.
+   <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyEAsSB1R3aXR0ZXIiA3RnYgw" />
+   <input name="feature" type="hidden" value="publish" />
+   <button id="delete-button" type="submit" class="btn btn-default"
+     title="Disable publishing for this account. (Won't delete posts you've already published.)"
+     >Disable</button>
+</p>
+</form>
+
+<form method="post" name="preview" action="/publish/preview"
+      onsubmit="do_preview('twitter'); return false;">
+<p id="preview-ui">
+ <label id="source-label" for="source-url">Enter post URL:</label>
+ <input id="source-url" name="source" type="url" required alt="Source URL"></input>
+ <input name="target" type="hidden"
+        value="http://brid.gy/publish/twitter"></input>
+
+ <nobr>
+ <!-- use a hidden input before the checkbox with the same name to set the value
+      to be sent when the checkbox is unchecked. -->
+ &nbsp;
+ <input id="include-link-unchecked" name="bridgy_omit_link" type="hidden"
+        value="true"></input>
+ <input id="include-link-checked" name="bridgy_omit_link" type="checkbox"
+        value="false" checked></input>
+ <label id="include-link-label" for="include-link-checked">Include link</label>
+ &nbsp;
+ <button id="preview-button" type="submit" class="btn btn-default">Preview</button>
+ </nobr>
+</p>
+</form>
+
+<!-- Publish signup buttons -->
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://tombruning.com"
+       title="Tom Bruning">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/421694631458656256/JmNP-nf4.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/tgb/status/528860295268421633">
+        @tgb Looks great</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/tgb/status/528621083616743424">
+      
+        Whitecaps, Onion Soup at the Dutchman's ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414925142&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1Mjg4NjAyOTUyNjg0MjE2MzMM">
+    
+      2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.tombruning.com/archives/496">tombruning.com/archives/496</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://tombruning.com"
+       title="Tom Bruning">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/421694631458656256/JmNP-nf4.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/tgb/status/525413840654467073">
+        @tgb This is a test</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/tgb/status/524672005434388480">
+      
+        Sky Maul - tombruning.com/?p=368
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414103508&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MjU0MTM4NDA2NTQ0NjcwNzMM">
+    
+      3 weeks, 3 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.tombruning.com/?p=368">tombruning.com/?p=368</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://tombruning.com"
+       title="Tom Bruning">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/421694631458656256/JmNP-nf4.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/tgb/status/516946344473542656">
+        @tgb This is a test again</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/tgb/status/516941765324976129">
+      
+        Link to my blog - tombruning.com/link-to-my-blo…
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413564707&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MTY5NDYzNDQ0NzM1NDI2NTYM">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MTY5NDYzNDQ0NzM1NDI2NTYM" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.tombruning.com/link-to-my-blog/">tombruning.com/link-to-my-blo... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/TechnologyMktg"
+       title="Tech Marketing Tips">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/517426416439132160/WQFTVrKT.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/tgb/status/521996486289006592">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/tgb/status/521996486289006592">
+      
+        It’s Baaaaack! 33 Flu Vaccine Myths ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413564691&key=aglzfmJyaWQtZ3lyTQsSCFJlc3BvbnNlIj90YWc6dHdpdHRlci5jb20sMjAxMzo1MjE5OTY0ODYyODkwMDY1OTJfZmF2b3JpdGVkX2J5XzIzMjkxMjA4MDgM">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyTQsSCFJlc3BvbnNlIj90YWc6dHdpdHRlci5jb20sMjAxMzo1MjE5OTY0ODYyODkwMDY1OTJfZmF2b3JpdGVkX2J5XzIzMjkxMjA4MDgM" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.tombruning.com/?p=267">tombruning.com/?p=267 <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://tombruning.com"
+       title="Tom Bruning">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/421694631458656256/JmNP-nf4.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/tgb/status/516942386480836608">
+        @tgb This is a test</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/tgb/status/516941765324976129">
+      
+        Link to my blog - tombruning.com/link-to-my-blo…
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1412158270&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MTY5NDIzODY0ODA4MzY2MDgM">
+    
+      1 month, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MTY5NDIzODY0ODA4MzY2MDgM" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.tombruning.com/link-to-my-blog/">tombruning.com/link-to-my-blo... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/billfranklinuk"
+       title="Bill Franklin">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/437382515133669376/yl7ojMU7.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/tgb/status/475774045539946496">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/tgb/status/475774045539946496">
+      
+        This just lays it out so ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1402335006&key=aglzfmJyaWQtZ3lyTQsSCFJlc3BvbnNlIj90YWc6dHdpdHRlci5jb20sMjAxMzo0NzU3NzQwNDU1Mzk5NDY0OTZfZmF2b3JpdGVkX2J5XzEwNjA5ODYxNDAM">
+    
+      5 months, 1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://www.resetthenet.org/">resetthenet.org/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/GalouGentil"
+       title="Galou Cypherpunk">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/467007244950069248/k5lQRViM.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/tgb/status/475774045539946496">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/tgb/status/475774045539946496">
+      
+        This just lays it out so ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1402300456&key=aglzfmJyaWQtZ3lyTQsSCFJlc3BvbnNlIj90YWc6dHdpdHRlci5jb20sMjAxMzo0NzU3NzQwNDU1Mzk5NDY0OTZfZmF2b3JpdGVkX2J5XzE2MTAxNTk5MDYM">
+    
+      5 months, 1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://www.resetthenet.org/">resetthenet.org/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://twitter.com/t"
+       title="Tantek Çelik">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/423350922408767488/nlA_m2WH.jpeg" width="32" /></a>
+      <a target="_blank" href="http://twitter.com/tgb/status/466606311208390656">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://twitter.com/tgb/status/466606311208390656">
+      
+        Indiewebcamp - tombruning.com/indiewebcamp/
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1400169575&key=aglzfmJyaWQtZ3lySAsSCFJlc3BvbnNlIjp0YWc6dHdpdHRlci5jb20sMjAxMzo0NjY2MDYzMTEyMDgzOTA2NTZfZmF2b3JpdGVkX2J5XzExNjI4DA">
+    
+      6 months ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.tombruning.com/indiewebcamp/">tombruning.com/indiewebcamp/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://twitter.com/gRegorLove"
+       title="gRegor ♥ Morrill">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/421355267800846336/9KjkIhvZ.jpeg" width="32" /></a>
+      <a target="_blank" href="http://twitter.com/tgb/status/466606311208390656">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://twitter.com/tgb/status/466606311208390656">
+      
+        Indiewebcamp - tombruning.com/indiewebcamp/
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1400088267&key=aglzfmJyaWQtZ3lySgsSCFJlc3BvbnNlIjx0YWc6dHdpdHRlci5jb20sMjAxMzo0NjY2MDYzMTEyMDgzOTA2NTZfZmF2b3JpdGVkX2J5XzI3ODg4NDEM">
+    
+      6 months ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.tombruning.com/indiewebcamp/">tombruning.com/indiewebcamp/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://twitter.com/schnarfed"
+       title="Ryan Barrett">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/459041662707060736/Kb9Ex4X8.jpeg" width="32" /></a>
+      <a target="_blank" href="http://twitter.com/tgb/status/466196477585289216">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://twitter.com/tgb/status/466196477585289216">
+      
+        Facebook and Twitter Syndication - tombruning.com/facebook-and-t…
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1400083733&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo0NjYxOTY0Nzc1ODUyODkyMTZfZmF2b3JpdGVkX2J5XzEzOTE5OTIxMQw">
+    
+      6 months ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.tombruning.com/facebook-and-twitter-syndication/">tombruning.com/facebook-and-t...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+
+<p id="publishes" class="big">Recently published:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://www.tombruning.com/mothers-day/">tombruning.com/mothers-day/</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1399906514&key=aglzfmJyaWQtZ3lyTQsSDVB1Ymxpc2hlZFBhZ2UiJmh0dHA6Ly93d3cudG9tYnJ1bmluZy5jb20vbW90aGVycy1kYXkvDAsSB1B1Ymxpc2gYgICAgICAgAkM">
+      6 months, 1 week ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="http://twitter.com/tgb/status/465867804764164096">
+     
+     tweet
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://www.tombruning.com/mothers-day/">tombruning.com/mothers-day/</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1399906503&key=aglzfmJyaWQtZ3lyTQsSDVB1Ymxpc2hlZFBhZ2UiJmh0dHA6Ly93d3cudG9tYnJ1bmluZy5jb20vbW90aGVycy1kYXkvDAsSB1B1Ymxpc2gYgICAgICAgAoM">
+      6 months, 1 week ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     preview
+     
+
+   </div>
+  </li>
+  
+</ul>
+
+
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

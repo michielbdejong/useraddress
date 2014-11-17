@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Daniel (Twitter) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://twitter.com/rantanplan1980" title="Daniel (Twitter)"
+   class="u-url">
+  <img class="profile u-photo" src="https://pbs.twimg.com/profile_images/504176454188273664/nNpdS-dV.jpeg" width="64px" />
+  <img src="/static/twitter_icon.png"
+       
+       alt="Twitter" />
+  <span class="p-name">Daniel</span></a>
+
+
+<!-- TODO: make this work without javascript too -->
+<a href="#" onclick="document.forms['listen-twitter-start'].submit();
+                     return false;">
+  <span class="glyphicon glyphicon-pause"
+        title="This account was disconnected on Twitter's end. Click to reconnect it!">
+</span></a>
+
+
+
+  
+  &middot;
+  <a href="http://scriptogr.am/rantanplan1980" class="publish-domain u-url">scriptogr.am</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+Click to enable <a href="/about#listen">listening</a>:
+
+<!-- Twitter listen signup -->
+<form method="post" name="listen-twitter-start" action="/twitter/start" class="signup">
+  <input type="image" alt="Sign in with Twitter"
+         src="/activitystreams/oauth_dropins/static/twitter.png" />
+  <input name="feature" type="hidden" value="listen" />
+</form>
+
+
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+<span class="big">Click to enable <a href="/about#publish">publishing</a>:</span>
+<form method="post" name="publish-twitter-start" action="/twitter/start" class="signup">
+ <input type="image" alt="Sign in with Twitter"
+        src="/activitystreams/oauth_dropins/static/twitter.png" />
+ <input name="feature" type="hidden" value="publish" />
+</form>
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://twitter.com/rantanplan1980"
+       title="Daniel">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000497583934/44b41f76e1b3b08985983bb3a6eee148_normal.jpeg" width="32" /></a>
+      <a target="_blank" href="http://twitter.com/Cynx/status/425530057411424257">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://twitter.com/Cynx/status/425530057411424257">
+      
+        @rantanplan1980 Gerne. (wie lange habe ich ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      7 months, 3 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://twitter.com/Cynx"
+       title="Alex ">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/1186592527/9592120d-11db-42f1-895f-91890ceedca3_normal.png" width="32" /></a>
+      <a target="_blank" href="http://twitter.com/Cynx/status/425530057411424257">
+        @rantanplan1980 Gerne. (wie lange habe ich ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="http://twitter.com/rantanplan1980/status/425529828671225856">
+      
+        @Cynx danke, ich hab eh schon ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      7 months, 3 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://twitter.com/rantanplan1980"
+       title="Daniel">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000497583934/44b41f76e1b3b08985983bb3a6eee148_normal.jpeg" width="32" /></a>
+      <a target="_blank" href="http://twitter.com/dasnuf/status/425525477634506752">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://twitter.com/dasnuf/status/425525477634506752">
+      
+        Ich so: "Oh! Jemand hat die ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      7 months, 3 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://twitter.com/rantanplan1980"
+       title="Daniel">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000497583934/44b41f76e1b3b08985983bb3a6eee148_normal.jpeg" width="32" /></a>
+      <a target="_blank" href="http://twitter.com/comiXology/status/425457637186994178">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://twitter.com/comiXology/status/425457637186994178">
+      
+        Hawkeye #16, Walking Dead #120, Injustice: ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1396069006&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo0MjU0NTc2MzcxODY5OTQxNzhfZmF2b3JpdGVkX2J5XzQ5NDY4NDQ3DA">
+    
+      7 months, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://cmxl.gy/0120newcomix">cmxl.gy/0120newcomix</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://twitter.com/Scharrtier"
+       title="Erdmännchen">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/414809001864335360/etOVyJ7L_normal.jpeg" width="32" /></a>
+      <a target="_blank" href="http://twitter.com/Scharrtier/status/425310254017298432">
+        @rantanplan1980 Ja. Und Amazon-Preise gehen auch ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="http://twitter.com/rantanplan1980/status/425308600610095104">
+      
+        @Scharrtier bei angeboten wie lovefilm auch ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      7 months, 3 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://twitter.com/cmxsupport"
+       title="comiXology Support">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/424254312433594368/esA8f0Ug_normal.jpeg" width="32" /></a>
+      <a target="_blank" href="http://twitter.com/cmxsupport/status/425267103139373056">
+        @rantanplan1980 Hey Daniel. Yeah, only comics ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="http://twitter.com/rantanplan1980/status/425266757696094208">
+      
+        @comiXology guys, can you make this ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1396068955&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo0MjUyNjcxMDMxMzkzNzMwNTYM">
+    
+      7 months, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.comixology.com/Green-Lantern-1990-2004/comics-series/6374">comixology.com/Green-Lantern-...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://twitter.com/rantanplan1980"
+       title="Daniel">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000497583934/44b41f76e1b3b08985983bb3a6eee148_normal.jpeg" width="32" /></a>
+      <a target="_blank" href="http://twitter.com/Wendelherz/status/425264947820371969">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://twitter.com/Wendelherz/status/425264947820371969">
+      
+        @rantanplan1980 Jo, das is bei uns ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      7 months, 3 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://twitter.com/Wendelherz"
+       title="Zombiefaultier ☕">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/415605020118089729/WXZSkrGP_normal.jpeg" width="32" /></a>
+      <a target="_blank" href="http://twitter.com/Wendelherz/status/425264947820371969">
+        @rantanplan1980 Jo, das is bei uns ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="http://twitter.com/rantanplan1980/status/425264689606455296">
+      
+        @Wendelherz und morgens hat sie eine ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      7 months, 3 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://twitter.com/Wendelherz"
+       title="Zombiefaultier ☕">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/415605020118089729/WXZSkrGP_normal.jpeg" width="32" /></a>
+      <a target="_blank" href="http://twitter.com/rantanplan1980/status/425264689606455296">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://twitter.com/rantanplan1980/status/425264689606455296">
+      
+        @Wendelherz und morgens hat sie eine ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      7 months, 3 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://twitter.com/rantanplan1980"
+       title="Daniel">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000497583934/44b41f76e1b3b08985983bb3a6eee148_normal.jpeg" width="32" /></a>
+      <a target="_blank" href="http://twitter.com/qwertee/status/425233555283648513">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://twitter.com/qwertee/status/425233555283648513">
+      
+        "The Good, The Bad..." available for ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1396068955&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo0MjUyMzM1NTUyODM2NDg1MTNfZmF2b3JpdGVkX2J5XzQ5NDY4NDQ3DA">
+    
+      7 months, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.Qwertee.com/">Qwertee.com/</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

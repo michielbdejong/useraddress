@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Jeremy Zilar (Twitter) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://twitter.com/jeremyzilar" title="Jeremy Zilar (Twitter)"
+   class="u-url">
+  <img class="profile u-photo" src="https://pbs.twimg.com/profile_images/477231011374194688/DoX1Io24.jpeg" width="64px" />
+  <img src="/static/twitter_icon.png"
+       
+       alt="Twitter" />
+  <span class="p-name">Jeremy Zilar</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://silencematters.com/" class="publish-domain u-url">silencematters.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGAsSB1R3aXR0ZXIiC2plcmVteXppbGFyDA" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416146726&key=aglzfmJyaWQtZ3lyGAsSB1R3aXR0ZXIiC2plcmVteXppbGFyDA">
+      18 hours, 31 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGAsSB1R3aXR0ZXIiC2plcmVteXppbGFyDA" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+<form method="post" action="/delete/start">
+<p id="publishing-label" class="big">
+ Ready to publish.
+   <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGAsSB1R3aXR0ZXIiC2plcmVteXppbGFyDA" />
+   <input name="feature" type="hidden" value="publish" />
+   <button id="delete-button" type="submit" class="btn btn-default"
+     title="Disable publishing for this account. (Won't delete posts you've already published.)"
+     >Disable</button>
+</p>
+</form>
+
+<form method="post" name="preview" action="/publish/preview"
+      onsubmit="do_preview('twitter'); return false;">
+<p id="preview-ui">
+ <label id="source-label" for="source-url">Enter post URL:</label>
+ <input id="source-url" name="source" type="url" required alt="Source URL"></input>
+ <input name="target" type="hidden"
+        value="http://brid.gy/publish/twitter"></input>
+
+ <nobr>
+ <!-- use a hidden input before the checkbox with the same name to set the value
+      to be sent when the checkbox is unchecked. -->
+ &nbsp;
+ <input id="include-link-unchecked" name="bridgy_omit_link" type="hidden"
+        value="true"></input>
+ <input id="include-link-checked" name="bridgy_omit_link" type="checkbox"
+        value="false" checked></input>
+ <label id="include-link-label" for="include-link-checked">Include link</label>
+ &nbsp;
+ <button id="preview-button" type="submit" class="btn btn-default">Preview</button>
+ </nobr>
+</p>
+</form>
+
+<!-- Publish signup buttons -->
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/iamrumz"
+       title="Rumsey Taylor">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/502926161534406656/4Adb4Cv5.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/jeremyzilar/status/533282330090405888">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/jeremyzilar/status/533282330090405888">
+      
+        This took up 1 second of ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 day, 20 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.davisshaver.com"
+       title="davis shaver">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/484807693576982528/oh13ZHA9.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/davisshaver/status/533282373706993664">
+        @jeremyzilar sending you an invoice</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/jeremyzilar/status/533282330090405888">
+      
+        This took up 1 second of ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 day, 20 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://theghostlystore.com"
+       title="Sam Valenti IV">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/1478691394/pic.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/VALENTI/status/533282668016705536">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/jeremyzilar/status/533282330090405888">
+      
+        This took up 1 second of ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 day, 20 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/JoshuaJBerk"
+       title="Joshua BΞRK">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/516047959134580736/bohk44mi.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/jeremyzilar/status/533282330090405888">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/jeremyzilar/status/533282330090405888">
+      
+        This took up 1 second of ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 day, 20 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://theawl.com"
+       title="Choire Sicha">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/2625122936/w54iqbafdakakmwkwapj.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/Choire/status/533058326272425984">
+        @jeremyzilar no it ALWAYS works out ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/jeremyzilar/status/533056740385120256">
+      
+        @Choire media + technology companies are ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 days, 18 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/Choire"
+       title="Choire Sicha">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/2625122936/w54iqbafdakakmwkwapj.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/jeremyzilar/status/533056740385120256">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/jeremyzilar/status/533056740385120256">
+      
+        @Choire media + technology companies are ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 days, 18 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/djacobs"
+       title="David Jacobs">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/459452276193906688/27qy-fCp.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/jeremyzilar/status/532599473248415746">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/jeremyzilar/status/532599473248415746">
+      
+        Tech requires the kind of criticism ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415881609&key=aglzfmJyaWQtZ3lySQsSCFJlc3BvbnNlIjt0YWc6dHdpdHRlci5jb20sMjAxMzo1MzI1OTk0NzMyNDg0MTU3NDZfZmF2b3JpdGVkX2J5Xzc3NDg0Mgw">
+    
+      3 days, 20 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://scripting.com/2014/11/12/doesTechHaveCritics.html">scripting.com/2014/11/12/doe...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/smc90"
+       title="sonal chokshi">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000316912328/b178d9a1a5b42bb2e0418fd2da3077d1.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/jeremyzilar/status/532599473248415746">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/jeremyzilar/status/532599473248415746">
+      
+        Tech requires the kind of criticism ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415881549&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1MzI1OTk0NzMyNDg0MTU3NDZfZmF2b3JpdGVkX2J5XzE0MTYxNTY4DA">
+    
+      3 days, 20 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://scripting.com/2014/11/12/doesTechHaveCritics.html">scripting.com/2014/11/12/doe...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://journalab.com"
+       title="Matt Terenzio">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/2626906101/j0vsvuyflpinxxs3wxko.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/mterenzio/status/532667526552252416">
+        @jeremyzilar @fmanjoo what do you mean ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/jeremyzilar/status/532665826508554240">
+      
+        @fmanjoo there isn't a difference, anymore
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      3 days, 20 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://scripting.com/"
+       title="Dave Winer ☮">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000705453175/798b66aa97060b8c728771d5b0399aa1.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/davewiner/status/532628051021271040">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/jeremyzilar/status/532599473248415746">
+      
+        Tech requires the kind of criticism ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415881546&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzI2MjgwNTEwMjEyNzEwNDAM">
+    
+      3 days, 20 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://scripting.com/2014/11/12/doesTechHaveCritics.html">scripting.com/2014/11/12/doe...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+
+<p id="publishes" class="big">Recently published:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://silencematters.com/2014/06/27/indiewebcamp-2014-pdxnyc/">silencematters.com/2014/06/27/ind...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1403885278&key=aglzfmJyaWQtZ3lyZQsSDVB1Ymxpc2hlZFBhZ2UiPmh0dHA6Ly9zaWxlbmNlbWF0dGVycy5jb20vMjAxNC8wNi8yNy9pbmRpZXdlYmNhbXAtMjAxNC1wZHhueWMvDAsSB1B1Ymxpc2gYgICAgICAgAoM">
+      4 months, 3 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     preview
+     
+
+   </div>
+  </li>
+  
+</ul>
+
+
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

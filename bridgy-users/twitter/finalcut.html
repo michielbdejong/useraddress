@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Bill Rawlinson (Twitter) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://twitter.com/finalcut" title="Bill Rawlinson (Twitter)"
+   class="u-url">
+  <img class="profile u-photo" src="https://pbs.twimg.com/profile_images/512663028504875009/qqujbmCg.jpeg" width="64px" />
+  <img src="/static/twitter_icon.png"
+       
+       alt="Twitter" />
+  <span class="p-name">Bill Rawlinson</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://rawlinson.us" class="publish-domain u-url">rawlinson.us</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyFQsSB1R3aXR0ZXIiCGZpbmFsY3V0DA" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416211120&key=aglzfmJyaWQtZ3lyFQsSB1R3aXR0ZXIiCGZpbmFsY3V0DA">
+      36 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyFQsSB1R3aXR0ZXIiCGZpbmFsY3V0DA" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+<form method="post" action="/delete/start">
+<p id="publishing-label" class="big">
+ Ready to publish.
+   <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyFQsSB1R3aXR0ZXIiCGZpbmFsY3V0DA" />
+   <input name="feature" type="hidden" value="publish" />
+   <button id="delete-button" type="submit" class="btn btn-default"
+     title="Disable publishing for this account. (Won't delete posts you've already published.)"
+     >Disable</button>
+</p>
+</form>
+
+<form method="post" name="preview" action="/publish/preview"
+      onsubmit="do_preview('twitter'); return false;">
+<p id="preview-ui">
+ <label id="source-label" for="source-url">Enter post URL:</label>
+ <input id="source-url" name="source" type="url" required alt="Source URL"></input>
+ <input name="target" type="hidden"
+        value="http://brid.gy/publish/twitter"></input>
+
+ <nobr>
+ <!-- use a hidden input before the checkbox with the same name to set the value
+      to be sent when the checkbox is unchecked. -->
+ &nbsp;
+ <input id="include-link-unchecked" name="bridgy_omit_link" type="hidden"
+        value="true"></input>
+ <input id="include-link-checked" name="bridgy_omit_link" type="checkbox"
+        value="false" checked></input>
+ <label id="include-link-label" for="include-link-checked">Include link</label>
+ &nbsp;
+ <button id="preview-button" type="submit" class="btn btn-default">Preview</button>
+ </nobr>
+</p>
+</form>
+
+<!-- Publish signup buttons -->
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/uelys06b"
+       title="ur tix97">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/533724383835983872/EGPGj-p0.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/uelys06b/status/533767464379625473">
+        u tweeted the N.F.L word of ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/finalcut/status/533767375582412800">
+      
+        Marshall 10-0 after 41-14 win. Next ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 day, 7 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.jcummings.net"
+       title="John Cummings">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/426871866280931328/UkR57PLs.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/jcummings1974/status/533285838608957440">
+        @finalcut just seeing who is paying ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/finalcut/status/533283462254698496">
+      
+        @jcummings1974 quoting @JoelOsteen now? Wow life ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 days, 15 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/DaveLavenderHD"
+       title="Dave Lavender">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/529329366346371072/BWiIF5-e.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/finalcut/status/533282533874884608">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/finalcut/status/533282533874884608">
+      
+        "@BigSandyArena: The Avett Brother Tickets On-Sale ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415984841&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo1MzMyODI1MzM4NzQ4ODQ2MDhfZmF2b3JpdGVkX2J5Xzk4ODc3NTk4NAw">
+    
+      2 days, 15 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://fb.me/6VKjSvM1x">fb.me/6VKjSvM1x</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/davefdaniel"
+       title="Dave Daniel">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/527185572406624256/FZSRV915.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/finalcut/status/532692578232463360">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/finalcut/status/532692578232463360">
+      
+        @davefdaniel your sounding awfully old and ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      4 days, 5 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/Caddy_SAK"
+       title="Chris Sekerak">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/477980447243526144/hN188TWd.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/Caddy_SAK/status/532641866857345025">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/finalcut/status/532498960607612928">
+      
+        @Caddy_SAK if you aren't willing to ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      4 days, 11 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://rawlinson.us"
+       title="Bill Rawlinson">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/512663028504875009/qqujbmCg.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/finalcut/status/530852867914362880">
+        @withknown excellent thanks</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/finalcut/status/530851878712905728">
+      
+        @withknown is the g+ Plugin going ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 week, 2 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://about.me/adam_cameron"
+       title="Adam Cameron">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/513954442903687169/iMfr7w7R.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/DAC_dev/status/530776718815289346">
+        @finalcut yeah, I guess I was ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/finalcut/status/530719026327351296">
+      
+        @DAC_dev I wouldn't imagine the cultural ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 week, 2 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://withknown.com"
+       title="Known">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/464122315689574400/IzqGaQEL.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/withknown/status/530028068656521217">
+        @finalcut We're double-checking here - which ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/finalcut/status/530027805040726016">
+      
+        @withknown not really sure what else ...
+      
+    </a></li>
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/finalcut/status/530027350755651585">
+      
+        @withknown I'm going through and fixing ...
+      
+    </a></li>
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/finalcut/status/530026745471447040">
+      
+        @withknown ok, did that - but ...
+      
+    </a></li>
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/finalcut/status/530025293726363648">
+      
+        @withknown - warnings about inability to ...
+      
+    </a></li>
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/finalcut/status/530024467515596800">
+      
+        @withknown I'm not sure why but ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415236336&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzAwMjgwNjg2NTY1MjEyMTcM">
+    
+      1 week, 4 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://rawlinson.us/">rawlinson.us/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://rawlinson.us"
+       title="Bill Rawlinson">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/512663028504875009/qqujbmCg.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/finalcut/status/530027805040726016">
+        @withknown not really sure what else ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/finalcut/status/530027350755651585">
+      
+        @withknown I'm going through and fixing ...
+      
+    </a></li>
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/finalcut/status/530026745471447040">
+      
+        @withknown ok, did that - but ...
+      
+    </a></li>
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/finalcut/status/530025293726363648">
+      
+        @withknown - warnings about inability to ...
+      
+    </a></li>
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/finalcut/status/530024467515596800">
+      
+        @withknown I'm not sure why but ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415236314&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzAwMjc4MDUwNDA3MjYwMTYM">
+    
+      1 week, 4 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://rawlinson.us/">rawlinson.us/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://withknown.com"
+       title="Known">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/464122315689574400/IzqGaQEL.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/withknown/status/530027547879145472">
+        @finalcut Strongly advise against doing that. ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/finalcut/status/530027350755651585">
+      
+        @withknown I'm going through and fixing ...
+      
+    </a></li>
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/finalcut/status/530026745471447040">
+      
+        @withknown ok, did that - but ...
+      
+    </a></li>
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/finalcut/status/530025293726363648">
+      
+        @withknown - warnings about inability to ...
+      
+    </a></li>
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/finalcut/status/530024467515596800">
+      
+        @withknown I'm not sure why but ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415236290&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzAwMjc1NDc4NzkxNDU0NzIM">
+    
+      1 week, 4 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://rawlinson.us/">rawlinson.us/</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+
+<p id="publishes" class="big">Recently published:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://rawlinson.us/2014/finalcut-its-interesting-that-old-avatars-stay-on-old-content">rawlinson.us/2014/finalcut-...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1411065532&key=aglzfmJyaWQtZ3lyfQsSDVB1Ymxpc2hlZFBhZ2UiVmh0dHA6Ly9yYXdsaW5zb24udXMvMjAxNC9maW5hbGN1dC1pdHMtaW50ZXJlc3RpbmctdGhhdC1vbGQtYXZhdGFycy1zdGF5LW9uLW9sZC1jb250ZW50DAsSB1B1Ymxpc2gYgICAgIDkkQoM">
+      1 month, 4 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://twitter.com/finalcut/status/512672118786383872">
+     
+     @-reply
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://rawlinson.us/2014/finalcut-its-interesting-that-old-avatars-stay-on-old-content">rawlinson.us/2014/finalcut-...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1411065521&key=aglzfmJyaWQtZ3lyfQsSDVB1Ymxpc2hlZFBhZ2UiVmh0dHA6Ly9yYXdsaW5zb24udXMvMjAxNC9maW5hbGN1dC1pdHMtaW50ZXJlc3RpbmctdGhhdC1vbGQtYXZhdGFycy1zdGF5LW9uLW9sZC1jb250ZW50DAsSB1B1Ymxpc2gYgICAgICAgAoM">
+      1 month, 4 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     preview
+     
+
+   </div>
+  </li>
+  
+</ul>
+
+
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

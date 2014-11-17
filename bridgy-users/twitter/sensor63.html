@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Simon Ensor (Twitter) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://twitter.com/sensor63" title="Simon Ensor (Twitter)"
+   class="u-url">
+  <img class="profile u-photo" src="https://pbs.twimg.com/profile_images/1291218101/TWITICON.jpg" width="64px" />
+  <img src="/static/twitter_icon.png"
+       
+       alt="Twitter" />
+  <span class="p-name">Simon Ensor</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://tachesdesens.blogspot.com/" class="publish-domain u-url">tachesdesens.blogspot.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyFQsSB1R3aXR0ZXIiCHNlbnNvcjYzDA" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416213227&key=aglzfmJyaWQtZ3lyFQsSB1R3aXR0ZXIiCHNlbnNvcjYzDA">
+      10 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyFQsSB1R3aXR0ZXIiCHNlbnNvcjYzDA" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+<span class="big">Click to enable <a href="/about#publish">publishing</a>:</span>
+<form method="post" name="publish-twitter-start" action="/twitter/start" class="signup">
+ <input type="image" alt="Sign in with Twitter"
+        src="/activitystreams/oauth_dropins/static/twitter.png" />
+ <input name="feature" type="hidden" value="publish" />
+</form>
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.shyamsharma.net"
+       title="Shyam Sharma">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/1494154869/portrait--square.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/sharmashyam/status/534228815367520257">
+        @sensor63 What a thought-provoking post! And ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/sensor63/status/534014529080795137">
+      
+        @sharmashyam tachesdesens.blogspot.fr/2014/11/a-litt…
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416205586&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzQyMjg4MTUzNjc1MjAyNTcM">
+    
+      2 hours, 17 minutes ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzQyMjg4MTUzNjc1MjAyNTcM" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://tachesdesens.blogspot.fr/2014/11/a-little-bird.html">tachesdesens.blogspot.fr/2014/11/a-litt... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/EatcherVeggies"
+       title="Swatson (N)">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000046638840/267f66c07dddfaae172f130981b14485.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/sensor63/status/534007824162885632">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/sensor63/status/534007824162885632">
+      
+        A little bird. tachesdesens.blogspot.com/2014/11/a-litt… #ccourses #rhizo14
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416183342&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1MzQwMDc4MjQxNjI4ODU2MzJfZmF2b3JpdGVkX2J5XzQ1NjM3MzY4DA">
+    
+      8 hours, 28 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://tachesdesens.blogspot.com/2014/11/a-little-bird.html?spref=tw">tachesdesens.blogspot.com/2014/11/a-litt...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://teachingbeyondtropes.blogspot.com/"
+       title="Swatson (N)">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000046638840/267f66c07dddfaae172f130981b14485.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/EatcherVeggies/status/534135284003520512">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/sensor63/status/534007824162885632">
+      
+        A little bird. tachesdesens.blogspot.com/2014/11/a-litt… #ccourses #rhizo14
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416183330&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzQxMzUyODQwMDM1MjA1MTIM">
+    
+      8 hours, 28 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://tachesdesens.blogspot.com/2014/11/a-little-bird.html?spref=tw">tachesdesens.blogspot.com/2014/11/a-litt...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://cogdogblog.com"
+       title="Alan Levine">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/1772410667/cogdog-watercolor-200.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/cogdog/status/534108476466024449">
+        @sensor63 @jonbecker @GoogleGuacamole too easy [picture]</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/sensor63/status/534093455728066561">
+      
+        “@cogdog: @sensor63 @jonbecker @GoogleGuacamole my participation ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      10 hours, 13 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://tachesdesens.blogspot.com/"
+       title="Simon Ensor">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/1291218101/TWITICON.jpg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/sensor63/status/534110610406277120">
+        @cogdog @jonbecker @GoogleGuacamole 😈</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/sensor63/status/534093455728066561">
+      
+        “@cogdog: @sensor63 @jonbecker @GoogleGuacamole my participation ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      10 hours, 13 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/taniatorikova"
+       title="Tania Sheko">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/523783403804450816/enqM6tca.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/sensor63/status/534076243105550337">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/sensor63/status/534076243105550337">
+      
+        @Bali_Maha @GoogleGuacamole @jonbecker @GardnerCampbell @taniatorikova i ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      11 hours, 17 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/taniatorikova"
+       title="Tania Sheko">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/523783403804450816/enqM6tca.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/sensor63/status/534075903824125952">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/sensor63/status/534075903824125952">
+      
+        @Bali_Maha @GoogleGuacamole @jonbecker @GardnerCampbell @taniatorikova i ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      11 hours, 17 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/Bali_Maha"
+       title="N)ℳąhą Bąℓi مها بالي">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/523419361185234944/kWBLJiqq.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/sensor63/status/534093661618077697">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/sensor63/status/534093661618077697">
+      
+        @taniatorikova @Bali_Maha @GoogleGuacamole @jonbecker @GardnerCampbell indeed.
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      11 hours, 17 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/taniatorikova"
+       title="Tania Sheko">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/523783403804450816/enqM6tca.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/sensor63/status/534090651512877056">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/sensor63/status/534090651512877056">
+      
+        @taniatorikova @jonbecker @GoogleGuacamole @GardnerCampbell @Bali_Maha meanwhile ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      11 hours, 17 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/Bali_Maha"
+       title="N)ℳąhą Bąℓi مها بالي">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/523419361185234944/kWBLJiqq.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/sensor63/status/534090651512877056">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/sensor63/status/534090651512877056">
+      
+        @taniatorikova @jonbecker @GoogleGuacamole @GardnerCampbell @Bali_Maha meanwhile ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      11 hours, 27 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

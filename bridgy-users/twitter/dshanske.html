@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>David Shanske (Twitter) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://twitter.com/dshanske" title="David Shanske (Twitter)"
+   class="u-url">
+  <img class="profile u-photo" src="https://pbs.twimg.com/profile_images/1343008324/me-head.png" width="64px" />
+  <img src="/static/twitter_icon.png"
+       
+       alt="Twitter" />
+  <span class="p-name">David Shanske</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://david.shanske.com/" class="publish-domain u-url">david.shanske.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyFQsSB1R3aXR0ZXIiCGRzaGFuc2tlDA" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416211897&key=aglzfmJyaWQtZ3lyFQsSB1R3aXR0ZXIiCGRzaGFuc2tlDA">
+      22 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyFQsSB1R3aXR0ZXIiCGRzaGFuc2tlDA" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+<form method="post" action="/delete/start">
+<p id="publishing-label" class="big">
+ Ready to publish.
+   <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyFQsSB1R3aXR0ZXIiCGRzaGFuc2tlDA" />
+   <input name="feature" type="hidden" value="publish" />
+   <button id="delete-button" type="submit" class="btn btn-default"
+     title="Disable publishing for this account. (Won't delete posts you've already published.)"
+     >Disable</button>
+</p>
+</form>
+
+<form method="post" name="preview" action="/publish/preview"
+      onsubmit="do_preview('twitter'); return false;">
+<p id="preview-ui">
+ <label id="source-label" for="source-url">Enter post URL:</label>
+ <input id="source-url" name="source" type="url" required alt="Source URL"></input>
+ <input name="target" type="hidden"
+        value="http://brid.gy/publish/twitter"></input>
+
+ <nobr>
+ <!-- use a hidden input before the checkbox with the same name to set the value
+      to be sent when the checkbox is unchecked. -->
+ &nbsp;
+ <input id="include-link-unchecked" name="bridgy_omit_link" type="hidden"
+        value="true"></input>
+ <input id="include-link-checked" name="bridgy_omit_link" type="checkbox"
+        value="false" checked></input>
+ <label id="include-link-label" for="include-link-checked">Include link</label>
+ &nbsp;
+ <button id="preview-button" type="submit" class="btn btn-default">Preview</button>
+ </nobr>
+</p>
+</form>
+
+<!-- Publish signup buttons -->
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/kyle_wm"
+       title="Kyle Mahan">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/515304969033875456/z6JhAERL.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/dshanske/status/525016445345083394">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/dshanske/status/525016445345083394">
+      
+        Sunset in Dublin [picture]
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414009600&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1MjUwMTY0NDUzNDUwODMzOTRfZmF2b3JpdGVkX2J5XzE5MDkwNzcwDA">
+    
+      3 weeks, 4 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://david.shanske.com/notes/2014/10/22/sunset-dublin/">david.shanske.com/notes/2014/10/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/rosenfeldpr"
+       title="Paul Rosenfeld">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/418916377786073088/ylgDu0fd.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/rosenfeldpr/status/524368685247778816">
+        @dshanske Very nice picture. Hope you ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/dshanske/status/524321800738451458">
+      
+        The view from the end of ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413854252&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MjQzNjg2ODUyNDc3Nzg4MTYM">
+    
+      3 weeks, 6 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://david.shanske.com/notes/2014/10/20/slips/">david.shanske.com/notes/2014/10/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/Dwellable"
+       title="Dwellable">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/453967829767684096/8au-v9Gb.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/dshanske/status/523906215655792640">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/dshanske/status/523906215655792640">
+      
+        There's no cure like travel to ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413824091&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo1MjM5MDYyMTU2NTU3OTI2NDBfZmF2b3JpdGVkX2J5XzM5MDk2MTM4NQw">
+    
+      3 weeks, 6 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://david.shanske.com/notes/2014/10/19/cure-like-travel/">david.shanske.com/notes/2014/10/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://vidthekid.info/vspace/"
+       title="David K">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/1148519746/Twitter_Logo_Bigger.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/vidthekid/status/524009054864035840">
+        @dshanske knowing when to entity-encode special ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/dshanske/status/523906215655792640">
+      
+        There's no cure like travel to ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413774146&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MjQwMDkwNTQ4NjQwMzU4NDAM">
+    
+      4 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://david.shanske.com/notes/2014/10/19/cure-like-travel/">david.shanske.com/notes/2014/10/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://johneckman.com/"
+       title="John Eckman">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/460090829487345665/n5Necs6R.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/jeckman/status/520999269109870593">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/dshanske/status/517693943228534784">
+      
+        How I Set Up My Indieweb ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413051490&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MjA5OTkyNjkxMDk4NzA1OTMM">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MjA5OTkyNjkxMDk4NzA1OTMM" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://david.shanske.com/articles/2014/…">david.shanske.com/articles/2014/... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://david.shanske.com/articles/2014/10/02/site-setup/">david.shanske.com/articles/2014/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/t"
+       title="Tantek Çelik">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/423350922408767488/nlA_m2WH.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/dshanske/status/517693943228534784">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/dshanske/status/517693943228534784">
+      
+        How I Set Up My Indieweb ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1412264015&key=aglzfmJyaWQtZ3lySAsSCFJlc3BvbnNlIjp0YWc6dHdpdHRlci5jb20sMjAxMzo1MTc2OTM5NDMyMjg1MzQ3ODRfZmF2b3JpdGVkX2J5XzExNjI4DA">
+    
+      1 month, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lySAsSCFJlc3BvbnNlIjp0YWc6dHdpdHRlci5jb20sMjAxMzo1MTc2OTM5NDMyMjg1MzQ3ODRfZmF2b3JpdGVkX2J5XzExNjI4DA" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://david.shanske.com/articles/2014/…">david.shanske.com/articles/2014/... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://david.shanske.com/articles/2014/10/02/site-setup/">david.shanske.com/articles/2014/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://kylewm.com"
+       title="Kyle Mahan">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/461368708540030976/0KlqiBD1.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/kyle_wm/status/514130993863602177">
+        @dshanske Should have had it delivered ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/dshanske/status/513745239878955008">
+      
+        I ordered two identical cables on ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1411413625&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MTQxMzA5OTM4NjM2MDIxNzcM">
+    
+      1 month, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://david.shanske.com/notes/2014/09/21/stupid-shipping/">david.shanske.com/notes/2014/09/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://vidthekid.info/vspace/"
+       title="David K">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/1148519746/Twitter_Logo_Bigger.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/vidthekid/status/513780307082760192">
+        @dshanske "got here tomorrow"? so are ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/dshanske/status/513745239878955008">
+      
+        I ordered two identical cables on ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1411330258&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MTM3ODAzMDcwODI3NjAxOTIM">
+    
+      1 month, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://david.shanske.com/notes/2014/09/21/stupid-shipping/">david.shanske.com/notes/2014/09/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://vidthekid.info/vspace/"
+       title="David K">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/1148519746/Twitter_Logo_Bigger.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/vidthekid/status/512367848870510592">
+        @dshanske depends on the size of ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/dshanske/status/512274972036071424">
+      
+        Cashier didn't charge me for one ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1410999747&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MTIzNjc4NDg4NzA1MTA1OTIM">
+    
+      2 months ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://david.shanske.com/notes/2014/09/17/ethical-dilemma/">david.shanske.com/notes/2014/09/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/jeremyzilar"
+       title="Jeremy Zilar">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/477231011374194688/DoX1Io24.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/dshanske/status/478669670744985600">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/dshanske/status/478669670744985600">
+      
+        I went to Bronx Science. I ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1408695644&key=aglzfmJyaWQtZ3lySQsSCFJlc3BvbnNlIjt0YWc6dHdpdHRlci5jb20sMjAxMzo0Nzg2Njk2NzA3NDQ5ODU2MDBfZmF2b3JpdGVkX2J5XzI5MTM2Mww">
+    
+      2 months, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://david.shanske.com/notes/2014/06/11/teachers-lawmakers-call-change-admissions-nycs-elite-public-schools/">david.shanske.com/notes/2014/06/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+
+<p id="publishes" class="big">Recently published:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://david.shanske.com/notes/2014/10/23/farewell-dublin/">david.shanske.com/notes/2014/10/...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1414092608&key=aglzfmJyaWQtZ3lyYgsSDVB1Ymxpc2hlZFBhZ2UiO2h0dHBzOi8vZGF2aWQuc2hhbnNrZS5jb20vbm90ZXMvMjAxNC8xMC8yMy9mYXJld2VsbC1kdWJsaW4vDAsSB1B1Ymxpc2gYgICAgIDyiAoM">
+      3 weeks, 3 days ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     preview
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://david.shanske.com/articles/2014/10/02/site-setup/">david.shanske.com/articles/2014/...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1412262829&key=aglzfmJyaWQtZ3lyYAsSDVB1Ymxpc2hlZFBhZ2UiOWh0dHBzOi8vZGF2aWQuc2hhbnNrZS5jb20vYXJ0aWNsZXMvMjAxNC8xMC8wMi9zaXRlLXNldHVwLwwLEgdQdWJsaXNoGICAgICA5JEKDA">
+      1 month, 2 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://twitter.com/dshanske/status/517693943228534784">
+     
+     tweet
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://david.shanske.com/articles/2014/10/02/site-setup/">david.shanske.com/articles/2014/...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1412262815&key=aglzfmJyaWQtZ3lyYAsSDVB1Ymxpc2hlZFBhZ2UiOWh0dHBzOi8vZGF2aWQuc2hhbnNrZS5jb20vYXJ0aWNsZXMvMjAxNC8xMC8wMi9zaXRlLXNldHVwLwwLEgdQdWJsaXNoGICAgICAgIAKDA">
+      1 month, 2 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     preview
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://david.shanske.com/notes/2014/09/13/girl-fakes-trip-southeast-asia/">david.shanske.com/notes/2014/09/...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1410667349&key=aglzfmJyaWQtZ3lycQsSDVB1Ymxpc2hlZFBhZ2UiSmh0dHBzOi8vZGF2aWQuc2hhbnNrZS5jb20vbm90ZXMvMjAxNC8wOS8xMy9naXJsLWZha2VzLXRyaXAtc291dGhlYXN0LWFzaWEvDAsSB1B1Ymxpc2gYgICAgICAgAoM">
+      2 months ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     preview
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://david.shanske.com/articles/2014/09/07/announced-website-version-3-0/">david.shanske.com/articles/2014/...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1410063091&key=aglzfmJyaWQtZ3lycwsSDVB1Ymxpc2hlZFBhZ2UiTGh0dHBzOi8vZGF2aWQuc2hhbnNrZS5jb20vYXJ0aWNsZXMvMjAxNC8wOS8wNy9hbm5vdW5jZWQtd2Vic2l0ZS12ZXJzaW9uLTMtMC8MCxIHUHVibGlzaBiAgICAgK6ZCgw">
+      2 months, 1 week ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://twitter.com/dshanske/status/508467574841958401">
+     
+     tweet
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://david.shanske.com/articles/2014/09/07/announced-website-version-3-0/">david.shanske.com/articles/2014/...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1410063085&key=aglzfmJyaWQtZ3lycwsSDVB1Ymxpc2hlZFBhZ2UiTGh0dHBzOi8vZGF2aWQuc2hhbnNrZS5jb20vYXJ0aWNsZXMvMjAxNC8wOS8wNy9hbm5vdW5jZWQtd2Vic2l0ZS12ZXJzaW9uLTMtMC8MCxIHUHVibGlzaBiAgICAgPKICgw">
+      2 months, 1 week ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     preview
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://david.shanske.com/notes/2014/06/01/visiting-bayside-marketplace/">david.shanske.com/notes/2014/06/...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1401681376&key=aglzfmJyaWQtZ3lybgsSDVB1Ymxpc2hlZFBhZ2UiR2h0dHA6Ly9kYXZpZC5zaGFuc2tlLmNvbS9ub3Rlcy8yMDE0LzA2LzAxL3Zpc2l0aW5nLWJheXNpZGUtbWFya2V0cGxhY2UvDAsSB1B1Ymxpc2gYgICAgICAgAoM">
+      5 months, 2 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     preview
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://david.shanske.com/notes/2014/05/30/amazingly-diners-didnt-want-eat-toilet-themed-restaurant/">david.shanske.com/notes/2014/05/...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1401680734&key=aglzfmJyaWQtZ3lyigELEg1QdWJsaXNoZWRQYWdlImNodHRwOi8vZGF2aWQuc2hhbnNrZS5jb20vbm90ZXMvMjAxNC8wNS8zMC9hbWF6aW5nbHktZGluZXJzLWRpZG50LXdhbnQtZWF0LXRvaWxldC10aGVtZWQtcmVzdGF1cmFudC8MCxIHUHVibGlzaBiAgICAgICACgw">
+      5 months, 2 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     preview
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://david.shanske.com/notes/2014/05/02/press/">david.shanske.com/notes/2014/05/...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1399069532&key=aglzfmJyaWQtZ3lyVwsSDVB1Ymxpc2hlZFBhZ2UiMGh0dHA6Ly9kYXZpZC5zaGFuc2tlLmNvbS9ub3Rlcy8yMDE0LzA1LzAyL3ByZXNzLwwLEgdQdWJsaXNoGICAgICAgIAJDA">
+      6 months, 2 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     tweet
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://david.shanske.com/notes/2014/05/02/press/">david.shanske.com/notes/2014/05/...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1399069372&key=aglzfmJyaWQtZ3lyVwsSDVB1Ymxpc2hlZFBhZ2UiMGh0dHA6Ly9kYXZpZC5zaGFuc2tlLmNvbS9ub3Rlcy8yMDE0LzA1LzAyL3ByZXNzLwwLEgdQdWJsaXNoGICAgICA8ogKDA">
+      6 months, 2 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     preview
+     
+
+   </div>
+  </li>
+  
+</ul>
+
+
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

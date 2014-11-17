@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Matthew Gregg (Twitter) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://twitter.com/amblin" title="Matthew Gregg (Twitter)"
+   class="u-url">
+  <img class="profile u-photo" src="https://pbs.twimg.com/profile_images/432946790535413760/NbFgqw7g.jpeg" width="64px" />
+  <img src="/static/twitter_icon.png"
+       
+       alt="Twitter" />
+  <span class="p-name">Matthew Gregg</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://amblin.io/" class="publish-domain u-url">amblin.io</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyEwsSB1R3aXR0ZXIiBmFtYmxpbgw" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416151942&key=aglzfmJyaWQtZ3lyEwsSB1R3aXR0ZXIiBmFtYmxpbgw">
+      16 hours, 58 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyEwsSB1R3aXR0ZXIiBmFtYmxpbgw" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+<form method="post" action="/delete/start">
+<p id="publishing-label" class="big">
+ Ready to publish.
+   <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyEwsSB1R3aXR0ZXIiBmFtYmxpbgw" />
+   <input name="feature" type="hidden" value="publish" />
+   <button id="delete-button" type="submit" class="btn btn-default"
+     title="Disable publishing for this account. (Won't delete posts you've already published.)"
+     >Disable</button>
+</p>
+</form>
+
+<form method="post" name="preview" action="/publish/preview"
+      onsubmit="do_preview('twitter'); return false;">
+<p id="preview-ui">
+ <label id="source-label" for="source-url">Enter post URL:</label>
+ <input id="source-url" name="source" type="url" required alt="Source URL"></input>
+ <input name="target" type="hidden"
+        value="http://brid.gy/publish/twitter"></input>
+
+ <nobr>
+ <!-- use a hidden input before the checkbox with the same name to set the value
+      to be sent when the checkbox is unchecked. -->
+ &nbsp;
+ <input id="include-link-unchecked" name="bridgy_omit_link" type="hidden"
+        value="true"></input>
+ <input id="include-link-checked" name="bridgy_omit_link" type="checkbox"
+        value="false" checked></input>
+ <label id="include-link-label" for="include-link-checked">Include link</label>
+ &nbsp;
+ <button id="preview-button" type="submit" class="btn btn-default">Preview</button>
+ </nobr>
+</p>
+</form>
+
+<!-- Publish signup buttons -->
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://secure.flickr.com/photos/123617432@N02/"
+       title="PBJ">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/1775208027/sjff_01_img0151-_twitter_.jpg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/_brentus/status/533793374059651072">
+        @amblin visiting the folks this weekend</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/amblin/status/533785220768870400">
+      
+        @_brentus What brings you to the ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      16 hours, 58 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://amblin.io"
+       title="Matthew Gregg">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/432946790535413760/NbFgqw7g.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/amblin/status/533340798331666432">
+        @willia4 Looks like this is configurable. ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/amblin/status/532948664093003778">
+      
+        @willia4 Agreed. Not only tabs, every ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 day, 21 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://jameswilliams.me"
+       title="James Williams">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/417617494568734720/C5xrNU4P.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/willia4/status/533340927709179905">
+        @amblin Good news!</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/amblin/status/533340798331666432">
+      
+        @willia4 Looks like this is configurable. ...
+      
+    </a></li>
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/amblin/status/532948664093003778">
+      
+        @willia4 Agreed. Not only tabs, every ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 day, 21 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://jameswilliams.me"
+       title="James Williams">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/417617494568734720/C5xrNU4P.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/willia4/status/532949358350565376">
+        @amblin At least it's just a ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/amblin/status/532948664093003778">
+      
+        @willia4 Agreed. Not only tabs, every ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 days, 19 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://semmy.me"
+       title="Semmy Purewal">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/507368827387015168/qeT82_dS.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/semmypurewal/status/532182654695649281">
+        @amblin Nobody's perfect. :)</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/amblin/status/532115575988695040">
+      
+        @semmypurewal And yet he appointed Tom ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      5 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/MindyPooWho"
+       title="Mindy Lou">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/434270953833766912/SwhDI85b.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/amblin/status/531895595611750401">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/amblin/status/531895595611750401">
+      
+        @AndyParas @CharlestonParks Go outside everyone!....and stare ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      5 days, 23 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/CharlestonBrian"
+       title="The Media Man">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/501855170561462273/Dgng1JRw.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/CharlestonBrian/status/531895796422434817">
+        @amblin @AndyParas @CharlestonParks Zombies everywhere</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/amblin/status/531895595611750401">
+      
+        @AndyParas @CharlestonParks Go outside everyone!....and stare ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      5 days, 23 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/HeatherSolos"
+       title="Heather Solos">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/436525642570412032/mgaoPGf5.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/amblin/status/531895595611750401">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/amblin/status/531895595611750401">
+      
+        @AndyParas @CharlestonParks Go outside everyone!....and stare ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      5 days, 23 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.postandcourier.com/blog/charleston-socialscape"
+       title="Andy Paras">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/500012027986059264/UR-zpQGq.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/AndyParas/status/531895651303686144">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/amblin/status/531895595611750401">
+      
+        @AndyParas @CharlestonParks Go outside everyone!....and stare ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      5 days, 23 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/Lifesabeach"
+       title="Lifesabeach ☼">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000321570825/1565f39519f24ddb0a92f08f72808a4e.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/amblin/status/531895595611750401">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/amblin/status/531895595611750401">
+      
+        @AndyParas @CharlestonParks Go outside everyone!....and stare ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      5 days, 23 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+
+<p id="publishes" class="big">Recently published:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://know.braintube.com/2014/a-href-classu-in-reply-toaa-hrefamblinstatus478583675836444673-classu-in-reply-toaamblin-still-here-and-still-testing">know.braintube.com/2014/a-href-cl...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1402940621&key=aglzfmJyaWQtZ3lyvAELEg1QdWJsaXNoZWRQYWdlIpQBaHR0cDovL2tub3cuYnJhaW50dWJlLmNvbS8yMDE0L2EtaHJlZi1jbGFzc3UtaW4tcmVwbHktdG9hYS1ocmVmYW1ibGluc3RhdHVzNDc4NTgzNjc1ODM2NDQ0NjczLWNsYXNzdS1pbi1yZXBseS10b2FhbWJsaW4tc3RpbGwtaGVyZS1hbmQtc3RpbGwtdGVzdGluZwwLEgdQdWJsaXNoGICAgICAgIAKDA">
+      5 months ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     preview
+     
+
+   </div>
+  </li>
+  
+</ul>
+
+
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

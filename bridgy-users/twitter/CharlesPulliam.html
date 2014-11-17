@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Charles (Twitter) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://twitter.com/CharlesPulliam" title="Charles (Twitter)"
+   class="u-url">
+  <img class="profile u-photo" src="https://pbs.twimg.com/profile_images/532397938547654656/gVVNu_AI.jpeg" width="64px" />
+  <img src="/static/twitter_icon.png"
+       
+       alt="Twitter" />
+  <span class="p-name">Charles</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://cpti.me/" class="publish-domain u-url">cpti.me</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGwsSB1R3aXR0ZXIiDkNoYXJsZXNQdWxsaWFtDA" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416200501&key=aglzfmJyaWQtZ3lyGwsSB1R3aXR0ZXIiDkNoYXJsZXNQdWxsaWFtDA">
+      3 hours, 30 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGwsSB1R3aXR0ZXIiDkNoYXJsZXNQdWxsaWFtDA" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+<span class="big">Click to enable <a href="/about#publish">publishing</a>:</span>
+<form method="post" name="publish-twitter-start" action="/twitter/start" class="signup">
+ <input type="image" alt="Sign in with Twitter"
+        src="/activitystreams/oauth_dropins/static/twitter.png" />
+ <input name="feature" type="hidden" value="publish" />
+</form>
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/KJayInStereo"
+       title="Kennedy Shaffer jr">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/2900051881/afcc8ce16668399a455e4ef600031538.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/CharlesPulliam/status/533993567656501248">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/CharlesPulliam/status/533993567656501248">
+      
+        The Black Panther Isn't Just A ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416200608&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo1MzM5OTM1Njc2NTY1MDEyNDhfZmF2b3JpdGVkX2J5XzE3NzAyMTg3NQw">
+    
+      3 hours, 29 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.npr.org/blogs/codeswitch/2014/11/11/363413255/marvels-black-panther-isnt-just-another-black-superhero">npr.org/blogs/codeswit...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://vine.co/v/OauDHQUdqWu"
+       title="T. Watts">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/532046497517682688/U_zto0Kw.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/ParisBurned/status/534113657274511360">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/CharlesPulliam/status/533993567656501248">
+      
+        The Black Panther Isn't Just A ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416200606&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzQxMTM2NTcyNzQ1MTEzNjAM">
+    
+      3 hours, 29 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.npr.org/blogs/codeswitch/2014/11/11/363413255/marvels-black-panther-isnt-just-another-black-superhero">npr.org/blogs/codeswit...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/iammickyjones"
+       title="Micky Jones">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/501402196546945025/K-RaPr4V.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/CharlesPulliam/status/533993567656501248">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/CharlesPulliam/status/533993567656501248">
+      
+        The Black Panther Isn't Just A ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416200604&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo1MzM5OTM1Njc2NTY1MDEyNDhfZmF2b3JpdGVkX2J5XzE1MjE0OTQ5NQw">
+    
+      3 hours, 29 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.npr.org/blogs/codeswitch/2014/11/11/363413255/marvels-black-panther-isnt-just-another-black-superhero">npr.org/blogs/codeswit...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://cpti.me"
+       title="AO$P Chucky">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/532397938547654656/gVVNu_AI.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/CharlesPulliam/status/534176496072785920">
+        .@Austin_Federa @npralltech KitKat has been, and ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/CharlesPulliam/status/534174358617329664">
+      
+        .@Austin_Federa @npralltech Android rollouts are never ...
+      
+    </a></li>
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/CharlesPulliam/status/534119127816740864">
+      
+        via @npralltech: Are you an #Android ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416200602&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzQxNzY0OTYwNzI3ODU5MjAM">
+    
+      3 hours, 29 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.npr.org/blogs/alltechconsidered/2014/11/16/364152727/googles-lollipop-wants-to-change-the-way-we-use-our-phones">npr.org/blogs/alltechc...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/idavar"
+       title="Davar Ardalan">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/519100767081594881/0tMMFgjF.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/CharlesPulliam/status/533993567656501248">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/CharlesPulliam/status/533993567656501248">
+      
+        The Black Panther Isn't Just A ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416200600&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo1MzM5OTM1Njc2NTY1MDEyNDhfZmF2b3JpdGVkX2J5XzEwMTMzNjI2MQw">
+    
+      3 hours, 29 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.npr.org/blogs/codeswitch/2014/11/11/363413255/marvels-black-panther-isnt-just-another-black-superhero">npr.org/blogs/codeswit...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/ShellyGoeblP"
+       title="Shelly Goebl-Parker">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/525488811355025408/88RWJAmp.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/ShellyGoeblP/status/534163376558329857">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/CharlesPulliam/status/533993567656501248">
+      
+        The Black Panther Isn't Just A ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416200598&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzQxNjMzNzY1NTgzMjk4NTcM">
+    
+      3 hours, 29 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.npr.org/blogs/codeswitch/2014/11/11/363413255/marvels-black-panther-isnt-just-another-black-superhero">npr.org/blogs/codeswit...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.npr.org/people/194281381/davar-ardalan"
+       title="Davar Ardalan">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/519100767081594881/0tMMFgjF.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/idavar/status/534084301407916032">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/CharlesPulliam/status/533993567656501248">
+      
+        The Black Panther Isn't Just A ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416200596&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzQwODQzMDE0MDc5MTYwMzIM">
+    
+      3 hours, 29 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.npr.org/blogs/codeswitch/2014/11/11/363413255/marvels-black-panther-isnt-just-another-black-superhero">npr.org/blogs/codeswit...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://cpti.me"
+       title="AO$P Chucky">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/532397938547654656/gVVNu_AI.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/CharlesPulliam/status/534176245823459328">
+        .@Austin_Federa @npralltech OEMs are never particularly ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/CharlesPulliam/status/534174358617329664">
+      
+        .@Austin_Federa @npralltech Android rollouts are never ...
+      
+    </a></li>
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/CharlesPulliam/status/534119127816740864">
+      
+        via @npralltech: Are you an #Android ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416200593&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzQxNzYyNDU4MjM0NTkzMjgM">
+    
+      3 hours, 29 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.npr.org/blogs/alltechconsidered/2014/11/16/364152727/googles-lollipop-wants-to-change-the-way-we-use-our-phones">npr.org/blogs/alltechc...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/mitbot"
+       title="Mitra">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/521355036597968896/IJ7cs3lf.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/CharlesPulliam/status/533993567656501248">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/CharlesPulliam/status/533993567656501248">
+      
+        The Black Panther Isn't Just A ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416200591&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1MzM5OTM1Njc2NTY1MDEyNDhfZmF2b3JpdGVkX2J5XzE2MDM3MTY3DA">
+    
+      3 hours, 29 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.npr.org/blogs/codeswitch/2014/11/11/363413255/marvels-black-panther-isnt-just-another-black-superhero">npr.org/blogs/codeswit...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/DezzaW6"
+       title="Huey P. Newton">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/534017867868827651/Bb-QY1pu.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/CharlesPulliam/status/533993567656501248">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/CharlesPulliam/status/533993567656501248">
+      
+        The Black Panther Isn't Just A ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416200588&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo1MzM5OTM1Njc2NTY1MDEyNDhfZmF2b3JpdGVkX2J5XzE4MTQ3MTk3OAw">
+    
+      3 hours, 29 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.npr.org/blogs/codeswitch/2014/11/11/363413255/marvels-black-panther-isnt-just-another-black-superhero">npr.org/blogs/codeswit...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

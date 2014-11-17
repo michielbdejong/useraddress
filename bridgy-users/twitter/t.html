@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Tantek Çelik (Twitter) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://twitter.com/t" title="Tantek Çelik (Twitter)"
+   class="u-url">
+  <img class="profile u-photo" src="https://pbs.twimg.com/profile_images/423350922408767488/nlA_m2WH.jpeg" width="64px" />
+  <img src="/static/twitter_icon.png"
+       
+       alt="Twitter" />
+  <span class="p-name">Tantek Çelik</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://tantek.com/" class="publish-domain u-url">tantek.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyDgsSB1R3aXR0ZXIiAXQM" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416213422&key=aglzfmJyaWQtZ3lyDgsSB1R3aXR0ZXIiAXQM">
+      7 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyDgsSB1R3aXR0ZXIiAXQM" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+<span class="big">Click to enable <a href="/about#publish">publishing</a>:</span>
+<form method="post" name="publish-twitter-start" action="/twitter/start" class="signup">
+ <input type="image" alt="Sign in with Twitter"
+        src="/activitystreams/oauth_dropins/static/twitter.png" />
+ <input name="feature" type="hidden" value="publish" />
+</form>
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/Txffuc"
+       title="ᅠ">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/534157585834733568/O0P7qZVF.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/Txffuc/status/534161448792903680">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/t/status/533417153706598401">
+      
+        watching @adactio teach Progressive Enhancement @Eventbrite ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416189496&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzQxNjE0NDg3OTI5MDM2ODAM">
+    
+      6 hours, 46 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://tantek.com/2014/318/t1/progressive-enhancement-noscript-browsing-faster">tantek.com/2014/318/t1/pr...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/yjezmo"
+       title="연젲모">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/523851934638153728/a8elfXcj.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/yjezmo/status/533958500687179776">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/t/status/533417153706598401">
+      
+        watching @adactio teach Progressive Enhancement @Eventbrite ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416141078&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzM5NTg1MDA2ODcxNzk3NzYM">
+    
+      20 hours, 13 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://tantek.com/2014/318/t1/progressive-enhancement-noscript-browsing-faster">tantek.com/2014/318/t1/pr...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/morganfaichney"
+       title="Morgan Faichney">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/2360436519/eightbit-1246ecc5-004f-476d-a83d-6b63a9c66fa2.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/t/status/533417153706598401">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/t/status/533417153706598401">
+      
+        watching @adactio teach Progressive Enhancement @Eventbrite ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416050249&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1MzM0MTcxNTM3MDY1OTg0MDFfZmF2b3JpdGVkX2J5XzE2Mjk5NDE3DA">
+    
+      1 day, 21 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://tantek.com/2014/318/t1/progressive-enhancement-noscript-browsing-faster">tantek.com/2014/318/t1/pr...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/shirokazan"
+       title="shirokazan">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/1236522068/shiro-gn.jpg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/t/status/533417153706598401">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/t/status/533417153706598401">
+      
+        watching @adactio teach Progressive Enhancement @Eventbrite ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416044196&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1MzM0MTcxNTM3MDY1OTg0MDFfZmF2b3JpdGVkX2J5Xzk2MTE1NDE3DA">
+    
+      1 day, 23 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://tantek.com/2014/318/t1/progressive-enhancement-noscript-browsing-faster">tantek.com/2014/318/t1/pr...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/badgermind"
+       title="Robin Taylor">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000561655058/50c3485a80e943d62df5b82e7af42db4.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/t/status/533417153706598401">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/t/status/533417153706598401">
+      
+        watching @adactio teach Progressive Enhancement @Eventbrite ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416034953&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1MzM0MTcxNTM3MDY1OTg0MDFfZmF2b3JpdGVkX2J5XzE4Mjk5MDY1DA">
+    
+      2 days, 1 hour ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://tantek.com/2014/318/t1/progressive-enhancement-noscript-browsing-faster">tantek.com/2014/318/t1/pr...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://hackademix.net"
+       title="Giorgio Maone">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/494449368368287744/3983zgWU.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/ma1/status/533510573917749248">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/t/status/533417153706598401">
+      
+        watching @adactio teach Progressive Enhancement @Eventbrite ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416034286&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzM1MTA1NzM5MTc3NDkyNDgM">
+    
+      2 days, 1 hour ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://tantek.com/2014/318/t1/progressive-enhancement-noscript-browsing-faster">tantek.com/2014/318/t1/pr...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://eraycakir.deviantart.com"
+       title="Eray">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/465540544479768576/QfjjXxlB.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/eraycakir/status/533485277025959937">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/t/status/533417153706598401">
+      
+        watching @adactio teach Progressive Enhancement @Eventbrite ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416028152&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzM0ODUyNzcwMjU5NTk5MzcM">
+    
+      2 days, 3 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://tantek.com/2014/318/t1/progressive-enhancement-noscript-browsing-faster">tantek.com/2014/318/t1/pr...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/Natbat"
+       title="Natalie Downe">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/746595945/me.jpg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/t/status/533417153706598401">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/t/status/533417153706598401">
+      
+        watching @adactio teach Progressive Enhancement @Eventbrite ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416016755&key=aglzfmJyaWQtZ3lySAsSCFJlc3BvbnNlIjp0YWc6dHdpdHRlci5jb20sMjAxMzo1MzM0MTcxNTM3MDY1OTg0MDFfZmF2b3JpdGVkX2J5XzEyMTYxDA">
+    
+      2 days, 6 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://tantek.com/2014/318/t1/progressive-enhancement-noscript-browsing-faster">tantek.com/2014/318/t1/pr...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://trustcloud.com/!/domenicoperri"
+       title="Domenico Perri">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/2259133627/Flickr-_Your_Photostream.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/domenicoperri/status/533421147598360576">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/t/status/533417153706598401">
+      
+        watching @adactio teach Progressive Enhancement @Eventbrite ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416012735&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzM0MjExNDc1OTgzNjA1NzYM">
+    
+      2 days, 7 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://tantek.com/2014/318/t1/progressive-enhancement-noscript-browsing-faster">tantek.com/2014/318/t1/pr...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.one2ad.com"
+       title="One2Ad_com">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/446969082068213760/NriHflGN.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/One2Ad_com/status/533417179807748096">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/t/status/533417153706598401">
+      
+        watching @adactio teach Progressive Enhancement @Eventbrite ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416011553&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzM0MTcxNzk4MDc3NDgwOTYM">
+    
+      2 days, 8 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://tantek.com/2014/318/t1/progressive-enhancement-noscript-browsing-faster">tantek.com/2014/318/t1/pr...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

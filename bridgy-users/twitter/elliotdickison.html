@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Elliot Dickison (Twitter) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://twitter.com/elliotdickison" title="Elliot Dickison (Twitter)"
+   class="u-url">
+  <img class="profile u-photo" src="https://pbs.twimg.com/profile_images/455891611742785536/WZ9zexm4.jpeg" width="64px" />
+  <img src="/static/twitter_icon.png"
+       
+       alt="Twitter" />
+  <span class="p-name">Elliot Dickison</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://elliotjam.es/blog" class="publish-domain u-url">elliotjam.es</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+
+<div class="row promo warning">
+You
+ need 
+<a href='http://indiewebify.me/#send-webmentions'>webmention</a> support.
+
+
+<a href="http://indiewebcamp.com/webmention#Publishing_Software">Here are some
+resources.</a> If you're on
+WordPress, <a href="http://wordpress.org/plugins/indieweb/">try the IndieWeb
+bundle plugin</a>. If you're on Blogger, Tumblr, or
+WordPress.com, <a href="/">sign up here!</a>
+
+
+
+</div>
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGwsSB1R3aXR0ZXIiDmVsbGlvdGRpY2tpc29uDA" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416158987&key=aglzfmJyaWQtZ3lyGwsSB1R3aXR0ZXIiDmVsbGlvdGRpY2tpc29uDA">
+      15 hours, 4 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGwsSB1R3aXR0ZXIiDmVsbGlvdGRpY2tpc29uDA" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+<span class="big">Click to enable <a href="/about#publish">publishing</a>:</span>
+<form method="post" name="publish-twitter-start" action="/twitter/start" class="signup">
+ <input type="image" alt="Sign in with Twitter"
+        src="/activitystreams/oauth_dropins/static/twitter.png" />
+ <input name="feature" type="hidden" value="publish" />
+</form>
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/Lekrom"
+       title="Morkel Erasmus">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/2481481184/6t9nm9plrjequo18dbje.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/elliotdickison/status/530556489019445248">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/elliotdickison/status/530556489019445248">
+      
+        @500px @Lekrom Amazing!
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 week, 2 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/leithart"
+       title="Sheffield Leithart">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/517487912078692352/lp07tgCk.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/elliotdickison/status/529833876852449280">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/elliotdickison/status/529833876852449280">
+      
+        Want to learn more about flexbox? ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415215793&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1Mjk4MzM4NzY4NTI0NDkyODBfZmF2b3JpdGVkX2J5XzE2OTg1MzgwDA">
+    
+      1 week, 4 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.brucelawson.co.uk/2014/a-quick-tip-for-understanding-css-flexbox/">brucelawson.co.uk/2014/a-quick-t...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://conor.cc"
+       title="Conor Muirhead">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/487027996499255296/XZKTZCYM.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/conormuirhead/status/519943406114463745">
+        @elliotdickison thanks man, hopefully this is ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/elliotdickison/status/519911376374878209">
+      
+        @conormuirhead Write more! Loved your article ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 month, 1 week ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/erickarbe"
+       title="Erick Arbé">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/461132320854917121/IZAsQB4O.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/elliotdickison/status/519714211346149376">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/elliotdickison/status/519714211346149376">
+      
+        I knew it! alistafart.com/article/jquery…
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1412760701&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo1MTk3MTQyMTEzNDYxNDkzNzZfZmF2b3JpdGVkX2J5XzIyOTY4NTA5Nww">
+    
+      1 month, 1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://alistafart.com/article/jquery-used-for-nsa-spying-for-nearly-a-decade/">alistafart.com/article/jquery...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/TextMining_r"
+       title="TextDataMiningReddit">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/483993250470969344/_hfa_iHG.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/elliotdickison/status/515136912009355264">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/elliotdickison/status/515136912009355264">
+      
+        This is awesome. Synth in #ruby ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1411703180&key=aglzfmJyaWQtZ3lyTQsSCFJlc3BvbnNlIj90YWc6dHdpdHRlci5jb20sMjAxMzo1MTUxMzY5MTIwMDkzNTUyNjRfZmF2b3JpdGVkX2J5XzI1OTgxNjI5OTcM">
+    
+      1 month, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://sonic-pi.net/">sonic-pi.net/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/sonic_pi"
+       title="Sonic Pi">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/3069760833/0108904c62f2d7058abd12476753d44f.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/elliotdickison/status/515136912009355264">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/elliotdickison/status/515136912009355264">
+      
+        This is awesome. Synth in #ruby ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1411703150&key=aglzfmJyaWQtZ3lyTQsSCFJlc3BvbnNlIj90YWc6dHdpdHRlci5jb20sMjAxMzo1MTUxMzY5MTIwMDkzNTUyNjRfZmF2b3JpdGVkX2J5XzEwNjM1NTkwMzUM">
+    
+      1 month, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://sonic-pi.net/">sonic-pi.net/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.sleithart.com"
+       title="Sheffield Leithart">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/477662562348068864/pYgL1oW8.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/leithart/status/509569793813254144">
+        @elliotdickison balcony at work</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/elliotdickison/status/509569560245071872">
+      
+        @leithart Cool. Where from?
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 months, 1 week ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://elliotjam.es"
+       title="Elliot Dickison">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/455891611742785536/WZ9zexm4.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/elliotdickison/status/509570600260472832">
+        @leithart o rly? Is there one ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/elliotdickison/status/509569560245071872">
+      
+        @leithart Cool. Where from?
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 months, 1 week ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/yelp_seattle"
+       title="Yelp Seattle">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000740903708/c952aa6ac5f2c95056ef07d5d5c1650b.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/elliotdickison/status/505533979848495104">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/elliotdickison/status/505533979848495104">
+      
+        #seattle with jloizeaux instagram.com/p/sTgGizRezf/
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 months, 2 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://elliotjam.es"
+       title="Elliot Dickison">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/455891611742785536/WZ9zexm4.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/elliotdickison/status/504491827173789696">
+        @adamsentz ha it's probably there, just ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/elliotdickison/status/504468708991852544">
+      
+        Um... what? The add-plus-dropdown-arrow-calendar-clipboard-folder icon, by ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 months, 3 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

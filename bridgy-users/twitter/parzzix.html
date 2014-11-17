@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Tim Apple (Twitter) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://twitter.com/parzzix" title="Tim Apple (Twitter)"
+   class="u-url">
+  <img class="profile u-photo" src="https://pbs.twimg.com/profile_images/490553453366624256/w_yMdn5K.png" width="64px" />
+  <img src="/static/twitter_icon.png"
+       
+       alt="Twitter" />
+  <span class="p-name">Tim Apple</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://timapple.com" class="publish-domain u-url">timapple.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyFAsSB1R3aXR0ZXIiB3Bhcnp6aXgM" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416135743&key=aglzfmJyaWQtZ3lyFAsSB1R3aXR0ZXIiB3Bhcnp6aXgM">
+      21 hours, 40 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyFAsSB1R3aXR0ZXIiB3Bhcnp6aXgM" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+<form method="post" action="/delete/start">
+<p id="publishing-label" class="big">
+ Ready to publish.
+   <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyFAsSB1R3aXR0ZXIiB3Bhcnp6aXgM" />
+   <input name="feature" type="hidden" value="publish" />
+   <button id="delete-button" type="submit" class="btn btn-default"
+     title="Disable publishing for this account. (Won't delete posts you've already published.)"
+     >Disable</button>
+</p>
+</form>
+
+<form method="post" name="preview" action="/publish/preview"
+      onsubmit="do_preview('twitter'); return false;">
+<p id="preview-ui">
+ <label id="source-label" for="source-url">Enter post URL:</label>
+ <input id="source-url" name="source" type="url" required alt="Source URL"></input>
+ <input name="target" type="hidden"
+        value="http://brid.gy/publish/twitter"></input>
+
+ <nobr>
+ <!-- use a hidden input before the checkbox with the same name to set the value
+      to be sent when the checkbox is unchecked. -->
+ &nbsp;
+ <input id="include-link-unchecked" name="bridgy_omit_link" type="hidden"
+        value="true"></input>
+ <input id="include-link-checked" name="bridgy_omit_link" type="checkbox"
+        value="false" checked></input>
+ <label id="include-link-label" for="include-link-checked">Include link</label>
+ &nbsp;
+ <button id="preview-button" type="submit" class="btn btn-default">Preview</button>
+ </nobr>
+</p>
+</form>
+
+<!-- Publish signup buttons -->
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.jonobacon.org/"
+       title="Jono Bacon">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/514111250020589569/5UBdvHzF.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/jonobacon/status/526567566886449152">
+        @parzzix it is a good time, ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/parzzix/status/526471299192090624">
+      
+        @jonobacon I lived in Korea in ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      3 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.lauracowen.co.uk"
+       title="Laura Cowen">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/1531809853/IMG_3417_v2-square-192px.jpg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/lauracowen/status/525668292787462144">
+        @parzzix It's meant to be. Like ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/parzzix/status/525666053704396800">
+      
+        @lauracowen just the hash tag gets ...
+      
+    </a></li>
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/parzzix/status/525638809497911296">
+      
+        @lauracowen all this #tamponclub stuff confuses ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      3 weeks, 2 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://timapple.com"
+       title="Tim Apple">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/490553453366624256/w_yMdn5K.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/parzzix/status/525666053704396800">
+        @lauracowen just the hash tag gets ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/parzzix/status/525638809497911296">
+      
+        @lauracowen all this #tamponclub stuff confuses ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      3 weeks, 2 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.lauracowen.co.uk"
+       title="Laura Cowen">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/1531809853/IMG_3417_v2-square-192px.jpg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/lauracowen/status/525669366424403968">
+        @parzzix :D</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/parzzix/status/525668449679585280">
+      
+        @lauracowen Lol..OK..
+      
+    </a></li>
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/parzzix/status/525666053704396800">
+      
+        @lauracowen just the hash tag gets ...
+      
+    </a></li>
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/parzzix/status/525638809497911296">
+      
+        @lauracowen all this #tamponclub stuff confuses ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      3 weeks, 2 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://timapple.com"
+       title="Tim Apple">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/490553453366624256/w_yMdn5K.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/parzzix/status/525668449679585280">
+        @lauracowen Lol..OK..</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/parzzix/status/525666053704396800">
+      
+        @lauracowen just the hash tag gets ...
+      
+    </a></li>
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/parzzix/status/525638809497911296">
+      
+        @lauracowen all this #tamponclub stuff confuses ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      3 weeks, 2 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.lauracowen.co.uk"
+       title="Laura Cowen">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/1531809853/IMG_3417_v2-square-192px.jpg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/lauracowen/status/525639005174775808">
+        @parzzix confuses how?</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/parzzix/status/525638809497911296">
+      
+        @lauracowen all this #tamponclub stuff confuses ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      3 weeks, 2 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.airdroid.com"
+       title="AirDroid.com">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/1650371678/icon_180.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/AirDroidTeam/status/525559385708187649">
+        @parzzix Have fun with AirDroid. Feel ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/parzzix/status/525328571091279872">
+      
+        I now officially love AirDroid ! ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      3 weeks, 2 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://lordfalcon.wordpress.com/"
+       title="Jonas M. Trinidad ">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/2902786329/9f77cfe0c26ea2dd9913b330efa9a02c.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/JonasTrinidad/status/525390058606821376">
+        @parzzix who is moving?</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/parzzix/status/525361319017738240">
+      
+        RT Kubuntu 14.10 and Kubuntu Plasma ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414107044&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MjUzOTAwNTg2MDY4MjEzNzYM">
+    
+      3 weeks, 3 days ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MjUzOTAwNTg2MDY4MjEzNzYM" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www">www <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/ekimetrics"
+       title="Ekimetrics.">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/1261582223/logo_copy.jpg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/parzzix/status/525308406542766080">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/parzzix/status/525308406542766080">
+      
+        RT After reading some reddit threads ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      3 weeks, 3 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/OpenSourceRDT"
+       title="Open Source News">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/506773127750098944/s6_vmG3M.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/parzzix/status/525308406542766080">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/parzzix/status/525308406542766080">
+      
+        RT After reading some reddit threads ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      3 weeks, 3 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+
+<p id="publishes" class="big">Recently published:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://timapple.com/content/statusupdates/">timapple.com/content/status...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1411671551&key=aglzfmJyaWQtZ3lyUQsSDVB1Ymxpc2hlZFBhZ2UiKmh0dHA6Ly90aW1hcHBsZS5jb20vY29udGVudC9zdGF0dXN1cGRhdGVzLwwLEgdQdWJsaXNoGICAgICA5JEKDA">
+      1 month, 3 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     preview
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://timapple.com/content/statusupdates/">timapple.com/content/status...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1411671514&key=aglzfmJyaWQtZ3lyUQsSDVB1Ymxpc2hlZFBhZ2UiKmh0dHA6Ly90aW1hcHBsZS5jb20vY29udGVudC9zdGF0dXN1cGRhdGVzLwwLEgdQdWJsaXNoGICAgICAgIAKDA">
+      1 month, 3 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     preview
+     
+
+   </div>
+  </li>
+  
+</ul>
+
+
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

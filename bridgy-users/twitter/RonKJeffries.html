@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Ron K Jeffries (Twitter) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://twitter.com/RonKJeffries" title="Ron K Jeffries (Twitter)"
+   class="u-url">
+  <img class="profile u-photo" src="https://pbs.twimg.com/profile_images/1224994878/rkj-color.jpg" width="64px" />
+  <img src="/static/twitter_icon.png"
+       
+       alt="Twitter" />
+  <span class="p-name">Ron K Jeffries</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://ronkjeffries.withknown.com" class="publish-domain u-url">ronkjeffries.withknown.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGQsSB1R3aXR0ZXIiDFJvbktKZWZmcmllcww" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416135290&key=aglzfmJyaWQtZ3lyGQsSB1R3aXR0ZXIiDFJvbktKZWZmcmllcww">
+      21 hours, 48 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGQsSB1R3aXR0ZXIiDFJvbktKZWZmcmllcww" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+<form method="post" action="/delete/start">
+<p id="publishing-label" class="big">
+ Ready to publish.
+   <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGQsSB1R3aXR0ZXIiDFJvbktKZWZmcmllcww" />
+   <input name="feature" type="hidden" value="publish" />
+   <button id="delete-button" type="submit" class="btn btn-default"
+     title="Disable publishing for this account. (Won't delete posts you've already published.)"
+     >Disable</button>
+</p>
+</form>
+
+<form method="post" name="preview" action="/publish/preview"
+      onsubmit="do_preview('twitter'); return false;">
+<p id="preview-ui">
+ <label id="source-label" for="source-url">Enter post URL:</label>
+ <input id="source-url" name="source" type="url" required alt="Source URL"></input>
+ <input name="target" type="hidden"
+        value="http://brid.gy/publish/twitter"></input>
+
+ <nobr>
+ <!-- use a hidden input before the checkbox with the same name to set the value
+      to be sent when the checkbox is unchecked. -->
+ &nbsp;
+ <input id="include-link-unchecked" name="bridgy_omit_link" type="hidden"
+        value="true"></input>
+ <input id="include-link-checked" name="bridgy_omit_link" type="checkbox"
+        value="false" checked></input>
+ <label id="include-link-label" for="include-link-checked">Include link</label>
+ &nbsp;
+ <button id="preview-button" type="submit" class="btn btn-default">Preview</button>
+ </nobr>
+</p>
+</form>
+
+<!-- Publish signup buttons -->
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/Skimmin_App"
+       title="Skimmin ">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/519915103118848000/NfQHrYAv.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/RonKJeffries/status/532174413752700928">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/RonKJeffries/status/532174413752700928">
+      
+        #ebola hysteria in USA has abated, ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      3 days, 23 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/danforthmedia"
+       title="Dorothy M Danforth">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/435093917894455298/gkB30zB6.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/RonKJeffries/status/530204391492427777">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/RonKJeffries/status/530204391492427777">
+      
+        Moto G: my 2nd phone for ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415388346&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1MzAyMDQzOTE0OTI0Mjc3NzdfZmF2b3JpdGVkX2J5XzYyMzc1MzM3DA">
+    
+      1 week, 2 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.forbes.com/sites/ewanspence/2014/10/18/moto-g-2014-comparison-review/">forbes.com/sites/ewanspen...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/illadave"
+       title="Dave Pasol">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/520743892866461696/4k0hptKB.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/RonKJeffries/status/530286072069369856">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/RonKJeffries/status/530286072069369856">
+      
+        Microsoft getts VERY creative: integrates Office ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415388334&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1MzAyODYwNzIwNjkzNjk4NTZfZmF2b3JpdGVkX2J5XzI0OTQ4NDMwDA">
+    
+      1 week, 2 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.theguardian.com/technology/2014/nov/04/dropbox-microsoft-team-up-office-cloud">theguardian.com/technology/201...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.the-digital-reader.com"
+       title="Nate Hoffelder">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/436657453409660928/Rmg8V3hP.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/thDigitalReader/status/529987232195964930">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/RonKJeffries/status/529982914118025216">
+      
+        W-A-N-T this HUGE (!) e-ink wall ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415197530&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1Mjk5ODcyMzIxOTU5NjQ5MzAM">
+    
+      1 week, 4 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://the-digital-reader.com/2014/11/04/twelve24-launches-kickstarter-project-fund-600-e-ink-wall-clock/#more-75451">the-digital-reader.com/2014/11/04/twe...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/OguzSerdar"
+       title="Oguz Serdar">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/2349709129/ts907r49a81ga9r4g81n.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/RonKJeffries/status/529588972993785856">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/RonKJeffries/status/529588972993785856">
+      
+        Medium: great user interface, interesting ideas, ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415103113&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1Mjk1ODg5NzI5OTM3ODU4NTZfZmF2b3JpdGVkX2J5XzE5NDkwNTU1DA">
+    
+      1 week, 5 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://medium.com/@andrhia/the-problem-with-medium-336300490cbb">medium.com/@andrhia/the-p...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/BethWatersNeuro"
+       title="Beth Waters">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000699569553/cef87a87bdd3587f900110c08af9ee7a.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/RonKJeffries/status/528020967352991744">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/RonKJeffries/status/528020967352991744">
+      
+        So many universes. So little time. ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414846266&key=aglzfmJyaWQtZ3lyTQsSCFJlc3BvbnNlIj90YWc6dHdpdHRlci5jb20sMjAxMzo1MjgwMjA5NjczNTI5OTE3NDRfZmF2b3JpdGVkX2J5XzIxNzQ3NjM1NTIM">
+    
+      2 weeks, 1 day ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.quantumcomputingtechnologyaustralia.com/2014/10/30/academics-are-challenging-the-foundations-of-quantum-science/">quantumcomputingtechnologyaustralia.com/2014/10/30/aca...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/orderbuddy_com"
+       title="orderbuddy">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/516684537560973312/RlActaIP.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/RonKJeffries/status/527916000000630784">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/RonKJeffries/status/527916000000630784">
+      
+        This may be interesting: medium.com/@ronkjeffries/… // ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414750012&key=aglzfmJyaWQtZ3lyTQsSCFJlc3BvbnNlIj90YWc6dHdpdHRlci5jb20sMjAxMzo1Mjc5MTYwMDAwMDA2MzA3ODRfZmF2b3JpdGVkX2J5XzIyMDUxNDQ3NjQM">
+    
+      2 weeks, 2 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://medium.com/@ronkjeffries/who-curates-the-curators-d7705c1c7957">medium.com/@ronkjeffries/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/ThatOneJWoods"
+       title="JWoods">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/436950327091163136/n7Dw_v9Z.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/RonKJeffries/status/527675835591823362">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/RonKJeffries/status/527675835591823362">
+      
+        “... drugs cost money, and frankly ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414750009&key=aglzfmJyaWQtZ3lyTQsSCFJlc3BvbnNlIj90YWc6dHdpdHRlci5jb20sMjAxMzo1Mjc2NzU4MzU1OTE4MjMzNjJfZmF2b3JpdGVkX2J5XzE5NDk2MzcwMDgM">
+    
+      2 weeks, 2 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://medium.com/@ronkjeffries/who-curates-the-curators-d7705c1c7957">medium.com/@ronkjeffries/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/denislemire"
+       title="Denis Lemire">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000830601836/30de545a479798ac77916b00f2ec00d8.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/RonKJeffries/status/528020967352991744">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/RonKJeffries/status/528020967352991744">
+      
+        So many universes. So little time. ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414750001&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1MjgwMjA5NjczNTI5OTE3NDRfZmF2b3JpdGVkX2J5XzIyNTE1NDMyDA">
+    
+      2 weeks, 2 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.quantumcomputingtechnologyaustralia.com/2014/10/30/academics-are-challenging-the-foundations-of-quantum-science/">quantumcomputingtechnologyaustralia.com/2014/10/30/aca...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/BraveauxApp"
+       title="Braveaux">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/502839070871924736/s7GV5uhF.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/RonKJeffries/status/527505638234927104">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/RonKJeffries/status/527505638234927104">
+      
+        Feedback welcome. I am new to ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414749996&key=aglzfmJyaWQtZ3lyTQsSCFJlc3BvbnNlIj90YWc6dHdpdHRlci5jb20sMjAxMzo1Mjc1MDU2MzgyMzQ5MjcxMDRfZmF2b3JpdGVkX2J5XzI3MjQyMzkxMzAM">
+    
+      2 weeks, 2 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://medium.com/@ronkjeffries/who-curates-the-curators-d7705c1c7957">medium.com/@ronkjeffries/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+
+<p class="big">Nothing published yet.</p>
+
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Tony Fleming (Twitter) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://twitter.com/mtony75" title="Tony Fleming (Twitter)"
+   class="u-url">
+  <img class="profile u-photo" src="https://pbs.twimg.com/profile_images/456543336300441600/OT_csH7S.jpeg" width="64px" />
+  <img src="/static/twitter_icon.png"
+       
+       alt="Twitter" />
+  <span class="p-name">Tony Fleming</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://TonyFleming.withknown.com" class="publish-domain u-url">tonyfleming.withknown.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyFAsSB1R3aXR0ZXIiB210b255NzUM" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416213445&key=aglzfmJyaWQtZ3lyFAsSB1R3aXR0ZXIiB210b255NzUM">
+      3 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyFAsSB1R3aXR0ZXIiB210b255NzUM" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+<span class="big">Click to enable <a href="/about#publish">publishing</a>:</span>
+<form method="post" name="publish-twitter-start" action="/twitter/start" class="signup">
+ <input type="image" alt="Sign in with Twitter"
+        src="/activitystreams/oauth_dropins/static/twitter.png" />
+ <input name="feature" type="hidden" value="publish" />
+</form>
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/SnarkySpiderman"
+       title="Spiderman">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/3532480627/ec4884ac7828b68611158220f88a2648.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/mtony75/status/532973088019726336">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/mtony75/status/532973088019726336">
+      
+        If her had a Spider-Man set ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415906395&key=aglzfmJyaWQtZ3lyTQsSCFJlc3BvbnNlIj90YWc6dHdpdHRlci5jb20sMjAxMzo1MzI5NzMwODgwMTk3MjYzMzZfZmF2b3JpdGVkX2J5XzExOTk5NzcxNzEM">
+    
+      3 days, 13 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://tonyfleming.withknown.com/2014/if-her-had-a-spider-man-set-id-be-less-25">tonyfleming.withknown.com/2014/if-her-ha...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.littlelexx.net"
+       title="Stalker">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/504539608013484032/ba67ga34.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/Stalker_CBS/status/530623079052234752">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/mtony75/status/530597730138087424">
+      
+        I may have seen the best ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415346071&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzA2MjMwNzkwNTIyMzQ3NTIM">
+    
+      1 week, 3 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://tonyfleming.withknown.com/2014/i-may-have-seen-the-best-movie-i-have-ever">tonyfleming.withknown.com/2014/i-may-hav...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.twitter.com/stalker_cbs"
+       title="Sonique #TeamHELOÍSA">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000371575293/10e57a17ee410c7e56d5a59204c98fd6.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/furacaofazenda/status/530622164647809024">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/mtony75/status/530597730138087424">
+      
+        I may have seen the best ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415345378&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzA2MjIxNjQ2NDc4MDkwMjQM">
+    
+      1 week, 3 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://tonyfleming.withknown.com/2014/i-may-have-seen-the-best-movie-i-have-ever">tonyfleming.withknown.com/2014/i-may-hav...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/XedOut"
+       title="Yes I Rant">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/527793903307870208/VNzkPH5S.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/mtony75/status/530008388722106370">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/mtony75/status/530008388722106370">
+      
+        Boondocks Z needs to happen. [picture]
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415199722&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo1MzAwMDgzODg3MjIxMDYzNzBfZmF2b3JpdGVkX2J5XzEzNzI0MDM2NQw">
+    
+      1 week, 4 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://tonyfleming.withknown.com/2014/boondocks-z-needs-to-happen">tonyfleming.withknown.com/2014/boondocks...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.tumblr.com/tumblelog/seppukujournal"
+       title="Yes I Rant">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/527793903307870208/VNzkPH5S.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/XedOut/status/529711166957060096">
+        @mtony75 had to take a break ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/mtony75/status/529710121681555456">
+      
+        I'm still trying to figure out ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415128180&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1Mjk3MTExNjY5NTcwNjAwOTYM">
+    
+      1 week, 5 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://tonyfleming.withknown.com/2014/im-still-trying-to-figure-out-where-spiderverse-and-axis">tonyfleming.withknown.com/2014/im-still-...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/jolt2011"
+       title="alberto">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/529260230543425537/pIZw_H_C.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/mtony75/status/528715291300085760">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/mtony75/status/528715291300085760">
+      
+        Doctor Who = Holy $#!π #doctorwho ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415112051&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo1Mjg3MTUyOTEzMDAwODU3NjBfZmF2b3JpdGVkX2J5XzU5NjMxNDE4Mgw">
+    
+      1 week, 5 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://tonyfleming.withknown.com/2014/doctor-who-holy-doctorwho-missy">tonyfleming.withknown.com/2014/doctor-wh...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/jolt2011"
+       title="alberto">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/529260230543425537/pIZw_H_C.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/jolt2011/status/529642042926702593">
+        @mtony75 best episode so far (since ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/mtony75/status/528715291300085760">
+      
+        Doctor Who = Holy $#!π #doctorwho ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415112015&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1Mjk2NDIwNDI5MjY3MDI1OTMM">
+    
+      1 week, 5 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://tonyfleming.withknown.com/2014/doctor-who-holy-doctorwho-missy">tonyfleming.withknown.com/2014/doctor-wh...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/SimpleGraphCo"
+       title="SimpleGraph">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/497011595310952448/mLGM8T5G.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/mtony75/status/529592953040142336">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/mtony75/status/529592953040142336">
+      
+        It is clear that Google isn't ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415100046&key=aglzfmJyaWQtZ3lyTQsSCFJlc3BvbnNlIj90YWc6dHdpdHRlci5jb20sMjAxMzo1Mjk1OTI5NTMwNDAxNDIzMzZfZmF2b3JpdGVkX2J5XzI3MDk5MjA5MTIM">
+    
+      1 week, 5 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://tonyfleming.withknown.com/2014/it-is-clear-that-google-isnt-getting-rid-of-email">tonyfleming.withknown.com/2014/it-is-cle...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.tumblr.com/tumblelog/seppukujournal"
+       title="Yes I Rant">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/527793903307870208/VNzkPH5S.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/XedOut/status/528911151443480577">
+        @mtony75 start had me like wtf, ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/mtony75/status/528737645363740673">
+      
+        @XedOut Tonight's episode blew my brain ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://TonyFleming.withknown.com"
+       title="Tony Fleming">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/456543336300441600/OT_csH7S.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/mtony75/status/528737645363740673">
+        @XedOut Tonight's episode blew my brain ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/mtony75/status/528715291300085760">
+      
+        Doctor Who = Holy $#!π #doctorwho ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414895882&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1Mjg3Mzc2NDUzNjM3NDA2NzMM">
+    
+      2 weeks, 1 day ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://tonyfleming.withknown.com/2014/doctor-who-holy-doctorwho-missy">tonyfleming.withknown.com/2014/doctor-wh...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Business&IT (Twitter) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://twitter.com/BusinessenIT" title="Business&IT (Twitter)"
+   class="u-url">
+  <img class="profile u-photo" src="https://pbs.twimg.com/profile_images/425625468369256448/MzIQTyeO.jpeg" width="64px" />
+  <img src="/static/twitter_icon.png"
+       
+       alt="Twitter" />
+  <span class="p-name">Business&IT</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://businessenit.nl/" class="publish-domain u-url">businessenit.nl</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGQsSB1R3aXR0ZXIiDEJ1c2luZXNzZW5JVAw" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416212370&key=aglzfmJyaWQtZ3lyGQsSB1R3aXR0ZXIiDEJ1c2luZXNzZW5JVAw">
+      12 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGQsSB1R3aXR0ZXIiDEJ1c2luZXNzZW5JVAw" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+<form method="post" action="/delete/start">
+<p id="publishing-label" class="big">
+ Ready to publish.
+   <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGQsSB1R3aXR0ZXIiDEJ1c2luZXNzZW5JVAw" />
+   <input name="feature" type="hidden" value="publish" />
+   <button id="delete-button" type="submit" class="btn btn-default"
+     title="Disable publishing for this account. (Won't delete posts you've already published.)"
+     >Disable</button>
+</p>
+</form>
+
+<form method="post" name="preview" action="/publish/preview"
+      onsubmit="do_preview('twitter'); return false;">
+<p id="preview-ui">
+ <label id="source-label" for="source-url">Enter post URL:</label>
+ <input id="source-url" name="source" type="url" required alt="Source URL"></input>
+ <input name="target" type="hidden"
+        value="http://brid.gy/publish/twitter"></input>
+
+ <nobr>
+ <!-- use a hidden input before the checkbox with the same name to set the value
+      to be sent when the checkbox is unchecked. -->
+ &nbsp;
+ <input id="include-link-unchecked" name="bridgy_omit_link" type="hidden"
+        value="true"></input>
+ <input id="include-link-checked" name="bridgy_omit_link" type="checkbox"
+        value="false" checked></input>
+ <label id="include-link-label" for="include-link-checked">Include link</label>
+ &nbsp;
+ <button id="preview-button" type="submit" class="btn btn-default">Preview</button>
+ </nobr>
+</p>
+</form>
+
+<!-- Publish signup buttons -->
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/KCaliasKurt"
+       title="Kurt Callaert">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/3050690022/df61d77e530b3182c0d83d7874f891f7.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/KCaliasKurt/status/528570674408079363">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/BusinessenIT/status/528216755454611456">
+      
+        Wie zijn het griezeligst…..hackers of …… ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414856201&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1Mjg1NzA2NzQ0MDgwNzkzNjMM">
+    
+      2 weeks, 1 day ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://businessenit.nl/2014/10/31/wie-zijn-het-griezeligst-hackers-of-halloween-spoken-en-monsters/">businessenit.nl/2014/10/31/wie...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.amatecommunications.com"
+       title="ellen minkels">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/3530514299/e37f81455bf55bdc02ab029258962a8f.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/ellenminkels/status/528219821377617920">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/BusinessenIT/status/528216755454611456">
+      
+        Wie zijn het griezeligst…..hackers of …… ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414815766&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MjgyMTk4MjEzNzc2MTc5MjAM">
+    
+      2 weeks, 2 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://businessenit.nl/2014/10/31/wie-zijn-het-griezeligst-hackers-of-halloween-spoken-en-monsters/">businessenit.nl/2014/10/31/wie...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.vasco.com"
+       title="VASCO Data Security ">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000450816599/6ff38db73a751099cc52796eb599c7cb.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/VASCODataNews/status/528225427626938368">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/BusinessenIT/status/528216755454611456">
+      
+        Wie zijn het griezeligst…..hackers of …… ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414815717&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MjgyMjU0Mjc2MjY5MzgzNjgM">
+    
+      2 weeks, 2 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://businessenit.nl/2014/10/31/wie-zijn-het-griezeligst-hackers-of-halloween-spoken-en-monsters/">businessenit.nl/2014/10/31/wie...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.racewarm.com"
+       title="Racewarm">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/1617580905/rw_logo_004_square.jpg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/Racewarm/status/528241704391159809">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/BusinessenIT/status/528216755454611456">
+      
+        Wie zijn het griezeligst…..hackers of …… ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414815663&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MjgyNDE3MDQzOTExNTk4MDkM">
+    
+      2 weeks, 2 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://businessenit.nl/2014/10/31/wie-zijn-het-griezeligst-hackers-of-halloween-spoken-en-monsters/">businessenit.nl/2014/10/31/wie...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/TechCentricMktg"
+       title="John Gunn">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/3224927095/c9892f8d7811a61d0dc1fc9a2bc735fa.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/TechCentricMktg/status/528233044805971968">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/BusinessenIT/status/528216755454611456">
+      
+        Wie zijn het griezeligst…..hackers of …… ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414815647&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MjgyMzMwNDQ4MDU5NzE5NjgM">
+    
+      2 weeks, 2 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://businessenit.nl/2014/10/31/wie-zijn-het-griezeligst-hackers-of-halloween-spoken-en-monsters/">businessenit.nl/2014/10/31/wie...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/Qoints"
+       title="Qoints">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/2825312291/1464acd1397d12f87effa9a3b4076f18.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/BusinessenIT/status/525519975575203841">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/BusinessenIT/status/525519975575203841">
+      
+        Vrouwentennis innoveert met big data - ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414152680&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo1MjU1MTk5NzU1NzUyMDM4NDFfZmF2b3JpdGVkX2J5XzQ0OTk1NjY5NAw">
+    
+      3 weeks, 2 days ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo1MjU1MTk5NzU1NzUyMDM4NDFfZmF2b3JpdGVkX2J5XzQ0OTk1NjY5NAw" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://businessenit.nl/2014/10/24/vrouwentennis-innoveert-met-big-data/">businessenit.nl/2014/10/24/vro... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/olivierperri"
+       title="Olivier Perri">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000614308553/9b0f1b9f46fc65e7e7940b6275dce0e4.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/BusinessenIT/status/474839890082152448">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/BusinessenIT/status/474839890082152448">
+      
+        Growth Hacking innovatieve vorm van marketing ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1411034048&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo0NzQ4Mzk4OTAwODIxNTI0NDhfZmF2b3JpdGVkX2J5XzYyNDU3MDc1Mww">
+    
+      1 month, 4 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://businessenit.nl/2014/06/06/growth-hacking-innovatieve-vorm-van-marketing/">businessenit.nl/2014/06/06/gro...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/dinaperla"
+       title="dinaperla">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/449297256550645761/y6e_dCXz.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/BusinessenIT/status/459338354459676672">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/BusinessenIT/status/459338354459676672">
+      
+        #Girlsday2014: een voorzichtige stijging - businessenit.nl/2014/04/24/gir… ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1411033944&key=aglzfmJyaWQtZ3lySgsSCFJlc3BvbnNlIjx0YWc6dHdpdHRlci5jb20sMjAxMzo0NTkzMzgzNTQ0NTk2NzY2NzJfZmF2b3JpdGVkX2J5Xzg3MTk0NTIM">
+    
+      1 month, 4 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://businessenit.nl/2014/04/24/girlsday2014-een-voorzichtige-stijging/">businessenit.nl/2014/04/24/gir...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+
+<p class="big">Nothing published yet.</p>
+
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

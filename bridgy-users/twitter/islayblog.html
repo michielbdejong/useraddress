@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Armin (Twitter) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://twitter.com/islayblog" title="Armin (Twitter)"
+   class="u-url">
+  <img class="profile u-photo" src="https://pbs.twimg.com/profile_images/68894551/armin.jpg" width="64px" />
+  <img src="/static/twitter_icon.png"
+       
+       alt="Twitter" />
+  <span class="p-name">Armin</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://www.islayblog.com/" class="publish-domain u-url">islayblog.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyFgsSB1R3aXR0ZXIiCWlzbGF5YmxvZww" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416212688&key=aglzfmJyaWQtZ3lyFgsSB1R3aXR0ZXIiCWlzbGF5YmxvZww">
+      11 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyFgsSB1R3aXR0ZXIiCWlzbGF5YmxvZww" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+<span class="big">Click to enable <a href="/about#publish">publishing</a>:</span>
+<form method="post" name="publish-twitter-start" action="/twitter/start" class="signup">
+ <input type="image" alt="Sign in with Twitter"
+        src="/activitystreams/oauth_dropins/static/twitter.png" />
+ <input name="feature" type="hidden" value="publish" />
+</form>
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/allastef"
+       title="colin robertson">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/526323958267011072/UUl58A0C.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/islayblog/status/533585961251528705">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/islayblog/status/533585961251528705">
+      
+        Photo: Lochgilphead, en route to the ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416190203&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo1MzM1ODU5NjEyNTE1Mjg3MDVfZmF2b3JpdGVkX2J5XzE2OTcwODQyMQw">
+    
+      6 hours, 25 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://islayblog.tumblr.com/post/102684386699/lochgilphead-en-route-to-the-islay-ferry#_=_">islayblog.tumblr.com/post/102684386...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/benjiandblossom"
+       title="Wendy">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000495316959/c280c931f38c3b6ec423eb2c79ecea23.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/islayblog/status/534131757122334720">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/islayblog/status/534131757122334720">
+      
+        Islay Sessions in the Port Charlotte ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416182660&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo1MzQxMzE3NTcxMjIzMzQ3MjBfZmF2b3JpdGVkX2J5XzQ1MzQ4MzE5MQw">
+    
+      8 hours, 31 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://vine.co/v/O5ti25YjpLD">vine.co/v/O5ti25YjpLD</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/NeilMclafferty"
+       title="Neil Mclafferty">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/3425004072/0357d0f37d79db14275ad62d38c889bd.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/islayblog/status/532427620718104576">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/islayblog/status/532427620718104576">
+      
+        Good morning with a picture of ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416177616&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo1MzI0Mjc2MjA3MTgxMDQ1NzZfZmF2b3JpdGVkX2J5XzcyNjg3MzY5Mgw">
+    
+      9 hours, 55 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.islay.org.uk/2014/11/12/margadale-river-and-the-wreck-of-the-wyre-majestic-isle-of-islay/">islay.org.uk/2014/11/12/mar...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/demurely38"
+       title="demurely1">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/458924813382189056/yCudYPPD.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/islayblog/status/534073363057356801">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/islayblog/status/534073363057356801">
+      
+        Photoset: Sunset and gloaming at Saligo ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416169362&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo1MzQwNzMzNjMwNTczNTY4MDFfZmF2b3JpdGVkX2J5XzI3MTkxNjA0MAw">
+    
+      12 hours, 13 minutes ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo1MzQwNzMzNjMwNTczNTY4MDFfZmF2b3JpdGVkX2J5XzI3MTkxNjA0MAw" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://islayblog.tumblr.com/post/102805992494/sunset-and-gloaming-at-saligo-bay-islay-scotland#_=_">islayblog.tumblr.com/post/102805992... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/onebirdsong"
+       title="Chrissie">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/485344229275611136/20adUBpr.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/islayblog/status/534073611142053890">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/islayblog/status/534073611142053890">
+      
+        Video: Islay Sessions in the Bridgend ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416169349&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo1MzQwNzM2MTExNDIwNTM4OTBfZmF2b3JpdGVkX2J5XzQxNTc3ODU1Nww">
+    
+      12 hours, 13 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://islayblog.tumblr.com/post/102806084999/islay-sessions-in-the-bridgend-hotel-islay#_=_">islayblog.tumblr.com/post/102806084...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/der_Macco"
+       title="Herr ?????">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/530647587489992705/aWFFp8Sh.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/islayblog/status/533991190539292672">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/islayblog/status/533991190539292672">
+      
+        Islay Sessions in the Bridgend Hotel, ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416153122&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo1MzM5OTExOTA1MzkyOTI2NzJfZmF2b3JpdGVkX2J5XzQwNTAxNDU1OQw">
+    
+      16 hours, 43 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://vine.co/v/O5D7gtm6wga">vine.co/v/O5D7gtm6wga</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.habekeinewebsite.de"
+       title="Herr ?????">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/530647587489992705/aWFFp8Sh.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/der_Macco/status/534010019755614208">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/islayblog/status/533991190539292672">
+      
+        Islay Sessions in the Bridgend Hotel, ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416153089&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzQwMTAwMTk3NTU2MTQyMDgM">
+    
+      16 hours, 44 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://vine.co/v/O5D7gtm6wga">vine.co/v/O5D7gtm6wga</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/erwinrahmer"
+       title="AQUAVITAE CHILE ">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/459534437592858624/z4I6jw2C.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/islayblog/status/533997804755353600">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/islayblog/status/533997804755353600">
+      
+        More Islay afternoon sessions at the ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416150632&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo1MzM5OTc4MDQ3NTUzNTM2MDBfZmF2b3JpdGVkX2J5XzE0OTY4MDY0OQw">
+    
+      17 hours, 25 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://vine.co/v/O5DeirFXejU">vine.co/v/O5DeirFXejU</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.aquavitae.cl"
+       title="AQUAVITAE CHILE ">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/459534437592858624/z4I6jw2C.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/erwinrahmer/status/533997948838117376">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/islayblog/status/533997804755353600">
+      
+        More Islay afternoon sessions at the ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416150572&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzM5OTc5NDg4MzgxMTczNzYM">
+    
+      17 hours, 26 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://vine.co/v/O5DeirFXejU">vine.co/v/O5DeirFXejU</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/ScotlandReddit"
+       title="Reddit Scotland">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/504618602855546880/bsZSQq7h.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/islayblog/status/533997804755353600">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/islayblog/status/533997804755353600">
+      
+        More Islay afternoon sessions at the ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416150524&key=aglzfmJyaWQtZ3lyTQsSCFJlc3BvbnNlIj90YWc6dHdpdHRlci5jb20sMjAxMzo1MzM5OTc4MDQ3NTUzNTM2MDBfZmF2b3JpdGVkX2J5XzI3NzMyNjQ4NDMM">
+    
+      17 hours, 27 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://vine.co/v/O5DeirFXejU">vine.co/v/O5DeirFXejU</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

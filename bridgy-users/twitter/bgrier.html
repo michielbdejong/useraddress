@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Brad Grier (Twitter) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://twitter.com/bgrier" title="Brad Grier (Twitter)"
+   class="u-url">
+  <img class="profile u-photo" src="https://pbs.twimg.com/profile_images/1165560491/bgrier_Tech-merge-sq.jpg" width="64px" />
+  <img src="/static/twitter_icon.png"
+       
+       alt="Twitter" />
+  <span class="p-name">Brad Grier</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://blog.bradgrier.com" class="publish-domain u-url">blog.bradgrier.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyEwsSB1R3aXR0ZXIiBmJncmllcgw" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416121028&key=aglzfmJyaWQtZ3lyEwsSB1R3aXR0ZXIiBmJncmllcgw">
+      1 day, 1 hour ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyEwsSB1R3aXR0ZXIiBmJncmllcgw" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+<form method="post" action="/delete/start">
+<p id="publishing-label" class="big">
+ Ready to publish.
+   <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyEwsSB1R3aXR0ZXIiBmJncmllcgw" />
+   <input name="feature" type="hidden" value="publish" />
+   <button id="delete-button" type="submit" class="btn btn-default"
+     title="Disable publishing for this account. (Won't delete posts you've already published.)"
+     >Disable</button>
+</p>
+</form>
+
+<form method="post" name="preview" action="/publish/preview"
+      onsubmit="do_preview('twitter'); return false;">
+<p id="preview-ui">
+ <label id="source-label" for="source-url">Enter post URL:</label>
+ <input id="source-url" name="source" type="url" required alt="Source URL"></input>
+ <input name="target" type="hidden"
+        value="http://brid.gy/publish/twitter"></input>
+
+ <nobr>
+ <!-- use a hidden input before the checkbox with the same name to set the value
+      to be sent when the checkbox is unchecked. -->
+ &nbsp;
+ <input id="include-link-unchecked" name="bridgy_omit_link" type="hidden"
+        value="true"></input>
+ <input id="include-link-checked" name="bridgy_omit_link" type="checkbox"
+        value="false" checked></input>
+ <label id="include-link-label" for="include-link-checked">Include link</label>
+ &nbsp;
+ <button id="preview-button" type="submit" class="btn btn-default">Preview</button>
+ </nobr>
+</p>
+</form>
+
+<!-- Publish signup buttons -->
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/revieweddotcom"
+       title="Reviewed.com">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/2552989214/6ff3j1gbs93a2vo8tcyd.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/bgrier/status/530438304198848513">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/bgrier/status/530438304198848513">
+      
+        Reading: New iOS malware spreads through ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415394760&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1MzA0MzgzMDQxOTg4NDg1MTNfZmF2b3JpdGVkX2J5XzQwMDE1NzIzDA">
+    
+      1 week, 2 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.theverge.com/2014/11/5/7164839/new-ios-malware-targets-devices-through-chinese-app-stores">theverge.com/2014/11/5/7164...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/Snapzu_Science"
+       title="Snapzu Science">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/473969610463518720/GqdLl9VN.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/bgrier/status/530406012415918080">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/bgrier/status/530406012415918080">
+      
+        Reading: Duck-billed dinosaurs were no sitting ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415394755&key=aglzfmJyaWQtZ3lyTQsSCFJlc3BvbnNlIj90YWc6dHdpdHRlci5jb20sMjAxMzo1MzA0MDYwMTI0MTU5MTgwODBfZmF2b3JpdGVkX2J5XzI1NDQ1OTgwMjAM">
+    
+      1 week, 2 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://phys.org/news/2014-11-duck-billed-dinosaurs-ducks.html">phys.org/news/2014-11-d...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://blog.bradgrier.com"
+       title="Brad Grier">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/1165560491/bgrier_Tech-merge-sq.jpg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/bgrier/status/530046537896693761">
+        @DanicaHere Heh, I understand. Though you ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/bgrier/status/530043677406953472">
+      
+        Oooh. Just in time for Christmas! ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415292795&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzAwNDY1Mzc4OTY2OTM3NjEM">
+    
+      1 week, 3 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://geekdad.com/2014/11/the-art-of-space-nostalgia-art-at-its-best/">geekdad.com/2014/11/the-ar...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://livewithinyourspace.wordpress.com/"
+       title="Danica LeBlanc">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/502226473848414208/7RxfSuMD.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/DanicaHere/status/530045663422083072">
+        @bgrier You don't know how much ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/bgrier/status/530043677406953472">
+      
+        Oooh. Just in time for Christmas! ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415292766&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzAwNDU2NjM0MjIwODMwNzIM">
+    
+      1 week, 3 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://geekdad.com/2014/11/the-art-of-space-nostalgia-art-at-its-best/">geekdad.com/2014/11/the-ar...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://livewithinyourspace.wordpress.com/"
+       title="Danica LeBlanc">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/502226473848414208/7RxfSuMD.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/DanicaHere/status/530046830705258497">
+        @bgrier Good point.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/bgrier/status/530046537896693761">
+      
+        @DanicaHere Heh, I understand. Though you ...
+      
+    </a></li>
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/bgrier/status/530043677406953472">
+      
+        Oooh. Just in time for Christmas! ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415292744&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzAwNDY4MzA3MDUyNTg0OTcM">
+    
+      1 week, 3 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://geekdad.com/2014/11/the-art-of-space-nostalgia-art-at-its-best/">geekdad.com/2014/11/the-ar...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.ebookdiscovery.com"
+       title="eBookRomance">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/3573462410/b62941530de053f997cc6fd481d30a5e.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/eBook_Romance/status/529348711617687552">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/bgrier/status/528276978701697024">
+      
+        Reading: Richard Branson’s Spacecraft Crashes thebea.st/10aFmkq
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415099494&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MjkzNDg3MTE2MTc2ODc1NTIM">
+    
+      1 week, 5 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.thedailybeast.com/cheats/2014/10/31/richard-branson-s-spacecraft-crashes.html">thedailybeast.com/cheats/2014/10...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/RedditStarWars"
+       title="Star Wars Forum">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000689369284/f8e57ffe6dcf021aad48e9adc9d3640b.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/bgrier/status/528920981180796929">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/bgrier/status/528920981180796929">
+      
+        Interesting:"... the GM mentions that the ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415029408&key=aglzfmJyaWQtZ3lyTQsSCFJlc3BvbnNlIj90YWc6dHdpdHRlci5jb20sMjAxMzo1Mjg5MjA5ODExODA3OTY5MjlfZmF2b3JpdGVkX2J5XzIxNzI1NDA5NzkM">
+    
+      1 week, 6 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.gnomestew.com/gming-advice/hot-button-rejecting-canon/">gnomestew.com/gming-advice/h...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/rakesh85"
+       title="rakesh85">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/527469187828969473/d5oggw0e.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/bgrier/status/528920981180796929">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/bgrier/status/528920981180796929">
+      
+        Interesting:"... the GM mentions that the ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414944120&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1Mjg5MjA5ODExODA3OTY5MjlfZmF2b3JpdGVkX2J5XzE1MTIxODkzDA">
+    
+      2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.gnomestew.com/gming-advice/hot-button-rejecting-canon/">gnomestew.com/gming-advice/h...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/rakesh85"
+       title="rakesh85">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/527469187828969473/d5oggw0e.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/bgrier/status/528276978701697024">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/bgrier/status/528276978701697024">
+      
+        Reading: Richard Branson’s Spacecraft Crashes thebea.st/10aFmkq
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414866494&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1MjgyNzY5Nzg3MDE2OTcwMjRfZmF2b3JpdGVkX2J5XzE1MTIxODkzDA">
+    
+      2 weeks, 1 day ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.thedailybeast.com/cheats/2014/10/31/richard-branson-s-spacecraft-crashes.html">thedailybeast.com/cheats/2014/10...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/hparker"
+       title="★ Heather Parker ★">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/1163686900/up.jpg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/bgrier/status/528005958765928448">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/bgrier/status/528005958765928448">
+      
+        Reddit Gift exchange is such a ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414786153&key=aglzfmJyaWQtZ3lySgsSCFJlc3BvbnNlIjx0YWc6dHdpdHRlci5jb20sMjAxMzo1MjgwMDU5NTg3NjU5Mjg0NDhfZmF2b3JpdGVkX2J5XzY3OTMyMjIM">
+    
+      2 weeks, 2 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://redditgifts.com/about/">redditgifts.com/about/</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+
+<p id="publishes" class="big">Recently published:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://blog.bradgrier.com/2014/09/30/cold-starving/">blog.bradgrier.com/2014/09/30/col...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1412107086&key=aglzfmJyaWQtZ3lyWgsSDVB1Ymxpc2hlZFBhZ2UiM2h0dHA6Ly9ibG9nLmJyYWRncmllci5jb20vMjAxNC8wOS8zMC9jb2xkLXN0YXJ2aW5nLwwLEgdQdWJsaXNoGICAgICAgIAKDA">
+      1 month, 2 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     preview
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://blog.bradgrier.com/2014/07/01/its-about-rescuing-the-ones-you-can/">blog.bradgrier.com/2014/07/01/its...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1412093604&key=aglzfmJyaWQtZ3lycAsSDVB1Ymxpc2hlZFBhZ2UiSWh0dHA6Ly9ibG9nLmJyYWRncmllci5jb20vMjAxNC8wNy8wMS9pdHMtYWJvdXQtcmVzY3VpbmctdGhlLW9uZXMteW91LWNhbi8MCxIHUHVibGlzaBiAgICAgICACgw">
+      1 month, 2 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     preview
+     
+
+   </div>
+  </li>
+  
+</ul>
+
+
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

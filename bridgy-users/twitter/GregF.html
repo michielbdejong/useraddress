@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Greg Falken (Twitter) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://twitter.com/GregF" title="Greg Falken (Twitter)"
+   class="u-url">
+  <img class="profile u-photo" src="https://pbs.twimg.com/profile_images/378800000313521861/0c69481faf2a3637273e55104d427595.jpeg" width="64px" />
+  <img src="/static/twitter_icon.png"
+       
+       alt="Twitter" />
+  <span class="p-name">Greg Falken</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://www.gregfalken.com/" class="publish-domain u-url">gregfalken.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyEgsSB1R3aXR0ZXIiBUdyZWdGDA" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416206850&key=aglzfmJyaWQtZ3lyEgsSB1R3aXR0ZXIiBUdyZWdGDA">
+      1 hour, 47 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyEgsSB1R3aXR0ZXIiBUdyZWdGDA" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+<form method="post" action="/delete/start">
+<p id="publishing-label" class="big">
+ Ready to publish.
+   <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyEgsSB1R3aXR0ZXIiBUdyZWdGDA" />
+   <input name="feature" type="hidden" value="publish" />
+   <button id="delete-button" type="submit" class="btn btn-default"
+     title="Disable publishing for this account. (Won't delete posts you've already published.)"
+     >Disable</button>
+</p>
+</form>
+
+<form method="post" name="preview" action="/publish/preview"
+      onsubmit="do_preview('twitter'); return false;">
+<p id="preview-ui">
+ <label id="source-label" for="source-url">Enter post URL:</label>
+ <input id="source-url" name="source" type="url" required alt="Source URL"></input>
+ <input name="target" type="hidden"
+        value="http://brid.gy/publish/twitter"></input>
+
+ <nobr>
+ <!-- use a hidden input before the checkbox with the same name to set the value
+      to be sent when the checkbox is unchecked. -->
+ &nbsp;
+ <input id="include-link-unchecked" name="bridgy_omit_link" type="hidden"
+        value="true"></input>
+ <input id="include-link-checked" name="bridgy_omit_link" type="checkbox"
+        value="false" checked></input>
+ <label id="include-link-label" for="include-link-checked">Include link</label>
+ &nbsp;
+ <button id="preview-button" type="submit" class="btn btn-default">Preview</button>
+ </nobr>
+</p>
+</form>
+
+<!-- Publish signup buttons -->
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/OpenSourceRDT"
+       title="Open Source News">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/506773127750098944/s6_vmG3M.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/GregF/status/526510498909810689">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/GregF/status/526510498909810689">
+      
+        I'm excited to be a part ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414406611&key=aglzfmJyaWQtZ3lyTQsSCFJlc3BvbnNlIj90YWc6dHdpdHRlci5jb20sMjAxMzo1MjY1MTA0OTg5MDk4MTA2ODlfZmF2b3JpdGVkX2J5XzI3ODU4MjEyODQM">
+    
+      2 weeks, 6 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.gregfalken.com/2014/10/wordpress-training-team/">gregfalken.com/2014/10/wordpr...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/a_ilovepink"
+       title="⇝&#39;αnα‹る">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/506616045004529666/03v9iFyY.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/GregF/status/513074966418313216">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/GregF/status/513074966418313216">
+      
+        Nice surprise: #cricketwireless just doubled my ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1411195614&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo1MTMwNzQ5NjY0MTgzMTMyMTZfZmF2b3JpdGVkX2J5XzM2Mzg5NzY5Mgw">
+    
+      1 month, 4 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://www.cricketwireless.com/moredata-mobile">cricketwireless.com/moredata-mobil...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/Krystal_TX"
+       title="Krystal Nicole">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/433413644714385408/-0-7M3ut.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/GregF/status/489855125603635200">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/GregF/status/489855125603635200">
+      
+        RIP Johnny Winter, a musical influence ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1405818660&key=aglzfmJyaWQtZ3lyTQsSCFJlc3BvbnNlIj90YWc6dHdpdHRlci5jb20sMjAxMzo0ODk4NTUxMjU2MDM2MzUyMDBfZmF2b3JpdGVkX2J5XzIzMzU3OTU5NTYM">
+    
+      4 months ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.gregfalken.com/2014/07/rip-johnny-winter/">gregfalken.com/2014/07/rip-jo...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://hickox.org/"
+       title="David Hickox">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/2432175818/zxkz03vo1dyoy7h5o6sr.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/roboticarm/status/485210234894303232">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/GregF/status/485209988168556545">
+      
+        Yeah! $4.8m raised for @MayOneUS. 11 ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1404518367&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo0ODUyMTAyMzQ4OTQzMDMyMzIM">
+    
+      4 months, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://mayday.us/newpledge/">mayday.us/newpledge/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/HugginsMarshall"
+       title="Marshall Huggins">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000653328283/b00260594e4a05aa84676e90dec49c34.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/HugginsMarshall/status/485210710050619392">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/GregF/status/485209988168556545">
+      
+        Yeah! $4.8m raised for @MayOneUS. 11 ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1404518347&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo0ODUyMTA3MTAwNTA2MTkzOTIM">
+    
+      4 months, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://mayday.us/newpledge/">mayday.us/newpledge/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/HugginsMarshall"
+       title="Marshall Huggins">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000653328283/b00260594e4a05aa84676e90dec49c34.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/GregF/status/485209988168556545">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/GregF/status/485209988168556545">
+      
+        Yeah! $4.8m raised for @MayOneUS. 11 ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1404518316&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo0ODUyMDk5ODgxNjg1NTY1NDVfZmF2b3JpdGVkX2J5XzcwNTEwNzkyMQw">
+    
+      4 months, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://mayday.us/newpledge/">mayday.us/newpledge/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/rdoody"
+       title="Ryan Doody">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/317121068/n43001001_30507250_4203.jpg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/GregF/status/482179014342094848">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/GregF/status/482179014342094848">
+      
+        Check out the awesome plan from ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      4 months, 3 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.beckymccray.com"
+       title="Becky McCray">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000532065945/86611934ffe5ff155cbc2253d140d766.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/BeckyMcCray/status/472433743462805504">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/GregF/status/472433090254864384">
+      
+        The second in our series of ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1401472186&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo0NzI0MzM3NDM0NjI4MDU1MDQM">
+    
+      5 months, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://sierraonlineservices.com/wordpress-lessons-pages-and-posts/">sierraonlineservices.com/wordpress-less...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://twitter.com/ConBluth"
+       title="Conor">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/424159370822184961/YQPgfy5H.jpeg" width="32" /></a>
+      <a target="_blank" href="http://twitter.com/GregF/status/466332467381940225">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://twitter.com/GregF/status/466332467381940225">
+      
+        I don't pledge to much but ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1400019261&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo0NjYzMzI0NjczODE5NDAyMjVfZmF2b3JpdGVkX2J5XzU5MjA5OTMzNQw">
+    
+      6 months, 1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.gregfalken.com/2014/05/pledge-to-mayone-us/">gregfalken.com/2014/05/pledge...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://twitter.com/CampaignReform1"
+       title="Campaign Reform ">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000811983148/e2c50efea9145e75a1ce201dd76a2fcf.jpeg" width="32" /></a>
+      <a target="_blank" href="http://twitter.com/CampaignReform1/status/466340130400518144">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://twitter.com/GregF/status/466332467381940225">
+      
+        I don't pledge to much but ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1400019253&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo0NjYzNDAxMzA0MDA1MTgxNDQM">
+    
+      6 months, 1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.gregfalken.com/2014/05/pledge-to-mayone-us/">gregfalken.com/2014/05/pledge...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+
+<p id="publishes" class="big">Recently published:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://www.gregfalken.com/2014/04/2nd-saturday-art-night-in-sonora/">gregfalken.com/2014/04/2nd-sa...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1397589684&key=aglzfmJyaWQtZ3lyagsSDVB1Ymxpc2hlZFBhZ2UiQ2h0dHA6Ly93d3cuZ3JlZ2ZhbGtlbi5jb20vMjAxNC8wNC8ybmQtc2F0dXJkYXktYXJ0LW5pZ2h0LWluLXNvbm9yYS8MCxIHUHVibGlzaBiAgICAgOSRCgw">
+      7 months ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     preview
+     
+
+   </div>
+  </li>
+  
+</ul>
+
+
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

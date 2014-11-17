@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>David Mead (Twitter) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://twitter.com/davidmead" title="David Mead (Twitter)"
+   class="u-url">
+  <img class="profile u-photo" src="https://pbs.twimg.com/profile_images/99702630/social-union-jack.jpg" width="64px" />
+  <img src="/static/twitter_icon.png"
+       
+       alt="Twitter" />
+  <span class="p-name">David Mead</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://davidmead.withknown.com/" class="publish-domain u-url">davidmead.withknown.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyFgsSB1R3aXR0ZXIiCWRhdmlkbWVhZAw" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416212904&key=aglzfmJyaWQtZ3lyFgsSB1R3aXR0ZXIiCWRhdmlkbWVhZAw">
+      4 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyFgsSB1R3aXR0ZXIiCWRhdmlkbWVhZAw" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+<form method="post" action="/delete/start">
+<p id="publishing-label" class="big">
+ Ready to publish.
+   <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyFgsSB1R3aXR0ZXIiCWRhdmlkbWVhZAw" />
+   <input name="feature" type="hidden" value="publish" />
+   <button id="delete-button" type="submit" class="btn btn-default"
+     title="Disable publishing for this account. (Won't delete posts you've already published.)"
+     >Disable</button>
+</p>
+</form>
+
+<form method="post" name="preview" action="/publish/preview"
+      onsubmit="do_preview('twitter'); return false;">
+<p id="preview-ui">
+ <label id="source-label" for="source-url">Enter post URL:</label>
+ <input id="source-url" name="source" type="url" required alt="Source URL"></input>
+ <input name="target" type="hidden"
+        value="http://brid.gy/publish/twitter"></input>
+
+ <nobr>
+ <!-- use a hidden input before the checkbox with the same name to set the value
+      to be sent when the checkbox is unchecked. -->
+ &nbsp;
+ <input id="include-link-unchecked" name="bridgy_omit_link" type="hidden"
+        value="true"></input>
+ <input id="include-link-checked" name="bridgy_omit_link" type="checkbox"
+        value="false" checked></input>
+ <label id="include-link-label" for="include-link-checked">Include link</label>
+ &nbsp;
+ <button id="preview-button" type="submit" class="btn btn-default">Preview</button>
+ </nobr>
+</p>
+</form>
+
+<!-- Publish signup buttons -->
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/GeraldGant"
+       title="Gerry Gant">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/484044668452081664/VxO-G1d6.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/GeraldGant/status/534031360965767170">
+        @davidmead it's the "duty free" that ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/davidmead/status/533800715010199553">
+      
+        Yes it was @GeraldGant
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      15 hours, 15 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/GeraldGant"
+       title="Gerry Gant">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/484044668452081664/VxO-G1d6.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/GeraldGant/status/533785652161421312">
+        @davidmead best show ever!</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/davidmead/status/533732145768841216">
+      
+        @GeraldGant "Last night was an A-1, ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416099871&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzM3ODU2NTIxNjE0MjEzMTIM">
+    
+      1 day, 7 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://davidmead.withknown.com/2014/geraldgant-last-night-was-an-a-1-tip-top-clubbing-jam">davidmead.withknown.com/2014/geraldgan...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.abbytheia.com"
+       title="Abby Covert">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/529308861438517249/AetlMaOJ.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/Abby_the_IA/status/533737115939385344">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/davidmead/status/533436647656792064">
+      
+        Ordered 2 books today :-) amazon.com/gp/product/150… ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 day, 10 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/leifos"
+       title="Leif Azzopardi">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/2340071425/uga6gpkjwy99etymnvhb.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/davidmead/status/533656207840382977">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/davidmead/status/533656207840382977">
+      
+        Nowhere in my definition of 'lazy' ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416078134&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1MzM2NTYyMDc4NDAzODI5NzdfZmF2b3JpdGVkX2J5XzI1MTM0NDY5DA">
+    
+      1 day, 13 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://davidmead.withknown.com/2014/nowhere-in-my-definition-of-lazy-does-run-come-into">davidmead.withknown.com/2014/nowhere-i...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/morville"
+       title="Peter Morville">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/448489631583973376/Bxkr3Niz.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/davidmead/status/533656207840382977">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/davidmead/status/533656207840382977">
+      
+        Nowhere in my definition of 'lazy' ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416070866&key=aglzfmJyaWQtZ3lySgsSCFJlc3BvbnNlIjx0YWc6dHdpdHRlci5jb20sMjAxMzo1MzM2NTYyMDc4NDAzODI5NzdfZmF2b3JpdGVkX2J5XzEyMzA4MDEM">
+    
+      1 day, 15 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://davidmead.withknown.com/2014/nowhere-in-my-definition-of-lazy-does-run-come-into">davidmead.withknown.com/2014/nowhere-i...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/inkblurt"
+       title="Andrew Hinton">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/504039491406147584/kuBarCbW.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/davidmead/status/533436647656792064">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/davidmead/status/533436647656792064">
+      
+        Ordered 2 books today :-) amazon.com/gp/product/150… ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 days, 3 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/tiffdoh"
+       title="Tiffani Doherty">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/499333349018972160/yB3cwENf.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/davidmead/status/533109394129829890">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/davidmead/status/533109394129829890">
+      
+        First snow for Rosie #vscocam @ ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      3 days, 3 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/LauraLCrowe"
+       title="LauraLCrowe">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000501551158/a77145f346338319566b255be85d7463.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/davidmead/status/532971221671890945">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/davidmead/status/532971221671890945">
+      
+        Disspointed I'm missing World Usability Day: ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415913698&key=aglzfmJyaWQtZ3lySgsSCFJlc3BvbnNlIjx0YWc6dHdpdHRlci5jb20sMjAxMzo1MzI5NzEyMjE2NzE4OTA5NDVfZmF2b3JpdGVkX2J5Xzc1MDMyMDIM">
+    
+      3 days, 11 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://davidjohnmead.com/2014/11/13/world-usability-day/">davidjohnmead.com/2014/11/13/wor...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/boardthing"
+       title="Board Thing">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/467319026977239043/im5_hdo7.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/davidmead/status/532984890115899392">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/davidmead/status/532984890115899392">
+      
+        Hey @boardthing. Can you import/paste a ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415913047&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo1MzI5ODQ4OTAxMTU4OTkzOTJfZmF2b3JpdGVkX2J5XzI2NzEzMDY3NAw">
+    
+      3 days, 11 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://davidmead.withknown.com/2014/hey-boardthing-can-you-importpaste-a-column-from-excel-as">davidmead.withknown.com/2014/hey-board...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/boardthing"
+       title="Board Thing">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/467319026977239043/im5_hdo7.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/davidmead/status/532987080629313538">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/davidmead/status/532987080629313538">
+      
+        OK @mikeramo, Thanks. Hopefully that'll be ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415913030&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo1MzI5ODcwODA2MjkzMTM1MzhfZmF2b3JpdGVkX2J5XzI2NzEzMDY3NAw">
+    
+      3 days, 11 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://davidmead.withknown.com/2014/ok-mikeramo-thanks-hopefully-thatll-be-a-future-boardthing-feature">davidmead.withknown.com/2014/ok-mikera...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+
+<p id="publishes" class="big">Recently published:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://davidjohnmead.com/2014/09/29/test/">davidjohnmead.com/2014/09/29/tes...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1412009014&key=aglzfmJyaWQtZ3lyUAsSDVB1Ymxpc2hlZFBhZ2UiKWh0dHA6Ly9kYXZpZGpvaG5tZWFkLmNvbS8yMDE0LzA5LzI5L3Rlc3QvDAsSB1B1Ymxpc2gYgICAgICAgAoM">
+      1 month, 2 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://twitter.com/davidmead/status/516629367854600194">
+     
+     tweet
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://davidjohnmead.com/2014/09/28/thanks-to-eppc-for-the-delicious-pork-pie-lunch/comment-page-1/#comment-1660">davidjohnmead.com/2014/09/28/tha...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1411995353&key=aglzfmJyaWQtZ3lylwELEg1QdWJsaXNoZWRQYWdlInBodHRwOi8vZGF2aWRqb2hubWVhZC5jb20vMjAxNC8wOS8yOC90aGFua3MtdG8tZXBwYy1mb3ItdGhlLWRlbGljaW91cy1wb3JrLXBpZS1sdW5jaC9jb21tZW50LXBhZ2UtMS8jY29tbWVudC0xNjYwDAsSB1B1Ymxpc2gYgICAgICAgAoM">
+      1 month, 2 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     preview
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://davidjohnmead.com/2014/09/28/thanks-to-eppc-for-the-delicious-pork-pie-lunch/">davidjohnmead.com/2014/09/28/tha...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1411921543&key=aglzfmJyaWQtZ3lyewsSDVB1Ymxpc2hlZFBhZ2UiVGh0dHA6Ly9kYXZpZGpvaG5tZWFkLmNvbS8yMDE0LzA5LzI4L3RoYW5rcy10by1lcHBjLWZvci10aGUtZGVsaWNpb3VzLXBvcmstcGllLWx1bmNoLwwLEgdQdWJsaXNoGICAgICAgIAKDA">
+      1 month, 2 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://twitter.com/davidmead/status/516262488342396928">
+     
+     tweet
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://davidjohnmead.com/2014/09/27/nice-to-see-the-ello-notifications-trickling-in-im-davidmead-there-too/">davidjohnmead.com/2014/09/27/nic...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1411838903&key=aglzfmJyaWQtZ3lykgELEg1QdWJsaXNoZWRQYWdlImtodHRwOi8vZGF2aWRqb2hubWVhZC5jb20vMjAxNC8wOS8yNy9uaWNlLXRvLXNlZS10aGUtZWxsby1ub3RpZmljYXRpb25zLXRyaWNrbGluZy1pbi1pbS1kYXZpZG1lYWQtdGhlcmUtdG9vLwwLEgdQdWJsaXNoGICAgICAgIAKDA">
+      1 month, 2 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://twitter.com/davidmead/status/515915868841058304">
+     
+     tweet
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://davidjohnmead.com/2014/09/27/eggs-salsa-for-breakfast-nom/">davidjohnmead.com/2014/09/27/egg...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1411821390&key=aglzfmJyaWQtZ3lyaAsSDVB1Ymxpc2hlZFBhZ2UiQWh0dHA6Ly9kYXZpZGpvaG5tZWFkLmNvbS8yMDE0LzA5LzI3L2VnZ3Mtc2Fsc2EtZm9yLWJyZWFrZmFzdC1ub20vDAsSB1B1Ymxpc2gYgICAgICAgAoM">
+      1 month, 2 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://twitter.com/davidmead/status/515842413475008514">
+     
+     tweet
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://davidjohnmead.com/2014/09/25/who-knew/">davidjohnmead.com/2014/09/25/who...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1411686032&key=aglzfmJyaWQtZ3lyVQsSDVB1Ymxpc2hlZFBhZ2UiLmh0dHBzOi8vZGF2aWRqb2hubWVhZC5jb20vMjAxNC8wOS8yNS93aG8ta25ldy8MCxIHUHVibGlzaBiAgICAgICACgw">
+      1 month, 3 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://twitter.com/davidmead/status/515274683726315520">
+     
+     tweet
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://davidjohnmead.com/2014/09/25/761/">davidjohnmead.com/2014/09/25/761...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1411675856&key=aglzfmJyaWQtZ3lyTwsSDVB1Ymxpc2hlZFBhZ2UiKGh0dHA6Ly9kYXZpZGpvaG5tZWFkLmNvbS8yMDE0LzA5LzI1Lzc2MS8MCxIHUHVibGlzaBiAgICAgICACgw">
+      1 month, 3 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://twitter.com/davidmead/status/515231999892520960">
+     
+     tweet
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://davidjohnmead.com/2014/09/21/754/">davidjohnmead.com/2014/09/21/754...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1411344651&key=aglzfmJyaWQtZ3lyTwsSDVB1Ymxpc2hlZFBhZ2UiKGh0dHA6Ly9kYXZpZGpvaG5tZWFkLmNvbS8yMDE0LzA5LzIxLzc1NC8MCxIHUHVibGlzaBiAgICAgICACgw">
+      1 month, 3 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://twitter.com/davidmead/status/513842827143303168">
+     
+     tweet
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://davidjohnmead.com/2014/09/19/scotland/">davidjohnmead.com/2014/09/19/sco...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1411129432&key=aglzfmJyaWQtZ3lyVAsSDVB1Ymxpc2hlZFBhZ2UiLWh0dHA6Ly9kYXZpZGpvaG5tZWFkLmNvbS8yMDE0LzA5LzE5L3Njb3RsYW5kLwwLEgdQdWJsaXNoGICAgICAgIAKDA">
+      1 month, 4 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://twitter.com/davidmead/status/512940134669365248">
+     
+     tweet
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://davidjohnmead.com/2014/09/07/tracking-indiewebcamp/">davidjohnmead.com/2014/09/07/tra...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1410111589&key=aglzfmJyaWQtZ3lyYQsSDVB1Ymxpc2hlZFBhZ2UiOmh0dHA6Ly9kYXZpZGpvaG5tZWFkLmNvbS8yMDE0LzA5LzA3L3RyYWNraW5nLWluZGlld2ViY2FtcC8MCxIHUHVibGlzaBiAgICAgK6ZCgw">
+      2 months, 1 week ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://twitter.com/davidmead/status/508670989723381760">
+     
+     tweet
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+</ul>
+
+
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

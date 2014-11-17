@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Cornelius Mueller (Twitter) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://twitter.com/sinolandquality" title="Cornelius Mueller (Twitter)"
+   class="u-url">
+  <img class="profile u-photo" src="https://pbs.twimg.com/profile_images/1388062718/L1000772a.jpg" width="64px" />
+  <img src="/static/twitter_icon.png"
+       
+       alt="Twitter" />
+  <span class="p-name">Cornelius Mueller</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://www.sinolandquality.com/Blog/" class="publish-domain u-url">sinolandquality.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+
+<div class="row promo warning">
+You
+ need 
+<a href='http://indiewebify.me/#send-webmentions'>webmention</a> support.
+
+
+<a href="http://indiewebcamp.com/webmention#Publishing_Software">Here are some
+resources.</a> If you're on
+WordPress, <a href="http://wordpress.org/plugins/indieweb/">try the IndieWeb
+bundle plugin</a>. If you're on Blogger, Tumblr, or
+WordPress.com, <a href="/">sign up here!</a>
+
+
+
+</div>
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyHAsSB1R3aXR0ZXIiD3Npbm9sYW5kcXVhbGl0eQw" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416143117&key=aglzfmJyaWQtZ3lyHAsSB1R3aXR0ZXIiD3Npbm9sYW5kcXVhbGl0eQw">
+      19 hours, 39 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyHAsSB1R3aXR0ZXIiD3Npbm9sYW5kcXVhbGl0eQw" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+<span class="big">Click to enable <a href="/about#publish">publishing</a>:</span>
+<form method="post" name="publish-twitter-start" action="/twitter/start" class="signup">
+ <input type="image" alt="Sign in with Twitter"
+        src="/activitystreams/oauth_dropins/static/twitter.png" />
+ <input name="feature" type="hidden" value="publish" />
+</form>
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/engfahdshahrani"
+       title="م.فهد الشهراني">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000667573479/6fb4d0b39ce0f526652500c0261bf3c9.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/sinolandquality/status/531247476679118848">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/sinolandquality/status/531247476679118848">
+      
+        LED Lighting Applications – Possibilities and ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415667106&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo1MzEyNDc0NzY2NzkxMTg4NDhfZmF2b3JpdGVkX2J5XzQ5Mzg2MzQ0Nww">
+    
+      6 days, 7 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.sinolandquality.com/Blog/?page_id=74">sinolandquality.com/Blog/?page_id=...</a></li>
+	<li><a class="original-post" target="_blank" href="http://SinolandQuality.com/">SinolandQuality.com/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/engfahdshahrani"
+       title="م.فهد الشهراني">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000667573479/6fb4d0b39ce0f526652500c0261bf3c9.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/sinolandquality/status/531721455990747136">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/sinolandquality/status/531721455990747136">
+      
+        SinolandQuality.com Blog sinolandquality.com/Blog/
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415667103&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo1MzE3MjE0NTU5OTA3NDcxMzZfZmF2b3JpdGVkX2J5XzQ5Mzg2MzQ0Nww">
+    
+      6 days, 7 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.sinolandquality.com/Blog/">sinolandquality.com/Blog/</a></li>
+	<li><a class="original-post" target="_blank" href="http://SinolandQuality.com/">SinolandQuality.com/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/crossderry"
+       title="Paul Ritchie">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/95074088/PaulModigliani_twitter.JPG" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/sinolandquality/status/526200841750183936">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/sinolandquality/status/526200841750183936">
+      
+        ErP &amp; Ecodesign « SinolandQuality.com Blog ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414377331&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1MjYyMDA4NDE3NTAxODM5MzZfZmF2b3JpdGVkX2J5XzIzOTU2NjIxDA">
+    
+      3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.sinolandquality.com/Blog/?page_id=5025">sinolandquality.com/Blog/?page_id=...</a></li>
+	<li><a class="original-post" target="_blank" href="http://SinolandQuality.com/">SinolandQuality.com/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/jnxyz"
+       title="JonathanNalder JNXYZ">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/497616003145019392/S1ZUceSc.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/sinolandquality/status/523400023589937153">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/sinolandquality/status/523400023589937153">
+      
+        enLighten Australia lnkd.in/buszQbD
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      4 weeks, 1 day ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/KellerOfCapsule"
+       title="Aaron Keller">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/458953835940044801/PB46hZ4p.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/sinolandquality/status/523400023589937153">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/sinolandquality/status/523400023589937153">
+      
+        enLighten Australia lnkd.in/buszQbD
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      4 weeks, 1 day ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://phyang.org"
+       title="P H Yang Photography">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/95616594/ph3.jpg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/TravelFoto/status/517498308009287680">
+        HK does not resent China success ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/sinolandquality/status/517469829419515904">
+      
+        @TravelFoto @OCLPHK @hu_jia @aiww In case ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1412281354&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MTc0OTgzMDgwMDkyODc2ODAM">
+    
+      1 month, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.theguardian.com/commentisfree/2014/sep/30/china-hong-kong-future-protesters-cry-democracy">theguardian.com/commentisfree/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://cmp.hku.hk/"
+       title="China Media Project">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/808733663/cmp_logo.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/cmphku/status/517473621124468736">
+        @sinolandquality @hkdemonow @hoccgoomusic and now Mr ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/sinolandquality/status/517466783050395649">
+      
+        @hkdemonow @cmphku @hoccgoomusic In case you ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1412281352&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MTc0NzM2MjExMjQ0Njg3MzYM">
+    
+      1 month, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.theguardian.com/commentisfree/2014/sep/30/china-hong-kong-future-protesters-cry-democracy">theguardian.com/commentisfree/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://australianetwork.com/guide/00183673.htm"
+       title="Sarah Clarke">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/451709510646636544/vmYMAP9v.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/sarahclarkeabc/status/517469508215115776">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/sinolandquality/status/517467994877071360">
+      
+        @sarahclarkeabc @OCLPHK In case you missed ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1412281351&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MTc0Njk1MDgyMTUxMTU3NzYM">
+    
+      1 month, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.theguardian.com/commentisfree/2014/sep/30/china-hong-kong-future-protesters-cry-democracy">theguardian.com/commentisfree/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://twitter.com/freakingcat"
+       title="Freakingcat">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/515393700600373248/2EKtokWp.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/freakingcat/status/517497953171173376">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/sinolandquality/status/517469683684233216">
+      
+        @freakingcat @OCLPHK In case you missed ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1412281349&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MTc0OTc5NTMxNzExNzMzNzYM">
+    
+      1 month, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.theguardian.com/commentisfree/2014/sep/30/china-hong-kong-future-protesters-cry-democracy">theguardian.com/commentisfree/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/Anon_Snufkin"
+       title="Snufkin ">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/426304386780786688/b-p7nKh1.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/Anon_Snufkin/status/517476822993215490">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/sinolandquality/status/517467994877071360">
+      
+        @sarahclarkeabc @OCLPHK In case you missed ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1412281331&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MTc0NzY4MjI5OTMyMTU0OTAM">
+    
+      1 month, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.theguardian.com/commentisfree/2014/sep/30/china-hong-kong-future-protesters-cry-democracy">theguardian.com/commentisfree/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Barnaby Walters (Twitter) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://twitter.com/BarnabyWalters" title="Barnaby Walters (Twitter)"
+   class="u-url">
+  <img class="profile u-photo" src="https://pbs.twimg.com/profile_images/378800000400393459/ef2c37bd2e96540516997986577e3011.jpeg" width="64px" />
+  <img src="/static/twitter_icon.png"
+       
+       alt="Twitter" />
+  <span class="p-name">Barnaby Walters</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://waterpigs.co.uk" class="publish-domain u-url">waterpigs.co.uk</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGwsSB1R3aXR0ZXIiDkJhcm5hYnlXYWx0ZXJzDA" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416212386&key=aglzfmJyaWQtZ3lyGwsSB1R3aXR0ZXIiDkJhcm5hYnlXYWx0ZXJzDA">
+      11 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGwsSB1R3aXR0ZXIiDkJhcm5hYnlXYWx0ZXJzDA" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+<span class="big">Click to enable <a href="/about#publish">publishing</a>:</span>
+<form method="post" name="publish-twitter-start" action="/twitter/start" class="signup">
+ <input type="image" alt="Sign in with Twitter"
+        src="/activitystreams/oauth_dropins/static/twitter.png" />
+ <input name="feature" type="hidden" value="publish" />
+</form>
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.anomalily.net"
+       title="Lillian Karabaic">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/423322528417718274/UJXexuFk.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/anomalily/status/534103064299720704">
+        @BarnabyWalters Hell yes I do!</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/BarnabyWalters/status/534102250982219777">
+      
+        @anomalily sounds like an amazing trip! ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416175157&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzQxMDMwNjQyOTk3MjA3MDQM">
+    
+      10 hours, 32 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://waterpigs.co.uk/notes/4ZAMuX/">waterpigs.co.uk/notes/4ZAMuX/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/brucel"
+       title="Bruce Lawson">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/1028556851/BY_Patrick.jpg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/BarnabyWalters/status/532843294087450624">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/BarnabyWalters/status/532843294087450624">
+      
+        @brucel another handy trick is to ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415875849&key=aglzfmJyaWQtZ3lySQsSCFJlc3BvbnNlIjt0YWc6dHdpdHRlci5jb20sMjAxMzo1MzI4NDMyOTQwODc0NTA2MjRfZmF2b3JpdGVkX2J5XzQwOTgyMww">
+    
+      3 days, 21 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://waterpigs.co.uk/notes/4Z7AXr/">waterpigs.co.uk/notes/4Z7AXr/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/maxdohme"
+       title="Max Dohme">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/863387162/DSC_0998.JPG" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/BarnabyWalters/status/532493767727915009">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/BarnabyWalters/status/532493767727915009">
+      
+        For one brief moment there I ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415816117&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo1MzI0OTM3Njc3Mjc5MTUwMDlfZmF2b3JpdGVkX2J5XzEzODg1OTkxNww">
+    
+      4 days, 14 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://waterpigs.co.uk/notes/4Z6BP1/">waterpigs.co.uk/notes/4Z6BP1/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/w03_"
+       title="@|p^)">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000578645466/8990cd38b0b6f06fff5e51f3f8d1174b.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/w03_/status/532499576398573568">
+        @BarnabyWalters I'm glad someone else actually ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/BarnabyWalters/status/532493767727915009">
+      
+        For one brief moment there I ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415793309&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzI0OTk1NzYzOTg1NzM1NjgM">
+    
+      4 days, 20 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://waterpigs.co.uk/notes/4Z6BP1/">waterpigs.co.uk/notes/4Z6BP1/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/kylewm2"
+       title="Kyle Mahan">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/530883407631241216/rVLLopIs.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/BarnabyWalters/status/531853701229867008">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/BarnabyWalters/status/531853701229867008">
+      
+        Mozilla’s choice to rebrand Aurora as ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415644191&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1MzE4NTM3MDEyMjk4NjcwMDhfZmF2b3JpdGVkX2J5XzE5MDkwNzcwDA">
+    
+      6 days, 14 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://waterpigs.co.uk/notes/4Z4Gz_/">waterpigs.co.uk/notes/4Z4Gz_/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://charles.stanho.pe"
+       title="Charles Stanhope">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/525129613094035456/PA438MVc.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/cstanhope/status/531858085241835520">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/BarnabyWalters/status/531853701229867008">
+      
+        Mozilla’s choice to rebrand Aurora as ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415639970&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzE4NTgwODUyNDE4MzU1MjAM">
+    
+      6 days, 15 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://waterpigs.co.uk/notes/4Z4Gz_/">waterpigs.co.uk/notes/4Z4Gz_/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/kylewm2"
+       title="Kyle Mahan">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/530883407631241216/rVLLopIs.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/BarnabyWalters/status/531541128622145538">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/BarnabyWalters/status/531541128622145538">
+      
+        Migrating a lot of my unorganised, ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415565050&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1MzE1NDExMjg2MjIxNDU1MzhfZmF2b3JpdGVkX2J5XzE5MDkwNzcwDA">
+    
+      1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://waterpigs.co.uk/notes/4Z3LH_/">waterpigs.co.uk/notes/4Z3LH_/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/tungufoss"
+       title="Helga Ingimundard.">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/495656125895680000/lQTJiorn.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/BarnabyWalters/status/530319954714054656">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/BarnabyWalters/status/530319954714054656">
+      
+        @tungufoss excellent, thanks — I shall ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415281806&key=aglzfmJyaWQtZ3lyTQsSCFJlc3BvbnNlIj90YWc6dHdpdHRlci5jb20sMjAxMzo1MzAzMTk5NTQ3MTQwNTQ2NTZfZmF2b3JpdGVkX2J5XzI3MDEzNjYwMTUM">
+    
+      1 week, 3 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://waterpigs.co.uk/notes/4Z0BR1/">waterpigs.co.uk/notes/4Z0BR1/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://tungufoss.wordpress.com"
+       title="Helga Ingimundard.">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/495656125895680000/lQTJiorn.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/tungufoss/status/530356276346515456">
+        @BarnabyWalters go for it! You have ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/BarnabyWalters/status/530319954714054656">
+      
+        @tungufoss excellent, thanks — I shall ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415281795&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzAzNTYyNzYzNDY1MTU0NTYM">
+    
+      1 week, 3 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://waterpigs.co.uk/notes/4Z0BR1/">waterpigs.co.uk/notes/4Z0BR1/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://waterpigs.co.uk"
+       title="Barnaby Walters">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000400393459/ef2c37bd2e96540516997986577e3011.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/BarnabyWalters/status/530319954714054656">
+        @tungufoss excellent, thanks — I shall ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/BarnabyWalters/status/530306705763344385">
+      
+        @tungufoss oh cool! I’ve not heard ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415273286&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzAzMTk5NTQ3MTQwNTQ2NTYM">
+    
+      1 week, 3 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://waterpigs.co.uk/notes/4Z0AYL/">waterpigs.co.uk/notes/4Z0AYL/</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

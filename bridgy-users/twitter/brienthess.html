@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Brient Hess (Twitter) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://twitter.com/brienthess" title="Brient Hess (Twitter)"
+   class="u-url">
+  <img class="profile u-photo" src="https://pbs.twimg.com/profile_images/531915406810693632/hhT_xiGb.jpeg" width="64px" />
+  <img src="/static/twitter_icon.png"
+       
+       alt="Twitter" />
+  <span class="p-name">Brient Hess</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="https://brient.net/" class="publish-domain u-url">brient.net</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyFwsSB1R3aXR0ZXIiCmJyaWVudGhlc3MM" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416212925&key=aglzfmJyaWQtZ3lyFwsSB1R3aXR0ZXIiCmJyaWVudGhlc3MM">
+      3 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyFwsSB1R3aXR0ZXIiCmJyaWVudGhlc3MM" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+<span class="big">Click to enable <a href="/about#publish">publishing</a>:</span>
+<form method="post" name="publish-twitter-start" action="/twitter/start" class="signup">
+ <input type="image" alt="Sign in with Twitter"
+        src="/activitystreams/oauth_dropins/static/twitter.png" />
+ <input name="feature" type="hidden" value="publish" />
+</form>
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://brient.net/"
+       title="Brient Hess">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/531915406810693632/hhT_xiGb.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/brienthess/status/533711355535036417">
+        @nickjplant Good to hear. I'm not ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/brienthess/status/533706392226377729">
+      
+        Strains of gut bacterium that turn ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416082217&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzM3MTEzNTU1MzUwMzY0MTcM">
+    
+      1 day, 12 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://brient.net/2014/strains-of-gut-bacterium-that-turn-msg-into-gaba-happy">brient.net/2014/strains-o...</a></li></ul>
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://bcwh.io/nc2">bcwh.io/nc2</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/mills_abbot"
+       title="Abbot Mills">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/533007620161171456/S5MTwH2-.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/brienthess/status/533706392226377729">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/brienthess/status/533706392226377729">
+      
+        Strains of gut bacterium that turn ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416081571&key=aglzfmJyaWQtZ3lyTQsSCFJlc3BvbnNlIj90YWc6dHdpdHRlci5jb20sMjAxMzo1MzM3MDYzOTIyMjYzNzc3MjlfZmF2b3JpdGVkX2J5XzExMDQ0OTg2MTQM">
+    
+      1 day, 12 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://brient.net/2014/strains-of-gut-bacterium-that-turn-msg-into-gaba-happy">brient.net/2014/strains-o...</a></li></ul>
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://bcwh.io/nc2">bcwh.io/nc2</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://tinyurl.com/mxekmdv"
+       title="Nick Plant">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/513719526303989761/Z1pNXVkU.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/nickjplant/status/533706751078825984">
+        Nice paper "@brienthess: Strains of gut ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/brienthess/status/533706392226377729">
+      
+        Strains of gut bacterium that turn ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416081156&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzM3MDY3NTEwNzg4MjU5ODQM">
+    
+      1 day, 12 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://brient.net/2014/strains-of-gut-bacterium-that-turn-msg-into-gaba-happy">brient.net/2014/strains-o...</a></li></ul>
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://bcwh.io/nc2">bcwh.io/nc2</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/ichangemymood"
+       title="i change my mood">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/529340977039699968/63KnQCsG.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/ichangemymood/status/533706590709616640">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/brienthess/status/533706392226377729">
+      
+        Strains of gut bacterium that turn ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416081119&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzM3MDY1OTA3MDk2MTY2NDAM">
+    
+      1 day, 12 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://brient.net/2014/strains-of-gut-bacterium-that-turn-msg-into-gaba-happy">brient.net/2014/strains-o...</a></li></ul>
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://bcwh.io/nc2">bcwh.io/nc2</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/ScienceWatchout"
+       title="Science Watcher">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/452981380905857024/N948PNsW.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/ScienceWatchout/status/533706494966267904">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/brienthess/status/533706392226377729">
+      
+        Strains of gut bacterium that turn ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416081075&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzM3MDY0OTQ5NjYyNjc5MDQM">
+    
+      1 day, 12 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://brient.net/2014/strains-of-gut-bacterium-that-turn-msg-into-gaba-happy">brient.net/2014/strains-o...</a></li></ul>
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://bcwh.io/nc2">bcwh.io/nc2</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/sandrablue925"
+       title="Sandra">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/517472845715087361/1RaFnm5M.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/brienthess/status/533706392226377729">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/brienthess/status/533706392226377729">
+      
+        Strains of gut bacterium that turn ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416081063&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1MzM3MDYzOTIyMjYzNzc3MjlfZmF2b3JpdGVkX2J5XzE2NTU0MjUyDA">
+    
+      1 day, 12 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://brient.net/2014/strains-of-gut-bacterium-that-turn-msg-into-gaba-happy">brient.net/2014/strains-o...</a></li></ul>
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://bcwh.io/nc2">bcwh.io/nc2</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/Snapzu_Earth"
+       title="Snapzu Earth">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/473960994603929600/VdOt4omo.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/brienthess/status/533705164603944960">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/brienthess/status/533705164603944960">
+      
+        Not fringe anymore: neuroscientists investigating gut-brain ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416080422&key=aglzfmJyaWQtZ3lyTQsSCFJlc3BvbnNlIj90YWc6dHdpdHRlci5jb20sMjAxMzo1MzM3MDUxNjQ2MDM5NDQ5NjBfZmF2b3JpdGVkX2J5XzI1NDQ1Mzc2MjAM">
+    
+      1 day, 12 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://brient.net/2014/not-fringe-anymore-neuroscientists-investigating-gut-brain-link-nc1-science-depression">brient.net/2014/not-fring...</a></li></ul>
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.nature.com/news/gut-brain-link-grabs-neuroscientists-1.16316">nature.com/news/gut-brain...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://werd.io/"
+       title="Ben Werdmüller">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000785382039/5951d8b25d500500c4094baa1851c095.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/benwerd/status/530793841045954560">
+        @brienthess @indie We're totally open to ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/brienthess/status/530793624246558721">
+      
+        If there were some kind of ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415386372&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzA3OTM4NDEwNDU5NTQ1NjAM">
+    
+      1 week, 2 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://brient.net/2014/if-there-were-some-kind-of-known-and-waystoneheartbeat-integration">brient.net/2014/if-there-...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://leeshaker.com"
+       title="Lee Shaker">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/3189786090/2836ff5a389fc160bfffa73c5db0dcea.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/Lee_Shaker/status/530512882925326336">
+        @brienthess I don't know anything about ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/brienthess/status/530476179703496704">
+      
+        @Lee_Shaker I'll be curious to see ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415319367&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzA1MTI4ODI5MjUzMjYzMzYM">
+    
+      1 week, 3 days ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzA1MTI4ODI5MjUzMjYzMzYM" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://bitcongress.org">bitcongress.org <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://brient.net/2014/lee_shaker-ill-be-curious-to-see-what-comes-of-bitcongressorg">brient.net/2014/lee_shake...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://brient.net/"
+       title="Brient Hess">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/515203537546911744/szyQ8QrC.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/brienthess/status/530476179703496704">
+        @Lee_Shaker I'll be curious to see ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/brienthess/status/530432338975801345">
+      
+        .@Lee_Shaker The thought we could implement ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415311085&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzA0NzYxNzk3MDM0OTY3MDQM">
+    
+      1 week, 3 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://brient.net/2014/lee_shaker-the-thought-we-could-implement-a-direct-democracy-with">brient.net/2014/lee_shake...</a></li></ul>
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.vice.com/read/bitcoin-could-revolutionize-voting">vice.com/read/bitcoin-c...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

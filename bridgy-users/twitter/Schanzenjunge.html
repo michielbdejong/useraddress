@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Schanzenjunge (Twitter) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://twitter.com/Schanzenjunge" title="Schanzenjunge (Twitter)"
+   class="u-url">
+  <img class="profile u-photo" src="https://pbs.twimg.com/profile_images/481823456674062336/sDtNoLpC.jpeg" width="64px" />
+  <img src="/static/twitter_icon.png"
+       
+       alt="Twitter" />
+  <span class="p-name">Schanzenjunge</span></a>
+
+
+
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row promo warning">
+<p id="edit-profile">First things first: what's your web site?
+
+<a href="https://twitter.com/settings/profile#user_url" target="_blank">
+  Edit your Twitter profile</a>,
+enter it in the <em>Website</em> field, then click here:
+<!-- Twitter listen signup -->
+<form method="post" name="listen-twitter-start" action="/twitter/start" class="signup">
+  <input type="image" alt="Sign in with Twitter"
+         src="/activitystreams/oauth_dropins/static/twitter.png" />
+  <input name="feature" type="hidden" value="listen" />
+</form>
+
+
+</p>
+</div>
+
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGgsSB1R3aXR0ZXIiDVNjaGFuemVuanVuZ2UM" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416201365&key=aglzfmJyaWQtZ3lyGgsSB1R3aXR0ZXIiDVNjaGFuemVuanVuZ2UM">
+      3 hours, 27 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGgsSB1R3aXR0ZXIiDVNjaGFuemVuanVuZ2UM" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+<span class="big">Click to enable <a href="/about#publish">publishing</a>:</span>
+<form method="post" name="publish-twitter-start" action="/twitter/start" class="signup">
+ <input type="image" alt="Sign in with Twitter"
+        src="/activitystreams/oauth_dropins/static/twitter.png" />
+ <input name="feature" type="hidden" value="publish" />
+</form>
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/PR_Hamburg"
+       title="PR Agentur Hamburg">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/2991199242/ef6e8d1876285d393f5d9ff49fce0e76.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/Schanzenjunge/status/523817644253011969">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/Schanzenjunge/status/523817644253011969">
+      
+        #Hamburg wurde soeben publiziert! paper.li/Schanzenjunge/… Dank ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413969630&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo1MjM4MTc2NDQyNTMwMTE5NjlfZmF2b3JpdGVkX2J5XzExMjcwMTMyMAw">
+    
+      3 weeks, 4 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://paper.li/Schanzenjunge/1395567834">paper.li/Schanzenjunge/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/AntoniaNiecke"
+       title="Antonia Niecke">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/472125049009614848/S9m9E96N.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/Schanzenjunge/status/521618368185761793">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/Schanzenjunge/status/521618368185761793">
+      
+        How I did on Twitter this ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413233512&key=aglzfmJyaWQtZ3lyTQsSCFJlc3BvbnNlIj90YWc6dHdpdHRlci5jb20sMjAxMzo1MjE2MTgzNjgxODU3NjE3OTNfZmF2b3JpdGVkX2J5XzE0MDgxMTYzNTQM">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://sumall.com/myweek">sumall.com/myweek</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/ThomasMoeller6"
+       title="Thomas Moeller">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000809276877/33593086dbba145d62b203ec80249e65.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/Schanzenjunge/status/518743288485261312">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/Schanzenjunge/status/518743288485261312">
+      
+        #Hamburg wurde soeben publiziert! paper.li/Schanzenjunge/… Dank ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1412536577&key=aglzfmJyaWQtZ3lyTQsSCFJlc3BvbnNlIj90YWc6dHdpdHRlci5jb20sMjAxMzo1MTg3NDMyODg0ODUyNjEzMTJfZmF2b3JpdGVkX2J5XzIyMDEzNTEzMTkM">
+    
+      1 month, 1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://paper.li/Schanzenjunge/1395567834">paper.li/Schanzenjunge/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/PR_Hamburg"
+       title="PR Agentur Hamburg ">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/2991199242/ef6e8d1876285d393f5d9ff49fce0e76.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/Schanzenjunge/status/515164145042599936">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/Schanzenjunge/status/515164145042599936">
+      
+        Wahre Worte... RT @ZEIT_HH: Großes Fest ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1411667972&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo1MTUxNjQxNDUwNDI1OTk5MzZfZmF2b3JpdGVkX2J5XzExMjcwMTMyMAw">
+    
+      1 month, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.zeit.de/hamburg/kultur/2014-09/filmfest-hamburg-kino-film">zeit.de/hamburg/kultur...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/Markolino2000"
+       title="Weni Widiwici">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/455038456746352640/Yx84ud5Z.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/Markolino2000/status/514782390271881218">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/Schanzenjunge/status/514716121384370176">
+      
+        Spitzenreiter! welt.de/sport/fussball…
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1411580547&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MTQ3ODIzOTAyNzE4ODEyMTgM">
+    
+      1 month, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.welt.de/sport/fussball/bundesliga/hamburger-sv/article132537606/Von-den-1070-besten-Teams-ist-nur-der-HSV-ohne-Tor.html">welt.de/sport/fussball...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/AntoniaNiecke"
+       title="Antonia Niecke">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/472125049009614848/S9m9E96N.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/Schanzenjunge/status/512217418098151424">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/Schanzenjunge/status/512217418098151424">
+      
+        #rbf14: Line up 2014, alle Locations, ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1411049087&key=aglzfmJyaWQtZ3lyTQsSCFJlc3BvbnNlIj90YWc6dHdpdHRlci5jb20sMjAxMzo1MTIyMTc0MTgwOTgxNTE0MjRfZmF2b3JpdGVkX2J5XzE0MDgxMTYzNTQM">
+    
+      1 month, 4 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.hamburg.de/reeperbahnfestival/4373414/reeperbahnfestival-line-up/">hamburg.de/reeperbahnfest...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/PR_Hamburg"
+       title="PR Agentur Hamburg ">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/2991199242/ef6e8d1876285d393f5d9ff49fce0e76.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/Schanzenjunge/status/512217418098151424">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/Schanzenjunge/status/512217418098151424">
+      
+        #rbf14: Line up 2014, alle Locations, ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1410965045&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo1MTIyMTc0MTgwOTgxNTE0MjRfZmF2b3JpdGVkX2J5XzExMjcwMTMyMAw">
+    
+      2 months ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.hamburg.de/reeperbahnfestival/4373414/reeperbahnfestival-line-up/">hamburg.de/reeperbahnfest...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/ch_amend"
+       title="Christoph Amend">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/495205732359225344/ykF5vOYV.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/Schanzenjunge/status/503260930491555840">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/Schanzenjunge/status/503260930491555840">
+      
+        Emil Weiss ist das Oberhaupt der ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1408915192&key=aglzfmJyaWQtZ3lyTQsSCFJlc3BvbnNlIj90YWc6dHdpdHRlci5jb20sMjAxMzo1MDMyNjA5MzA0OTE1NTU4NDBfZmF2b3JpdGVkX2J5XzExMzEzNTM4OTIM">
+    
+      2 months, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.zeit.de/zeit-magazin/leben/2014-07/sinti-hamburg-emil-weiss">zeit.de/zeit-magazin/l...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://paper.li/Buntes_und_News/1401291282"
+       title="Buntes und News">
+      <img class="profile" src="https://abs.twimg.com/sticky/default_profile_images/default_profile_1.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/Buntes_und_News/status/503270609808543745">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/Schanzenjunge/status/503260930491555840">
+      
+        Emil Weiss ist das Oberhaupt der ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1408829909&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MDMyNzA2MDk4MDg1NDM3NDUM">
+    
+      2 months, 3 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.zeit.de/zeit-magazin/leben/2014-07/sinti-hamburg-emil-weiss">zeit.de/zeit-magazin/l...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/kurzundknapp"
+       title="Kurzundknapp">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000191449902/8f83abd42e54f5738e93b9624335f9c3.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/Schanzenjunge/status/498449801235922944">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/Schanzenjunge/status/498449801235922944">
+      
+        #Hamburg wurde soeben publiziert! paper.li/Schanzenjunge/… Dank ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1407716217&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo0OTg0NDk4MDEyMzU5MjI5NDRfZmF2b3JpdGVkX2J5XzgwNzYxMjE4DA">
+    
+      3 months, 1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://paper.li/Schanzenjunge/1395567834">paper.li/Schanzenjunge/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

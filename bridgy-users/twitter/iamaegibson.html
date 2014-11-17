@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Aaron Gibson (Twitter) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://twitter.com/iamaegibson" title="Aaron Gibson (Twitter)"
+   class="u-url">
+  <img class="profile u-photo" src="https://pbs.twimg.com/profile_images/480419905032814592/BXaExEW3.jpeg" width="64px" />
+  <img src="/static/twitter_icon.png"
+       
+       alt="Twitter" />
+  <span class="p-name">Aaron Gibson</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="https://aaronegibson.com" class="publish-domain u-url">aaronegibson.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGAsSB1R3aXR0ZXIiC2lhbWFlZ2lic29uDA" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416210864&key=aglzfmJyaWQtZ3lyGAsSB1R3aXR0ZXIiC2lhbWFlZ2lic29uDA">
+      41 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGAsSB1R3aXR0ZXIiC2lhbWFlZ2lic29uDA" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+<span class="big">Click to enable <a href="/about#publish">publishing</a>:</span>
+<form method="post" name="publish-twitter-start" action="/twitter/start" class="signup">
+ <input type="image" alt="Sign in with Twitter"
+        src="/activitystreams/oauth_dropins/static/twitter.png" />
+ <input name="feature" type="hidden" value="publish" />
+</form>
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/Ajibel"
+       title="Seyi Pythonian">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/424852100707672064/ZiygfjCR.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/Ajibel/status/523896805143379968">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/iamaegibson/status/523895897483010048">
+      
+        There were 2 away victories in ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413750520&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MjM4OTY4MDUxNDMzNzk5NjgM">
+    
+      4 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://aaronegibson.com/2014/there-were-2-away-victories-in-the-glonpfl-this-weekend">aaronegibson.com/2014/there-wer...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://werd.io/"
+       title="Ben Werdmüller">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000785382039/5951d8b25d500500c4094baa1851c095.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/benwerd/status/506123583848853504">
+        @iamaegibson Hi Aaron - I'd love ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/iamaegibson/status/506114270874980352">
+      
+        Manual POSSE is going to get ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1409526090&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MDYxMjM1ODM4NDg4NTM1MDQM">
+    
+      2 months, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MDYxMjM1ODM4NDg4NTM1MDQM" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://aegibson.com/2014/manual-po…">aegibson.com/2014/manual-po... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li>
+	<li><a class="original-post" target="_blank" href="http://aegibson.com/2014/manual-posse-is-going-to-get-old-real-quick-need">aegibson.com/2014/manual-po... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://werd.io/"
+       title="Ben Werdmüller">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000785382039/5951d8b25d500500c4094baa1851c095.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/benwerd/status/506129244749975552">
+        @iamaegibson I'm really sorry this didn't ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/iamaegibson/status/506127739019984896">
+      
+        @benwerd nope, i click and it ...
+      
+    </a></li>
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/iamaegibson/status/506126408553226240">
+      
+        @benwerd okay, I'm clicking and nothing ...
+      
+    </a></li>
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/iamaegibson/status/506125738567663616">
+      
+        @benwerd yeah, looks like i missed ...
+      
+    </a></li>
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/iamaegibson/status/506114270874980352">
+      
+        Manual POSSE is going to get ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1409526030&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MDYxMjkyNDQ3NDk5NzU1NTIM">
+    
+      2 months, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MDYxMjkyNDQ3NDk5NzU1NTIM" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://aegibson.com/2014/manual-po…">aegibson.com/2014/manual-po... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li>
+	<li><a class="original-post" target="_blank" href="http://aegibson.com/2014/manual-posse-is-going-to-get-old-real-quick-need">aegibson.com/2014/manual-po... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://werd.io/"
+       title="Ben Werdmüller">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000785382039/5951d8b25d500500c4094baa1851c095.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/benwerd/status/506129107520729088">
+        @iamaegibson Just ran a full test ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/iamaegibson/status/506127739019984896">
+      
+        @benwerd nope, i click and it ...
+      
+    </a></li>
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/iamaegibson/status/506126408553226240">
+      
+        @benwerd okay, I'm clicking and nothing ...
+      
+    </a></li>
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/iamaegibson/status/506125738567663616">
+      
+        @benwerd yeah, looks like i missed ...
+      
+    </a></li>
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/iamaegibson/status/506114270874980352">
+      
+        Manual POSSE is going to get ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1409526025&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MDYxMjkxMDc1MjA3MjkwODgM">
+    
+      2 months, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MDYxMjkxMDc1MjA3MjkwODgM" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://aegibson.com/2014/manual-po…">aegibson.com/2014/manual-po... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li>
+	<li><a class="original-post" target="_blank" href="http://aegibson.com/2014/manual-posse-is-going-to-get-old-real-quick-need">aegibson.com/2014/manual-po... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/brianwisti"
+       title="brian wisti">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/718264231/photo.jpg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/iamaegibson/status/504884697139138561">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/iamaegibson/status/504884697139138561">
+      
+        Ah, the power of wordpress plugins. ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1409434134&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1MDQ4ODQ2OTcxMzkxMzg1NjFfZmF2b3JpdGVkX2J5XzEwMzc2OTAyDA">
+    
+      2 months, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1MDQ4ODQ2OTcxMzkxMzg1NjFfZmF2b3JpdGVkX2J5XzEwMzc2OTAyDA" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://aeg.pw/b/_">aeg.pw/b/_ <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://sportazine.com"
+       title="Doug Sportazine.com">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/481437546958712832/QwZT5QI0.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/dougsportazine/status/486612157715714048">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/iamaegibson/status/486610757891919872">
+      
+        So I guess Germany will be ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 months, 2 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://sportazine.com"
+       title="Doug Sportazine.com">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/481437546958712832/QwZT5QI0.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/dougsportazine/status/486926458900975616">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/iamaegibson/status/486922867473674241">
+      
+        #^50 Brazilian newspapers on their 7-1 ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1409434129&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo0ODY5MjY0NTg5MDA5NzU2MTYM">
+    
+      2 months, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo0ODY5MjY0NTg5MDA5NzU2MTYM" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://i.i">i.i <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://loadaverage.org/notice/2298349">loadaverage.org/notice/2298349</a></li>
+	<li><a class="original-post" target="_blank" href="http://imgur.com/a/Hs88z">imgur.com/a/Hs88z</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/Leafly"
+       title="Leafly">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/459744573795741696/fJhiYvYV.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/iamaegibson/status/484687885967560704">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/iamaegibson/status/484687885967560704">
+      
+        #^Berkeley Requires Marijuana Dispensaries To Provide ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1409434125&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo0ODQ2ODc4ODU5Njc1NjA3MDRfZmF2b3JpdGVkX2J5XzE0NzgyMTUzOAw">
+    
+      2 months, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://loadaverage.org/notice/2118328">loadaverage.org/notice/2118328</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://sportazine.com"
+       title="Doug Sportazine.com">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/481437546958712832/QwZT5QI0.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/dougsportazine/status/486926364508172288">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/iamaegibson/status/486925127163322368">
+      
+        #^12 German newspapers on their 7-1 ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1409434124&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo0ODY5MjYzNjQ1MDgxNzIyODgM">
+    
+      2 months, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo0ODY5MjYzNjQ1MDgxNzIyODgM" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://i.imgu">i.imgu <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://imgur.com/a/lBBZs">imgur.com/a/lBBZs</a></li>
+	<li><a class="original-post" target="_blank" href="https://loadaverage.org/notice/2298626">loadaverage.org/notice/2298626</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/w3Nicolas"
+       title="Nicolas Beauvais">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/455982338237677568/mrQho-CI.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/iamaegibson/status/462062362669760512">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/iamaegibson/status/462062362669760512">
+      
+        I just installed #StatusNet on status.aegibson.com ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1402197967&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo0NjIwNjIzNjI2Njk3NjA1MTJfZmF2b3JpdGVkX2J5XzQ4NjczMTU1MAw">
+    
+      5 months, 1 week ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo0NjIwNjIzNjI2Njk3NjA1MTJfZmF2b3JpdGVkX2J5XzQ4NjczMTU1MAw" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://status.aegibson.com">status.aegibson.com <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Brian the Brain (Twitter) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://twitter.com/generic_brian" title="Brian the Brain (Twitter)"
+   class="u-url">
+  <img class="profile u-photo" src="https://pbs.twimg.com/profile_images/1106663005/cme.jpg" width="64px" />
+  <img src="/static/twitter_icon.png"
+       
+       alt="Twitter" />
+  <span class="p-name">Brian the Brain</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="https://www.atoddswithclarity.com/" class="publish-domain u-url">atoddswithclarity.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+
+<div class="row promo warning">
+You
+ need 
+<a href='http://indiewebify.me/#send-webmentions'>webmention</a> support.
+
+
+<a href="http://indiewebcamp.com/webmention#Publishing_Software">Here are some
+resources.</a> If you're on
+WordPress, <a href="http://wordpress.org/plugins/indieweb/">try the IndieWeb
+bundle plugin</a>. If you're on Blogger, Tumblr, or
+WordPress.com, <a href="/">sign up here!</a>
+
+
+
+</div>
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGgsSB1R3aXR0ZXIiDWdlbmVyaWNfYnJpYW4M" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416191681&key=aglzfmJyaWQtZ3lyGgsSB1R3aXR0ZXIiDWdlbmVyaWNfYnJpYW4M">
+      6 hours ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGgsSB1R3aXR0ZXIiDWdlbmVyaWNfYnJpYW4M" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+<form method="post" action="/delete/start">
+<p id="publishing-label" class="big">
+ Ready to publish.
+   <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGgsSB1R3aXR0ZXIiDWdlbmVyaWNfYnJpYW4M" />
+   <input name="feature" type="hidden" value="publish" />
+   <button id="delete-button" type="submit" class="btn btn-default"
+     title="Disable publishing for this account. (Won't delete posts you've already published.)"
+     >Disable</button>
+</p>
+</form>
+
+<form method="post" name="preview" action="/publish/preview"
+      onsubmit="do_preview('twitter'); return false;">
+<p id="preview-ui">
+ <label id="source-label" for="source-url">Enter post URL:</label>
+ <input id="source-url" name="source" type="url" required alt="Source URL"></input>
+ <input name="target" type="hidden"
+        value="http://brid.gy/publish/twitter"></input>
+
+ <nobr>
+ <!-- use a hidden input before the checkbox with the same name to set the value
+      to be sent when the checkbox is unchecked. -->
+ &nbsp;
+ <input id="include-link-unchecked" name="bridgy_omit_link" type="hidden"
+        value="true"></input>
+ <input id="include-link-checked" name="bridgy_omit_link" type="checkbox"
+        value="false" checked></input>
+ <label id="include-link-label" for="include-link-checked">Include link</label>
+ &nbsp;
+ <button id="preview-button" type="submit" class="btn btn-default">Preview</button>
+ </nobr>
+</p>
+</form>
+
+<!-- Publish signup buttons -->
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.vincedouglasgregory.com"
+       title="Vince D Gregory">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/529065764737662976/Nxjqquz-.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/vincedgregory/status/532865437827346432">
+        @generic_brian haha I’ve seen that before. ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/generic_brian/status/532864347140149248">
+      
+        @vincedgregory lol oh man this is ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      3 days, 6 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/vincedgregory"
+       title="Vince D Gregory">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/529065764737662976/Nxjqquz-.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/generic_brian/status/532864347140149248">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/generic_brian/status/532864347140149248">
+      
+        @vincedgregory lol oh man this is ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      3 days, 6 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/timmylevad"
+       title="Tim Levad">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/484508790650204160/Itd6lgin.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/generic_brian/status/530587938800029697">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/generic_brian/status/530587938800029697">
+      
+        burrito sobs == crocodile tears We ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 week, 2 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/holleratme"
+       title="✨ holler ✨">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/526518109562105856/caWzrOxW.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/generic_brian/status/530587533164679168">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/generic_brian/status/530587533164679168">
+      
+        @insopherable @holleratme how could the later ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 week, 2 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/insopherable"
+       title="Sophie">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/516773289767604225/shdsmoyq.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/generic_brian/status/530587533164679168">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/generic_brian/status/530587533164679168">
+      
+        @insopherable @holleratme how could the later ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 week, 2 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/SaraJChipps"
+       title="Sara Chipps">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/475386075997683712/TOSOGa0K.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/generic_brian/status/528945672674762752">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/generic_brian/status/528945672674762752">
+      
+        @SaraJChipps I was shocked when the ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 week, 6 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/dougwt"
+       title="ଘ(੭*ˊᵕˋ)੭* ̀ˋ ᴅᴏᴜɢ">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/528777452131061760/eV2pY7BY.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/generic_brian/status/528945672674762752">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/generic_brian/status/528945672674762752">
+      
+        @SaraJChipps I was shocked when the ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 week, 6 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.vincedouglasgregory.com"
+       title="Vince D Gregory ">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/482569518489681920/_CmkmZh-.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/vincedgregory/status/528764873728339968">
+        @generic_brian spoken like a true Sf-ian.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/generic_brian/status/528742312415727618">
+      
+        @vincedgregory shit who knows man, rent's ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/surfnorcal"
+       title="Thomas Cannon">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/525042196857487360/P3CUutKx.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/generic_brian/status/528742739215544321">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/generic_brian/status/528742739215544321">
+      
+        wearing a cheerleader's skirt for halloween ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/marieazy"
+       title="Marie">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/2503900566/sk6q69znw69iceq7uxj9.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/generic_brian/status/528742739215544321">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/generic_brian/status/528742739215544321">
+      
+        wearing a cheerleader's skirt for halloween ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+
+<p id="publishes" class="big">Recently published:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://www.atoddswithclarity.com/first-public-commentz-o,2/">atoddswithclarity.com/first-public-c...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1399860769&key=aglzfmJyaWQtZ3lyYwsSDVB1Ymxpc2hlZFBhZ2UiPGh0dHBzOi8vd3d3LmF0b2Rkc3dpdGhjbGFyaXR5LmNvbS9maXJzdC1wdWJsaWMtY29tbWVudHotbywyLwwLEgdQdWJsaXNoGICAgICA5JEKDA">
+      6 months, 1 week ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="http://twitter.com/generic_brian/status/465675937112023041">
+     
+     tweet
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://www.atoddswithclarity.com/first-public-commentz-o,2/">atoddswithclarity.com/first-public-c...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1399860765&key=aglzfmJyaWQtZ3lyYwsSDVB1Ymxpc2hlZFBhZ2UiPGh0dHBzOi8vd3d3LmF0b2Rkc3dpdGhjbGFyaXR5LmNvbS9maXJzdC1wdWJsaWMtY29tbWVudHotbywyLwwLEgdQdWJsaXNoGICAgICAgIAKDA">
+      6 months, 1 week ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     preview
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://www.atoddswithclarity.com/first-public-comment-o,2/">atoddswithclarity.com/first-public-c...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1399860651&key=aglzfmJyaWQtZ3lyYgsSDVB1Ymxpc2hlZFBhZ2UiO2h0dHBzOi8vd3d3LmF0b2Rkc3dpdGhjbGFyaXR5LmNvbS9maXJzdC1wdWJsaWMtY29tbWVudC1vLDIvDAsSB1B1Ymxpc2gYgICAgIDkkQoM">
+      6 months, 1 week ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     tweet
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://www.atoddswithclarity.com/first-public-comment-o,2/">atoddswithclarity.com/first-public-c...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1399859327&key=aglzfmJyaWQtZ3lyYgsSDVB1Ymxpc2hlZFBhZ2UiO2h0dHBzOi8vd3d3LmF0b2Rkc3dpdGhjbGFyaXR5LmNvbS9maXJzdC1wdWJsaWMtY29tbWVudC1vLDIvDAsSB1B1Ymxpc2gYgICAgICAgAoM">
+      6 months, 1 week ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     preview
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://www.atoddswithclarity.com/webmention/">atoddswithclarity.com/webmention/</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1399856187&key=aglzfmJyaWQtZ3lyVAsSDVB1Ymxpc2hlZFBhZ2UiLWh0dHBzOi8vd3d3LmF0b2Rkc3dpdGhjbGFyaXR5LmNvbS93ZWJtZW50aW9uLwwLEgdQdWJsaXNoGICAgICAgIAKDA">
+      6 months, 1 week ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://www.atoddswithclarity.com/">atoddswithclarity.com/</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1399856171&key=aglzfmJyaWQtZ3lySQsSDVB1Ymxpc2hlZFBhZ2UiImh0dHBzOi8vd3d3LmF0b2Rkc3dpdGhjbGFyaXR5LmNvbS8MCxIHUHVibGlzaBiAgICAgOSRCgw">
+      6 months, 1 week ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://www.atoddswithclarity.com/">atoddswithclarity.com/</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1399856161&key=aglzfmJyaWQtZ3lySQsSDVB1Ymxpc2hlZFBhZ2UiImh0dHBzOi8vd3d3LmF0b2Rkc3dpdGhjbGFyaXR5LmNvbS8MCxIHUHVibGlzaBiAgICAgICACgw">
+      6 months, 1 week ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://www.atoddswithclarity.com/thoughts/2">atoddswithclarity.com/thoughts/2</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1399844243&key=aglzfmJyaWQtZ3lyUwsSDVB1Ymxpc2hlZFBhZ2UiLGh0dHBzOi8vd3d3LmF0b2Rkc3dpdGhjbGFyaXR5LmNvbS90aG91Z2h0cy8yDAsSB1B1Ymxpc2gYgICAgICumQoM">
+      6 months, 1 week ago
+      
+       <span title="Processing" class="glyphicon glyphicon-transfer"></span>
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     preview
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://www.atoddswithclarity.com/thoughts/2">atoddswithclarity.com/thoughts/2</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1399843980&key=aglzfmJyaWQtZ3lyUwsSDVB1Ymxpc2hlZFBhZ2UiLGh0dHBzOi8vd3d3LmF0b2Rkc3dpdGhjbGFyaXR5LmNvbS90aG91Z2h0cy8yDAsSB1B1Ymxpc2gYgICAgIDyiAoM">
+      6 months, 1 week ago
+      
+       <span title="Processing" class="glyphicon glyphicon-transfer"></span>
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     preview
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="https://www.atoddswithclarity.com/thoughts/2">atoddswithclarity.com/thoughts/2</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1399843956&key=aglzfmJyaWQtZ3lyUwsSDVB1Ymxpc2hlZFBhZ2UiLGh0dHBzOi8vd3d3LmF0b2Rkc3dpdGhjbGFyaXR5LmNvbS90aG91Z2h0cy8yDAsSB1B1Ymxpc2gYgICAgIDkkQoM">
+      6 months, 1 week ago
+      
+       <span title="Processing" class="glyphicon glyphicon-transfer"></span>
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+     preview
+     
+
+   </div>
+  </li>
+  
+</ul>
+
+
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>ವಿ ಕ ಟ ಕ ವಿ  (Twitter) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://twitter.com/Vktkv" title="ವಿ ಕ ಟ ಕ ವಿ  (Twitter)"
+   class="u-url">
+  <img class="profile u-photo" src="https://pbs.twimg.com/profile_images/526009652253712384/y_i4ZxWb.png" width="64px" />
+  <img src="/static/twitter_icon.png"
+       
+       alt="Twitter" />
+  <span class="p-name">ವಿ ಕ ಟ ಕ ವಿ </span></a>
+
+
+
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row promo warning">
+<p id="edit-profile">First things first: what's your web site?
+
+<a href="https://twitter.com/settings/profile#user_url" target="_blank">
+  Edit your Twitter profile</a>,
+enter it in the <em>Website</em> field, then click here:
+<!-- Twitter listen signup -->
+<form method="post" name="listen-twitter-start" action="/twitter/start" class="signup">
+  <input type="image" alt="Sign in with Twitter"
+         src="/activitystreams/oauth_dropins/static/twitter.png" />
+  <input name="feature" type="hidden" value="listen" />
+</form>
+
+
+</p>
+</div>
+
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyEgsSB1R3aXR0ZXIiBVZrdGt2DA" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416170902&key=aglzfmJyaWQtZ3lyEgsSB1R3aXR0ZXIiBVZrdGt2DA">
+      11 hours, 57 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyEgsSB1R3aXR0ZXIiBVZrdGt2DA" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+<span class="big">Click to enable <a href="/about#publish">publishing</a>:</span>
+<form method="post" name="publish-twitter-start" action="/twitter/start" class="signup">
+ <input type="image" alt="Sign in with Twitter"
+        src="/activitystreams/oauth_dropins/static/twitter.png" />
+ <input name="feature" type="hidden" value="publish" />
+</form>
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/ambik4ever"
+       title="Namaste India.">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/531322173206441985/uK78ZLr7.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/ambik4ever/status/533973965211844608">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/Vktkv/status/533502943023345664">
+      
+        ಕಡಲೆಕಾಯಿ ಪರಿಷೆ ಬಂದೆ-ಬಿಟ್ತು. ಬೆಂಗಳೂರು ತನ್ನ ಗ್ರಾಮೀಣತೆಯ ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      11 hours, 57 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/arundathi9"
+       title="Arundathi. ">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/525730268963811328/vaRKL210.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/arundathi9/status/534032317660942336">
+        @Vktkv if we owe our education ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/Vktkv/status/534031806132387840">
+      
+        @arundathi9 Houdu. Thats true. IMHO Patient ...
+      
+    </a></li>
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/Vktkv/status/534030030624399360">
+      
+        @arundathi9 Thats true.Inspite of that, we ...
+      
+    </a></li>
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/Vktkv/status/534028977434664960">
+      
+        @arundathi9 State does subsidises the cost ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      11 hours, 57 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://speaktonature.blogspot.com"
+       title="Arun L">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/533335285057470464/OkchJLGP.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/parisarapremi/status/534062251263950848">
+        @Vktkv hoon. Adu sslc board nordu ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/Vktkv/status/534059524093915136">
+      
+        @parisarapremi puc kannada textbooks samanyavagi chennagirtidvu ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      11 hours, 57 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/ThejasMaisuru"
+       title="Thejas">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/2736931043/203201fa3494428f2f2304a83b0f095b.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/ThejasMaisuru/status/534028643354169346">
+        @Vktkv alva? adakke sumne nakkubiTTe.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/Vktkv/status/534024341680164865">
+      
+        @ThejasMaisuru I think there is no ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      11 hours, 57 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/Vktkv"
+       title="ವಿ ಕ ಟ ಕ ವಿ ">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/526009652253712384/y_i4ZxWb.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/Vktkv/status/534033337942548480">
+        @arundathi9 Ofcourse they do. I think ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/Vktkv/status/534032855102275585">
+      
+        @arundathi9 Rightly said. In India whatever ...
+      
+    </a></li>
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/Vktkv/status/534031806132387840">
+      
+        @arundathi9 Houdu. Thats true. IMHO Patient ...
+      
+    </a></li>
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/Vktkv/status/534030030624399360">
+      
+        @arundathi9 Thats true.Inspite of that, we ...
+      
+    </a></li>
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/Vktkv/status/534028977434664960">
+      
+        @arundathi9 State does subsidises the cost ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      11 hours, 57 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://speaktonature.blogspot.com"
+       title="Arun L">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/533335285057470464/OkchJLGP.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/parisarapremi/status/534063950309359617">
+        @Vktkv ICSE kooda super. 9th and ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/Vktkv/status/534063541448626177">
+      
+        @parisarapremi TN State board averdu olle ...
+      
+    </a></li>
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/Vktkv/status/534059524093915136">
+      
+        @parisarapremi puc kannada textbooks samanyavagi chennagirtidvu ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      11 hours, 57 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/amulyashruthi"
+       title="Amulya">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/3298226930/c723ef5c42d801c290aa0109c28dbcff.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/Vktkv/status/534048523046490113">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/Vktkv/status/534048523046490113">
+      
+        ಬೆಳಕಿಲ್ಲದ ನಾಡಲ್ಲಿ ನೆಡೆಯ ಬಲ್ಲೆನು ತಾಯಿ... ಕನಸಿಲ್ಲದ ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      11 hours, 57 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/astroshiva"
+       title="shiva acharya">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/523813102928678912/3z1JPOJ7.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/Vktkv/status/534048523046490113">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/Vktkv/status/534048523046490113">
+      
+        ಬೆಳಕಿಲ್ಲದ ನಾಡಲ್ಲಿ ನೆಡೆಯ ಬಲ್ಲೆನು ತಾಯಿ... ಕನಸಿಲ್ಲದ ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      11 hours, 57 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/arundathi9"
+       title="Arundathi. ">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/525730268963811328/vaRKL210.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/arundathi9/status/534033656621182976">
+        @Vktkv perhaps :)</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/Vktkv/status/534033337942548480">
+      
+        @arundathi9 Ofcourse they do. I think ...
+      
+    </a></li>
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/Vktkv/status/534032855102275585">
+      
+        @arundathi9 Rightly said. In India whatever ...
+      
+    </a></li>
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/Vktkv/status/534031806132387840">
+      
+        @arundathi9 Houdu. Thats true. IMHO Patient ...
+      
+    </a></li>
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/Vktkv/status/534030030624399360">
+      
+        @arundathi9 Thats true.Inspite of that, we ...
+      
+    </a></li>
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/Vktkv/status/534028977434664960">
+      
+        @arundathi9 State does subsidises the cost ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      11 hours, 57 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/arundathi9"
+       title="Arundathi. ">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/525730268963811328/vaRKL210.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/arundathi9/status/534029392851128320">
+        @Vktkv the market price is because ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/Vktkv/status/534028977434664960">
+      
+        @arundathi9 State does subsidises the cost ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      11 hours, 57 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>BlackbirdE-Solutions (Twitter) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://twitter.com/BbeS" title="BlackbirdE-Solutions (Twitter)"
+   class="u-url">
+  <img class="profile u-photo" src="https://pbs.twimg.com/profile_images/2535501531/hgdyb148eo39bfi6jd4c.jpeg" width="64px" />
+  <img src="/static/twitter_icon.png"
+       
+       alt="Twitter" />
+  <span class="p-name">BlackbirdE-Solutions</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://blackbirdesolutions.com/" class="publish-domain u-url">blackbirdesolutions.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+
+<div class="row promo warning">
+You
+ need 
+<a href='http://indiewebify.me/#send-webmentions'>webmention</a> support.
+
+
+<a href="http://indiewebcamp.com/webmention#Publishing_Software">Here are some
+resources.</a> If you're on
+WordPress, <a href="http://wordpress.org/plugins/indieweb/">try the IndieWeb
+bundle plugin</a>. If you're on Blogger, Tumblr, or
+WordPress.com, <a href="/">sign up here!</a>
+
+
+
+</div>
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyEQsSB1R3aXR0ZXIiBEJiZVMM" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416193158&key=aglzfmJyaWQtZ3lyEQsSB1R3aXR0ZXIiBEJiZVMM">
+      5 hours, 32 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyEQsSB1R3aXR0ZXIiBEJiZVMM" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+<span class="big">Click to enable <a href="/about#publish">publishing</a>:</span>
+<form method="post" name="publish-twitter-start" action="/twitter/start" class="signup">
+ <input type="image" alt="Sign in with Twitter"
+        src="/activitystreams/oauth_dropins/static/twitter.png" />
+ <input name="feature" type="hidden" value="publish" />
+</form>
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.ITpTaxes.com"
+       title="Dave Shiley">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/426102877833015296/O_KR6ukE.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/DaveTheTaxGuy/status/532960098415837184">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/BbeS/status/532953410581331968">
+      
+        In most cases you're better if ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415951085&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzI5NjAwOTg0MTU4MzcxODQM">
+    
+      3 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://marketingland.com/killer-app-just-kill-app-106224">marketingland.com/killer-app-jus...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/icarusaccount"
+       title="The Icarus Account">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/459792250512220161/Cnbt6rn8.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/BbeS/status/532012231484256257">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/BbeS/status/532012231484256257">
+      
+        This is an important development for ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415691275&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1MzIwMTIyMzE0ODQyNTYyNTdfZmF2b3JpdGVkX2J5XzI5OTM5OTExDA">
+    
+      6 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://finance.yahoo.com/news/obama-s-call-for-net-neutrality-spells-trouble-for-time-warner-cable-comcast-deal-154738302.html">finance.yahoo.com/news/obama-s-c...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/ReflectSunshine"
+       title="Shannon Zimmerman">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000795630722/846b20359b3b9beeb9f3ec14841e18d5.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/BbeS/status/530201245357596672">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/BbeS/status/530201245357596672">
+      
+        @ReflectSunshine Sure sounds good. I'm out ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 week, 3 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/getspokal"
+       title="Spokal ">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/2920312381/99039871b975bb7b08410d2de96600cd.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/BbeS/status/509398545947197440">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/BbeS/status/509398545947197440">
+      
+        4 Reasons To Partner With A ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1410289121&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo1MDkzOTg1NDU5NDcxOTc0NDBfZmF2b3JpdGVkX2J5Xzc1ODUxODIxMww">
+    
+      2 months, 1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://thefuturebuzz.com/2011/12/08/reasons-to-partner-for-seo/">thefuturebuzz.com/2011/12/08/rea...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/TweetFavy"
+       title="TweetFavy">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/492179997281382400/Oucmvxpq.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/BbeS/status/507996493760847872">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/BbeS/status/507996493760847872">
+      
+        Broad Match Keyword – Online Marketing ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1410016516&key=aglzfmJyaWQtZ3lyTQsSCFJlc3BvbnNlIj90YWc6dHdpdHRlci5jb20sMjAxMzo1MDc5OTY0OTM3NjA4NDc4NzJfZmF2b3JpdGVkX2J5XzI0MDc3NzA2NzgM">
+    
+      2 months, 1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://blackbirdesolutions.com/elife/2014/09/05/broad-match-keyword-online-marketing-term-week/">blackbirdesolutions.com/elife/2014/09/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/orcha_f"
+       title="Francisco Orcha">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/1092218544/twitter_3.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/BbeS/status/507605345934802944">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/BbeS/status/507605345934802944">
+      
+        How Zynga uses Big Data to ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1409934268&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo1MDc2MDUzNDU5MzQ4MDI5NDRfZmF2b3JpdGVkX2J5XzE3MTYwNzAwMgw">
+    
+      2 months, 1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://siliconangle.com/blog/2014/08/22/how-zynga-uses-big-data-to-ensure-new-game-success-hpbigdata2014/">siliconangle.com/blog/2014/08/2...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/AppcentMobile"
+       title="Appcent">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000783598165/b363284d8c9a99d60df558ac13b46c81.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/BbeS/status/507562592303595520">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/BbeS/status/507562592303595520">
+      
+        Facebook tests App Links Analytics to ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1409855474&key=aglzfmJyaWQtZ3lyTQsSCFJlc3BvbnNlIj90YWc6dHdpdHRlci5jb20sMjAxMzo1MDc1NjI1OTIzMDM1OTU1MjBfZmF2b3JpdGVkX2J5XzIxOTI2ODYxMjkM">
+    
+      2 months, 1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://siliconangle.com/blog/2014/08/23/facebook-tests-app-links-analytics-to-make-mobile-apps-work-more-like-web/">siliconangle.com/blog/2014/08/2...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/commonwealthonq"
+       title="Commonwealth OnQueen">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000430231670/e333d59b969f5d96f28fd0b6a38f5df0.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/BbeS/status/504743973735632897">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/BbeS/status/504743973735632897">
+      
+        Don't forget tomorrow's TweetUp. Come join ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1409261363&key=aglzfmJyaWQtZ3lyTQsSCFJlc3BvbnNlIj90YWc6dHdpdHRlci5jb20sMjAxMzo1MDQ3NDM5NzM3MzU2MzI4OTdfZmF2b3JpdGVkX2J5XzE2MDE4NTI3NjcM">
+    
+      2 months, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://blackbirdesolutions.com/elife/2014/08/20/august-tweetup-lancaster-pa/">blackbirdesolutions.com/elife/2014/08/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/commonwealthonq"
+       title="Commonwealth OnQueen">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000430231670/e333d59b969f5d96f28fd0b6a38f5df0.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/BbeS/status/504741999929753601">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/BbeS/status/504741999929753601">
+      
+        @alipaulco @VisitLancCity @commonwealthonq Looking forward to ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 months, 2 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.CommonwealthOnQueen.com"
+       title="Commonwealth OnQueen">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000430231670/e333d59b969f5d96f28fd0b6a38f5df0.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/commonwealthonq/status/504793691853426688">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/BbeS/status/504743973735632897">
+      
+        Don't forget tomorrow's TweetUp. Come join ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1409261306&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MDQ3OTM2OTE4NTM0MjY2ODgM">
+    
+      2 months, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://blackbirdesolutions.com/elife/2014/08/20/august-tweetup-lancaster-pa/">blackbirdesolutions.com/elife/2014/08/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

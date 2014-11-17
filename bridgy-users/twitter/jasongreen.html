@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Jason Green (Twitter) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://twitter.com/jasongreen" title="Jason Green (Twitter)"
+   class="u-url">
+  <img class="profile u-photo" src="https://pbs.twimg.com/profile_images/61161943/avatar.jpg" width="64px" />
+  <img src="/static/twitter_icon.png"
+       
+       alt="Twitter" />
+  <span class="p-name">Jason Green</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://blog.jasongreen.net/" class="publish-domain u-url">blog.jasongreen.net</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyFwsSB1R3aXR0ZXIiCmphc29uZ3JlZW4M" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416207251&key=aglzfmJyaWQtZ3lyFwsSB1R3aXR0ZXIiCmphc29uZ3JlZW4M">
+      1 hour, 42 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyFwsSB1R3aXR0ZXIiCmphc29uZ3JlZW4M" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+<form method="post" action="/delete/start">
+<p id="publishing-label" class="big">
+ Ready to publish.
+   <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyFwsSB1R3aXR0ZXIiCmphc29uZ3JlZW4M" />
+   <input name="feature" type="hidden" value="publish" />
+   <button id="delete-button" type="submit" class="btn btn-default"
+     title="Disable publishing for this account. (Won't delete posts you've already published.)"
+     >Disable</button>
+</p>
+</form>
+
+<form method="post" name="preview" action="/publish/preview"
+      onsubmit="do_preview('twitter'); return false;">
+<p id="preview-ui">
+ <label id="source-label" for="source-url">Enter post URL:</label>
+ <input id="source-url" name="source" type="url" required alt="Source URL"></input>
+ <input name="target" type="hidden"
+        value="http://brid.gy/publish/twitter"></input>
+
+ <nobr>
+ <!-- use a hidden input before the checkbox with the same name to set the value
+      to be sent when the checkbox is unchecked. -->
+ &nbsp;
+ <input id="include-link-unchecked" name="bridgy_omit_link" type="hidden"
+        value="true"></input>
+ <input id="include-link-checked" name="bridgy_omit_link" type="checkbox"
+        value="false" checked></input>
+ <label id="include-link-label" for="include-link-checked">Include link</label>
+ &nbsp;
+ <button id="preview-button" type="submit" class="btn btn-default">Preview</button>
+ </nobr>
+</p>
+</form>
+
+<!-- Publish signup buttons -->
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/paiffie"
+       title="Sarah C Provost">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/612268407/Sarah_Caissie.JPG" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/paiffie/status/533587381317021696">
+        @jasongreen @kr_burke @krisshaffer Thx 4 issues ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/jasongreen/status/533473449470357504">
+      
+        @kr_burke @paiffie @krisshaffer Looks fairly straightforward, ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 day, 20 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/dnnt0272wgf7"
+       title="Job 4U_220">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/532922990522949632/Eqbby9-d.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/dnnt0272wgf7/status/533474917845839872">
+        @jasongreen It looks like you need ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/jasongreen/status/533473449470357504">
+      
+        @kr_burke @paiffie @krisshaffer Looks fairly straightforward, ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 days, 3 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://blog.jasongreen.net"
+       title="Jason Green">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/61161943/avatar.jpg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/jasongreen/status/533300686377988097">
+        @paiffie What OS and Java version ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/jasongreen/status/533279001692098560">
+      
+        @paiffie Looks interesting, but it hangs ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 days, 15 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/paiffie"
+       title="Sarah C Provost">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/612268407/Sarah_Caissie.JPG" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/paiffie/status/533291710236094466">
+        @jasongreen Oh no. It's working fine ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/jasongreen/status/533279001692098560">
+      
+        @paiffie Looks interesting, but it hangs ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 days, 15 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/paiffie"
+       title="Sarah C Provost">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/612268407/Sarah_Caissie.JPG" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/paiffie/status/533304703770443777">
+        @jasongreen Mac OS X. Not sure ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/jasongreen/status/533300686377988097">
+      
+        @paiffie What OS and Java version ...
+      
+    </a></li>
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/jasongreen/status/533279001692098560">
+      
+        @paiffie Looks interesting, but it hangs ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 days, 15 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://blog.jasongreen.net"
+       title="Jason Green">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/61161943/avatar.jpg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/jasongreen/status/533062023819829248">
+        @debcha Trying to visualize. Seems very ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/jasongreen/status/533054381898604544">
+      
+        @debcha Do you mean pulpit?
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      3 days, 6 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://tinyletter.com/metafoundry"
+       title="Deb Chachra">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/1900068638/Chachra_hoody.jpg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/debcha/status/533061138955923456">
+        @jasongreen No. I mean what Gibson ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/jasongreen/status/533054381898604544">
+      
+        @debcha Do you mean pulpit?
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      3 days, 6 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://tinyletter.com/metafoundry"
+       title="Deb Chachra">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/1900068638/Chachra_hoody.jpg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/debcha/status/533063538118778881">
+        @jasongreen Do please continue to argue ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/jasongreen/status/533062023819829248">
+      
+        @debcha Trying to visualize. Seems very ...
+      
+    </a></li>
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/jasongreen/status/533054381898604544">
+      
+        @debcha Do you mean pulpit?
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      3 days, 6 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://kitkatbailey.blogspot.com/"
+       title="Kat Bailey">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/468848050706722816/lRY4KUX8.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/katblue14/status/532922432328597504">
+        @jasongreen You should be able to ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/jasongreen/status/532919661663236096">
+      
+        @katblue14 I would like to DM ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      3 days, 15 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/veletsianos"
+       title="George Veletsianos">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/2252880258/veletsianos_george_bio_photo.jpg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/jasongreen/status/532687357435453440">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/jasongreen/status/532687357435453440">
+      
+        @holden TL;DR is a symptom of ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      4 days, 4 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+
+<p id="publishes" class="big">Recently published:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://blog.jasongreen.net/2014/10/435/">blog.jasongreen.net/2014/10/435/</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1415130990&key=aglzfmJyaWQtZ3lyTgsSDVB1Ymxpc2hlZFBhZ2UiJ2h0dHA6Ly9ibG9nLmphc29uZ3JlZW4ubmV0LzIwMTQvMTAvNDM1LwwLEgdQdWJsaXNoGICAgICAgIAKDA">
+      1 week, 5 days ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://twitter.com/jasongreen/status/529723882786521089">
+     
+     tweet
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://blog.jasongreen.net/2014/10/433/">blog.jasongreen.net/2014/10/433/</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1414442140&key=aglzfmJyaWQtZ3lyTgsSDVB1Ymxpc2hlZFBhZ2UiJ2h0dHA6Ly9ibG9nLmphc29uZ3JlZW4ubmV0LzIwMTQvMTAvNDMzLwwLEgdQdWJsaXNoGICAgICAgIAKDA">
+      2 weeks, 6 days ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://twitter.com/jasongreen/status/526834639151718400">
+     
+     tweet
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://blog.jasongreen.net/2014/10/431/">blog.jasongreen.net/2014/10/431/</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1414181687&key=aglzfmJyaWQtZ3lyTgsSDVB1Ymxpc2hlZFBhZ2UiJ2h0dHA6Ly9ibG9nLmphc29uZ3JlZW4ubmV0LzIwMTQvMTAvNDMxLwwLEgdQdWJsaXNoGICAgICAgIAKDA">
+      3 weeks, 2 days ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://twitter.com/jasongreen/status/525742217231474688">
+     
+     tweet
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://blog.jasongreen.net/2014/10/426/">blog.jasongreen.net/2014/10/426/</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1414173553&key=aglzfmJyaWQtZ3lyTgsSDVB1Ymxpc2hlZFBhZ2UiJ2h0dHA6Ly9ibG9nLmphc29uZ3JlZW4ubmV0LzIwMTQvMTAvNDI2LwwLEgdQdWJsaXNoGICAgICAgIAKDA">
+      3 weeks, 2 days ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://twitter.com/jasongreen/status/525708100880199680">
+     
+     tweet
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://blog.jasongreen.net/2014/10/424/">blog.jasongreen.net/2014/10/424/</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1414172484&key=aglzfmJyaWQtZ3lyTgsSDVB1Ymxpc2hlZFBhZ2UiJ2h0dHA6Ly9ibG9nLmphc29uZ3JlZW4ubmV0LzIwMTQvMTAvNDI0LwwLEgdQdWJsaXNoGICAgICAgIAKDA">
+      3 weeks, 2 days ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://twitter.com/jasongreen/status/525703615864766464">
+     
+     tweet
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://blog.jasongreen.net/2014/10/420/">blog.jasongreen.net/2014/10/420/</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1414171853&key=aglzfmJyaWQtZ3lyTgsSDVB1Ymxpc2hlZFBhZ2UiJ2h0dHA6Ly9ibG9nLmphc29uZ3JlZW4ubmV0LzIwMTQvMTAvNDIwLwwLEgdQdWJsaXNoGICAgICAgIAKDA">
+      3 weeks, 2 days ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://twitter.com/jasongreen/status/525700970156531712">
+     
+     tweet
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://blog.jasongreen.net/2014/10/416/">blog.jasongreen.net/2014/10/416/</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1414080717&key=aglzfmJyaWQtZ3lyTgsSDVB1Ymxpc2hlZFBhZ2UiJ2h0dHA6Ly9ibG9nLmphc29uZ3JlZW4ubmV0LzIwMTQvMTAvNDE2LwwLEgdQdWJsaXNoGICAgICAgIAKDA">
+      3 weeks, 3 days ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://twitter.com/jasongreen/status/525318719644246017">
+     
+     tweet
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://blog.jasongreen.net/2014/10/410/">blog.jasongreen.net/2014/10/410/</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1413574630&key=aglzfmJyaWQtZ3lyTgsSDVB1Ymxpc2hlZFBhZ2UiJ2h0dHA6Ly9ibG9nLmphc29uZ3JlZW4ubmV0LzIwMTQvMTAvNDEwLwwLEgdQdWJsaXNoGICAgICAgIAKDA">
+      1 month ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://twitter.com/jasongreen/status/523196036848689152">
+     
+     tweet
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://blog.jasongreen.net/2014/10/406/">blog.jasongreen.net/2014/10/406/</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1412872970&key=aglzfmJyaWQtZ3lyTgsSDVB1Ymxpc2hlZFBhZ2UiJ2h0dHA6Ly9ibG9nLmphc29uZ3JlZW4ubmV0LzIwMTQvMTAvNDA2LwwLEgdQdWJsaXNoGICAgICAgIAKDA">
+      1 month, 1 week ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://twitter.com/jasongreen/status/520253062506479616">
+     
+     tweet
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://blog.jasongreen.net/2014/10/404/">blog.jasongreen.net/2014/10/404/</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1412869882&key=aglzfmJyaWQtZ3lyTgsSDVB1Ymxpc2hlZFBhZ2UiJ2h0dHA6Ly9ibG9nLmphc29uZ3JlZW4ubmV0LzIwMTQvMTAvNDA0LwwLEgdQdWJsaXNoGICAgICAgIAKDA">
+      1 month, 1 week ago
+      
+    </a>
+
+   </div><div class="col-sm-4">
+     
+       <a href="https://twitter.com/jasongreen/status/520240109795295233">
+     
+     tweet
+     
+       </a>
+     
+
+   </div>
+  </li>
+  
+</ul>
+
+
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

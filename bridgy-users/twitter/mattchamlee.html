@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Matthew Chamlee (Twitter) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://twitter.com/mattchamlee" title="Matthew Chamlee (Twitter)"
+   class="u-url">
+  <img class="profile u-photo" src="https://pbs.twimg.com/profile_images/514451773159796736/efH6VNVP.jpeg" width="64px" />
+  <img src="/static/twitter_icon.png"
+       
+       alt="Twitter" />
+  <span class="p-name">Matthew Chamlee</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://known.mattchamlee.com/" class="publish-domain u-url">known.mattchamlee.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGAsSB1R3aXR0ZXIiC21hdHRjaGFtbGVlDA" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416212176&key=aglzfmJyaWQtZ3lyGAsSB1R3aXR0ZXIiC21hdHRjaGFtbGVlDA">
+      23 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGAsSB1R3aXR0ZXIiC21hdHRjaGFtbGVlDA" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+<span class="big">Click to enable <a href="/about#publish">publishing</a>:</span>
+<form method="post" name="publish-twitter-start" action="/twitter/start" class="signup">
+ <input type="image" alt="Sign in with Twitter"
+        src="/activitystreams/oauth_dropins/static/twitter.png" />
+ <input name="feature" type="hidden" value="publish" />
+</form>
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/salumeriasf"
+       title="Salumeria">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/1989013977/Salumeria_Logomark_SM.jpg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/mattchamlee/status/530124472561696768">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/mattchamlee/status/530124472561696768">
+      
+        Had an amazing Roast Beef sandwich ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415304916&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo1MzAxMjQ0NzI1NjE2OTY3NjhfZmF2b3JpdGVkX2J5XzEzMzQxNTAzOAw">
+    
+      1 week, 3 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://known.mattchamlee.com/2014/had-an-amazing-roast-beef-sandwich-today-salumeriasfcan-they-ever">known.mattchamlee.com/2014/had-an-am...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.salumeriasf.com/"
+       title="Salumeria">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/1989013977/Salumeria_Logomark_SM.jpg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/salumeriasf/status/530452722433413121">
+        @mattchamlee that's so sweet! We are ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/mattchamlee/status/530124472561696768">
+      
+        Had an amazing Roast Beef sandwich ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415304894&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzA0NTI3MjI0MzM0MTMxMjEM">
+    
+      1 week, 3 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://known.mattchamlee.com/2014/had-an-amazing-roast-beef-sandwich-today-salumeriasfcan-they-ever">known.mattchamlee.com/2014/had-an-am...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://celiasmagicalmomentsphotography.com/"
+       title="CC">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/517551787780222976/UmmjGT-s.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/ccgonzales1969/status/530396022821117952">
+        @mattchamlee awesome I love it</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/mattchamlee/status/530234577457905664">
+      
+        @ccgonzales1969 You can check mine out ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415291392&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzAzOTYwMjI4MjExMTc5NTIM">
+    
+      1 week, 3 days ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzAzOTYwMjI4MjExMTc5NTIM" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://known.mattchamlee.com">known.mattchamlee.com <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://known.mattchamlee.com/2014/ccgonzales1969-you-can-check-mine-out-here-">known.mattchamlee.com/2014/ccgonzale...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/ccgonzales1969"
+       title="CC">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/517551787780222976/UmmjGT-s.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/mattchamlee/status/530233650416476160">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/mattchamlee/status/530233650416476160">
+      
+        @ccgonzales1969 it's a platform for social ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415291357&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo1MzAyMzM2NTA0MTY0NzYxNjBfZmF2b3JpdGVkX2J5XzM2NjY2OTY1OQw">
+    
+      1 week, 3 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://known.mattchamlee.com/2014/ccgonzales1969-its-a-platform-for-social-interaction-and-activity-but">known.mattchamlee.com/2014/ccgonzale...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/ccgonzales1969"
+       title="CC">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/517551787780222976/UmmjGT-s.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/mattchamlee/status/530234577457905664">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/mattchamlee/status/530234577457905664">
+      
+        @ccgonzales1969 You can check mine out ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415291308&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo1MzAyMzQ1Nzc0NTc5MDU2NjRfZmF2b3JpdGVkX2J5XzM2NjY2OTY1OQw">
+    
+      1 week, 3 days ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo1MzAyMzQ1Nzc0NTc5MDU2NjRfZmF2b3JpdGVkX2J5XzM2NjY2OTY1OQw" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://known.mattchamlee.com">known.mattchamlee.com <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://known.mattchamlee.com/2014/ccgonzales1969-you-can-check-mine-out-here-">known.mattchamlee.com/2014/ccgonzale...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/ccgonzales1969"
+       title="CC">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/517551787780222976/UmmjGT-s.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/mattchamlee/status/530098347458043905">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/mattchamlee/status/530098347458043905">
+      
+        Strange, just found Twitter and Facebook ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415229990&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo1MzAwOTgzNDc0NTgwNDM5MDVfZmF2b3JpdGVkX2J5XzM2NjY2OTY1OQw">
+    
+      1 week, 4 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://known.mattchamlee.com/2014/strange-just-found-twitter-and-facebook-unlinked-on-my-known">known.mattchamlee.com/2014/strange-j...</a></li>
+	<li><a class="original-post" target="_blank" href="http://known.mattchamlee.com/s/6f85J">known.mattchamlee.com/s/6f85J</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/ccgonzales1969"
+       title="CC">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/517551787780222976/UmmjGT-s.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/mattchamlee/status/530124472561696768">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/mattchamlee/status/530124472561696768">
+      
+        Had an amazing Roast Beef sandwich ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415229985&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo1MzAxMjQ0NzI1NjE2OTY3NjhfZmF2b3JpdGVkX2J5XzM2NjY2OTY1OQw">
+    
+      1 week, 4 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://known.mattchamlee.com/2014/had-an-amazing-roast-beef-sandwich-today-salumeriasfcan-they-ever">known.mattchamlee.com/2014/had-an-am...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/ccgonzales1969"
+       title="CC">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/517551787780222976/UmmjGT-s.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/mattchamlee/status/530101873236135936">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/mattchamlee/status/530101873236135936">
+      
+        This pesky profile image loading thing ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415229982&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo1MzAxMDE4NzMyMzYxMzU5MzZfZmF2b3JpdGVkX2J5XzM2NjY2OTY1OQw">
+    
+      1 week, 4 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://known.mattchamlee.com/2014/this-pesky-profile-image-loading-thing-is-bugging-meloads-on">known.mattchamlee.com/2014/this-pesk...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://celiasmagicalmomentsphotography.com/"
+       title="CC">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/517551787780222976/UmmjGT-s.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/ccgonzales1969/status/530136952092516352">
+        @mattchamlee what is known?</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/mattchamlee/status/530098347458043905">
+      
+        Strange, just found Twitter and Facebook ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415229979&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzAxMzY5NTIwOTI1MTYzNTIM">
+    
+      1 week, 4 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://known.mattchamlee.com/2014/strange-just-found-twitter-and-facebook-unlinked-on-my-known">known.mattchamlee.com/2014/strange-j...</a></li>
+	<li><a class="original-post" target="_blank" href="http://known.mattchamlee.com/s/6f85J">known.mattchamlee.com/s/6f85J</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/SuperDuperSF"
+       title="Super Duper Burgers">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/2990037955/9414d09aeb8f38a8c1192a69e361187c.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/mattchamlee/status/515993723742613504">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/mattchamlee/status/515993723742613504">
+      
+        Finally got an opportunity to try ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 week, 5 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

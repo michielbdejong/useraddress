@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>CloudWorks.nu (Twitter) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://twitter.com/cloudworksnl" title="CloudWorks.nu (Twitter)"
+   class="u-url">
+  <img class="profile u-photo" src="https://pbs.twimg.com/profile_images/1125018162/cw-logo.jpg" width="64px" />
+  <img src="/static/twitter_icon.png"
+       
+       alt="Twitter" />
+  <span class="p-name">CloudWorks.nu</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://cloudworks.nu/" class="publish-domain u-url">cloudworks.nu</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGQsSB1R3aXR0ZXIiDGNsb3Vkd29ya3NubAw" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416207253&key=aglzfmJyaWQtZ3lyGQsSB1R3aXR0ZXIiDGNsb3Vkd29ya3NubAw">
+      1 hour, 38 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGQsSB1R3aXR0ZXIiDGNsb3Vkd29ya3NubAw" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+<form method="post" action="/delete/start">
+<p id="publishing-label" class="big">
+ Ready to publish.
+   <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGQsSB1R3aXR0ZXIiDGNsb3Vkd29ya3NubAw" />
+   <input name="feature" type="hidden" value="publish" />
+   <button id="delete-button" type="submit" class="btn btn-default"
+     title="Disable publishing for this account. (Won't delete posts you've already published.)"
+     >Disable</button>
+</p>
+</form>
+
+<form method="post" name="preview" action="/publish/preview"
+      onsubmit="do_preview('twitter'); return false;">
+<p id="preview-ui">
+ <label id="source-label" for="source-url">Enter post URL:</label>
+ <input id="source-url" name="source" type="url" required alt="Source URL"></input>
+ <input name="target" type="hidden"
+        value="http://brid.gy/publish/twitter"></input>
+
+ <nobr>
+ <!-- use a hidden input before the checkbox with the same name to set the value
+      to be sent when the checkbox is unchecked. -->
+ &nbsp;
+ <input id="include-link-unchecked" name="bridgy_omit_link" type="hidden"
+        value="true"></input>
+ <input id="include-link-checked" name="bridgy_omit_link" type="checkbox"
+        value="false" checked></input>
+ <label id="include-link-label" for="include-link-checked">Include link</label>
+ &nbsp;
+ <button id="preview-button" type="submit" class="btn btn-default">Preview</button>
+ </nobr>
+</p>
+</form>
+
+<!-- Publish signup buttons -->
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.lighthouse-ict.com"
+       title="Petra">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/472039601985437696/rN8TfQ6w.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/Lighthouse_ict/status/529950936949850112">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/cloudworksnl/status/529949883726565376">
+      
+        Nederland is wereldwijd koploper in flexibel ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415187377&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1Mjk5NTA5MzY5NDk4NTAxMTIM">
+    
+      1 week, 4 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://cloudworks.nu/2014/11/05/nederland-is-wereldwijd-koploper-in-flexibel-werken/">cloudworks.nu/2014/11/05/ned...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.3cloudz.nl"
+       title="3CLOUDZ">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/2971194963/3950a316c306cdfca27d24fcec814bb5.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/3CLOUDZnl/status/526680639807168512">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/cloudworksnl/status/526680023269638145">
+      
+        Softwarefalen leidt tot €1,6 miljard economische ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414405767&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MjY2ODA2Mzk4MDcxNjg1MTIM">
+    
+      2 weeks, 6 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://cloudworks.nu/2014/10/27/softwarefalen-leidt-tot-e16-miljard-economische-schade/">cloudworks.nu/2014/10/27/sof...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/ThruMFT"
+       title="Thru, Inc.">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/464070892822077440/hFC07sSw.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/cloudworksnl/status/524853197647921152">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/cloudworksnl/status/524853197647921152">
+      
+        VMware kiest voor Salesforce met Thru ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413995880&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo1MjQ4NTMxOTc2NDc5MjExNTJfZmF2b3JpdGVkX2J5XzE5OTQ2MzQ2OAw">
+    
+      3 weeks, 4 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://cloudworks.nu/2014/10/22/vmware-kiest-voor-salesforce-met-thru/">cloudworks.nu/2014/10/22/vmw...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.lighthouse-ict.com"
+       title="Petra">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/472039601985437696/rN8TfQ6w.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/Lighthouse_ict/status/524180449154060288">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/cloudworksnl/status/524179666383683584">
+      
+        Brancheonderzoek ICT: 76% verwacht stijging omzet ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413809827&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MjQxODA0NDkxNTQwNjAyODgM">
+    
+      3 weeks, 6 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://cloudworks.nu/2014/10/20/brancheonderzoek-ict-76-verwacht-stijging-omzet/">cloudworks.nu/2014/10/20/bra...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://CRMDriveBy.com"
+       title="CRM Drve By">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000749435283/ad3e8b1816e346a9a36edee9ed46f106.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/CRMDriveBy/status/523098240594354177">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/cloudworksnl/status/523024237028995072">
+      
+        Dimension Data erkend als Alcatel-Lucent Enterprise ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413551518&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MjMwOTgyNDA1OTQzNTQxNzcM">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://cloudworks.nu/2014/10/17/dimension-data-erkend-als-alcatel-lucent-enterprise-global-partner-in-europa/">cloudworks.nu/2014/10/17/dim...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/SBSMXRelay"
+       title="MX-Relay &amp; SBS">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/520923514757337089/w8Mi9Tt9.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/cloudworksnl/status/522995088369393664">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/cloudworksnl/status/522995088369393664">
+      
+        Meander Medisch Centrum opent Innovation Center ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413542301&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1MjI5OTUwODgzNjkzOTM2NjRfZmF2b3JpdGVkX2J5XzE3NjE3MTkzDA">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://cloudworks.nu/2014/10/17/meander-medisch-centrum-opent-innovation-center/">cloudworks.nu/2014/10/17/mea...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/PaulSpaargaren"
+       title="Paul Spaargaren">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/478406280231813121/8zY5UKNZ.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/PaulSpaargaren/status/523051441779654656">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/cloudworksnl/status/523024237028995072">
+      
+        Dimension Data erkend als Alcatel-Lucent Enterprise ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413540245&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MjMwNTE0NDE3Nzk2NTQ2NTYM">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://cloudworks.nu/2014/10/17/dimension-data-erkend-als-alcatel-lucent-enterprise-global-partner-in-europa/">cloudworks.nu/2014/10/17/dim...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.minkels.com"
+       title="Minkels">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000819726710/33ae629f9a67a924451de0d1a3c3a10c.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/Minkels_HQ/status/522783952994832385">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/cloudworksnl/status/522759036664811520">
+      
+        (Niet) iedereen kan een datacenter/serverruimte inrichten ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413477044&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MjI3ODM5NTI5OTQ4MzIzODUM">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://cloudworks.nu/2014/10/16/niet-iedereen-kan-een-datacenterserverruimte-inrichten/">cloudworks.nu/2014/10/16/nie...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/vvpreetham"
+       title="Preetham V V">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/425579081648713728/0v0R5YJC.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/cloudworksnl/status/522369805740150785">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/cloudworksnl/status/522369805740150785">
+      
+        Oracle, iRent en VX Company komen ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413378318&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1MjIzNjk4MDU3NDAxNTA3ODVfZmF2b3JpdGVkX2J5XzE1MTU0MjU4DA">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://cloudworks.nu/2014/10/15/oracle-irent-en-vx-company-komen-met-kosteneffectieve-big-data-oplossing/">cloudworks.nu/2014/10/15/ora...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/Lighthouse_ict"
+       title="Petra">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/472039601985437696/rN8TfQ6w.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/cloudworksnl/status/522347208075927552">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/cloudworksnl/status/522347208075927552">
+      
+        Bedreigingen én kansen van data-privacy - ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413373951&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo1MjIzNDcyMDgwNzU5Mjc1NTJfZmF2b3JpdGVkX2J5XzIzNzc0NTQxMAw">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://cloudworks.nu/2014/10/15/bedreigingen-en-kansen-van-data-privacy/">cloudworks.nu/2014/10/15/bed...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+
+<p class="big">Nothing published yet.</p>
+
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

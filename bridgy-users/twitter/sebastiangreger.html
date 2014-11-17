@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Sebastian Greger (Twitter) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://twitter.com/sebastiangreger" title="Sebastian Greger (Twitter)"
+   class="u-url">
+  <img class="profile u-photo" src="https://pbs.twimg.com/profile_images/1340950927/twitter_sebastiangreger.jpg" width="64px" />
+  <img src="/static/twitter_icon.png"
+       
+       alt="Twitter" />
+  <span class="p-name">Sebastian Greger</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://sebastiangreger.net/" class="publish-domain u-url">sebastiangreger.net</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyHAsSB1R3aXR0ZXIiD3NlYmFzdGlhbmdyZWdlcgw" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416211196&key=aglzfmJyaWQtZ3lyHAsSB1R3aXR0ZXIiD3NlYmFzdGlhbmdyZWdlcgw">
+      44 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyHAsSB1R3aXR0ZXIiD3NlYmFzdGlhbmdyZWdlcgw" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+<span class="big">Click to enable <a href="/about#publish">publishing</a>:</span>
+<form method="post" name="publish-twitter-start" action="/twitter/start" class="signup">
+ <input type="image" alt="Sign in with Twitter"
+        src="/activitystreams/oauth_dropins/static/twitter.png" />
+ <input name="feature" type="hidden" value="publish" />
+</form>
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://people.aalto.fi/rasmus_vuori"
+       title="Rasmus Vuori">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/456088138306183168/L1cz-Y_G.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/rasmusvuori/status/533967887770595328">
+        @sebastiangreger thanks for the tip! I ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/sebastiangreger/status/533967625408503810">
+      
+        @rasmusvuori You might be interested to ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416144831&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzM5Njc4ODc3NzA1OTUzMjgM">
+    
+      19 hours, 10 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://github.com/cantino/huginn">github.com/cantino/huginn</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://people.aalto.fi/rasmus_vuori"
+       title="Rasmus Vuori">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/456088138306183168/L1cz-Y_G.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/rasmusvuori/status/533967783001063424">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/sebastiangreger/status/533967625408503810">
+      
+        @rasmusvuori You might be interested to ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416144805&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzM5Njc3ODMwMDEwNjM0MjQM">
+    
+      19 hours, 10 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://github.com/cantino/huginn">github.com/cantino/huginn</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/BRANDONHILTON"
+       title="Brandon Hilton">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/516710184031227905/DGmyz5yo.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/sebastiangreger/status/528206271619399680">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/sebastiangreger/status/528206271619399680">
+      
+        Making of: An illustration for my ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414769801&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1MjgyMDYyNzE2MTkzOTk2ODBfZmF2b3JpdGVkX2J5XzE5MTc0ODA2DA">
+    
+      2 weeks, 2 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://sebastiangreger.net/2014/10/4503/">sebastiangreger.net/2014/10/4503/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://anukoski.com"
+       title="Anu Koski">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/526813633330700289/fjYwFo0j.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/anukoski/status/527801932610801665">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/sebastiangreger/status/527763774326190080">
+      
+        The digitally blindfolded: smartphone zombies and ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414672959&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1Mjc4MDE5MzI2MTA4MDE2NjUM">
+    
+      2 weeks, 3 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://sebastiangreger.net/2014/10/digitally-blindfolded-smartphone-zombies/">sebastiangreger.net/2014/10/digita...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.slavedigital.com"
+       title="Maarten Patteeuw">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/482126459478085635/h7Dx1XHc.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/maapathel/status/527793629411438593">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/sebastiangreger/status/527763774326190080">
+      
+        The digitally blindfolded: smartphone zombies and ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414670984&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1Mjc3OTM2Mjk0MTE0Mzg1OTMM">
+    
+      2 weeks, 3 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://sebastiangreger.net/2014/10/digitally-blindfolded-smartphone-zombies/">sebastiangreger.net/2014/10/digita...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/suomitaly"
+       title="suomitaly">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/475722301661405184/r7jLncMU.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/sebastiangreger/status/527763774326190080">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/sebastiangreger/status/527763774326190080">
+      
+        The digitally blindfolded: smartphone zombies and ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414665301&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1Mjc3NjM3NzQzMjYxOTAwODBfZmF2b3JpdGVkX2J5XzE2MDAwMTAxDA">
+    
+      2 weeks, 3 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://sebastiangreger.net/2014/10/digitally-blindfolded-smartphone-zombies/">sebastiangreger.net/2014/10/digita...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/ilparone"
+       title="Jarno M. Koponen">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/3485496709/b0b3ce8dc392950a6b91b910e57028e5.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/sebastiangreger/status/527763774326190080">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/sebastiangreger/status/527763774326190080">
+      
+        The digitally blindfolded: smartphone zombies and ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414664676&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1Mjc3NjM3NzQzMjYxOTAwODBfZmF2b3JpdGVkX2J5XzE4MTM0MjEwDA">
+    
+      2 weeks, 3 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://sebastiangreger.net/2014/10/digitally-blindfolded-smartphone-zombies/">sebastiangreger.net/2014/10/digita...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/piwik"
+       title="Piwik Web Analytics">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/468323958429716481/vEoidUi7.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/sebastiangreger/status/527383239611400192">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/sebastiangreger/status/527383239611400192">
+      
+        The #1 limitation of privacy-friendly Google ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414650877&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1MjczODMyMzk2MTE0MDAxOTJfZmF2b3JpdGVkX2J5XzQ5ODEzNzA3DA">
+    
+      2 weeks, 4 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://sebastiangreger.net/2014/10/4495/">sebastiangreger.net/2014/10/4495/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/SherriStrategy"
+       title="Sherri Hendrickson">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000474494603/771442267901734e552cf583ec552657.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/sebastiangreger/status/527383239611400192">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/sebastiangreger/status/527383239611400192">
+      
+        The #1 limitation of privacy-friendly Google ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414634655&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1MjczODMyMzk2MTE0MDAxOTJfZmF2b3JpdGVkX2J5XzE1NDMwMTgyDA">
+    
+      2 weeks, 4 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://sebastiangreger.net/2014/10/4495/">sebastiangreger.net/2014/10/4495/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/geteverwise"
+       title="Everwise">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/3637395951/866b18579870a7cac294e3029ffaa592.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/sebastiangreger/status/527383239611400192">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/sebastiangreger/status/527383239611400192">
+      
+        The #1 limitation of privacy-friendly Google ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414575581&key=aglzfmJyaWQtZ3lyTAsSCFJlc3BvbnNlIj50YWc6dHdpdHRlci5jb20sMjAxMzo1MjczODMyMzk2MTE0MDAxOTJfZmF2b3JpdGVkX2J5XzUzOTM1NjAyMQw">
+    
+      2 weeks, 4 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://sebastiangreger.net/2014/10/4495/">sebastiangreger.net/2014/10/4495/</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

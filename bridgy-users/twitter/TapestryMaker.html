@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>TapestryMaker (Twitter) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://twitter.com/TapestryMaker" title="TapestryMaker (Twitter)"
+   class="u-url">
+  <img class="profile u-photo" src="https://pbs.twimg.com/profile_images/517134942732443650/7BJ4_oa1.png" width="64px" />
+  <img src="/static/twitter_icon.png"
+       
+       alt="Twitter" />
+  <span class="p-name">TapestryMaker</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://stream.tapestrymaker.net" class="publish-domain u-url">stream.tapestrymaker.net</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGgsSB1R3aXR0ZXIiDVRhcGVzdHJ5TWFrZXIM" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416208136&key=aglzfmJyaWQtZ3lyGgsSB1R3aXR0ZXIiDVRhcGVzdHJ5TWFrZXIM">
+      1 hour, 36 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGgsSB1R3aXR0ZXIiDVRhcGVzdHJ5TWFrZXIM" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+<span class="big">Click to enable <a href="/about#publish">publishing</a>:</span>
+<form method="post" name="publish-twitter-start" action="/twitter/start" class="signup">
+ <input type="image" alt="Sign in with Twitter"
+        src="/activitystreams/oauth_dropins/static/twitter.png" />
+ <input name="feature" type="hidden" value="publish" />
+</form>
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://www.neworleansbookfair.com"
+       title="NEW ORLEANS BOOKFAIR">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/510473849763147776/azTkwUiT.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/NOLABOOKFAIR/status/529079192835874816">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/TapestryMaker/status/528609834178867200">
+      
+        Quirell: crowdfunding a social network for ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414977436&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MjkwNzkxOTI4MzU4NzQ4MTYM">
+    
+      2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://stream.tapestrymaker.net/2014/quirell-crowdfunding-a-social-network-for-marginalized-communities-queer-trans">stream.tapestrymaker.net/2014/quirell-c...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/TweetLiftCrowd"
+       title="CrowdLift">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/442129751293960192/3ffD7RNb.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/TapestryMaker/status/528609834178867200">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/TapestryMaker/status/528609834178867200">
+      
+        Quirell: crowdfunding a social network for ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414908321&key=aglzfmJyaWQtZ3lyTQsSCFJlc3BvbnNlIj90YWc6dHdpdHRlci5jb20sMjAxMzo1Mjg2MDk4MzQxNzg4NjcyMDBfZmF2b3JpdGVkX2J5XzIzNzgwMDY1NjQM">
+    
+      2 weeks, 1 day ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://stream.tapestrymaker.net/2014/quirell-crowdfunding-a-social-network-for-marginalized-communities-queer-trans">stream.tapestrymaker.net/2014/quirell-c...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://poczineproject.tumblr.com"
+       title="POC Zine Project">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/644195946/l_85f6be89d7264911a0c6da464bd33b5b.jpg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/POCZineProject/status/528686481326759937">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/TapestryMaker/status/528609834178867200">
+      
+        Quirell: crowdfunding a social network for ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414883845&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1Mjg2ODY0ODEzMjY3NTk5MzcM">
+    
+      2 weeks, 1 day ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://stream.tapestrymaker.net/2014/quirell-crowdfunding-a-social-network-for-marginalized-communities-queer-trans">stream.tapestrymaker.net/2014/quirell-c...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://danielacapistrano.com"
+       title="⏪Daniela&#39;s Lair⏩">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/528517202761494529/wjinHQTi.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/dcap/status/528686335717294080">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/TapestryMaker/status/528609834178867200">
+      
+        Quirell: crowdfunding a social network for ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414883826&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1Mjg2ODYzMzU3MTcyOTQwODAM">
+    
+      2 weeks, 1 day ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://stream.tapestrymaker.net/2014/quirell-crowdfunding-a-social-network-for-marginalized-communities-queer-trans">stream.tapestrymaker.net/2014/quirell-c...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://opheliablack.clipvia.com"
+       title="Zombie Emprx Black">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/514331780485111808/mblLJRmT.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/_OpheliaBlack/status/528679603879960577">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/TapestryMaker/status/528609834178867200">
+      
+        Quirell: crowdfunding a social network for ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414882568&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1Mjg2Nzk2MDM4Nzk5NjA1NzcM">
+    
+      2 weeks, 1 day ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://stream.tapestrymaker.net/2014/quirell-crowdfunding-a-social-network-for-marginalized-communities-queer-trans">stream.tapestrymaker.net/2014/quirell-c...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://gitlab.com/collectqt/quirell/"
+       title="Quirell">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/518127491139899393/EU-Czy8I.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/CQT_Quirell/status/528678207374245888">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/TapestryMaker/status/528609834178867200">
+      
+        Quirell: crowdfunding a social network for ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414882003&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1Mjg2NzgyMDczNzQyNDU4ODgM">
+    
+      2 weeks, 1 day ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://stream.tapestrymaker.net/2014/quirell-crowdfunding-a-social-network-for-marginalized-communities-queer-trans">stream.tapestrymaker.net/2014/quirell-c...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/AndieRTaylor"
+       title="Andie Reese Taylor">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/495724970396225536/OwGNkQa-.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/AndieRTaylor/status/528678645812838400">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/TapestryMaker/status/528609834178867200">
+      
+        Quirell: crowdfunding a social network for ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414881944&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1Mjg2Nzg2NDU4MTI4Mzg0MDAM">
+    
+      2 weeks, 1 day ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://stream.tapestrymaker.net/2014/quirell-crowdfunding-a-social-network-for-marginalized-communities-queer-trans">stream.tapestrymaker.net/2014/quirell-c...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://notallcentaurs.com"
+       title="Emilie Can&#39;t Draw">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/505187526751965184/1OvwAI1W.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/emitans/status/528678345848782848">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/TapestryMaker/status/528609834178867200">
+      
+        Quirell: crowdfunding a social network for ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414881894&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1Mjg2NzgzNDU4NDg3ODI4NDgM">
+    
+      2 weeks, 1 day ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://stream.tapestrymaker.net/2014/quirell-crowdfunding-a-social-network-for-marginalized-communities-queer-trans">stream.tapestrymaker.net/2014/quirell-c...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://achangeiscoming.net"
+       title="Jon Pincus">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/517143070194675712/Zq6I252H.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/jdp23/status/528613727529349120">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/TapestryMaker/status/528609834178867200">
+      
+        Quirell: crowdfunding a social network for ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414871479&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1Mjg2MTM3Mjc1MjkzNDkxMjAM">
+    
+      2 weeks, 1 day ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://stream.tapestrymaker.net/2014/quirell-crowdfunding-a-social-network-for-marginalized-communities-queer-trans">stream.tapestrymaker.net/2014/quirell-c...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/Nodejsforums"
+       title="nodejsforums.com">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/413963424306315264/DeQmMDoq.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/TapestryMaker/status/525702749175185408">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/TapestryMaker/status/525702749175185408">
+      
+        . @SEOmom @virtualgestures @JoshMaher I blogged ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414212911&key=aglzfmJyaWQtZ3lyTQsSCFJlc3BvbnNlIj90YWc6dHdpdHRlci5jb20sMjAxMzo1MjU3MDI3NDkxNzUxODU0MDhfZmF2b3JpdGVkX2J5XzIyMTYzMjUwMjgM">
+    
+      3 weeks, 2 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://stream.tapestrymaker.net/2014/startup-matchmaking-and-deploying-nodejs-apps-two-vignettes-from-seattlestartupweek">stream.tapestrymaker.net/2014/startup-m...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

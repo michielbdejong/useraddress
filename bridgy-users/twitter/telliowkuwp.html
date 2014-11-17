@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Terry Elliott (Twitter) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="https://twitter.com/telliowkuwp" title="Terry Elliott (Twitter)"
+   class="u-url">
+  <img class="profile u-photo" src="https://pbs.twimg.com/profile_images/1420332321/elliott.jpg" width="64px" />
+  <img src="/static/twitter_icon.png"
+       
+       alt="Twitter" />
+  <span class="p-name">Terry Elliott</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://about.me/terry.elliott" class="publish-domain u-url">about.me</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class="col-sm-6 big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGAsSB1R3aXR0ZXIiC3RlbGxpb3drdXdwDA" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416207466&key=aglzfmJyaWQtZ3lyGAsSB1R3aXR0ZXIiC3RlbGxpb3drdXdwDA">
+      1 hour, 47 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGAsSB1R3aXR0ZXIiC3RlbGxpb3drdXdwDA" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+<span class="big">Click to enable <a href="/about#publish">publishing</a>:</span>
+<form method="post" name="publish-twitter-start" action="/twitter/start" class="signup">
+ <input type="image" alt="Sign in with Twitter"
+        src="/activitystreams/oauth_dropins/static/twitter.png" />
+ <input name="feature" type="hidden" value="publish" />
+</form>
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/Bali_Maha"
+       title="N)ℳąhą Bąℓi مها بالي">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/523419361185234944/kWBLJiqq.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/telliowkuwp/status/534150971526770688">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/telliowkuwp/status/534150971526770688">
+      
+        Kindness in a time of choler ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416202033&key=aglzfmJyaWQtZ3lyTQsSCFJlc3BvbnNlIj90YWc6dHdpdHRlci5jb20sMjAxMzo1MzQxNTA5NzE1MjY3NzA2ODhfZmF2b3JpdGVkX2J5XzE1MzUyNzM1MjAM">
+    
+      3 hours, 18 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://zeega.com/169750">zeega.com/169750</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://dogtrax.edublogs.org/"
+       title="KevinHodgson(Db)">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/480645686610784257/_cppnr3w.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/dogtrax/status/534152541597364224">
+        @telliowkuwp @sensor63 @EatcherVeggies @Bali_Maha Love it. ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/telliowkuwp/status/534150971526770688">
+      
+        Kindness in a time of choler ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416188386&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzQxNTI1NDE1OTczNjQyMjQM">
+    
+      7 hours, 5 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://zeega.com/169750">zeega.com/169750</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/EatcherVeggies"
+       title="Swatson (N)">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000046638840/267f66c07dddfaae172f130981b14485.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/telliowkuwp/status/534005630118666240">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/telliowkuwp/status/534005630118666240">
+      
+        Check out my new video:Part two:backgroundin...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416188327&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1MzQwMDU2MzAxMTg2NjYyNDBfZmF2b3JpdGVkX2J5XzQ1NjM3MzY4DA">
+    
+      7 hours, 6 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://itunes.apple.com/app/explain-everything/id431493086?ls=1&mt=8">itunes.apple.com/app/explain-ev...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/EatcherVeggies"
+       title="Swatson (N)">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000046638840/267f66c07dddfaae172f130981b14485.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/telliowkuwp/status/534111779849527296">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/telliowkuwp/status/534111779849527296">
+      
+        A Dilemma:Gratitude 4 Messages in Bottles ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416182331&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1MzQxMTE3Nzk4NDk1MjcyOTZfZmF2b3JpdGVkX2J5XzQ1NjM3MzY4DA">
+    
+      8 hours, 46 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://rhetcompnow.com/tools/switching-to-manual-with-youtube-playlists/">rhetcompnow.com/tools/switchin...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://teachingbeyondtropes.blogspot.com/"
+       title="Swatson (N)">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000046638840/267f66c07dddfaae172f130981b14485.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/EatcherVeggies/status/534129584955228160">
+        retweeted this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/telliowkuwp/status/534111779849527296">
+      
+        A Dilemma:Gratitude 4 Messages in Bottles ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416182279&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzQxMjk1ODQ5NTUyMjgxNjAM">
+    
+      8 hours, 47 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://rhetcompnow.com/tools/switching-to-manual-with-youtube-playlists/">rhetcompnow.com/tools/switchin...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/EatcherVeggies"
+       title="Swatson (N)">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000046638840/267f66c07dddfaae172f130981b14485.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/telliowkuwp/status/534106397978275840">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/telliowkuwp/status/534106397978275840">
+      
+        Switching to Manual with YouTube Playlists ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416182220&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1MzQxMDYzOTc5NzgyNzU4NDBfZmF2b3JpdGVkX2J5XzQ1NjM3MzY4DA">
+    
+      8 hours, 48 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://tellio.tumblr.com/post/102816489240/switching-to-manual-with-youtube-playlists#_=_">tellio.tumblr.com/post/102816489...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/okyminaYan"
+       title="Brynn Rivas">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/524892407230242821/XM_5haE4.jpeg" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/telliowkuwp/status/534113563498278913">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/telliowkuwp/status/534113563498278913">
+      
+        Situating your message @dogtrax soundcloud.com/user6587006/so… #clmooc ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416182218&key=aglzfmJyaWQtZ3lyTQsSCFJlc3BvbnNlIj90YWc6dHdpdHRlci5jb20sMjAxMzo1MzQxMTM1NjM0OTgyNzg5MTNfZmF2b3JpdGVkX2J5XzI3NDc1NTkzMjMM">
+    
+      8 hours, 48 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://soundcloud.com/user6587006/sounds-from-sunday-afternoon">soundcloud.com/user6587006/so...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://somajesticwwmd.blogspot.com"
+       title="Sell Music Online">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/530732952376725504/EN_okTnc.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/SoMajesticWWMD/status/534113881623650304">
+        Great Music!!! it shoud be in ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="https://twitter.com/telliowkuwp/status/534113563498278913">
+      
+        Situating your message @dogtrax soundcloud.com/user6587006/so… #clmooc ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416182218&key=aglzfmJyaWQtZ3lyNQsSCFJlc3BvbnNlIid0YWc6dHdpdHRlci5jb20sMjAxMzo1MzQxMTM4ODE2MjM2NTAzMDQM">
+    
+      8 hours, 48 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://soundcloud.com/user6587006/sounds-from-sunday-afternoon">soundcloud.com/user6587006/so...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/EatcherVeggies"
+       title="Swatson (N)">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000046638840/267f66c07dddfaae172f130981b14485.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/telliowkuwp/status/533963084386160640">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/telliowkuwp/status/533963084386160640">
+      
+        8 Hour Relaxation-Nature Sounds-Birds Singing-Mindfulness Meditation-Sound ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416153557&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1MzM5NjMwODQzODYxNjA2NDBfZmF2b3JpdGVkX2J5XzQ1NjM3MzY4DA">
+    
+      16 hours, 45 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://tellio.tumblr.com/post/102775500400/8-hour-relaxation-nature-sounds-birds#_=_">tellio.tumblr.com/post/102775500...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="https://twitter.com/EatcherVeggies"
+       title="Swatson (N)">
+      <img class="profile" src="https://pbs.twimg.com/profile_images/378800000046638840/267f66c07dddfaae172f130981b14485.png" width="32" /></a>
+      <a target="_blank" href="https://twitter.com/telliowkuwp/status/533945558684418048">
+        favorited this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="https://twitter.com/telliowkuwp/status/533945558684418048">
+      
+        Add Yourself to the #TvsZ Metaphor ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416153514&key=aglzfmJyaWQtZ3lySwsSCFJlc3BvbnNlIj10YWc6dHdpdHRlci5jb20sMjAxMzo1MzM5NDU1NTg2ODQ0MTgwNDhfZmF2b3JpdGVkX2J5XzQ1NjM3MzY4DA">
+    
+      16 hours, 46 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.thinglink.com/scene/590496915372638208">thinglink.com/scene/59049691...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+
