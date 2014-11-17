@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Orcsik Antal (WordPress.com) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="http://include.aorcsik.com" title="Orcsik Antal (WordPress.com)"
+   class="u-url">
+  <img class="profile u-photo" src="https://1.gravatar.com/avatar/42be615fb210779dbb3752714e14c3ec?s=96&amp;d=https%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D96&amp;r=G" width="64px" />
+  <img src="/static/wordpress_icon.png"
+       
+       alt="WordPress.com" />
+  <span class="p-name">Orcsik Antal</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://include.aorcsik.com" class="publish-domain u-url">include.aorcsik.com</a>
+
+
+
+</div>
+
+
+
+
+<!-- Banner for blogs that aren't yet advertising the webmention endpoint -->
+
+
+<div class="row">
+
+<p class="warning">Warning: your blog's current
+<a href="https://github.com/converspace/webmention/blob/master/README.md#sender-discovers-receiver-endpoint">webmention endpoint</a>
+is
+<code><a href="http://include.aorcsik.com/?webmention=endpoint">
+  http://include.aorcsik.com/?webmention=endpoint</a></code>.
+If you want Bridgy to handle your blog's webmentions, change it to
+<code><a href="https://www.brid.gy/webmention/wordpress">
+  https://www.brid.gy/webmention/wordpress</a></code>.
+</p>
+
+
+<form method="post" action="/delete/start">
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyIgsSCVdvcmRQcmVzcyITaW5jbHVkZS5hb3Jjc2lrLmNvbQw" />
+  <input name="feature" type="hidden" value="webmention" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+          title="Disable this account. (Won't delete webmentions you've already sent or received.)">Disable</button>
+</form>
+</div>
+
+
+<!-- Signup button -->
+
+
+
+
+
+
+<!-- Blog posts -->
+<div id="blogposts" class="row">
+
+<p class="big">Recent blog posts:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://include.aorcsik.com/2014/11/09/my-journey-on-ps3/">My Journey on PS3</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1415538206&key=aglzfmJyaWQtZ3lyRgsSCEJsb2dQb3N0IjhodHRwOi8vaW5jbHVkZS5hb3Jjc2lrLmNvbS8yMDE0LzExLzA5L215LWpvdXJuZXktb24tcHMzLww">
+      1 week ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://thatgamecompany.com/">thatgamecompany.com/</a></li>
+	<li><a class="original-post" target="_blank" href="http://littlebigplanet.playstation.com/">littlebigplanet.playstation.com/</a></li>
+	<li><a class="original-post" target="_blank" href="https://godofwar.playstation.com/verify_age/?next=%2F">godofwar.playstation.com/verify_age/?ne...</a></li>
+	<li><a class="original-post" target="_blank" href="http://thatgamecompany.com/games/journey/">thatgamecompany.com/games/journey/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://include.aorcsik.com/2014/11/07/truncate-string-in-swift/">Truncate string in Swift</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1415325680&key=aglzfmJyaWQtZ3lyTQsSCEJsb2dQb3N0Ij9odHRwOi8vaW5jbHVkZS5hb3Jjc2lrLmNvbS8yMDE0LzExLzA3L3RydW5jYXRlLXN0cmluZy1pbi1zd2lmdC8M">
+      1 week, 3 days ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://include.aorcsik.com/2014/10/10/recommended-reading/">Recommended Reading</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1412944715&key=aglzfmJyaWQtZ3lySAsSCEJsb2dQb3N0IjpodHRwOi8vaW5jbHVkZS5hb3Jjc2lrLmNvbS8yMDE0LzEwLzEwL3JlY29tbWVuZGVkLXJlYWRpbmcvDA">
+      1 month, 1 week ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://medium.com/@pras_ra/rosita-3f7ec5a5bb05">medium.com/@pras_ra/rosit...</a></li>
+	<li><a class="original-post" target="_blank" href="https://medium.com/@jasdev/small-moments-159df5db89a5">medium.com/@jasdev/small-...</a></li>
+	<li><a class="original-post" target="_blank" href="https://medium.com/@vanschneider/how-to-beard-6e1aa75ec379">medium.com/@vanschneider/...</a></li>
+	<li><a class="original-post" target="_blank" href="https://medium.com/@pahwadivya/important-how-to-write-a-to-do-list-77800bb2c788">medium.com/@pahwadivya/im...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://include.aorcsik.com/2014/09/27/something-old-something-new-something-borrowed-something-blue/">Something Old, Something New, Something ...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1411843217&key=aglzfmJyaWQtZ3lycgsSCEJsb2dQb3N0ImRodHRwOi8vaW5jbHVkZS5hb3Jjc2lrLmNvbS8yMDE0LzA5LzI3L3NvbWV0aGluZy1vbGQtc29tZXRoaW5nLW5ldy1zb21ldGhpbmctYm9ycm93ZWQtc29tZXRoaW5nLWJsdWUvDA">
+      1 month, 2 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://include.aorcsik.com/2014/09/19/installing-java-on-mac-os-10-10-yosemite-beta/">Installing Java on Mac OS 10.10 Yosemite...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1411136499&key=aglzfmJyaWQtZ3lyYgsSCEJsb2dQb3N0IlRodHRwOi8vaW5jbHVkZS5hb3Jjc2lrLmNvbS8yMDE0LzA5LzE5L2luc3RhbGxpbmctamF2YS1vbi1tYWMtb3MtMTAtMTAteW9zZW1pdGUtYmV0YS8M">
+      1 month, 4 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">oracle.com/technetwork/ja...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase7-521261.html#jdk-7u65-oth-JPR">oracle.com/technetwork/ja...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.mkyong.com/java/how-to-set-java_home-environment-variable-on-mac-os-x">mkyong.com/java/how-to-se...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://include.aorcsik.com/2014/05/13/a-short-introduction-to-reactive-programming/">A short introduction to Reactive Program...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1401778667&key=aglzfmJyaWQtZ3lyYQsSCEJsb2dQb3N0IlNodHRwOi8vaW5jbHVkZS5hb3Jjc2lrLmNvbS8yMDE0LzA1LzEzL2Etc2hvcnQtaW50cm9kdWN0aW9uLXRvLXJlYWN0aXZlLXByb2dyYW1taW5nLww">
+      5 months, 2 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://rx.codeplex.com/">rx.codeplex.com/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://include.aorcsik.com/2014/05/28/timeout-decorator/">@timeout decorator</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1401778646&key=aglzfmJyaWQtZ3lyRgsSCEJsb2dQb3N0IjhodHRwOi8vaW5jbHVkZS5hb3Jjc2lrLmNvbS8yMDE0LzA1LzI4L3RpbWVvdXQtZGVjb3JhdG9yLww">
+      5 months, 2 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+</div>
+
+
+<!-- Incoming blog webmentions -->
+<div id="webmentions" class="row">
+
+<p class="big">Recent
+  <a href="http://indiewebify.me/#send-webmentions">webmentions</a>:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="http://include.aorcsik.com">include.aorcsik.com</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://include.aorcsik.com/2014/04/">include.aorcsik.com/2014/04/</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1401780559&key=aglzfmJyaWQtZ3lyUgsSDkJsb2dXZWJtZW50aW9uIj5odHRwOi8vaW5jbHVkZS5hb3Jjc2lrLmNvbSBodHRwOi8vaW5jbHVkZS5hb3Jjc2lrLmNvbS8yMDE0LzA0Lww">
+      5 months, 2 weeks ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       None
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="http://include.aorcsik.com">include.aorcsik.com</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://include.aorcsik.com/2014/05/">include.aorcsik.com/2014/05/</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1401780555&key=aglzfmJyaWQtZ3lyUgsSDkJsb2dXZWJtZW50aW9uIj5odHRwOi8vaW5jbHVkZS5hb3Jjc2lrLmNvbSBodHRwOi8vaW5jbHVkZS5hb3Jjc2lrLmNvbS8yMDE0LzA1Lww">
+      5 months, 2 weeks ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       None
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="http://include.aorcsik.com">include.aorcsik.com</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://include.aorcsik.com/category/uncategorized/">include.aorcsik.com/category/uncat...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1401780551&key=aglzfmJyaWQtZ3lyYQsSDkJsb2dXZWJtZW50aW9uIk1odHRwOi8vaW5jbHVkZS5hb3Jjc2lrLmNvbSBodHRwOi8vaW5jbHVkZS5hb3Jjc2lrLmNvbS9jYXRlZ29yeS91bmNhdGVnb3JpemVkLww">
+      5 months, 2 weeks ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       None
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="http://include.aorcsik.com">include.aorcsik.com</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://include.aorcsik.com/2014/04/11/manifesto/">include.aorcsik.com/2014/04/11/man...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1401780547&key=aglzfmJyaWQtZ3lyXwsSDkJsb2dXZWJtZW50aW9uIktodHRwOi8vaW5jbHVkZS5hb3Jjc2lrLmNvbSBodHRwOi8vaW5jbHVkZS5hb3Jjc2lrLmNvbS8yMDE0LzA0LzExL21hbmlmZXN0by8M">
+      5 months, 2 weeks ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       None
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="http://include.aorcsik.com">include.aorcsik.com</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://include.aorcsik.com/2014/04/11/i-hate-when-a-language-makes-no-sense-to-me/">include.aorcsik.com/2014/04/11/i-h...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1401780540&key=aglzfmJyaWQtZ3lygQELEg5CbG9nV2VibWVudGlvbiJtaHR0cDovL2luY2x1ZGUuYW9yY3Npay5jb20gaHR0cDovL2luY2x1ZGUuYW9yY3Npay5jb20vMjAxNC8wNC8xMS9pLWhhdGUtd2hlbi1hLWxhbmd1YWdlLW1ha2VzLW5vLXNlbnNlLXRvLW1lLww">
+      5 months, 2 weeks ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       None
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="http://include.aorcsik.com">include.aorcsik.com</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://include.aorcsik.com/tag/talentbuddy/">include.aorcsik.com/tag/talentbudd...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1401780534&key=aglzfmJyaWQtZ3lyWgsSDkJsb2dXZWJtZW50aW9uIkZodHRwOi8vaW5jbHVkZS5hb3Jjc2lrLmNvbSBodHRwOi8vaW5jbHVkZS5hb3Jjc2lrLmNvbS90YWcvdGFsZW50YnVkZHkvDA">
+      5 months, 2 weeks ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       None
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="http://include.aorcsik.com">include.aorcsik.com</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://include.aorcsik.com/tag/project-euler/">include.aorcsik.com/tag/project-eu...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1401780529&key=aglzfmJyaWQtZ3lyXAsSDkJsb2dXZWJtZW50aW9uIkhodHRwOi8vaW5jbHVkZS5hb3Jjc2lrLmNvbSBodHRwOi8vaW5jbHVkZS5hb3Jjc2lrLmNvbS90YWcvcHJvamVjdC1ldWxlci8M">
+      5 months, 2 weeks ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       None
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="http://include.aorcsik.com">include.aorcsik.com</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://include.aorcsik.com/tag/coding-dojo/">include.aorcsik.com/tag/coding-doj...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1401780524&key=aglzfmJyaWQtZ3lyWgsSDkJsb2dXZWJtZW50aW9uIkZodHRwOi8vaW5jbHVkZS5hb3Jjc2lrLmNvbSBodHRwOi8vaW5jbHVkZS5hb3Jjc2lrLmNvbS90YWcvY29kaW5nLWRvam8vDA">
+      5 months, 2 weeks ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       None
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="http://include.aorcsik.com">include.aorcsik.com</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://include.aorcsik.com/tag/codewars/">include.aorcsik.com/tag/codewars/</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1401780520&key=aglzfmJyaWQtZ3lyVwsSDkJsb2dXZWJtZW50aW9uIkNodHRwOi8vaW5jbHVkZS5hb3Jjc2lrLmNvbSBodHRwOi8vaW5jbHVkZS5hb3Jjc2lrLmNvbS90YWcvY29kZXdhcnMvDA">
+      5 months, 2 weeks ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       None
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="http://include.aorcsik.com">include.aorcsik.com</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://include.aorcsik.com/2014/04/13/online-coding-dojos/">include.aorcsik.com/2014/04/13/onl...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1401780516&key=aglzfmJyaWQtZ3lyaQsSDkJsb2dXZWJtZW50aW9uIlVodHRwOi8vaW5jbHVkZS5hb3Jjc2lrLmNvbSBodHRwOi8vaW5jbHVkZS5hb3Jjc2lrLmNvbS8yMDE0LzA0LzEzL29ubGluZS1jb2RpbmctZG9qb3MvDA">
+      5 months, 2 weeks ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       None
+     
+
+   </div>
+  </li>
+  
+</ul>
+
+
+</div>
+
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

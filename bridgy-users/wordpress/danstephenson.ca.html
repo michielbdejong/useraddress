@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Dan Stephenson (WordPress.com) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="http://www.danstephenson.ca" title="Dan Stephenson (WordPress.com)"
+   class="u-url">
+  <img class="profile u-photo" src="https://2.gravatar.com/avatar/8022e3f717182d8d45962b2482b4f1a3?s=96&amp;d=identicon&amp;r=G" width="64px" />
+  <img src="/static/wordpress_icon.png"
+       
+       alt="WordPress.com" />
+  <span class="p-name">Dan Stephenson</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://www.danstephenson.ca" class="publish-domain u-url">danstephenson.ca</a>
+
+
+
+</div>
+
+
+
+
+<!-- Banner for blogs that aren't yet advertising the webmention endpoint -->
+
+
+<div class="row">
+
+<p class="big">You're all set! Check out your recent
+<a href="#blogposts">blog posts</a> and <a href="#webmentions">webmentions</a>.
+  <!-- This currently 500s :/ -->
+  <!-- <a href="http://indiewebify.me/send-webmentions/?url="> -->
+  <!--   Try a webmention!</a> -->
+</p>
+
+
+<form method="post" action="/delete/start">
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyHwsSCVdvcmRQcmVzcyIQZGFuc3RlcGhlbnNvbi5jYQw" />
+  <input name="feature" type="hidden" value="webmention" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+          title="Disable this account. (Won't delete webmentions you've already sent or received.)">Disable</button>
+</form>
+</div>
+
+
+<!-- Signup button -->
+
+
+
+
+
+
+<!-- Blog posts -->
+<div id="blogposts" class="row">
+
+<p class="big">Recent blog posts:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://feedproxy.google.com/~r/danstephenson/~3/E2KDuLyfERA/">Best of the Web: January 2012</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1401001174&key=aglzfmJyaWQtZ3lySgsSCEJsb2dQb3N0IjxodHRwOi8vZmVlZHByb3h5Lmdvb2dsZS5jb20vfnIvZGFuc3RlcGhlbnNvbi9-My9FMktEdUx5ZkVSQS8M">
+      5 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://delicious.com/post?v=4&partner=fb&url=http%3A%2F%2Fwww.danstephenson.ca%2F2012%2F01%2Fbest-of-the-web-jan-2012%2F%3Futm_source%3Drss%26utm_medium%3Drss%26utm_campaign%3Dbest-of-the-web-jan-2012&title=Best+of+the+Web%3A+January+2012">delicious.com/post?v=4&partn...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feedburner.google.com/fb/a/emailFlare?itemTitle=Best%20of%20the%20Web%3A%20January%202012&uri=http%3A%2F%2Fwww.danstephenson.ca%2F2012%2F01%2Fbest-of-the-web-jan-2012%2F%3Futm_source%3Drss%26utm_medium%3Drss%26utm_campaign%3Dbest-of-the-web-jan-2012">feedburner.google.com/fb/a/emailFlar...</a></li>
+	<li><a class="original-post" target="_blank" href="https://www.facebook.com/login.php?next=http%3A%2F%2Fwww.facebook.com%2Fsharer%2Fsharer.php%3Fu%3Dhttp%253A%252F%252Fwww.danstephenson.ca%252F2012%252F01%252Fbest-of-the-web-jan-2012%252F%253Futm_source%253Drss%2526utm_medium%253Drss%2526utm_campaign%253Dbest-of-the-web-jan-2012&display=popup">facebook.com/login.php?next...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.danstephenson.ca/2012/01/best-of-the-web-jan-2012/?utm_source=rss&utm_medium=rss&utm_campaign=best-of-the-web-jan-2012">danstephenson.ca/2012/01/best-o...</a></li>
+	<li><a class="original-post" target="_blank" href="http://digg.com/submit?phase=2&partner=fb&url=http%3A%2F%2Fwww.danstephenson.ca%2F2012%2F01%2Fbest-of-the-web-jan-2012%2F%3Futm_source%3Drss%26utm_medium%3Drss%26utm_campaign%3Dbest-of-the-web-jan-2012&title=Best+of+the+Web%3A+January+2012">digg.com/submit?phase=2...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://feedproxy.google.com/~r/danstephenson/~3/KXCeMzDCAwQ/">How to Install Windows 8 Alongside Your ...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1401001166&key=aglzfmJyaWQtZ3lySgsSCEJsb2dQb3N0IjxodHRwOi8vZmVlZHByb3h5Lmdvb2dsZS5jb20vfnIvZGFuc3RlcGhlbnNvbi9-My9LWENlTXpEQ0F3US8M">
+      5 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.danstephenson.ca/2012/03/windows-8-virtual-machine/?utm_source=rss&utm_medium=rss&utm_campaign=windows-8-virtual-machine">danstephenson.ca/2012/03/window...</a></li>
+	<li><a class="original-post" target="_blank" href="https://www.facebook.com/login.php?next=http%3A%2F%2Fwww.facebook.com%2Fsharer%2Fsharer.php%3Fu%3Dhttp%253A%252F%252Fwww.danstephenson.ca%252F2012%252F03%252Fwindows-8-virtual-machine%252F%253Futm_source%253Drss%2526utm_medium%253Drss%2526utm_campaign%253Dwindows-8-virtual-machine&display=popup">facebook.com/login.php?next...</a></li>
+	<li><a class="original-post" target="_blank" href="https://delicious.com/post?v=4&partner=fb&url=http%3A%2F%2Fwww.danstephenson.ca%2F2012%2F03%2Fwindows-8-virtual-machine%2F%3Futm_source%3Drss%26utm_medium%3Drss%26utm_campaign%3Dwindows-8-virtual-machine&title=How+to+Install+Windows+8+Alongside+Your+Current+OS">delicious.com/post?v=4&partn...</a></li>
+	<li><a class="original-post" target="_blank" href="http://digg.com/submit?phase=2&partner=fb&url=http%3A%2F%2Fwww.danstephenson.ca%2F2012%2F03%2Fwindows-8-virtual-machine%2F%3Futm_source%3Drss%26utm_medium%3Drss%26utm_campaign%3Dwindows-8-virtual-machine&title=How+to+Install+Windows+8+Alongside+Your+Current+OS">digg.com/submit?phase=2...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feedburner.google.com/fb/a/emailFlare?itemTitle=How%20to%20Install%20Windows%208%20Alongside%20Your%20Current%20OS&uri=http%3A%2F%2Fwww.danstephenson.ca%2F2012%2F03%2Fwindows-8-virtual-machine%2F%3Futm_source%3Drss%26utm_medium%3Drss%26utm_campaign%3Dwindows-8-virtual-machine">feedburner.google.com/fb/a/emailFlar...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://feedproxy.google.com/~r/danstephenson/~3/7vWDTzx90SU/">Best of the Web: March 2012</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1401001159&key=aglzfmJyaWQtZ3lySgsSCEJsb2dQb3N0IjxodHRwOi8vZmVlZHByb3h5Lmdvb2dsZS5jb20vfnIvZGFuc3RlcGhlbnNvbi9-My83dldEVHp4OTBTVS8M">
+      5 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.danstephenson.ca/2012/03/best-of-the-web-march-2012/?utm_source=rss&utm_medium=rss&utm_campaign=best-of-the-web-march-2012">danstephenson.ca/2012/03/best-o...</a></li>
+	<li><a class="original-post" target="_blank" href="https://www.facebook.com/login.php?next=http%3A%2F%2Fwww.facebook.com%2Fsharer%2Fsharer.php%3Fu%3Dhttp%253A%252F%252Fwww.danstephenson.ca%252F2012%252F03%252Fbest-of-the-web-march-2012%252F%253Futm_source%253Drss%2526utm_medium%253Drss%2526utm_campaign%253Dbest-of-the-web-march-2012&display=popup">facebook.com/login.php?next...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feedburner.google.com/fb/a/emailFlare?itemTitle=Best%20of%20the%20Web%3A%20March%202012&uri=http%3A%2F%2Fwww.danstephenson.ca%2F2012%2F03%2Fbest-of-the-web-march-2012%2F%3Futm_source%3Drss%26utm_medium%3Drss%26utm_campaign%3Dbest-of-the-web-march-2012">feedburner.google.com/fb/a/emailFlar...</a></li>
+	<li><a class="original-post" target="_blank" href="http://digg.com/submit?phase=2&partner=fb&url=http%3A%2F%2Fwww.danstephenson.ca%2F2012%2F03%2Fbest-of-the-web-march-2012%2F%3Futm_source%3Drss%26utm_medium%3Drss%26utm_campaign%3Dbest-of-the-web-march-2012&title=Best+of+the+Web%3A+March+2012">digg.com/submit?phase=2...</a></li>
+	<li><a class="original-post" target="_blank" href="https://delicious.com/post?v=4&partner=fb&url=http%3A%2F%2Fwww.danstephenson.ca%2F2012%2F03%2Fbest-of-the-web-march-2012%2F%3Futm_source%3Drss%26utm_medium%3Drss%26utm_campaign%3Dbest-of-the-web-march-2012&title=Best+of+the+Web%3A+March+2012">delicious.com/post?v=4&partn...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://feedproxy.google.com/~r/danstephenson/~3/KghEiGQlk6A/">What If Facebook Paid You To Share?</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1401001152&key=aglzfmJyaWQtZ3lySgsSCEJsb2dQb3N0IjxodHRwOi8vZmVlZHByb3h5Lmdvb2dsZS5jb20vfnIvZGFuc3RlcGhlbnNvbi9-My9LZ2hFaUdRbGs2QS8M">
+      5 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://www.facebook.com/login.php?next=http%3A%2F%2Fwww.facebook.com%2Fsharer%2Fsharer.php%3Fu%3Dhttp%253A%252F%252Fwww.danstephenson.ca%252F2012%252F04%252Fwhat-if-facebook-paid-you-to-share%252F%253Futm_source%253Drss%2526utm_medium%253Drss%2526utm_campaign%253Dwhat-if-facebook-paid-you-to-share&display=popup">facebook.com/login.php?next...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.danstephenson.ca/2012/04/what-if-facebook-paid-you-to-share/?utm_source=rss&utm_medium=rss&utm_campaign=what-if-facebook-paid-you-to-share">danstephenson.ca/2012/04/what-i...</a></li>
+	<li><a class="original-post" target="_blank" href="http://digg.com/submit?phase=2&partner=fb&url=http%3A%2F%2Fwww.danstephenson.ca%2F2012%2F04%2Fwhat-if-facebook-paid-you-to-share%2F%3Futm_source%3Drss%26utm_medium%3Drss%26utm_campaign%3Dwhat-if-facebook-paid-you-to-share&title=What+If+Facebook+Paid+You+To+Share%3F">digg.com/submit?phase=2...</a></li>
+	<li><a class="original-post" target="_blank" href="https://delicious.com/post?v=4&partner=fb&url=http%3A%2F%2Fwww.danstephenson.ca%2F2012%2F04%2Fwhat-if-facebook-paid-you-to-share%2F%3Futm_source%3Drss%26utm_medium%3Drss%26utm_campaign%3Dwhat-if-facebook-paid-you-to-share&title=What+If+Facebook+Paid+You+To+Share%3F">delicious.com/post?v=4&partn...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feedburner.google.com/fb/a/emailFlare?itemTitle=What%20If%20Facebook%20Paid%20You%20To%20Share%3F&uri=http%3A%2F%2Fwww.danstephenson.ca%2F2012%2F04%2Fwhat-if-facebook-paid-you-to-share%2F%3Futm_source%3Drss%26utm_medium%3Drss%26utm_campaign%3Dwhat-if-facebook-paid-you-to-share">feedburner.google.com/fb/a/emailFlar...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://feedproxy.google.com/~r/danstephenson/~3/lv7f4_gevJE/">Best of the Web: April 2012</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1401001146&key=aglzfmJyaWQtZ3lySgsSCEJsb2dQb3N0IjxodHRwOi8vZmVlZHByb3h5Lmdvb2dsZS5jb20vfnIvZGFuc3RlcGhlbnNvbi9-My9sdjdmNF9nZXZKRS8M">
+      5 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://digg.com/submit?phase=2&partner=fb&url=http%3A%2F%2Fwww.danstephenson.ca%2F2012%2F04%2Fbest-of-the-web-april-2012%2F%3Futm_source%3Drss%26utm_medium%3Drss%26utm_campaign%3Dbest-of-the-web-april-2012&title=Best+of+the+Web%3A+April+2012">digg.com/submit?phase=2...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feedburner.google.com/fb/a/emailFlare?itemTitle=Best%20of%20the%20Web%3A%20April%202012&uri=http%3A%2F%2Fwww.danstephenson.ca%2F2012%2F04%2Fbest-of-the-web-april-2012%2F%3Futm_source%3Drss%26utm_medium%3Drss%26utm_campaign%3Dbest-of-the-web-april-2012">feedburner.google.com/fb/a/emailFlar...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.danstephenson.ca/2012/04/best-of-the-web-april-2012/?utm_source=rss&utm_medium=rss&utm_campaign=best-of-the-web-april-2012">danstephenson.ca/2012/04/best-o...</a></li>
+	<li><a class="original-post" target="_blank" href="https://delicious.com/post?v=4&partner=fb&url=http%3A%2F%2Fwww.danstephenson.ca%2F2012%2F04%2Fbest-of-the-web-april-2012%2F%3Futm_source%3Drss%26utm_medium%3Drss%26utm_campaign%3Dbest-of-the-web-april-2012&title=Best+of+the+Web%3A+April+2012">delicious.com/post?v=4&partn...</a></li>
+	<li><a class="original-post" target="_blank" href="https://www.facebook.com/login.php?next=http%3A%2F%2Fwww.facebook.com%2Fsharer%2Fsharer.php%3Fu%3Dhttp%253A%252F%252Fwww.danstephenson.ca%252F2012%252F04%252Fbest-of-the-web-april-2012%252F%253Futm_source%253Drss%2526utm_medium%253Drss%2526utm_campaign%253Dbest-of-the-web-april-2012&display=popup">facebook.com/login.php?next...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://feedproxy.google.com/~r/danstephenson/~3/7lWCNXlevPI/">Apple Needs to Stop Litigating And Start...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1401001138&key=aglzfmJyaWQtZ3lySgsSCEJsb2dQb3N0IjxodHRwOi8vZmVlZHByb3h5Lmdvb2dsZS5jb20vfnIvZGFuc3RlcGhlbnNvbi9-My83bFdDTlhsZXZQSS8M">
+      5 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://digg.com/submit?phase=2&partner=fb&url=http%3A%2F%2Fwww.danstephenson.ca%2F2012%2F08%2Fapple-needs-to-innovate-again%2F%3Futm_source%3Drss%26utm_medium%3Drss%26utm_campaign%3Dapple-needs-to-innovate-again&title=Apple+Needs+to+Stop+Litigating+And+Start+Innovating+%28Again%29">digg.com/submit?phase=2...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feedburner.google.com/fb/a/emailFlare?itemTitle=Apple%20Needs%20to%20Stop%20Litigating%20And%20Start%20Innovating%20%28Again%29&uri=http%3A%2F%2Fwww.danstephenson.ca%2F2012%2F08%2Fapple-needs-to-innovate-again%2F%3Futm_source%3Drss%26utm_medium%3Drss%26utm_campaign%3Dapple-needs-to-innovate-again">feedburner.google.com/fb/a/emailFlar...</a></li>
+	<li><a class="original-post" target="_blank" href="https://www.facebook.com/login.php?next=http%3A%2F%2Fwww.facebook.com%2Fsharer%2Fsharer.php%3Fu%3Dhttp%253A%252F%252Fwww.danstephenson.ca%252F2012%252F08%252Fapple-needs-to-innovate-again%252F%253Futm_source%253Drss%2526utm_medium%253Drss%2526utm_campaign%253Dapple-needs-to-innovate-again&display=popup">facebook.com/login.php?next...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.danstephenson.ca/2012/08/apple-needs-to-innovate-again/?utm_source=rss&utm_medium=rss&utm_campaign=apple-needs-to-innovate-again">danstephenson.ca/2012/08/apple-...</a></li>
+	<li><a class="original-post" target="_blank" href="https://delicious.com/post?v=4&partner=fb&url=http%3A%2F%2Fwww.danstephenson.ca%2F2012%2F08%2Fapple-needs-to-innovate-again%2F%3Futm_source%3Drss%26utm_medium%3Drss%26utm_campaign%3Dapple-needs-to-innovate-again&title=Apple+Needs+to+Stop+Litigating+And+Start+Innovating+%28Again%29">delicious.com/post?v=4&partn...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://feedproxy.google.com/~r/danstephenson/~3/tkdKSdfjtdM/">Best of the Web: September 2012</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1401001133&key=aglzfmJyaWQtZ3lySgsSCEJsb2dQb3N0IjxodHRwOi8vZmVlZHByb3h5Lmdvb2dsZS5jb20vfnIvZGFuc3RlcGhlbnNvbi9-My90a2RLU2RmanRkTS8M">
+      5 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://digg.com/submit?phase=2&partner=fb&url=http%3A%2F%2Fwww.danstephenson.ca%2F2012%2F09%2Fbest-of-the-web-september-2012%2F%3Futm_source%3Drss%26utm_medium%3Drss%26utm_campaign%3Dbest-of-the-web-september-2012&title=Best+of+the+Web%3A+September+2012">digg.com/submit?phase=2...</a></li>
+	<li><a class="original-post" target="_blank" href="https://www.facebook.com/login.php?next=http%3A%2F%2Fwww.facebook.com%2Fsharer%2Fsharer.php%3Fu%3Dhttp%253A%252F%252Fwww.danstephenson.ca%252F2012%252F09%252Fbest-of-the-web-september-2012%252F%253Futm_source%253Drss%2526utm_medium%253Drss%2526utm_campaign%253Dbest-of-the-web-september-2012&display=popup">facebook.com/login.php?next...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.danstephenson.ca/2012/09/best-of-the-web-september-2012/?utm_source=rss&utm_medium=rss&utm_campaign=best-of-the-web-september-2012">danstephenson.ca/2012/09/best-o...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feedburner.google.com/fb/a/emailFlare?itemTitle=Best%20of%20the%20Web%3A%20September%202012&uri=http%3A%2F%2Fwww.danstephenson.ca%2F2012%2F09%2Fbest-of-the-web-september-2012%2F%3Futm_source%3Drss%26utm_medium%3Drss%26utm_campaign%3Dbest-of-the-web-september-2012">feedburner.google.com/fb/a/emailFlar...</a></li>
+	<li><a class="original-post" target="_blank" href="https://delicious.com/post?v=4&partner=fb&url=http%3A%2F%2Fwww.danstephenson.ca%2F2012%2F09%2Fbest-of-the-web-september-2012%2F%3Futm_source%3Drss%26utm_medium%3Drss%26utm_campaign%3Dbest-of-the-web-september-2012&title=Best+of+the+Web%3A+September+2012">delicious.com/post?v=4&partn...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://feedproxy.google.com/~r/danstephenson/~3/W1YoExYcEdc/">Best of the Web: October 2012</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1401001128&key=aglzfmJyaWQtZ3lySgsSCEJsb2dQb3N0IjxodHRwOi8vZmVlZHByb3h5Lmdvb2dsZS5jb20vfnIvZGFuc3RlcGhlbnNvbi9-My9XMVlvRXhZY0VkYy8M">
+      5 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://digg.com/submit?phase=2&partner=fb&url=http%3A%2F%2Fwww.danstephenson.ca%2F2012%2F10%2Fbest-of-the-web-october-2012%2F%3Futm_source%3Drss%26utm_medium%3Drss%26utm_campaign%3Dbest-of-the-web-october-2012&title=Best+of+the+Web%3A+October+2012">digg.com/submit?phase=2...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feedburner.google.com/fb/a/emailFlare?itemTitle=Best%20of%20the%20Web%3A%20October%202012&uri=http%3A%2F%2Fwww.danstephenson.ca%2F2012%2F10%2Fbest-of-the-web-october-2012%2F%3Futm_source%3Drss%26utm_medium%3Drss%26utm_campaign%3Dbest-of-the-web-october-2012">feedburner.google.com/fb/a/emailFlar...</a></li>
+	<li><a class="original-post" target="_blank" href="https://www.facebook.com/login.php?next=http%3A%2F%2Fwww.facebook.com%2Fsharer%2Fsharer.php%3Fu%3Dhttp%253A%252F%252Fwww.danstephenson.ca%252F2012%252F10%252Fbest-of-the-web-october-2012%252F%253Futm_source%253Drss%2526utm_medium%253Drss%2526utm_campaign%253Dbest-of-the-web-october-2012&display=popup">facebook.com/login.php?next...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.danstephenson.ca/2012/10/best-of-the-web-october-2012/?utm_source=rss&utm_medium=rss&utm_campaign=best-of-the-web-october-2012">danstephenson.ca/2012/10/best-o...</a></li>
+	<li><a class="original-post" target="_blank" href="https://delicious.com/post?v=4&partner=fb&url=http%3A%2F%2Fwww.danstephenson.ca%2F2012%2F10%2Fbest-of-the-web-october-2012%2F%3Futm_source%3Drss%26utm_medium%3Drss%26utm_campaign%3Dbest-of-the-web-october-2012&title=Best+of+the+Web%3A+October+2012">delicious.com/post?v=4&partn...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://feedproxy.google.com/~r/danstephenson/~3/0BLiEZt3pf0/">Why Are Websites So Careless With User P...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1401001124&key=aglzfmJyaWQtZ3lySgsSCEJsb2dQb3N0IjxodHRwOi8vZmVlZHByb3h5Lmdvb2dsZS5jb20vfnIvZGFuc3RlcGhlbnNvbi9-My8wQkxpRVp0M3BmMC8M">
+      5 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://www.facebook.com/login.php?next=http%3A%2F%2Fwww.facebook.com%2Fsharer%2Fsharer.php%3Fu%3Dhttp%253A%252F%252Fwww.danstephenson.ca%252F2012%252F11%252Fwhy-are-websites-so-careless-with-user-passwords%252F%253Futm_source%253Drss%2526utm_medium%253Drss%2526utm_campaign%253Dwhy-are-websites-so-careless-with-user-passwords&display=popup">facebook.com/login.php?next...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feedburner.google.com/fb/a/emailFlare?itemTitle=Why%20Are%20Websites%20So%20Careless%20With%20User%20Passwords%3F&uri=http%3A%2F%2Fwww.danstephenson.ca%2F2012%2F11%2Fwhy-are-websites-so-careless-with-user-passwords%2F%3Futm_source%3Drss%26utm_medium%3Drss%26utm_campaign%3Dwhy-are-websites-so-careless-with-user-passwords">feedburner.google.com/fb/a/emailFlar...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.danstephenson.ca/2012/11/why-are-websites-so-careless-with-user-passwords/?utm_source=rss&utm_medium=rss&utm_campaign=why-are-websites-so-careless-with-user-passwords">danstephenson.ca/2012/11/why-ar...</a></li>
+	<li><a class="original-post" target="_blank" href="https://delicious.com/post?v=4&partner=fb&url=http%3A%2F%2Fwww.danstephenson.ca%2F2012%2F11%2Fwhy-are-websites-so-careless-with-user-passwords%2F%3Futm_source%3Drss%26utm_medium%3Drss%26utm_campaign%3Dwhy-are-websites-so-careless-with-user-passwords&title=Why+Are+Websites+So+Careless+With+User+Passwords%3F">delicious.com/post?v=4&partn...</a></li>
+	<li><a class="original-post" target="_blank" href="http://digg.com/submit?phase=2&partner=fb&url=http%3A%2F%2Fwww.danstephenson.ca%2F2012%2F11%2Fwhy-are-websites-so-careless-with-user-passwords%2F%3Futm_source%3Drss%26utm_medium%3Drss%26utm_campaign%3Dwhy-are-websites-so-careless-with-user-passwords&title=Why+Are+Websites+So+Careless+With+User+Passwords%3F">digg.com/submit?phase=2...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://feedproxy.google.com/~r/danstephenson/~3/x7Xitha7UgY/">Support Free & Open Software This Holida...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1401001110&key=aglzfmJyaWQtZ3lySgsSCEJsb2dQb3N0IjxodHRwOi8vZmVlZHByb3h5Lmdvb2dsZS5jb20vfnIvZGFuc3RlcGhlbnNvbi9-My94N1hpdGhhN1VnWS8M">
+      5 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://digg.com/submit?phase=2&partner=fb&url=http%3A%2F%2Fwww.danstephenson.ca%2F2013%2F11%2Ffoss-donate-2013%2F%3Futm_source%3Drss%26utm_medium%3Drss%26utm_campaign%3Dfoss-donate-2013&title=Support+Free+%26+Open+Software+This+Holiday+Season%21">digg.com/submit?phase=2...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feedburner.google.com/fb/a/emailFlare?itemTitle=Support%20Free%20%26%20Open%20Software%20This%20Holiday%20Season%21&uri=http%3A%2F%2Fwww.danstephenson.ca%2F2013%2F11%2Ffoss-donate-2013%2F%3Futm_source%3Drss%26utm_medium%3Drss%26utm_campaign%3Dfoss-donate-2013">feedburner.google.com/fb/a/emailFlar...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.danstephenson.ca/2013/11/foss-donate-2013/?utm_source=rss&utm_medium=rss&utm_campaign=foss-donate-2013">danstephenson.ca/2013/11/foss-d...</a></li>
+	<li><a class="original-post" target="_blank" href="https://delicious.com/post?v=4&partner=fb&url=http%3A%2F%2Fwww.danstephenson.ca%2F2013%2F11%2Ffoss-donate-2013%2F%3Futm_source%3Drss%26utm_medium%3Drss%26utm_campaign%3Dfoss-donate-2013&title=Support+Free+%26+Open+Software+This+Holiday+Season%21">delicious.com/post?v=4&partn...</a></li>
+	<li><a class="original-post" target="_blank" href="https://www.facebook.com/login.php?next=http%3A%2F%2Fwww.facebook.com%2Fsharer%2Fsharer.php%3Fu%3Dhttp%253A%252F%252Fwww.danstephenson.ca%252F2013%252F11%252Ffoss-donate-2013%252F%253Futm_source%253Drss%2526utm_medium%253Drss%2526utm_campaign%253Dfoss-donate-2013&display=popup">facebook.com/login.php?next...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+</div>
+
+
+<!-- Incoming blog webmentions -->
+<div id="webmentions" class="row">
+
+<p class="big">No
+  <a href="http://indiewebify.me/#send-webmentions">webmentions</a> received yet.</p>
+
+</div>
+
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

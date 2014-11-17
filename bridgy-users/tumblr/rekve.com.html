@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>ivarrekve (Tumblr) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="http://www.rekve.com/" title="ivarrekve (Tumblr)"
+   class="u-url">
+  <img class="profile u-photo" src="https://api.tumblr.com/v2/blog/rekve.com/avatar/512" width="64px" />
+  <img src="/static/tumblr_icon.png"
+       
+       alt="Tumblr" />
+  <span class="p-name">ivarrekve</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://www.rekve.com/" class="publish-domain u-url">rekve.com</a>
+
+
+
+</div>
+
+
+
+
+<!-- Banner for blogs that aren't yet advertising the webmention endpoint -->
+
+
+<div class="row">
+
+<p class="big">You're all set! Check out your recent
+<a href="#blogposts">blog posts</a> and <a href="#webmentions">webmentions</a>.
+  <!-- This currently 500s :/ -->
+  <!-- <a href="http://indiewebify.me/send-webmentions/?url="> -->
+  <!--   Try a webmention!</a> -->
+</p>
+
+
+<form method="post" action="/delete/start">
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyFQsSBlR1bWJsciIJcmVrdmUuY29tDA" />
+  <input name="feature" type="hidden" value="webmention" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+          title="Disable this account. (Won't delete webmentions you've already sent or received.)">Disable</button>
+</form>
+</div>
+
+
+<!-- Signup button -->
+
+
+
+
+
+
+<!-- Blog posts -->
+<div id="blogposts" class="row">
+
+<p class="big">Recent blog posts:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://www.rekve.com/post/99123623104">Excess, not just cost, turned off Norway...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1412414705&key=aglzfmJyaWQtZ3lyMwsSCEJsb2dQb3N0IiVodHRwOi8vd3d3LnJla3ZlLmNvbS9wb3N0Lzk5MTIzNjIzMTA0DA">
+      1 month, 1 week ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://plus.google.com/+IvarRekve/posts/Dq11XBkmYeb">plus.google.com/+IvarRekve/pos...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://www.rekve.com/post/95194616624">Juan Luis Guerra - Ojala Que Llueva Cafe...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1408461951&key=aglzfmJyaWQtZ3lyMwsSCEJsb2dQb3N0IiVodHRwOi8vd3d3LnJla3ZlLmNvbS9wb3N0Lzk1MTk0NjE2NjI0DA">
+      2 months, 4 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://plus.google.com/+IvarRekve/posts/ebh2Wgc1PtD">plus.google.com/+IvarRekve/pos...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://www.rekve.com/post/93860027819">People buying stuff from my store. Recei...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1407228298&key=aglzfmJyaWQtZ3lyMwsSCEJsb2dQb3N0IiVodHRwOi8vd3d3LnJla3ZlLmNvbS9wb3N0LzkzODYwMDI3ODE5DA">
+      3 months, 1 week ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://plus.google.com/+IvarRekve/posts/7wTAsSZ9CmK">plus.google.com/+IvarRekve/pos...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://www.rekve.com/post/93104780904">"산티아고 포르투 버스"Pilgrims searching for info...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1406548214&key=aglzfmJyaWQtZ3lyMwsSCEJsb2dQb3N0IiVodHRwOi8vd3d3LnJla3ZlLmNvbS9wb3N0LzkzMTA0NzgwOTA0DA">
+      3 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://plus.google.com/+IvarRekve/posts/KKbdVeSHd2p">plus.google.com/+IvarRekve/pos...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://www.rekve.com/post/91444731439">Latest activity in the...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1405076484&key=aglzfmJyaWQtZ3lyMwsSCEJsb2dQb3N0IiVodHRwOi8vd3d3LnJla3ZlLmNvbS9wb3N0LzkxNDQ0NzMxNDM5DA">
+      4 months, 1 week ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.caminodesantiago.me/community/widget-pages/latest">caminodesantiago.me/community/widg... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://plus.google.com/+IvarRekve/posts/ZRhJhCi9fvm">plus.google.com/+IvarRekve/pos...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://www.rekve.com/post/90783376049">‘On the Road’, Santiago de...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1404503564&key=aglzfmJyaWQtZ3lyMwsSCEJsb2dQb3N0IiVodHRwOi8vd3d3LnJla3ZlLmNvbS9wb3N0LzkwNzgzMzc2MDQ5DA">
+      4 months, 2 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.ft.com/cms/s/2/ae0b6c54-010d-11e4-a938-00144feab7de.html#axzz36WwgwhsP">ft.com/cms/s/2/ae0b6c...</a></li>
+	<li><a class="original-post" target="_blank" href="https://plus.google.com/+IvarRekve/posts/JYYpYyuKvi7">plus.google.com/+IvarRekve/pos...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://www.rekve.com/post/89879519964">JellyFish report on beaches in the Medit...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1403720827&key=aglzfmJyaWQtZ3lyMwsSCEJsb2dQb3N0IiVodHRwOi8vd3d3LnJla3ZlLmNvbS9wb3N0Lzg5ODc5NTE5OTY0DA">
+      4 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://plus.google.com/+IvarRekve/posts/T5YuUS4Lptc">plus.google.com/+IvarRekve/pos...</a></li>
+	<li><a class="original-post" target="_blank" href="http://medjelly.com/en">medjelly.com/en</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://www.rekve.com/post/89648621464">Josey Baker on Bread Baking | Food at Go...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1403524579&key=aglzfmJyaWQtZ3lyMwsSCEJsb2dQb3N0IiVodHRwOi8vd3d3LnJla3ZlLmNvbS9wb3N0Lzg5NjQ4NjIxNDY0DA">
+      4 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://plus.google.com/+IvarRekve/posts/S6ZuoAjeBHJ">plus.google.com/+IvarRekve/pos...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://www.rekve.com/post/88565697854">The story of 1 goalGol de Iniesta Final ...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1402576138&key=aglzfmJyaWQtZ3lyMwsSCEJsb2dQb3N0IiVodHRwOi8vd3d3LnJla3ZlLmNvbS9wb3N0Lzg4NTY1Njk3ODU0DA">
+      5 months, 1 week ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://plus.google.com/+IvarRekve/posts/6v2HnP4yC3v">plus.google.com/+IvarRekve/pos...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://www.rekve.com/post/88467447919">Project Eavesdrop: An Experiment At Moni...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1402489134&key=aglzfmJyaWQtZ3lyMwsSCEJsb2dQb3N0IiVodHRwOi8vd3d3LnJla3ZlLmNvbS9wb3N0Lzg4NDY3NDQ3OTE5DA">
+      5 months, 1 week ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://plus.google.com/+IvarRekve/posts/8fJuWrdJwQL">plus.google.com/+IvarRekve/pos...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.npr.org/blogs/alltechconsidered/2014/06/10/320347267/project-eavesdrop-an-experiment-at-monitoring-my-home-office">npr.org/blogs/alltechc...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+</div>
+
+
+<!-- Incoming blog webmentions -->
+<div id="webmentions" class="row">
+
+<p class="big">Recent
+  <a href="http://indiewebify.me/#send-webmentions">webmentions</a>:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/KiwiNomad08/status/496591202125230081">twitter.com/KiwiNomad08/st...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://www.rekve.com/post/93860027819/people-buying-stuff-from-my-store-receive-it">post/9386002781...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1407246827&key=aglzfmJyaWQtZ3lywwELEg5CbG9nV2VibWVudGlvbiKuAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9jb21tZW50L3R3aXR0ZXIvaXZhcnJla3ZlLzQ5NjU4MTkzNDc2MDIxODYyNC80OTY1OTEyMDIxMjUyMzAwODEgaHR0cDovL3d3dy5yZWt2ZS5jb20vcG9zdC85Mzg2MDAyNzgxOS9wZW9wbGUtYnV5aW5nLXN0dWZmLWZyb20tbXktc3RvcmUtcmVjZWl2ZS1pdAw">
+      3 months, 1 week ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       comment
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/KiwiNomad08/status/496583356625076224">twitter.com/KiwiNomad08/st...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://www.rekve.com/post/93860027819/people-buying-stuff-from-my-store-receive-it">post/9386002781...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1407246769&key=aglzfmJyaWQtZ3lywwELEg5CbG9nV2VibWVudGlvbiKuAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9jb21tZW50L3R3aXR0ZXIvaXZhcnJla3ZlLzQ5NjU4MTkzNDc2MDIxODYyNC80OTY1ODMzNTY2MjUwNzYyMjQgaHR0cDovL3d3dy5yZWt2ZS5jb20vcG9zdC85Mzg2MDAyNzgxOS9wZW9wbGUtYnV5aW5nLXN0dWZmLWZyb20tbXktc3RvcmUtcmVjZWl2ZS1pdAw">
+      3 months, 1 week ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       comment
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/ivarrekve/status/496584122593476608">twitter.com/ivarrekve/stat...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://www.rekve.com/post/93860027819/people-buying-stuff-from-my-store-receive-it">post/9386002781...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1407246711&key=aglzfmJyaWQtZ3lywwELEg5CbG9nV2VibWVudGlvbiKuAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9jb21tZW50L3R3aXR0ZXIvaXZhcnJla3ZlLzQ5NjU4MTkzNDc2MDIxODYyNC80OTY1ODQxMjI1OTM0NzY2MDggaHR0cDovL3d3dy5yZWt2ZS5jb20vcG9zdC85Mzg2MDAyNzgxOS9wZW9wbGUtYnV5aW5nLXN0dWZmLWZyb20tbXktc3RvcmUtcmVjZWl2ZS1pdAw">
+      3 months, 1 week ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       comment
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/KiwiNomad08/status/496584908022636546">twitter.com/KiwiNomad08/st...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://www.rekve.com/post/93860027819/people-buying-stuff-from-my-store-receive-it">post/9386002781...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1407246702&key=aglzfmJyaWQtZ3lywwELEg5CbG9nV2VibWVudGlvbiKuAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9jb21tZW50L3R3aXR0ZXIvaXZhcnJla3ZlLzQ5NjU4MTkzNDc2MDIxODYyNC80OTY1ODQ5MDgwMjI2MzY1NDYgaHR0cDovL3d3dy5yZWt2ZS5jb20vcG9zdC85Mzg2MDAyNzgxOS9wZW9wbGUtYnV5aW5nLXN0dWZmLWZyb20tbXktc3RvcmUtcmVjZWl2ZS1pdAw">
+      3 months, 1 week ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       comment
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/ivarrekve/status/477257242010333184">twitter.com/ivarrekve/stat...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://www.rekve.com/post/88565697854/the-story-of-1-goal-gol-de-iniesta-final-mundial">post/8856569785...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1402958511&key=aglzfmJyaWQtZ3lyvAELEg5CbG9nV2VibWVudGlvbiKnAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9saWtlL3R3aXR0ZXIvaXZhcnJla3ZlLzQ3NzI1NzI0MjAxMDMzMzE4NC8yMzA4OTYxNTc0IGh0dHA6Ly93d3cucmVrdmUuY29tL3Bvc3QvODg1NjU2OTc4NTQvdGhlLXN0b3J5LW9mLTEtZ29hbC1nb2wtZGUtaW5pZXN0YS1maW5hbC1tdW5kaWFsDA">
+      5 months ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       like
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/aym924/status/476951326199250944">twitter.com/aym924/status/...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://www.rekve.com/post/88467447919/project-eavesdrop-an-experiment-at-monitoring-my">post/8846744791...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1402593458&key=aglzfmJyaWQtZ3lyxgELEg5CbG9nV2VibWVudGlvbiKxAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9yZXBvc3QvdHdpdHRlci9pdmFycmVrdmUvNDc2OTQ5MTgzODQxMDcxMTA0LzQ3Njk1MTMyNjE5OTI1MDk0NCBodHRwOi8vd3d3LnJla3ZlLmNvbS9wb3N0Lzg4NDY3NDQ3OTE5L3Byb2plY3QtZWF2ZXNkcm9wLWFuLWV4cGVyaW1lbnQtYXQtbW9uaXRvcmluZy1teQw">
+      5 months, 1 week ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       repost
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/ivarrekve/status/473908693616955392">twitter.com/ivarrekve/stat...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://www.rekve.com/post/87713029304/norwegian-inaugura-en-barajas-su-sexta-base-de">post/8771302930...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1401833629&key=aglzfmJyaWQtZ3lyuAELEg5CbG9nV2VibWVudGlvbiKjAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9saWtlL3R3aXR0ZXIvaXZhcnJla3ZlLzQ3MzkwODY5MzYxNjk1NTM5Mi8xNjg2OTM5MSBodHRwOi8vd3d3LnJla3ZlLmNvbS9wb3N0Lzg3NzEzMDI5MzA0L25vcndlZ2lhbi1pbmF1Z3VyYS1lbi1iYXJhamFzLXN1LXNleHRhLWJhc2UtZGUM">
+      5 months, 2 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       like
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://snarfed.org/2014-05-23_ivar-rekve-stunning-compostela">snarfed.org/2014-05-23_iva...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://www.rekve.com/post/85746207284/stunning-compostela">post/8574620728...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1400853946&key=aglzfmJyaWQtZ3lyiwELEg5CbG9nV2VibWVudGlvbiJ3aHR0cHM6Ly9zbmFyZmVkLm9yZy8yMDE0LTA1LTIzX2l2YXItcmVrdmUtc3R1bm5pbmctY29tcG9zdGVsYSBodHRwOi8vd3d3LnJla3ZlLmNvbS9wb3N0Lzg1NzQ2MjA3Mjg0L3N0dW5uaW5nLWNvbXBvc3RlbGEM">
+      5 months, 3 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       like
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/mercurynfo/status/466809615104360448">twitter.com/mercurynfo/sta...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://www.rekve.com/post/85746207284/stunning-compostela">post/8574620728...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1400826234&key=aglzfmJyaWQtZ3lyqgELEg5CbG9nV2VibWVudGlvbiKVAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9jb21tZW50L3R3aXR0ZXIvaXZhcnJla3ZlLzQ2NjgwODAwMjAwODE5OTE3MC80NjY4MDk2MTUxMDQzNjA0NDggaHR0cDovL3d3dy5yZWt2ZS5jb20vcG9zdC84NTc0NjIwNzI4NC9zdHVubmluZy1jb21wb3N0ZWxhDA">
+      5 months, 4 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       comment
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/ivarrekve/status/466819534364880896">twitter.com/ivarrekve/stat...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://www.rekve.com/post/85746207284/stunning-compostela">post/8574620728...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1400826228&key=aglzfmJyaWQtZ3lyqgELEg5CbG9nV2VibWVudGlvbiKVAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9jb21tZW50L3R3aXR0ZXIvaXZhcnJla3ZlLzQ2NjgwODAwMjAwODE5OTE3MC80NjY4MTk1MzQzNjQ4ODA4OTYgaHR0cDovL3d3dy5yZWt2ZS5jb20vcG9zdC84NTc0NjIwNzI4NC9zdHVubmluZy1jb21wb3N0ZWxhDA">
+      5 months, 4 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       comment
+     
+
+   </div>
+  </li>
+  
+</ul>
+
+
+</div>
+
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

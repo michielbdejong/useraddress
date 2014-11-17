@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>circusriot (Tumblr) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="http://circusriot.tumblr.com/" title="circusriot (Tumblr)"
+   class="u-url">
+  <img class="profile u-photo" src="https://api.tumblr.com/v2/blog/circusriot.tumblr.com/avatar/512" width="64px" />
+  <img src="/static/tumblr_icon.png"
+       
+       alt="Tumblr" />
+  <span class="p-name">circusriot</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://circusriot.tumblr.com/" class="publish-domain u-url">circusriot.tumblr.com</a>
+
+
+
+</div>
+
+
+
+
+<!-- Banner for blogs that aren't yet advertising the webmention endpoint -->
+
+
+<div class="row">
+
+<p class="big">You're all set! Check out your recent
+<a href="#blogposts">blog posts</a> and <a href="#webmentions">webmentions</a>.
+  <!-- This currently 500s :/ -->
+  <!-- <a href="http://indiewebify.me/send-webmentions/?url="> -->
+  <!--   Try a webmention!</a> -->
+</p>
+
+
+<form method="post" action="/delete/start">
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyIQsSBlR1bWJsciIVY2lyY3VzcmlvdC50dW1ibHIuY29tDA" />
+  <input name="feature" type="hidden" value="webmention" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+          title="Disable this account. (Won't delete webmentions you've already sent or received.)">Disable</button>
+</form>
+</div>
+
+
+<!-- Signup button -->
+
+
+
+
+
+
+<!-- Blog posts -->
+<div id="blogposts" class="row">
+
+<p class="big">Recent blog posts:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://circusriot.tumblr.com/post/101833518931">likeafieldmouse:
+
+Craig Billingham - The...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1415180584&key=aglzfmJyaWQtZ3lyPAsSCEJsb2dQb3N0Ii5odHRwOi8vY2lyY3VzcmlvdC50dW1ibHIuY29tL3Bvc3QvMTAxODMzNTE4OTMxDA">
+      1 week, 4 days ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://likeafieldmouse.com/post/101833271456/craig-billingham-the-north-face-2012">likeafieldmouse.com/post/101833271...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.moranprizes.com.au/competition/2012-photographic-prize-open/finalists">moranprizes.com.au/competition/20...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://circusriot.tumblr.com/post/101833589381">admilu1:
+
+
+When you are a beginner at a ...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1415180601&key=aglzfmJyaWQtZ3lyPAsSCEJsb2dQb3N0Ii5odHRwOi8vY2lyY3VzcmlvdC50dW1ibHIuY29tL3Bvc3QvMTAxODMzNTg5MzgxDA">
+      1 week, 4 days ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://admilu1.tumblr.com/post/101702157203/when-you-are-a-beginner-at-a-new-school-and-have">admilu1.tumblr.com/post/101702157...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://circusriot.tumblr.com/post/101594690681">annabellehector:
+
+nah</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1414949129&key=aglzfmJyaWQtZ3lyPAsSCEJsb2dQb3N0Ii5odHRwOi8vY2lyY3VzcmlvdC50dW1ibHIuY29tL3Bvc3QvMTAxNTk0NjkwNjgxDA">
+      2 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://annabellehector.tumblr.com/post/101580545433">annabellehector.tumblr.com/post/101580545...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://circusriot.tumblr.com/post/101594708701">tasmo:
+
+
+via reddit.com/user/d4rm713</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1414949141&key=aglzfmJyaWQtZ3lyPAsSCEJsb2dQb3N0Ii5odHRwOi8vY2lyY3VzcmlvdC50dW1ibHIuY29tL3Bvc3QvMTAxNTk0NzA4NzAxDA">
+      2 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://tumblr.tasmo.de/post/101589421806">tumblr.tasmo.de/post/101589421...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.reddit.com/r/gifs/comments/2kwdp1/o_o_ooo_its_magic">reddit.com/r/gifs/comment...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://circusriot.tumblr.com/post/101593992641">mymodernmet:
+
+For this year’s ArtPrize, ...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1414948683&key=aglzfmJyaWQtZ3lyPAsSCEJsb2dQb3N0Ii5odHRwOi8vY2lyY3VzcmlvdC50dW1ibHIuY29tL3Bvc3QvMTAxNTkzOTkyNjQxDA">
+      2 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.artprize.org/anila-quayyum-agha/2014/intersections">artprize.org/anila-quayyum-...</a></li>
+	<li><a class="original-post" target="_blank" href="http://mymodernmet.tumblr.com/post/98940875936/for-this-years-artprize-the-international-art">mymodernmet.tumblr.com/post/989408759...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.mymodernmet.com/profiles/blogs/intersections-anila-quayyum-agha-artprize-2014">mymodernmet.com/profiles/blogs...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://circusriot.tumblr.com/post/101594010496">maddieonthings:
+
+"Your classic spoon on ...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1414948671&key=aglzfmJyaWQtZ3lyPAsSCEJsb2dQb3N0Ii5odHRwOi8vY2lyY3VzcmlvdC50dW1ibHIuY29tL3Bvc3QvMTAxNTk0MDEwNDk2DA">
+      2 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://maddieonthings.com/post/87626287408/your-classic-spoon-on-the-dog-nose-party-trick">maddieonthings.com/post/876262874...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://circusriot.tumblr.com/post/101594029116">visual-poetry:
+
+»yeah but it’s not gonna...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1414948668&key=aglzfmJyaWQtZ3lyPAsSCEJsb2dQb3N0Ii5odHRwOi8vY2lyY3VzcmlvdC50dW1ibHIuY29tL3Bvc3QvMTAxNTk0MDI5MTE2DA">
+      2 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://visual-poetry.tumblr.com/post/101593048650/yeah-but-its-not-gonna-be-by-mobstr">visual-poetry.tumblr.com/post/101593048...</a></li>
+	<li><a class="original-post" target="_blank" href="http://visual-poetry.tumblr.com/tagged/mobstr">visual-poetry.tumblr.com/tagged/mobstr</a></li>
+	<li><a class="original-post" target="_blank" href="http://mobstr.org/">mobstr.org/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://circusriot.tumblr.com/post/101594140446">oscar worthy</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1414948652&key=aglzfmJyaWQtZ3lyPAsSCEJsb2dQb3N0Ii5odHRwOi8vY2lyY3VzcmlvdC50dW1ibHIuY29tL3Bvc3QvMTAxNTk0MTQwNDQ2DA">
+      2 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://circusriot.tumblr.com/post/101594550676">vacilandoelmundo:
+
+
+Mount Bromo, Indones...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1414948652&key=aglzfmJyaWQtZ3lyPAsSCEJsb2dQb3N0Ii5odHRwOi8vY2lyY3VzcmlvdC50dW1ibHIuY29tL3Bvc3QvMTAxNTk0NTUwNjc2DA">
+      2 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://vacilandoelmundo.tumblr.com/post/101223478934/mount-bromo-indonesia">vacilandoelmundo.tumblr.com/post/101223478...</a></li>
+	<li><a class="original-post" target="_blank" href="http://en.wikivoyage.org/wiki/Bromo-Tengger-Semeru_National_Park">en.wikivoyage.org/wiki/Bromo-Ten...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://circusriot.tumblr.com/post/101594598316">angelic-amaria:
+
+
+GAUDI GAUDI GAUDI
+Fall...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1414948630&key=aglzfmJyaWQtZ3lyPAsSCEJsb2dQb3N0Ii5odHRwOi8vY2lyY3VzcmlvdC50dW1ibHIuY29tL3Bvc3QvMTAxNTk0NTk4MzE2DA">
+      2 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://angelic-amaria.tumblr.com/post/101486481094/gaudi-gaudi-gaudi-fall-2014-barcelona">angelic-amaria.tumblr.com/post/101486481...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+</div>
+
+
+<!-- Incoming blog webmentions -->
+<div id="webmentions" class="row">
+
+<p class="big">Recent
+  <a href="http://indiewebify.me/#send-webmentions">webmentions</a>:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/Per_Anhalter/status/512670183492579328">twitter.com/Per_Anhalter/s...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://circusriot.tumblr.com/post/97806385236/sixpenceee-welsh-house-painter-john-renie-died">circusriot.tumblr.com/post/978063852...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1411065231&key=aglzfmJyaWQtZ3lyzQELEg5CbG9nV2VibWVudGlvbiK4AWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9yZXBvc3QvdHdpdHRlci9oaW1tZWxlbmRlLzUxMjYzMTYyNTk4MTkwMjg0OC81MTI2NzAxODM0OTI1NzkzMjggaHR0cDovL2NpcmN1c3Jpb3QudHVtYmxyLmNvbS9wb3N0Lzk3ODA2Mzg1MjM2L3NpeHBlbmNlZWUtd2Vsc2gtaG91c2UtcGFpbnRlci1qb2huLXJlbmllLWRpZWQM">
+      1 month, 4 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       repost
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/LuckyDraw38538/status/512637927289942016">twitter.com/LuckyDraw38538...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://circusriot.tumblr.com/post/97808161622">circusriot.tumblr.com/post/978081616...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1411057840&key=aglzfmJyaWQtZ3lynwELEg5CbG9nV2VibWVudGlvbiKKAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9jb21tZW50L3R3aXR0ZXIvaGltbWVsZW5kZS81MTI2Mzc3MTc4NTE1NDU2MDEvNTEyNjM3OTI3Mjg5OTQyMDE2IGh0dHA6Ly9jaXJjdXNyaW90LnR1bWJsci5jb20vcG9zdC85NzgwODE2MTYyMgw">
+      1 month, 4 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       comment
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://plus.google.com/112304080930621026189/posts/iBsMsAVYypr">plus.google.com/11230408093062...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://circusriot.tumblr.com/post/9115727722/anti-theft-lunch-bags">circusriot.tumblr.com/post/911572772...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1410027777&key=aglzfmJyaWQtZ3ly0wELEg5CbG9nV2VibWVudGlvbiK-AWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9saWtlL2dvb2dsZXBsdXMvMTEyMzA0MDgwOTMwNjIxMDI2MTg5L3oxM3J0ZGxoa3gzdGQzYnpxMDRjZnRlNXd6ajRzeGV5MDF3LzEwMjExMjc1MDUxNTM2NzAyNzM1NCBodHRwOi8vY2lyY3VzcmlvdC50dW1ibHIuY29tL3Bvc3QvOTExNTcyNzcyMi9hbnRpLXRoZWZ0LWx1bmNoLWJhZ3MM">
+      2 months, 1 week ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       like
+     
+
+   </div>
+  </li>
+  
+</ul>
+
+
+</div>
+
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

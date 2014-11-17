@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>armingrewe (Tumblr) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="http://islayblog.tumblr.com/" title="armingrewe (Tumblr)"
+   class="u-url">
+  <img class="profile u-photo" src="https://api.tumblr.com/v2/blog/islayblog.tumblr.com/avatar/512" width="64px" />
+  <img src="/static/tumblr_icon.png"
+       
+       alt="Tumblr" />
+  <span class="p-name">armingrewe</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://islayblog.tumblr.com/" class="publish-domain u-url">islayblog.tumblr.com</a>
+
+
+
+</div>
+
+
+
+
+<!-- Banner for blogs that aren't yet advertising the webmention endpoint -->
+
+
+<div class="row">
+
+<p class="big">You're all set! Check out your recent
+<a href="#blogposts">blog posts</a> and <a href="#webmentions">webmentions</a>.
+  <!-- This currently 500s :/ -->
+  <!-- <a href="http://indiewebify.me/send-webmentions/?url="> -->
+  <!--   Try a webmention!</a> -->
+</p>
+
+
+<form method="post" action="/delete/start">
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyIAsSBlR1bWJsciIUaXNsYXlibG9nLnR1bWJsci5jb20M" />
+  <input name="feature" type="hidden" value="webmention" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+          title="Disable this account. (Won't delete webmentions you've already sent or received.)">Disable</button>
+</form>
+</div>
+
+
+<!-- Signup button -->
+
+
+
+
+
+
+<!-- Blog posts -->
+<div id="blogposts" class="row">
+
+<p class="big">Recent blog posts:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://islayblog.tumblr.com/post/102805992494">Sunset and gloaming at Saligo Bay, Islay...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1416168487&key=aglzfmJyaWQtZ3lyOwsSCEJsb2dQb3N0Ii1odHRwOi8vaXNsYXlibG9nLnR1bWJsci5jb20vcG9zdC8xMDI4MDU5OTI0OTQM">
+      12 hours, 32 minutes ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://islayblog.tumblr.com/post/102806084999">Islay Sessions in the Bridgend Hotel, Is...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1416168437&key=aglzfmJyaWQtZ3lyOwsSCEJsb2dQb3N0Ii1odHRwOi8vaXNsYXlibG9nLnR1bWJsci5jb20vcG9zdC8xMDI4MDYwODQ5OTkM">
+      12 hours, 33 minutes ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://islayblog.tumblr.com/post/102779204974">Islay Sessions in the Bridgend Hotel, Is...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1416146630&key=aglzfmJyaWQtZ3lyOwsSCEJsb2dQb3N0Ii1odHRwOi8vaXNsYXlibG9nLnR1bWJsci5jb20vcG9zdC8xMDI3NzkyMDQ5NzQM">
+      18 hours, 36 minutes ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://islayblog.tumblr.com/post/102776788804">November morning in Saligo Bay, Islay</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1416143296&key=aglzfmJyaWQtZ3lyOwsSCEJsb2dQb3N0Ii1odHRwOi8vaXNsYXlibG9nLnR1bWJsci5jb20vcG9zdC8xMDI3NzY3ODg4MDQM">
+      19 hours, 32 minutes ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://islayblog.tumblr.com/post/102731898379">Fantastic Islay Sessions 2014
+
+Had a won...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1416095446&key=aglzfmJyaWQtZ3lyOwsSCEJsb2dQb3N0Ii1odHRwOi8vaXNsYXlibG9nLnR1bWJsci5jb20vcG9zdC8xMDI3MzE4OTgzNzkM">
+      1 day, 8 hours ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://islayblog.tumblr.com/post/102712086779">Bruichladdich Hall filling up for the Is...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1416079327&key=aglzfmJyaWQtZ3lyOwsSCEJsb2dQb3N0Ii1odHRwOi8vaXNsYXlibG9nLnR1bWJsci5jb20vcG9zdC8xMDI3MTIwODY3NzkM">
+      1 day, 13 hours ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://islayblog.tumblr.com/post/102711056504">Sunset in Machir Bay, Islay</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1416078827&key=aglzfmJyaWQtZ3lyOwsSCEJsb2dQb3N0Ii1odHRwOi8vaXNsYXlibG9nLnR1bWJsci5jb20vcG9zdC8xMDI3MTEwNTY1MDQM">
+      1 day, 13 hours ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://islayblog.tumblr.com/post/102694339909">On the ferry in the Sound of Islay</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1416064620&key=aglzfmJyaWQtZ3lyOwsSCEJsb2dQb3N0Ii1odHRwOi8vaXNsYXlibG9nLnR1bWJsci5jb20vcG9zdC8xMDI2OTQzMzk5MDkM">
+      1 day, 17 hours ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://islayblog.tumblr.com/post/102694344834">Leaving West Loch Tarbert on the ferry t...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1416064601&key=aglzfmJyaWQtZ3lyOwsSCEJsb2dQb3N0Ii1odHRwOi8vaXNsYXlibG9nLnR1bWJsci5jb20vcG9zdC8xMDI2OTQzNDQ4MzQM">
+      1 day, 17 hours ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://islayblog.tumblr.com/post/102685487439">Arrived in Kennacraig for the Islay ferr...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1416053671&key=aglzfmJyaWQtZ3lyOwsSCEJsb2dQb3N0Ii1odHRwOi8vaXNsYXlibG9nLnR1bWJsci5jb20vcG9zdC8xMDI2ODU0ODc0MzkM">
+      1 day, 20 hours ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+</div>
+
+
+<!-- Incoming blog webmentions -->
+<div id="webmentions" class="row">
+
+<p class="big">Recent
+  <a href="http://indiewebify.me/#send-webmentions">webmentions</a>:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/islayblog/status/533585961251528705">twitter.com/islayblog/stat...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://islayblog.tumblr.com/post/102684386699/lochgilphead-en-route-to-the-islay-ferry">islayblog.tumblr.com/post/102684386...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1416190202&key=aglzfmJyaWQtZ3lyuwELEg5CbG9nV2VibWVudGlvbiKmAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9saWtlL3R3aXR0ZXIvaXNsYXlibG9nLzUzMzU4NTk2MTI1MTUyODcwNS8xNjk3MDg0MjEgaHR0cDovL2lzbGF5YmxvZy50dW1ibHIuY29tL3Bvc3QvMTAyNjg0Mzg2Njk5L2xvY2hnaWxwaGVhZC1lbi1yb3V0ZS10by10aGUtaXNsYXktZmVycnkM">
+      6 hours, 30 minutes ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       like
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/islayblog/status/534073363057356801">twitter.com/islayblog/stat...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://islayblog.tumblr.com/post/102805992494/sunset-and-gloaming-at-saligo-bay-islay-scotland">islayblog.tumblr.com/post/102805992...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1416169362&key=aglzfmJyaWQtZ3lywwELEg5CbG9nV2VibWVudGlvbiKuAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9saWtlL3R3aXR0ZXIvaXNsYXlibG9nLzUzNDA3MzM2MzA1NzM1NjgwMS8yNzE5MTYwNDAgaHR0cDovL2lzbGF5YmxvZy50dW1ibHIuY29tL3Bvc3QvMTAyODA1OTkyNDk0L3N1bnNldC1hbmQtZ2xvYW1pbmctYXQtc2FsaWdvLWJheS1pc2xheS1zY290bGFuZAw">
+      12 hours, 17 minutes ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       like
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/islayblog/status/534073611142053890">twitter.com/islayblog/stat...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://islayblog.tumblr.com/post/102806084999/islay-sessions-in-the-bridgend-hotel-islay">islayblog.tumblr.com/post/102806084...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1416169349&key=aglzfmJyaWQtZ3lyvQELEg5CbG9nV2VibWVudGlvbiKoAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9saWtlL3R3aXR0ZXIvaXNsYXlibG9nLzUzNDA3MzYxMTE0MjA1Mzg5MC80MTU3Nzg1NTcgaHR0cDovL2lzbGF5YmxvZy50dW1ibHIuY29tL3Bvc3QvMTAyODA2MDg0OTk5L2lzbGF5LXNlc3Npb25zLWluLXRoZS1icmlkZ2VuZC1ob3RlbC1pc2xheQw">
+      12 hours, 18 minutes ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       like
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/islaysessions/status/533986776457945088">twitter.com/islaysessions/...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://islayblog.tumblr.com/post/102779204974/islay-sessions-in-the-bridgend-hotel-islay">islayblog.tumblr.com/post/102779204...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1416147606&key=aglzfmJyaWQtZ3lyyQELEg5CbG9nV2VibWVudGlvbiK0AWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9jb21tZW50L3R3aXR0ZXIvaXNsYXlibG9nLzUzMzk4MjEzODg5NTcyMDQ0OC81MzM5ODY3NzY0NTc5NDUwODggaHR0cDovL2lzbGF5YmxvZy50dW1ibHIuY29tL3Bvc3QvMTAyNzc5MjA0OTc0L2lzbGF5LXNlc3Npb25zLWluLXRoZS1icmlkZ2VuZC1ob3RlbC1pc2xheQw">
+      18 hours, 20 minutes ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       comment
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/islayblog/status/533969710069870592">twitter.com/islayblog/stat...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://islayblog.tumblr.com/post/102776788804/november-morning-in-saligo-bay-islay">islayblog.tumblr.com/post/102776788...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1416144390&key=aglzfmJyaWQtZ3lytwELEg5CbG9nV2VibWVudGlvbiKiAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9saWtlL3R3aXR0ZXIvaXNsYXlibG9nLzUzMzk2OTcxMDA2OTg3MDU5Mi80MTU3Nzg1NTcgaHR0cDovL2lzbGF5YmxvZy50dW1ibHIuY29tL3Bvc3QvMTAyNzc2Nzg4ODA0L25vdmVtYmVyLW1vcm5pbmctaW4tc2FsaWdvLWJheS1pc2xheQw">
+      19 hours, 13 minutes ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       like
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/andymacdon/status/533944834277789696">twitter.com/andymacdon/sta...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://islayblog.tumblr.com/post/102731898379/fantastic-islay-sessions-2014-had-a-wonderful">islayblog.tumblr.com/post/102731898...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1416137846&key=aglzfmJyaWQtZ3lyywELEg5CbG9nV2VibWVudGlvbiK2AWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9yZXBvc3QvdHdpdHRlci9pc2xheWJsb2cvNTMzNzY3NDYzMTI1OTE3Njk2LzUzMzk0NDgzNDI3Nzc4OTY5NiBodHRwOi8vaXNsYXlibG9nLnR1bWJsci5jb20vcG9zdC8xMDI3MzE4OTgzNzkvZmFudGFzdGljLWlzbGF5LXNlc3Npb25zLTIwMTQtaGFkLWEtd29uZGVyZnVsDA">
+      21 hours, 3 minutes ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       repost
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/RalphArmstrong1/status/533738223877378049">twitter.com/RalphArmstrong...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://islayblog.tumblr.com/post/102711056504/sunset-in-machir-bay-islay">islayblog.tumblr.com/post/102711056...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1416088347&key=aglzfmJyaWQtZ3lyuAELEg5CbG9nV2VibWVudGlvbiKjAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9yZXBvc3QvdHdpdHRlci9pc2xheWJsb2cvNTMzNjk3ODQ1ODg3NzYyNDMzLzUzMzczODIyMzg3NzM3ODA0OSBodHRwOi8vaXNsYXlibG9nLnR1bWJsci5jb20vcG9zdC8xMDI3MTEwNTY1MDQvc3Vuc2V0LWluLW1hY2hpci1iYXktaXNsYXkM">
+      1 day, 10 hours ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       repost
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/islayblog/status/533638307616669698">twitter.com/islayblog/stat...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://islayblog.tumblr.com/post/102694339909/on-the-ferry-in-the-sound-of-islay">islayblog.tumblr.com/post/102694339...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1416082214&key=aglzfmJyaWQtZ3lytAELEg5CbG9nV2VibWVudGlvbiKfAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9saWtlL3R3aXR0ZXIvaXNsYXlibG9nLzUzMzYzODMwNzYxNjY2OTY5OC80MTU1OTIwOCBodHRwOi8vaXNsYXlibG9nLnR1bWJsci5jb20vcG9zdC8xMDI2OTQzMzk5MDkvb24tdGhlLWZlcnJ5LWluLXRoZS1zb3VuZC1vZi1pc2xheQw">
+      1 day, 12 hours ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       like
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/islayblog/status/533697845887762433">twitter.com/islayblog/stat...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://islayblog.tumblr.com/post/102711056504/sunset-in-machir-bay-islay">islayblog.tumblr.com/post/102711056...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1416082172&key=aglzfmJyaWQtZ3lyrAELEg5CbG9nV2VibWVudGlvbiKXAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9saWtlL3R3aXR0ZXIvaXNsYXlibG9nLzUzMzY5Nzg0NTg4Nzc2MjQzMy80MTU1OTIwOCBodHRwOi8vaXNsYXlibG9nLnR1bWJsci5jb20vcG9zdC8xMDI3MTEwNTY1MDQvc3Vuc2V0LWluLW1hY2hpci1iYXktaXNsYXkM">
+      1 day, 12 hours ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       like
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/katieuevans/status/533701671034306560">twitter.com/katieuevans/st...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://islayblog.tumblr.com/post/102711056504/sunset-in-machir-bay-islay">islayblog.tumblr.com/post/102711056...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1416079596&key=aglzfmJyaWQtZ3lyuAELEg5CbG9nV2VibWVudGlvbiKjAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9yZXBvc3QvdHdpdHRlci9pc2xheWJsb2cvNTMzNjk3ODQ1ODg3NzYyNDMzLzUzMzcwMTY3MTAzNDMwNjU2MCBodHRwOi8vaXNsYXlibG9nLnR1bWJsci5jb20vcG9zdC8xMDI3MTEwNTY1MDQvc3Vuc2V0LWluLW1hY2hpci1iYXktaXNsYXkM">
+      1 day, 13 hours ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       repost
+     
+
+   </div>
+  </li>
+  
+</ul>
+
+
+</div>
+
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

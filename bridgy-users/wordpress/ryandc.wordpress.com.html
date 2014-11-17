@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>ryan (WordPress.com) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="http://ryandc.wordpress.com" title="ryan (WordPress.com)"
+   class="u-url">
+  <img class="profile u-photo" src="https://0.gravatar.com/avatar/9318eaddcc76db3f621bc792a4644aa5?s=96&amp;d=https%3A%2F%2Fs0.wp.com%2Fi%2Fmu.gif&amp;r=G" width="64px" />
+  <img src="/static/wordpress_icon.png"
+       
+       alt="WordPress.com" />
+  <span class="p-name">ryan</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://ryandc.wordpress.com" class="publish-domain u-url">ryandc.wordpress.com</a>
+
+
+
+</div>
+
+
+
+
+<!-- Banner for blogs that aren't yet advertising the webmention endpoint -->
+
+
+<div class="row">
+
+<p class="big">You're all set! Check out your recent
+<a href="#blogposts">blog posts</a> and <a href="#webmentions">webmentions</a>.
+  <!-- This currently 500s :/ -->
+  <!-- <a href="http://indiewebify.me/send-webmentions/?url="> -->
+  <!--   Try a webmention!</a> -->
+</p>
+
+
+<form method="post" action="/delete/start">
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyIwsSCVdvcmRQcmVzcyIUcnlhbmRjLndvcmRwcmVzcy5jb20M" />
+  <input name="feature" type="hidden" value="webmention" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+          title="Disable this account. (Won't delete webmentions you've already sent or received.)">Disable</button>
+</form>
+</div>
+
+
+<!-- Signup button -->
+
+
+
+
+
+
+<!-- Blog posts -->
+<div id="blogposts" class="row">
+
+<p class="big">Recent blog posts:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://ryandc.wordpress.com/2014/05/05/like-mac-os-x/">like mac os x</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1399559517&key=aglzfmJyaWQtZ3lyQwsSCEJsb2dQb3N0IjVodHRwOi8vcnlhbmRjLndvcmRwcmVzcy5jb20vMjAxNC8wNS8wNS9saWtlLW1hYy1vcy14Lww">
+      6 months, 1 week ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://ryandc.wordpress.com/2013/03/24/mac-os-x/">ryandc.wordpress.com/2013/03/24/mac...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://ryandc.wordpress.com/2012/12/01/hello-world/">Hello world!</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1399224488&key=aglzfmJyaWQtZ3lyQQsSCEJsb2dQb3N0IjNodHRwOi8vcnlhbmRjLndvcmRwcmVzcy5jb20vMjAxMi8xMi8wMS9oZWxsby13b3JsZC8M">
+      6 months, 2 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://wordpress.com/">wordpress.com/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://ryandc.wordpress.com/2013/03/24/mac-os-x/">mac os x</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1399224600&key=aglzfmJyaWQtZ3lyPgsSCEJsb2dQb3N0IjBodHRwOi8vcnlhbmRjLndvcmRwcmVzcy5jb20vMjAxMy8wMy8yNC9tYWMtb3MteC8M">
+      6 months, 2 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://knoopx.net/2011/10/28/os-x-lion-tweaks">knoopx.net/2011/10/28/os-... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li>
+	<li><a class="original-post" target="_blank" href="https://news.ycombinator.com/item?id=4059820">news.ycombinator.com/item?id=405982... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://osxdaily.com/2012/10/24/set-the-hostname-computer-name-and-bonjour-name-separately-in-os-x/">osxdaily.com/2012/10/24/set...</a></li>
+	<li><a class="original-post" target="_blank" href="https://github.com/fikovnik/ShiftIt">github.com/fikovnik/Shift...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.apple.com/mac/">apple.com/mac/</a></li>
+	<li><a class="original-post" target="_blank" href="http://osxdaily.com/2007/01/18/airport-the-little-known-command-line-wireless-utility/">osxdaily.com/2007/01/18/air...</a></li>
+	<li><a class="original-post" target="_blank" href="https://developer.apple.com/xcode/">developer.apple.com/xcode/</a></li>
+	<li><a class="original-post" target="_blank" href="https://pqrs.org/macosx/keyremap4macbook/">pqrs.org/macosx/keyrema...</a></li>
+	<li><a class="original-post" target="_blank" href="http://superuser.com/questions/271512/can-the-glow-notification-on-firefox-4s-app-tabs-be-disabled">superuser.com/questions/2715...</a></li>
+	<li><a class="original-post" target="_blank" href="http://developer.apple.com/library/mac/#technotes/tn2124/_index.html#//apple_ref/doc/uid/DTS10003391-CH1-SECLAUNCHD">developer.apple.com/library/mac/#t...</a></li>
+	<li><a class="original-post" target="_blank" href="http://forums.macrumors.com/showpost.php?p=12150590&amp;postcount=4">forums.macrumors.com/showpost.php?p...</a></li>
+	<li><a class="original-post" target="_blank" href="http://en.wikipedia.org/wiki/Property_list">en.wikipedia.org/wiki/Property_...</a></li>
+	<li><a class="original-post" target="_blank" href="http://apple.stackexchange.com/questions/9659/what-window-management-options-exist-for-os-x">apple.stackexchange.com/questions/9659...</a></li>
+	<li><a class="original-post" target="_blank" href="http://manytricks.com/moom/">manytricks.com/moom/</a></li>
+	<li><a class="original-post" target="_blank" href="http://en.wikipedia.org/wiki/Microsoft_PowerToys">en.wikipedia.org/wiki/Microsoft...</a></li>
+	<li><a class="original-post" target="_blank" href="http://lifehacker.com/5489410/secondbar-puts-a-menu-bar-on-all-your-macs-monitors">lifehacker.com/5489410/second...</a></li>
+	<li><a class="original-post" target="_blank" href="http://en.wikipedia.org/wiki/Ion_%28window_manager%29#Controversy">en.wikipedia.org/wiki/Ion_%28wi...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.commandlinefu.com/commands/view/2031/install-an-mpkg-from-the-command-line-on-osx">commandlinefu.com/commands/view/...</a></li>
+	<li><a class="original-post" target="_blank" href="http://aquamacs.org/">aquamacs.org/</a></li>
+	<li><a class="original-post" target="_blank" href="http://benatkin.com/2011/09/10/php-and-mysql-on-mac-os-x-lion-with-homebrew/">benatkin.com/2011/09/10/php...</a></li>
+	<li><a class="original-post" target="_blank" href="http://support.apple.com/kb/PH3957">support.apple.com/kb/PH3957</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.emacswiki.org/emacs/EmacsForMacOS#toc9">emacswiki.org/emacs/EmacsFor...</a></li>
+	<li><a class="original-post" target="_blank" href="http://notion.sourceforge.net/">notion.sourceforge.net/</a></li>
+	<li><a class="original-post" target="_blank" href="http://forums.macrumors.com/showthread.php?t=1416302">forums.macrumors.com/showthread.php...</a></li>
+	<li><a class="original-post" target="_blank" href="http://en.wikipedia.org/wiki/Ion_%28window_manager%29">en.wikipedia.org/wiki/Ion_%28wi...</a></li>
+	<li><a class="original-post" target="_blank" href="http://en.wikipedia.org/wiki/Launchd">en.wikipedia.org/wiki/Launchd</a></li>
+	<li><a class="original-post" target="_blank" href="http://spectacleapp.com/">spectacleapp.com/</a></li>
+	<li><a class="original-post" target="_blank" href="http://apple.stackexchange.com/questions/400/please-share-your-hidden-os-x-features-or-tips-and-tricks/574#574">apple.stackexchange.com/questions/400/...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.macfreek.nl/memory/Mac_OS_X_Installer_Packages#Multipackage_Files">macfreek.nl/memory/Mac_OS_...</a></li>
+	<li><a class="original-post" target="_blank" href="http://pidgin.im/">pidgin.im/</a></li>
+	<li><a class="original-post" target="_blank" href="http://roupam.github.io/">roupam.github.io/</a></li>
+	<li><a class="original-post" target="_blank" href="http://kapeli.com/dash">kapeli.com/dash</a></li>
+	<li><a class="original-post" target="_blank" href="http://batsov.com/articles/2012/12/09/emacs-24-dot-3-introduces-native-osx-full-screen-support/">batsov.com/articles/2012/...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.gnu.org/software/emacs/">gnu.org/software/emacs...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.ofzenandcomputing.com/how-to-install-dmg-files-mac/">ofzenandcomputing.com/how-to-install...</a></li>
+	<li><a class="original-post" target="_blank" href="https://github.com/fjolnir/xnomad">github.com/fjolnir/xnomad</a></li>
+	<li><a class="original-post" target="_blank" href="http://superuser.com/questions/93561/right-click-using-keyboard-in-mac-os-x">superuser.com/questions/9356...</a></li>
+	<li><a class="original-post" target="_blank" href="http://joshuawise.com/horndis">joshuawise.com/horndis</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.anoshkin.net/products/mac/volimiter/">anoshkin.net/products/mac/v...</a></li>
+	<li><a class="original-post" target="_blank" href="http://5amcode.com/">5amcode.com/</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.apple.com/asia/support/appleid/">apple.com/asia/support/a...</a></li>
+	<li><a class="original-post" target="_blank" href="http://hear.en.softonic.com/mac">hear.en.softonic.com/mac</a></li>
+	<li><a class="original-post" target="_blank" href="https://github.com/Homebrew/homebrew/wiki/FAQ">github.com/Homebrew/homeb...</a></li>
+	<li><a class="original-post" target="_blank" href="http://apple.stackexchange.com/questions/71645/how-to-interact-with-dialog-boxes-using-keyboard-that-appear-not-to-allow-keyboa">apple.stackexchange.com/questions/7164...</a></li>
+	<li><a class="original-post" target="_blank" href="https://github.com/jwise/HoRNDIS/issues/11">github.com/jwise/HoRNDIS/...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.prosofteng.com/products/soundbunny.php">prosofteng.com/products/sound...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.macports.org/">macports.org/</a></li>
+	<li><a class="original-post" target="_blank" href="http://mac.appstorm.net/roundups/utilities-roundups/20-mac-window-management-utilities/">mac.appstorm.net/roundups/utili...</a></li>
+	<li><a class="original-post" target="_blank" href="http://most-advantageous.com/optimal-layout/">most-advantageous.com/optimal-layout...</a></li>
+	<li><a class="original-post" target="_blank" href="http://cordlessdog.com/stay/">cordlessdog.com/stay/</a></li>
+	<li><a class="original-post" target="_blank" href="http://nathangrigg.net/2012/07/schedule-jobs-using-launchd/#launchctl">nathangrigg.net/2012/07/schedu...</a></li>
+	<li><a class="original-post" target="_blank" href="http://en.wikipedia.org/wiki/Advanced_Packaging_Tool">en.wikipedia.org/wiki/Advanced_...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.maintain.se/cocktail/">maintain.se/cocktail/</a></li>
+	<li><a class="original-post" target="_blank" href="http://superuser.com/questions/78176/how-do-mac-app-execution-files-work">superuser.com/questions/7817...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.finkproject.org/">finkproject.org/</a></li>
+	<li><a class="original-post" target="_blank" href="http://superuser.com/questions/93937/keyboard-shortcut-to-right-click-in-mac-os-x">superuser.com/questions/9393...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.ragingmenace.com/software/menumeters/">ragingmenace.com/software/menum...</a></li>
+	<li><a class="original-post" target="_blank" href="https://github.com/jigish/slate">github.com/jigish/slate</a></li>
+	<li><a class="original-post" target="_blank" href="http://superuser.com/questions/313425/toggle-ask-for-password-after-screensaver-sleep-or-the-delay-in-10-7-using-ter">superuser.com/questions/3134...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.macupdate.com/app/mac/11582/onyx">macupdate.com/app/mac/11582/...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.irradiatedsoftware.com/sizeup/">irradiatedsoftware.com/sizeup/</a></li>
+	<li><a class="original-post" target="_blank" href="https://www.mozilla.org/en-US/firefox/new/?utm_source=firefox-com&utm_medium=referral">mozilla.org/en-US/firefox/...</a></li>
+	<li><a class="original-post" target="_blank" href="http://en.wikipedia.org/wiki/Fitts'_law">en.wikipedia.org/wiki/Fitts'_la...</a></li>
+	<li><a class="original-post" target="_blank" href="http://support.apple.com/kb/ht1343">support.apple.com/kb/ht1343</a></li>
+	<li><a class="original-post" target="_blank" href="http://en.wikipedia.org/wiki/Apple_Developer_Tools#Property_List_Editor">en.wikipedia.org/wiki/Apple_Dev...</a></li>
+	<li><a class="original-post" target="_blank" href="http://forums.macrumors.com/showthread.php?t=1232195">forums.macrumors.com/showthread.php...</a></li>
+	<li><a class="original-post" target="_blank" href="http://macdevelopertips.com/system/multiple-monitors-specifying-menu-location.html">macdevelopertips.com/system/multipl...</a></li>
+	<li><a class="original-post" target="_blank" href="https://addons.mozilla.org/en-US/firefox/addon/febe/">addons.mozilla.org/en-US/firefox/...</a></li>
+	<li><a class="original-post" target="_blank" href="http://developer.apple.com/library/mac/#/documentation/Darwin/Reference/ManPages/man5/launchd.plist.5.html">developer.apple.com/library/mac/#/...</a></li>
+	<li><a class="original-post" target="_blank" href="https://discussions.apple.com/message/17983068#17983068">discussions.apple.com/message/179830...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.technologytell.com/apple/90045/prevent-your-macbook-from-sleeping-when-its-lid-is-closed-with-nosleep/">technologytell.com/apple/90045/pr...</a></li>
+	<li><a class="original-post" target="_blank" href="http://apple.stackexchange.com/questions/13708/disabling-the-keep-pressed-function-of-os-x-sticky-keys">apple.stackexchange.com/questions/1370...</a></li>
+	<li><a class="original-post" target="_blank" href="http://support.apple.com/kb/PH11262">support.apple.com/kb/PH11262</a></li>
+	<li><a class="original-post" target="_blank" href="http://apple.stackexchange.com/questions/84139/how-to-disable-firefoxs-app-tab-glow">apple.stackexchange.com/questions/8413...</a></li>
+	<li><a class="original-post" target="_blank" href="https://support.mozilla.org/en-US/questions/947663">support.mozilla.org/en-US/question...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.tylerwm.com/">tylerwm.com/</a></li>
+	<li><a class="original-post" target="_blank" href="https://trac.adium.im/ticket/8082#comment:24">trac.adium.im/ticket/8082#co...</a></li>
+	<li><a class="original-post" target="_blank" href="http://mxcl.github.io/homebrew/">mxcl.github.io/homebrew/</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.android.com/filetransfer/">android.com/filetransfer/</a></li>
+	<li><a class="original-post" target="_blank" href="https://adium.im/">adium.im/</a></li>
+	<li><a class="original-post" target="_blank" href="http://secrets.blacktree.com/">secrets.blacktree.com/</a></li>
+	<li><a class="original-post" target="_blank" href="https://developer.apple.com/legacy/library/">developer.apple.com/legacy/library...</a></li>
+	<li><a class="original-post" target="_blank" href="http://support.apple.com/kb/ht5394">support.apple.com/kb/ht5394</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.macfreek.nl/memory/Mac_OS_X_Installer_Packages#Package_file_format">macfreek.nl/memory/Mac_OS_...</a></li>
+	<li><a class="original-post" target="_blank" href="http://apple.stackexchange.com/questions/63253/lowest-volume-is-still-too-loudhow-can-i-make-it-even-lower">apple.stackexchange.com/questions/6325...</a></li>
+	<li><a class="original-post" target="_blank" href="http://forums.macrumors.com/showthread.php?t=352532">forums.macrumors.com/showthread.php...</a></li>
+	<li><a class="original-post" target="_blank" href="http://mizage.com/divvy/">mizage.com/divvy/</a></li>
+	<li><a class="original-post" target="_blank" href="http://stackoverflow.com/questions/135688/setting-environment-variables-in-os-x/5444960#5444960">stackoverflow.com/questions/1356...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://ryandc.wordpress.com/2013/06/02/21/">Hi! I&#8217;m Ryan Barrett. I live, work...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1399224354&key=aglzfmJyaWQtZ3lyOAsSCEJsb2dQb3N0IipodHRwOi8vcnlhbmRjLndvcmRwcmVzcy5jb20vMjAxMy8wNi8wMi8yMS8M">
+      6 months, 2 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+</div>
+
+
+<!-- Incoming blog webmentions -->
+<div id="webmentions" class="row">
+
+<p class="big">Recent
+  <a href="http://indiewebify.me/#send-webmentions">webmentions</a>:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="http://ryandc.wordpress.com">ryandc.wordpress.com</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://ryandc.wordpress.com/2012/12/01/hello-world/">ryandc.wordpress.com/2012/12/01/hel...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1411102407&key=aglzfmJyaWQtZ3lyYwsSDkJsb2dXZWJtZW50aW9uIk9odHRwOi8vcnlhbmRjLndvcmRwcmVzcy5jb20gaHR0cDovL3J5YW5kYy53b3JkcHJlc3MuY29tLzIwMTIvMTIvMDEvaGVsbG8td29ybGQvDA">
+      1 month, 4 weeks ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       None
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="http://ryandc.wordpress.com">ryandc.wordpress.com</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://ryandc.wordpress.com/2013/03/24/mac-os-x/">ryandc.wordpress.com/2013/03/24/mac...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1411102402&key=aglzfmJyaWQtZ3lyYAsSDkJsb2dXZWJtZW50aW9uIkxodHRwOi8vcnlhbmRjLndvcmRwcmVzcy5jb20gaHR0cDovL3J5YW5kYy53b3JkcHJlc3MuY29tLzIwMTMvMDMvMjQvbWFjLW9zLXgvDA">
+      1 month, 4 weeks ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       None
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="http://ryandc.wordpress.com">ryandc.wordpress.com</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://ryandc.wordpress.com/2013/06/02/21/">ryandc.wordpress.com/2013/06/02/21/</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1411102397&key=aglzfmJyaWQtZ3lyWgsSDkJsb2dXZWJtZW50aW9uIkZodHRwOi8vcnlhbmRjLndvcmRwcmVzcy5jb20gaHR0cDovL3J5YW5kYy53b3JkcHJlc3MuY29tLzIwMTMvMDYvMDIvMjEvDA">
+      1 month, 4 weeks ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       None
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="http://ryandc.wordpress.com">ryandc.wordpress.com</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://ryandc.wordpress.com/2014/05/05/like-mac-os-x/">ryandc.wordpress.com/2014/05/05/lik...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1411102391&key=aglzfmJyaWQtZ3lyZQsSDkJsb2dXZWJtZW50aW9uIlFodHRwOi8vcnlhbmRjLndvcmRwcmVzcy5jb20gaHR0cDovL3J5YW5kYy53b3JkcHJlc3MuY29tLzIwMTQvMDUvMDUvbGlrZS1tYWMtb3MteC8M">
+      1 month, 4 weeks ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       None
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="http://ryandc.wordpress.com">ryandc.wordpress.com</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://ryandc.wordpress.com/author/ryandc/">ryandc.wordpress.com/author/ryandc/</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1411102390&key=aglzfmJyaWQtZ3lyWgsSDkJsb2dXZWJtZW50aW9uIkZodHRwOi8vcnlhbmRjLndvcmRwcmVzcy5jb20gaHR0cDovL3J5YW5kYy53b3JkcHJlc3MuY29tL2F1dGhvci9yeWFuZGMvDA">
+      1 month, 4 weeks ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       None
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="http://ryandc.wordpress.com">ryandc.wordpress.com</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://ryandc.wordpress.com/">ryandc.wordpress.com/</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1411102386&key=aglzfmJyaWQtZ3lyTAsSDkJsb2dXZWJtZW50aW9uIjhodHRwOi8vcnlhbmRjLndvcmRwcmVzcy5jb20gaHR0cDovL3J5YW5kYy53b3JkcHJlc3MuY29tLww">
+      1 month, 4 weeks ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       None
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="http://ryandc.wordpress.com">ryandc.wordpress.com</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://ryandc.wordpress.com/category/uncategorized/">ryandc.wordpress.com/category/uncat...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1411102383&key=aglzfmJyaWQtZ3lyYwsSDkJsb2dXZWJtZW50aW9uIk9odHRwOi8vcnlhbmRjLndvcmRwcmVzcy5jb20gaHR0cDovL3J5YW5kYy53b3JkcHJlc3MuY29tL2NhdGVnb3J5L3VuY2F0ZWdvcml6ZWQvDA">
+      1 month, 4 weeks ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       None
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="http://ryandc.wordpress.com/2014/05/05/like-mac-os-x/">ryandc.wordpress.com/2014/05/05/lik...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://ryandc.wordpress.com/2013/03/24/mac-os-x/">ryandc.wordpress.com/2013/03/24/mac...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1399559517&key=aglzfmJyaWQtZ3lyegsSDkJsb2dXZWJtZW50aW9uImZodHRwOi8vcnlhbmRjLndvcmRwcmVzcy5jb20vMjAxNC8wNS8wNS9saWtlLW1hYy1vcy14LyBodHRwOi8vcnlhbmRjLndvcmRwcmVzcy5jb20vMjAxMy8wMy8yNC9tYWMtb3MteC8M">
+      6 months, 1 week ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       like
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="http://snarfed.tumblr.com/post/84876920037">snarfed.tumblr.com/post/848769200...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://ryandc.wordpress.com/2013/03/24/mac-os-x/">ryandc.wordpress.com/2013/03/24/mac...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1399337952&key=aglzfmJyaWQtZ3lybwsSDkJsb2dXZWJtZW50aW9uIltodHRwOi8vc25hcmZlZC50dW1ibHIuY29tL3Bvc3QvODQ4NzY5MjAwMzcgaHR0cDovL3J5YW5kYy53b3JkcHJlc3MuY29tLzIwMTMvMDMvMjQvbWFjLW9zLXgvDA">
+      6 months, 2 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       like
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="http://kylewm.com/reply/2014/05/05/2">kylewm.com/reply/2014/05/...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://ryandc.wordpress.com/2013/03/24/mac-os-x/">ryandc.wordpress.com/2013/03/24/mac...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1399302401&key=aglzfmJyaWQtZ3lyaQsSDkJsb2dXZWJtZW50aW9uIlVodHRwOi8va3lsZXdtLmNvbS9yZXBseS8yMDE0LzA1LzA1LzIgaHR0cDovL3J5YW5kYy53b3JkcHJlc3MuY29tLzIwMTMvMDMvMjQvbWFjLW9zLXgvDA">
+      6 months, 2 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       comment
+     
+
+   </div>
+  </li>
+  
+</ul>
+
+
+</div>
+
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>uebyn (Tumblr) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="http://blog.uebyn.com/" title="uebyn (Tumblr)"
+   class="u-url">
+  <img class="profile u-photo" src="https://api.tumblr.com/v2/blog/blog.uebyn.com/avatar/512" width="64px" />
+  <img src="/static/tumblr_icon.png"
+       
+       alt="Tumblr" />
+  <span class="p-name">uebyn</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://blog.uebyn.com/" class="publish-domain u-url">blog.uebyn.com</a>
+
+
+
+</div>
+
+
+
+
+<!-- Banner for blogs that aren't yet advertising the webmention endpoint -->
+
+
+<div class="row">
+
+<p class="big">You're all set! Check out your recent
+<a href="#blogposts">blog posts</a> and <a href="#webmentions">webmentions</a>.
+  <!-- This currently 500s :/ -->
+  <!-- <a href="http://indiewebify.me/send-webmentions/?url="> -->
+  <!--   Try a webmention!</a> -->
+</p>
+
+
+<form method="post" action="/delete/start">
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGgsSBlR1bWJsciIOYmxvZy51ZWJ5bi5jb20M" />
+  <input name="feature" type="hidden" value="webmention" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+          title="Disable this account. (Won't delete webmentions you've already sent or received.)">Disable</button>
+</form>
+</div>
+
+
+<!-- Signup button -->
+
+
+
+
+
+
+<!-- Blog posts -->
+<div id="blogposts" class="row">
+
+<p class="big">Recent blog posts:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://blog.uebyn.com/post/101553857719">arturfast:
+
+Livepainting from a rave in ...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1414902424&key=aglzfmJyaWQtZ3lyNQsSCEJsb2dQb3N0IidodHRwOi8vYmxvZy51ZWJ5bi5jb20vcG9zdC8xMDE1NTM4NTc3MTkM">
+      2 weeks, 1 day ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://arturfast.tumblr.com/post/101335526395/livepainting-from-a-rave-in-bochum">arturfast.tumblr.com/post/101335526...</a></li>
+	<li><a class="original-post" target="_blank" href="http://arturfast.tumblr.com/">arturfast.tumblr.com/</a></li>
+	<li><a class="original-post" target="_blank" href="http://graasnaakt.tumblr.com/">graasnaakt.tumblr.com/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://blog.uebyn.com/post/101092265009">The Closed Web.</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1414424818&key=aglzfmJyaWQtZ3lyNQsSCEJsb2dQb3N0IidodHRwOi8vYmxvZy51ZWJ5bi5jb20vcG9zdC8xMDEwOTIyNjUwMDkM">
+      2 weeks, 6 days ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://webdesign.about.com/od/beginningcss/a/aa021607.htm">webdesign.about.com/od/beginningcs...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://blog.uebyn.com/post/98145462179">Free the Web.</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1411396006&key=aglzfmJyaWQtZ3lyNAsSCEJsb2dQb3N0IiZodHRwOi8vYmxvZy51ZWJ5bi5jb20vcG9zdC85ODE0NTQ2MjE3OQw">
+      1 month, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://indiewebcamp.com/">indiewebcamp.com/</a></li>
+	<li><a class="original-post" target="_blank" href="http://indiewebcamp.com/Getting_Started">indiewebcamp.com/Getting_Starte...</a></li>
+	<li><a class="original-post" target="_blank" href="http://indiewebcamp.com/fun">indiewebcamp.com/fun</a></li>
+	<li><a class="original-post" target="_blank" href="http://indiewebcamp.com/Principles">indiewebcamp.com/Principles</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://blog.uebyn.com/post/85978672559">The Future of Fiction, Part 1: LAYOUT.</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1408980202&key=aglzfmJyaWQtZ3lyNAsSCEJsb2dQb3N0IiZodHRwOi8vYmxvZy51ZWJ5bi5jb20vcG9zdC84NTk3ODY3MjU1OQw">
+      2 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://blog.uebyn.com/post/85979309104/web-fiction-auteur-not-author#_=_">blog.uebyn.com/post/859793091... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://uebynscraps.herokuapp.com/">uebynscraps.herokuapp.com/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://blog.uebyn.com/post/85979309104">Web Fiction Auteur, not Author.</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1408980173&key=aglzfmJyaWQtZ3lyNAsSCEJsb2dQb3N0IiZodHRwOi8vYmxvZy51ZWJ5bi5jb20vcG9zdC84NTk3OTMwOTEwNAw">
+      2 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://en.wikipedia.org/wiki/Auteur_theory">en.wikipedia.org/wiki/Auteur_th...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://blog.uebyn.com/post/86664990664">The Future of Fiction, Part II: MEDIA.</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1408980168&key=aglzfmJyaWQtZ3lyNAsSCEJsb2dQb3N0IiZodHRwOi8vYmxvZy51ZWJ5bi5jb20vcG9zdC84NjY2NDk5MDY2NAw">
+      2 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://blog.uebyn.com/post/85299979419/a-unique-art-form#_=_">blog.uebyn.com/post/852999794... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://blog.uebyn.com/post/88083872074">One Web Art?</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1408980165&key=aglzfmJyaWQtZ3lyNAsSCEJsb2dQb3N0IiZodHRwOi8vYmxvZy51ZWJ5bi5jb20vcG9zdC84ODA4Mzg3MjA3NAw">
+      2 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://blog.uebyn.com/post/86664990664/the-future-of-fiction-part-ii-media#_=_">blog.uebyn.com/post/866649906... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://blog.uebyn.com/post/88733543469">Screw 'Em Bots.</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1408980160&key=aglzfmJyaWQtZ3lyNAsSCEJsb2dQb3N0IiZodHRwOi8vYmxvZy51ZWJ5bi5jb20vcG9zdC84ODczMzU0MzQ2OQw">
+      2 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.a-chameleon.com">a-chameleon.com <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.w3schools.com/tags/tag_meta.asp">w3schools.com/tags/tag_meta....</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://blog.uebyn.com/post/89453839729">The Internet != Life.</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1408980157&key=aglzfmJyaWQtZ3lyNAsSCEJsb2dQb3N0IiZodHRwOi8vYmxvZy51ZWJ5bi5jb20vcG9zdC84OTQ1MzgzOTcyOQw">
+      2 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://blog.uebyn.com/post/85978672559/the-future-of-fiction-part-1-layout#_=_">blog.uebyn.com/post/859786725... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://artruby.com/">artruby.com/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://blog.uebyn.com/post/81888553934">Is Art Dead?</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1408980152&key=aglzfmJyaWQtZ3lyNAsSCEJsb2dQb3N0IiZodHRwOi8vYmxvZy51ZWJ5bi5jb20vcG9zdC84MTg4ODU1MzkzNAw">
+      2 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://minimal-english.uebyn.com/">minimal-english.uebyn.com/</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+</div>
+
+
+<!-- Incoming blog webmentions -->
+<div id="webmentions" class="row">
+
+<p class="big">Recent
+  <a href="http://indiewebify.me/#send-webmentions">webmentions</a>:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/Uebyn/status/526899097202987008">twitter.com/Uebyn/status/5...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://blog.uebyn.com/post/101092265009/the-closed-web">blog.uebyn.com/post/101092265...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1414476777&key=aglzfmJyaWQtZ3lymAELEg5CbG9nV2VibWVudGlvbiKDAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9saWtlL3R3aXR0ZXIvVWVieW4vNTI2ODk5MDk3MjAyOTg3MDA4LzI3NzM0OTEzMDcgaHR0cDovL2Jsb2cudWVieW4uY29tL3Bvc3QvMTAxMDkyMjY1MDA5L3RoZS1jbG9zZWQtd2ViDA">
+      2 weeks, 6 days ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       like
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/ColleenTews/status/526904160026116097">twitter.com/ColleenTews/st...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://blog.uebyn.com/post/101092265009/the-closed-web">blog.uebyn.com/post/101092265...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1414476706&key=aglzfmJyaWQtZ3lyogELEg5CbG9nV2VibWVudGlvbiKNAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9yZXBvc3QvdHdpdHRlci9VZWJ5bi81MjY4OTkwOTcyMDI5ODcwMDgvNTI2OTA0MTYwMDI2MTE2MDk3IGh0dHA6Ly9ibG9nLnVlYnluLmNvbS9wb3N0LzEwMTA5MjI2NTAwOS90aGUtY2xvc2VkLXdlYgw">
+      2 weeks, 6 days ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       repost
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/Uebyn/status/526899097202987008">twitter.com/Uebyn/status/5...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://blog.uebyn.com/post/101092265009/the-closed-web">blog.uebyn.com/post/101092265...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1414476671&key=aglzfmJyaWQtZ3lymAELEg5CbG9nV2VibWVudGlvbiKDAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9saWtlL3R3aXR0ZXIvVWVieW4vNTI2ODk5MDk3MjAyOTg3MDA4LzI3NzU4NjIzOTkgaHR0cDovL2Jsb2cudWVieW4uY29tL3Bvc3QvMTAxMDkyMjY1MDA5L3RoZS1jbG9zZWQtd2ViDA">
+      2 weeks, 6 days ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       like
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/gigabytemag/status/515038648040194049">twitter.com/gigabytemag/st...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://blog.uebyn.com/post/98145462179/free-the-web">blog.uebyn.com/post/981454621...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1411629831&key=aglzfmJyaWQtZ3lynwELEg5CbG9nV2VibWVudGlvbiKKAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9yZXBvc3QvdHdpdHRlci9VZWJ5bi81MTQwNjA4MDI2ODk0NzQ1NjAvNTE1MDM4NjQ4MDQwMTk0MDQ5IGh0dHA6Ly9ibG9nLnVlYnluLmNvbS9wb3N0Lzk4MTQ1NDYyMTc5L2ZyZWUtdGhlLXdlYgw">
+      1 month, 3 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       repost
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/kevinmarks/status/514092171666788354">twitter.com/kevinmarks/sta...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://blog.uebyn.com/post/98145462179/free-the-web">blog.uebyn.com/post/981454621...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1411416530&key=aglzfmJyaWQtZ3lymAELEg5CbG9nV2VibWVudGlvbiKDAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9saWtlL3R3aXR0ZXIva2V2aW5tYXJrcy81MTQwOTIxNzE2NjY3ODgzNTQvMTg1NTE0NDEgaHR0cDovL2Jsb2cudWVieW4uY29tL3Bvc3QvOTgxNDU0NjIxNzkvZnJlZS10aGUtd2ViDA">
+      1 month, 3 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       like
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/kevinmarks/status/514092171666788354">twitter.com/kevinmarks/sta...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://blog.uebyn.com/post/98145462179/free-the-web">blog.uebyn.com/post/981454621...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1411410526&key=aglzfmJyaWQtZ3lylgELEg5CbG9nV2VibWVudGlvbiKBAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9saWtlL3R3aXR0ZXIva2V2aW5tYXJrcy81MTQwOTIxNzE2NjY3ODgzNTQvOTYxNjYxIGh0dHA6Ly9ibG9nLnVlYnluLmNvbS9wb3N0Lzk4MTQ1NDYyMTc5L2ZyZWUtdGhlLXdlYgw">
+      1 month, 3 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       like
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/Uebyn/status/514060802689474560">twitter.com/Uebyn/status/5...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://blog.uebyn.com/post/98145462179/free-the-web">blog.uebyn.com/post/981454621...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1411408230&key=aglzfmJyaWQtZ3lylQELEg5CbG9nV2VibWVudGlvbiKAAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9saWtlL3R3aXR0ZXIvVWVieW4vNTE0MDYwODAyNjg5NDc0NTYwLzI0NTExNTA3OTkgaHR0cDovL2Jsb2cudWVieW4uY29tL3Bvc3QvOTgxNDU0NjIxNzkvZnJlZS10aGUtd2ViDA">
+      1 month, 3 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       like
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/Rosengeranium/status/514064042617733121">twitter.com/Rosengeranium/...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://blog.uebyn.com/post/98145462179/free-the-web">blog.uebyn.com/post/981454621...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1411408191&key=aglzfmJyaWQtZ3lynwELEg5CbG9nV2VibWVudGlvbiKKAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9yZXBvc3QvdHdpdHRlci9VZWJ5bi81MTQwNjA4MDI2ODk0NzQ1NjAvNTE0MDY0MDQyNjE3NzMzMTIxIGh0dHA6Ly9ibG9nLnVlYnluLmNvbS9wb3N0Lzk4MTQ1NDYyMTc5L2ZyZWUtdGhlLXdlYgw">
+      1 month, 3 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       repost
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/MondayBlogs/status/514063429296848898">twitter.com/MondayBlogs/st...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://blog.uebyn.com/post/98145462179/free-the-web">blog.uebyn.com/post/981454621...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1411408158&key=aglzfmJyaWQtZ3lynwELEg5CbG9nV2VibWVudGlvbiKKAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9yZXBvc3QvdHdpdHRlci9VZWJ5bi81MTQwNjA4MDI2ODk0NzQ1NjAvNTE0MDYzNDI5Mjk2ODQ4ODk4IGh0dHA6Ly9ibG9nLnVlYnluLmNvbS9wb3N0Lzk4MTQ1NDYyMTc5L2ZyZWUtdGhlLXdlYgw">
+      1 month, 3 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       repost
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/Uebyn/status/514060802689474560">twitter.com/Uebyn/status/5...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://blog.uebyn.com/post/98145462179/free-the-web">blog.uebyn.com/post/981454621...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1411408114&key=aglzfmJyaWQtZ3lylQELEg5CbG9nV2VibWVudGlvbiKAAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9saWtlL3R3aXR0ZXIvVWVieW4vNTE0MDYwODAyNjg5NDc0NTYwLzI0NTgwMDc1NjIgaHR0cDovL2Jsb2cudWVieW4uY29tL3Bvc3QvOTgxNDU0NjIxNzkvZnJlZS10aGUtd2ViDA">
+      1 month, 3 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       like
+     
+
+   </div>
+  </li>
+  
+</ul>
+
+
+</div>
+
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

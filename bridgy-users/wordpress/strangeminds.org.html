@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>SmilyBorg (WordPress.com) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="http://strangeminds.org" title="SmilyBorg (WordPress.com)"
+   class="u-url">
+  <img class="profile u-photo" src="https://1.gravatar.com/avatar/abfed314fc7db7afe26af7e317e031ae?s=96&amp;d=https%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D96" width="64px" />
+  <img src="/static/wordpress_icon.png"
+       
+       alt="WordPress.com" />
+  <span class="p-name">SmilyBorg</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://strangeminds.org" class="publish-domain u-url">strangeminds.org</a>
+
+
+
+</div>
+
+
+
+
+<!-- Banner for blogs that aren't yet advertising the webmention endpoint -->
+
+
+<div class="row">
+
+<p class="big">You're all set! Check out your recent
+<a href="#blogposts">blog posts</a> and <a href="#webmentions">webmentions</a>.
+  <!-- This currently 500s :/ -->
+  <!-- <a href="http://indiewebify.me/send-webmentions/?url="> -->
+  <!--   Try a webmention!</a> -->
+</p>
+
+
+<form method="post" action="/delete/start">
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyHwsSCVdvcmRQcmVzcyIQc3RyYW5nZW1pbmRzLm9yZww" />
+  <input name="feature" type="hidden" value="webmention" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+          title="Disable this account. (Won't delete webmentions you've already sent or received.)">Disable</button>
+</form>
+</div>
+
+
+<!-- Signup button -->
+
+
+
+
+
+
+<!-- Blog posts -->
+<div id="blogposts" class="row">
+
+<p class="big">Recent blog posts:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://strangeminds.org/2014/08/26/some-days/?utm_source=rss&utm_medium=rss&utm_campaign=some-days">Some days</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1409040167&key=aglzfmJyaWQtZ3lycAsSCEJsb2dQb3N0ImJodHRwOi8vc3RyYW5nZW1pbmRzLm9yZy8yMDE0LzA4LzI2L3NvbWUtZGF5cy8_dXRtX3NvdXJjZT1yc3MmdXRtX21lZGl1bT1yc3MmdXRtX2NhbXBhaWduPXNvbWUtZGF5cww">
+      2 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://strangeminds.org/2014/07/28/3positivethings/?utm_source=rss&utm_medium=rss&utm_campaign=3positivethings">#3PositiveThings</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1406554914&key=aglzfmJyaWQtZ3lyfAsSCEJsb2dQb3N0Im5odHRwOi8vc3RyYW5nZW1pbmRzLm9yZy8yMDE0LzA3LzI4LzNwb3NpdGl2ZXRoaW5ncy8_dXRtX3NvdXJjZT1yc3MmdXRtX21lZGl1bT1yc3MmdXRtX2NhbXBhaWduPTNwb3NpdGl2ZXRoaW5ncww">
+      3 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://strangeminds.org/2014/07/23/3-positive-things/?utm_source=rss&utm_medium=rss&utm_campaign=3-positive-things">3 Positive Things</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1406124105&key=aglzfmJyaWQtZ3lygAELEghCbG9nUG9zdCJyaHR0cDovL3N0cmFuZ2VtaW5kcy5vcmcvMjAxNC8wNy8yMy8zLXBvc2l0aXZlLXRoaW5ncy8_dXRtX3NvdXJjZT1yc3MmdXRtX21lZGl1bT1yc3MmdXRtX2NhbXBhaWduPTMtcG9zaXRpdmUtdGhpbmdzDA">
+      3 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://strangeminds.org/2014/07/21/musical-tastes/?utm_source=rss&utm_medium=rss&utm_campaign=musical-tastes">Musical tastes</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1405934601&key=aglzfmJyaWQtZ3lyegsSCEJsb2dQb3N0ImxodHRwOi8vc3RyYW5nZW1pbmRzLm9yZy8yMDE0LzA3LzIxL211c2ljYWwtdGFzdGVzLz91dG1fc291cmNlPXJzcyZ1dG1fbWVkaXVtPXJzcyZ1dG1fY2FtcGFpZ249bXVzaWNhbC10YXN0ZXMM">
+      3 months, 4 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://strangeminds.org/2014/06/19/quick-update/?utm_source=rss&utm_medium=rss&utm_campaign=quick-update">Quick update</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1403182813&key=aglzfmJyaWQtZ3lydgsSCEJsb2dQb3N0ImhodHRwOi8vc3RyYW5nZW1pbmRzLm9yZy8yMDE0LzA2LzE5L3F1aWNrLXVwZGF0ZS8_dXRtX3NvdXJjZT1yc3MmdXRtX21lZGl1bT1yc3MmdXRtX2NhbXBhaWduPXF1aWNrLXVwZGF0ZQw">
+      5 months ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://strangeminds.org/2013/12/22/new-adventures-ahead/?utm_source=rss&utm_medium=rss&utm_campaign=new-adventures-ahead">New adventures ahead</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1401171670&key=aglzfmJyaWQtZ3lyhgELEghCbG9nUG9zdCJ4aHR0cDovL3N0cmFuZ2VtaW5kcy5vcmcvMjAxMy8xMi8yMi9uZXctYWR2ZW50dXJlcy1haGVhZC8_dXRtX3NvdXJjZT1yc3MmdXRtX21lZGl1bT1yc3MmdXRtX2NhbXBhaWduPW5ldy1hZHZlbnR1cmVzLWFoZWFkDA">
+      5 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://strangeminds.org/2014/05/14/untitled/?utm_source=rss&utm_medium=rss&utm_campaign=untitled">Untitled</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1401171625&key=aglzfmJyaWQtZ3lybgsSCEJsb2dQb3N0ImBodHRwOi8vc3RyYW5nZW1pbmRzLm9yZy8yMDE0LzA1LzE0L3VudGl0bGVkLz91dG1fc291cmNlPXJzcyZ1dG1fbWVkaXVtPXJzcyZ1dG1fY2FtcGFpZ249dW50aXRsZWQM">
+      5 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://strangeminds.org/2014/05/23/thoughts/?utm_source=rss&utm_medium=rss&utm_campaign=thoughts">Thoughts</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1401171650&key=aglzfmJyaWQtZ3lybgsSCEJsb2dQb3N0ImBodHRwOi8vc3RyYW5nZW1pbmRzLm9yZy8yMDE0LzA1LzIzL3Rob3VnaHRzLz91dG1fc291cmNlPXJzcyZ1dG1fbWVkaXVtPXJzcyZ1dG1fY2FtcGFpZ249dGhvdWdodHMM">
+      5 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+</div>
+
+
+<!-- Incoming blog webmentions -->
+<div id="webmentions" class="row">
+
+<p class="big">No
+  <a href="http://indiewebify.me/#send-webmentions">webmentions</a> received yet.</p>
+
+</div>
+
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

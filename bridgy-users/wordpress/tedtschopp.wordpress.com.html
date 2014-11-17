@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Ted Tschopp (WordPress.com) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="http://tedtschopp.wordpress.com" title="Ted Tschopp (WordPress.com)"
+   class="u-url">
+  <img class="profile u-photo" src="https://0.gravatar.com/avatar/661ba72c11e19b4da0415f8c66bcd60d?s=96&amp;d=identicon&amp;r=G" width="64px" />
+  <img src="/static/wordpress_icon.png"
+       
+       alt="WordPress.com" />
+  <span class="p-name">Ted Tschopp</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://tedtschopp.wordpress.com" class="publish-domain u-url">tedtschopp.wordpress.com</a>
+
+
+
+</div>
+
+
+
+
+<!-- Banner for blogs that aren't yet advertising the webmention endpoint -->
+
+
+<div class="row">
+
+<p class="big">You're all set! Check out your recent
+<a href="#blogposts">blog posts</a> and <a href="#webmentions">webmentions</a>.
+  <!-- This currently 500s :/ -->
+  <!-- <a href="http://indiewebify.me/send-webmentions/?url="> -->
+  <!--   Try a webmention!</a> -->
+</p>
+
+
+<form method="post" action="/delete/start">
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyJwsSCVdvcmRQcmVzcyIYdGVkdHNjaG9wcC53b3JkcHJlc3MuY29tDA" />
+  <input name="feature" type="hidden" value="webmention" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+          title="Disable this account. (Won't delete webmentions you've already sent or received.)">Disable</button>
+</form>
+</div>
+
+
+<!-- Signup button -->
+
+
+
+
+
+
+<!-- Blog posts -->
+<div id="blogposts" class="row">
+
+<p class="big">Recent blog posts:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://tschopp.net/2007/09/24/ideas-of-things-i-need-to-think-about-garden-state/">Ideas of things I need to think about:  ...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1400902489&key=aglzfmJyaWQtZ3lyXwsSCEJsb2dQb3N0IlFodHRwOi8vdHNjaG9wcC5uZXQvMjAwNy8wOS8yNC9pZGVhcy1vZi10aGluZ3MtaS1uZWVkLXRvLXRoaW5rLWFib3V0LWdhcmRlbi1zdGF0ZS8M">
+      5 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://digg.com/submit?phase=2&url=http%3A%2F%2Ftschopp.net%2F2007%2F09%2F24%2Fideas-of-things-i-need-to-think-about-garden-state%2F&title=Ideas+of+things+I+need+to+think+about%3A++Garden+State">digg.com/submit?phase=2...</a></li>
+	<li><a class="original-post" target="_blank" href="https://delicious.com/post?url=http%3A%2F%2Ftschopp.net%2F2007%2F09%2F24%2Fideas-of-things-i-need-to-think-about-garden-state%2F&title=Ideas+of+things+I+need+to+think+about%3A++Garden+State">delicious.com/post?url=http%...</a></li>
+	<li><a class="original-post" target="_blank" href="https://ssl.reddit.com/login?dest=http%3A%2F%2Fwww.reddit.com%2Fsubmit%3Furl%3Dhttp%253A%252F%252Ftschopp.net%252F2007%252F09%252F24%252Fideas-of-things-i-need-to-think-about-garden-state%252F%26title%3DIdeas%2Bof%2Bthings%2BI%2Bneed%2Bto%2Bthink%2Babout%253A%2B%2BGarden%2BState">ssl.reddit.com/login?dest=htt...</a></li>
+	<li><a class="original-post" target="_blank" href="https://twitter.com/intent/tweet?text=I%20liked%20reading%20%27Ideas%20of%20things%20I%20need%20to%20think%20about%3A%20Garden%20State%20...%27%20http%3A%2F%2Fwp.me%2FpVkX8-7r&source=webclient">twitter.com/intent/tweet?t...</a></li>
+	<li><a class="original-post" target="_blank" href="https://www.facebook.com/login.php?next=http%3A%2F%2Fwww.facebook.com%2Fsharer%2Fsharer.php%3Fu%3Dhttp%253A%252F%252Fwp.me%252FpVkX8-7r%26amp%253Bt%3DIdeas%2Bof%2Bthings%2BI%2Bneed%2Bto%2Bthink%2Babout%253A%2B%2BGarden%2BState&display=popup">facebook.com/login.php?next...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Ftschopp.net%2F2007%2F09%2F24%2Fideas-of-things-i-need-to-think-about-garden-state%2F&title=Ideas+of+things+I+need+to+think+about%3A++Garden+State">stumbleupon.com/submit?url=htt...</a></li>
+	<li><a class="original-post" target="_blank" href="http://tschopp.net/2007/09/24/ideas-of-things-i-need-to-think-about-garden-state/#comments">tschopp.net/2007/09/24/ide...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://tschopp.net/2007/09/26/ideas-to-think-about-life-and-taxes/">Ideas to Think About: Life and Taxes</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1400902476&key=aglzfmJyaWQtZ3lyUAsSCEJsb2dQb3N0IkJodHRwOi8vdHNjaG9wcC5uZXQvMjAwNy8wOS8yNi9pZGVhcy10by10aGluay1hYm91dC1saWZlLWFuZC10YXhlcy8M">
+      5 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Ftschopp.net%2F2007%2F09%2F26%2Fideas-to-think-about-life-and-taxes%2F&title=Ideas+to+Think+About%3A+Life+and+Taxes">stumbleupon.com/submit?url=htt...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.alexwright.org/">alexwright.org/</a></li>
+	<li><a class="original-post" target="_blank" href="https://www.facebook.com/login.php?next=http%3A%2F%2Fwww.facebook.com%2Fsharer%2Fsharer.php%3Fu%3Dhttp%253A%252F%252Fwp.me%252FpVkX8-7q%26amp%253Bt%3DIdeas%2Bto%2BThink%2BAbout%253A%2BLife%2Band%2BTaxes&display=popup">facebook.com/login.php?next...</a></li>
+	<li><a class="original-post" target="_blank" href="http://tschopp.net/2007/09/26/ideas-to-think-about-life-and-taxes/#comments">tschopp.net/2007/09/26/ide...</a></li>
+	<li><a class="original-post" target="_blank" href="https://twitter.com/intent/tweet?text=I%20liked%20reading%20%27Ideas%20to%20Think%20About%3A%20Life%20and%20Taxes%27%20http%3A%2F%2Fwp.me%2FpVkX8-7q&source=webclient">twitter.com/intent/tweet?t...</a></li>
+	<li><a class="original-post" target="_blank" href="https://delicious.com/post?url=http%3A%2F%2Ftschopp.net%2F2007%2F09%2F26%2Fideas-to-think-about-life-and-taxes%2F&title=Ideas+to+Think+About%3A+Life+and+Taxes">delicious.com/post?url=http%...</a></li>
+	<li><a class="original-post" target="_blank" href="http://longnow.org/">longnow.org/</a></li>
+	<li><a class="original-post" target="_blank" href="http://digg.com/submit?phase=2&url=http%3A%2F%2Ftschopp.net%2F2007%2F09%2F26%2Fideas-to-think-about-life-and-taxes%2F&title=Ideas+to+Think+About%3A+Life+and+Taxes">digg.com/submit?phase=2...</a></li>
+	<li><a class="original-post" target="_blank" href="https://ssl.reddit.com/login?dest=http%3A%2F%2Fwww.reddit.com%2Fsubmit%3Furl%3Dhttp%253A%252F%252Ftschopp.net%252F2007%252F09%252F26%252Fideas-to-think-about-life-and-taxes%252F%26title%3DIdeas%2Bto%2BThink%2BAbout%253A%2BLife%2Band%2BTaxes">ssl.reddit.com/login?dest=htt...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://tschopp.net/2008/02/13/fasting-for-len/">Fasting for Lent</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1400902462&key=aglzfmJyaWQtZ3lyPAsSCEJsb2dQb3N0Ii5odHRwOi8vdHNjaG9wcC5uZXQvMjAwOC8wMi8xMy9mYXN0aW5nLWZvci1sZW4vDA">
+      5 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://delicious.com/post?url=http%3A%2F%2Ftschopp.net%2F2008%2F02%2F13%2Ffasting-for-len%2F&title=Fasting+for+Lent">delicious.com/post?url=http%...</a></li>
+	<li><a class="original-post" target="_blank" href="https://twitter.com/intent/tweet?text=I%20liked%20reading%20%27Fasting%20for%20Lent%27%20http%3A%2F%2Fwp.me%2FpVkX8-4X&source=webclient">twitter.com/intent/tweet?t...</a></li>
+	<li><a class="original-post" target="_blank" href="http://tschopp.net/2008/02/13/fasting-for-len/#comments">tschopp.net/2008/02/13/fas...</a></li>
+	<li><a class="original-post" target="_blank" href="http://digg.com/submit?phase=2&url=http%3A%2F%2Ftschopp.net%2F2008%2F02%2F13%2Ffasting-for-len%2F&title=Fasting+for+Lent">digg.com/submit?phase=2...</a></li>
+	<li><a class="original-post" target="_blank" href="https://ssl.reddit.com/login?dest=http%3A%2F%2Fwww.reddit.com%2Fsubmit%3Furl%3Dhttp%253A%252F%252Ftschopp.net%252F2008%252F02%252F13%252Ffasting-for-len%252F%26title%3DFasting%2Bfor%2BLent">ssl.reddit.com/login?dest=htt...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Ftschopp.net%2F2008%2F02%2F13%2Ffasting-for-len%2F&title=Fasting+for+Lent">stumbleupon.com/submit?url=htt...</a></li>
+	<li><a class="original-post" target="_blank" href="https://www.facebook.com/login.php?next=http%3A%2F%2Fwww.facebook.com%2Fsharer%2Fsharer.php%3Fu%3Dhttp%253A%252F%252Fwp.me%252FpVkX8-4X%26amp%253Bt%3DFasting%2Bfor%2BLent&display=popup">facebook.com/login.php?next...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://tschopp.net/2008/02/19/more-on-the-fas/">More on the Fast for Lent</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1400902454&key=aglzfmJyaWQtZ3lyPAsSCEJsb2dQb3N0Ii5odHRwOi8vdHNjaG9wcC5uZXQvMjAwOC8wMi8xOS9tb3JlLW9uLXRoZS1mYXMvDA">
+      5 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://www.facebook.com/login.php?next=http%3A%2F%2Fwww.facebook.com%2Fsharer%2Fsharer.php%3Fu%3Dhttp%253A%252F%252Fwp.me%252FpVkX8-4T%26amp%253Bt%3DMore%2Bon%2Bthe%2BFast%2Bfor%2BLent&display=popup">facebook.com/login.php?next...</a></li>
+	<li><a class="original-post" target="_blank" href="http://digg.com/submit?phase=2&url=http%3A%2F%2Ftschopp.net%2F2008%2F02%2F19%2Fmore-on-the-fas%2F&title=More+on+the+Fast+for+Lent">digg.com/submit?phase=2...</a></li>
+	<li><a class="original-post" target="_blank" href="https://ssl.reddit.com/login?dest=http%3A%2F%2Fwww.reddit.com%2Fsubmit%3Furl%3Dhttp%253A%252F%252Ftschopp.net%252F2008%252F02%252F19%252Fmore-on-the-fas%252F%26title%3DMore%2Bon%2Bthe%2BFast%2Bfor%2BLent">ssl.reddit.com/login?dest=htt...</a></li>
+	<li><a class="original-post" target="_blank" href="https://twitter.com/intent/tweet?text=I%20liked%20reading%20%27More%20on%20the%20Fast%20for%20Lent%27%20http%3A%2F%2Fwp.me%2FpVkX8-4T&source=webclient">twitter.com/intent/tweet?t...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Ftschopp.net%2F2008%2F02%2F19%2Fmore-on-the-fas%2F&title=More+on+the+Fast+for+Lent">stumbleupon.com/submit?url=htt...</a></li>
+	<li><a class="original-post" target="_blank" href="http://tschopp.net/2008/02/19/more-on-the-fas/#comments">tschopp.net/2008/02/19/mor...</a></li>
+	<li><a class="original-post" target="_blank" href="https://delicious.com/post?url=http%3A%2F%2Ftschopp.net%2F2008%2F02%2F19%2Fmore-on-the-fas%2F&title=More+on+the+Fast+for+Lent">delicious.com/post?url=http%...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://tschopp.net/2008/03/05/internet-explorer-8-and-posting-to-your-typepad-blog/">Internet Explorer 8 and posting to your ...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1400902446&key=aglzfmJyaWQtZ3lyYQsSCEJsb2dQb3N0IlNodHRwOi8vdHNjaG9wcC5uZXQvMjAwOC8wMy8wNS9pbnRlcm5ldC1leHBsb3Jlci04LWFuZC1wb3N0aW5nLXRvLXlvdXItdHlwZXBhZC1ibG9nLww">
+      5 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.typepad.com/t/app&lt;/homepageUrl&#038;gt">typepad.com/t/app&lt;/home... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li>
+	<li><a class="original-post" target="_blank" href="http://www.microsoft.com/schemas/openservicedescription/1.0">microsoft.com/schemas/opense... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://tschopp.net/2008/03/05/internet-explorer-8-and-posting-to-your-typepad-blog/#comments">tschopp.net/2008/03/05/int...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Ftschopp.net%2F2008%2F03%2F05%2Finternet-explorer-8-and-posting-to-your-typepad-blog%2F&title=Internet+Explorer+8+and+posting+to+your+Typepad+Blog">stumbleupon.com/submit?url=htt...</a></li>
+	<li><a class="original-post" target="_blank" href="https://ssl.reddit.com/login?dest=http%3A%2F%2Fwww.reddit.com%2Fsubmit%3Furl%3Dhttp%253A%252F%252Ftschopp.net%252F2008%252F03%252F05%252Finternet-explorer-8-and-posting-to-your-typepad-blog%252F%26title%3DInternet%2BExplorer%2B8%2Band%2Bposting%2Bto%2Byour%2BTypepad%2BBlog">ssl.reddit.com/login?dest=htt...</a></li>
+	<li><a class="original-post" target="_blank" href="https://twitter.com/intent/tweet?text=I%20liked%20reading%20%27Internet%20Explorer%208%20and%20posting%20to%20your%20Typepad%20Blog%27%20http%3A%2F%2Fwp.me%2FpVkX8-7o&source=webclient">twitter.com/intent/tweet?t...</a></li>
+	<li><a class="original-post" target="_blank" href="http://digg.com/submit?phase=2&url=http%3A%2F%2Ftschopp.net%2F2008%2F03%2F05%2Finternet-explorer-8-and-posting-to-your-typepad-blog%2F&title=Internet+Explorer+8+and+posting+to+your+Typepad+Blog">digg.com/submit?phase=2...</a></li>
+	<li><a class="original-post" target="_blank" href="https://www.typepad.com/secure/services/signin?to=%2Fdashboard">typepad.com/secure/service...</a></li>
+	<li><a class="original-post" target="_blank" href="https://www.facebook.com/login.php?next=http%3A%2F%2Fwww.facebook.com%2Fsharer%2Fsharer.php%3Fu%3Dhttp%253A%252F%252Fwp.me%252FpVkX8-7o%26amp%253Bt%3DInternet%2BExplorer%2B8%2Band%2Bposting%2Bto%2Byour%2BTypepad%2BBlog&display=popup">facebook.com/login.php?next...</a></li>
+	<li><a class="original-post" target="_blank" href="http://tschopp.net/Typepad.html">tschopp.net/Typepad.html</a></li>
+	<li><a class="original-post" target="_blank" href="https://delicious.com/post?url=http%3A%2F%2Ftschopp.net%2F2008%2F03%2F05%2Finternet-explorer-8-and-posting-to-your-typepad-blog%2F&title=Internet+Explorer+8+and+posting+to+your+Typepad+Blog">delicious.com/post?url=http%...</a></li>
+	<li><a class="original-post" target="_blank" href="https://www.typepad.com/secure/services/signin?to=%2Fsite%2Fblogs%2F%2Fdashboard">typepad.com/secure/service...</a></li>
+	<li><a class="original-post" target="_blank" href="http://tschopp.net/typepad.xml&">tschopp.net/typepad.xml&</a></li>
+	<li><a class="original-post" target="_blank" href="https://www.typepad.com/secure/services/signin?to=%2Fsite%2Fblogs%2F16627%2Fdashboard">typepad.com/secure/service...</a></li>
+	<li><a class="original-post" target="_blank" href="http://tschopp.net/favicon.ico&lt;/icon&">tschopp.net/favicon.ico&lt...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://tschopp.net/2008/03/16/communion-of-th/">Communion of the Saints in the Age of th...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1400902431&key=aglzfmJyaWQtZ3lyPAsSCEJsb2dQb3N0Ii5odHRwOi8vdHNjaG9wcC5uZXQvMjAwOC8wMy8xNi9jb21tdW5pb24tb2YtdGgvDA">
+      5 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://delicious.com/post?url=http%3A%2F%2Ftschopp.net%2F2008%2F03%2F16%2Fcommunion-of-th%2F&title=Communion+of+the+Saints+in+the+Age+of+the+Internet">delicious.com/post?url=http%...</a></li>
+	<li><a class="original-post" target="_blank" href="http://digg.com/submit?phase=2&url=http%3A%2F%2Ftschopp.net%2F2008%2F03%2F16%2Fcommunion-of-th%2F&title=Communion+of+the+Saints+in+the+Age+of+the+Internet">digg.com/submit?phase=2...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Ftschopp.net%2F2008%2F03%2F16%2Fcommunion-of-th%2F&title=Communion+of+the+Saints+in+the+Age+of+the+Internet">stumbleupon.com/submit?url=htt...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.cnn.com/2008/LIVING/wayoflife/03/13/online.confessions/index.html">cnn.com/2008/LIVING/wa...</a></li>
+	<li><a class="original-post" target="_blank" href="https://www.facebook.com/login.php?next=http%3A%2F%2Fwww.facebook.com%2Fsharer%2Fsharer.php%3Fu%3Dhttp%253A%252F%252Fwp.me%252FpVkX8-4O%26amp%253Bt%3DCommunion%2Bof%2Bthe%2BSaints%2Bin%2Bthe%2BAge%2Bof%2Bthe%2BInternet&display=popup">facebook.com/login.php?next...</a></li>
+	<li><a class="original-post" target="_blank" href="https://twitter.com/intent/tweet?text=I%20liked%20reading%20%27Communion%20of%20the%20Saints%20in%20the%20Age%20of%20the%20Internet%27%20http%3A%2F%2Fwp.me%2FpVkX8-4O&source=webclient">twitter.com/intent/tweet?t...</a></li>
+	<li><a class="original-post" target="_blank" href="http://tschopp.net/2008/03/16/communion-of-th/#comments">tschopp.net/2008/03/16/com...</a></li>
+	<li><a class="original-post" target="_blank" href="https://ssl.reddit.com/login?dest=http%3A%2F%2Fwww.reddit.com%2Fsubmit%3Furl%3Dhttp%253A%252F%252Ftschopp.net%252F2008%252F03%252F16%252Fcommunion-of-th%252F%26title%3DCommunion%2Bof%2Bthe%2BSaints%2Bin%2Bthe%2BAge%2Bof%2Bthe%2BInternet">ssl.reddit.com/login?dest=htt...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://tschopp.net/2008/03/17/more-on-the-switch-to-my-mac/">More on the Switch to my Mac.</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1400902422&key=aglzfmJyaWQtZ3lySQsSCEJsb2dQb3N0IjtodHRwOi8vdHNjaG9wcC5uZXQvMjAwOC8wMy8xNy9tb3JlLW9uLXRoZS1zd2l0Y2gtdG8tbXktbWFjLww">
+      5 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://twitter.com/intent/tweet?text=I%20liked%20reading%20%27More%20on%20the%20Switch%20to%20my%20Mac.%27%20http%3A%2F%2Fwp.me%2FpVkX8-7l&source=webclient">twitter.com/intent/tweet?t...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Ftschopp.net%2F2008%2F03%2F17%2Fmore-on-the-switch-to-my-mac%2F&title=More+on+the+Switch+to+my+Mac.">stumbleupon.com/submit?url=htt...</a></li>
+	<li><a class="original-post" target="_blank" href="https://ssl.reddit.com/login?dest=http%3A%2F%2Fwww.reddit.com%2Fsubmit%3Furl%3Dhttp%253A%252F%252Ftschopp.net%252F2008%252F03%252F17%252Fmore-on-the-switch-to-my-mac%252F%26title%3DMore%2Bon%2Bthe%2BSwitch%2Bto%2Bmy%2BMac.">ssl.reddit.com/login?dest=htt...</a></li>
+	<li><a class="original-post" target="_blank" href="https://delicious.com/post?url=http%3A%2F%2Ftschopp.net%2F2008%2F03%2F17%2Fmore-on-the-switch-to-my-mac%2F&title=More+on+the+Switch+to+my+Mac.">delicious.com/post?url=http%...</a></li>
+	<li><a class="original-post" target="_blank" href="http://digg.com/submit?phase=2&url=http%3A%2F%2Ftschopp.net%2F2008%2F03%2F17%2Fmore-on-the-switch-to-my-mac%2F&title=More+on+the+Switch+to+my+Mac.">digg.com/submit?phase=2...</a></li>
+	<li><a class="original-post" target="_blank" href="https://www.facebook.com/login.php?next=http%3A%2F%2Fwww.facebook.com%2Fsharer%2Fsharer.php%3Fu%3Dhttp%253A%252F%252Fwp.me%252FpVkX8-7l%26amp%253Bt%3DMore%2Bon%2Bthe%2BSwitch%2Bto%2Bmy%2BMac.&display=popup">facebook.com/login.php?next...</a></li>
+	<li><a class="original-post" target="_blank" href="http://tschopp.net/2008/03/17/more-on-the-switch-to-my-mac/#comments">tschopp.net/2008/03/17/mor...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://tschopp.net/2008/04/13/moving-to-the-mac/">Moving to the Mac</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1400902410&key=aglzfmJyaWQtZ3lyPgsSCEJsb2dQb3N0IjBodHRwOi8vdHNjaG9wcC5uZXQvMjAwOC8wNC8xMy9tb3ZpbmctdG8tdGhlLW1hYy8M">
+      5 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://delicious.com/post?url=http%3A%2F%2Ftschopp.net%2F2008%2F04%2F13%2Fmoving-to-the-mac%2F&title=Moving+to+the+Mac">delicious.com/post?url=http%...</a></li>
+	<li><a class="original-post" target="_blank" href="https://twitter.com/intent/tweet?text=I%20liked%20reading%20%27Moving%20to%20the%20Mac%27%20http%3A%2F%2Fwp.me%2FpVkX8-7k&source=webclient">twitter.com/intent/tweet?t...</a></li>
+	<li><a class="original-post" target="_blank" href="http://tschopp.net/2008/04/13/moving-to-the-mac/#comments">tschopp.net/2008/04/13/mov...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Ftschopp.net%2F2008%2F04%2F13%2Fmoving-to-the-mac%2F&title=Moving+to+the+Mac">stumbleupon.com/submit?url=htt...</a></li>
+	<li><a class="original-post" target="_blank" href="http://digg.com/submit?phase=2&url=http%3A%2F%2Ftschopp.net%2F2008%2F04%2F13%2Fmoving-to-the-mac%2F&title=Moving+to+the+Mac">digg.com/submit?phase=2...</a></li>
+	<li><a class="original-post" target="_blank" href="https://ssl.reddit.com/login?dest=http%3A%2F%2Fwww.reddit.com%2Fsubmit%3Furl%3Dhttp%253A%252F%252Ftschopp.net%252F2008%252F04%252F13%252Fmoving-to-the-mac%252F%26title%3DMoving%2Bto%2Bthe%2BMac">ssl.reddit.com/login?dest=htt...</a></li>
+	<li><a class="original-post" target="_blank" href="https://www.facebook.com/login.php?next=http%3A%2F%2Fwww.facebook.com%2Fsharer%2Fsharer.php%3Fu%3Dhttp%253A%252F%252Fwp.me%252FpVkX8-7k%26amp%253Bt%3DMoving%2Bto%2Bthe%2BMac&display=popup">facebook.com/login.php?next...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://tschopp.net/2008/06/11/quote-on-change/">Quote: On Change</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1400902400&key=aglzfmJyaWQtZ3lyPAsSCEJsb2dQb3N0Ii5odHRwOi8vdHNjaG9wcC5uZXQvMjAwOC8wNi8xMS9xdW90ZS1vbi1jaGFuZ2UvDA">
+      5 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://en.wikipedia.org/wiki/Eric_Shinseki">en.wikipedia.org/wiki/Eric_Shin...</a></li>
+	<li><a class="original-post" target="_blank" href="http://digg.com/submit?phase=2&url=http%3A%2F%2Ftschopp.net%2F2008%2F06%2F11%2Fquote-on-change%2F&title=Quote%3A+On+Change">digg.com/submit?phase=2...</a></li>
+	<li><a class="original-post" target="_blank" href="https://delicious.com/post?url=http%3A%2F%2Ftschopp.net%2F2008%2F06%2F11%2Fquote-on-change%2F&title=Quote%3A+On+Change">delicious.com/post?url=http%...</a></li>
+	<li><a class="original-post" target="_blank" href="http://tschopp.net/2008/06/11/quote-on-change/#comments">tschopp.net/2008/06/11/quo...</a></li>
+	<li><a class="original-post" target="_blank" href="https://twitter.com/intent/tweet?text=I%20liked%20reading%20%27Quote%3A%20On%20Change%27%20http%3A%2F%2Fwp.me%2FpVkX8-4K&source=webclient">twitter.com/intent/tweet?t...</a></li>
+	<li><a class="original-post" target="_blank" href="https://www.facebook.com/login.php?next=http%3A%2F%2Fwww.facebook.com%2Fsharer%2Fsharer.php%3Fu%3Dhttp%253A%252F%252Fwp.me%252FpVkX8-4K%26amp%253Bt%3DQuote%253A%2BOn%2BChange&display=popup">facebook.com/login.php?next...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Ftschopp.net%2F2008%2F06%2F11%2Fquote-on-change%2F&title=Quote%3A+On+Change">stumbleupon.com/submit?url=htt...</a></li>
+	<li><a class="original-post" target="_blank" href="https://ssl.reddit.com/login?dest=http%3A%2F%2Fwww.reddit.com%2Fsubmit%3Furl%3Dhttp%253A%252F%252Ftschopp.net%252F2008%252F06%252F11%252Fquote-on-change%252F%26title%3DQuote%253A%2BOn%2BChange">ssl.reddit.com/login?dest=htt...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://tschopp.net/2008/09/01/thoughts-on-nar/">Thoughts on Narrative</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1400902391&key=aglzfmJyaWQtZ3lyPAsSCEJsb2dQb3N0Ii5odHRwOi8vdHNjaG9wcC5uZXQvMjAwOC8wOS8wMS90aG91Z2h0cy1vbi1uYXIvDA">
+      5 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Ftschopp.net%2F2008%2F09%2F01%2Fthoughts-on-nar%2F&title=Thoughts+on+Narrative">stumbleupon.com/submit?url=htt...</a></li>
+	<li><a class="original-post" target="_blank" href="http://tschopp.net/2008/09/01/thoughts-on-nar/#comments">tschopp.net/2008/09/01/tho...</a></li>
+	<li><a class="original-post" target="_blank" href="https://delicious.com/post?url=http%3A%2F%2Ftschopp.net%2F2008%2F09%2F01%2Fthoughts-on-nar%2F&title=Thoughts+on+Narrative">delicious.com/post?url=http%...</a></li>
+	<li><a class="original-post" target="_blank" href="https://www.facebook.com/login.php?next=http%3A%2F%2Fwww.facebook.com%2Fsharer%2Fsharer.php%3Fu%3Dhttp%253A%252F%252Fwp.me%252FpVkX8-4J%26amp%253Bt%3DThoughts%2Bon%2BNarrative&display=popup">facebook.com/login.php?next...</a></li>
+	<li><a class="original-post" target="_blank" href="https://twitter.com/intent/tweet?text=I%20liked%20reading%20%27Thoughts%20on%20Narrative%27%20http%3A%2F%2Fwp.me%2FpVkX8-4J&source=webclient">twitter.com/intent/tweet?t...</a></li>
+	<li><a class="original-post" target="_blank" href="http://digg.com/submit?phase=2&url=http%3A%2F%2Ftschopp.net%2F2008%2F09%2F01%2Fthoughts-on-nar%2F&title=Thoughts+on+Narrative">digg.com/submit?phase=2...</a></li>
+	<li><a class="original-post" target="_blank" href="https://ssl.reddit.com/login?dest=http%3A%2F%2Fwww.reddit.com%2Fsubmit%3Furl%3Dhttp%253A%252F%252Ftschopp.net%252F2008%252F09%252F01%252Fthoughts-on-nar%252F%26title%3DThoughts%2Bon%2BNarrative">ssl.reddit.com/login?dest=htt...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+</div>
+
+
+<!-- Incoming blog webmentions -->
+<div id="webmentions" class="row">
+
+<p class="big">Recent
+  <a href="http://indiewebify.me/#send-webmentions">webmentions</a>:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="http://tschopp.net">tschopp.net</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://tedtschopp.wordpress.com">tedtschopp.wordpress.com</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1413933531&key=aglzfmJyaWQtZ3lyRgsSDkJsb2dXZWJtZW50aW9uIjJodHRwOi8vdHNjaG9wcC5uZXQgaHR0cDovL3RlZHRzY2hvcHAud29yZHByZXNzLmNvbQw">
+      3 weeks, 5 days ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       None
+     
+
+   </div>
+  </li>
+  
+</ul>
+
+
+</div>
+
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

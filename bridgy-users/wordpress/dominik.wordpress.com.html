@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Dominik (WordPress.com) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="http://dominik.wordpress.com" title="Dominik (WordPress.com)"
+   class="u-url">
+  <img class="profile u-photo" src="https://0.gravatar.com/avatar/c0c2fbc4c3aa1ecb0d0f1228385e74bd?s=96&amp;d=identicon&amp;r=G" width="64px" />
+  <img src="/static/wordpress_icon.png"
+       
+       alt="WordPress.com" />
+  <span class="p-name">Dominik</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://dominik.wordpress.com" class="publish-domain u-url">dominik.wordpress.com</a>
+
+
+
+</div>
+
+
+
+
+<!-- Banner for blogs that aren't yet advertising the webmention endpoint -->
+
+
+<div class="row">
+
+<p class="big">You're all set! Check out your recent
+<a href="#blogposts">blog posts</a> and <a href="#webmentions">webmentions</a>.
+  <!-- This currently 500s :/ -->
+  <!-- <a href="http://indiewebify.me/send-webmentions/?url="> -->
+  <!--   Try a webmention!</a> -->
+</p>
+
+
+<form method="post" action="/delete/start">
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyJAsSCVdvcmRQcmVzcyIVZG9taW5pay53b3JkcHJlc3MuY29tDA" />
+  <input name="feature" type="hidden" value="webmention" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+          title="Disable this account. (Won't delete webmentions you've already sent or received.)">Disable</button>
+</form>
+</div>
+
+
+<!-- Signup button -->
+
+
+
+
+
+
+<!-- Blog posts -->
+<div id="blogposts" class="row">
+
+<p class="big">Recent blog posts:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://dominik.wordpress.com/2014/06/27/basically-this-is-how-i-learned-to-use">Basically this is how I learned to use…</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1403857533&key=aglzfmJyaWQtZ3lyXAsSCEJsb2dQb3N0Ik5odHRwOi8vZG9taW5pay53b3JkcHJlc3MuY29tLzIwMTQvMDYvMjcvYmFzaWNhbGx5LXRoaXMtaXMtaG93LWktbGVhcm5lZC10by11c2UM">
+      4 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.rockpapershotgun.com/2014/06/26/ms-dos-memories/">rockpapershotgun.com/2014/06/26/ms-...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://dominik.wordpress.com/2014/06/27/basically-this-is-how-i-learned-to-use/">Basically this is how I learned to use…</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1403857524&key=aglzfmJyaWQtZ3lyXQsSCEJsb2dQb3N0Ik9odHRwOi8vZG9taW5pay53b3JkcHJlc3MuY29tLzIwMTQvMDYvMjcvYmFzaWNhbGx5LXRoaXMtaXMtaG93LWktbGVhcm5lZC10by11c2UvDA">
+      4 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.rockpapershotgun.com/2014/06/26/ms-dos-memories/">rockpapershotgun.com/2014/06/26/ms-...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://dominik.wordpress.com/2014/06/25/most-users-replied-that-the-explanation-wasnt-necessary/">Most users replied that the explanation ...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1403723296&key=aglzfmJyaWQtZ3lybgsSCEJsb2dQb3N0ImBodHRwOi8vZG9taW5pay53b3JkcHJlc3MuY29tLzIwMTQvMDYvMjUvbW9zdC11c2Vycy1yZXBsaWVkLXRoYXQtdGhlLWV4cGxhbmF0aW9uLXdhc250LW5lY2Vzc2FyeS8M">
+      4 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.avclub.com/article/bbc-apologizes-erroneous-no-nudity-game-thrones-al-206224">avclub.com/article/bbc-ap...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://dominik.wordpress.com/2014/06/25/meh">Meh</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1403706957&key=aglzfmJyaWQtZ3lyOQsSCEJsb2dQb3N0IitodHRwOi8vZG9taW5pay53b3JkcHJlc3MuY29tLzIwMTQvMDYvMjUvbWVoDA">
+      4 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.dmagazine.com/publications/d-magazine/2014/july/matt-rutledge-woot-has-a-new-deal-mediocre-corporation?single=1">dmagazine.com/publications/d...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://dominik.wordpress.com/2014/06/25/meh/">Meh</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1403706955&key=aglzfmJyaWQtZ3lyOgsSCEJsb2dQb3N0IixodHRwOi8vZG9taW5pay53b3JkcHJlc3MuY29tLzIwMTQvMDYvMjUvbWVoLww">
+      4 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.dmagazine.com/publications/d-magazine/2014/july/matt-rutledge-woot-has-a-new-deal-mediocre-corporation?single=1">dmagazine.com/publications/d...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://dominik.wordpress.com/2014/06/25/why-does-everyone-look-hotter-in-sunglasses-you">Why Does Everyone Look Hotter in Sunglas...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1403682574&key=aglzfmJyaWQtZ3lyZQsSCEJsb2dQb3N0IldodHRwOi8vZG9taW5pay53b3JkcHJlc3MuY29tLzIwMTQvMDYvMjUvd2h5LWRvZXMtZXZlcnlvbmUtbG9vay1ob3R0ZXItaW4tc3VuZ2xhc3Nlcy15b3UM">
+      4 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://nymag.com/scienceofus/2014/06/why-does-everyone-look-hotter-in-sunglasses.html">nymag.com/scienceofus/20...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://dominik.wordpress.com/2014/06/25/why-does-everyone-look-hotter-in-sunglasses-you/">Why Does Everyone Look Hotter in Sunglas...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1403682573&key=aglzfmJyaWQtZ3lyZgsSCEJsb2dQb3N0IlhodHRwOi8vZG9taW5pay53b3JkcHJlc3MuY29tLzIwMTQvMDYvMjUvd2h5LWRvZXMtZXZlcnlvbmUtbG9vay1ob3R0ZXItaW4tc3VuZ2xhc3Nlcy15b3UvDA">
+      4 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://nymag.com/scienceofus/2014/06/why-does-everyone-look-hotter-in-sunglasses.html">nymag.com/scienceofus/20...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://dominik.wordpress.com/2014/06/25/tiny-letters-to-the-web-we-miss-ah">Tiny Letters to the Web We Miss Ah…</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1403681159&key=aglzfmJyaWQtZ3lyWAsSCEJsb2dQb3N0IkpodHRwOi8vZG9taW5pay53b3JkcHJlc3MuY29tLzIwMTQvMDYvMjUvdGlueS1sZXR0ZXJzLXRvLXRoZS13ZWItd2UtbWlzcy1haAw">
+      4 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://medium.com/message/tiny-letters-to-the-web-we-miss-6a695a6316c">medium.com/message/tiny-l...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://dominik.wordpress.com/2014/06/25/tiny-letters-to-the-web-we-miss-ah/">Tiny Letters to the Web We Miss Ah…</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1403681158&key=aglzfmJyaWQtZ3lyWQsSCEJsb2dQb3N0IktodHRwOi8vZG9taW5pay53b3JkcHJlc3MuY29tLzIwMTQvMDYvMjUvdGlueS1sZXR0ZXJzLXRvLXRoZS13ZWItd2UtbWlzcy1haC8M">
+      4 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://medium.com/message/tiny-letters-to-the-web-we-miss-6a695a6316c">medium.com/message/tiny-l...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://dominik.wordpress.com/2014/06/25/dont-let-the-internet-scare-you-into-being">Don’t let the Internet scare you into be...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1403681087&key=aglzfmJyaWQtZ3lyYAsSCEJsb2dQb3N0IlJodHRwOi8vZG9taW5pay53b3JkcHJlc3MuY29tLzIwMTQvMDYvMjUvZG9udC1sZXQtdGhlLWludGVybmV0LXNjYXJlLXlvdS1pbnRvLWJlaW5nDA">
+      4 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.dailydot.com/opinion/social-sweepster-facebook-first-impression/">dailydot.com/opinion/social...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+</div>
+
+
+<!-- Incoming blog webmentions -->
+<div id="webmentions" class="row">
+
+<p class="big">No
+  <a href="http://indiewebify.me/#send-webmentions">webmentions</a> received yet.</p>
+
+</div>
+
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

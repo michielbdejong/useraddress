@@ -1,254 +1,254 @@
-curl -k https://www.brid.gy/facebook/100000006698734
-curl -k https://www.brid.gy/facebook/100000068188920
-curl -k https://www.brid.gy/facebook/100000120645332
-curl -k https://www.brid.gy/facebook/100000211610879
-curl -k https://www.brid.gy/facebook/100000259730301
-curl -k https://www.brid.gy/facebook/100000276616689
-curl -k https://www.brid.gy/facebook/100000286723538
-curl -k https://www.brid.gy/facebook/100000425059588
-curl -k https://www.brid.gy/facebook/100000481423722
-curl -k https://www.brid.gy/facebook/100000528714806
-curl -k https://www.brid.gy/facebook/100000552740749
-curl -k https://www.brid.gy/facebook/100000712003829
-curl -k https://www.brid.gy/facebook/100000715496725
-curl -k https://www.brid.gy/facebook/100001018189375
-curl -k https://www.brid.gy/facebook/100001065733905
-curl -k https://www.brid.gy/facebook/100001117412323
-curl -k https://www.brid.gy/facebook/100001181772893
-curl -k https://www.brid.gy/facebook/100001379389987
-curl -k https://www.brid.gy/facebook/100001398384863
-curl -k https://www.brid.gy/facebook/100001491197200
-curl -k https://www.brid.gy/facebook/100001501388539
-curl -k https://www.brid.gy/facebook/100001948549702
-curl -k https://www.brid.gy/facebook/100002106381504
-curl -k https://www.brid.gy/facebook/100002225017094
-curl -k https://www.brid.gy/facebook/100002356503167
-curl -k https://www.brid.gy/facebook/100002380865531
-curl -k https://www.brid.gy/facebook/100002502761933
-curl -k https://www.brid.gy/facebook/100002632861498
-curl -k https://www.brid.gy/facebook/100002873001491
-curl -k https://www.brid.gy/facebook/100002972598905
-curl -k https://www.brid.gy/facebook/100003040678433
-curl -k https://www.brid.gy/facebook/100003500076825
-curl -k https://www.brid.gy/facebook/100003614765728
-curl -k https://www.brid.gy/facebook/100003678551164
-curl -k https://www.brid.gy/facebook/100003697992867
-curl -k https://www.brid.gy/facebook/100003787743524
-curl -k https://www.brid.gy/facebook/100003955240056
-curl -k https://www.brid.gy/facebook/100004140489734
-curl -k https://www.brid.gy/facebook/100004445894506
-curl -k https://www.brid.gy/facebook/100004772867823
-curl -k https://www.brid.gy/facebook/100005017602133
-curl -k https://www.brid.gy/facebook/100006408857675
-curl -k https://www.brid.gy/facebook/100007126025403
-curl -k https://www.brid.gy/facebook/100007946553014
-curl -k https://www.brid.gy/facebook/100008032984804
-curl -k https://www.brid.gy/facebook/100008129177637
-curl -k https://www.brid.gy/facebook/100008193948917
-curl -k https://www.brid.gy/facebook/100008327894056
-curl -k https://www.brid.gy/facebook/100008426560196
-curl -k https://www.brid.gy/facebook/1014667657
-curl -k https://www.brid.gy/facebook/1017543087
-curl -k https://www.brid.gy/facebook/1034874147
-curl -k https://www.brid.gy/facebook/1042589345
-curl -k https://www.brid.gy/facebook/1067218993
-curl -k https://www.brid.gy/facebook/1097894963
-curl -k https://www.brid.gy/facebook/1105369351
-curl -k https://www.brid.gy/facebook/1114985845
-curl -k https://www.brid.gy/facebook/1119930064
-curl -k https://www.brid.gy/facebook/1120074466
-curl -k https://www.brid.gy/facebook/1125545004
-curl -k https://www.brid.gy/facebook/1130281261
-curl -k https://www.brid.gy/facebook/11500459
-curl -k https://www.brid.gy/facebook/1156781735
-curl -k https://www.brid.gy/facebook/1175672036
-curl -k https://www.brid.gy/facebook/1187989918
-curl -k https://www.brid.gy/facebook/1188249023
-curl -k https://www.brid.gy/facebook/1191830570
-curl -k https://www.brid.gy/facebook/119700042
-curl -k https://www.brid.gy/facebook/1203722400
-curl -k https://www.brid.gy/facebook/1210402010
-curl -k https://www.brid.gy/facebook/122601796
-curl -k https://www.brid.gy/facebook/1230547625
-curl -k https://www.brid.gy/facebook/1233744633
-curl -k https://www.brid.gy/facebook/1262447455
-curl -k https://www.brid.gy/facebook/1266139300
-curl -k https://www.brid.gy/facebook/1275189627
-curl -k https://www.brid.gy/facebook/1279252335
-curl -k https://www.brid.gy/facebook/12802152
-curl -k https://www.brid.gy/facebook/12821228
-curl -k https://www.brid.gy/facebook/1310836315
-curl -k https://www.brid.gy/facebook/1334880096
-curl -k https://www.brid.gy/facebook/1337372843
-curl -k https://www.brid.gy/facebook/1345690554
-curl -k https://www.brid.gy/facebook/1355317869
-curl -k https://www.brid.gy/facebook/1361476973
-curl -k https://www.brid.gy/facebook/1362310002
-curl -k https://www.brid.gy/facebook/13731464
-curl -k https://www.brid.gy/facebook/1411158736
-curl -k https://www.brid.gy/facebook/14305603
-curl -k https://www.brid.gy/facebook/1430953954
-curl -k https://www.brid.gy/facebook/1439830846
-curl -k https://www.brid.gy/facebook/14500255
-curl -k https://www.brid.gy/facebook/1490933893
-curl -k https://www.brid.gy/facebook/1497040121
-curl -k https://www.brid.gy/facebook/1522251245
-curl -k https://www.brid.gy/facebook/158400016
-curl -k https://www.brid.gy/facebook/1586303703
-curl -k https://www.brid.gy/facebook/1612050075
-curl -k https://www.brid.gy/facebook/17212441
-curl -k https://www.brid.gy/facebook/1748918885
-curl -k https://www.brid.gy/facebook/1767533961
-curl -k https://www.brid.gy/facebook/1818336227
-curl -k https://www.brid.gy/facebook/200400753
-curl -k https://www.brid.gy/facebook/212038
-curl -k https://www.brid.gy/facebook/213381
-curl -k https://www.brid.gy/facebook/214611
-curl -k https://www.brid.gy/facebook/219002835
-curl -k https://www.brid.gy/facebook/27301982
-curl -k https://www.brid.gy/facebook/29000032
-curl -k https://www.brid.gy/facebook/294900085
-curl -k https://www.brid.gy/facebook/30901889
-curl -k https://www.brid.gy/facebook/31600719
-curl -k https://www.brid.gy/facebook/36802236
-curl -k https://www.brid.gy/facebook/38309087
-curl -k https://www.brid.gy/facebook/38808427
-curl -k https://www.brid.gy/facebook/4000103
-curl -k https://www.brid.gy/facebook/40601006
-curl -k https://www.brid.gy/facebook/4204747
-curl -k https://www.brid.gy/facebook/42210423
-curl -k https://www.brid.gy/facebook/499875439
-curl -k https://www.brid.gy/facebook/499876148
-curl -k https://www.brid.gy/facebook/500013158
-curl -k https://www.brid.gy/facebook/500191224
-curl -k https://www.brid.gy/facebook/500366781
-curl -k https://www.brid.gy/facebook/500486523
-curl -k https://www.brid.gy/facebook/500510854
-curl -k https://www.brid.gy/facebook/500590467
-curl -k https://www.brid.gy/facebook/500947323
-curl -k https://www.brid.gy/facebook/501465138
-curl -k https://www.brid.gy/facebook/501603580
-curl -k https://www.brid.gy/facebook/501922530
-curl -k https://www.brid.gy/facebook/502070145
-curl -k https://www.brid.gy/facebook/502299163
-curl -k https://www.brid.gy/facebook/502622897
-curl -k https://www.brid.gy/facebook/503216890
-curl -k https://www.brid.gy/facebook/503237795
-curl -k https://www.brid.gy/facebook/504597536
-curl -k https://www.brid.gy/facebook/504884202
-curl -k https://www.brid.gy/facebook/508112368
-curl -k https://www.brid.gy/facebook/508583909
-curl -k https://www.brid.gy/facebook/510551563
-curl -k https://www.brid.gy/facebook/510659665
-curl -k https://www.brid.gy/facebook/511846604
-curl -k https://www.brid.gy/facebook/513442865
-curl -k https://www.brid.gy/facebook/514113679
-curl -k https://www.brid.gy/facebook/514170879
-curl -k https://www.brid.gy/facebook/515373050
-curl -k https://www.brid.gy/facebook/516463201
-curl -k https://www.brid.gy/facebook/517413492
-curl -k https://www.brid.gy/facebook/521847783
-curl -k https://www.brid.gy/facebook/521851245
-curl -k https://www.brid.gy/facebook/524353474
-curl -k https://www.brid.gy/facebook/527438464
-curl -k https://www.brid.gy/facebook/531250814
-curl -k https://www.brid.gy/facebook/533038693
-curl -k https://www.brid.gy/facebook/537627227
-curl -k https://www.brid.gy/facebook/5410052
-curl -k https://www.brid.gy/facebook/541818556
-curl -k https://www.brid.gy/facebook/548616784
-curl -k https://www.brid.gy/facebook/550539683
-curl -k https://www.brid.gy/facebook/550566175
-curl -k https://www.brid.gy/facebook/552346179
-curl -k https://www.brid.gy/facebook/554260043
-curl -k https://www.brid.gy/facebook/559915082
-curl -k https://www.brid.gy/facebook/566085737
-curl -k https://www.brid.gy/facebook/572501199
-curl -k https://www.brid.gy/facebook/573361052
-curl -k https://www.brid.gy/facebook/5744015
-curl -k https://www.brid.gy/facebook/575391971
-curl -k https://www.brid.gy/facebook/576347852
-curl -k https://www.brid.gy/facebook/580596797
-curl -k https://www.brid.gy/facebook/584261234
-curl -k https://www.brid.gy/facebook/586497352
-curl -k https://www.brid.gy/facebook/589101415
-curl -k https://www.brid.gy/facebook/596817951
-curl -k https://www.brid.gy/facebook/604362022
-curl -k https://www.brid.gy/facebook/604532791
-curl -k https://www.brid.gy/facebook/606915895
-curl -k https://www.brid.gy/facebook/609792259
-curl -k https://www.brid.gy/facebook/612070903
-curl -k https://www.brid.gy/facebook/614883614
-curl -k https://www.brid.gy/facebook/617971847
-curl -k https://www.brid.gy/facebook/620625626
-curl -k https://www.brid.gy/facebook/623873711
-curl -k https://www.brid.gy/facebook/624654233
-curl -k https://www.brid.gy/facebook/625871840
-curl -k https://www.brid.gy/facebook/627265437
-curl -k https://www.brid.gy/facebook/631284638
-curl -k https://www.brid.gy/facebook/631604675
-curl -k https://www.brid.gy/facebook/633069240
-curl -k https://www.brid.gy/facebook/635990657
-curl -k https://www.brid.gy/facebook/637399214
-curl -k https://www.brid.gy/facebook/638866109
-curl -k https://www.brid.gy/facebook/639024622
-curl -k https://www.brid.gy/facebook/643900253
-curl -k https://www.brid.gy/facebook/653542006
-curl -k https://www.brid.gy/facebook/653983917
-curl -k https://www.brid.gy/facebook/657944029
-curl -k https://www.brid.gy/facebook/658250212
-curl -k https://www.brid.gy/facebook/659656966
-curl -k https://www.brid.gy/facebook/660908551
-curl -k https://www.brid.gy/facebook/661067675
-curl -k https://www.brid.gy/facebook/663336473
-curl -k https://www.brid.gy/facebook/664417817
-curl -k https://www.brid.gy/facebook/665366284
-curl -k https://www.brid.gy/facebook/665452984
-curl -k https://www.brid.gy/facebook/669832852
-curl -k https://www.brid.gy/facebook/673566206
-curl -k https://www.brid.gy/facebook/673984301
-curl -k https://www.brid.gy/facebook/674178606
-curl -k https://www.brid.gy/facebook/675471070
-curl -k https://www.brid.gy/facebook/675895685
-curl -k https://www.brid.gy/facebook/680321043
-curl -k https://www.brid.gy/facebook/690978279
-curl -k https://www.brid.gy/facebook/691772578
-curl -k https://www.brid.gy/facebook/692860207
-curl -k https://www.brid.gy/facebook/693196658
-curl -k https://www.brid.gy/facebook/694638266
-curl -k https://www.brid.gy/facebook/695127342
-curl -k https://www.brid.gy/facebook/695591480
-curl -k https://www.brid.gy/facebook/696388948
-curl -k https://www.brid.gy/facebook/697015835
-curl -k https://www.brid.gy/facebook/700427433
-curl -k https://www.brid.gy/facebook/710375794
-curl -k https://www.brid.gy/facebook/716228659
-curl -k https://www.brid.gy/facebook/717041042
-curl -k https://www.brid.gy/facebook/720133034
-curl -k https://www.brid.gy/facebook/723456981
-curl -k https://www.brid.gy/facebook/724001063
-curl -k https://www.brid.gy/facebook/724885424
-curl -k https://www.brid.gy/facebook/72615762
-curl -k https://www.brid.gy/facebook/728384706
-curl -k https://www.brid.gy/facebook/728407677
-curl -k https://www.brid.gy/facebook/741670284
-curl -k https://www.brid.gy/facebook/742349842
-curl -k https://www.brid.gy/facebook/744423604
-curl -k https://www.brid.gy/facebook/751390049
-curl -k https://www.brid.gy/facebook/752346390
-curl -k https://www.brid.gy/facebook/760668398
-curl -k https://www.brid.gy/facebook/765235586
-curl -k https://www.brid.gy/facebook/776938267
-curl -k https://www.brid.gy/facebook/787473252
-curl -k https://www.brid.gy/facebook/789760586
-curl -k https://www.brid.gy/facebook/793932785
-curl -k https://www.brid.gy/facebook/795599889
-curl -k https://www.brid.gy/facebook/799115454
-curl -k https://www.brid.gy/facebook/802549814
-curl -k https://www.brid.gy/facebook/816420182
-curl -k https://www.brid.gy/facebook/816809430
-curl -k https://www.brid.gy/facebook/819815499
-curl -k https://www.brid.gy/facebook/821980602
-curl -k https://www.brid.gy/facebook/824047051
-curl -k https://www.brid.gy/facebook/841974762
-curl -k https://www.brid.gy/facebook/846150466
+curl -k https://www.brid.gy/facebook/100000006698734 > ./100000006698734.html
+curl -k https://www.brid.gy/facebook/100000068188920 > ./100000068188920.html
+curl -k https://www.brid.gy/facebook/100000120645332 > ./100000120645332.html
+curl -k https://www.brid.gy/facebook/100000211610879 > ./100000211610879.html
+curl -k https://www.brid.gy/facebook/100000259730301 > ./100000259730301.html
+curl -k https://www.brid.gy/facebook/100000276616689 > ./100000276616689.html
+curl -k https://www.brid.gy/facebook/100000286723538 > ./100000286723538.html
+curl -k https://www.brid.gy/facebook/100000425059588 > ./100000425059588.html
+curl -k https://www.brid.gy/facebook/100000481423722 > ./100000481423722.html
+curl -k https://www.brid.gy/facebook/100000528714806 > ./100000528714806.html
+curl -k https://www.brid.gy/facebook/100000552740749 > ./100000552740749.html
+curl -k https://www.brid.gy/facebook/100000712003829 > ./100000712003829.html
+curl -k https://www.brid.gy/facebook/100000715496725 > ./100000715496725.html
+curl -k https://www.brid.gy/facebook/100001018189375 > ./100001018189375.html
+curl -k https://www.brid.gy/facebook/100001065733905 > ./100001065733905.html
+curl -k https://www.brid.gy/facebook/100001117412323 > ./100001117412323.html
+curl -k https://www.brid.gy/facebook/100001181772893 > ./100001181772893.html
+curl -k https://www.brid.gy/facebook/100001379389987 > ./100001379389987.html
+curl -k https://www.brid.gy/facebook/100001398384863 > ./100001398384863.html
+curl -k https://www.brid.gy/facebook/100001491197200 > ./100001491197200.html
+curl -k https://www.brid.gy/facebook/100001501388539 > ./100001501388539.html
+curl -k https://www.brid.gy/facebook/100001948549702 > ./100001948549702.html
+curl -k https://www.brid.gy/facebook/100002106381504 > ./100002106381504.html
+curl -k https://www.brid.gy/facebook/100002225017094 > ./100002225017094.html
+curl -k https://www.brid.gy/facebook/100002356503167 > ./100002356503167.html
+curl -k https://www.brid.gy/facebook/100002380865531 > ./100002380865531.html
+curl -k https://www.brid.gy/facebook/100002502761933 > ./100002502761933.html
+curl -k https://www.brid.gy/facebook/100002632861498 > ./100002632861498.html
+curl -k https://www.brid.gy/facebook/100002873001491 > ./100002873001491.html
+curl -k https://www.brid.gy/facebook/100002972598905 > ./100002972598905.html
+curl -k https://www.brid.gy/facebook/100003040678433 > ./100003040678433.html
+curl -k https://www.brid.gy/facebook/100003500076825 > ./100003500076825.html
+curl -k https://www.brid.gy/facebook/100003614765728 > ./100003614765728.html
+curl -k https://www.brid.gy/facebook/100003678551164 > ./100003678551164.html
+curl -k https://www.brid.gy/facebook/100003697992867 > ./100003697992867.html
+curl -k https://www.brid.gy/facebook/100003787743524 > ./100003787743524.html
+curl -k https://www.brid.gy/facebook/100003955240056 > ./100003955240056.html
+curl -k https://www.brid.gy/facebook/100004140489734 > ./100004140489734.html
+curl -k https://www.brid.gy/facebook/100004445894506 > ./100004445894506.html
+curl -k https://www.brid.gy/facebook/100004772867823 > ./100004772867823.html
+curl -k https://www.brid.gy/facebook/100005017602133 > ./100005017602133.html
+curl -k https://www.brid.gy/facebook/100006408857675 > ./100006408857675.html
+curl -k https://www.brid.gy/facebook/100007126025403 > ./100007126025403.html
+curl -k https://www.brid.gy/facebook/100007946553014 > ./100007946553014.html
+curl -k https://www.brid.gy/facebook/100008032984804 > ./100008032984804.html
+curl -k https://www.brid.gy/facebook/100008129177637 > ./100008129177637.html
+curl -k https://www.brid.gy/facebook/100008193948917 > ./100008193948917.html
+curl -k https://www.brid.gy/facebook/100008327894056 > ./100008327894056.html
+curl -k https://www.brid.gy/facebook/100008426560196 > ./100008426560196.html
+curl -k https://www.brid.gy/facebook/1014667657 > ./1014667657.html
+curl -k https://www.brid.gy/facebook/1017543087 > ./1017543087.html
+curl -k https://www.brid.gy/facebook/1034874147 > ./1034874147.html
+curl -k https://www.brid.gy/facebook/1042589345 > ./1042589345.html
+curl -k https://www.brid.gy/facebook/1067218993 > ./1067218993.html
+curl -k https://www.brid.gy/facebook/1097894963 > ./1097894963.html
+curl -k https://www.brid.gy/facebook/1105369351 > ./1105369351.html
+curl -k https://www.brid.gy/facebook/1114985845 > ./1114985845.html
+curl -k https://www.brid.gy/facebook/1119930064 > ./1119930064.html
+curl -k https://www.brid.gy/facebook/1120074466 > ./1120074466.html
+curl -k https://www.brid.gy/facebook/1125545004 > ./1125545004.html
+curl -k https://www.brid.gy/facebook/1130281261 > ./1130281261.html
+curl -k https://www.brid.gy/facebook/11500459 > ./11500459.html
+curl -k https://www.brid.gy/facebook/1156781735 > ./1156781735.html
+curl -k https://www.brid.gy/facebook/1175672036 > ./1175672036.html
+curl -k https://www.brid.gy/facebook/1187989918 > ./1187989918.html
+curl -k https://www.brid.gy/facebook/1188249023 > ./1188249023.html
+curl -k https://www.brid.gy/facebook/1191830570 > ./1191830570.html
+curl -k https://www.brid.gy/facebook/119700042 > ./119700042.html
+curl -k https://www.brid.gy/facebook/1203722400 > ./1203722400.html
+curl -k https://www.brid.gy/facebook/1210402010 > ./1210402010.html
+curl -k https://www.brid.gy/facebook/122601796 > ./122601796.html
+curl -k https://www.brid.gy/facebook/1230547625 > ./1230547625.html
+curl -k https://www.brid.gy/facebook/1233744633 > ./1233744633.html
+curl -k https://www.brid.gy/facebook/1262447455 > ./1262447455.html
+curl -k https://www.brid.gy/facebook/1266139300 > ./1266139300.html
+curl -k https://www.brid.gy/facebook/1275189627 > ./1275189627.html
+curl -k https://www.brid.gy/facebook/1279252335 > ./1279252335.html
+curl -k https://www.brid.gy/facebook/12802152 > ./12802152.html
+curl -k https://www.brid.gy/facebook/12821228 > ./12821228.html
+curl -k https://www.brid.gy/facebook/1310836315 > ./1310836315.html
+curl -k https://www.brid.gy/facebook/1334880096 > ./1334880096.html
+curl -k https://www.brid.gy/facebook/1337372843 > ./1337372843.html
+curl -k https://www.brid.gy/facebook/1345690554 > ./1345690554.html
+curl -k https://www.brid.gy/facebook/1355317869 > ./1355317869.html
+curl -k https://www.brid.gy/facebook/1361476973 > ./1361476973.html
+curl -k https://www.brid.gy/facebook/1362310002 > ./1362310002.html
+curl -k https://www.brid.gy/facebook/13731464 > ./13731464.html
+curl -k https://www.brid.gy/facebook/1411158736 > ./1411158736.html
+curl -k https://www.brid.gy/facebook/14305603 > ./14305603.html
+curl -k https://www.brid.gy/facebook/1430953954 > ./1430953954.html
+curl -k https://www.brid.gy/facebook/1439830846 > ./1439830846.html
+curl -k https://www.brid.gy/facebook/14500255 > ./14500255.html
+curl -k https://www.brid.gy/facebook/1490933893 > ./1490933893.html
+curl -k https://www.brid.gy/facebook/1497040121 > ./1497040121.html
+curl -k https://www.brid.gy/facebook/1522251245 > ./1522251245.html
+curl -k https://www.brid.gy/facebook/158400016 > ./158400016.html
+curl -k https://www.brid.gy/facebook/1586303703 > ./1586303703.html
+curl -k https://www.brid.gy/facebook/1612050075 > ./1612050075.html
+curl -k https://www.brid.gy/facebook/17212441 > ./17212441.html
+curl -k https://www.brid.gy/facebook/1748918885 > ./1748918885.html
+curl -k https://www.brid.gy/facebook/1767533961 > ./1767533961.html
+curl -k https://www.brid.gy/facebook/1818336227 > ./1818336227.html
+curl -k https://www.brid.gy/facebook/200400753 > ./200400753.html
+curl -k https://www.brid.gy/facebook/212038 > ./212038.html
+curl -k https://www.brid.gy/facebook/213381 > ./213381.html
+curl -k https://www.brid.gy/facebook/214611 > ./214611.html
+curl -k https://www.brid.gy/facebook/219002835 > ./219002835.html
+curl -k https://www.brid.gy/facebook/27301982 > ./27301982.html
+curl -k https://www.brid.gy/facebook/29000032 > ./29000032.html
+curl -k https://www.brid.gy/facebook/294900085 > ./294900085.html
+curl -k https://www.brid.gy/facebook/30901889 > ./30901889.html
+curl -k https://www.brid.gy/facebook/31600719 > ./31600719.html
+curl -k https://www.brid.gy/facebook/36802236 > ./36802236.html
+curl -k https://www.brid.gy/facebook/38309087 > ./38309087.html
+curl -k https://www.brid.gy/facebook/38808427 > ./38808427.html
+curl -k https://www.brid.gy/facebook/4000103 > ./4000103.html
+curl -k https://www.brid.gy/facebook/40601006 > ./40601006.html
+curl -k https://www.brid.gy/facebook/4204747 > ./4204747.html
+curl -k https://www.brid.gy/facebook/42210423 > ./42210423.html
+curl -k https://www.brid.gy/facebook/499875439 > ./499875439.html
+curl -k https://www.brid.gy/facebook/499876148 > ./499876148.html
+curl -k https://www.brid.gy/facebook/500013158 > ./500013158.html
+curl -k https://www.brid.gy/facebook/500191224 > ./500191224.html
+curl -k https://www.brid.gy/facebook/500366781 > ./500366781.html
+curl -k https://www.brid.gy/facebook/500486523 > ./500486523.html
+curl -k https://www.brid.gy/facebook/500510854 > ./500510854.html
+curl -k https://www.brid.gy/facebook/500590467 > ./500590467.html
+curl -k https://www.brid.gy/facebook/500947323 > ./500947323.html
+curl -k https://www.brid.gy/facebook/501465138 > ./501465138.html
+curl -k https://www.brid.gy/facebook/501603580 > ./501603580.html
+curl -k https://www.brid.gy/facebook/501922530 > ./501922530.html
+curl -k https://www.brid.gy/facebook/502070145 > ./502070145.html
+curl -k https://www.brid.gy/facebook/502299163 > ./502299163.html
+curl -k https://www.brid.gy/facebook/502622897 > ./502622897.html
+curl -k https://www.brid.gy/facebook/503216890 > ./503216890.html
+curl -k https://www.brid.gy/facebook/503237795 > ./503237795.html
+curl -k https://www.brid.gy/facebook/504597536 > ./504597536.html
+curl -k https://www.brid.gy/facebook/504884202 > ./504884202.html
+curl -k https://www.brid.gy/facebook/508112368 > ./508112368.html
+curl -k https://www.brid.gy/facebook/508583909 > ./508583909.html
+curl -k https://www.brid.gy/facebook/510551563 > ./510551563.html
+curl -k https://www.brid.gy/facebook/510659665 > ./510659665.html
+curl -k https://www.brid.gy/facebook/511846604 > ./511846604.html
+curl -k https://www.brid.gy/facebook/513442865 > ./513442865.html
+curl -k https://www.brid.gy/facebook/514113679 > ./514113679.html
+curl -k https://www.brid.gy/facebook/514170879 > ./514170879.html
+curl -k https://www.brid.gy/facebook/515373050 > ./515373050.html
+curl -k https://www.brid.gy/facebook/516463201 > ./516463201.html
+curl -k https://www.brid.gy/facebook/517413492 > ./517413492.html
+curl -k https://www.brid.gy/facebook/521847783 > ./521847783.html
+curl -k https://www.brid.gy/facebook/521851245 > ./521851245.html
+curl -k https://www.brid.gy/facebook/524353474 > ./524353474.html
+curl -k https://www.brid.gy/facebook/527438464 > ./527438464.html
+curl -k https://www.brid.gy/facebook/531250814 > ./531250814.html
+curl -k https://www.brid.gy/facebook/533038693 > ./533038693.html
+curl -k https://www.brid.gy/facebook/537627227 > ./537627227.html
+curl -k https://www.brid.gy/facebook/5410052 > ./5410052.html
+curl -k https://www.brid.gy/facebook/541818556 > ./541818556.html
+curl -k https://www.brid.gy/facebook/548616784 > ./548616784.html
+curl -k https://www.brid.gy/facebook/550539683 > ./550539683.html
+curl -k https://www.brid.gy/facebook/550566175 > ./550566175.html
+curl -k https://www.brid.gy/facebook/552346179 > ./552346179.html
+curl -k https://www.brid.gy/facebook/554260043 > ./554260043.html
+curl -k https://www.brid.gy/facebook/559915082 > ./559915082.html
+curl -k https://www.brid.gy/facebook/566085737 > ./566085737.html
+curl -k https://www.brid.gy/facebook/572501199 > ./572501199.html
+curl -k https://www.brid.gy/facebook/573361052 > ./573361052.html
+curl -k https://www.brid.gy/facebook/5744015 > ./5744015.html
+curl -k https://www.brid.gy/facebook/575391971 > ./575391971.html
+curl -k https://www.brid.gy/facebook/576347852 > ./576347852.html
+curl -k https://www.brid.gy/facebook/580596797 > ./580596797.html
+curl -k https://www.brid.gy/facebook/584261234 > ./584261234.html
+curl -k https://www.brid.gy/facebook/586497352 > ./586497352.html
+curl -k https://www.brid.gy/facebook/589101415 > ./589101415.html
+curl -k https://www.brid.gy/facebook/596817951 > ./596817951.html
+curl -k https://www.brid.gy/facebook/604362022 > ./604362022.html
+curl -k https://www.brid.gy/facebook/604532791 > ./604532791.html
+curl -k https://www.brid.gy/facebook/606915895 > ./606915895.html
+curl -k https://www.brid.gy/facebook/609792259 > ./609792259.html
+curl -k https://www.brid.gy/facebook/612070903 > ./612070903.html
+curl -k https://www.brid.gy/facebook/614883614 > ./614883614.html
+curl -k https://www.brid.gy/facebook/617971847 > ./617971847.html
+curl -k https://www.brid.gy/facebook/620625626 > ./620625626.html
+curl -k https://www.brid.gy/facebook/623873711 > ./623873711.html
+curl -k https://www.brid.gy/facebook/624654233 > ./624654233.html
+curl -k https://www.brid.gy/facebook/625871840 > ./625871840.html
+curl -k https://www.brid.gy/facebook/627265437 > ./627265437.html
+curl -k https://www.brid.gy/facebook/631284638 > ./631284638.html
+curl -k https://www.brid.gy/facebook/631604675 > ./631604675.html
+curl -k https://www.brid.gy/facebook/633069240 > ./633069240.html
+curl -k https://www.brid.gy/facebook/635990657 > ./635990657.html
+curl -k https://www.brid.gy/facebook/637399214 > ./637399214.html
+curl -k https://www.brid.gy/facebook/638866109 > ./638866109.html
+curl -k https://www.brid.gy/facebook/639024622 > ./639024622.html
+curl -k https://www.brid.gy/facebook/643900253 > ./643900253.html
+curl -k https://www.brid.gy/facebook/653542006 > ./653542006.html
+curl -k https://www.brid.gy/facebook/653983917 > ./653983917.html
+curl -k https://www.brid.gy/facebook/657944029 > ./657944029.html
+curl -k https://www.brid.gy/facebook/658250212 > ./658250212.html
+curl -k https://www.brid.gy/facebook/659656966 > ./659656966.html
+curl -k https://www.brid.gy/facebook/660908551 > ./660908551.html
+curl -k https://www.brid.gy/facebook/661067675 > ./661067675.html
+curl -k https://www.brid.gy/facebook/663336473 > ./663336473.html
+curl -k https://www.brid.gy/facebook/664417817 > ./664417817.html
+curl -k https://www.brid.gy/facebook/665366284 > ./665366284.html
+curl -k https://www.brid.gy/facebook/665452984 > ./665452984.html
+curl -k https://www.brid.gy/facebook/669832852 > ./669832852.html
+curl -k https://www.brid.gy/facebook/673566206 > ./673566206.html
+curl -k https://www.brid.gy/facebook/673984301 > ./673984301.html
+curl -k https://www.brid.gy/facebook/674178606 > ./674178606.html
+curl -k https://www.brid.gy/facebook/675471070 > ./675471070.html
+curl -k https://www.brid.gy/facebook/675895685 > ./675895685.html
+curl -k https://www.brid.gy/facebook/680321043 > ./680321043.html
+curl -k https://www.brid.gy/facebook/690978279 > ./690978279.html
+curl -k https://www.brid.gy/facebook/691772578 > ./691772578.html
+curl -k https://www.brid.gy/facebook/692860207 > ./692860207.html
+curl -k https://www.brid.gy/facebook/693196658 > ./693196658.html
+curl -k https://www.brid.gy/facebook/694638266 > ./694638266.html
+curl -k https://www.brid.gy/facebook/695127342 > ./695127342.html
+curl -k https://www.brid.gy/facebook/695591480 > ./695591480.html
+curl -k https://www.brid.gy/facebook/696388948 > ./696388948.html
+curl -k https://www.brid.gy/facebook/697015835 > ./697015835.html
+curl -k https://www.brid.gy/facebook/700427433 > ./700427433.html
+curl -k https://www.brid.gy/facebook/710375794 > ./710375794.html
+curl -k https://www.brid.gy/facebook/716228659 > ./716228659.html
+curl -k https://www.brid.gy/facebook/717041042 > ./717041042.html
+curl -k https://www.brid.gy/facebook/720133034 > ./720133034.html
+curl -k https://www.brid.gy/facebook/723456981 > ./723456981.html
+curl -k https://www.brid.gy/facebook/724001063 > ./724001063.html
+curl -k https://www.brid.gy/facebook/724885424 > ./724885424.html
+curl -k https://www.brid.gy/facebook/72615762 > ./72615762.html
+curl -k https://www.brid.gy/facebook/728384706 > ./728384706.html
+curl -k https://www.brid.gy/facebook/728407677 > ./728407677.html
+curl -k https://www.brid.gy/facebook/741670284 > ./741670284.html
+curl -k https://www.brid.gy/facebook/742349842 > ./742349842.html
+curl -k https://www.brid.gy/facebook/744423604 > ./744423604.html
+curl -k https://www.brid.gy/facebook/751390049 > ./751390049.html
+curl -k https://www.brid.gy/facebook/752346390 > ./752346390.html
+curl -k https://www.brid.gy/facebook/760668398 > ./760668398.html
+curl -k https://www.brid.gy/facebook/765235586 > ./765235586.html
+curl -k https://www.brid.gy/facebook/776938267 > ./776938267.html
+curl -k https://www.brid.gy/facebook/787473252 > ./787473252.html
+curl -k https://www.brid.gy/facebook/789760586 > ./789760586.html
+curl -k https://www.brid.gy/facebook/793932785 > ./793932785.html
+curl -k https://www.brid.gy/facebook/795599889 > ./795599889.html
+curl -k https://www.brid.gy/facebook/799115454 > ./799115454.html
+curl -k https://www.brid.gy/facebook/802549814 > ./802549814.html
+curl -k https://www.brid.gy/facebook/816420182 > ./816420182.html
+curl -k https://www.brid.gy/facebook/816809430 > ./816809430.html
+curl -k https://www.brid.gy/facebook/819815499 > ./819815499.html
+curl -k https://www.brid.gy/facebook/821980602 > ./821980602.html
+curl -k https://www.brid.gy/facebook/824047051 > ./824047051.html
+curl -k https://www.brid.gy/facebook/841974762 > ./841974762.html
+curl -k https://www.brid.gy/facebook/846150466 > ./846150466.html

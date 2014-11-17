@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>nachison (Tumblr) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="http://nach.com/" title="nachison (Tumblr)"
+   class="u-url">
+  <img class="profile u-photo" src="https://api.tumblr.com/v2/blog/nach.com/avatar/512" width="64px" />
+  <img src="/static/tumblr_icon.png"
+       
+       alt="Tumblr" />
+  <span class="p-name">nachison</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://nach.com/" class="publish-domain u-url">nach.com</a>
+
+
+
+</div>
+
+
+
+
+<!-- Banner for blogs that aren't yet advertising the webmention endpoint -->
+
+<div id="undiscovered" class="row big promo">
+  
+<p>Next steps:</p>
+<ul>
+  
+  <li><a target="_blank" href="http://disqus.com/admin/create/">Click here to
+    install Disqus</a> (<a href="/about#disqus">here's why</a>). Follow the
+    instructions to add it to your blog.</li>
+
+  
+
+  
+  <li><a target="_blank" href="http://www.tumblr.com/customize/nachison">Click here to
+    customize your blog</a>, click <em>Edit HTML,</em> and add this line
+    after <code>&lt;head&gt;</code>:</p>
+    <pre>&lt;link rel="webmention" href="https://www.brid.gy/webmention/tumblr" /&gt;</pre>
+  <p>Then click <em>Update Preview</em>, then <em>Save</em>.</p>
+    <!-- <a href="http://www.tumblr.com/docs/en/blog_customization#customhtml"> -->
+    <!--   More details.</a> -->
+  </li>
+  
+</ul>
+
+  <form method="get" action="">
+  <button type="submit" class="btn btn-default" onclick="document.location.reload()">
+    Done!</button>
+  </form>
+</div>
+<br />
+
+
+<!-- Signup button -->
+
+
+
+
+
+
+<!-- Blog posts -->
+<div id="blogposts" class="row">
+
+<p class="big">Recent blog posts:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://nach.com/post/101927685031">"What can be counted is mistaken for wha...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1415286054&key=aglzfmJyaWQtZ3lyLwsSCEJsb2dQb3N0IiFodHRwOi8vbmFjaC5jb20vcG9zdC8xMDE5Mjc2ODUwMzEM">
+      1 week, 3 days ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://commonreader.wustl.edu/c/languages-revolution-internet/">commonreader.wustl.edu/c/languages-re...</a></li>
+	<li><a class="original-post" target="_blank" href="http://sarahkendzior.com/">sarahkendzior.com/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://nach.com/post/101923437301">"Creative brains are naturally great at ...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1415280305&key=aglzfmJyaWQtZ3lyLwsSCEJsb2dQb3N0IiFodHRwOi8vbmFjaC5jb20vcG9zdC8xMDE5MjM0MzczMDEM">
+      1 week, 3 days ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://contently.com/strategist/2014/11/05/the-business-model-that-will-save-journalism/">contently.com/strategist/201...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.shanesnow.com/">shanesnow.com/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://nach.com/post/101855794541">amandapalmer:
+
+https://www.youtube.com/w...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1415210566&key=aglzfmJyaWQtZ3lyLwsSCEJsb2dQb3N0IiFodHRwOi8vbmFjaC5jb20vcG9zdC8xMDE4NTU3OTQ1NDEM">
+      1 week, 4 days ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://donate.unhcr.org/international/neilgaiman/">donate.unhcr.org/international/...</a></li>
+	<li><a class="original-post" target="_blank" href="http://amandapalmer.tumblr.com/post/100685882421/https-www-youtube-com-watch-v-rioltbj-k5u-feature">amandapalmer.tumblr.com/post/100685882...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://nach.com/post/101853228196">inkwellmanagement:
+
+inkwellmanagement:
+
+...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1415208084&key=aglzfmJyaWQtZ3lyLwsSCEJsb2dQb3N0IiFodHRwOi8vbmFjaC5jb20vcG9zdC8xMDE4NTMyMjgxOTYM">
+      1 week, 4 days ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://inkwellmanagement.tumblr.com/post/101848367034/inkwellmanagement-in-honor-of-nanowrimo-we-are">inkwellmanagement.tumblr.com/post/101848367...</a></li>
+	<li><a class="original-post" target="_blank" href="http://inkwellmanagement.tumblr.com/post/101272461642/in-honor-of-nanowrimo-we-are-giving-away-a-full">inkwellmanagement.tumblr.com/post/101272461...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://nach.com/post/101852696381">"Humankind will adjust to freely availab...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1415207588&key=aglzfmJyaWQtZ3lyLwsSCEJsb2dQb3N0IiFodHRwOi8vbmFjaC5jb20vcG9zdC8xMDE4NTI2OTYzODEM">
+      1 week, 4 days ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://boingboing.net/2014/11/05/amanda-palmer-why-fans-choose.html">boingboing.net/2014/11/05/ama...</a></li>
+	<li><a class="original-post" target="_blank" href="http://amandapalmer.net/">amandapalmer.net/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://nach.com/post/101338850511">A beautiful and provocative look at how ...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1414678251&key=aglzfmJyaWQtZ3lyLwsSCEJsb2dQb3N0IiFodHRwOi8vbmFjaC5jb20vcG9zdC8xMDEzMzg4NTA1MTEM">
+      2 weeks, 3 days ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://nach.com/post/101196303031">William Gibson: The Future Will View Us ...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1414528453&key=aglzfmJyaWQtZ3lyLwsSCEJsb2dQb3N0IiFodHRwOi8vbmFjaC5jb20vcG9zdC8xMDExOTYzMDMwMzEM">
+      2 weeks, 5 days ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://m.motherjones.com/media/2014/10/william-gibson-peripheral-vision-time-travel-interview">m.motherjones.com/media/2014/10/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://nach.com/post/100455593306">Game over.
+
+The Virginia Patriots, a 16u...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1413764271&key=aglzfmJyaWQtZ3lyLwsSCEJsb2dQb3N0IiFodHRwOi8vbmFjaC5jb20vcG9zdC8xMDA0NTU1OTMzMDYM">
+      4 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://nach.com/post/100237522176">"Implants and wearables will replace too...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1413552270&key=aglzfmJyaWQtZ3lyLwsSCEJsb2dQb3N0IiFodHRwOi8vbmFjaC5jb20vcG9zdC8xMDAyMzc1MjIxNzYM">
+      1 month ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://stoweboyd.com/">stoweboyd.com/</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.pewinternet.org/2014/10/09/big-picture-responses-part-2">pewinternet.org/2014/10/09/big...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://nach.com/post/100034518361">creativetime:
+
+Epicness from #CTsummit p...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1413332009&key=aglzfmJyaWQtZ3lyLwsSCEJsb2dQb3N0IiFodHRwOi8vbmFjaC5jb20vcG9zdC8xMDAwMzQ1MTgzNjEM">
+      1 month ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://hollyherndon.tumblr.com/#_=_">hollyherndon.tumblr.com/#_=_</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.hollyherndon.com/">hollyherndon.com/</a></li>
+	<li><a class="original-post" target="_blank" href="http://mthvn.tumblr.com/#_=_">mthvn.tumblr.com/#_=_</a></li>
+	<li><a class="original-post" target="_blank" href="http://creativetime.tumblr.com/post/100009822613/epicness-from-ctsummit-presenters-metahaven">creativetime.tumblr.com/post/100009822...</a></li>
+	<li><a class="original-post" target="_blank" href="http://hollyherndon.tumblr.com/">hollyherndon.tumblr.com/</a></li>
+	<li><a class="original-post" target="_blank" href="http://prostheticknowledge.tumblr.com/post/97651581081/home-music-video-for-the-latest-track-from-holly">prostheticknowledge.tumblr.com/post/976515810...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+</div>
+
+
+<!-- Incoming blog webmentions -->
+<div id="webmentions" class="row">
+
+<p class="big">No
+  <a href="http://indiewebify.me/#send-webmentions">webmentions</a> received yet.</p>
+
+</div>
+
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

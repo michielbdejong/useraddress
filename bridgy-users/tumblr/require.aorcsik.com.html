@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>aorcsik (Tumblr) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="http://require.aorcsik.com/" title="aorcsik (Tumblr)"
+   class="u-url">
+  <img class="profile u-photo" src="https://api.tumblr.com/v2/blog/require.aorcsik.com/avatar/512" width="64px" />
+  <img src="/static/tumblr_icon.png"
+       
+       alt="Tumblr" />
+  <span class="p-name">aorcsik</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://require.aorcsik.com/" class="publish-domain u-url">require.aorcsik.com</a>
+
+
+
+</div>
+
+
+
+
+<!-- Banner for blogs that aren't yet advertising the webmention endpoint -->
+
+
+<div class="row">
+
+<p class="big">You're all set! Check out your recent
+<a href="#blogposts">blog posts</a> and <a href="#webmentions">webmentions</a>.
+  <!-- This currently 500s :/ -->
+  <!-- <a href="http://indiewebify.me/send-webmentions/?url="> -->
+  <!--   Try a webmention!</a> -->
+</p>
+
+
+<form method="post" action="/delete/start">
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyHwsSBlR1bWJsciITcmVxdWlyZS5hb3Jjc2lrLmNvbQw" />
+  <input name="feature" type="hidden" value="webmention" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+          title="Disable this account. (Won't delete webmentions you've already sent or received.)">Disable</button>
+</form>
+</div>
+
+
+<!-- Signup button -->
+
+
+
+
+
+
+<!-- Blog posts -->
+<div id="blogposts" class="row">
+
+<p class="big">Recent blog posts:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://require.aorcsik.com/post/102769046501">Blast from the past #win98oem #floppy</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1416131923&key=aglzfmJyaWQtZ3lyOgsSCEJsb2dQb3N0IixodHRwOi8vcmVxdWlyZS5hb3Jjc2lrLmNvbS9wb3N0LzEwMjc2OTA0NjUwMQw">
+      22 hours, 42 minutes ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://require.aorcsik.com/post/102479082631">sir-taylorson:
+
+Mario, te szemét!
+
+Zseni...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1415831343&key=aglzfmJyaWQtZ3lyOgsSCEJsb2dQb3N0IixodHRwOi8vcmVxdWlyZS5hb3Jjc2lrLmNvbS9wb3N0LzEwMjQ3OTA4MjYzMQw">
+      4 days, 10 hours ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://sir-taylorson.tumblr.com/post/102453370837/mario-te-szemet">sir-taylorson.tumblr.com/post/102453370...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://require.aorcsik.com/post/102476443286">Lotus Esprit V8 GT #carporn</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1415829426&key=aglzfmJyaWQtZ3lyOgsSCEJsb2dQb3N0IixodHRwOi8vcmVxdWlyZS5hb3Jjc2lrLmNvbS9wb3N0LzEwMjQ3NjQ0MzI4Ngw">
+      4 days, 10 hours ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://require.aorcsik.com/post/102454243116">Learn to make yourself a puppet at @prez...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1415809235&key=aglzfmJyaWQtZ3lyOgsSCEJsb2dQb3N0IixodHRwOi8vcmVxdWlyZS5hb3Jjc2lrLmNvbS9wb3N0LzEwMjQ1NDI0MzExNgw">
+      4 days, 16 hours ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://require.aorcsik.com/post/102439902841">Életkehessteg :)</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1415788000&key=aglzfmJyaWQtZ3lyOgsSCEJsb2dQb3N0IixodHRwOi8vcmVxdWlyZS5hb3Jjc2lrLmNvbS9wb3N0LzEwMjQzOTkwMjg0MQw">
+      4 days, 22 hours ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://require.aorcsik.com/post/102348112826">Morning Delight <3</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1415692338&key=aglzfmJyaWQtZ3lyOgsSCEJsb2dQb3N0IixodHRwOi8vcmVxdWlyZS5hb3Jjc2lrLmNvbS9wb3N0LzEwMjM0ODExMjgyNgw">
+      6 days ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://require.aorcsik.com/post/102218611931">Photo</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1415571166&key=aglzfmJyaWQtZ3lyOgsSCEJsb2dQb3N0IixodHRwOi8vcmVxdWlyZS5hb3Jjc2lrLmNvbS9wb3N0LzEwMjIxODYxMTkzMQw">
+      1 week ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://require.aorcsik.com/post/102179122746">My Journey on PS3</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1415540376&key=aglzfmJyaWQtZ3lyOgsSCEJsb2dQb3N0IixodHRwOi8vcmVxdWlyZS5hb3Jjc2lrLmNvbS9wb3N0LzEwMjE3OTEyMjc0Ngw">
+      1 week ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://include.aorcsik.com/2014/11/09/my-journey-on-ps3/">include.aorcsik.com/2014/11/09/my-...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://require.aorcsik.com/post/101997376021">Sophie, a szigorú szemű sziámi :) #cat</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1415350591&key=aglzfmJyaWQtZ3lyOgsSCEJsb2dQb3N0IixodHRwOi8vcmVxdWlyZS5hb3Jjc2lrLmNvbS9wb3N0LzEwMTk5NzM3NjAyMQw">
+      1 week, 2 days ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://require.aorcsik.com/post/101770898881">Photo</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1415123772&key=aglzfmJyaWQtZ3lyOgsSCEJsb2dQb3N0IixodHRwOi8vcmVxdWlyZS5hb3Jjc2lrLmNvbS9wb3N0LzEwMTc3MDg5ODg4MQw">
+      1 week, 5 days ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+</div>
+
+
+<!-- Incoming blog webmentions -->
+<div id="webmentions" class="row">
+
+<p class="big">Recent
+  <a href="http://indiewebify.me/#send-webmentions">webmentions</a>:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/aorcsik/status/528592000711282688">twitter.com/aorcsik/status...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://require.aorcsik.com/post/101501727456/what-am-i-looking-at-o-action-jackson">require.aorcsik.com/post/101501727...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1414867797&key=aglzfmJyaWQtZ3lytAELEg5CbG9nV2VibWVudGlvbiKfAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9saWtlL3R3aXR0ZXIvYW9yY3Npay81Mjg1OTIwMDA3MTEyODI2ODgvMTUyMTEwMjUgaHR0cDovL3JlcXVpcmUuYW9yY3Npay5jb20vcG9zdC8xMDE1MDE3Mjc0NTYvd2hhdC1hbS1pLWxvb2tpbmctYXQtby1hY3Rpb24tamFja3Nvbgw">
+      2 weeks, 1 day ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       like
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/aorcsik/status/519158921072623616">twitter.com/aorcsik/status...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://require.aorcsik.com/post/99321991371/steampunktendencies-salvador-dalis-the">require.aorcsik.com/post/993219913...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1412754408&key=aglzfmJyaWQtZ3lytgELEg5CbG9nV2VibWVudGlvbiKhAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9saWtlL3R3aXR0ZXIvYW9yY3Npay81MTkxNTg5MjEwNzI2MjM2MTYvMTEwMjY0Mjc4MyBodHRwOi8vcmVxdWlyZS5hb3Jjc2lrLmNvbS9wb3N0Lzk5MzIxOTkxMzcxL3N0ZWFtcHVua3RlbmRlbmNpZXMtc2FsdmFkb3ItZGFsaXMtdGhlDA">
+      1 month, 1 week ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       like
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/aorcsik/status/519158921072623616">twitter.com/aorcsik/status...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://require.aorcsik.com/post/99321991371/steampunktendencies-salvador-dalis-the">require.aorcsik.com/post/993219913...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1412621562&key=aglzfmJyaWQtZ3lytAELEg5CbG9nV2VibWVudGlvbiKfAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9saWtlL3R3aXR0ZXIvYW9yY3Npay81MTkxNTg5MjEwNzI2MjM2MTYvMTQ0NjA2OTQgaHR0cDovL3JlcXVpcmUuYW9yY3Npay5jb20vcG9zdC85OTMyMTk5MTM3MS9zdGVhbXB1bmt0ZW5kZW5jaWVzLXNhbHZhZG9yLWRhbGlzLXRoZQw">
+      1 month, 1 week ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       like
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/aorcsik/status/514423950961819648">twitter.com/aorcsik/status...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://require.aorcsik.com/post/98228084581/pair-programming">require.aorcsik.com/post/982280845...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1411493745&key=aglzfmJyaWQtZ3lyngELEg5CbG9nV2VibWVudGlvbiKJAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9saWtlL3R3aXR0ZXIvYW9yY3Npay81MTQ0MjM5NTA5NjE4MTk2NDgvMTQ0NjA2OTQgaHR0cDovL3JlcXVpcmUuYW9yY3Npay5jb20vcG9zdC85ODIyODA4NDU4MS9wYWlyLXByb2dyYW1taW5nDA">
+      1 month, 3 weeks ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       like
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="http://require.aorcsik.com/post/98159554316">require.aorcsik.com/post/981595543...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://require.aorcsik.com/">require.aorcsik.com/</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1411410723&key=aglzfmJyaWQtZ3lyWwsSDkJsb2dXZWJtZW50aW9uIkdodHRwOi8vcmVxdWlyZS5hb3Jjc2lrLmNvbS9wb3N0Lzk4MTU5NTU0MzE2IGh0dHA6Ly9yZXF1aXJlLmFvcmNzaWsuY29tLww">
+      1 month, 3 weeks ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       None
+     
+
+   </div>
+  </li>
+  
+</ul>
+
+
+</div>
+
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

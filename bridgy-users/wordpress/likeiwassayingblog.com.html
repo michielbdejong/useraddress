@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Mitch Wagner (WordPress.com) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="http://likeiwassayingblog.com" title="Mitch Wagner (WordPress.com)"
+   class="u-url">
+  <img class="profile u-photo" src="https://0.gravatar.com/avatar/950802e76b98a9b63511c482ca4c9171?s=96&amp;d=identicon&amp;r=G" width="64px" />
+  <img src="/static/wordpress_icon.png"
+       
+       alt="WordPress.com" />
+  <span class="p-name">Mitch Wagner</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://likeiwassayingblog.com" class="publish-domain u-url">likeiwassayingblog.com</a>
+
+  
+  &middot;
+  <a href="http://likeiwassayingblog.wordpress.com" class="publish-domain u-url">likeiwassayingblog.wordpress.com</a>
+
+
+
+</div>
+
+
+
+
+<!-- Banner for blogs that aren't yet advertising the webmention endpoint -->
+
+
+<div class="row">
+
+<p class="big">You're all set! Check out your recent
+<a href="#blogposts">blog posts</a> and <a href="#webmentions">webmentions</a>.
+  <!-- This currently 500s :/ -->
+  <!-- <a href="http://indiewebify.me/send-webmentions/?url="> -->
+  <!--   Try a webmention!</a> -->
+</p>
+
+
+<form method="post" action="/delete/start">
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyJQsSCVdvcmRQcmVzcyIWbGlrZWl3YXNzYXlpbmdibG9nLmNvbQw" />
+  <input name="feature" type="hidden" value="webmention" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+          title="Disable this account. (Won't delete webmentions you've already sent or received.)">Disable</button>
+</form>
+</div>
+
+
+<!-- Signup button -->
+
+
+
+
+
+
+<!-- Blog posts -->
+<div id="blogposts" class="row">
+
+<p class="big">No blog posts yet.</p>
+
+</div>
+
+
+<!-- Incoming blog webmentions -->
+<div id="webmentions" class="row">
+
+<p class="big">Recent
+  <a href="http://indiewebify.me/#send-webmentions">webmentions</a>:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://plus.google.com/115157882097089845153/posts/5hq4NcYP1jB">plus.google.com/11515788209708...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://likeiwassayingblog.com/2014/08/04/if-i-am-ever-on-life-support">likeiwassayingblog.com/2014/08/04/if-...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1407185958&key=aglzfmJyaWQtZ3ly9AELEg5CbG9nV2VibWVudGlvbiLfAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9jb21tZW50L2dvb2dsZXBsdXMvMTE1MTU3ODgyMDk3MDg5ODQ1MTUzL3oxMmJjcjF4b2szZmh6M3N3MjNieDM1aHl2YWhmdDNmdS96MTJiY3IxeG9rM2ZoejNzdzIzYngzNWh5dmFoZnQzZnUuMTQwNzE4NDE3MDk3MTA0NyBodHRwOi8vbGlrZWl3YXNzYXlpbmdibG9nLmNvbS8yMDE0LzA4LzA0L2lmLWktYW0tZXZlci1vbi1saWZlLXN1cHBvcnQM">
+      3 months, 2 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       comment
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://plus.google.com/115157882097089845153/posts/5hq4NcYP1jB">plus.google.com/11515788209708...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://likeiwassayingblog.com/2014/08/04/if-i-am-ever-on-life-support">likeiwassayingblog.com/2014/08/04/if-...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1407180290&key=aglzfmJyaWQtZ3ly1AELEg5CbG9nV2VibWVudGlvbiK_AWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9saWtlL2dvb2dsZXBsdXMvMTE1MTU3ODgyMDk3MDg5ODQ1MTUzL3oxMmJjcjF4b2szZmh6M3N3MjNieDM1aHl2YWhmdDNmdS8xMDIzMTU5NTIxMDQxODI5NTAzNTYgaHR0cDovL2xpa2Vpd2Fzc2F5aW5nYmxvZy5jb20vMjAxNC8wOC8wNC9pZi1pLWFtLWV2ZXItb24tbGlmZS1zdXBwb3J0DA">
+      3 months, 2 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       like
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://plus.google.com/115157882097089845153/posts/5hq4NcYP1jB">plus.google.com/11515788209708...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://likeiwassayingblog.com/2014/08/04/if-i-am-ever-on-life-support">likeiwassayingblog.com/2014/08/04/if-...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1407178415&key=aglzfmJyaWQtZ3ly1AELEg5CbG9nV2VibWVudGlvbiK_AWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9saWtlL2dvb2dsZXBsdXMvMTE1MTU3ODgyMDk3MDg5ODQ1MTUzL3oxMmJjcjF4b2szZmh6M3N3MjNieDM1aHl2YWhmdDNmdS8xMDU4NDAyOTc4OTM2NjAzMzk1ODUgaHR0cDovL2xpa2Vpd2Fzc2F5aW5nYmxvZy5jb20vMjAxNC8wOC8wNC9pZi1pLWFtLWV2ZXItb24tbGlmZS1zdXBwb3J0DA">
+      3 months, 2 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       like
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://plus.google.com/115157882097089845153/posts/ZYcL6XFeKgv">plus.google.com/11515788209708...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://likeiwassayingblog.com/2014/08/04/6-useful-chrome-extensions">likeiwassayingblog.com/2014/08/04/6-u...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1407174845&key=aglzfmJyaWQtZ3ly1AELEg5CbG9nV2VibWVudGlvbiK_AWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9saWtlL2dvb2dsZXBsdXMvMTE1MTU3ODgyMDk3MDg5ODQ1MTUzL3oxMnh0bmJvZHN5cWZsbWkyMDRjZ3pvZ3Bydmd0cGo0aGpjLzExMzgzMzgwMjkyMTM4NzgwMTU5NCBodHRwOi8vbGlrZWl3YXNzYXlpbmdibG9nLmNvbS8yMDE0LzA4LzA0LzYtdXNlZnVsLWNocm9tZS1leHRlbnNpb25zDA">
+      3 months, 2 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       like
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://plus.google.com/115157882097089845153/posts/5hq4NcYP1jB">plus.google.com/11515788209708...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://likeiwassayingblog.com/2014/08/04/if-i-am-ever-on-life-support">likeiwassayingblog.com/2014/08/04/if-...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1407174826&key=aglzfmJyaWQtZ3ly1AELEg5CbG9nV2VibWVudGlvbiK_AWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9saWtlL2dvb2dsZXBsdXMvMTE1MTU3ODgyMDk3MDg5ODQ1MTUzL3oxMmJjcjF4b2szZmh6M3N3MjNieDM1aHl2YWhmdDNmdS8xMTMxNjk3MTM3NDk0OTY3MjY3MzkgaHR0cDovL2xpa2Vpd2Fzc2F5aW5nYmxvZy5jb20vMjAxNC8wOC8wNC9pZi1pLWFtLWV2ZXItb24tbGlmZS1zdXBwb3J0DA">
+      3 months, 2 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       like
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/TimelessP/status/496347760782618624">twitter.com/TimelessP/stat...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://likeiwassayingblog.com/2014/08/04/researchers-extract-audio-from-potato-chip-bag-and-other-vibrating-objects-in-video-recordings/">likeiwassayingblog.com/2014/08/04/res...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1407173927&key=aglzfmJyaWQtZ3ly-wELEg5CbG9nV2VibWVudGlvbiLmAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9jb21tZW50L3R3aXR0ZXIvTWl0Y2hXYWduZXIvNDk2MzQ2MzM0OTE2NDA3Mjk2LzQ5NjM0Nzc2MDc4MjYxODYyNCBodHRwOi8vbGlrZWl3YXNzYXlpbmdibG9nLmNvbS8yMDE0LzA4LzA0L3Jlc2VhcmNoZXJzLWV4dHJhY3QtYXVkaW8tZnJvbS1wb3RhdG8tY2hpcC1iYWctYW5kLW90aGVyLXZpYnJhdGluZy1vYmplY3RzLWluLXZpZGVvLXJlY29yZGluZ3MvDA">
+      3 months, 2 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       comment
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://plus.google.com/115157882097089845153/posts/5hq4NcYP1jB">plus.google.com/11515788209708...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://likeiwassayingblog.com/2014/08/04/if-i-am-ever-on-life-support">likeiwassayingblog.com/2014/08/04/if-...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1407172886&key=aglzfmJyaWQtZ3ly1AELEg5CbG9nV2VibWVudGlvbiK_AWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9saWtlL2dvb2dsZXBsdXMvMTE1MTU3ODgyMDk3MDg5ODQ1MTUzL3oxMmJjcjF4b2szZmh6M3N3MjNieDM1aHl2YWhmdDNmdS8xMTY4MTEwMjIxMTIyODU5Nzg2MjIgaHR0cDovL2xpa2Vpd2Fzc2F5aW5nYmxvZy5jb20vMjAxNC8wOC8wNC9pZi1pLWFtLWV2ZXItb24tbGlmZS1zdXBwb3J0DA">
+      3 months, 2 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       like
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://facebook.com/697015835/posts/10152168967400836">facebook.com/697015835/post...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://likeiwassayingblog.com/2014/08/04/if-i-am-ever-on-life-support/">likeiwassayingblog.com/2014/08/04/if-...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1407172517&key=aglzfmJyaWQtZ3lyrAELEg5CbG9nV2VibWVudGlvbiKXAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9saWtlL2ZhY2Vib29rLzY5NzAxNTgzNS8xMDE1MjE2ODk2NzQwMDgzNi8xNjI3OTk3MzQ2IGh0dHA6Ly9saWtlaXdhc3NheWluZ2Jsb2cuY29tLzIwMTQvMDgvMDQvaWYtaS1hbS1ldmVyLW9uLWxpZmUtc3VwcG9ydC8M">
+      3 months, 2 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       like
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://facebook.com/697015835/posts/10152168967400836">facebook.com/697015835/post...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://likeiwassayingblog.com/2014/08/04/if-i-am-ever-on-life-support/">likeiwassayingblog.com/2014/08/04/if-...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1407172085&key=aglzfmJyaWQtZ3lyqwELEg5CbG9nV2VibWVudGlvbiKWAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9saWtlL2ZhY2Vib29rLzY5NzAxNTgzNS8xMDE1MjE2ODk2NzQwMDgzNi81MDI4NjExNDIgaHR0cDovL2xpa2Vpd2Fzc2F5aW5nYmxvZy5jb20vMjAxNC8wOC8wNC9pZi1pLWFtLWV2ZXItb24tbGlmZS1zdXBwb3J0Lww">
+      3 months, 2 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       like
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://plus.google.com/115157882097089845153/posts/5hq4NcYP1jB">plus.google.com/11515788209708...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://likeiwassayingblog.com/2014/08/04/if-i-am-ever-on-life-support">likeiwassayingblog.com/2014/08/04/if-...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1407171450&key=aglzfmJyaWQtZ3ly1AELEg5CbG9nV2VibWVudGlvbiK_AWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9saWtlL2dvb2dsZXBsdXMvMTE1MTU3ODgyMDk3MDg5ODQ1MTUzL3oxMmJjcjF4b2szZmh6M3N3MjNieDM1aHl2YWhmdDNmdS8xMTIzNDAwNDc5MTI4NDUyODk4NjQgaHR0cDovL2xpa2Vpd2Fzc2F5aW5nYmxvZy5jb20vMjAxNC8wOC8wNC9pZi1pLWFtLWV2ZXItb24tbGlmZS1zdXBwb3J0DA">
+      3 months, 2 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       like
+     
+
+   </div>
+  </li>
+  
+</ul>
+
+
+</div>
+
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

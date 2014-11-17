@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>jasonwhat (WordPress.com) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="http://jasonwoj.com" title="jasonwhat (WordPress.com)"
+   class="u-url">
+  <img class="profile u-photo" src="https://0.gravatar.com/avatar/0d47a6337d90910580b58a1997a0245d?s=96&amp;d=identicon&amp;r=G" width="64px" />
+  <img src="/static/wordpress_icon.png"
+       
+       alt="WordPress.com" />
+  <span class="p-name">jasonwhat</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://jasonwoj.com" class="publish-domain u-url">jasonwoj.com</a>
+
+
+
+</div>
+
+
+
+
+<!-- Banner for blogs that aren't yet advertising the webmention endpoint -->
+
+
+<div class="row">
+
+<p class="warning">Warning: your blog's current
+<a href="https://github.com/converspace/webmention/blob/master/README.md#sender-discovers-receiver-endpoint">webmention endpoint</a>
+is
+<code><a href="http://jasonwoj.com/?webmention=endpoint">
+  http://jasonwoj.com/?webmention=endpoint</a></code>.
+If you want Bridgy to handle your blog's webmentions, change it to
+<code><a href="https://www.brid.gy/webmention/wordpress">
+  https://www.brid.gy/webmention/wordpress</a></code>.
+</p>
+
+
+<form method="post" action="/delete/start">
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGwsSCVdvcmRQcmVzcyIMamFzb253b2ouY29tDA" />
+  <input name="feature" type="hidden" value="webmention" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+          title="Disable this account. (Won't delete webmentions you've already sent or received.)">Disable</button>
+</form>
+</div>
+
+
+<!-- Signup button -->
+
+
+
+
+
+
+<!-- Blog posts -->
+<div id="blogposts" class="row">
+
+<p class="big">Recent blog posts:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://jasonwoj.com/robben-or-bergkamp/">Robben or Bergkamp?</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1402690525&key=aglzfmJyaWQtZ3lyNQsSCEJsb2dQb3N0IidodHRwOi8vamFzb253b2ouY29tL3JvYmJlbi1vci1iZXJna2FtcC8M">
+      5 months ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://jasonwoj.com/read-mother-jones-but-first-by-this-bentley/">Read Mother Jones…but first by this Bent...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1402626674&key=aglzfmJyaWQtZ3lyTgsSCEJsb2dQb3N0IkBodHRwOi8vamFzb253b2ouY29tL3JlYWQtbW90aGVyLWpvbmVzLWJ1dC1maXJzdC1ieS10aGlzLWJlbnRsZXkvDA">
+      5 months, 1 week ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.motherjones.com/media/2014/06/fifa-world-cup-scandals-brazil-qatar">motherjones.com/media/2014/06/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://jasonwoj.com/backpacks-belonging-to-reynolds-high-students/">Backpacks belonging to Reynolds High Stu...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1402428794&key=aglzfmJyaWQtZ3lyUAsSCEJsb2dQb3N0IkJodHRwOi8vamFzb253b2ouY29tL2JhY2twYWNrcy1iZWxvbmdpbmctdG8tcmV5bm9sZHMtaGlnaC1zdHVkZW50cy8M">
+      5 months, 1 week ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://jasonwoj.com/our-first-visitor-to-corelab-studio/">Our first visitor to Corelab Studio</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1402348657&key=aglzfmJyaWQtZ3lyRgsSCEJsb2dQb3N0IjhodHRwOi8vamFzb253b2ouY29tL291ci1maXJzdC12aXNpdG9yLXRvLWNvcmVsYWItc3R1ZGlvLww">
+      5 months, 1 week ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://jasonwoj.com/cocktail-recipe-blood-and-sand/">Cocktail Recipe: Blood and Sand</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1401673281&key=aglzfmJyaWQtZ3lyQQsSCEJsb2dQb3N0IjNodHRwOi8vamFzb253b2ouY29tL2NvY2t0YWlsLXJlY2lwZS1ibG9vZC1hbmQtc2FuZC8M">
+      5 months, 2 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.amctv.com/shows/mad-men/cocktail-guide/blood-and-sand">amctv.com/shows/mad-men/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://jasonwoj.com/slideluck-bushwick/">SlideLuck Bushwick</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1401583762&key=aglzfmJyaWQtZ3lyNQsSCEJsb2dQb3N0IidodHRwOi8vamFzb253b2ouY29tL3NsaWRlbHVjay1idXNod2ljay8M">
+      5 months, 2 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://jasonwoj.com/martha-gellhorns-advice-on-picking-a-husband/">Martha Gellhorn’s Advice on Picking a Hu...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1401551119&key=aglzfmJyaWQtZ3lyTwsSCEJsb2dQb3N0IkFodHRwOi8vamFzb253b2ouY29tL21hcnRoYS1nZWxsaG9ybnMtYWR2aWNlLW9uLXBpY2tpbmctYS1odXNiYW5kLww">
+      5 months, 2 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.salon.com/2006/08/12/gellhorn/">salon.com/2006/08/12/gel...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://jasonwoj.com/the-terrariums-have-arrived-at-advomatic/">The terrariums have arrived at Advomatic</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1401386561&key=aglzfmJyaWQtZ3lySwsSCEJsb2dQb3N0Ij1odHRwOi8vamFzb253b2ouY29tL3RoZS10ZXJyYXJpdW1zLWhhdmUtYXJyaXZlZC1hdC1hZHZvbWF0aWMvDA">
+      5 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://jasonwoj.com/when-in-midtown/">When in Midtown.</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1401385935&key=aglzfmJyaWQtZ3lyMgsSCEJsb2dQb3N0IiRodHRwOi8vamFzb253b2ouY29tL3doZW4taW4tbWlkdG93bi8M">
+      5 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://jasonwoj.com/posse-tools-in-wordpress/">POSSE Tools In WordPress</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1401326277&key=aglzfmJyaWQtZ3lyOwsSCEJsb2dQb3N0Ii1odHRwOi8vamFzb253b2ouY29tL3Bvc3NlLXRvb2xzLWluLXdvcmRwcmVzcy8M">
+      5 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.gregfalken.com/2014/04/posse-tools-in-wordpress/comment-page-1/#comment-2601">gregfalken.com/2014/04/posse-...</a></li>
+	<li><a class="original-post" target="_blank" href="http://indiewebcamp.com/POSSE">indiewebcamp.com/POSSE</a></li></ul>
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://wordpress.org/">wordpress.org/</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+</div>
+
+
+<!-- Incoming blog webmentions -->
+<div id="webmentions" class="row">
+
+<p class="big">No
+  <a href="http://indiewebify.me/#send-webmentions">webmentions</a> received yet.</p>
+
+</div>
+
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

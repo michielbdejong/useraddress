@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>lesrach (Tumblr) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="http://cpti.me/" title="lesrach (Tumblr)"
+   class="u-url">
+  <img class="profile u-photo" src="https://api.tumblr.com/v2/blog/cpti.me/avatar/512" width="64px" />
+  <img src="/static/tumblr_icon.png"
+       
+       alt="Tumblr" />
+  <span class="p-name">lesrach</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://cpti.me/" class="publish-domain u-url">cpti.me</a>
+
+
+
+</div>
+
+
+
+
+<!-- Banner for blogs that aren't yet advertising the webmention endpoint -->
+
+
+<div class="row">
+
+<p class="big">You're all set! Check out your recent
+<a href="#blogposts">blog posts</a> and <a href="#webmentions">webmentions</a>.
+  <!-- This currently 500s :/ -->
+  <!-- <a href="http://indiewebify.me/send-webmentions/?url="> -->
+  <!--   Try a webmention!</a> -->
+</p>
+
+
+<form method="post" action="/delete/start">
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyEwsSBlR1bWJsciIHY3B0aS5tZQw" />
+  <input name="feature" type="hidden" value="webmention" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+          title="Disable this account. (Won't delete webmentions you've already sent or received.)">Disable</button>
+</form>
+</div>
+
+
+<!-- Signup button -->
+
+
+
+
+
+
+<!-- Blog posts -->
+<div id="blogposts" class="row">
+
+<p class="big">Recent blog posts:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://cpti.me/post/102852518314">bayxcreole:
+
+foot work</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1416202602&key=aglzfmJyaWQtZ3lyLgsSCEJsb2dQb3N0IiBodHRwOi8vY3B0aS5tZS9wb3N0LzEwMjg1MjUxODMxNAw">
+      3 hours, 3 minutes ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://bayxcreole.tumblr.com/post/101474633280/foot-work">bayxcreole.tumblr.com/post/101474633...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://cpti.me/post/102784628429">via NPR’s CodeSwitch:
+
+It’d be easy to c...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1416151933&key=aglzfmJyaWQtZ3lyLgsSCEJsb2dQb3N0IiBodHRwOi8vY3B0aS5tZS9wb3N0LzEwMjc4NDYyODQyOQw">
+      17 hours, 7 minutes ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.npr.org/blogs/codeswitch/2014/11/11/363413255/marvels-black-panther-isnt-just-another-black-superhero">npr.org/blogs/codeswit...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://cpti.me/post/102756148786">hjlphotos:
+
+The Long Term Effect of Magi...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1416116174&key=aglzfmJyaWQtZ3lyLgsSCEJsb2dQb3N0IiBodHRwOi8vY3B0aS5tZS9wb3N0LzEwMjc1NjE0ODc4Ngw">
+      1 day, 3 hours ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://hjlphotos.tumblr.com/post/93725304322/the-long-term-effect-of-magical-thinking-by-hjl-on">hjlphotos.tumblr.com/post/937253043...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://cpti.me/post/102669304169">sierracuse:
+
+youngblackandvegan:
+
+accras...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1416029534&key=aglzfmJyaWQtZ3lyLgsSCEJsb2dQb3N0IiBodHRwOi8vY3B0aS5tZS9wb3N0LzEwMjY2OTMwNDE2OQw">
+      2 days, 3 hours ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://sierracuse.tumblr.com/post/101684857646/youngblackandvegan-accras-president-obama">sierracuse.tumblr.com/post/101684857...</a></li>
+	<li><a class="original-post" target="_blank" href="http://accras.tumblr.com/post/59676340535/president-obama-talks-with-yolanda-renee-king-5">accras.tumblr.com/post/596763405...</a></li>
+	<li><a class="original-post" target="_blank" href="http://youngblackandvegan.tumblr.com/post/59795758983/accras-president-obama-talks-with-yolanda-renee">youngblackandvegan.tumblr.com/post/597957589...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://cpti.me/post/102590682316">newsweek:
+
+From deep within the Newsweek...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1415943293&key=aglzfmJyaWQtZ3lyLgsSCEJsb2dQb3N0IiBodHRwOi8vY3B0aS5tZS9wb3N0LzEwMjU5MDY4MjMxNgw">
+      3 days, 3 hours ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.newsweek.com/user/14908">newsweek.com/user/14908</a></li>
+	<li><a class="original-post" target="_blank" href="http://newsweek.tumblr.com/post/101430374935/from-deep-within-the-newsweek-archieve-comes-this">newsweek.tumblr.com/post/101430374...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.newsweek.com/muhammad-ali-remembers-rumble-jungle-167950">newsweek.com/muhammad-ali-r...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://cpti.me/post/102510440942">Photo</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1415857063&key=aglzfmJyaWQtZ3lyLgsSCEJsb2dQb3N0IiBodHRwOi8vY3B0aS5tZS9wb3N0LzEwMjUxMDQ0MDk0Mgw">
+      4 days, 3 hours ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://cpti.me/post/102428164473">Photo</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1415770340&key=aglzfmJyaWQtZ3lyLgsSCEJsb2dQb3N0IiBodHRwOi8vY3B0aS5tZS9wb3N0LzEwMjQyODE2NDQ3Mww">
+      5 days, 3 hours ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://cpti.me/post/102340798429">papermagazine:
+
+"At one point Kanye said...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1415684107&key=aglzfmJyaWQtZ3lyLgsSCEJsb2dQb3N0IiBodHRwOi8vY3B0aS5tZS9wb3N0LzEwMjM0MDc5ODQyOQw">
+      6 days, 3 hours ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://papermagazine.tumblr.com/post/101710902655/at-one-point-kanye-said-to-me-man-you-gotta">papermagazine.tumblr.com/post/101710902...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://cpti.me/post/102253870167"><img src="http://38.media.tumblr.com/343...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1415597910&key=aglzfmJyaWQtZ3lyLgsSCEJsb2dQb3N0IiBodHRwOi8vY3B0aS5tZS9wb3N0LzEwMjI1Mzg3MDE2Nww">
+      1 week ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://w.soundcloud.com/player/?url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F139750461&color=ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false">w.soundcloud.com/player/?url=ht...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://cpti.me/post/102249097329">mediavengers:
+
+mediavengers:
+
+TIME Magaz...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1415593626&key=aglzfmJyaWQtZ3lyLgsSCEJsb2dQb3N0IiBodHRwOi8vY3B0aS5tZS9wb3N0LzEwMjI0OTA5NzMyOQw">
+      1 week ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://mediavengers.tumblr.com/post/102154736698/mediavengers-time-magazine-october-28-2014">mediavengers.tumblr.com/post/102154736...</a></li>
+	<li><a class="original-post" target="_blank" href="http://mediavengers.tumblr.com/post/102153633933/time-magazine-october-28-2014-whats-this-we">mediavengers.tumblr.com/post/102153633...</a></li>
+	<li><a class="original-post" target="_blank" href="http://mediavengers.tumblr.com/">mediavengers.tumblr.com/</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+</div>
+
+
+<!-- Incoming blog webmentions -->
+<div id="webmentions" class="row">
+
+<p class="big">Recent
+  <a href="http://indiewebify.me/#send-webmentions">webmentions</a>:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="http://cptimes.tumblr.com/post/97222835166">cptimes.tumblr.com/post/972228351...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://cpti.me/post/91831127834/bulletphotos">cpti.me/post/918311278...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1410461495&key=aglzfmJyaWQtZ3lyawsSDkJsb2dXZWJtZW50aW9uIldodHRwOi8vY3B0aW1lcy50dW1ibHIuY29tL3Bvc3QvOTcyMjI4MzUxNjYgaHR0cDovL2NwdGkubWUvcG9zdC85MTgzMTEyNzgzNC9idWxsZXRwaG90b3MM">
+      2 months ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       None
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="http://cpti.me/">cpti.me/</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://cpti.me/tagged/iPhone">cpti.me/tagged/iPhone</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1402372473&key=aglzfmJyaWQtZ3lyQAsSDkJsb2dXZWJtZW50aW9uIixodHRwOi8vY3B0aS5tZS8gaHR0cDovL2NwdGkubWUvdGFnZ2VkL2lQaG9uZQw">
+      5 months, 1 week ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       None
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="http://cpti.me/">cpti.me/</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://cpti.me/tagged/Android">cpti.me/tagged/Android</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1402372472&key=aglzfmJyaWQtZ3lyQQsSDkJsb2dXZWJtZW50aW9uIi1odHRwOi8vY3B0aS5tZS8gaHR0cDovL2NwdGkubWUvdGFnZ2VkL0FuZHJvaWQM">
+      5 months, 1 week ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       None
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="http://cpti.me/">cpti.me/</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://cpti.me/tagged/iOS">cpti.me/tagged/iOS</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1402372470&key=aglzfmJyaWQtZ3lyPQsSDkJsb2dXZWJtZW50aW9uIilodHRwOi8vY3B0aS5tZS8gaHR0cDovL2NwdGkubWUvdGFnZ2VkL2lPUww">
+      5 months, 1 week ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       None
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="http://cpti.me/">cpti.me/</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://cpti.me/tagged/Workforce">cpti.me/tagged/Workfor...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1402372468&key=aglzfmJyaWQtZ3lyQwsSDkJsb2dXZWJtZW50aW9uIi9odHRwOi8vY3B0aS5tZS8gaHR0cDovL2NwdGkubWUvdGFnZ2VkL1dvcmtmb3JjZQw">
+      5 months, 1 week ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       None
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="http://cpti.me/">cpti.me/</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://cpti.me/tagged/Unemployment">cpti.me/tagged/Unemplo...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1402372467&key=aglzfmJyaWQtZ3lyRgsSDkJsb2dXZWJtZW50aW9uIjJodHRwOi8vY3B0aS5tZS8gaHR0cDovL2NwdGkubWUvdGFnZ2VkL1VuZW1wbG95bWVudAw">
+      5 months, 1 week ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       None
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="http://cpti.me/">cpti.me/</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://cpti.me/tagged/Jobs">cpti.me/tagged/Jobs</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1402372466&key=aglzfmJyaWQtZ3lyPgsSDkJsb2dXZWJtZW50aW9uIipodHRwOi8vY3B0aS5tZS8gaHR0cDovL2NwdGkubWUvdGFnZ2VkL0pvYnMM">
+      5 months, 1 week ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       None
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="http://cpti.me/">cpti.me/</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://cpti.me/tagged/Knack.It">cpti.me/tagged/Knack.I...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1402372464&key=aglzfmJyaWQtZ3lyQgsSDkJsb2dXZWJtZW50aW9uIi5odHRwOi8vY3B0aS5tZS8gaHR0cDovL2NwdGkubWUvdGFnZ2VkL0tuYWNrLkl0DA">
+      5 months, 1 week ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       None
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="http://cpti.me/">cpti.me/</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://cpti.me/tagged/New-Tech-City">cpti.me/tagged/New-Tec...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1402372463&key=aglzfmJyaWQtZ3lyRwsSDkJsb2dXZWJtZW50aW9uIjNodHRwOi8vY3B0aS5tZS8gaHR0cDovL2NwdGkubWUvdGFnZ2VkL05ldy1UZWNoLUNpdHkM">
+      5 months, 1 week ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       None
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="http://cpti.me/">cpti.me/</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://cpti.me/tagged/journalism">cpti.me/tagged/journal...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1402372461&key=aglzfmJyaWQtZ3lyRAsSDkJsb2dXZWJtZW50aW9uIjBodHRwOi8vY3B0aS5tZS8gaHR0cDovL2NwdGkubWUvdGFnZ2VkL2pvdXJuYWxpc20M">
+      5 months, 1 week ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       None
+     
+
+   </div>
+  </li>
+  
+</ul>
+
+
+</div>
+
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

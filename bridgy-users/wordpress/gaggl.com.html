@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Leo Gaggl (WordPress.com) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="http://www.gaggl.com" title="Leo Gaggl (WordPress.com)"
+   class="u-url">
+  <img class="profile u-photo" src="https://2.gravatar.com/avatar/50fb7b4c36521d833f206d011d8176ac?s=96&amp;d=identicon&amp;r=G" width="64px" />
+  <img src="/static/wordpress_icon.png"
+       
+       alt="WordPress.com" />
+  <span class="p-name">Leo Gaggl</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://www.gaggl.com" class="publish-domain u-url">gaggl.com</a>
+
+
+
+</div>
+
+
+
+
+<!-- Banner for blogs that aren't yet advertising the webmention endpoint -->
+
+
+<div class="row">
+
+<p class="warning">Warning: your blog's current
+<a href="https://github.com/converspace/webmention/blob/master/README.md#sender-discovers-receiver-endpoint">webmention endpoint</a>
+is
+<code><a href="http://www.gaggl.com/?webmention=endpoint">
+  http://www.gaggl.com/?webmention=endpoint</a></code>.
+If you want Bridgy to handle your blog's webmentions, change it to
+<code><a href="https://www.brid.gy/webmention/wordpress">
+  https://www.brid.gy/webmention/wordpress</a></code>.
+</p>
+
+
+<form method="post" action="/delete/start">
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGAsSCVdvcmRQcmVzcyIJZ2FnZ2wuY29tDA" />
+  <input name="feature" type="hidden" value="webmention" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+          title="Disable this account. (Won't delete webmentions you've already sent or received.)">Disable</button>
+</form>
+</div>
+
+
+<!-- Signup button -->
+
+
+
+
+
+
+<!-- Blog posts -->
+<div id="blogposts" class="row">
+
+<p class="big">Recent blog posts:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://www.gaggl.com/2014/10/ubuntu-14-04-webmin-install-from-ppa/">Ubuntu 14.04 Webmin Install from PPA</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1414304366&key=aglzfmJyaWQtZ3lyUAsSCEJsb2dQb3N0IkJodHRwOi8vd3d3LmdhZ2dsLmNvbS8yMDE0LzEwL3VidW50dS0xNC0wNC13ZWJtaW4taW5zdGFsbC1mcm9tLXBwYS8M">
+      3 weeks, 1 day ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://download.webmin.com/download/repository/">download.webmin.com/download/repos...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://www.gaggl.com/2014/10/barebone-lubuntu-14-04-cloud-desktop/">Barebone Ubuntu 14.04 Cloud Desktop</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1413202330&key=aglzfmJyaWQtZ3lyUAsSCEJsb2dQb3N0IkJodHRwOi8vd3d3LmdhZ2dsLmNvbS8yMDE0LzEwL2JhcmVib25lLWx1YnVudHUtMTQtMDQtY2xvdWQtZGVza3RvcC8M">
+      1 month ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://www.gaggl.com/2014/10/accessing-your-cloud-desktop-from-your-chromebook/">Accessing your cloud desktop from your C...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1413114562&key=aglzfmJyaWQtZ3lyXQsSCEJsb2dQb3N0Ik9odHRwOi8vd3d3LmdhZ2dsLmNvbS8yMDE0LzEwL2FjY2Vzc2luZy15b3VyLWNsb3VkLWRlc2t0b3AtZnJvbS15b3VyLWNocm9tZWJvb2svDA">
+      1 month ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://www.gaggl.com/?p=16207">Install Google Earth on Ubuntu 14.04</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1412840492&key=aglzfmJyaWQtZ3lyKwsSCEJsb2dQb3N0Ih1odHRwOi8vd3d3LmdhZ2dsLmNvbS8_cD0xNjIwNww">
+      1 month, 1 week ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://www.gaggl.com/?p=16264">Upgrade Rikomagic MK902 Android MiniPC f...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1412840489&key=aglzfmJyaWQtZ3lyKwsSCEJsb2dQb3N0Ih1odHRwOi8vd3d3LmdhZ2dsLmNvbS8_cD0xNjI2NAw">
+      1 month, 1 week ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://wiki.radxa.com/Rock">wiki.radxa.com/Rock</a></li>
+	<li><a class="original-post" target="_blank" href="http://linux-rockchip.info/mw/index.php?title=Main_Page">linux-rockchip.info/mw/index.php?t...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.rockchipfirmware.com/developer-tools">rockchipfirmware.com/developer-tool...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.rikomagic.com/en/download/do_1.html">rikomagic.com/en/download/do...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.cnx-software.com/2013/11/19/how-to-flash-rockchip-rk3066-rk3188-firmware-in-linux/">cnx-software.com/2013/11/19/how...</a></li>
+	<li><a class="original-post" target="_blank" href="http://wiki.radxa.com/Rock/flash_the_image#Linux">wiki.radxa.com/Rock/flash_the...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://www.gaggl.com/?p=16298">Upgrading Nokia X to CyanogenMod 11 (via...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1412840486&key=aglzfmJyaWQtZ3lyKwsSCEJsb2dQb3N0Ih1odHRwOi8vd3d3LmdhZ2dsLmNvbS8_cD0xNjI5OAw">
+      1 month, 1 week ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.productreview.com.au/r/mobicity/589844.html#single_review">productreview.com.au/r/mobicity/589... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://forum.xda-developers.com/nokia-x/development/rom-cyanogenmod-11-m8-4-4-4-t2838336">forum.xda-developers.com/nokia-x/develo...</a></li>
+	<li><a class="original-post" target="_blank" href="http://forum.xda-developers.com/showthread.php?t=2703708">forum.xda-developers.com/showthread.php...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.mediafire.com/download/o4amiw228m83aux/cm-11-20140426-UNOFFICIAL-normandy.zip">mediafire.com/download/o4ami...</a></li>
+	<li><a class="original-post" target="_blank" href="http://forum.xda-developers.com/showthread.php?t=2710107">forum.xda-developers.com/showthread.php...</a></li>
+	<li><a class="original-post" target="_blank" href="http://wiki.cyanogenmod.org/w/Google_Apps">wiki.cyanogenmod.org/w/Google_Apps</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://www.gaggl.com/?p=16335">Ubuntu 14.04 Amazon EC2 Cloud Desktop us...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1412840482&key=aglzfmJyaWQtZ3lyKwsSCEJsb2dQb3N0Ih1odHRwOi8vd3d3LmdhZ2dsLmNvbS8_cD0xNjMzNQw">
+      1 month, 1 week ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://www.gaggl.com/?p=16330">ARD Mediathek offline viewing on Ubuntu</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1412840478&key=aglzfmJyaWQtZ3lyKwsSCEJsb2dQb3N0Ih1odHRwOi8vd3d3LmdhZ2dsLmNvbS8_cD0xNjMzMAw">
+      1 month, 1 week ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://github.com/dicer/auto-tatort">github.com/dicer/auto-tat...</a></li>
+	<li><a class="original-post" target="_blank" href="https://github.com/leogaggl/media">github.com/leogaggl/media</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://www.gaggl.com/?p=16366">Install Virtualbox Additions on Centos 7...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1412840474&key=aglzfmJyaWQtZ3lyKwsSCEJsb2dQb3N0Ih1odHRwOi8vd3d3LmdhZ2dsLmNvbS8_cD0xNjM2Ngw">
+      1 month, 1 week ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://www.gaggl.com/?p=16474">Finding a private location check-in serv...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1412840470&key=aglzfmJyaWQtZ3lyKwsSCEJsb2dQb3N0Ih1odHRwOi8vd3d3LmdhZ2dsLmNvbS8_cD0xNjQ3NAw">
+      1 month, 1 week ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/2.0/">creativecommons.org/licenses/by-nc...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.imagecodr.org/">imagecodr.org/</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.yelp.com/">yelp.com/</a></li>
+	<li><a class="original-post" target="_blank" href="https://github.com/ushahidi/Ushahidi_Web">github.com/ushahidi/Ushah...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.ushahidi.com/">ushahidi.com/</a></li>
+	<li><a class="original-post" target="_blank" href="http://creativecommons.org/ns">creativecommons.org/ns</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.ushahidi.com/product/crowdmap/">ushahidi.com/product/crowdm...</a></li>
+	<li><a class="original-post" target="_blank" href="https://www.thinkup.com/">thinkup.com/</a></li>
+	<li><a class="original-post" target="_blank" href="http://dublincore.org/documents/2012/06/14/dcmi-terms/?v=terms">dublincore.org/documents/2012...</a></li>
+	<li><a class="original-post" target="_blank" href="http://dublincore.org/documents/2012/06/14/dcmi-terms/?v=dcmitype">dublincore.org/documents/2012...</a></li>
+	<li><a class="original-post" target="_blank" href="https://www.swarmapp.com/">swarmapp.com/</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+</div>
+
+
+<!-- Incoming blog webmentions -->
+<div id="webmentions" class="row">
+
+<p class="big">No
+  <a href="http://indiewebify.me/#send-webmentions">webmentions</a> received yet.</p>
+
+</div>
+
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

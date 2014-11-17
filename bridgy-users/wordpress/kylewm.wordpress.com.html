@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>kylewm (WordPress.com) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="http://kylewm.wordpress.com" title="kylewm (WordPress.com)"
+   class="u-url">
+  <img class="profile u-photo" src="https://1.gravatar.com/avatar/767447312a2f39bec228c3925e3edf74?s=96&amp;d=identicon&amp;r=G" width="64px" />
+  <img src="/static/wordpress_icon.png"
+       
+       alt="WordPress.com" />
+  <span class="p-name">kylewm</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://kylewm.wordpress.com" class="publish-domain u-url">kylewm.wordpress.com</a>
+
+
+
+</div>
+
+
+
+
+<!-- Banner for blogs that aren't yet advertising the webmention endpoint -->
+
+
+<div class="row">
+
+<p class="big">You're all set! Check out your recent
+<a href="#blogposts">blog posts</a> and <a href="#webmentions">webmentions</a>.
+  <!-- This currently 500s :/ -->
+  <!-- <a href="http://indiewebify.me/send-webmentions/?url="> -->
+  <!--   Try a webmention!</a> -->
+</p>
+
+
+<form method="post" action="/delete/start">
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyIwsSCVdvcmRQcmVzcyIUa3lsZXdtLndvcmRwcmVzcy5jb20M" />
+  <input name="feature" type="hidden" value="webmention" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+          title="Disable this account. (Won't delete webmentions you've already sent or received.)">Disable</button>
+</form>
+</div>
+
+
+<!-- Signup button -->
+
+
+
+
+
+
+<!-- Blog posts -->
+<div id="blogposts" class="row">
+
+<p class="big">Recent blog posts:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://kylewm.wordpress.com/2014/10/01/test-of-time-tag/">Test of time tag</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1412208948&key=aglzfmJyaWQtZ3lyRgsSCEJsb2dQb3N0IjhodHRwOi8va3lsZXdtLndvcmRwcmVzcy5jb20vMjAxNC8xMC8wMS90ZXN0LW9mLXRpbWUtdGFnLww">
+      1 month, 2 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://microformats.org/wiki/microformats-2&#8243;&gt;microformats-2&lt;/a&gt;&lt;/p&#038;gt">microformats.org/wiki/microform...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://kylewm.wordpress.com/2013/12/02/relocated/">Relocated</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1399226345&key=aglzfmJyaWQtZ3lyPwsSCEJsb2dQb3N0IjFodHRwOi8va3lsZXdtLndvcmRwcmVzcy5jb20vMjAxMy8xMi8wMi9yZWxvY2F0ZWQvDA">
+      6 months, 2 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://kylewm.com/">kylewm.com/</a></li></ul>
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://kylewm.wordpress.com/2013/12/02/relocated/#comments">kylewm.wordpress.com/2013/12/02/rel...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://kylewm.wordpress.com/2014/04/28/test-sending-a-pingback/">Test sending a pingback</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1399226331&key=aglzfmJyaWQtZ3lyTQsSCEJsb2dQb3N0Ij9odHRwOi8va3lsZXdtLndvcmRwcmVzcy5jb20vMjAxNC8wNC8yOC90ZXN0LXNlbmRpbmctYS1waW5nYmFjay8M">
+      6 months, 2 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://kylewm.com/note/2014/04/28/2">kylewm.com/note/2014/04/2...</a></li></ul>
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://kylewm.wordpress.com/2014/04/28/test-sending-a-pingback/#comments">kylewm.wordpress.com/2014/04/28/tes...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://kylewm.wordpress.com/2014/04/29/39/">Test replying from wordpress.com<img alt...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1399226311&key=aglzfmJyaWQtZ3lyOAsSCEJsb2dQb3N0IipodHRwOi8va3lsZXdtLndvcmRwcmVzcy5jb20vMjAxNC8wNC8yOS8zOS8M">
+      6 months, 2 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://kylewm.com/note/2014/04/28/2">kylewm.com/note/2014/04/2...</a></li></ul>
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://kylewm.wordpress.com/2014/04/29/39/#comments">kylewm.wordpress.com/2014/04/29/39/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://kylewm.wordpress.com/2014/04/29/41/">The Title</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1399226284&key=aglzfmJyaWQtZ3lyOAsSCEJsb2dQb3N0IipodHRwOi8va3lsZXdtLndvcmRwcmVzcy5jb20vMjAxNC8wNC8yOS80MS8M">
+      6 months, 2 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://indiewebcamp.com/spam-mentions-kwm">indiewebcamp.com/spam-mentions-... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://kylewm.wordpress.com/2014/04/29/41/#comments">kylewm.wordpress.com/2014/04/29/41/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+</div>
+
+
+<!-- Incoming blog webmentions -->
+<div id="webmentions" class="row">
+
+<p class="big">Recent
+  <a href="http://indiewebify.me/#send-webmentions">webmentions</a>:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="http://kylewm.com/reply/2014/05/05/1">kylewm.com/reply/2014/05/...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://kylewm.wordpress.com/2013/12/02/relocated">kylewm.wordpress.com/2013/12/02/rel...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1399301763&key=aglzfmJyaWQtZ3lyaQsSDkJsb2dXZWJtZW50aW9uIlVodHRwOi8va3lsZXdtLmNvbS9yZXBseS8yMDE0LzA1LzA1LzEgaHR0cDovL2t5bGV3bS53b3JkcHJlc3MuY29tLzIwMTMvMTIvMDIvcmVsb2NhdGVkDA">
+      6 months, 2 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       comment
+     
+
+   </div>
+  </li>
+  
+</ul>
+
+
+</div>
+
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

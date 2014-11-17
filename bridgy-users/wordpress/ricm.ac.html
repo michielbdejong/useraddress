@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>ricmac (WordPress.com) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="http://ricm.ac" title="ricmac (WordPress.com)"
+   class="u-url">
+  <img class="profile u-photo" src="https://0.gravatar.com/avatar/9b8ecda90715d994cf06c1c510425e1a?s=96&amp;d=identicon&amp;r=G" width="64px" />
+  <img src="/static/wordpress_icon.png"
+       
+       alt="WordPress.com" />
+  <span class="p-name">ricmac</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://ricm.ac" class="publish-domain u-url">ricm.ac</a>
+
+  
+  &middot;
+  <a href="http://ricwrite.wordpress.com" class="publish-domain u-url">ricwrite.wordpress.com</a>
+
+
+
+</div>
+
+
+
+
+<!-- Banner for blogs that aren't yet advertising the webmention endpoint -->
+
+
+<div class="row">
+
+<p class="big">You're all set! Check out your recent
+<a href="#blogposts">blog posts</a> and <a href="#webmentions">webmentions</a>.
+  <!-- This currently 500s :/ -->
+  <!-- <a href="http://indiewebify.me/send-webmentions/?url="> -->
+  <!--   Try a webmention!</a> -->
+</p>
+
+
+<form method="post" action="/delete/start">
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyFgsSCVdvcmRQcmVzcyIHcmljbS5hYww" />
+  <input name="feature" type="hidden" value="webmention" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+          title="Disable this account. (Won't delete webmentions you've already sent or received.)">Disable</button>
+</form>
+</div>
+
+
+<!-- Signup button -->
+
+
+
+
+
+
+<!-- Blog posts -->
+<div id="blogposts" class="row">
+
+<p class="big">Recent blog posts:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://ricm.ac/2014/10/03/writers-log-oct14/">Writer’s Log, 3/10/14: Update On Books 1...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1412294807&key=aglzfmJyaWQtZ3lyOgsSCEJsb2dQb3N0IixodHRwOi8vcmljbS5hYy8yMDE0LzEwLzAzL3dyaXRlcnMtbG9nLW9jdDE0Lww">
+      1 month, 2 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.buchmesse.de/en/fbf/">buchmesse.de/en/fbf/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://ricm.ac/2014/09/10/apple-watch-trackers/">What Apple Watch Means For Trackers</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1410304952&key=aglzfmJyaWQtZ3lyPQsSCEJsb2dQb3N0Ii9odHRwOi8vcmljbS5hYy8yMDE0LzA5LzEwL2FwcGxlLXdhdGNoLXRyYWNrZXJzLww">
+      2 months, 1 week ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.apple.com/watch/features/">apple.com/watch/features...</a></li>
+	<li><a class="original-post" target="_blank" href="https://www.apple.com/pr/library/2014/09/09Apple-Unveils-Apple-Watch-Apples-Most-Personal-Device-Ever.html">apple.com/pr/library/201...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.apple.com/watch/apple-watch/">apple.com/watch/apple-wa...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://ricm.ac/2014/07/18/perceptron/">The 1958 Perceptron: First Attempt At A ...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1409203156&key=aglzfmJyaWQtZ3lyMwsSCEJsb2dQb3N0IiVodHRwOi8vcmljbS5hYy8yMDE0LzA3LzE4L3BlcmNlcHRyb24vDA">
+      2 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://en.wikipedia.org/wiki/Frank_Rosenblatt">en.wikipedia.org/wiki/Frank_Ros...</a></li>
+	<li><a class="original-post" target="_blank" href="http://query.nytimes.com/gst/abstract.html?res=9D01E4D8173DE53BBC4053DFB1668383649EDE">query.nytimes.com/gst/abstract.h...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.ted.com/talks/david_chalmers_how_do_you_explain_consciousness">ted.com/talks/david_ch...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://ricm.ac/2014/07/21/atheism-ai/">Atheism & AI</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1409203134&key=aglzfmJyaWQtZ3lyMwsSCEJsb2dQb3N0IiVodHRwOi8vcmljbS5hYy8yMDE0LzA3LzIxL2F0aGVpc20tYWkvDA">
+      2 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://intelligence.org/">intelligence.org/ <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.audible.com/pd/Science-Technology/Our-Final-Invention-Audiobook/B00KLK1LGG">audible.com/pd/Science-Tec...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.jamesbarrat.com/">jamesbarrat.com/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://ricm.ac/2014/07/22/quantified-doctor/">The Quantified Doctor</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1409203117&key=aglzfmJyaWQtZ3lyOgsSCEJsb2dQb3N0IixodHRwOi8vcmljbS5hYy8yMDE0LzA3LzIyL3F1YW50aWZpZWQtZG9jdG9yLww">
+      2 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.myfitnesspal.com/">myfitnesspal.com/</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.fitbit.com/">fitbit.com/</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.quantifiedcare.com/">quantifiedcare.com/</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.quantifiedcare.com/blog/2014/7/14/what-is-quantified-care-these-infographics-will-explain">quantifiedcare.com/blog/2014/7/14...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://ricm.ac/2014/07/24/freestyle-chess/">The Human Element In Freestyle Chess</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1409203090&key=aglzfmJyaWQtZ3lyOAsSCEJsb2dQb3N0IipodHRwOi8vcmljbS5hYy8yMDE0LzA3LzI0L2ZyZWVzdHlsZS1jaGVzcy8M">
+      2 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://marginalrevolution.com/">marginalrevolution.com/ <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.newyorker.com/business/currency/are-computers-making-society-more-unequal">newyorker.com/business/curre...</a></li>
+	<li><a class="original-post" target="_blank" href="http://en.chessbase.com/post/freestyle-tournament-for-20-000">en.chessbase.com/post/freestyle...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://ricm.ac/2014/07/25/desirable-futures/">Desirable Futures 100 Years From Now</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1409203086&key=aglzfmJyaWQtZ3lyOgsSCEJsb2dQb3N0IixodHRwOi8vcmljbS5hYy8yMDE0LzA3LzI1L2Rlc2lyYWJsZS1mdXR1cmVzLww">
+      2 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.johnhanacek.net/">johnhanacek.net/</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.xanadu.com/">xanadu.com/</a></li>
+	<li><a class="original-post" target="_blank" href="https://medium.com/message/a-desirable-future-haiku-ff01d63c93c6">medium.com/message/a-desi...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://ricm.ac/2014/07/30/watson-group/">“Can Technology Think? Watson Can.”</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1409203082&key=aglzfmJyaWQtZ3lyNQsSCEJsb2dQb3N0IidodHRwOi8vcmljbS5hYy8yMDE0LzA3LzMwL3dhdHNvbi1ncm91cC8M">
+      2 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://venturebeat.com/2014/07/18/inside-ibms-billion-dollar-bet-on-watson/view-all">venturebeat.com/2014/07/18/ins...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.ibm.com/smarterplanet/us/en/ibmwatson/">ibm.com/smarterplanet/...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.apple.com/pr/library/2014/07/15Apple-and-IBM-Forge-Global-Partnership-to-Transform-Enterprise-Mobility.html">apple.com/pr/library/201...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www-03.ibm.com/press/us/en/pressrelease/42451.wss">www-03.ibm.com/press/us/en/pr...</a></li>
+	<li><a class="original-post" target="_blank" href="https://www-03.ibm.com/press/us/en/pressrelease/42867.wss">www-03.ibm.com/press/us/en/pr...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://ricm.ac/2014/07/31/vernor-vinge-cognitive/">Vernor Vinge & Cognitive Computing</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1409203077&key=aglzfmJyaWQtZ3lyPwsSCEJsb2dQb3N0IjFodHRwOi8vcmljbS5hYy8yMDE0LzA3LzMxL3Zlcm5vci12aW5nZS1jb2duaXRpdmUvDA">
+      2 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://reason.com/archives/2007/05/04/superhuman-imagination">reason.com/archives/2007/...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.datafox.co/blog/googles-buying-all-the-robots/">datafox.co/blog/googles-b...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://ricm.ac/2014/08/07/emu/">Augmented Chat: Emu Acquired By Google</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1409203072&key=aglzfmJyaWQtZ3lyLAsSCEJsb2dQb3N0Ih5odHRwOi8vcmljbS5hYy8yMDE0LzA4LzA3L2VtdS8M">
+      2 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://techcrunch.com/2014/04/02/emu-a-smarter-messaging-app-with-a-built-in-assistant-exits-beta">techcrunch.com/2014/04/02/emu...</a></li>
+	<li><a class="original-post" target="_blank" href="http://techcrunch.com/2014/08/06/google-acquires-emu-an-im-client-with-siri-like-intelligence">techcrunch.com/2014/08/06/goo...</a></li>
+	<li><a class="original-post" target="_blank" href="http://emu.is/">emu.is/</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+</div>
+
+
+<!-- Incoming blog webmentions -->
+<div id="webmentions" class="row">
+
+<p class="big">Recent
+  <a href="http://indiewebify.me/#send-webmentions">webmentions</a>:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://plus.google.com/104458801156000551882/posts/ffFeoAzpnUF">plus.google.com/10445880115600...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://ricm.ac/2013/03/28/10000-words/">ricm.ac/2013/03/28/100...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1409253870&key=aglzfmJyaWQtZ3lytwELEg5CbG9nV2VibWVudGlvbiKiAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9saWtlL2dvb2dsZXBsdXMvMTA0NDU4ODAxMTU2MDAwNTUxODgyL3oxMjRpbHVqcnJpd3hmNGJiMDRjZHJteXl1ZjN0dGxhdDI0LzExMDE2MDQyMTExNDUxMzk3MDgyNyBodHRwOi8vcmljbS5hYy8yMDEzLzAzLzI4LzEwMDAwLXdvcmRzLww">
+      2 months, 2 weeks ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       like
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://plus.google.com/104458801156000551882/posts/ffFeoAzpnUF">plus.google.com/10445880115600...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://ricm.ac/2013/03/28/10000-words">ricm.ac/2013/03/28/100...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1409253867&key=aglzfmJyaWQtZ3lytgELEg5CbG9nV2VibWVudGlvbiKhAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9saWtlL2dvb2dsZXBsdXMvMTA0NDU4ODAxMTU2MDAwNTUxODgyL3oxMjRpbHVqcnJpd3hmNGJiMDRjZHJteXl1ZjN0dGxhdDI0LzExMDE2MDQyMTExNDUxMzk3MDgyNyBodHRwOi8vcmljbS5hYy8yMDEzLzAzLzI4LzEwMDAwLXdvcmRzDA">
+      2 months, 2 weeks ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       like
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://plus.google.com/104458801156000551882/posts/ffFeoAzpnUF">plus.google.com/10445880115600...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://ricm.ac/2013/03/28/10000-words/">ricm.ac/2013/03/28/100...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1409253853&key=aglzfmJyaWQtZ3lytwELEg5CbG9nV2VibWVudGlvbiKiAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9saWtlL2dvb2dsZXBsdXMvMTA0NDU4ODAxMTU2MDAwNTUxODgyL3oxMjRpbHVqcnJpd3hmNGJiMDRjZHJteXl1ZjN0dGxhdDI0LzExMjg2NDE0Njc5MTU2MDY5MTEwOCBodHRwOi8vcmljbS5hYy8yMDEzLzAzLzI4LzEwMDAwLXdvcmRzLww">
+      2 months, 2 weeks ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       like
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://plus.google.com/104458801156000551882/posts/ffFeoAzpnUF">plus.google.com/10445880115600...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://ricm.ac/2013/03/28/10000-words">ricm.ac/2013/03/28/100...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1409253849&key=aglzfmJyaWQtZ3lytgELEg5CbG9nV2VibWVudGlvbiKhAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9saWtlL2dvb2dsZXBsdXMvMTA0NDU4ODAxMTU2MDAwNTUxODgyL3oxMjRpbHVqcnJpd3hmNGJiMDRjZHJteXl1ZjN0dGxhdDI0LzExMjg2NDE0Njc5MTU2MDY5MTEwOCBodHRwOi8vcmljbS5hYy8yMDEzLzAzLzI4LzEwMDAwLXdvcmRzDA">
+      2 months, 2 weeks ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       like
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://plus.google.com/104458801156000551882/posts/3AeLeSNwbMD">plus.google.com/10445880115600...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://ricm.ac/2013/04/12/writers-log-12413-20000-words/">ricm.ac/2013/04/12/wri...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1409253838&key=aglzfmJyaWQtZ3ly5wELEg5CbG9nV2VibWVudGlvbiLSAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9jb21tZW50L2dvb2dsZXBsdXMvMTA0NDU4ODAxMTU2MDAwNTUxODgyL3oxM3lqbGx5c216enkzeWNnMjJod3JycW1zeWlnZHFjbC96MTN5amxseXNtenp5M3ljZzIyaHdycnFtc3lpZ2RxY2wuMTM2NjA4MjQ4MjQ4NjUyMyBodHRwOi8vcmljbS5hYy8yMDEzLzA0LzEyL3dyaXRlcnMtbG9nLTEyNDEzLTIwMDAwLXdvcmRzLww">
+      2 months, 2 weeks ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       comment
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://plus.google.com/104458801156000551882/posts/3AeLeSNwbMD">plus.google.com/10445880115600...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://ricm.ac/2013/04/12/writers-log-12413-20000-words">ricm.ac/2013/04/12/wri...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1409253835&key=aglzfmJyaWQtZ3ly5gELEg5CbG9nV2VibWVudGlvbiLRAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9jb21tZW50L2dvb2dsZXBsdXMvMTA0NDU4ODAxMTU2MDAwNTUxODgyL3oxM3lqbGx5c216enkzeWNnMjJod3JycW1zeWlnZHFjbC96MTN5amxseXNtenp5M3ljZzIyaHdycnFtc3lpZ2RxY2wuMTM2NjA4MjQ4MjQ4NjUyMyBodHRwOi8vcmljbS5hYy8yMDEzLzA0LzEyL3dyaXRlcnMtbG9nLTEyNDEzLTIwMDAwLXdvcmRzDA">
+      2 months, 2 weeks ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       comment
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://plus.google.com/104458801156000551882/posts/3AeLeSNwbMD">plus.google.com/10445880115600...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://ricm.ac/2013/04/12/writers-log-12413-20000-words/">ricm.ac/2013/04/12/wri...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1409253832&key=aglzfmJyaWQtZ3lyxwELEg5CbG9nV2VibWVudGlvbiKyAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9saWtlL2dvb2dsZXBsdXMvMTA0NDU4ODAxMTU2MDAwNTUxODgyL3oxM3lqbGx5c216enkzeWNnMjJod3JycW1zeWlnZHFjbC8xMTUyMTI4MjM5NTA0NDQ5Njc5OTMgaHR0cDovL3JpY20uYWMvMjAxMy8wNC8xMi93cml0ZXJzLWxvZy0xMjQxMy0yMDAwMC13b3Jkcy8M">
+      2 months, 2 weeks ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       like
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://plus.google.com/104458801156000551882/posts/3AeLeSNwbMD">plus.google.com/10445880115600...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://ricm.ac/2013/04/12/writers-log-12413-20000-words">ricm.ac/2013/04/12/wri...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1409253829&key=aglzfmJyaWQtZ3lyxgELEg5CbG9nV2VibWVudGlvbiKxAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9saWtlL2dvb2dsZXBsdXMvMTA0NDU4ODAxMTU2MDAwNTUxODgyL3oxM3lqbGx5c216enkzeWNnMjJod3JycW1zeWlnZHFjbC8xMTUyMTI4MjM5NTA0NDQ5Njc5OTMgaHR0cDovL3JpY20uYWMvMjAxMy8wNC8xMi93cml0ZXJzLWxvZy0xMjQxMy0yMDAwMC13b3Jkcww">
+      2 months, 2 weeks ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       like
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://plus.google.com/104458801156000551882/posts/MEeHhEYELj1">plus.google.com/10445880115600...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://ricm.ac/2013/04/08/23andme_disappointment/">ricm.ac/2013/04/08/23a...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1409253824&key=aglzfmJyaWQtZ3lywAELEg5CbG9nV2VibWVudGlvbiKrAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9saWtlL2dvb2dsZXBsdXMvMTA0NDU4ODAxMTU2MDAwNTUxODgyL3oxMzRkdG5ndHNyNHR6emZzMjJod3JycW1zeWlnZHFjbC8xMTAyMjYwOTQ1MDQwMDA4MjAxNzIgaHR0cDovL3JpY20uYWMvMjAxMy8wNC8wOC8yM2FuZG1lX2Rpc2FwcG9pbnRtZW50Lww">
+      2 months, 2 weeks ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       like
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://plus.google.com/104458801156000551882/posts/BT1UhU4rwur">plus.google.com/10445880115600...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://ricm.ac/2013/03/22/smart-watches/">ricm.ac/2013/03/22/sma...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1409253803&key=aglzfmJyaWQtZ3ly1wELEg5CbG9nV2VibWVudGlvbiLCAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9jb21tZW50L2dvb2dsZXBsdXMvMTA0NDU4ODAxMTU2MDAwNTUxODgyL3oxMzR3ajI1NG4yeWliaXR5MjJod3JycW1zeWlnZHFjbC96MTM0d2oyNTRuMnlpYml0eTIyaHdycnFtc3lpZ2RxY2wuMTM3NjkxODAzMDI4MzExMCBodHRwOi8vcmljbS5hYy8yMDEzLzAzLzIyL3NtYXJ0LXdhdGNoZXMvDA">
+      2 months, 2 weeks ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       comment
+     
+
+   </div>
+  </li>
+  
+</ul>
+
+
+</div>
+
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+
