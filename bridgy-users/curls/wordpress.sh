@@ -1,33 +1,33 @@
-curl -k https://www.brid.gy/wordpress/airbornesurfer.wordpress.com
-curl -k https://www.brid.gy/wordpress/ajohnsonkurts.wordpress.com
-curl -k https://www.brid.gy/wordpress/brandoncollins.org
-curl -k https://www.brid.gy/wordpress/chimneysweepsite.co.uk
-curl -k https://www.brid.gy/wordpress/danstephenson.ca
-curl -k https://www.brid.gy/wordpress/descary.com
-curl -k https://www.brid.gy/wordpress/dominik.wordpress.com
-curl -k https://www.brid.gy/wordpress/drgadget.com.au
-curl -k https://www.brid.gy/wordpress/eflnotes.wordpress.com
-curl -k https://www.brid.gy/wordpress/fellowshiproom.org
-curl -k https://www.brid.gy/wordpress/gaggl.com
-curl -k https://www.brid.gy/wordpress/include.aorcsik.com
-curl -k https://www.brid.gy/wordpress/jasonwoj.com
-curl -k https://www.brid.gy/wordpress/jkudish.wpsandbox.me
-curl -k https://www.brid.gy/wordpress/joshmiller.net
-curl -k https://www.brid.gy/wordpress/jrlt.wordpress.com
-curl -k https://www.brid.gy/wordpress/kylewm.wordpress.com
-curl -k https://www.brid.gy/wordpress/lalegeeducation.com
-curl -k https://www.brid.gy/wordpress/likeiwassayingblog.com
-curl -k https://www.brid.gy/wordpress/likeiwassayingblog.wordpress.com
-curl -k https://www.brid.gy/wordpress/macressler.wordpress.com
-curl -k https://www.brid.gy/wordpress/melkerh.byethost13.com
-curl -k https://www.brid.gy/wordpress/mitchsocialdog.wordpress.com
-curl -k https://www.brid.gy/wordpress/musicfordeckchairs.wordpress.com
-curl -k https://www.brid.gy/wordpress/nikolnieto.me
-curl -k https://www.brid.gy/wordpress/peterccook.com
-curl -k https://www.brid.gy/wordpress/ricm.ac
-curl -k https://www.brid.gy/wordpress/ryandc.wordpress.com
-curl -k https://www.brid.gy/wordpress/scopolagnia.wordpress.com
-curl -k https://www.brid.gy/wordpress/scribblesandsnaps.com
-curl -k https://www.brid.gy/wordpress/strangeminds.org
-curl -k https://www.brid.gy/wordpress/tedtschopp.wordpress.com
-curl -k https://www.brid.gy/wordpress/tschopp.net
+curl -k https://www.brid.gy/wordpress/airbornesurfer.wordpress.com > s/airbornesurfer.wordpress.com.html
+curl -k https://www.brid.gy/wordpress/ajohnsonkurts.wordpress.com > s/ajohnsonkurts.wordpress.com.html
+curl -k https://www.brid.gy/wordpress/brandoncollins.org > s/brandoncollins.org.html
+curl -k https://www.brid.gy/wordpress/chimneysweepsite.co.uk > s/chimneysweepsite.co.uk.html
+curl -k https://www.brid.gy/wordpress/danstephenson.ca > s/danstephenson.ca.html
+curl -k https://www.brid.gy/wordpress/descary.com > s/descary.com.html
+curl -k https://www.brid.gy/wordpress/dominik.wordpress.com > s/dominik.wordpress.com.html
+curl -k https://www.brid.gy/wordpress/drgadget.com.au > s/drgadget.com.au.html
+curl -k https://www.brid.gy/wordpress/eflnotes.wordpress.com > s/eflnotes.wordpress.com.html
+curl -k https://www.brid.gy/wordpress/fellowshiproom.org > s/fellowshiproom.org.html
+curl -k https://www.brid.gy/wordpress/gaggl.com > s/gaggl.com.html
+curl -k https://www.brid.gy/wordpress/include.aorcsik.com > s/include.aorcsik.com.html
+curl -k https://www.brid.gy/wordpress/jasonwoj.com > s/jasonwoj.com.html
+curl -k https://www.brid.gy/wordpress/jkudish.wpsandbox.me > s/jkudish.wpsandbox.me.html
+curl -k https://www.brid.gy/wordpress/joshmiller.net > s/joshmiller.net.html
+curl -k https://www.brid.gy/wordpress/jrlt.wordpress.com > s/jrlt.wordpress.com.html
+curl -k https://www.brid.gy/wordpress/kylewm.wordpress.com > s/kylewm.wordpress.com.html
+curl -k https://www.brid.gy/wordpress/lalegeeducation.com > s/lalegeeducation.com.html
+curl -k https://www.brid.gy/wordpress/likeiwassayingblog.com > s/likeiwassayingblog.com.html
+curl -k https://www.brid.gy/wordpress/likeiwassayingblog.wordpress.com > s/likeiwassayingblog.wordpress.com.html
+curl -k https://www.brid.gy/wordpress/macressler.wordpress.com > s/macressler.wordpress.com.html
+curl -k https://www.brid.gy/wordpress/melkerh.byethost13.com > s/melkerh.byethost13.com.html
+curl -k https://www.brid.gy/wordpress/mitchsocialdog.wordpress.com > s/mitchsocialdog.wordpress.com.html
+curl -k https://www.brid.gy/wordpress/musicfordeckchairs.wordpress.com > s/musicfordeckchairs.wordpress.com.html
+curl -k https://www.brid.gy/wordpress/nikolnieto.me > s/nikolnieto.me.html
+curl -k https://www.brid.gy/wordpress/peterccook.com > s/peterccook.com.html
+curl -k https://www.brid.gy/wordpress/ricm.ac > s/ricm.ac.html
+curl -k https://www.brid.gy/wordpress/ryandc.wordpress.com > s/ryandc.wordpress.com.html
+curl -k https://www.brid.gy/wordpress/scopolagnia.wordpress.com > s/scopolagnia.wordpress.com.html
+curl -k https://www.brid.gy/wordpress/scribblesandsnaps.com > s/scribblesandsnaps.com.html
+curl -k https://www.brid.gy/wordpress/strangeminds.org > s/strangeminds.org.html
+curl -k https://www.brid.gy/wordpress/tedtschopp.wordpress.com > s/tedtschopp.wordpress.com.html
+curl -k https://www.brid.gy/wordpress/tschopp.net > s/tschopp.net.html

@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Stephen Downes (Blogger) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="http://halfanhour.blogspot.com/" title="Stephen Downes (Blogger)"
+   class="u-url">
+  <img class="profile u-photo" src="https://lh5.googleusercontent.com/-Tkle19ZYFAM/AAAAAAAAAAI/AAAAAAAAIDo/rY__y8EocVE/s512-c/photo.jpg" width="64px" />
+  <img src="/static/blogger_icon.png"
+       
+       alt="Blogger" />
+  <span class="p-name">Stephen Downes</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://halfanhour.blogspot.com/" class="publish-domain u-url">halfanhour.blogspot.com</a>
+
+
+
+</div>
+
+
+
+
+<!-- Banner for blogs that aren't yet advertising the webmention endpoint -->
+
+
+<div class="row">
+
+<p class="big">You're all set! Check out your recent
+<a href="#blogposts">blog posts</a> and <a href="#webmentions">webmentions</a>.
+  <!-- This currently 500s :/ -->
+  <!-- <a href="http://indiewebify.me/send-webmentions/?url="> -->
+  <!--   Try a webmention!</a> -->
+</p>
+
+
+<form method="post" action="/delete/start">
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyFQsSB0Jsb2dnZXIiCDExNjc5NzE0DA" />
+  <input name="feature" type="hidden" value="webmention" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+          title="Disable this account. (Won't delete webmentions you've already sent or received.)">Disable</button>
+</form>
+</div>
+
+
+<!-- Signup button -->
+
+
+
+
+
+
+<!-- Blog posts -->
+<div id="blogposts" class="row">
+
+<p class="big">Recent blog posts:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://halfanhour.blogspot.com/2014/10/constructivism-and-eliminative.html">Constructivism and Eliminative Materiali...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1413370455&key=aglzfmJyaWQtZ3lyWAsSCEJsb2dQb3N0IkpodHRwOi8vaGFsZmFuaG91ci5ibG9nc3BvdC5jb20vMjAxNC8xMC9jb25zdHJ1Y3RpdmlzbS1hbmQtZWxpbWluYXRpdmUuaHRtbAw">
+      1 month ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://innovationmemes.blogspot.ca/2014/10/constructivism-and-eliminative.html">innovationmemes.blogspot.ca/2014/10/constr...</a></li>
+	<li><a class="original-post" target="_blank" href="http://innovationmemes.blogspot.com/2014/10/constructivism-and-eliminative.html">innovationmemes.blogspot.com/2014/10/constr...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://halfanhour.blogspot.com/2014/10/positivism-and-big-data.html">Positivism and Big Data</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1413202091&key=aglzfmJyaWQtZ3lyUQsSCEJsb2dQb3N0IkNodHRwOi8vaGFsZmFuaG91ci5ibG9nc3BvdC5jb20vMjAxNC8xMC9wb3NpdGl2aXNtLWFuZC1iaWctZGF0YS5odG1sDA">
+      1 month ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://thenewinquiry.com/essays/view-from-nowhere/">thenewinquiry.com/essays/view-fr...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://halfanhour.blogspot.com/2014/10/moocthink.html">MOOCthink</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1412588085&key=aglzfmJyaWQtZ3lyQwsSCEJsb2dQb3N0IjVodHRwOi8vaGFsZmFuaG91ci5ibG9nc3BvdC5jb20vMjAxNC8xMC9tb29jdGhpbmsuaHRtbAw">
+      1 month, 1 week ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.tonybates.ca/2014/10/01/the-role-of-communities-of-practice-in-a-digital-age/comment-page-1/#comment-920867">tonybates.ca/2014/10/01/the... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://halfanhour.blogspot.com/2014/09/beyond-assessment-recognizing.html">Beyond Assessment ‑ Recognizing Achievem...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1411494623&key=aglzfmJyaWQtZ3lyVwsSCEJsb2dQb3N0IklodHRwOi8vaGFsZmFuaG91ci5ibG9nc3BvdC5jb20vMjAxNC8wOS9iZXlvbmQtYXNzZXNzbWVudC1yZWNvZ25pemluZy5odG1sDA">
+      1 month, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://zhaolearning.com/2014/05/25/not-interested-in-being-1-shanghai-may-ditch-pisa">zhaolearning.com/2014/05/25/not... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li>
+	<li><a class="original-post" target="_blank" href="http://www.sharenator.com/image/10288">sharenator.com/image/10288 <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://fortune.com/2014/05/27/a-tennis-racquet-that-isnt-just-strung-but-wired/">fortune.com/2014/05/27/a-t...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.academia.edu/611581/On_Maturana_and_Varelas_Aphorism_of_Knowing_Being_and_Doing_A_Phenomenological-Complexity_Circulation">academia.edu/611581/On_Matu...</a></li>
+	<li><a class="original-post" target="_blank" href="http://bits.blogs.nytimes.com/2014/06/15/looking-at-link-between-violent-video-games-and-lack-of-empathy/?_php=true&_type=blogs&_r=0">bits.blogs.nytimes.com/2014/06/15/loo...</a></li>
+	<li><a class="original-post" target="_blank" href="http://thelearningcurve.pearson.com/reports/the-learning-curve-report-2014">thelearningcurve.pearson.com/reports/the-le...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.downes.ca/post/62137">downes.ca/post/62137</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.achievementstandards.org/">achievementstandards.org/</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.daveswhiteboard.com/archives/5265">daveswhiteboard.com/archives/5265</a></li>
+	<li><a class="original-post" target="_blank" href="http://natureinstitute.org/txt/st/org/comm/ar/2014/machines_18.htm">natureinstitute.org/txt/st/org/com...</a></li>
+	<li><a class="original-post" target="_blank" href="https://www.insidehighered.com/news/2014/06/03/conde-nast-team-venture-fund-create-college-courses-credentials">insidehighered.com/news/2014/06/0...</a></li>
+	<li><a class="original-post" target="_blank" href="http://epress.lib.uts.edu.au/journals/index.php/JLA/article/view/3339">epress.lib.uts.edu.au/journals/index...</a></li>
+	<li><a class="original-post" target="_blank" href="http://blogs.edweek.org/edweek/DigitalEducation/2014/04/google_halts_scanning_of_stude.html">blogs.edweek.org/edweek/Digital...</a></li>
+	<li><a class="original-post" target="_blank" href="http://blogs.kqed.org/mindshift/2014/06/going-all-in-how-to-make-competency-based-learning-work/">blogs.kqed.org/mindshift/2014...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.universityaffairs.ca/competency-based-degree-programs-are-growing-in-the-us.aspx">universityaffairs.ca/competency-bas...</a></li>
+	<li><a class="original-post" target="_blank" href="http://chronicle.com/blogs/wiredcampus/emailed-in-error-uva-law-schools-student-spreadsheet-spreads-fast/53133">chronicle.com/blogs/wiredcam...</a></li>
+	<li><a class="original-post" target="_blank" href="http://eduvation.ca/ideas/competency-based-degrees/">eduvation.ca/ideas/competen...</a></li>
+	<li><a class="original-post" target="_blank" href="http://alexnisnevich.github.io/untrusted/">alexnisnevich.github.io/untrusted/</a></li>
+	<li><a class="original-post" target="_blank" href="http://celt.uwindsor.ca/ojs/leddy/index.php/CELT/article/view/3976">celt.uwindsor.ca/ojs/leddy/inde...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.aconventional.com/2014/06/learning-explained.html">aconventional.com/2014/06/learni...</a></li>
+	<li><a class="original-post" target="_blank" href="http://academica.ca/top-ten/competency-based-degrees-continue-gain-popularity">academica.ca/top-ten/compet...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.cbc.ca/spark/blog/2014/04/27/hr-tech/">cbc.ca/spark/blog/201...</a></li>
+	<li><a class="original-post" target="_blank" href="http://chronicle.com/blogs/ticker/scientists-calculate-your-chances-of-success-in-academe/79063">chronicle.com/blogs/ticker/s...</a></li>
+	<li><a class="original-post" target="_blank" href="http://celt.uwindsor.ca/ojs/leddy/index.php/CELT/article/view/3981">celt.uwindsor.ca/ojs/leddy/inde...</a></li>
+	<li><a class="original-post" target="_blank" href="http://acreelman.blogspot.ca/2014/06/passport-for-learning.html">acreelman.blogspot.ca/2014/06/passpo...</a></li>
+	<li><a class="original-post" target="_blank" href="http://cogdogblog.com/2014/06/25/to-badge-yourself-or-to-be-badged/">cogdogblog.com/2014/06/25/to-...</a></li>
+	<li><a class="original-post" target="_blank" href="http://vmpass.eu/">vmpass.eu/</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.nytimes.com/2014/06/01/business/business-school-disrupted.html?_r=1">nytimes.com/2014/06/01/bus...</a></li>
+	<li><a class="original-post" target="_blank" href="http://cloudcomputing.sys-con.com/node/3069314">cloudcomputing.sys-con.com/node/3069314</a></li>
+	<li><a class="original-post" target="_blank" href="https://www.wiziq.com/Sign_In.aspx?show=0&tmout=1&type=NoCookies">wiziq.com/Sign_In.aspx?s...</a></li>
+	<li><a class="original-post" target="_blank" href="http://education-curriculum-reform-government-schools.org/w/2014/04/parents-force-shutdown-of-gates-inbloom-student-data-collection/">education-curriculum-reform-government-schools.org/w/2014/04/pare...</a></li>
+	<li><a class="original-post" target="_blank" href="https://www.insidehighered.com/news/2014/06/27/amusing-video-has-professors-read-aloud-harsh-student-reviews">insidehighered.com/news/2014/06/2...</a></li>
+	<li><a class="original-post" target="_blank" href="http://chronicle.com/blognetwork/castingoutnines/2014/03/05/creating-learning-objectives-flipped-classroom-style/">chronicle.com/blognetwork/ca...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.gardnercampbell.net/blog1/?p=2239">gardnercampbell.net/blog1/?p=2239</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.oliverquinlan.com/blog/2014/06/11/theory-of-change-in-education/">oliverquinlan.com/blog/2014/06/1...</a></li>
+	<li><a class="original-post" target="_blank" href="http://dangerouslyirrelevant.org/2014/06/ed-tech-behaviorism.html">dangerouslyirrelevant.org/2014/06/ed-tec...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.universitybusiness.com/article/lecture-capture-privacy-please">universitybusiness.com/article/lectur...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.downes.ca/post/20">downes.ca/post/20</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.safegov.org/2014/4/28/why-did-inbloom-die-a-hard-lesson-about-education-privacy">safegov.org/2014/4/28/why-...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.cbc.ca/news/technology/canada-s-new-anti-spam-law-can-it-really-clean-up-your-inbox-1.2688773">cbc.ca/news/technolog...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.cbc.ca/spark/blog/2014/04/27/personal-education/">cbc.ca/spark/blog/201...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.teachthought.com/learning/solving-the-problem-of-modern-assessment/">teachthought.com/learning/solvi...</a></li>
+	<li><a class="original-post" target="_blank" href="http://flowingdata.com/2014/07/02/jobs-charted-by-state-and-salary/">flowingdata.com/2014/07/02/job...</a></li>
+	<li><a class="original-post" target="_blank" href="http://googleforwork.blogspot.com/2014/04/protecting-students-with-google-apps.html">googleforwork.blogspot.com/2014/04/protec...</a></li>
+	<li><a class="original-post" target="_blank" href="http://vimeo.com/95196331">vimeo.com/95196331</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.articulate.com/rapid-elearning/secret-formula-becoming-e-learning-pro/">articulate.com/rapid-elearnin...</a></li>
+	<li><a class="original-post" target="_blank" href="http://pde.cc/">pde.cc/</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.bbc.com/future/story/20140609-how-online-bots-are-tricking-you">bbc.com/future/story/2...</a></li>
+	<li><a class="original-post" target="_blank" href="http://rt.com/news/163968-nsa-proof-server-crowdfunding/">rt.com/news/163968-ns...</a></li>
+	<li><a class="original-post" target="_blank" href="http://marketingland.com/yahoo-ditches-track-will-signal-end-privacy-initiative-82384">marketingland.com/yahoo-ditches-...</a></li>
+	<li><a class="original-post" target="_blank" href="https://www.insidehighered.com/news/2014/06/13/aaup-conference-sessions-focus-academic-freedom-relation-social-media">insidehighered.com/news/2014/06/1...</a></li>
+	<li><a class="original-post" target="_blank" href="http://chronicle.com/article/Writing-Instructor-Skeptical/146211">chronicle.com/article/Writin...</a></li>
+	<li><a class="original-post" target="_blank" href="https://www.princeton.edu/~achaney/tmve/wiki100k/docs/Chatterbot.html">princeton.edu/~achaney/tmve/...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.cbc.ca/player/News/Canada/Audio/ID/2461862894">cbc.ca/player/News/Ca...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.universityaffairs.ca/how-artificial-intelligence-is-about-to-disrupt-higher-education.aspx">universityaffairs.ca/how-artificial...</a></li>
+	<li><a class="original-post" target="_blank" href="http://learninglocker.net/">learninglocker.net/</a></li>
+	<li><a class="original-post" target="_blank" href="http://blogs.forrester.com/nate_elliott/14-06-24-facebook_still_dominates_teens_social_usage">blogs.forrester.com/nate_elliott/1...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.elsua.net/2014/05/06/why-i-too-killed-my-linkedin-account/">elsua.net/2014/05/06/why...</a></li>
+	<li><a class="original-post" target="_blank" href="http://bigstory.ap.org/article/gates-funded-student-data-group-shut-down">bigstory.ap.org/article/gates-...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.hrexaminer.com/why-i-killed-my-linkedin-account/">hrexaminer.com/why-i-killed-m...</a></li>
+	<li><a class="original-post" target="_blank" href="http://en.wikipedia.org/wiki/Chatbot">en.wikipedia.org/wiki/Chatbot</a></li>
+	<li><a class="original-post" target="_blank" href="http://blog.udacity.com/2014/06/announcing-nanodegrees-new-type-of.html">blog.udacity.com/2014/06/announ...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.hybridpedagogy.com/journal/mooc-problem/">hybridpedagogy.com/journal/mooc-p...</a></li>
+	<li><a class="original-post" target="_blank" href="http://mechanicalturk.typepad.com/blog/2013/10/canadas-national-research-council-builds-huge-word-emotion-lexicon-using-mechanical-turk-.html">mechanicalturk.typepad.com/blog/2013/10/c...</a></li>
+	<li><a class="original-post" target="_blank" href="http://business.financialpost.com/2014/05/12/employers-must-start-investing-in-skills-training-or-risk-having-public-policy-nudge-them-along/">business.financialpost.com/2014/05/12/emp...</a></li>
+	<li><a class="original-post" target="_blank" href="http://dougbelshaw.com/blog/2014/04/23/software-with-shareholders/">dougbelshaw.com/blog/2014/04/2...</a></li>
+	<li><a class="original-post" target="_blank" href="http://abovethelaw.com/2014/06/oops-top-law-school-email-screw-up-reveals-grades-ranks-of-all-clerkship-applicants/?show=comments">abovethelaw.com/2014/06/oops-t...</a></li>
+	<li><a class="original-post" target="_blank" href="https://emedtravel.wordpress.com/page/16/">emedtravel.wordpress.com/page/16/</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.pnas.org/content/111/24/8788.full">pnas.org/content/111/24...</a></li>
+	<li><a class="original-post" target="_blank" href="http://architectures.danlockton.co.uk/2014/04/21/introducing-powerchord-blackbird-edition/">architectures.danlockton.co.uk/2014/04/21/int...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.theglobeandmail.com/technology/tech-news/facebook-psychology-experiment-raises-ire/article19386909/">theglobeandmail.com/technology/tec...</a></li>
+	<li><a class="original-post" target="_blank" href="http://educationaltechnologyguy.blogspot.ca/2014/06/google-announces-google-educator-groups.html">educationaltechnologyguy.blogspot.ca/2014/06/google...</a></li>
+	<li><a class="original-post" target="_blank" href="http://gameswithpurpose.org/untrusted/">gameswithpurpose.org/untrusted/</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.hackeducation.com/2014/06/07/what-should-technologists-know-about-education/">hackeducation.com/2014/06/07/wha...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www-nc.nytimes.com/2007/04/27/us/27mit.html?=_r=6&">www-nc.nytimes.com/2007/04/27/us/...</a></li>
+	<li><a class="original-post" target="_blank" href="http://vikparuchuri.com/blog/on-the-automated-scoring-of-essays/">vikparuchuri.com/blog/on-the-au...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.jarche.com/2014/06/mastering-the-internet-of-everything/">jarche.com/2014/06/master...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.inc.com/magazine/201407/ceo-of-wickr-leads-social-media-resistance-movement.html">inc.com/magazine/20140...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.qualt.com/">qualt.com/</a></li>
+	<li><a class="original-post" target="_blank" href="http://heqco.ca/en-CA/Research/Research%20Publications/Pages/Summary.aspx?link=139">heqco.ca/en-CA/Research...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.essentiallifeskills.net/ludwig-wittgenstein-philosophy.html">essentiallifeskills.net/ludwig-wittgen...</a></li>
+	<li><a class="original-post" target="_blank" href="https://newsletter.alt.ac.uk/2014/06/alt-issues-first-open-badges-as-part-of-octel-and-releases-plugin-to-the-community/">newsletter.alt.ac.uk/2014/06/alt-is...</a></li>
+	<li><a class="original-post" target="_blank" href="https://newsletter.alt.ac.uk/2014/05/alt-members-views-on-learning-analytics/">newsletter.alt.ac.uk/2014/05/alt-me...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.ht2.co.uk/ben/?tag=learning-locker">ht2.co.uk/ben/?tag=learn...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.theedublogger.com/2014/06/12/curation/">theedublogger.com/2014/06/12/cur...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.apa.org/monitor/oct05/mirror.aspx">apa.org/monitor/oct05/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://halfanhour.blogspot.com/2014/09/bader-alsaleh-september-17-riyadh.html">Bader A. Alsaleh - September 17, Riyadh ...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1410945989&key=aglzfmJyaWQtZ3lyWwsSCEJsb2dQb3N0Ik1odHRwOi8vaGFsZmFuaG91ci5ibG9nc3BvdC5jb20vMjAxNC8wOS9iYWRlci1hbHNhbGVoLXNlcHRlbWJlci0xNy1yaXlhZGguaHRtbAw">
+      2 months ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://halfanhour.blogspot.com/2014/09/steve-wheeler-september-17-riyadh-notes.html">Steve Wheeler - September 17, Riyadh - N...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1410940857&key=aglzfmJyaWQtZ3lyYQsSCEJsb2dQb3N0IlNodHRwOi8vaGFsZmFuaG91ci5ibG9nc3BvdC5jb20vMjAxNC8wOS9zdGV2ZS13aGVlbGVyLXNlcHRlbWJlci0xNy1yaXlhZGgtbm90ZXMuaHRtbAw">
+      2 months ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://halfanhour.blogspot.com/2014/09/diego-leal-september-12-pereira-notes.html">Diego Leal - September 12, Pereira - Not...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1410940791&key=aglzfmJyaWQtZ3lyXwsSCEJsb2dQb3N0IlFodHRwOi8vaGFsZmFuaG91ci5ibG9nc3BvdC5jb20vMjAxNC8wOS9kaWVnby1sZWFsLXNlcHRlbWJlci0xMi1wZXJlaXJhLW5vdGVzLmh0bWwM">
+      2 months ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://reaprender.org">reaprender.org <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://halfanhour.blogspot.com/2014/06/the-achievement-gap.html">The Achievement Gap</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1410103499&key=aglzfmJyaWQtZ3lyTQsSCEJsb2dQb3N0Ij9odHRwOi8vaGFsZmFuaG91ci5ibG9nc3BvdC5jb20vMjAxNC8wNi90aGUtYWNoaWV2ZW1lbnQtZ2FwLmh0bWwM">
+      2 months, 1 week ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://anniemurphypaul.com/2014/06/educational-technology-isnt-closing-achievement-gaps-its-making-them-grow">anniemurphypaul.com/2014/06/educat... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.americasquarterly.org/warschauer">americasquarterly.org/warschauer</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://halfanhour.blogspot.com/2014/06/the-facebook-research.html">The Facebook Research</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1410102958&key=aglzfmJyaWQtZ3lyTwsSCEJsb2dQb3N0IkFodHRwOi8vaGFsZmFuaG91ci5ibG9nc3BvdC5jb20vMjAxNC8wNi90aGUtZmFjZWJvb2stcmVzZWFyY2guaHRtbAw">
+      2 months, 1 week ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://halfanhour.blogspot.com/2014/07/my-top-tools-2014.html">My Top Tools 2014</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1410103055&key=aglzfmJyaWQtZ3lySwsSCEJsb2dQb3N0Ij1odHRwOi8vaGFsZmFuaG91ci5ibG9nc3BvdC5jb20vMjAxNC8wNy9teS10b3AtdG9vbHMtMjAxNC5odG1sDA">
+      2 months, 1 week ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.c4lpt.co.uk/blog/2014/07/15/have-you-voted-yet-for-the-top-100-tools-for-learning-2014/">c4lpt.co.uk/blog/2014/07/1...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.jarche.com/2014/07/my-top-tools-2014/">jarche.com/2014/07/my-top...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+</div>
+
+
+<!-- Incoming blog webmentions -->
+<div id="webmentions" class="row">
+
+<p class="big">Recent
+  <a href="http://indiewebify.me/#send-webmentions">webmentions</a>:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/aaalarcont/status/522615516503224321">twitter.com/aaalarcont/sta...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://halfanhour.blogspot.com/2014/10/constructivism-and-eliminative.html">halfanhour.blogspot.com/2014/10/constr...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1413436279&key=aglzfmJyaWQtZ3lytwELEg5CbG9nV2VibWVudGlvbiKiAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9yZXBvc3QvdHdpdHRlci9Eb3duZXMvNTIyMzQ1NzI2NTA5MzQ2ODE2LzUyMjYxNTUxNjUwMzIyNDMyMSBodHRwOi8vaGFsZmFuaG91ci5ibG9nc3BvdC5jb20vMjAxNC8xMC9jb25zdHJ1Y3RpdmlzbS1hbmQtZWxpbWluYXRpdmUuaHRtbAw">
+      1 month ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       repost
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/mdeumuc/status/522366157740077057">twitter.com/mdeumuc/status...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://halfanhour.blogspot.com/2014/10/constructivism-and-eliminative.html">halfanhour.blogspot.com/2014/10/constr...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1413376954&key=aglzfmJyaWQtZ3lytwELEg5CbG9nV2VibWVudGlvbiKiAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9yZXBvc3QvdHdpdHRlci9Eb3duZXMvNTIyMzQ1NzI2NTA5MzQ2ODE2LzUyMjM2NjE1Nzc0MDA3NzA1NyBodHRwOi8vaGFsZmFuaG91ci5ibG9nc3BvdC5jb20vMjAxNC8xMC9jb25zdHJ1Y3RpdmlzbS1hbmQtZWxpbWluYXRpdmUuaHRtbAw">
+      1 month ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       repost
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/mathtech/status/522354612796682240">twitter.com/mathtech/statu...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://halfanhour.blogspot.com/2014/10/constructivism-and-eliminative.html">halfanhour.blogspot.com/2014/10/constr...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1413374084&key=aglzfmJyaWQtZ3lytwELEg5CbG9nV2VibWVudGlvbiKiAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9yZXBvc3QvdHdpdHRlci9Eb3duZXMvNTIyMzQ1NzI2NTA5MzQ2ODE2LzUyMjM1NDYxMjc5NjY4MjI0MCBodHRwOi8vaGFsZmFuaG91ci5ibG9nc3BvdC5jb20vMjAxNC8xMC9jb25zdHJ1Y3RpdmlzbS1hbmQtZWxpbWluYXRpdmUuaHRtbAw">
+      1 month ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       repost
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/Downes/status/522345726509346816">twitter.com/Downes/status/...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://halfanhour.blogspot.com/2014/10/constructivism-and-eliminative.html">halfanhour.blogspot.com/2014/10/constr...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1413374050&key=aglzfmJyaWQtZ3lyqwELEg5CbG9nV2VibWVudGlvbiKWAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9saWtlL3R3aXR0ZXIvRG93bmVzLzUyMjM0NTcyNjUwOTM0NjgxNi8xNDMyMDg1MCBodHRwOi8vaGFsZmFuaG91ci5ibG9nc3BvdC5jb20vMjAxNC8xMC9jb25zdHJ1Y3RpdmlzbS1hbmQtZWxpbWluYXRpdmUuaHRtbAw">
+      1 month ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       like
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/Downes/status/522345726509346816">twitter.com/Downes/status/...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://halfanhour.blogspot.com/2014/10/constructivism-and-eliminative.html">halfanhour.blogspot.com/2014/10/constr...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1413372812&key=aglzfmJyaWQtZ3lyrAELEg5CbG9nV2VibWVudGlvbiKXAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9saWtlL3R3aXR0ZXIvRG93bmVzLzUyMjM0NTcyNjUwOTM0NjgxNi8xMzc0NTE3NjIgaHR0cDovL2hhbGZhbmhvdXIuYmxvZ3Nwb3QuY29tLzIwMTQvMTAvY29uc3RydWN0aXZpc20tYW5kLWVsaW1pbmF0aXZlLmh0bWwM">
+      1 month ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       like
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/Downes/status/521638621557039104">twitter.com/Downes/status/...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://halfanhour.blogspot.com/2014/10/positivism-and-big-data.html">halfanhour.blogspot.com/2014/10/positi...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1413218178&key=aglzfmJyaWQtZ3lypQELEg5CbG9nV2VibWVudGlvbiKQAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9saWtlL3R3aXR0ZXIvRG93bmVzLzUyMTYzODYyMTU1NzAzOTEwNC80ODg3ODY0NDYgaHR0cDovL2hhbGZhbmhvdXIuYmxvZ3Nwb3QuY29tLzIwMTQvMTAvcG9zaXRpdmlzbS1hbmQtYmlnLWRhdGEuaHRtbAw">
+      1 month ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       like
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/bibianajou/status/521644526067134464">twitter.com/bibianajou/sta...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://halfanhour.blogspot.com/2014/10/positivism-and-big-data.html">halfanhour.blogspot.com/2014/10/positi...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1413206721&key=aglzfmJyaWQtZ3lysAELEg5CbG9nV2VibWVudGlvbiKbAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9yZXBvc3QvdHdpdHRlci9Eb3duZXMvNTIxNjM4NjIxNTU3MDM5MTA0LzUyMTY0NDUyNjA2NzEzNDQ2NCBodHRwOi8vaGFsZmFuaG91ci5ibG9nc3BvdC5jb20vMjAxNC8xMC9wb3NpdGl2aXNtLWFuZC1iaWctZGF0YS5odG1sDA">
+      1 month ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       repost
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/wisdom_12/status/512605120698138625">twitter.com/wisdom_12/stat...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://halfanhour.blogspot.com/2014/09/bader-alsaleh-september-17-riyadh.html">halfanhour.blogspot.com/2014/09/bader-...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1411050133&key=aglzfmJyaWQtZ3lyugELEg5CbG9nV2VibWVudGlvbiKlAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9yZXBvc3QvdHdpdHRlci9Eb3duZXMvNTEyMTcyNDgyMjg4NDIyOTEyLzUxMjYwNTEyMDY5ODEzODYyNSBodHRwOi8vaGFsZmFuaG91ci5ibG9nc3BvdC5jb20vMjAxNC8wOS9iYWRlci1hbHNhbGVoLXNlcHRlbWJlci0xNy1yaXlhZGguaHRtbAw">
+      1 month, 4 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       repost
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/durmbeat/status/512574509946122240">twitter.com/durmbeat/statu...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://halfanhour.blogspot.com/2014/09/bader-alsaleh-september-17-riyadh.html">halfanhour.blogspot.com/2014/09/bader-...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1411042318&key=aglzfmJyaWQtZ3lyugELEg5CbG9nV2VibWVudGlvbiKlAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9yZXBvc3QvdHdpdHRlci9Eb3duZXMvNTEyMTcyNDgyMjg4NDIyOTEyLzUxMjU3NDUwOTk0NjEyMjI0MCBodHRwOi8vaGFsZmFuaG91ci5ibG9nc3BvdC5jb20vMjAxNC8wOS9iYWRlci1hbHNhbGVoLXNlcHRlbWJlci0xNy1yaXlhZGguaHRtbAw">
+      1 month, 4 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       repost
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/ba_alsaleh/status/512551914538422272">twitter.com/ba_alsaleh/sta...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://halfanhour.blogspot.com/2014/09/bader-alsaleh-september-17-riyadh.html">halfanhour.blogspot.com/2014/09/bader-...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1411037381&key=aglzfmJyaWQtZ3lyuwELEg5CbG9nV2VibWVudGlvbiKmAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9jb21tZW50L3R3aXR0ZXIvRG93bmVzLzUxMjE3MjQ4MjI4ODQyMjkxMi81MTI1NTE5MTQ1Mzg0MjIyNzIgaHR0cDovL2hhbGZhbmhvdXIuYmxvZ3Nwb3QuY29tLzIwMTQvMDkvYmFkZXItYWxzYWxlaC1zZXB0ZW1iZXItMTctcml5YWRoLmh0bWwM">
+      1 month, 4 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       comment
+     
+
+   </div>
+  </li>
+  
+</ul>
+
+
+</div>
+
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

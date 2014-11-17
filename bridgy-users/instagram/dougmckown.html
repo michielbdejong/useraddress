@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Doug McKown (Instagram) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="http://instagram.com/dougmckown" title="Doug McKown (Instagram)"
+   class="u-url">
+  <img class="profile u-photo" src="https://distillery.s3.amazonaws.com/profiles/profile_106998_75sq_1366696815.jpg" width="64px" />
+  <img src="/static/instagram_icon.png"
+       
+       alt="Instagram" />
+  <span class="p-name">Doug McKown</span></a>
+
+
+<!-- TODO: make this work without javascript too -->
+<a href="#" onclick="document.forms['listen-instagram-start'].submit();
+                     return false;">
+  <span class="glyphicon glyphicon-pause"
+        title="This account was disconnected on Instagram's end. Click to reconnect it!">
+</span></a>
+
+
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class=" big">
+
+
+Click to enable <a href="/about#listen">listening</a>:
+
+<!-- Instagram listen signup -->
+<form method="post" name="listen-instagram-start" action="/instagram/start" class="signup">
+  <input type="image" alt="Sign in with Instagram"
+         src="/activitystreams/oauth_dropins/static/instagram.png" />
+  <input name="feature" type="hidden" value="listen" />
+</form>
+
+
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/tina"
+       title="tina ly johnston">
+      <img class="profile" src="https://distillery.s3.amazonaws.com/profiles/profile_12806_75sq_1366149945.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/jGOsUZTZiR/">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/jGOsUZTZiR/">
+      
+        🚲 the day we showed the ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      7 months, 3 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/jamieritzdorf"
+       title="Jamie Ritzdorf">
+      <img class="profile" src="https://distillery.s3.amazonaws.com/profiles/profile_8643817_75sq_1389483876.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/jGONPnQ6fh/">
+        @sherwood_m let's go</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="http://instagram.com/p/jGONPnQ6fh/">
+      
+        Sending it! Yup it was that ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      7 months, 3 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/njyia_29"
+       title="Niko Y">
+      <img class="profile" src="https://distillery.s3.amazonaws.com/profiles/profile_50640865_75sq_1372663348.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/jF5PlKIVf3/">
+        @adoubleyoo looks like your picture</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="http://instagram.com/p/jF5PlKIVf3/">
+      
+        A #seagull hovers over the #hudsonriver ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      7 months, 3 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/tomparkher"
+       title="Tom Parker">
+      <img class="profile" src="https://distillery.s3.amazonaws.com/profiles/profile_2775928_75sq_1380158359.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/jGJvgQyZ-N/">
+        Awesome, what a group!</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="http://instagram.com/p/jGJvgQyZ-N/">
+      
+        The 8th Worldwide Instameet in Vancouver ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      7 months, 3 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/stefankarlstrom"
+       title="^Stefan Karlström^">
+      <img class="profile" src="https://distillery.s3.amazonaws.com/profiles/profile_219500426_75sq_1380776135.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/jGJvgQyZ-N/">
+        Great group! 👌</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="http://instagram.com/p/jGJvgQyZ-N/">
+      
+        The 8th Worldwide Instameet in Vancouver ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      7 months, 3 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/whitneynagle"
+       title="*^w h i t  n a g l e*^">
+      <img class="profile" src="https://distillery.s3.amazonaws.com/profiles/profile_318577396_75sq_1389476783.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/jGONPnQ6fh/">
+        Cool!</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="http://instagram.com/p/jGONPnQ6fh/">
+      
+        Sending it! Yup it was that ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      7 months, 3 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/maud_doyle"
+       title="maud_doyle">
+      <img class="profile" src="https://distillery.s3.amazonaws.com/profiles/profile_186193201_75sq_1369609535.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/jF5PlKIVf3/">
+        @lilygad</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="http://instagram.com/p/jF5PlKIVf3/">
+      
+        A #seagull hovers over the #hudsonriver ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      7 months, 3 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/thederekwildstar"
+       title="thederekwildstar">
+      <img class="profile" src="https://distillery.s3.amazonaws.com/profiles/profile_208158146_75sq_1348451706.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/jGONPnQ6fh/">
+        Yeah... @jimdelzer is officially a photographer.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="http://instagram.com/p/jGONPnQ6fh/">
+      
+        Sending it! Yup it was that ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      7 months, 3 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/blistergearreview"
+       title="Blister Gear Review">
+      <img class="profile" src="https://distillery.s3.amazonaws.com/profiles/profile_50916664_75sq_1335999525.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/jGONPnQ6fh/">
+        Sick!!</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="http://instagram.com/p/jGONPnQ6fh/">
+      
+        Sending it! Yup it was that ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      7 months, 3 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/memyselfandicecream"
+       title="Anthony">
+      <img class="profile" src="https://distillery.s3.amazonaws.com/profiles/profile_25681721_75sq_1383070289.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/jGLkqrGRUp/">
+        👌</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="http://instagram.com/p/jGLkqrGRUp/">
+      
+        #arcticvibes
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      7 months, 3 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

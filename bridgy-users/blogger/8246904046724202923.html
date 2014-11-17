@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>CYBION (Blogger) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="http://cybion.blogspot.com/" title="CYBION (Blogger)"
+   class="u-url">
+  <img class="profile u-photo" src="https://2.bp.blogspot.com/-G3HP8ZE3144/VEv2BNFIHII/AAAAAAAAD_E/jZGJSmy8Coo/s1600/*" width="64px" />
+  <img src="/static/blogger_icon.png"
+       
+       alt="Blogger" />
+  <span class="p-name">CYBION</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://cybion.blogspot.com/" class="publish-domain u-url">cybion.blogspot.com</a>
+
+
+
+</div>
+
+
+
+
+<!-- Banner for blogs that aren't yet advertising the webmention endpoint -->
+
+
+<div class="row">
+
+<p class="big">You're all set! Check out your recent
+<a href="#blogposts">blog posts</a> and <a href="#webmentions">webmentions</a>.
+  <!-- This currently 500s :/ -->
+  <!-- <a href="http://indiewebify.me/send-webmentions/?url="> -->
+  <!--   Try a webmention!</a> -->
+</p>
+
+
+<form method="post" action="/delete/start">
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyIAsSB0Jsb2dnZXIiEzgyNDY5MDQwNDY3MjQyMDI5MjMM" />
+  <input name="feature" type="hidden" value="webmention" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+          title="Disable this account. (Won't delete webmentions you've already sent or received.)">Disable</button>
+</form>
+</div>
+
+
+<!-- Signup button -->
+
+
+
+
+
+
+<!-- Blog posts -->
+<div id="blogposts" class="row">
+
+<p class="big">Recent blog posts:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://feedproxy.google.com/~r/cybion-blogin/~3/V3I4eU9SnVM/menos-papel-mais-planeta.html">MENOS PAPEL, MAIS PLANETA</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1414639164&key=aglzfmJyaWQtZ3lyZwsSCEJsb2dQb3N0IllodHRwOi8vZmVlZHByb3h5Lmdvb2dsZS5jb20vfnIvY3liaW9uLWJsb2dpbi9-My9WM0k0ZVU5U25WTS9tZW5vcy1wYXBlbC1tYWlzLXBsYW5ldGEuaHRtbAw">
+      2 weeks, 4 days ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=V3I4eU9SnVM%3A1I--rjz08wc%3A63t7Ie-LG7Y">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="http://creativecommons.org/licenses/by-nc-nd/2.5/">creativecommons.org/licenses/by-nc...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=V3I4eU9SnVM%3A1I--rjz08wc%3AgIN9vFwOqvQ">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="https://secure.newsvine.com/_tps/accounts/login?redirect=http%3A%2F%2Fwww.newsvine.com%2F_tools%2Fseed%3Fpopoff%3D0&feedflare=1&u=http%3A%2F%2Fcybion.blogspot.com%2F2008%2F01%2Fmenos-papel-mais-planeta.html&h=MENOS+PAPEL%2C+MAIS+PLANETA&t=ATIVISMO%2C">secure.newsvine.com/_tps/accounts/...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=V3I4eU9SnVM%3A1I--rjz08wc%3AdnMXMwOfBR0">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=V3I4eU9SnVM%3A1I--rjz08wc%3AV_sGLiPBpWU">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=V3I4eU9SnVM%3A1I--rjz08wc%3AyIl2AUoC8zA">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=V3I4eU9SnVM%3A1I--rjz08wc%3AKwTdNBX3Jqk">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="https://delicious.com/post?v=4&partner=fb&url=http%3A%2F%2Fcybion.blogspot.com%2F2008%2F01%2Fmenos-papel-mais-planeta.html&title=MENOS+PAPEL%2C+MAIS+PLANETA">delicious.com/post?v=4&partn...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://feedproxy.google.com/~r/cybion-blogin/~3/zCReB-oPI4c/gotan-project.html">GOTAN PROJECT</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1414639108&key=aglzfmJyaWQtZ3lyXAsSCEJsb2dQb3N0Ik5odHRwOi8vZmVlZHByb3h5Lmdvb2dsZS5jb20vfnIvY3liaW9uLWJsb2dpbi9-My96Q1JlQi1vUEk0Yy9nb3Rhbi1wcm9qZWN0Lmh0bWwM">
+      2 weeks, 4 days ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=zCReB-oPI4c%3AZtWGQiNNOYg%3AKwTdNBX3Jqk">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=zCReB-oPI4c%3AZtWGQiNNOYg%3AV_sGLiPBpWU">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=zCReB-oPI4c%3AZtWGQiNNOYg%3A63t7Ie-LG7Y">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="http://creativecommons.org/licenses/by-nc-nd/2.5/">creativecommons.org/licenses/by-nc...</a></li>
+	<li><a class="original-post" target="_blank" href="https://secure.newsvine.com/_tps/accounts/login?redirect=http%3A%2F%2Fwww.newsvine.com%2F_tools%2Fseed%3Fpopoff%3D0&feedflare=1&u=http%3A%2F%2Fcybion.blogspot.com%2F2008%2F01%2Fgotan-project.html&h=GOTAN+PROJECT&t=ARTE%2C">secure.newsvine.com/_tps/accounts/...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=zCReB-oPI4c%3AZtWGQiNNOYg%3AyIl2AUoC8zA">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=zCReB-oPI4c%3AZtWGQiNNOYg%3AdnMXMwOfBR0">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=zCReB-oPI4c%3AZtWGQiNNOYg%3AgIN9vFwOqvQ">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="https://delicious.com/post?v=4&partner=fb&url=http%3A%2F%2Fcybion.blogspot.com%2F2008%2F01%2Fgotan-project.html&title=GOTAN+PROJECT">delicious.com/post?v=4&partn...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://feedproxy.google.com/~r/cybion-blogin/~3/k-viBxbL7L4/virtualizao.html">VIRTUALIZAÇÃO</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1414639053&key=aglzfmJyaWQtZ3lyWgsSCEJsb2dQb3N0IkxodHRwOi8vZmVlZHByb3h5Lmdvb2dsZS5jb20vfnIvY3liaW9uLWJsb2dpbi9-My9rLXZpQnhiTDdMNC92aXJ0dWFsaXphby5odG1sDA">
+      2 weeks, 4 days ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=k-viBxbL7L4%3AgIioEN1bDTg%3AV_sGLiPBpWU">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="http://creativecommons.org/licenses/by-nc-nd/2.5/">creativecommons.org/licenses/by-nc...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=k-viBxbL7L4%3AgIioEN1bDTg%3AgIN9vFwOqvQ">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=k-viBxbL7L4%3AgIioEN1bDTg%3AyIl2AUoC8zA">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="https://secure.newsvine.com/_tps/accounts/login?redirect=http%3A%2F%2Fwww.newsvine.com%2F_tools%2Fseed%3Fpopoff%3D0&feedflare=1&u=http%3A%2F%2Fcybion.blogspot.com%2F2008%2F01%2Fvirtualizao.html&h=VIRTUALIZA%C3%87%C3%83O&t=TECNOLOGIA%2C">secure.newsvine.com/_tps/accounts/...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=k-viBxbL7L4%3AgIioEN1bDTg%3A63t7Ie-LG7Y">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=k-viBxbL7L4%3AgIioEN1bDTg%3AdnMXMwOfBR0">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="https://delicious.com/post?v=4&partner=fb&url=http%3A%2F%2Fcybion.blogspot.com%2F2008%2F01%2Fvirtualizao.html&title=VIRTUALIZA%C3%87%C3%83O">delicious.com/post?v=4&partn...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=k-viBxbL7L4%3AgIioEN1bDTg%3AKwTdNBX3Jqk">feeds.feedburner.com/~ff/cybion-blo...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://feedproxy.google.com/~r/cybion-blogin/~3/iwnPYegId5c/publicidade-on-line.html">PUBLICIDADE ON-LINE</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1414638998&key=aglzfmJyaWQtZ3lyYgsSCEJsb2dQb3N0IlRodHRwOi8vZmVlZHByb3h5Lmdvb2dsZS5jb20vfnIvY3liaW9uLWJsb2dpbi9-My9pd25QWWVnSWQ1Yy9wdWJsaWNpZGFkZS1vbi1saW5lLmh0bWwM">
+      2 weeks, 4 days ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://secure.newsvine.com/_tps/accounts/login?redirect=http%3A%2F%2Fwww.newsvine.com%2F_tools%2Fseed%3Fpopoff%3D0&feedflare=1&u=http%3A%2F%2Fcybion.blogspot.com%2F2008%2F01%2Fpublicidade-on-line.html&h=PUBLICIDADE+ON-LINE&t=EMPREENDEDORISMO%2C">secure.newsvine.com/_tps/accounts/...</a></li>
+	<li><a class="original-post" target="_blank" href="http://creativecommons.org/licenses/by-nc-nd/2.5/">creativecommons.org/licenses/by-nc...</a></li>
+	<li><a class="original-post" target="_blank" href="https://delicious.com/post?v=4&partner=fb&url=http%3A%2F%2Fcybion.blogspot.com%2F2008%2F01%2Fpublicidade-on-line.html&title=PUBLICIDADE+ON-LINE">delicious.com/post?v=4&partn...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=iwnPYegId5c%3Apj0NPvkwQKM%3A63t7Ie-LG7Y">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=iwnPYegId5c%3Apj0NPvkwQKM%3AV_sGLiPBpWU">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=iwnPYegId5c%3Apj0NPvkwQKM%3AKwTdNBX3Jqk">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=iwnPYegId5c%3Apj0NPvkwQKM%3AgIN9vFwOqvQ">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=iwnPYegId5c%3Apj0NPvkwQKM%3AdnMXMwOfBR0">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=iwnPYegId5c%3Apj0NPvkwQKM%3AyIl2AUoC8zA">feeds.feedburner.com/~ff/cybion-blo...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://feedproxy.google.com/~r/cybion-blogin/~3/27aMJSxu5Ag/ecoar-e-cybion.html">∑COAR e CYBION</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1414638962&key=aglzfmJyaWQtZ3lyXQsSCEJsb2dQb3N0Ik9odHRwOi8vZmVlZHByb3h5Lmdvb2dsZS5jb20vfnIvY3liaW9uLWJsb2dpbi9-My8yN2FNSlN4dTVBZy9lY29hci1lLWN5Ymlvbi5odG1sDA">
+      2 weeks, 4 days ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=27aMJSxu5Ag%3AL-44BNr009o%3AyIl2AUoC8zA">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=27aMJSxu5Ag%3AL-44BNr009o%3A63t7Ie-LG7Y">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="http://creativecommons.org/licenses/by-nc-nd/2.5/">creativecommons.org/licenses/by-nc...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=27aMJSxu5Ag%3AL-44BNr009o%3AKwTdNBX3Jqk">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=27aMJSxu5Ag%3AL-44BNr009o%3AdnMXMwOfBR0">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="https://delicious.com/post?v=4&partner=fb&url=http%3A%2F%2Fcybion.blogspot.com%2F2008%2F02%2Fecoar-e-cybion.html&title=%E2%88%91COAR+e+CYBION">delicious.com/post?v=4&partn...</a></li>
+	<li><a class="original-post" target="_blank" href="https://secure.newsvine.com/_tps/accounts/login?redirect=http%3A%2F%2Fwww.newsvine.com%2F_tools%2Fseed%3Fpopoff%3D0&feedflare=1&u=http%3A%2F%2Fcybion.blogspot.com%2F2008%2F02%2Fecoar-e-cybion.html&h=%E2%88%91COAR+e+CYBION&t=EMPREENDEDORISMO%2C">secure.newsvine.com/_tps/accounts/...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=27aMJSxu5Ag%3AL-44BNr009o%3AV_sGLiPBpWU">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=27aMJSxu5Ag%3AL-44BNr009o%3AgIN9vFwOqvQ">feeds.feedburner.com/~ff/cybion-blo...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://feedproxy.google.com/~r/cybion-blogin/~3/hKptRmapAYk/cybercine.html">CYBERCINE</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1414638922&key=aglzfmJyaWQtZ3lyWAsSCEJsb2dQb3N0IkpodHRwOi8vZmVlZHByb3h5Lmdvb2dsZS5jb20vfnIvY3liaW9uLWJsb2dpbi9-My9oS3B0Um1hcEFZay9jeWJlcmNpbmUuaHRtbAw">
+      2 weeks, 4 days ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://delicious.com/post?v=4&partner=fb&url=http%3A%2F%2Fcybion.blogspot.com%2F2008%2F02%2Fcybercine.html&title=CYBERCINE">delicious.com/post?v=4&partn...</a></li>
+	<li><a class="original-post" target="_blank" href="https://secure.newsvine.com/_tps/accounts/login?redirect=http%3A%2F%2Fwww.newsvine.com%2F_tools%2Fseed%3Fpopoff%3D0&feedflare=1&u=http%3A%2F%2Fcybion.blogspot.com%2F2008%2F02%2Fcybercine.html&h=CYBERCINE&t=ARTE%2C">secure.newsvine.com/_tps/accounts/...</a></li>
+	<li><a class="original-post" target="_blank" href="http://creativecommons.org/licenses/by-nc-nd/2.5/">creativecommons.org/licenses/by-nc...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=hKptRmapAYk%3Ap7RTQ0M0ZdQ%3AdnMXMwOfBR0">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=hKptRmapAYk%3Ap7RTQ0M0ZdQ%3AyIl2AUoC8zA">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=hKptRmapAYk%3Ap7RTQ0M0ZdQ%3AKwTdNBX3Jqk">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=hKptRmapAYk%3Ap7RTQ0M0ZdQ%3A63t7Ie-LG7Y">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=hKptRmapAYk%3Ap7RTQ0M0ZdQ%3AgIN9vFwOqvQ">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=hKptRmapAYk%3Ap7RTQ0M0ZdQ%3AV_sGLiPBpWU">feeds.feedburner.com/~ff/cybion-blo...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://feedproxy.google.com/~r/cybion-blogin/~3/-FRLeumj3eo/sexo-virtual.html">SEXO VIRTUAL</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1414638885&key=aglzfmJyaWQtZ3lyWwsSCEJsb2dQb3N0Ik1odHRwOi8vZmVlZHByb3h5Lmdvb2dsZS5jb20vfnIvY3liaW9uLWJsb2dpbi9-My8tRlJMZXVtajNlby9zZXhvLXZpcnR1YWwuaHRtbAw">
+      2 weeks, 4 days ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://creativecommons.org/licenses/by-nc-nd/2.5/">creativecommons.org/licenses/by-nc...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=-FRLeumj3eo%3Aoz-t5l9JSEU%3AKwTdNBX3Jqk">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=-FRLeumj3eo%3Aoz-t5l9JSEU%3A63t7Ie-LG7Y">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="https://delicious.com/post?v=4&partner=fb&url=http%3A%2F%2Fcybion.blogspot.com%2F2008%2F02%2Fsexo-virtual.html&title=SEXO+VIRTUAL">delicious.com/post?v=4&partn...</a></li>
+	<li><a class="original-post" target="_blank" href="https://secure.newsvine.com/_tps/accounts/login?redirect=http%3A%2F%2Fwww.newsvine.com%2F_tools%2Fseed%3Fpopoff%3D0&feedflare=1&u=http%3A%2F%2Fcybion.blogspot.com%2F2008%2F02%2Fsexo-virtual.html&h=SEXO+VIRTUAL&t=ARTE%2C">secure.newsvine.com/_tps/accounts/...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=-FRLeumj3eo%3Aoz-t5l9JSEU%3AgIN9vFwOqvQ">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=-FRLeumj3eo%3Aoz-t5l9JSEU%3AV_sGLiPBpWU">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=-FRLeumj3eo%3Aoz-t5l9JSEU%3AdnMXMwOfBR0">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=-FRLeumj3eo%3Aoz-t5l9JSEU%3AyIl2AUoC8zA">feeds.feedburner.com/~ff/cybion-blo...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://feedproxy.google.com/~r/cybion-blogin/~3/tkkkwVGQU7A/opera-mini.html">OPERA MINI</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1414638846&key=aglzfmJyaWQtZ3lyWQsSCEJsb2dQb3N0IktodHRwOi8vZmVlZHByb3h5Lmdvb2dsZS5jb20vfnIvY3liaW9uLWJsb2dpbi9-My90a2trd1ZHUVU3QS9vcGVyYS1taW5pLmh0bWwM">
+      2 weeks, 4 days ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://secure.newsvine.com/_tps/accounts/login?redirect=http%3A%2F%2Fwww.newsvine.com%2F_tools%2Fseed%3Fpopoff%3D0&feedflare=1&u=http%3A%2F%2Fcybion.blogspot.com%2F2008%2F03%2Fopera-mini.html&h=OPERA+MINI&t=TECNOLOGIA%2C">secure.newsvine.com/_tps/accounts/...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=tkkkwVGQU7A%3AOX-uod5L_q4%3AV_sGLiPBpWU">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=tkkkwVGQU7A%3AOX-uod5L_q4%3AdnMXMwOfBR0">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="https://delicious.com/post?v=4&partner=fb&url=http%3A%2F%2Fcybion.blogspot.com%2F2008%2F03%2Fopera-mini.html&title=OPERA+MINI">delicious.com/post?v=4&partn...</a></li>
+	<li><a class="original-post" target="_blank" href="http://creativecommons.org/licenses/by-nc-nd/2.5/">creativecommons.org/licenses/by-nc...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=tkkkwVGQU7A%3AOX-uod5L_q4%3AgIN9vFwOqvQ">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=tkkkwVGQU7A%3AOX-uod5L_q4%3AyIl2AUoC8zA">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=tkkkwVGQU7A%3AOX-uod5L_q4%3A63t7Ie-LG7Y">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=tkkkwVGQU7A%3AOX-uod5L_q4%3AKwTdNBX3Jqk">feeds.feedburner.com/~ff/cybion-blo...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://feedproxy.google.com/~r/cybion-blogin/~3/PLh2-gVhzL4/e-learning-ead-ou-asd.html">E-LEARNING, EaD ou AsD</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1414638808&key=aglzfmJyaWQtZ3lyZAsSCEJsb2dQb3N0IlZodHRwOi8vZmVlZHByb3h5Lmdvb2dsZS5jb20vfnIvY3liaW9uLWJsb2dpbi9-My9QTGgyLWdWaHpMNC9lLWxlYXJuaW5nLWVhZC1vdS1hc2QuaHRtbAw">
+      2 weeks, 4 days ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=PLh2-gVhzL4%3AoG1wPyvsuXE%3AyIl2AUoC8zA">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="https://secure.newsvine.com/_tps/accounts/login?redirect=http%3A%2F%2Fwww.newsvine.com%2F_tools%2Fseed%3Fpopoff%3D0&feedflare=1&u=http%3A%2F%2Fcybion.blogspot.com%2F2008%2F03%2Fe-learning-ead-ou-asd.html&h=E-LEARNING%2C+EaD+ou+AsD&t=EMPREENDEDORISMO%2C">secure.newsvine.com/_tps/accounts/...</a></li>
+	<li><a class="original-post" target="_blank" href="http://creativecommons.org/licenses/by-nc-nd/2.5/">creativecommons.org/licenses/by-nc...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=PLh2-gVhzL4%3AoG1wPyvsuXE%3AV_sGLiPBpWU">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=PLh2-gVhzL4%3AoG1wPyvsuXE%3A63t7Ie-LG7Y">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=PLh2-gVhzL4%3AoG1wPyvsuXE%3AgIN9vFwOqvQ">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=PLh2-gVhzL4%3AoG1wPyvsuXE%3AdnMXMwOfBR0">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=PLh2-gVhzL4%3AoG1wPyvsuXE%3AKwTdNBX3Jqk">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="https://delicious.com/post?v=4&partner=fb&url=http%3A%2F%2Fcybion.blogspot.com%2F2008%2F03%2Fe-learning-ead-ou-asd.html&title=E-LEARNING%2C+EaD+ou+AsD">delicious.com/post?v=4&partn...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://feedproxy.google.com/~r/cybion-blogin/~3/q6vQORugn1I/mobilefest-apresenta-filmobile-so-paulo.html">MOBILEFEST apresenta FILMOBILE São Paulo</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1414638769&key=aglzfmJyaWQtZ3lydgsSCEJsb2dQb3N0ImhodHRwOi8vZmVlZHByb3h5Lmdvb2dsZS5jb20vfnIvY3liaW9uLWJsb2dpbi9-My9xNnZRT1J1Z24xSS9tb2JpbGVmZXN0LWFwcmVzZW50YS1maWxtb2JpbGUtc28tcGF1bG8uaHRtbAw">
+      2 weeks, 4 days ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=q6vQORugn1I%3Ai6D4lvfcHWk%3AV_sGLiPBpWU">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="http://creativecommons.org/licenses/by-nc-nd/2.5/">creativecommons.org/licenses/by-nc...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=q6vQORugn1I%3Ai6D4lvfcHWk%3A63t7Ie-LG7Y">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="https://delicious.com/post?v=4&partner=fb&url=http%3A%2F%2Fcybion.blogspot.com%2F2008%2F03%2Fmobilefest-apresenta-filmobile-so-paulo.html&title=MOBILEFEST+apresenta+FILMOBILE+S%C3%A3o+Paulo">delicious.com/post?v=4&partn...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=q6vQORugn1I%3Ai6D4lvfcHWk%3AdnMXMwOfBR0">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=q6vQORugn1I%3Ai6D4lvfcHWk%3AgIN9vFwOqvQ">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="https://secure.newsvine.com/_tps/accounts/login?redirect=http%3A%2F%2Fwww.newsvine.com%2F_tools%2Fseed%3Fpopoff%3D0&feedflare=1&u=http%3A%2F%2Fcybion.blogspot.com%2F2008%2F03%2Fmobilefest-apresenta-filmobile-so-paulo.html&h=MOBILEFEST+apresenta+FILMOBILE+S%C3%A3o+Paulo&t=ARTE%2C">secure.newsvine.com/_tps/accounts/...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=q6vQORugn1I%3Ai6D4lvfcHWk%3AKwTdNBX3Jqk">feeds.feedburner.com/~ff/cybion-blo...</a></li>
+	<li><a class="original-post" target="_blank" href="http://feeds.feedburner.com/~ff/cybion-blogin?a=q6vQORugn1I%3Ai6D4lvfcHWk%3AyIl2AUoC8zA">feeds.feedburner.com/~ff/cybion-blo...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+</div>
+
+
+<!-- Incoming blog webmentions -->
+<div id="webmentions" class="row">
+
+<p class="big">No
+  <a href="http://indiewebify.me/#send-webmentions">webmentions</a> received yet.</p>
+
+</div>
+
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

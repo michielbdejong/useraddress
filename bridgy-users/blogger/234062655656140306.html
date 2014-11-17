@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Aaron Gibson (Blogger) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="http://blog.aegibson.net/" title="Aaron Gibson (Blogger)"
+   class="u-url">
+  <img class="profile u-photo" src="https://lh5.googleusercontent.com/-acIAR09_RjA/AAAAAAAAAAI/AAAAAAAABt4/4BRQykHCb2E/s512-c/photo.jpg" width="64px" />
+  <img src="/static/blogger_icon.png"
+       
+       alt="Blogger" />
+  <span class="p-name">Aaron Gibson</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://blog.aegibson.net/" class="publish-domain u-url">blog.aegibson.net</a>
+
+
+
+</div>
+
+
+
+
+<!-- Banner for blogs that aren't yet advertising the webmention endpoint -->
+
+
+<div class="row">
+
+<p class="big">You're all set! Check out your recent
+<a href="#blogposts">blog posts</a> and <a href="#webmentions">webmentions</a>.
+  <!-- This currently 500s :/ -->
+  <!-- <a href="http://indiewebify.me/send-webmentions/?url="> -->
+  <!--   Try a webmention!</a> -->
+</p>
+
+
+<form method="post" action="/delete/start">
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyHwsSB0Jsb2dnZXIiEjIzNDA2MjY1NTY1NjE0MDMwNgw" />
+  <input name="feature" type="hidden" value="webmention" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+          title="Disable this account. (Won't delete webmentions you've already sent or received.)">Disable</button>
+</form>
+</div>
+
+
+<!-- Signup button -->
+
+
+
+
+
+
+<!-- Blog posts -->
+<div id="blogposts" class="row">
+
+<p class="big">Recent blog posts:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://blog.aegibson.net/2012/07/hello-world.html">Hello World.</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1401688237&key=aglzfmJyaWQtZ3lyPwsSCEJsb2dQb3N0IjFodHRwOi8vYmxvZy5hZWdpYnNvbi5uZXQvMjAxMi8wNy9oZWxsby13b3JsZC5odG1sDA">
+      5 months, 2 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://blog.aegibson.net/2012/12/another-test-post.html">Another test post!</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1401688238&key=aglzfmJyaWQtZ3lyRQsSCEJsb2dQb3N0IjdodHRwOi8vYmxvZy5hZWdpYnNvbi5uZXQvMjAxMi8xMi9hbm90aGVyLXRlc3QtcG9zdC5odG1sDA">
+      5 months, 2 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://blog.aegibson.net/2013/01/cold-spell-over.html">Cold spell over?</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1401688238&key=aglzfmJyaWQtZ3lyQwsSCEJsb2dQb3N0IjVodHRwOi8vYmxvZy5hZWdpYnNvbi5uZXQvMjAxMy8wMS9jb2xkLXNwZWxsLW92ZXIuaHRtbAw">
+      5 months, 2 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://blog.aegibson.net/2013/04/ownstagram.html">Ownstagram</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1401688239&key=aglzfmJyaWQtZ3lyPgsSCEJsb2dQb3N0IjBodHRwOi8vYmxvZy5hZWdpYnNvbi5uZXQvMjAxMy8wNC9vd25zdGFncmFtLmh0bWwM">
+      5 months, 2 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://blog.aegibson.net/2013/09/yep-this-happened.html">Yep, this happened</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1401688239&key=aglzfmJyaWQtZ3lyRQsSCEJsb2dQb3N0IjdodHRwOi8vYmxvZy5hZWdpYnNvbi5uZXQvMjAxMy8wOS95ZXAtdGhpcy1oYXBwZW5lZC5odG1sDA">
+      5 months, 2 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://blog.aegibson.net/2013/10/aareports-nappy-new-childrens-book-for.html">AAReports: Nappy, new children's book fo...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1408928127&key=aglzfmJyaWQtZ3lyWgsSCEJsb2dQb3N0IkxodHRwOi8vYmxvZy5hZWdpYnNvbi5uZXQvMjAxMy8xMC9hYXJlcG9ydHMtbmFwcHktbmV3LWNoaWxkcmVucy1ib29rLWZvci5odG1sDA">
+      2 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://aareports.com/2013/09/nappy-new-childrens-book-for-black.html?m=1">aareports.com/2013/09/nappy-... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://blog.aegibson.net/2014/05/back.html">Back</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1401688241&key=aglzfmJyaWQtZ3lyOAsSCEJsb2dQb3N0IipodHRwOi8vYmxvZy5hZWdpYnNvbi5uZXQvMjAxNC8wNS9iYWNrLmh0bWwM">
+      5 months, 2 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+</div>
+
+
+<!-- Incoming blog webmentions -->
+<div id="webmentions" class="row">
+
+<p class="big">Recent
+  <a href="http://indiewebify.me/#send-webmentions">webmentions</a>:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://snarfed.org/2014-06-01_aaron-eugene-gibson-aareports-nappy-new-childrens-book-for-black-girls-now-available">snarfed.org/2014-06-01_aar...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://blog.aegibson.net/2013/10/aareports-nappy-new-childrens-book-for.html">blog.aegibson.net/2013/10/aarepo...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1401690124&key=aglzfmJyaWQtZ3ly1QELEg5CbG9nV2VibWVudGlvbiLAAWh0dHBzOi8vc25hcmZlZC5vcmcvMjAxNC0wNi0wMV9hYXJvbi1ldWdlbmUtZ2lic29uLWFhcmVwb3J0cy1uYXBweS1uZXctY2hpbGRyZW5zLWJvb2stZm9yLWJsYWNrLWdpcmxzLW5vdy1hdmFpbGFibGUgaHR0cDovL2Jsb2cuYWVnaWJzb24ubmV0LzIwMTMvMTAvYWFyZXBvcnRzLW5hcHB5LW5ldy1jaGlsZHJlbnMtYm9vay1mb3IuaHRtbAw">
+      5 months, 2 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       like
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://plus.google.com/108633694942512883713/posts/1uYmuqm7AWn">plus.google.com/10863369494251...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://blog.aegibson.net/2014/05/back.html">blog.aegibson.net/2014/05/back.h...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1401688245&key=aglzfmJyaWQtZ3lyuwELEg5CbG9nV2VibWVudGlvbiKmAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9saWtlL2dvb2dsZXBsdXMvMTA4NjMzNjk0OTQyNTEyODgzNzEzL3oxMnRzMzVxZnRyYnVuaGM1MjJhd2gwemtvenJ5YnBoMDA0LzEwOTUxNTgwNDY0NjIzNjQ4NDgyOSBodHRwOi8vYmxvZy5hZWdpYnNvbi5uZXQvMjAxNC8wNS9iYWNrLmh0bWwM">
+      5 months, 2 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       like
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://plus.google.com/108633694942512883713/posts/1uYmuqm7AWn">plus.google.com/10863369494251...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://blog.aegibson.net/2014/05/back.html">blog.aegibson.net/2014/05/back.h...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1401688244&key=aglzfmJyaWQtZ3ly3QELEg5CbG9nV2VibWVudGlvbiLIAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9jb21tZW50L2dvb2dsZXBsdXMvMTA4NjMzNjk0OTQyNTEyODgzNzEzL3oxMnRzMzVxZnRyYnVuaGM1MjJhd2gwemtvenJ5YnBoMDA0L3oxMnRzMzVxZnRyYnVuaGM1MjJhd2gwemtvenJ5YnBoMDA0LjEzOTk3ODM4OTE1MTI1MzcgaHR0cDovL2Jsb2cuYWVnaWJzb24ubmV0LzIwMTQvMDUvYmFjay5odG1sDA">
+      5 months, 2 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       comment
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://plus.google.com/108633694942512883713/posts/1uYmuqm7AWn">plus.google.com/10863369494251...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://blog.aegibson.net/2014/05/back.html">blog.aegibson.net/2014/05/back.h...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1401688244&key=aglzfmJyaWQtZ3ly3QELEg5CbG9nV2VibWVudGlvbiLIAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9jb21tZW50L2dvb2dsZXBsdXMvMTA4NjMzNjk0OTQyNTEyODgzNzEzL3oxMnRzMzVxZnRyYnVuaGM1MjJhd2gwemtvenJ5YnBoMDA0L3oxMnRzMzVxZnRyYnVuaGM1MjJhd2gwemtvenJ5YnBoMDA0LjEzOTk3Nzk0ODU4NzE4MDkgaHR0cDovL2Jsb2cuYWVnaWJzb24ubmV0LzIwMTQvMDUvYmFjay5odG1sDA">
+      5 months, 2 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       comment
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://plus.google.com/108633694942512883713/posts/1uYmuqm7AWn">plus.google.com/10863369494251...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://blog.aegibson.net/2014/05/back.html">blog.aegibson.net/2014/05/back.h...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1401688243&key=aglzfmJyaWQtZ3ly3QELEg5CbG9nV2VibWVudGlvbiLIAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9jb21tZW50L2dvb2dsZXBsdXMvMTA4NjMzNjk0OTQyNTEyODgzNzEzL3oxMnRzMzVxZnRyYnVuaGM1MjJhd2gwemtvenJ5YnBoMDA0L3oxMnRzMzVxZnRyYnVuaGM1MjJhd2gwemtvenJ5YnBoMDA0LjEzOTk3NzkxMTEyMTQ1MzcgaHR0cDovL2Jsb2cuYWVnaWJzb24ubmV0LzIwMTQvMDUvYmFjay5odG1sDA">
+      5 months, 2 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       comment
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://plus.google.com/108633694942512883713/posts/1uYmuqm7AWn">plus.google.com/10863369494251...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://blog.aegibson.net/2014/05/back.html">blog.aegibson.net/2014/05/back.h...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1401688243&key=aglzfmJyaWQtZ3ly3QELEg5CbG9nV2VibWVudGlvbiLIAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9jb21tZW50L2dvb2dsZXBsdXMvMTA4NjMzNjk0OTQyNTEyODgzNzEzL3oxMnRzMzVxZnRyYnVuaGM1MjJhd2gwemtvenJ5YnBoMDA0L3oxMnRzMzVxZnRyYnVuaGM1MjJhd2gwemtvenJ5YnBoMDA0LjEzOTk3Nzc5MTE2NDM1MjYgaHR0cDovL2Jsb2cuYWVnaWJzb24ubmV0LzIwMTQvMDUvYmFjay5odG1sDA">
+      5 months, 2 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       comment
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://plus.google.com/108633694942512883713/posts/1uYmuqm7AWn">plus.google.com/10863369494251...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://blog.aegibson.net/2014/05/back.html">blog.aegibson.net/2014/05/back.h...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1401688242&key=aglzfmJyaWQtZ3ly3QELEg5CbG9nV2VibWVudGlvbiLIAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9jb21tZW50L2dvb2dsZXBsdXMvMTA4NjMzNjk0OTQyNTEyODgzNzEzL3oxMnRzMzVxZnRyYnVuaGM1MjJhd2gwemtvenJ5YnBoMDA0L3oxMnRzMzVxZnRyYnVuaGM1MjJhd2gwemtvenJ5YnBoMDA0LjEzOTk3NzM0OTczODk5NTQgaHR0cDovL2Jsb2cuYWVnaWJzb24ubmV0LzIwMTQvMDUvYmFjay5odG1sDA">
+      5 months, 2 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       comment
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://plus.google.com/108633694942512883713/posts/1uYmuqm7AWn">plus.google.com/10863369494251...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://blog.aegibson.net/2014/05/back.html">blog.aegibson.net/2014/05/back.h...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1401688242&key=aglzfmJyaWQtZ3ly3QELEg5CbG9nV2VibWVudGlvbiLIAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9jb21tZW50L2dvb2dsZXBsdXMvMTA4NjMzNjk0OTQyNTEyODgzNzEzL3oxMnRzMzVxZnRyYnVuaGM1MjJhd2gwemtvenJ5YnBoMDA0L3oxMnRzMzVxZnRyYnVuaGM1MjJhd2gwemtvenJ5YnBoMDA0LjEzOTk3NzA4NDcxOTA4MDkgaHR0cDovL2Jsb2cuYWVnaWJzb24ubmV0LzIwMTQvMDUvYmFjay5odG1sDA">
+      5 months, 2 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       comment
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://plus.google.com/108633694942512883713/posts/1uYmuqm7AWn">plus.google.com/10863369494251...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://blog.aegibson.net/2014/05/back.html">blog.aegibson.net/2014/05/back.h...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1401688241&key=aglzfmJyaWQtZ3ly3QELEg5CbG9nV2VibWVudGlvbiLIAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9jb21tZW50L2dvb2dsZXBsdXMvMTA4NjMzNjk0OTQyNTEyODgzNzEzL3oxMnRzMzVxZnRyYnVuaGM1MjJhd2gwemtvenJ5YnBoMDA0L3oxMnRzMzVxZnRyYnVuaGM1MjJhd2gwemtvenJ5YnBoMDA0LjEzOTk3NjgwODg1MjU1MjYgaHR0cDovL2Jsb2cuYWVnaWJzb24ubmV0LzIwMTQvMDUvYmFjay5odG1sDA">
+      5 months, 2 weeks ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       comment
+     
+
+   </div>
+  </li>
+  
+</ul>
+
+
+</div>
+
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

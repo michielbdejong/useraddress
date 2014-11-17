@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Simon Coopey (Blogger) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="http://blogger.simoncoopey.net/" title="Simon Coopey (Blogger)"
+   class="u-url">
+  <img class="profile u-photo" src="https://lh5.googleusercontent.com/-LjUnTTQtKcc/AAAAAAAAAAI/AAAAAAAAAYE/budt7bFWMBA/s512-c/photo.jpg" width="64px" />
+  <img src="/static/blogger_icon.png"
+       
+       alt="Blogger" />
+  <span class="p-name">Simon Coopey</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://blogger.simoncoopey.net/" class="publish-domain u-url">blogger.simoncoopey.net</a>
+
+
+
+</div>
+
+
+
+
+<!-- Banner for blogs that aren't yet advertising the webmention endpoint -->
+
+
+<div class="row">
+
+<p class="big">You're all set! Check out your recent
+<a href="#blogposts">blog posts</a> and <a href="#webmentions">webmentions</a>.
+  <!-- This currently 500s :/ -->
+  <!-- <a href="http://indiewebify.me/send-webmentions/?url="> -->
+  <!--   Try a webmention!</a> -->
+</p>
+
+
+<form method="post" action="/delete/start">
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyIAsSB0Jsb2dnZXIiEzcyMTU1MDkyODE2MDkzNzQ3NTAM" />
+  <input name="feature" type="hidden" value="webmention" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+          title="Disable this account. (Won't delete webmentions you've already sent or received.)">Disable</button>
+</form>
+</div>
+
+
+<!-- Signup button -->
+
+
+
+
+
+
+<!-- Blog posts -->
+<div id="blogposts" class="row">
+
+<p class="big">Recent blog posts:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://blogger.simoncoopey.net/2012/02/wordpress-and-instapaper.html">WordPress and Instapaper</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1412277448&key=aglzfmJyaWQtZ3lyUgsSCEJsb2dQb3N0IkRodHRwOi8vYmxvZ2dlci5zaW1vbmNvb3BleS5uZXQvMjAxMi8wMi93b3JkcHJlc3MtYW5kLWluc3RhcGFwZXIuaHRtbAw">
+      1 month, 2 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://coopey.ml/m44u">coopey.ml/m44u <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.instapaper.com/publishers">instapaper.com/publishers</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://blogger.simoncoopey.net/2012/04/edit-buddypress-admin-bar-log-in.html">Edit BuddyPress Admin Bar - Log In</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1412277433&key=aglzfmJyaWQtZ3lyWgsSCEJsb2dQb3N0IkxodHRwOi8vYmxvZ2dlci5zaW1vbmNvb3BleS5uZXQvMjAxMi8wNC9lZGl0LWJ1ZGR5cHJlc3MtYWRtaW4tYmFyLWxvZy1pbi5odG1sDA">
+      1 month, 2 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://wordpress.org/">wordpress.org/</a></li>
+	<li><a class="original-post" target="_blank" href="https://github.com/SimonCoopey/BP-adminbar-c">github.com/SimonCoopey/BP...</a></li>
+	<li><a class="original-post" target="_blank" href="https://buddypress.org/">buddypress.org/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://blogger.simoncoopey.net/2012/04/moving-home.html">Moving home...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1412277405&key=aglzfmJyaWQtZ3lyRQsSCEJsb2dQb3N0IjdodHRwOi8vYmxvZ2dlci5zaW1vbmNvb3BleS5uZXQvMjAxMi8wNC9tb3ZpbmctaG9tZS5odG1sDA">
+      1 month, 2 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://simoncoopey.com/category/development">simoncoopey.com/category/devel... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://blogger.simoncoopey.net/2012/09/changing-root-password-in-centos.html">Changing root password in CentOS</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1412277404&key=aglzfmJyaWQtZ3lyWgsSCEJsb2dQb3N0IkxodHRwOi8vYmxvZ2dlci5zaW1vbmNvb3BleS5uZXQvMjAxMi8wOS9jaGFuZ2luZy1yb290LXBhc3N3b3JkLWluLWNlbnRvcy5odG1sDA">
+      1 month, 2 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://simoncoopey.com/2012/changing-root-password-in-centos/#utm_source=feed&amp;utm_medium=feed&amp;utm_campaign=feed">simoncoopey.com/2012/changing-... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://passwordsite.co.uk/">passwordsite.co.uk/</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.w3.org/1999/xhtml/">w3.org/1999/xhtml/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://blogger.simoncoopey.net/2012/09/check-centos-version.html">Check CentOS Version</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1412277402&key=aglzfmJyaWQtZ3lyTgsSCEJsb2dQb3N0IkBodHRwOi8vYmxvZ2dlci5zaW1vbmNvb3BleS5uZXQvMjAxMi8wOS9jaGVjay1jZW50b3MtdmVyc2lvbi5odG1sDA">
+      1 month, 2 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.w3.org/1999/xhtml/">w3.org/1999/xhtml/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://blogger.simoncoopey.net/2013/04/diverting-visitors-from-specific-ip.html">Diverting visitors from a specific IP ad...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1412277401&key=aglzfmJyaWQtZ3lyXQsSCEJsb2dQb3N0Ik9odHRwOi8vYmxvZ2dlci5zaW1vbmNvb3BleS5uZXQvMjAxMy8wNC9kaXZlcnRpbmctdmlzaXRvcnMtZnJvbS1zcGVjaWZpYy1pcC5odG1sDA">
+      1 month, 2 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://goaway.coopey.me/">goaway.coopey.me/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://blogger.simoncoopey.net/2013/05/removing-hard-coded-social-share.html">Removing hard-coded social share buttons...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1412277399&key=aglzfmJyaWQtZ3lyWgsSCEJsb2dQb3N0IkxodHRwOi8vYmxvZ2dlci5zaW1vbmNvb3BleS5uZXQvMjAxMy8wNS9yZW1vdmluZy1oYXJkLWNvZGVkLXNvY2lhbC1zaGFyZS5odG1sDA">
+      1 month, 2 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://rachphillips.com/">rachphillips.com/</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.bluchic.com/shop/freebies/adelle-theme">bluchic.com/shop/freebies/...</a></li>
+	<li><a class="original-post" target="_blank" href="http://simoncoopey.dropmark.com/120396">simoncoopey.dropmark.com/120396</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://blogger.simoncoopey.net/2013/06/uninstall-copy-copycom-in-mac-os-x-108.html">Uninstall Copy (copy.com) in Mac OS X (1...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1412277394&key=aglzfmJyaWQtZ3lyYAsSCEJsb2dQb3N0IlJodHRwOi8vYmxvZ2dlci5zaW1vbmNvb3BleS5uZXQvMjAxMy8wNi91bmluc3RhbGwtY29weS1jb3B5Y29tLWluLW1hYy1vcy14LTEwOC5odG1sDA">
+      1 month, 2 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://www.copy.com/home/">copy.com/home/</a></li>
+	<li><a class="original-post" target="_blank" href="https://www.copy.com/home/?r=qNQ17O&signup=1">copy.com/home/?r=qNQ17O...</a></li>
+	<li><a class="original-post" target="_blank" href="http://passwordsite.co.uk/">passwordsite.co.uk/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://blogger.simoncoopey.net/2013/12/debian-ubuntu-postfix-error-diagnostic.html">Debian / Ubuntu Postfix Error: Diagnosti...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1412277382&key=aglzfmJyaWQtZ3lyYAsSCEJsb2dQb3N0IlJodHRwOi8vYmxvZ2dlci5zaW1vbmNvb3BleS5uZXQvMjAxMy8xMi9kZWJpYW4tdWJ1bnR1LXBvc3RmaXgtZXJyb3ItZGlhZ25vc3RpYy5odG1sDA">
+      1 month, 2 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://blogger.simoncoopey.net/2014/03/fixing-xmpp-problem-after-updating.html">Fixing XMPP problem after updating Flami...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1412536657&key=aglzfmJyaWQtZ3lyXAsSCEJsb2dQb3N0Ik5odHRwOi8vYmxvZ2dlci5zaW1vbmNvb3BleS5uZXQvMjAxNC8wMy9maXhpbmcteG1wcC1wcm9ibGVtLWFmdGVyLXVwZGF0aW5nLmh0bWwM">
+      1 month, 1 week ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyXAsSCEJsb2dQb3N0Ik5odHRwOi8vYmxvZ2dlci5zaW1vbmNvb3BleS5uZXQvMjAxNC8wMy9maXhpbmcteG1wcC1wcm9ibGVtLWFmdGVyLXVwZGF0aW5nLmh0bWwM" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-4">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://simoncoopey.net/2014/xmpp-wont-connect-after-flamingo-update">simoncoopey.net/2014/xmpp-wont... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://flamingo.im/">flamingo.im/</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+</div>
+
+
+<!-- Incoming blog webmentions -->
+<div id="webmentions" class="row">
+
+<p class="big">No
+  <a href="http://indiewebify.me/#send-webmentions">webmentions</a> received yet.</p>
+
+</div>
+
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

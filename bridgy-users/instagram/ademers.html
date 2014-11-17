@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Andrea DeMers (Instagram) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="http://instagram.com/ademers" title="Andrea DeMers (Instagram)"
+   class="u-url">
+  <img class="profile u-photo" src="https://distillery.s3.amazonaws.com/profiles/profile_337490_75sq_1374520304.jpg" width="64px" />
+  <img src="/static/instagram_icon.png"
+       
+       alt="Instagram" />
+  <span class="p-name">Andrea DeMers</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://andreademers.com/" class="publish-domain u-url">andreademers.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+
+<div class="row promo warning">
+You
+ need 
+<a href='http://indiewebify.me/#send-webmentions'>webmention</a> support.
+
+
+<a href="http://indiewebcamp.com/webmention#Publishing_Software">Here are some
+resources.</a> If you're on
+WordPress, <a href="http://wordpress.org/plugins/indieweb/">try the IndieWeb
+bundle plugin</a>. If you're on Blogger, Tumblr, or
+WordPress.com, <a href="/">sign up here!</a>
+
+
+
+</div>
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class=" big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyFgsSCUluc3RhZ3JhbSIHYWRlbWVycww" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416206393&key=aglzfmJyaWQtZ3lyFgsSCUluc3RhZ3JhbSIHYWRlbWVycww">
+      1 hour, 56 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyFgsSCUluc3RhZ3JhbSIHYWRlbWVycww" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/alicejaneem"
+       title="Alice Jane Emanuel">
+      <img class="profile" src="https://igcdn-photos-e-a.akamaihd.net/hphotos-ak-xpa1/10735562_1556414631256924_1995746484_a.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/vdwkmxJu6z/#comment-855221890554719542">
+        Lovely. ❄️✨</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="http://instagram.com/p/vdwkmxJu6z/">
+      
+        First snow
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 hour, 56 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/emmerswatt"
+       title="🌸Emily Watt🌾">
+      <img class="profile" src="https://igcdn-photos-c-a.akamaihd.net/hphotos-ak-xpf1/10601723_280506582142170_1299318817_a.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/vdwkmxJu6z/#liked-by-276288227">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/vdwkmxJu6z/">
+      
+        First snow
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 hour, 56 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/karinmarianna"
+       title="karinmarianna">
+      <img class="profile" src="https://instagramimages-a.akamaihd.net/profiles/profile_197595407_75sq_1368843413.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/vdwkmxJu6z/#liked-by-197595407">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/vdwkmxJu6z/">
+      
+        First snow
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 hour, 56 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/emmerswatt"
+       title="🌸Emily Watt🌾">
+      <img class="profile" src="https://igcdn-photos-c-a.akamaihd.net/hphotos-ak-xpf1/10601723_280506582142170_1299318817_a.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/vdwkmxJu6z/#comment-855065279798374308">
+        Wow!</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="http://instagram.com/p/vdwkmxJu6z/">
+      
+        First snow
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 hour, 56 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/olgak"
+       title="Olga Kowalewska">
+      <img class="profile" src="https://instagramimages-a.akamaihd.net/profiles/profile_1725774_75sq_1381034618.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/vdwkmxJu6z/#liked-by-1725774">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/vdwkmxJu6z/">
+      
+        First snow
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 hour, 56 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/davefarrant"
+       title="Dave Farrant">
+      <img class="profile" src="https://instagramimages-a.akamaihd.net/profiles/profile_5323546_75sq_1392300450.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/vdwkmxJu6z/#liked-by-5323546">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/vdwkmxJu6z/">
+      
+        First snow
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 hour, 56 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/daspab"
+       title="Paul Knechtel">
+      <img class="profile" src="https://instagramimages-a.akamaihd.net/profiles/profile_13581061_75sq_1372720200.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/vbts-Bpu2x/#liked-by-13581061">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/vbts-Bpu2x/">
+      
+        #caturday
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      23 hours, 1 minute ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/richardbonomo"
+       title="Richard Bonomo">
+      <img class="profile" src="https://instagramimages-a.akamaihd.net/profiles/profile_4507241_75sq_1308269650.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/vZy7Kppuwx/#liked-by-4507241">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/vZy7Kppuwx/">
+      
+        Mural at Notre-Dame & Côte-St-Paul in ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      23 hours, 1 minute ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/mediagirl"
+       title="Anna Brown">
+      <img class="profile" src="https://igcdn-photos-c-a.akamaihd.net/hphotos-ak-xaf1/10693368_571375852992098_459906434_a.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/vbts-Bpu2x/#liked-by-261903">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/vbts-Bpu2x/">
+      
+        #caturday
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      23 hours, 1 minute ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/alicejaneem"
+       title="Alice Jane Emanuel">
+      <img class="profile" src="https://igcdn-photos-e-a.akamaihd.net/hphotos-ak-xpa1/10735562_1556414631256924_1995746484_a.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/vbts-Bpu2x/#comment-854848932439059901">
+        Kisses for Cindy Lou 😘😘😘❤️✨</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="http://instagram.com/p/vbts-Bpu2x/">
+      
+        #caturday
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      23 hours, 1 minute ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

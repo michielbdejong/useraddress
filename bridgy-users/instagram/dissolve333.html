@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Ben Roberts (Instagram) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="http://instagram.com/dissolve333" title="Ben Roberts (Instagram)"
+   class="u-url">
+  <img class="profile u-photo" src="https://distillery.s3.amazonaws.com/profiles/anonymousUser.jpg" width="64px" />
+  <img src="/static/instagram_icon.png"
+       
+       alt="Instagram" />
+  <span class="p-name">Ben Roberts</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://ben.thatmustbe.me/" class="publish-domain u-url">ben.thatmustbe.me</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class=" big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGgsSCUluc3RhZ3JhbSILZGlzc29sdmUzMzMM" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416213286&key=aglzfmJyaWQtZ3lyGgsSCUluc3RhZ3JhbSILZGlzc29sdmUzMzMM">
+      1 minute ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGgsSCUluc3RhZ3JhbSILZGlzc29sdmUzMzMM" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/tantek"
+       title="Tantek Çelik">
+      <img class="profile" src="https://distillery.s3.amazonaws.com/profiles/profile_2975244_75sq_1390152350.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/ubOvOPKuWF/#liked-by-2975244">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/ubOvOPKuWF/">
+      
+        #indieweb @t Just leftover W words ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415704370&key=aglzfmJyaWQtZ3lyUwsSCFJlc3BvbnNlIkV0YWc6aW5zdGFncmFtLmNvbSwyMDEzOjgzNjMyNjk3MzU2MDc3NjA2OV8xMzAzMzM3NzQ0X2xpa2VkX2J5XzI5NzUyNDQM">
+    
+      5 days, 21 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://ben.thatmustbe.me/photo/2014/10/21/1">ben.thatmustbe.me/photo/2014/10/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/buethling"
+       title="Chris Lydon">
+      <img class="profile" src="https://distillery.s3.amazonaws.com/profiles/profile_654704284_75sq_1386294215.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/u3DBv9quZS/#liked-by-654704284">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/u3DBv9quZS/">
+      
+        Wow. Really?
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415451086&key=aglzfmJyaWQtZ3lyVQsSCFJlc3BvbnNlIkd0YWc6aW5zdGFncmFtLmNvbSwyMDEzOjg0NDE1Njc2OTUxNDc0MzM3OF8xMzAzMzM3NzQ0X2xpa2VkX2J5XzY1NDcwNDI4NAw">
+    
+      1 week, 1 day ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://ben.thatmustbe.me/photo/2014/11/1/1">ben.thatmustbe.me/photo/2014/11/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/mattcounts"
+       title="Matt">
+      <img class="profile" src="https://distillery.s3.amazonaws.com/profiles/profile_6313797_75sq_1370271809.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/u3DBv9quZS/#liked-by-6313797">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/u3DBv9quZS/">
+      
+        Wow. Really?
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414882480&key=aglzfmJyaWQtZ3lyUwsSCFJlc3BvbnNlIkV0YWc6aW5zdGFncmFtLmNvbSwyMDEzOjg0NDE1Njc2OTUxNDc0MzM3OF8xMzAzMzM3NzQ0X2xpa2VkX2J5XzYzMTM3OTcM">
+    
+      2 weeks, 1 day ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://ben.thatmustbe.me/photo/2014/11/1/1">ben.thatmustbe.me/photo/2014/11/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/mattcounts"
+       title="Matt">
+      <img class="profile" src="https://distillery.s3.amazonaws.com/profiles/profile_6313797_75sq_1370271809.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/uosldcquTl/#liked-by-6313797">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/uosldcquTl/">
+      
+        First ever home made meat pie ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1414553875&key=aglzfmJyaWQtZ3lyUwsSCFJlc3BvbnNlIkV0YWc6aW5zdGFncmFtLmNvbSwyMDEzOjg0MDExNzQxODc5MTE5OTk3M18xMzAzMzM3NzQ0X2xpa2VkX2J5XzYzMTM3OTcM">
+    
+      2 weeks, 5 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://ben.thatmustbe.me/photo/2014/10/27/1">ben.thatmustbe.me/photo/2014/10/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/sozerrr"
+       title="Omar">
+      <img class="profile" src="https://distillery.s3.amazonaws.com/profiles/profile_174510080_75sq_1338052962.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/syViZIKuYa/#liked-by-174510080">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/syViZIKuYa/">
+      
+        Just browsing through some old photos
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 months, 1 week ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/mattcounts"
+       title="Matt">
+      <img class="profile" src="https://distillery.s3.amazonaws.com/profiles/profile_6313797_75sq_1370271809.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/rUkX-EquSb/#liked-by-6313797">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/rUkX-EquSb/">
+      
+        Test of ownyougram integration
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 months, 1 week ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/vivamiwa5"
+       title="Miwa Oniki">
+      <img class="profile" src="https://distillery.s3.amazonaws.com/profiles/profile_385717274_75sq_1368968997.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/sfo-h7qub4/#liked-by-385717274">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/sfo-h7qub4/">
+      
+        --
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 months, 1 week ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/sozerrr"
+       title="Omar">
+      <img class="profile" src="https://distillery.s3.amazonaws.com/profiles/profile_174510080_75sq_1338052962.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/sfo-h7qub4/#liked-by-174510080">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/sfo-h7qub4/">
+      
+        --
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 months, 1 week ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/restaurantsofboston"
+       title="Phil">
+      <img class="profile" src="https://igcdn-photos-e-a.akamaihd.net/hphotos-ak-xfa1/10632446_606173959518884_962975489_a.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/ngD8G4quTa/#liked-by-1286958997">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/ngD8G4quTa/">
+      
+        Back of my coworker's head
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 months, 1 week ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/restaurantsofboston"
+       title="Phil">
+      <img class="profile" src="https://igcdn-photos-e-a.akamaihd.net/hphotos-ak-xfa1/10632446_606173959518884_962975489_a.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/oPgJ6LquSJ/#liked-by-1286958997">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/oPgJ6LquSJ/">
+      
+        --
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 months, 1 week ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

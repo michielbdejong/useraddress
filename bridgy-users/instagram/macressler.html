@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Phillip Ressler (Instagram) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="http://instagram.com/macressler" title="Phillip Ressler (Instagram)"
+   class="u-url">
+  <img class="profile u-photo" src="https://distillery.s3.amazonaws.com/profiles/profile_8196224_75sq_1338714038.jpg" width="64px" />
+  <img src="/static/instagram_icon.png"
+       
+       alt="Instagram" />
+  <span class="p-name">Phillip Ressler</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://about.me/macressler" class="publish-domain u-url">about.me</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+
+<div class="row promo warning">
+You
+ need 
+<a href='http://indiewebify.me/#send-webmentions'>webmention</a> support.
+
+
+<a href="http://indiewebcamp.com/webmention#Publishing_Software">Here are some
+resources.</a> If you're on
+WordPress, <a href="http://wordpress.org/plugins/indieweb/">try the IndieWeb
+bundle plugin</a>. If you're on Blogger, Tumblr, or
+WordPress.com, <a href="/">sign up here!</a>
+
+
+
+</div>
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class=" big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGQsSCUluc3RhZ3JhbSIKbWFjcmVzc2xlcgw" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416212117&key=aglzfmJyaWQtZ3lyGQsSCUluc3RhZ3JhbSIKbWFjcmVzc2xlcgw">
+      22 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGQsSCUluc3RhZ3JhbSIKbWFjcmVzc2xlcgw" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/brilliant.thjun"
+       title="* Brilliant Tae-Ho Jun 🐇">
+      <img class="profile" src="https://igcdn-photos-d-a.akamaihd.net/hphotos-ak-xpa1/927473_1503205783287275_1951877181_a.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/r9ehlJEyQ4/#liked-by-559426">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/r9ehlJEyQ4/">
+      
+        macressler1983 - my Chatous application (app) ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      23 hours, 5 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/whiskymoney"
+       title="Морфий">
+      <img class="profile" src="https://distillery.s3.amazonaws.com/profiles/profile_329249412_75sq_1363641557.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/lj5mGYEyeQ/#liked-by-329249412">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/lj5mGYEyeQ/">
+      
+        Check me out on Frankly! :-)
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      5 days, 4 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/djsamjam818"
+       title="Sam Hill">
+      <img class="profile" src="https://igcdn-photos-e-a.akamaihd.net/hphotos-ak-xap1/1515795_780199185402569_1878055350_a.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/vC1xJHkyQq/#liked-by-1349188124">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/vC1xJHkyQq/">
+      
+        Add me on @HASHapp! Send your ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 week, 4 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/mafeswaggy1"
+       title="Mafe Godoy">
+      <img class="profile" src="https://igcdn-photos-e-a.akamaihd.net/hphotos-ak-xfa1/10725005_280523238803926_1706628994_a.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/vC1xJHkyQq/#liked-by-373411103">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/vC1xJHkyQq/">
+      
+        Add me on @HASHapp! Send your ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 week, 4 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/macressler"
+       title="Phillip Ressler">
+      <img class="profile" src="https://scontent-b.cdninstagram.com/hphotos-xfp1/outbound-distillery/t0.0-20/OBPTH/profiles/profile_8196224_75sq_1338714038.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/vC1xJHkyQq/#liked-by-8196224">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/vC1xJHkyQq/">
+      
+        Add me on @HASHapp! Send your ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 week, 4 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/adog_8823"
+       title="Alfredo RED 🔴👺🎒🅰🅰❤️🎯">
+      <img class="profile" src="https://igcdn-photos-e-a.akamaihd.net/hphotos-ak-xaf1/10693563_678006282307238_475611939_a.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/vC1xJHkyQq/#liked-by-638925593">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/vC1xJHkyQq/">
+      
+        Add me on @HASHapp! Send your ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 week, 4 days ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/waheed897gmailcom"
+       title="waheed">
+      <img class="profile" src="https://igcdn-photos-e-a.akamaihd.net/hphotos-ak-xaf1/10617060_694513720625850_1160549675_a.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/r9ehlJEyQ4/#liked-by-248566156">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/r9ehlJEyQ4/">
+      
+        macressler1983 - my Chatous application (app) ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 months, 3 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/waheed897gmailcom"
+       title="waheed">
+      <img class="profile" src="https://igcdn-photos-e-a.akamaihd.net/hphotos-ak-xaf1/10617060_694513720625850_1160549675_a.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/r9eDo5EyQM/#liked-by-248566156">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/r9eDo5EyQM/">
+      
+        Try out the #chatous app and ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 months, 3 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/macressler"
+       title="Phillip Ressler">
+      <img class="profile" src="https://scontent-b.cdninstagram.com/hphotos-xfp1/outbound-distillery/t0.0-20/OBPTH/profiles/profile_8196224_75sq_1338714038.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/r9eDo5EyQM/#liked-by-8196224">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/r9eDo5EyQM/">
+      
+        Try out the #chatous app and ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 months, 3 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/lhuereca"
+       title="Lucy Huereca">
+      <img class="profile" src="https://igcdn-photos-e-a.akamaihd.net/hphotos-ak-xap1/928635_353529844798754_822553797_a.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/r9ehlJEyQ4/#liked-by-1448848985">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/r9ehlJEyQ4/">
+      
+        macressler1983 - my Chatous application (app) ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 months, 3 weeks ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

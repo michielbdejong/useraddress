@@ -1,46 +1,46 @@
-curl -k https://www.brid.gy/tumblr/106miles.tumblr.com
-curl -k https://www.brid.gy/tumblr/andthenitcametotheend.tumblr.com
-curl -k https://www.brid.gy/tumblr/armingrewe.tumblr.com
-curl -k https://www.brid.gy/tumblr/axyl.us
-curl -k https://www.brid.gy/tumblr/bits.rawlinson.us
-curl -k https://www.brid.gy/tumblr/blog.uebyn.com
-curl -k https://www.brid.gy/tumblr/brandonscollins.tumblr.com
-curl -k https://www.brid.gy/tumblr/brentouttashape.tumblr.com
-curl -k https://www.brid.gy/tumblr/carbsryanate.tumblr.com
-curl -k https://www.brid.gy/tumblr/cedorsett.tumblr.com
-curl -k https://www.brid.gy/tumblr/circusriot.tumblr.com
-curl -k https://www.brid.gy/tumblr/cpti.me
-curl -k https://www.brid.gy/tumblr/cybion.tumblr.com
-curl -k https://www.brid.gy/tumblr/dan-hill.tumblr.com
-curl -k https://www.brid.gy/tumblr/dariusdunlap.tumblr.com
-curl -k https://www.brid.gy/tumblr/daviddulin.com
-curl -k https://www.brid.gy/tumblr/daviddulin.tumblr.com
-curl -k https://www.brid.gy/tumblr/elliottucker.tumblr.com
-curl -k https://www.brid.gy/tumblr/euparl-en.tumblr.com
-curl -k https://www.brid.gy/tumblr/faradaycagefight.tumblr.com
-curl -k https://www.brid.gy/tumblr/islayblog.tumblr.com
-curl -k https://www.brid.gy/tumblr/jackjackdaw.tumblr.com
-curl -k https://www.brid.gy/tumblr/jonathanfrei.com
-curl -k https://www.brid.gy/tumblr/jpreardon.tumblr.com
-curl -k https://www.brid.gy/tumblr/kibayanse.com
-curl -k https://www.brid.gy/tumblr/leonieke.tumblr.com
-curl -k https://www.brid.gy/tumblr/lesrach.tumblr.com
-curl -k https://www.brid.gy/tumblr/macressler.tumblr.com
-curl -k https://www.brid.gy/tumblr/mathewlowry.tumblr.com
-curl -k https://www.brid.gy/tumblr/mtony75.tumblr.com
-curl -k https://www.brid.gy/tumblr/muhh.tumblr.com
-curl -k https://www.brid.gy/tumblr/nach.com
-curl -k https://www.brid.gy/tumblr/nadreck.tumblr.com
-curl -k https://www.brid.gy/tumblr/nickreynolds.org
-curl -k https://www.brid.gy/tumblr/paulo-pinto.com
-curl -k https://www.brid.gy/tumblr/peterccook.tumblr.com
-curl -k https://www.brid.gy/tumblr/pmlnr.tumblr.com
-curl -k https://www.brid.gy/tumblr/rekve.com
-curl -k https://www.brid.gy/tumblr/require.aorcsik.com
-curl -k https://www.brid.gy/tumblr/saturninetheme.tumblr.com
-curl -k https://www.brid.gy/tumblr/shiver-sigh.tumblr.com
-curl -k https://www.brid.gy/tumblr/snarfed.tumblr.com
-curl -k https://www.brid.gy/tumblr/tumblr.ihatemornings.com
-curl -k https://www.brid.gy/tumblr/tumblr.petermolnar.eu
-curl -k https://www.brid.gy/tumblr/uebyn.tumblr.com
-curl -k https://www.brid.gy/tumblr/viralradio.tumblr.com
+curl -k https://www.brid.gy/tumblr/106miles.tumblr.com > 106miles.tumblr.com.html
+curl -k https://www.brid.gy/tumblr/andthenitcametotheend.tumblr.com > andthenitcametotheend.tumblr.com.html
+curl -k https://www.brid.gy/tumblr/armingrewe.tumblr.com > armingrewe.tumblr.com.html
+curl -k https://www.brid.gy/tumblr/axyl.us > axyl.us.html
+curl -k https://www.brid.gy/tumblr/bits.rawlinson.us > bits.rawlinson.us.html
+curl -k https://www.brid.gy/tumblr/blog.uebyn.com > blog.uebyn.com.html
+curl -k https://www.brid.gy/tumblr/brandonscollins.tumblr.com > brandonscollins.tumblr.com.html
+curl -k https://www.brid.gy/tumblr/brentouttashape.tumblr.com > brentouttashape.tumblr.com.html
+curl -k https://www.brid.gy/tumblr/carbsryanate.tumblr.com > carbsryanate.tumblr.com.html
+curl -k https://www.brid.gy/tumblr/cedorsett.tumblr.com > cedorsett.tumblr.com.html
+curl -k https://www.brid.gy/tumblr/circusriot.tumblr.com > circusriot.tumblr.com.html
+curl -k https://www.brid.gy/tumblr/cpti.me > cpti.me.html
+curl -k https://www.brid.gy/tumblr/cybion.tumblr.com > cybion.tumblr.com.html
+curl -k https://www.brid.gy/tumblr/dan-hill.tumblr.com > dan-hill.tumblr.com.html
+curl -k https://www.brid.gy/tumblr/dariusdunlap.tumblr.com > dariusdunlap.tumblr.com.html
+curl -k https://www.brid.gy/tumblr/daviddulin.com > daviddulin.com.html
+curl -k https://www.brid.gy/tumblr/daviddulin.tumblr.com > daviddulin.tumblr.com.html
+curl -k https://www.brid.gy/tumblr/elliottucker.tumblr.com > elliottucker.tumblr.com.html
+curl -k https://www.brid.gy/tumblr/euparl-en.tumblr.com > euparl-en.tumblr.com.html
+curl -k https://www.brid.gy/tumblr/faradaycagefight.tumblr.com > faradaycagefight.tumblr.com.html
+curl -k https://www.brid.gy/tumblr/islayblog.tumblr.com > islayblog.tumblr.com.html
+curl -k https://www.brid.gy/tumblr/jackjackdaw.tumblr.com > jackjackdaw.tumblr.com.html
+curl -k https://www.brid.gy/tumblr/jonathanfrei.com > jonathanfrei.com.html
+curl -k https://www.brid.gy/tumblr/jpreardon.tumblr.com > jpreardon.tumblr.com.html
+curl -k https://www.brid.gy/tumblr/kibayanse.com > kibayanse.com.html
+curl -k https://www.brid.gy/tumblr/leonieke.tumblr.com > leonieke.tumblr.com.html
+curl -k https://www.brid.gy/tumblr/lesrach.tumblr.com > lesrach.tumblr.com.html
+curl -k https://www.brid.gy/tumblr/macressler.tumblr.com > macressler.tumblr.com.html
+curl -k https://www.brid.gy/tumblr/mathewlowry.tumblr.com > mathewlowry.tumblr.com.html
+curl -k https://www.brid.gy/tumblr/mtony75.tumblr.com > mtony75.tumblr.com.html
+curl -k https://www.brid.gy/tumblr/muhh.tumblr.com > muhh.tumblr.com.html
+curl -k https://www.brid.gy/tumblr/nach.com > nach.com.html
+curl -k https://www.brid.gy/tumblr/nadreck.tumblr.com > nadreck.tumblr.com.html
+curl -k https://www.brid.gy/tumblr/nickreynolds.org > nickreynolds.org.html
+curl -k https://www.brid.gy/tumblr/paulo-pinto.com > paulo-pinto.com.html
+curl -k https://www.brid.gy/tumblr/peterccook.tumblr.com > peterccook.tumblr.com.html
+curl -k https://www.brid.gy/tumblr/pmlnr.tumblr.com > pmlnr.tumblr.com.html
+curl -k https://www.brid.gy/tumblr/rekve.com > rekve.com.html
+curl -k https://www.brid.gy/tumblr/require.aorcsik.com > require.aorcsik.com.html
+curl -k https://www.brid.gy/tumblr/saturninetheme.tumblr.com > saturninetheme.tumblr.com.html
+curl -k https://www.brid.gy/tumblr/shiver-sigh.tumblr.com > shiver-sigh.tumblr.com.html
+curl -k https://www.brid.gy/tumblr/snarfed.tumblr.com > snarfed.tumblr.com.html
+curl -k https://www.brid.gy/tumblr/tumblr.ihatemornings.com > tumblr.ihatemornings.com.html
+curl -k https://www.brid.gy/tumblr/tumblr.petermolnar.eu > tumblr.petermolnar.eu.html
+curl -k https://www.brid.gy/tumblr/uebyn.tumblr.com > uebyn.tumblr.com.html
+curl -k https://www.brid.gy/tumblr/viralradio.tumblr.com > viralradio.tumblr.com.html

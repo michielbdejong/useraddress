@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Bret (Instagram) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="http://instagram.com/physisima" title="Bret (Instagram)"
+   class="u-url">
+  <img class="profile u-photo" src="https://distillery.s3.amazonaws.com/profiles/profile_1309004477_75sq_1402089360.jpg" width="64px" />
+  <img src="/static/instagram_icon.png"
+       
+       alt="Instagram" />
+  <span class="p-name">Bret</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://bret.io/" class="publish-domain u-url">bret.io</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class=" big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGAsSCUluc3RhZ3JhbSIJcGh5c2lzaW1hDA" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416170589&key=aglzfmJyaWQtZ3lyGAsSCUluc3RhZ3JhbSIJcGh5c2lzaW1hDA">
+      11 hours, 54 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGAsSCUluc3RhZ3JhbSIJcGh5c2lzaW1hDA" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/pelicanese"
+       title="Nation">
+      <img class="profile" src="https://distillery.s3.amazonaws.com/profiles/profile_320927147_75sq_1365907698.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/qDljaRxfsG/#liked-by-320927147">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/qDljaRxfsG/">
+      
+        Egc
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413400344&key=aglzfmJyaWQtZ3lyVQsSCFJlc3BvbnNlIkd0YWc6aW5zdGFncmFtLmNvbSwyMDEzOjc1NzYxNDMyMzQ0NjQ0Njg1NF8xMzA5MDA0NDc3X2xpa2VkX2J5XzMyMDkyNzE0Nww">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://bret.io/2014/07/04/egc/">bret.io/2014/07/04/egc...</a></li>
+	<li><a class="original-post" target="_blank" href="http://bret.io/2014/07/05/egc/">bret.io/2014/07/05/egc...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/pelicanese"
+       title="Nation">
+      <img class="profile" src="https://distillery.s3.amazonaws.com/profiles/profile_320927147_75sq_1365907698.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/s-YGeDxfrq/#liked-by-320927147">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/s-YGeDxfrq/">
+      
+        Zombie baby and hand
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413400327&key=aglzfmJyaWQtZ3lyVQsSCFJlc3BvbnNlIkd0YWc6aW5zdGFncmFtLmNvbSwyMDEzOjgxMDE5MDk4MDY4MTk1NjA3NF8xMzA5MDA0NDc3X2xpa2VkX2J5XzMyMDkyNzE0Nww">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://bret.io/2014/09/15/zombie-baby-and-hand/">bret.io/2014/09/15/zom...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/whoismikereta"
+       title="Mike Reta">
+      <img class="profile" src="https://igcdn-photos-e-a.akamaihd.net/hphotos-ak-xaf1/10691683_287939448073722_1351606152_a.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/tq4WtUxftO/#liked-by-271091493">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/tq4WtUxftO/">
+      
+        Circle packing
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413350358&key=aglzfmJyaWQtZ3lyVQsSCFJlc3BvbnNlIkd0YWc6aW5zdGFncmFtLmNvbSwyMDEzOjgyMjcxNzczMzA0ODU0ODE3NF8xMzA5MDA0NDc3X2xpa2VkX2J5XzI3MTA5MTQ5Mww">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://bret.io/2014/10/03/circle-packing/">bret.io/2014/10/03/cir...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/whoismikereta"
+       title="Mike Reta">
+      <img class="profile" src="https://igcdn-photos-e-a.akamaihd.net/hphotos-ak-xaf1/10691683_287939448073722_1351606152_a.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/qDljaRxfsG/#liked-by-271091493">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/qDljaRxfsG/">
+      
+        Egc
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413350300&key=aglzfmJyaWQtZ3lyVQsSCFJlc3BvbnNlIkd0YWc6aW5zdGFncmFtLmNvbSwyMDEzOjc1NzYxNDMyMzQ0NjQ0Njg1NF8xMzA5MDA0NDc3X2xpa2VkX2J5XzI3MTA5MTQ5Mww">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://bret.io/2014/07/04/egc/">bret.io/2014/07/04/egc...</a></li>
+	<li><a class="original-post" target="_blank" href="http://bret.io/2014/07/05/egc/">bret.io/2014/07/05/egc...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/whoismikereta"
+       title="Mike Reta">
+      <img class="profile" src="https://igcdn-photos-e-a.akamaihd.net/hphotos-ak-xaf1/10691683_287939448073722_1351606152_a.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/p12R6Uxflf/#liked-by-271091493">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/p12R6Uxflf/">
+      
+        Vett
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413350238&key=aglzfmJyaWQtZ3lyVQsSCFJlc3BvbnNlIkd0YWc6aW5zdGFncmFtLmNvbSwyMDEzOjc1Mzc0NzIzODAyMjY3NDc4M18xMzA5MDA0NDc3X2xpa2VkX2J5XzI3MTA5MTQ5Mww">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://bret.io/2014/06/29/vett/">bret.io/2014/06/29/vet...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/yogabootyballet"
+       title="Elena">
+      <img class="profile" src="https://igcdn-photos-e-a.akamaihd.net/hphotos-ak-xaf1/917184_541600582642439_1046500149_a.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/rSdUBaRfll/#comment-830688962434955615">
+        #itsnotdelivery ...it's Monty Pythons Flying Circus</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="http://instagram.com/p/rSdUBaRfll/">
+      
+        Giorno Pills
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413246162&key=aglzfmJyaWQtZ3lyNwsSCFJlc3BvbnNlIil0YWc6aW5zdGFncmFtLmNvbSwyMDEzOjgzMDY4ODk2MjQzNDk1NTYxNQw">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://bret.io/2014/08/04/giorno-pills/">bret.io/2014/08/04/gio...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/yogabootyballet"
+       title="Elena">
+      <img class="profile" src="https://igcdn-photos-e-a.akamaihd.net/hphotos-ak-xaf1/917184_541600582642439_1046500149_a.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/qDljaRxfsG/#comment-830687479823988998">
+        Yep that's me dude in my ...</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="http://instagram.com/p/qDljaRxfsG/">
+      
+        Egc
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413246106&key=aglzfmJyaWQtZ3lyNwsSCFJlc3BvbnNlIil0YWc6aW5zdGFncmFtLmNvbSwyMDEzOjgzMDY4NzQ3OTgyMzk4ODk5OAw">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://bret.io/2014/07/04/egc/">bret.io/2014/07/04/egc...</a></li>
+	<li><a class="original-post" target="_blank" href="http://bret.io/2014/07/05/egc/">bret.io/2014/07/05/egc...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/yogabootyballet"
+       title="Elena">
+      <img class="profile" src="https://igcdn-photos-e-a.akamaihd.net/hphotos-ak-xaf1/917184_541600582642439_1046500149_a.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/qDljaRxfsG/#comment-830687967395051815">
+        #itshardtofindagreartshirt</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+     on 
+    <a target="_blank" href="http://instagram.com/p/qDljaRxfsG/">
+      
+        Egc
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1413246099&key=aglzfmJyaWQtZ3lyNwsSCFJlc3BvbnNlIil0YWc6aW5zdGFncmFtLmNvbSwyMDEzOjgzMDY4Nzk2NzM5NTA1MTgxNQw">
+    
+      1 month ago
+      
+    
+     </a>
+    
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyNwsSCFJlc3BvbnNlIil0YWc6aW5zdGFncmFtLmNvbSwyMDEzOjgzMDY4Nzk2NzM5NTA1MTgxNQw" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-3">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://bret.io/2014/07/04/egc/">bret.io/2014/07/04/egc... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://bret.io/2014/07/05/egc/">bret.io/2014/07/05/egc...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/luciacomnes"
+       title="Lucia Comnes">
+      <img class="profile" src="https://distillery.s3.amazonaws.com/profiles/profile_46345095_75sq_1389461761.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/tq4WtUxftO/#liked-by-46345095">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/tq4WtUxftO/">
+      
+        Circle packing
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1412760596&key=aglzfmJyaWQtZ3lyVAsSCFJlc3BvbnNlIkZ0YWc6aW5zdGFncmFtLmNvbSwyMDEzOjgyMjcxNzczMzA0ODU0ODE3NF8xMzA5MDA0NDc3X2xpa2VkX2J5XzQ2MzQ1MDk1DA">
+    
+      1 month, 1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://bret.io/2014/10/03/circle-packing/">bret.io/2014/10/03/cir...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/aaronpk"
+       title="Aaron Parecki">
+      <img class="profile" src="https://distillery.s3.amazonaws.com/profiles/profile_1500881_75sq_1346736633.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/tWgPpSxfl6/#liked-by-1500881">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/tWgPpSxfl6/">
+      
+        Hwc!
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1412377876&key=aglzfmJyaWQtZ3lyUwsSCFJlc3BvbnNlIkV0YWc6aW5zdGFncmFtLmNvbSwyMDEzOjgxNjk4MjE5NTAzMzIwOTIxMF8xMzA5MDA0NDc3X2xpa2VkX2J5XzE1MDA4ODEM">
+    
+      1 month, 2 weeks ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://bret.io/2014/09/25/hwc/">bret.io/2014/09/25/hwc...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

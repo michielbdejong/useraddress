@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Aaron Jorbin (Instagram) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="http://instagram.com/aaronjorbin" title="Aaron Jorbin (Instagram)"
+   class="u-url">
+  <img class="profile u-photo" src="https://distillery.s3.amazonaws.com/profiles/profile_7003800_75sq_1363637680.jpg" width="64px" />
+  <img src="/static/instagram_icon.png"
+       
+       alt="Instagram" />
+  <span class="p-name">Aaron Jorbin</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://aaron.jorb.in/" class="publish-domain u-url">aaron.jorb.in</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+
+<div class="row promo warning">
+You
+ need 
+<a href='http://indiewebify.me/#send-webmentions'>webmention</a> support.
+
+
+<a href="http://indiewebcamp.com/webmention#Publishing_Software">Here are some
+resources.</a> If you're on
+WordPress, <a href="http://wordpress.org/plugins/indieweb/">try the IndieWeb
+bundle plugin</a>. If you're on Blogger, Tumblr, or
+WordPress.com, <a href="/">sign up here!</a>
+
+
+
+</div>
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class=" big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGgsSCUluc3RhZ3JhbSILYWFyb25qb3JiaW4M" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416203654&key=aglzfmJyaWQtZ3lyGgsSCUluc3RhZ3JhbSILYWFyb25qb3JiaW4M">
+      2 hours, 41 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGgsSCUluc3RhZ3JhbSILYWFyb25qb3JiaW4M" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/cdo99"
+       title="cdo99">
+      <img class="profile" src="https://instagramimages-a.akamaihd.net/profiles/profile_26895141_75sq_1361074785.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/vb7Mi2u2eE/#liked-by-26895141">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/vb7Mi2u2eE/">
+      
+        Airline food
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 hours, 41 minutes ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/lovelypandaface"
+       title="Kendra Atkins">
+      <img class="profile" src="https://instagramimages-a.akamaihd.net/profiles/profile_285101034_75sq_1377628915.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/vb7Mi2u2eE/#liked-by-285101034">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/vb7Mi2u2eE/">
+      
+        Airline food
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 day ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/dcdoc00"
+       title="dcdoc00">
+      <img class="profile" src="https://instagramimages-a.akamaihd.net/profiles/profile_198246818_75sq_1382770477.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/vb7Mi2u2eE/#liked-by-198246818">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/vb7Mi2u2eE/">
+      
+        Airline food
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 day ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/lschmidt85"
+       title="lschmidt85">
+      <img class="profile" src="https://instagramimages-a.akamaihd.net/profiles/profile_15434169_75sq_1369627624.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/sgIasTO2az/#liked-by-15434169">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/sgIasTO2az/">
+      
+        Pretzel, cheese, gherkin, mustard
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 day, 20 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/corymiller303"
+       title="Cory Miller">
+      <img class="profile" src="https://instagramimages-a.akamaihd.net/profiles/profile_5197632_75sq_1329280124.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/sgIasTO2az/#liked-by-5197632">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/sgIasTO2az/">
+      
+        Pretzel, cheese, gherkin, mustard
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 day, 20 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/thorpus"
+       title="Justin Thorp">
+      <img class="profile" src="https://instagramimages-a.akamaihd.net/profiles/profile_6628_75sq_1384079617.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/sgIasTO2az/#liked-by-6628">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/sgIasTO2az/">
+      
+        Pretzel, cheese, gherkin, mustard
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      1 day, 20 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/eclairaverse"
+       title="Erica Varlese">
+      <img class="profile" src="https://igcdn-photos-e-a.akamaihd.net/hphotos-ak-xpf1/10362189_681771575222788_926910473_a.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/vMXsbLu2fM/#liked-by-18877014">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/vMXsbLu2fM/">
+      
+        #vscocam Flatiron
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      3 days, 1 hour ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/scottbasgaard"
+       title="Scott Basgaard">
+      <img class="profile" src="https://distillery.s3.amazonaws.com/profiles/profile_2688385_75sq_1391609813.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/vMXsbLu2fM/#liked-by-2688385">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/vMXsbLu2fM/">
+      
+        #vscocam Flatiron
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      3 days, 1 hour ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/c_cochran"
+       title="Christopher Cochran">
+      <img class="profile" src="https://distillery.s3.amazonaws.com/profiles/profile_8191265_75sq_1357844335.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/vMXsbLu2fM/#liked-by-8191265">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/vMXsbLu2fM/">
+      
+        #vscocam Flatiron
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      3 days, 1 hour ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/krogsgard"
+       title="Brian Krogsgard">
+      <img class="profile" src="https://distillery.s3.amazonaws.com/profiles/profile_13126664_75sq_1396717999.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/vMXsbLu2fM/#liked-by-13126664">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/vMXsbLu2fM/">
+      
+        #vscocam Flatiron
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      3 days, 1 hour ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

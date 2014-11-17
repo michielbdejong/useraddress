@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Kyle Mahan (Instagram) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="http://instagram.com/_kylewm" title="Kyle Mahan (Instagram)"
+   class="u-url">
+  <img class="profile u-photo" src="https://distillery.s3.amazonaws.com/profiles/profile_504077259_75sq_1388273406.jpg" width="64px" />
+  <img src="/static/instagram_icon.png"
+       
+       alt="Instagram" />
+  <span class="p-name">Kyle Mahan</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://kylewm.com/" class="publish-domain u-url">kylewm.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class=" big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyFgsSCUluc3RhZ3JhbSIHX2t5bGV3bQw" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416213428&key=aglzfmJyaWQtZ3lyFgsSCUluc3RhZ3JhbSIHX2t5bGV3bQw">
+      0 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyFgsSCUluc3RhZ3JhbSIHX2t5bGV3bQw" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/majorfun1"
+       title="Karol">
+      <img class="profile" src="https://igcdn-photos-e-a.akamaihd.net/hphotos-ak-xpa1/10513723_531278430331600_719580606_a.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/uT78x7I1Az/#liked-by-237434480">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/uT78x7I1Az/">
+      
+        Hella Vegan Eats is always amazing
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415989590&key=aglzfmJyaWQtZ3lyVAsSCFJlc3BvbnNlIkZ0YWc6aW5zdGFncmFtLmNvbSwyMDEzOjgzNDI3NDAxNzUxMTk1MjQzNV81MDQwNzcyNTlfbGlrZWRfYnlfMjM3NDM0NDgwDA">
+    
+      2 days, 14 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://kylewm.com/2014/10/hella-vegan-eats-is-always-amazing">kylewm.com/2014/10/hella-...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/tclark05"
+       title="Thomas Clark">
+      <img class="profile" src="https://instagramimages-a.akamaihd.net/profiles/profile_2315948_75sq_1384800490.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/uT78x7I1Az/#liked-by-2315948">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/uT78x7I1Az/">
+      
+        Hella Vegan Eats is always amazing
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415989558&key=aglzfmJyaWQtZ3lyUgsSCFJlc3BvbnNlIkR0YWc6aW5zdGFncmFtLmNvbSwyMDEzOjgzNDI3NDAxNzUxMTk1MjQzNV81MDQwNzcyNTlfbGlrZWRfYnlfMjMxNTk0OAw">
+    
+      2 days, 14 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://kylewm.com/2014/10/hella-vegan-eats-is-always-amazing">kylewm.com/2014/10/hella-...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/bobabia"
+       title="BOBABIA">
+      <img class="profile" src="https://igcdn-photos-e-a.akamaihd.net/hphotos-ak-xap1/10575962_890958610932617_1696613897_a.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/twarzNo1CH/#liked-by-1453378030">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/twarzNo1CH/">
+      
+        Steel countertop, so preeetty
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415841830&key=aglzfmJyaWQtZ3lyVQsSCFJlc3BvbnNlIkd0YWc6aW5zdGFncmFtLmNvbSwyMDEzOjgyNDI3NjA5MDk0NTIyODkzNV81MDQwNzcyNTlfbGlrZWRfYnlfMTQ1MzM3ODAzMAw">
+    
+      4 days, 7 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://kylewm.com/2014/10/steel-countertop-so-preeetty">kylewm.com/2014/10/steel-...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/ifwinterends"
+       title="ifwinterends">
+      <img class="profile" src="https://distillery.s3.amazonaws.com/profiles/profile_7898653_75sq_1382583556.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/vPulAjI1Cn/#liked-by-7898653">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/vPulAjI1Cn/">
+      
+        Jamaican black bean burgers from Isa ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415744169&key=aglzfmJyaWQtZ3lyUgsSCFJlc3BvbnNlIkR0YWc6aW5zdGFncmFtLmNvbSwyMDEzOjg1MTEwMzcwNzk0NTk4MDA3MV81MDQwNzcyNTlfbGlrZWRfYnlfNzg5ODY1Mww">
+    
+      5 days, 10 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://kylewm.com/2014/11/jamaican-black-bean-burgers-from-isa-does-it">kylewm.com/2014/11/jamaic...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/adriennefriend"
+       title="adrienne">
+      <img class="profile" src="https://igcdn-photos-e-a.akamaihd.net/hphotos-ak-xaf1/10540320_549254438513380_1691539553_a.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/vPulAjI1Cn/#liked-by-1439500080">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/vPulAjI1Cn/">
+      
+        Jamaican black bean burgers from Isa ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415705624&key=aglzfmJyaWQtZ3lyVQsSCFJlc3BvbnNlIkd0YWc6aW5zdGFncmFtLmNvbSwyMDEzOjg1MTEwMzcwNzk0NTk4MDA3MV81MDQwNzcyNTlfbGlrZWRfYnlfMTQzOTUwMDA4MAw">
+    
+      5 days, 21 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://kylewm.com/2014/11/jamaican-black-bean-burgers-from-isa-does-it">kylewm.com/2014/11/jamaic...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/tclark05"
+       title="Thomas Clark">
+      <img class="profile" src="https://distillery.s3.amazonaws.com/profiles/profile_2315948_75sq_1384800490.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/vPulAjI1Cn/#liked-by-2315948">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/vPulAjI1Cn/">
+      
+        Jamaican black bean burgers from Isa ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415690136&key=aglzfmJyaWQtZ3lyUgsSCFJlc3BvbnNlIkR0YWc6aW5zdGFncmFtLmNvbSwyMDEzOjg1MTEwMzcwNzk0NTk4MDA3MV81MDQwNzcyNTlfbGlrZWRfYnlfMjMxNTk0OAw">
+    
+      6 days, 1 hour ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://kylewm.com/2014/11/jamaican-black-bean-burgers-from-isa-does-it">kylewm.com/2014/11/jamaic...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/barrelhousebar"
+       title="Barrelhouse">
+      <img class="profile" src="https://distillery.s3.amazonaws.com/profiles/profile_412244680_75sq_1370818302.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/twarzNo1CH/#liked-by-412244680">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/twarzNo1CH/">
+      
+        Steel countertop, so preeetty
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415566184&key=aglzfmJyaWQtZ3lyVAsSCFJlc3BvbnNlIkZ0YWc6aW5zdGFncmFtLmNvbSwyMDEzOjgyNDI3NjA5MDk0NTIyODkzNV81MDQwNzcyNTlfbGlrZWRfYnlfNDEyMjQ0NjgwDA">
+    
+      1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://kylewm.com/2014/10/steel-countertop-so-preeetty">kylewm.com/2014/10/steel-...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/tom762x"
+       title="Tom Parry">
+      <img class="profile" src="https://distillery.s3.amazonaws.com/profiles/profile_677985409_75sq_1384577539.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/vDE_Cso1GP/#liked-by-677985409">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/vDE_Cso1GP/">
+      
+        Cat in my face
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415558606&key=aglzfmJyaWQtZ3lyVAsSCFJlc3BvbnNlIkZ0YWc6aW5zdGFncmFtLmNvbSwyMDEzOjg0NzU0MzA3OTI4NTI0ODM5OV81MDQwNzcyNTlfbGlrZWRfYnlfNjc3OTg1NDA5DA">
+    
+      1 week ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://kylewm.com/2014/11/cat-in-my-face">kylewm.com/2014/11/cat-in...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/juliannarosed"
+       title="julianna rose">
+      <img class="profile" src="https://distillery.s3.amazonaws.com/profiles/profile_4639613_75sq_1370464813.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/vG8MklI1G8/#liked-by-4639613">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/vG8MklI1G8/">
+      
+        Probably the last time I have ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415401144&key=aglzfmJyaWQtZ3lyUgsSCFJlc3BvbnNlIkR0YWc6aW5zdGFncmFtLmNvbSwyMDEzOjg0ODYzMDMyNjUwODA4MTU5Nl81MDQwNzcyNTlfbGlrZWRfYnlfNDYzOTYxMww">
+    
+      1 week, 2 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://kylewm.com/2014/11/probably-the-last-time-i-have-noah-s-slice-my-bagel">kylewm.com/2014/11/probab...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/onepercolated"
+       title="Kristen Parks">
+      <img class="profile" src="https://igcdn-photos-e-a.akamaihd.net/hphotos-ak-xaf1/10576003_285530088296949_1735032726_a.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/vDE_Cso1GP/#liked-by-9951300">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/vDE_Cso1GP/">
+      
+        Cat in my face
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1415349496&key=aglzfmJyaWQtZ3lyUgsSCFJlc3BvbnNlIkR0YWc6aW5zdGFncmFtLmNvbSwyMDEzOjg0NzU0MzA3OTI4NTI0ODM5OV81MDQwNzcyNTlfbGlrZWRfYnlfOTk1MTMwMAw">
+    
+      1 week, 2 days ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://kylewm.com/2014/11/cat-in-my-face">kylewm.com/2014/11/cat-in...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

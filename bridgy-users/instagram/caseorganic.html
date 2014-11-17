@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Amber Case (Instagram) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="http://instagram.com/caseorganic" title="Amber Case (Instagram)"
+   class="u-url">
+  <img class="profile u-photo" src="https://distillery.s3.amazonaws.com/profiles/profile_5792358_75sq_1364955062.jpg" width="64px" />
+  <img src="/static/instagram_icon.png"
+       
+       alt="Instagram" />
+  <span class="p-name">Amber Case</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://caseorganic.com/" class="publish-domain u-url">caseorganic.com</a>
+
+
+
+</div>
+
+
+
+<!-- Promos to get fully up and running -->
+
+
+
+<div class="row">
+
+<!-- Listen UI -->
+<div id="listen-ui" class=" big">
+
+
+<form method="post" action="/delete/start">
+<p id="listening-label">Listening for responses.
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGgsSCUluc3RhZ3JhbSILY2FzZW9yZ2FuaWMM" />
+  <input name="feature" type="hidden" value="listen" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+    title="Disable sending responses for this account. (Won't delete responses you've already received.)"
+    >Disable</button>
+</p>
+</form>
+
+<form method="post" action="/poll-now">
+<p>
+  
+    
+    Polled
+    <a href="/log?start_time=1416213361&key=aglzfmJyaWQtZ3lyGgsSCUluc3RhZ3JhbSILY2FzZW9yZ2FuaWMM">
+      0 minutes ago</a>.
+  
+
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyGgsSCUluc3RhZ3JhbSILY2FzZW9yZ2FuaWMM" />
+  <button id="poll-now-button" type="submit" class="btn btn-default">Poll now</button>
+</p>
+</form>
+
+
+<!-- Listen signup buttons -->
+
+
+</div>
+
+
+<!-- Publish UI -->
+<div id="publish-ui" class="col-sm-6">
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<!-- Publish preview UI -->
+<br />
+<div id="preview" class="row"></div>
+
+
+
+<!-- Responses -->
+<div class="row">
+
+
+<p id="responses" class="big">Recent responses:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/sedition1216"
+       title="Canon 70D Tamron 17-50 f2.8">
+      <img class="profile" src="https://instagramimages-a.akamaihd.net/profiles/profile_39179529_75sq_1381896719.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/vRdEZUpN-m/#liked-by-39179529">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/vRdEZUpN-m/">
+      
+        Rental car hit an amusing number ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416187808&key=aglzfmJyaWQtZ3lyUQsSCFJlc3BvbnNlIkN0YWc6aW5zdGFncmFtLmNvbSwyMDEzOjg1MTU4OTY0OTk2NjM1ODQzOF81NzkyMzU4X2xpa2VkX2J5XzM5MTc5NTI5DA">
+    
+      7 hours, 6 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://caseorganic.com/notes/2014/11/11/1/mildlyinteresting-odometer">caseorganic.com/notes/2014/11/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/strangeways"
+       title="Ankur">
+      <img class="profile" src="https://instagramimages-a.akamaihd.net/profiles/profile_341817_75sq_1288425248.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/vYrPKyJN46/#liked-by-341817">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/vYrPKyJN46/">
+      
+        Floating books sculpture in SF.
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416166785&key=aglzfmJyaWQtZ3lyTwsSCFJlc3BvbnNlIkF0YWc6aW5zdGFncmFtLmNvbSwyMDEzOjg1MzYyMjI4Nzc1NzUzMjczMF81NzkyMzU4X2xpa2VkX2J5XzM0MTgxNww">
+    
+      12 hours, 56 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://caseorganic.com/notes/2014/11/14/9/">caseorganic.com/notes/2014/11/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/jupiterjuniper"
+       title="rhienna">
+      <img class="profile" src="https://instagramimages-a.akamaihd.net/profiles/profile_317304643_75sq_1374771121.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/vGC9-OpN_g/#liked-by-317304643">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/vGC9-OpN_g/">
+      
+        Digitalism with @kiersithewriter!
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416144793&key=aglzfmJyaWQtZ3lyUgsSCFJlc3BvbnNlIkR0YWc6aW5zdGFncmFtLmNvbSwyMDEzOjg0ODM3ODYzNDYwNDY5OTYxNl81NzkyMzU4X2xpa2VkX2J5XzMxNzMwNDY0Mww">
+    
+      19 hours, 3 minutes ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://caseorganic.com/notes/2014/11/07/1/">caseorganic.com/notes/2014/11/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/dybskiy"
+       title="Yuriy Dybskiy">
+      <img class="profile" src="https://instagramimages-a.akamaihd.net/profiles/profile_3686317_75sq_1395382245.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/vYrPKyJN46/#liked-by-3686317">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/vYrPKyJN46/">
+      
+        Floating books sculpture in SF.
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416042039&key=aglzfmJyaWQtZ3lyUAsSCFJlc3BvbnNlIkJ0YWc6aW5zdGFncmFtLmNvbSwyMDEzOjg1MzYyMjI4Nzc1NzUzMjczMF81NzkyMzU4X2xpa2VkX2J5XzM2ODYzMTcM">
+    
+      1 day, 23 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://caseorganic.com/notes/2014/11/14/9/">caseorganic.com/notes/2014/11/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/seedonovan"
+       title="seedonovan">
+      <img class="profile" src="https://igcdn-photos-f-a.akamaihd.net/hphotos-ak-xpa1/925609_762976653749765_1252615036_a.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/vYrPKyJN46/#liked-by-25430517">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/vYrPKyJN46/">
+      
+        Floating books sculpture in SF.
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416024239&key=aglzfmJyaWQtZ3lyUQsSCFJlc3BvbnNlIkN0YWc6aW5zdGFncmFtLmNvbSwyMDEzOjg1MzYyMjI4Nzc1NzUzMjczMF81NzkyMzU4X2xpa2VkX2J5XzI1NDMwNTE3DA">
+    
+      2 days, 4 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://caseorganic.com/notes/2014/11/14/9/">caseorganic.com/notes/2014/11/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/matty.deez"
+       title="Matt Davis">
+      <img class="profile" src="https://igcdn-photos-d-a.akamaihd.net/hphotos-ak-xpa1/10369520_233320480198667_16033074_a.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/vYp8CxpNxd/#liked-by-266313115">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/vYp8CxpNxd/">
+      
+        Before there were tech mascots, there ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416014394&key=aglzfmJyaWQtZ3lyUgsSCFJlc3BvbnNlIkR0YWc6aW5zdGFncmFtLmNvbSwyMDEzOjg1MzYxNjU3NTQ0MjYzOTk2NV81NzkyMzU4X2xpa2VkX2J5XzI2NjMxMzExNQw">
+    
+      2 days, 7 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://caseorganic.com/notes/2014/11/14/2/">caseorganic.com/notes/2014/11/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/yridea"
+       title="joe jones">
+      <img class="profile" src="https://igcdn-photos-c-a.akamaihd.net/hphotos-ak-xap1/10654899_844105475613290_724966033_a.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/vYp8CxpNxd/#liked-by-1074377">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/vYp8CxpNxd/">
+      
+        Before there were tech mascots, there ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416007760&key=aglzfmJyaWQtZ3lyUAsSCFJlc3BvbnNlIkJ0YWc6aW5zdGFncmFtLmNvbSwyMDEzOjg1MzYxNjU3NTQ0MjYzOTk2NV81NzkyMzU4X2xpa2VkX2J5XzEwNzQzNzcM">
+    
+      2 days, 9 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://caseorganic.com/notes/2014/11/14/2/">caseorganic.com/notes/2014/11/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/yridea"
+       title="joe jones">
+      <img class="profile" src="https://igcdn-photos-e-a.akamaihd.net/hphotos-ak-xap1/10654899_844105475613290_724966033_a.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/vYppZXpN_d/#liked-by-1074377">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/vYppZXpN_d/">
+      
+        Have never walked through a tunnel ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 days, 9 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/moshiyama"
+       title="Stephen Yamada">
+      <img class="profile" src="https://instagramimages-a.akamaihd.net/profiles/profile_14195760_75sq_1367646446.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/vYrPKyJN46/#liked-by-14195760">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/vYrPKyJN46/">
+      
+        Floating books sculpture in SF.
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+      
+     <a href="/log?start_time=1416004112&key=aglzfmJyaWQtZ3lyUQsSCFJlc3BvbnNlIkN0YWc6aW5zdGFncmFtLmNvbSwyMDEzOjg1MzYyMjI4Nzc1NzUzMjczMF81NzkyMzU4X2xpa2VkX2J5XzE0MTk1NzYwDA">
+    
+      2 days, 10 hours ago
+      
+    
+     </a>
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://caseorganic.com/notes/2014/11/14/9/">caseorganic.com/notes/2014/11/...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+    
+    <a target="_blank" href="http://instagram.com/etchevalier"
+       title="Erik Chevalier">
+      <img class="profile" src="https://igcdn-photos-f-a.akamaihd.net/hphotos-ak-xpa1/10617176_719512138121213_592348449_a.jpg" width="32" /></a>
+      <a target="_blank" href="http://instagram.com/p/vYppZXpN_d/#liked-by-184683801">
+        likes this.</a>
+    
+
+   </div><div class="col-sm-3">
+    <ul class="original-post-links">
+    
+    <li>
+    
+    <a target="_blank" href="http://instagram.com/p/vYppZXpN_d/">
+      
+        Have never walked through a tunnel ...
+      
+    </a></li>
+    
+    </ul>
+
+   </div><div class="col-sm-3">
+    
+      2 days, 11 hours ago
+      
+    
+
+    
+
+   </div><div class="col-sm-3">
+    
+      No post links found
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+
+
+</div>
+
+
+<!-- Publishes -->
+<div class="row">
+
+</div>
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+

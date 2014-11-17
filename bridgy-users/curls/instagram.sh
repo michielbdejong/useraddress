@@ -1,81 +1,81 @@
-curl -k https://www.brid.gy/instagram/aaronjorbin
-curl -k https://www.brid.gy/instagram/aaronpk
-curl -k https://www.brid.gy/instagram/adactio
-curl -k https://www.brid.gy/instagram/adamdohm
-curl -k https://www.brid.gy/instagram/ademers
-curl -k https://www.brid.gy/instagram/aegibson73
-curl -k https://www.brid.gy/instagram/alexhartley
-curl -k https://www.brid.gy/instagram/andrejgrams
-curl -k https://www.brid.gy/instagram/aorcsik
-curl -k https://www.brid.gy/instagram/ashalaw
-curl -k https://www.brid.gy/instagram/bellvercarles
-curl -k https://www.brid.gy/instagram/ben.werdmuller
-curl -k https://www.brid.gy/instagram/bret.io
-curl -k https://www.brid.gy/instagram/camerarectoby
-curl -k https://www.brid.gy/instagram/candysaysben
-curl -k https://www.brid.gy/instagram/caseorganic
-curl -k https://www.brid.gy/instagram/chellebb
-curl -k https://www.brid.gy/instagram/chrisaldrich
-curl -k https://www.brid.gy/instagram/courtneyengle
-curl -k https://www.brid.gy/instagram/cptime
-curl -k https://www.brid.gy/instagram/danielindqvist
-curl -k https://www.brid.gy/instagram/daryl_shaw
-curl -k https://www.brid.gy/instagram/dentonjacobs
-curl -k https://www.brid.gy/instagram/diplix
-curl -k https://www.brid.gy/instagram/dissolve333
-curl -k https://www.brid.gy/instagram/dominik
-curl -k https://www.brid.gy/instagram/dougmckown
-curl -k https://www.brid.gy/instagram/eddy.arnold
-curl -k https://www.brid.gy/instagram/eliotlandrum
-curl -k https://www.brid.gy/instagram/elkosmas
-curl -k https://www.brid.gy/instagram/emmackuo
-curl -k https://www.brid.gy/instagram/espylaub
-curl -k https://www.brid.gy/instagram/_finalcut_
-curl -k https://www.brid.gy/instagram/flowfx_mexico
-curl -k https://www.brid.gy/instagram/glennjonesnet
-curl -k https://www.brid.gy/instagram/iamaegibson
-curl -k https://www.brid.gy/instagram/isapien
-curl -k https://www.brid.gy/instagram/ivarrekve
-curl -k https://www.brid.gy/instagram/japh
-curl -k https://www.brid.gy/instagram/jasonkgreen
-curl -k https://www.brid.gy/instagram/jden415
-curl -k https://www.brid.gy/instagram/jeenap
-curl -k https://www.brid.gy/instagram/jeukku
-curl -k https://www.brid.gy/instagram/johnbenson
-curl -k https://www.brid.gy/instagram/jonathanfrei
-curl -k https://www.brid.gy/instagram/krijnsoeteman
-curl -k https://www.brid.gy/instagram/_kylewm
-curl -k https://www.brid.gy/instagram/kylewm2
-curl -k https://www.brid.gy/instagram/laalders
-curl -k https://www.brid.gy/instagram/liveink
-curl -k https://www.brid.gy/instagram/macressler
-curl -k https://www.brid.gy/instagram/marccooper
-curl -k https://www.brid.gy/instagram/mathewi
-curl -k https://www.brid.gy/instagram/melkeramik
-curl -k https://www.brid.gy/instagram/milton_segretti
-curl -k https://www.brid.gy/instagram/mrcranky
-curl -k https://www.brid.gy/instagram/mrjoe
-curl -k https://www.brid.gy/instagram/mtony75
-curl -k https://www.brid.gy/instagram/muhh
-curl -k https://www.brid.gy/instagram/nikolnieto
-curl -k https://www.brid.gy/instagram/nxd4n
-curl -k https://www.brid.gy/instagram/petermolnareu
-curl -k https://www.brid.gy/instagram/physisima
-curl -k https://www.brid.gy/instagram/ptibbetts
-curl -k https://www.brid.gy/instagram/robknight
-curl -k https://www.brid.gy/instagram/samharrelson22
-curl -k https://www.brid.gy/instagram/screenorigami
-curl -k https://www.brid.gy/instagram/scrivenings
-curl -k https://www.brid.gy/instagram/simoncoopey
-curl -k https://www.brid.gy/instagram/smilyborg
-curl -k https://www.brid.gy/instagram/snarfed
-curl -k https://www.brid.gy/instagram/srcr
-curl -k https://www.brid.gy/instagram/sylvester
-curl -k https://www.brid.gy/instagram/tantek
-curl -k https://www.brid.gy/instagram/terryfinney
-curl -k https://www.brid.gy/instagram/the_cmdln
-curl -k https://www.brid.gy/instagram/the_timweston
-curl -k https://www.brid.gy/instagram/thomasmault
-curl -k https://www.brid.gy/instagram/tylergillies
-curl -k https://www.brid.gy/instagram/xtof_fr
-curl -k https://www.brid.gy/instagram/zdfs
+curl -k https://www.brid.gy/instagram/aaronjorbin > m/aaronjorbin.html
+curl -k https://www.brid.gy/instagram/aaronpk > m/aaronpk.html
+curl -k https://www.brid.gy/instagram/adactio > m/adactio.html
+curl -k https://www.brid.gy/instagram/adamdohm > m/adamdohm.html
+curl -k https://www.brid.gy/instagram/ademers > m/ademers.html
+curl -k https://www.brid.gy/instagram/aegibson73 > m/aegibson73.html
+curl -k https://www.brid.gy/instagram/alexhartley > m/alexhartley.html
+curl -k https://www.brid.gy/instagram/andrejgrams > m/andrejgrams.html
+curl -k https://www.brid.gy/instagram/aorcsik > m/aorcsik.html
+curl -k https://www.brid.gy/instagram/ashalaw > m/ashalaw.html
+curl -k https://www.brid.gy/instagram/bellvercarles > m/bellvercarles.html
+curl -k https://www.brid.gy/instagram/ben.werdmuller > m/ben.werdmuller.html
+curl -k https://www.brid.gy/instagram/bret.io > m/bret.io.html
+curl -k https://www.brid.gy/instagram/camerarectoby > m/camerarectoby.html
+curl -k https://www.brid.gy/instagram/candysaysben > m/candysaysben.html
+curl -k https://www.brid.gy/instagram/caseorganic > m/caseorganic.html
+curl -k https://www.brid.gy/instagram/chellebb > m/chellebb.html
+curl -k https://www.brid.gy/instagram/chrisaldrich > m/chrisaldrich.html
+curl -k https://www.brid.gy/instagram/courtneyengle > m/courtneyengle.html
+curl -k https://www.brid.gy/instagram/cptime > m/cptime.html
+curl -k https://www.brid.gy/instagram/danielindqvist > m/danielindqvist.html
+curl -k https://www.brid.gy/instagram/daryl_shaw > m/daryl_shaw.html
+curl -k https://www.brid.gy/instagram/dentonjacobs > m/dentonjacobs.html
+curl -k https://www.brid.gy/instagram/diplix > m/diplix.html
+curl -k https://www.brid.gy/instagram/dissolve333 > m/dissolve333.html
+curl -k https://www.brid.gy/instagram/dominik > m/dominik.html
+curl -k https://www.brid.gy/instagram/dougmckown > m/dougmckown.html
+curl -k https://www.brid.gy/instagram/eddy.arnold > m/eddy.arnold.html
+curl -k https://www.brid.gy/instagram/eliotlandrum > m/eliotlandrum.html
+curl -k https://www.brid.gy/instagram/elkosmas > m/elkosmas.html
+curl -k https://www.brid.gy/instagram/emmackuo > m/emmackuo.html
+curl -k https://www.brid.gy/instagram/espylaub > m/espylaub.html
+curl -k https://www.brid.gy/instagram/_finalcut_ > m/_finalcut_.html
+curl -k https://www.brid.gy/instagram/flowfx_mexico > m/flowfx_mexico.html
+curl -k https://www.brid.gy/instagram/glennjonesnet > m/glennjonesnet.html
+curl -k https://www.brid.gy/instagram/iamaegibson > m/iamaegibson.html
+curl -k https://www.brid.gy/instagram/isapien > m/isapien.html
+curl -k https://www.brid.gy/instagram/ivarrekve > m/ivarrekve.html
+curl -k https://www.brid.gy/instagram/japh > m/japh.html
+curl -k https://www.brid.gy/instagram/jasonkgreen > m/jasonkgreen.html
+curl -k https://www.brid.gy/instagram/jden415 > m/jden415.html
+curl -k https://www.brid.gy/instagram/jeenap > m/jeenap.html
+curl -k https://www.brid.gy/instagram/jeukku > m/jeukku.html
+curl -k https://www.brid.gy/instagram/johnbenson > m/johnbenson.html
+curl -k https://www.brid.gy/instagram/jonathanfrei > m/jonathanfrei.html
+curl -k https://www.brid.gy/instagram/krijnsoeteman > m/krijnsoeteman.html
+curl -k https://www.brid.gy/instagram/_kylewm > m/_kylewm.html
+curl -k https://www.brid.gy/instagram/kylewm2 > m/kylewm2.html
+curl -k https://www.brid.gy/instagram/laalders > m/laalders.html
+curl -k https://www.brid.gy/instagram/liveink > m/liveink.html
+curl -k https://www.brid.gy/instagram/macressler > m/macressler.html
+curl -k https://www.brid.gy/instagram/marccooper > m/marccooper.html
+curl -k https://www.brid.gy/instagram/mathewi > m/mathewi.html
+curl -k https://www.brid.gy/instagram/melkeramik > m/melkeramik.html
+curl -k https://www.brid.gy/instagram/milton_segretti > m/milton_segretti.html
+curl -k https://www.brid.gy/instagram/mrcranky > m/mrcranky.html
+curl -k https://www.brid.gy/instagram/mrjoe > m/mrjoe.html
+curl -k https://www.brid.gy/instagram/mtony75 > m/mtony75.html
+curl -k https://www.brid.gy/instagram/muhh > m/muhh.html
+curl -k https://www.brid.gy/instagram/nikolnieto > m/nikolnieto.html
+curl -k https://www.brid.gy/instagram/nxd4n > m/nxd4n.html
+curl -k https://www.brid.gy/instagram/petermolnareu > m/petermolnareu.html
+curl -k https://www.brid.gy/instagram/physisima > m/physisima.html
+curl -k https://www.brid.gy/instagram/ptibbetts > m/ptibbetts.html
+curl -k https://www.brid.gy/instagram/robknight > m/robknight.html
+curl -k https://www.brid.gy/instagram/samharrelson22 > m/samharrelson22.html
+curl -k https://www.brid.gy/instagram/screenorigami > m/screenorigami.html
+curl -k https://www.brid.gy/instagram/scrivenings > m/scrivenings.html
+curl -k https://www.brid.gy/instagram/simoncoopey > m/simoncoopey.html
+curl -k https://www.brid.gy/instagram/smilyborg > m/smilyborg.html
+curl -k https://www.brid.gy/instagram/snarfed > m/snarfed.html
+curl -k https://www.brid.gy/instagram/srcr > m/srcr.html
+curl -k https://www.brid.gy/instagram/sylvester > m/sylvester.html
+curl -k https://www.brid.gy/instagram/tantek > m/tantek.html
+curl -k https://www.brid.gy/instagram/terryfinney > m/terryfinney.html
+curl -k https://www.brid.gy/instagram/the_cmdln > m/the_cmdln.html
+curl -k https://www.brid.gy/instagram/the_timweston > m/the_timweston.html
+curl -k https://www.brid.gy/instagram/thomasmault > m/thomasmault.html
+curl -k https://www.brid.gy/instagram/tylergillies > m/tylergillies.html
+curl -k https://www.brid.gy/instagram/xtof_fr > m/xtof_fr.html
+curl -k https://www.brid.gy/instagram/zdfs > m/zdfs.html

@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Kevin Marks (Blogger) - Bridgy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/static/bridgy_logo_128.jpg">
+<!-- 32x32 last so that browsers prefer it -->
+<link rel="shortcut icon" sizes="32x32" href="/static/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/static/favicon.png">
+
+<!-- Bootstrap CSS. Fetched from
+  http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/ on 2004-03-13. -->
+<link rel="stylesheet" href="/static/bootstrap.min.css" />
+<!-- Include my stylesheet after so it overrides -->
+<link rel="stylesheet" href="/static/style.css" type="text/css" />
+
+<script type="text/javascript">
+<!-- google analytics -->
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11785301-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script async src="/static/bridgy.js"></script>
+
+</head>
+
+<!-- Content starts here -->
+<body class=" user ">
+
+<div id="messages">
+  <p id="message"></p>
+</div>
+
+<main class="tp-main lead container">
+
+<div class="row">
+<div id="logo" class="col-xs-4">
+ <a href="/">
+   <img id="logo-img" class="img-responsive" src="/static/bridgy_logo.jpg" /></a>
+<br />
+
+<ul class="nav nav-pills nav-justified">
+  <li></li>
+  
+</ul>
+</div>
+
+<div id="header" class="col-xs-8">
+<p class="big">
+Got a web site?<br />
+Want to publish your posts to social networks?<br />
+Want to see comments and likes on your site?<br />
+<a id="title" href="/">Bridgy</a> is for you.
+<a id="more-link" href="/about">More...</a>
+</div>
+</div>
+
+<p class="clearfix" />
+
+
+
+<!-- JS for embedding Facebook posts and Twitter tweets -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=318683258228687";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Header: name and picture -->
+<div id="user" class="row big h-card">
+<a target="_blank" href="http://epeus.blogspot.com/" title="Kevin Marks (Blogger)"
+   class="u-url">
+  <img class="profile u-photo" src="https://2.bp.blogspot.com/-3NZqmDyvh94/U1H5mNRmnXI/AAAAAAAAAGc/muoeBGmJuOM/s1600/km.jpg" width="64px" />
+  <img src="/static/blogger_icon.png"
+       
+       alt="Blogger" />
+  <span class="p-name">Kevin Marks</span></a>
+
+
+
+
+  
+  &middot;
+  <a href="http://epeus.blogspot.com/" class="publish-domain u-url">epeus.blogspot.com</a>
+
+
+
+</div>
+
+
+
+
+<!-- Banner for blogs that aren't yet advertising the webmention endpoint -->
+
+
+<div class="row">
+
+<p class="big">You're all set! Check out your recent
+<a href="#blogposts">blog posts</a> and <a href="#webmentions">webmentions</a>.
+  <!-- This currently 500s :/ -->
+  <!-- <a href="http://indiewebify.me/send-webmentions/?url="> -->
+  <!--   Try a webmention!</a> -->
+</p>
+
+
+<form method="post" action="/delete/start">
+  <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyFAsSB0Jsb2dnZXIiBzMyMDA5MzAM" />
+  <input name="feature" type="hidden" value="webmention" />
+  <button id="delete-button" type="submit" class="btn btn-default"
+          title="Disable this account. (Won't delete webmentions you've already sent or received.)">Disable</button>
+</form>
+</div>
+
+
+<!-- Signup button -->
+
+
+
+
+
+
+<!-- Blog posts -->
+<div id="blogposts" class="row">
+
+<p class="big">Recent blog posts:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://epeus.blogspot.com/2014/10/how-did-twitter-become-hate-speech-wing.html">How did Twitter become the hate speech w...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1412485188&key=aglzfmJyaWQtZ3lyXAsSCEJsb2dQb3N0Ik5odHRwOi8vZXBldXMuYmxvZ3Nwb3QuY29tLzIwMTQvMTAvaG93LWRpZC10d2l0dGVyLWJlY29tZS1oYXRlLXNwZWVjaC13aW5nLmh0bWwM">
+      1 month, 1 week ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.pinterest.com/pin/176907091583006681">pinterest.com/pin/1769070915... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li>
+	<li><a class="original-post" target="_blank" href="http://rhrealitycheck.org/article/2014/08/12/twitterfail-twitters-refusal-handle-online-stalkers-abusers-haters">rhrealitycheck.org/article/2014/0... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li>
+	<li><a class="original-post" target="_blank" href="http://indiewebcamp.com/">indiewebcamp.com/ <span class="glyphicon glyphicon-exclamation-sign"></span></a></li>
+	<li><a class="original-post" target="_blank" href="https://web.archive.org/web/20130510141227/http%3A%2F%2Fanarchogeek.com/2012/07/09/origin-of-the-reply-digging-through-twitters-history">web.archive.org/web/2013051014... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://known.kevinmarks.com/2014/how-did-twitter-become-the-hate-speech-wing-of-the">known.kevinmarks.com/2014/how-did-t...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.kevinmarks.com/twitterhatespeech.html">kevinmarks.com/twitterhatespe...</a></li>
+	<li><a class="original-post" target="_blank" href="http://indiewebcamp.com/webmention">indiewebcamp.com/webmention</a></li></ul>
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://allthingsd.com/20110330/making-sign-ups-more-complicated-is-a-good-thing-and-other-lessons-from-twitters-user-retention-efforts/">allthingsd.com/20110330/makin...</a></li>
+	<li><a class="original-post" target="_blank" href="http://allthingsd.com/20130913/does-twitter-have-a-growth-problem/">allthingsd.com/20130913/does-...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.theguardian.com/media/2012/mar/22/twitter-tony-wang-free-speech">theguardian.com/media/2012/mar...</a></li>
+	<li><a class="original-post" target="_blank" href="https://ello.co/">ello.co/</a></li>
+	<li><a class="original-post" target="_blank" href="http://withknown.com/">withknown.com/</a></li>
+	<li><a class="original-post" target="_blank" href="http://xkcd.com/386/">xkcd.com/386/</a></li>
+	<li><a class="original-post" target="_blank" href="https://gitlab.com/collectqt/quirell/issues">gitlab.com/collectqt/quir...</a></li>
+	<li><a class="original-post" target="_blank" href="http://wondermark.com/1k62/">wondermark.com/1k62/</a></li>
+	<li><a class="original-post" target="_blank" href="http://users.humboldt.edu/mstephens/hate/hate_map.html">users.humboldt.edu/mstephens/hate...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://epeus.blogspot.com/2011/01/how-w3c-invented-logo.html">How the w3c invented the ‘semantics’ log...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1403760540&key=aglzfmJyaWQtZ3lySgsSCEJsb2dQb3N0IjxodHRwOi8vZXBldXMuYmxvZ3Nwb3QuY29tLzIwMTEvMDEvaG93LXczYy1pbnZlbnRlZC1sb2dvLmh0bWwM">
+      4 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://adactio.com/journal/4289">adactio.com/journal/4289</a></li></ul>
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://meyerweb.com/eric/html-xhtml/html5logo/">meyerweb.com/eric/html-xhtm...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.flickr.com/photos/kevinmarks/5367785354">flickr.com/photos/kevinma...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.w3.org/html/logo/">w3.org/html/logo/</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.w3.org/html/logo/#the-technology">w3.org/html/logo/#the...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://epeus.blogspot.com/2011/04/evs-identity-map-ignores-what-we-say.html">Ev's identity map ignores what we say</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1403888042&key=aglzfmJyaWQtZ3lyWQsSCEJsb2dQb3N0IktodHRwOi8vZXBldXMuYmxvZ3Nwb3QuY29tLzIwMTEvMDQvZXZzLWlkZW50aXR5LW1hcC1pZ25vcmVzLXdoYXQtd2Utc2F5Lmh0bWwM">
+      4 months, 3 weeks ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyWQsSCEJsb2dQb3N0IktodHRwOi8vZXBldXMuYmxvZ3Nwb3QuY29tLzIwMTEvMDQvZXZzLWlkZW50aXR5LW1hcC1pZ25vcmVzLXdoYXQtd2Utc2F5Lmh0bWwM" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-4">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://portablecontacts.net">portablecontacts.net <span class="glyphicon glyphicon-exclamation-sign"></span></a></li>
+	<li><a class="original-post" target="_blank" href="http://www.internetidentityworkshop.com/iiw-12">internetidentityworkshop.com/iiw-12 <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://oauth.net/">oauth.net/</a></li></ul>
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://microformats.org/wiki/hatom">microformats.org/wiki/hatom</a></li>
+	<li><a class="original-post" target="_blank" href="http://evhead.com/2011/04/five-easy-pieces-of-online-identity.html">evhead.com/2011/04/five-e...</a></li>
+	<li><a class="original-post" target="_blank" href="http://en.wikipedia.org/wiki/VCard">en.wikipedia.org/wiki/VCard</a></li>
+	<li><a class="original-post" target="_blank" href="http://openid.net/">openid.net/</a></li>
+	<li><a class="original-post" target="_blank" href="http://microformats.org/wiki/hcard">microformats.org/wiki/hcard</a></li>
+	<li><a class="original-post" target="_blank" href="http://microformats.org/wiki/rel-me">microformats.org/wiki/rel-me</a></li>
+	<li><a class="original-post" target="_blank" href="http://microformats.org/wiki/xfn">microformats.org/wiki/xfn</a></li>
+	<li><a class="original-post" target="_blank" href="http://microformats.org/about">microformats.org/about</a></li>
+	<li><a class="original-post" target="_blank" href="http://microformats.org/wiki/rel-tag">microformats.org/wiki/rel-tag</a></li>
+	<li><a class="original-post" target="_blank" href="http://activitystrea.ms/">activitystrea.ms/</a></li>
+	<li><a class="original-post" target="_blank" href="http://microformats.org/wiki/hreview">microformats.org/wiki/hreview</a></li>
+	<li><a class="original-post" target="_blank" href="http://webfinger.org/">webfinger.org/</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.webhost4life.com">webhost4life.com</a></li>
+	<li><a class="original-post" target="_blank" href="http://openid.net/connect/">openid.net/connect/</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://epeus.blogspot.com/2011/04/which-companion-is-bbc-treating-us-like.html">Which Companion is the BBC treating us l...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1403760458&key=aglzfmJyaWQtZ3lyXAsSCEJsb2dQb3N0Ik5odHRwOi8vZXBldXMuYmxvZ3Nwb3QuY29tLzIwMTEvMDQvd2hpY2gtY29tcGFuaW9uLWlzLWJiYy10cmVhdGluZy11cy1saWtlLmh0bWwM">
+      4 months, 3 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.nytimes.com/2011/04/23/arts/television/doctor-who-us-premiere-will-not-be-delayed.html?_r=0">nytimes.com/2011/04/23/art...</a></li>
+	<li><a class="original-post" target="_blank" href="http://journal.neilgaiman.com/2006/05/what-bears-do-on-lawn.html">journal.neilgaiman.com/2006/05/what-b...</a></li>
+	<li><a class="original-post" target="_blank" href="http://twitter.theinfo.org/62111099989921792">twitter.theinfo.org/62111099989921...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.comicbookmovie.com/fansites/SuperGamer/news/?a=35849">comicbookmovie.com/fansites/Super...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="tag:blogger.com,1999:blog-3200930.post-3102127888686879914">How Apple's iOS fragmentation problems d...</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1400704940&key=aglzfmJyaWQtZ3lySAsSCEJsb2dQb3N0Ijp0YWc6YmxvZ2dlci5jb20sMTk5OTpibG9nLTMyMDA5MzAucG9zdC0zMTAyMTI3ODg4Njg2ODc5OTE0DA">
+      5 months, 4 weeks ago
+      
+    </a>
+
+    
+
+   </div><div class="col-sm-4">
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.modern.ie/category/code-with-standards">modern.ie/category/code-...</a></li>
+	<li><a class="original-post" target="_blank" href="http://developer.apple.com/library/ios/#documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/AdvancedAppTricks/AdvancedAppTricks.html#//apple_ref/doc/uid/TP40007072-CH7-SW18">developer.apple.com/library/ios/#d...</a></li>
+	<li><a class="original-post" target="_blank" href="http://html.adobe.com/webplatform/">html.adobe.com/webplatform/</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.abookapart.com/products/responsive-web-design">abookapart.com/products/respo...</a></li>
+	<li><a class="original-post" target="_blank" href="http://html.adobe.com/webplatform/layout/regions/">html.adobe.com/webplatform/la...</a></li>
+	<li><a class="original-post" target="_blank" href="http://techcrunch.com/2010/10/18/steve-jobs-no-small-ipad/">techcrunch.com/2010/10/18/ste...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.businessinsider.com/mark-zuckerberg-ipads-not-mobile-2010-11">businessinsider.com/mark-zuckerber...</a></li>
+	<li><a class="original-post" target="_blank" href="http://techcrunch.com/2013/06/09/how-apples-ios-fragmentation-problems-distort-design-thinking/">techcrunch.com/2013/06/09/how...</a></li>
+	<li><a class="original-post" target="_blank" href="http://caniuse.com/#feat=svg">caniuse.com/#feat=svg</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.slideshare.net/kleinerperkins/2012-kpcb-internet-trends-yearend-update/24">slideshare.net/kleinerperkins...</a></li>
+	<li><a class="original-post" target="_blank" href="http://developer.android.com/guide/components/intents-filters.html#ifs">developer.android.com/guide/componen...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.ipadkneesup.com/">ipadkneesup.com/</a></li>
+	<li><a class="original-post" target="_blank" href="http://daringfireball.net/linked/2013/01/08/pixels">daringfireball.net/linked/2013/01...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.modaco.com/topic/361924-facebook-home-download-including-patched-apk-version/#entry2113130">modaco.com/topic/361924-f...</a></li>
+	<li><a class="original-post" target="_blank" href="http://techcrunch.com/2013/05/15/google-launches-android-studio-a-development-tool-for-apps/">techcrunch.com/2013/05/15/goo...</a></li>
+	<li><a class="original-post" target="_blank" href="http://blog.sqisland.com/2013/02/learning-ios-as-android-developer.html">blog.sqisland.com/2013/02/learni...</a></li>
+	<li><a class="original-post" target="_blank" href="http://html.adobe.com/webplatform/layout/shapes/">html.adobe.com/webplatform/la...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://epeus.blogspot.com/2014/04/fragmentions-linking-to-any-text.html">Fragmentions - linking to any text</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1400965674&key=aglzfmJyaWQtZ3lyVQsSCEJsb2dQb3N0IkdodHRwOi8vZXBldXMuYmxvZ3Nwb3QuY29tLzIwMTQvMDQvZnJhZ21lbnRpb25zLWxpbmtpbmctdG8tYW55LXRleHQuaHRtbAw">
+      5 months, 3 weeks ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lyVQsSCEJsb2dQb3N0IkdodHRwOi8vZXBldXMuYmxvZ3Nwb3QuY29tLzIwMTQvMDQvZnJhZ21lbnRpb25zLWxpbmtpbmctdG8tYW55LXRleHQuaHRtbAw" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-4">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="https://ipv4.google.com/sorry/IndexRedirect?continue=https://www.google.com/search%3Fq%3D%2522If%2Byou%2Bget%2Bthe%2Bright%2Bones%2Bin%2Bthe%2Bright%2Border%2522">ipv4.google.com/sorry/IndexRed... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li>
+	<li><a class="original-post" target="_blank" href="http://indiewebcamp.com/fragmention##Challenges">indiewebcamp.com/fragmention##C... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://indiewebcamp.com/irc/2014-04-16/line/1397696273">indiewebcamp.com/irc/2014-04-16...</a></li></ul>
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.kevinmarks.com/w3cannotation.html##cool+URLs">kevinmarks.com/w3cannotation....</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.kevinmarks.com/">kevinmarks.com/</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.w3.org/2014/04/annotation/">w3.org/2014/04/annota...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.jonathantneal.com/">jonathantneal.com/</a></li>
+	<li><a class="original-post" target="_blank" href="https://chrome.google.com/webstore/detail/fragmentions/pgajkeekgcmgglngchhmcmnkffnhihck">chrome.google.com/webstore/detai...</a></li>
+	<li><a class="original-post" target="_blank" href="https://github.com/chapmanu/fragmentions">github.com/chapmanu/fragm...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.kevinmarks.com/fragmentions.html">kevinmarks.com/fragmentions.h...</a></li></ul>
+    
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-4">
+    <a class="original-post" target="_blank" href="http://epeus.blogspot.com/2014/04/fragmentions-for-poets.html">Fragmentions for Poets</a>
+
+   </div><div class="col-sm-4">
+    <a href="/log?start_time=1400969342&key=aglzfmJyaWQtZ3lySwsSCEJsb2dQb3N0Ij1odHRwOi8vZXBldXMuYmxvZ3Nwb3QuY29tLzIwMTQvMDQvZnJhZ21lbnRpb25zLWZvci1wb2V0cy5odG1sDA">
+      5 months, 3 weeks ago
+      
+       <span title="Error" class="glyphicon glyphicon-exclamation-sign"></span>
+      
+    </a>
+
+    
+    <form method="post" action="/retry">
+      <input name="key" type="hidden" value="aglzfmJyaWQtZ3lySwsSCEJsb2dQb3N0Ij1odHRwOi8vZXBldXMuYmxvZ3Nwb3QuY29tLzIwMTQvMDQvZnJhZ21lbnRpb25zLWZvci1wb2V0cy5odG1sDA" />
+      <button id="retry-button" type="submit" class="btn btn-default">
+        Retry</button>
+    </form>
+    
+
+   </div><div class="col-sm-4">
+    
+      Failed:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://indiewebcamp.com/fragmention##this+wiki">indiewebcamp.com/fragmention##t... <span class="glyphicon glyphicon-exclamation-sign"></span></a></li></ul>
+    
+      Sent:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://indiewebcamp.com/irc/2014-04-22/line/1398233800">indiewebcamp.com/irc/2014-04-22...</a></li></ul>
+    
+      No <a href="http://indiewebify.me/#send-webmentions">webmention</a> support:
+      <ul class="original-post-links">	<li><a class="original-post" target="_blank" href="http://www.kevinmarks.com/poemfragmentions.html">kevinmarks.com/poemfragmentio...</a></li>
+	<li><a class="original-post" target="_blank" href="http://open.blogs.nytimes.com/2011/01/11/emphasis-update-and-source/?_php=true&_type=blogs&_r=0">open.blogs.nytimes.com/2011/01/11/emp...</a></li>
+	<li><a class="original-post" target="_blank" href="http://shakespeare.sayit.mysociety.org/much-ado-about-nothing/act-iv/scene-i-a-church##link+my+dear+friend">shakespeare.sayit.mysociety.org/much-ado-about...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.gerv.net/software/fragment-search/">gerv.net/software/fragm...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.poets.org/poetsorg/poem/do-not-go-gentle-good-night">poets.org/poetsorg/poem/...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#the-id-attribute">whatwg.org/specs/web-apps...</a></li>
+	<li><a class="original-post" target="_blank" href="https://github.com/chapmanu/fragmentions">github.com/chapmanu/fragm...</a></li>
+	<li><a class="original-post" target="_blank" href="http://www.kevinmarks.com/fragmentions.html">kevinmarks.com/fragmentions.h...</a></li>
+	<li><a class="original-post" target="_blank" href="https://christiaanconover.com/code/wp-fragmention##any+text">christiaanconover.com/code/wp-fragme...</a></li></ul>
+    
+   </div>
+  </li>
+  
+</ul>
+
+
+</div>
+
+
+<!-- Incoming blog webmentions -->
+<div id="webmentions" class="row">
+
+<p class="big">Recent
+  <a href="http://indiewebify.me/#send-webmentions">webmentions</a>:</p>
+<ul class="user-items">
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/vmarks/status/532184728544481281">twitter.com/vmarks/status/...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://epeus.blogspot.com/2003/11/remembrance-day.html">epeus.blogspot.com/2003/11/rememb...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1415717761&key=aglzfmJyaWQtZ3lyqAELEg5CbG9nV2VibWVudGlvbiKTAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9jb21tZW50L3R3aXR0ZXIva2V2aW5tYXJrcy81MzIxMjcxODA0NzAyMjI4NDgvNTMyMTg0NzI4NTQ0NDgxMjgxIGh0dHA6Ly9lcGV1cy5ibG9nc3BvdC5jb20vMjAwMy8xMS9yZW1lbWJyYW5jZS1kYXkuaHRtbAw">
+      5 days, 17 hours ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       comment
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/kevinmarks/status/532184447861280768">twitter.com/kevinmarks/sta...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://epeus.blogspot.com/2003/11/remembrance-day.html">epeus.blogspot.com/2003/11/rememb...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1415717741&key=aglzfmJyaWQtZ3lyqAELEg5CbG9nV2VibWVudGlvbiKTAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9jb21tZW50L3R3aXR0ZXIva2V2aW5tYXJrcy81MzIxMjcxODA0NzAyMjI4NDgvNTMyMTg0NDQ3ODYxMjgwNzY4IGh0dHA6Ly9lcGV1cy5ibG9nc3BvdC5jb20vMjAwMy8xMS9yZW1lbWJyYW5jZS1kYXkuaHRtbAw">
+      5 days, 17 hours ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       comment
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/vmarks/status/532170754688053250">twitter.com/vmarks/status/...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://epeus.blogspot.com/2003/11/remembrance-day.html">epeus.blogspot.com/2003/11/rememb...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1415714536&key=aglzfmJyaWQtZ3lyqAELEg5CbG9nV2VibWVudGlvbiKTAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9jb21tZW50L3R3aXR0ZXIva2V2aW5tYXJrcy81MzIxMjcxODA0NzAyMjI4NDgvNTMyMTcwNzU0Njg4MDUzMjUwIGh0dHA6Ly9lcGV1cy5ibG9nc3BvdC5jb20vMjAwMy8xMS9yZW1lbWJyYW5jZS1kYXkuaHRtbAw">
+      5 days, 18 hours ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       comment
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/kevinmarks/status/532127180470222848">twitter.com/kevinmarks/sta...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://epeus.blogspot.com/2003/11/remembrance-day.html">epeus.blogspot.com/2003/11/rememb...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1415710748&key=aglzfmJyaWQtZ3lymwELEg5CbG9nV2VibWVudGlvbiKGAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9saWtlL3R3aXR0ZXIva2V2aW5tYXJrcy81MzIxMjcxODA0NzAyMjI4NDgvNzcyMjk4NzEgaHR0cDovL2VwZXVzLmJsb2dzcG90LmNvbS8yMDAzLzExL3JlbWVtYnJhbmNlLWRheS5odG1sDA">
+      5 days, 19 hours ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       like
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/mukkukm/status/532153266818138112">twitter.com/mukkukm/status...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://epeus.blogspot.com/2003/11/remembrance-day.html">epeus.blogspot.com/2003/11/rememb...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1415710739&key=aglzfmJyaWQtZ3lypwELEg5CbG9nV2VibWVudGlvbiKSAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9yZXBvc3QvdHdpdHRlci9rZXZpbm1hcmtzLzUzMjEyNzE4MDQ3MDIyMjg0OC81MzIxNTMyNjY4MTgxMzgxMTIgaHR0cDovL2VwZXVzLmJsb2dzcG90LmNvbS8yMDAzLzExL3JlbWVtYnJhbmNlLWRheS5odG1sDA">
+      5 days, 19 hours ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       repost
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/kevinmarks/status/532127180470222848">twitter.com/kevinmarks/sta...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://epeus.blogspot.com/2003/11/remembrance-day.html">epeus.blogspot.com/2003/11/rememb...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1415704470&key=aglzfmJyaWQtZ3lymwELEg5CbG9nV2VibWVudGlvbiKGAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9saWtlL3R3aXR0ZXIva2V2aW5tYXJrcy81MzIxMjcxODA0NzAyMjI4NDgvMTUzNDA0MjcgaHR0cDovL2VwZXVzLmJsb2dzcG90LmNvbS8yMDAzLzExL3JlbWVtYnJhbmNlLWRheS5odG1sDA">
+      5 days, 21 hours ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       like
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/kevinmarks/status/531148321801265152">twitter.com/kevinmarks/sta...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://epeus.blogspot.com/2011/08/google-plus-must-stop-this-identity.html">epeus.blogspot.com/2011/08/google...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1415495598&key=aglzfmJyaWQtZ3lyrAELEg5CbG9nV2VibWVudGlvbiKXAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9saWtlL3R3aXR0ZXIva2V2aW5tYXJrcy81MzExNDgzMjE4MDEyNjUxNTIvNzUxMjMgaHR0cDovL2VwZXVzLmJsb2dzcG90LmNvbS8yMDExLzA4L2dvb2dsZS1wbHVzLW11c3Qtc3RvcC10aGlzLWlkZW50aXR5Lmh0bWwM">
+      1 week, 1 day ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       like
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/jillydreadful/status/531165236993490944">twitter.com/jillydreadful/...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://epeus.blogspot.com/2011/08/google-plus-must-stop-this-identity.html">epeus.blogspot.com/2011/08/google...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1415474901&key=aglzfmJyaWQtZ3lyvAELEg5CbG9nV2VibWVudGlvbiKnAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9jb21tZW50L3R3aXR0ZXIva2V2aW5tYXJrcy81MzExNDgzMjE4MDEyNjUxNTIvNTMxMTY1MjM2OTkzNDkwOTQ0IGh0dHA6Ly9lcGV1cy5ibG9nc3BvdC5jb20vMjAxMS8wOC9nb29nbGUtcGx1cy1tdXN0LXN0b3AtdGhpcy1pZGVudGl0eS5odG1sDA">
+      1 week, 1 day ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       comment
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/kevinmarks/status/531164783899197440">twitter.com/kevinmarks/sta...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://epeus.blogspot.com/2011/08/google-plus-must-stop-this-identity.html">epeus.blogspot.com/2011/08/google...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1415474891&key=aglzfmJyaWQtZ3lyvAELEg5CbG9nV2VibWVudGlvbiKnAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9jb21tZW50L3R3aXR0ZXIva2V2aW5tYXJrcy81MzExNDgzMjE4MDEyNjUxNTIvNTMxMTY0NzgzODk5MTk3NDQwIGh0dHA6Ly9lcGV1cy5ibG9nc3BvdC5jb20vMjAxMS8wOC9nb29nbGUtcGx1cy1tdXN0LXN0b3AtdGhpcy1pZGVudGl0eS5odG1sDA">
+      1 week, 1 day ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       comment
+     
+
+   </div>
+  </li>
+  
+  <li class="row">
+   <div class="col-sm-3">
+     <a class="original-post" target="_blank" href="https://twitter.com/eastgate/status/531162059858542592">twitter.com/eastgate/statu...</a>
+
+   </div><div class="col-sm-4">
+     <a class="original-post" target="_blank" href="http://epeus.blogspot.com/2007/09/journalists-slumming-online.html">epeus.blogspot.com/2007/09/journa...</a>
+
+   </div><div class="col-sm-3">
+    <a href="/log?start_time=1415474288&key=aglzfmJyaWQtZ3lytAELEg5CbG9nV2VibWVudGlvbiKfAWh0dHBzOi8vYnJpZC1neS5hcHBzcG90LmNvbS9jb21tZW50L3R3aXR0ZXIva2V2aW5tYXJrcy81MzExNDk1MzUxMDQzNjQ1NDQvNTMxMTYyMDU5ODU4NTQyNTkyIGh0dHA6Ly9lcGV1cy5ibG9nc3BvdC5jb20vMjAwNy8wOS9qb3VybmFsaXN0cy1zbHVtbWluZy1vbmxpbmUuaHRtbAw">
+      1 week, 1 day ago
+      
+    </a>
+
+   </div><div class="col-sm-2">
+     
+       comment
+     
+
+   </div>
+  </li>
+  
+</ul>
+
+
+</div>
+
+
+
+
+
+
+<div id="footer">
+  <a href="/about">About / FAQ</a>
+  | <a href="https://snarfed.org/about">Contact</a>
+  | <a href="https://github.com/snarfed/bridgy">Source</a>
+  | <a href="http://indiewebcamp.com/">#IndieWeb</a>
+</div>
+
+</div>
+</main>
+</body>
+</html>
+
